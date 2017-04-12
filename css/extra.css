@@ -1,0 +1,17 @@
+.md-nav__title, .md-source__facts {
+  display: none;
+}
+
+.md-header-nav__source {
+  /*text-align: right;*/
+}
+
+.md-source__repository {
+  font-weight: 400;
+  font-size: 1.8rem;
+  overflow: visible;
+}
+
+.md-nav__link[data-md-state=blur] {
+  text-decoration: line-through;
+}

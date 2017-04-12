@@ -3,7 +3,7 @@
         {
             "location": "/", 
             "text": "Hyperlinks can navigate to your website, but not to your app. Branch fixes this with deep links.\n\n\nBranch will grow your app by allowing users to install, open, and navigate to content inside your app.\n\n\nIncrease discovery of your app by sharing its content, converting web users to app users, enabling user-to-user sharing, personalizing user experiences, tracking users, tracking referrals, tracking campaigns, tracking conversions, and increasing overall engagement.\n\n\n\n\n\n  \n\n\n\n\n\nBranch for Cordova, PhoneGap, and Ionic\n\n\nQuestions? \nContact us\n\n\n\n\nGetting Started\n\n\nConfigure Branch\n\n\nConfigure App\n\n\nInitialize Branch\n\n\nTest Deep Link iOS\n\n\nTest Deep Link Android\n\n\n\n\n\n\nFeatures\n\n\nInitialize Branch Features\n\n\nCreate Content Reference\n\n\nCreate Deep Link\n\n\nShare Deep Link\n\n\nRead Deep Link\n\n\nDisplay Content\n\n\nTrack Content\n\n\nTrack User\n\n\nTrack Event\n\n\nHandle Referrals\n\n\n\n\n\n\nTroubleshooting\n\n\nTesting: Key Points\n\n\nTesting: Optional App Config\n\n\nTesting: Branch Analytics\n\n\nTesting: Simulating an Install\n\n\nTesting: Supported Platforms\n  \n\n\nTesting: Sample Test App\n\n\nLink Data: Universal Object Properties\n\n\nLink Data: Deep Link Properties\n\n\nCompiling: Cordova Dependencies\n\n\nCompiling: Show Console Logs\n\n\nCompiling: Updating Branch SDK\n\n\nCompiling: Incompatible Plugins\n  \n\n\nCompiling: Errors\n\n\n\n\nGetting Started\n\n\n\n\n\n\nConfigure Branch\n\n\n\n\n\n\nComplete your \nBranch Dashboard\n\n\n\n\n\n\n\n\n\n\nConfigure App\n\n\n\n\n\n\nCordova and Ionic\n\n\n!-- sample config.xml --\n\n\nwidget\n \nid=\ncom.eneff.branch.cordovatestbed\n \nversion=\n0.0.1\n \nxmlns=\nhttp://www.w3.org/ns/widgets\n \nxmlns:cdv=\nhttp://cordova.apache.org/ns/1.0\n\n  \n!-- Branch --\n\n  \nplugin\n \nname=\nbranch-cordova-sdk\n \nspec=\n^2.5.0\n \n/\n\n  \nbranch-config\n\n    \nbranch-key\n \nvalue=\nkey_live_ndqptlgXNE4LHqIahH1WIpbiyFlb62J3\n \n/\n\n    \nuri-scheme\n \nvalue=\nbranchcordova\n \n/\n\n    \nlink-domain\n \nvalue=\ncordova.app.link\n \n/\n\n    \nios-team-release\n \nvalue=\nPW4Q8885U7\n \n/\n\n  \n/branch-config\n\n\n\n\n\n\n\n\n\n\nPhoneGap\n\n\n!-- sample config.xml --\n\n\nwidget\n \nid=\ncom.eneff.branch.cordovatestbed\n \nversion=\n1.0.0\n \nxmlns=\nhttp://www.w3.org/ns/widgets\n \nxmlns:gap=\nhttp://phonegap.com/ns/1.0\n\n  \n!-- Branch --\n\n  \nplugin\n \nname=\nbranch-cordova-sdk\n \nspec=\n^2.5.0\n \n/\n\n  \nbranch-config\n\n    \nbranch-key\n \nvalue=\nkey_live_ndqptlgXNE4LHqIahH1WIpbiyFlb62J3\n \n/\n\n    \nuri-scheme\n \nvalue=\nbranchcordova\n \n/\n\n    \nlink-domain\n \nvalue=\ncordova.app.link\n \n/\n\n    \nios-team-release\n \nvalue=\nPW4Q8885U7\n \n/\n\n  \n/branch-config\n\n\n\n\n\n\n\n\n\n\nChange the following values to match your \nBranch Dashboard\n\n\n\n\ncom.eneff.branch.cordovatestbed\n\n\nkey_live_ndqptlgXNE4LHqIahH1WIpbiyFlb62J3\n\n\nbranchcordova\n\n\ncordova.app.link\n\n\nPW4Q8885U7\n\n\n\n\n\n\n\n\nInitialize Branch\n\n\n\n\n\n\nCordova and PhoneGap\n    \n// sample index.js\n\n\nvar\n \napp\n \n=\n \n{\n\n  \ninitialize\n:\n \nfunction\n()\n \n{\n\n    \nthis\n.\nbindEvents\n();\n\n  \n},\n\n  \nbindEvents\n:\n \nfunction\n()\n \n{\n\n    \ndocument\n.\naddEventListener\n(\ndeviceready\n,\n \nthis\n.\nonDeviceReady\n,\n \nfalse\n);\n\n    \ndocument\n.\naddEventListener\n(\nresume\n,\n \nthis\n.\nonDeviceResume\n,\n \nfalse\n);\n\n  \n},\n\n  \nonDeviceReady\n:\n \nfunction\n()\n \n{\n\n    \napp\n.\nbranchInit\n();\n\n  \n},\n\n  \nonDeviceResume\n:\n \nfunction\n()\n \n{\n\n    \napp\n.\nbranchInit\n();\n\n  \n},\n\n  \nbranchInit\n:\n \nfunction\n()\n \n{\n\n    \n// Branch initialization\n\n    \nBranch\n.\ninitSession\n(\nfunction\n(\ndata\n)\n \n{\n\n      \n// read deep link data on click\n\n      \nalert\n(\nDeep Link Data: \n \n+\n \nJSON\n.\nstringify\n(\ndata\n));\n\n    \n});\n\n  \n}\n\n\n};\n\n\n\napp\n.\ninitialize\n();\n\n\n\n\n\n\n\n\n\n\nIonic 1\n    \n// sample app.js\n\n\nangular\n.\nmodule\n(\nstarter\n,\n \n[\nionic\n,\n \nstarter.controllers\n,\n \nstarter.services\n])\n\n\n\n.\nrun\n(\nfunction\n(\n$ionicPlatform\n)\n \n{\n\n  \n$ionicPlatform\n.\nready\n(\nfunction\n()\n \n{\n\n    \nif\n \n(\nwindow\n.\ncordova\n \n \nwindow\n.\ncordova\n.\nplugins\n \n \nwindow\n.\ncordova\n.\nplugins\n.\nKeyboard\n)\n \n{\n\n      \ncordova\n.\nplugins\n.\nKeyboard\n.\nhideKeyboardAccessoryBar\n(\ntrue\n);\n\n      \ncordova\n.\nplugins\n.\nKeyboard\n.\ndisableScroll\n(\ntrue\n);\n\n    \n}\n\n    \nif\n \n(\nwindow\n.\nStatusBar\n)\n \n{\n\n      \nStatusBar\n.\nstyleDefault\n();\n\n    \n}\n\n\n    \n// Branch\n\n    \n$ionicPlatform\n.\non\n(\ndeviceready\n,\n \nfunction\n()\n \n{\n\n      \nbranchInit\n();\n\n    \n});\n\n\n    \n$ionicPlatform\n.\non\n(\nresume\n,\n \nfunction\n()\n \n{\n\n      \nbranchInit\n();\n\n    \n});\n\n\n    \nfunction\n \nbranchInit\n()\n \n{\n\n      \n// Branch initialization\n\n      \nBranch\n.\ninitSession\n(\nfunction\n(\ndata\n)\n \n{\n\n        \n// read deep link data on click\n\n        \nalert\n(\nDeep Link Data: \n \n+\n \nJSON\n.\nstringify\n(\ndata\n));\n\n      \n});\n\n    \n}\n\n  \n});\n\n\n})\n\n\n// ...\n\n\n\n\n\n\n\n\n\n\nIonic 2\n    \n// sample app.component.js\n\n\nimport\n \n{\n \nComponent\n \n}\n \nfrom\n \n@angular/core\n;\n\n\nimport\n \n{\n \nPlatform\n \n}\n \nfrom\n \nionic-angular\n;\n\n\nimport\n \n{\n \nStatusBar\n,\n \nSplashscreen\n \n}\n \nfrom\n \nionic-native\n;\n\n\n\nimport\n \n{\n \nTabsPage\n \n}\n \nfrom\n \n../pages/tabs/tabs\n;\n\n\n\n// Branch import\n\n\ndeclare\n \nvar\n \nBranch\n;\n\n\n\n@Component\n({\n\n  \ntemplate\n:\n \n`\nion-nav [root]=\nrootPage\n/ion-nav\n`\n\n\n})\n\n\nexport\n \nclass\n \nMyApp\n \n{\n\n  \nrootPage\n \n=\n \nTabsPage\n;\n\n\n  \nconstructor\n(\nplatform\n: \nPlatform\n)\n \n{\n\n    \nplatform\n.\nready\n().\nthen\n(()\n \n=\n \n{\n\n      \nStatusBar\n.\nstyleDefault\n();\n\n      \nSplashscreen\n.\nhide\n();\n\n      \nbranchInit\n();\n\n    \n});\n\n\n    \nplatform\n.\nresume\n.\nsubscribe\n(()\n \n=\n \n{\n\n      \nbranchInit\n();\n\n    \n});\n\n\n    \n// Branch initialization\n\n    \nconst\n \nbranchInit\n \n=\n \n()\n \n=\n \n{\n\n      \n// only on devices\n\n      \nif\n \n(\n!\nplatform\n.\nis\n(\ncordova\n))\n \n{\n \nreturn\n \n}\n\n      \nBranch\n.\ninitSession\n(\ndata\n \n=\n \n{\n\n        \n// read deep link data on click\n\n        \nalert\n(\nDeep Link Data: \n \n+\n \nJSON\n.\nstringify\n(\ndata\n));\n\n      \n});\n\n    \n}\n\n  \n}\n\n\n}\n\n\n\n\n\n\n\n\n\n\nTest Deep Link iOS\n\n\n\n\n\n\nCreate a deep link from the \nBranch Marketing Dashboard\n\n\n\n\n\n\nDelete your app from the device\n\n\n\n\n\n\nCompile your app \n(\ncordova run ios\n \nphonegap run ios\n \nionic run ios\n)\n\n\n\n\n\n\nPaste deep link in \nApple Notes\n\n\n\n\n\n\nLong press on the deep link \n(not 3D Touch)\n\n\n\n\n\n\nClick \nOpen in \"APP_NAME\"\n to open your app \n(\nexample\n)\n\n\n\n\n\n\nTest Deep Link Android\n\n\n\n\n\n\nCreate a deep link from the \nBranch Marketing Dashboard\n\n\n\n\n\n\nDelete your app from the device\n\n\n\n\n\n\nCompile your app \n(\ncordova run android\n \nphonegap run android\n \nionic run android\n)\n\n\n\n\n\n\nPaste deep link in \nGoogle Hangouts\n\n\n\n\n\n\nClick on the deep link to open your app\n\n\n\n\n\n\nFeatures\n\n\n\n\n\n\nInitialize Branch Features\n\n\n\n\n\n\nLoads Branch into your app\n\n\n\n\n\n\nMust be called on \ndeviceready\n and \nresume\n\n\n// for development and debugging only\n\n\nBranch\n.\nsetDebug\n(\ntrue\n)\n\n\n\n// sync with Mixpanel if installed\n\n\nBranch\n.\nsetMixpanelToken\n(\nyour_mixpanel_token\n)\n\n\n\n// Branch initialization\n\n\nBranch\n.\ninitSession\n(\nfunction\n(\ndata\n)\n \n{\n\n  \n// read deep link data on click\n\n  \nalert\n(\nDeep Link Data: \n \n+\n \nJSON\n.\nstringify\n(\ndata\n))\n\n\n}).\nthen\n(\nfunction\n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n))\n\n\n})\n\n\n\n\n\n\n\n\n\n\nCreate Content Reference\n\n\n\n\n\n\nThe \nBranch Universal Object\n encapsulates the thing you want to share (content or user)\n\n\n\n\n\n\nLink Data: \nUniversal Object Properties\n\n\n// only canonicalIdentifier is required\n\n\nvar\n \nproperties\n \n=\n \n{\n\n  \ncanonicalIdentifier\n:\n \ncontent/123\n,\n\n  \ncanonicalUrl\n:\n \nhttps://example.com/content/123\n,\n\n  \ntitle\n:\n \nContent 123 Title\n,\n\n  \ncontentDescription\n:\n \nContent 123 Description \n \n+\n \nDate\n.\nnow\n(),\n\n  \ncontentImageUrl\n:\n \nhttp://lorempixel.com/400/400/\n,\n\n  \nprice\n:\n \n12.12\n,\n\n  \ncurrency\n:\n \nGBD\n,\n\n  \ncontentIndexingMode\n:\n \nprivate\n,\n\n  \ncontentMetadata\n:\n \n{\n\n    \ncustom\n:\n \ndata\n,\n\n    \ntesting\n:\n \n123\n,\n\n    \nthis_is\n:\n \ntrue\n\n  \n}\n\n\n}\n\n\n\n// create a branchUniversalObj variable to reference with other Branch methods\n\n\nvar\n \nbranchUniversalObj\n \n=\n \nnull\n\n\nBranch\n.\ncreateBranchUniversalObject\n(\nproperties\n).\nthen\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \nbranchUniversalObj\n \n=\n \nres\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n \n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n))\n\n\n})\n\n\n\n\n\n\n\n\n\n\nCreate Deep Link\n\n\n\n\n\n\nCreates a deep link URL with encapsulated data\n\n\n\n\n\n\nNeeds a \nBranch Universal Object\n\n\n\n\n\n\nLink Data: \nDeep Link Properties\n\n\n// optional fields\n\n\nvar\n \nanalytics\n \n=\n \n{\n\n  \nchannel\n:\n \nfacebook\n,\n\n  \nfeature\n:\n \nonboarding\n,\n\n  \ncampaign\n:\n \ncontent 123 launch\n,\n\n  \nstage\n:\n \nnew user\n,\n\n  \ntags\n:\n \n[\none\n,\n \ntwo\n,\n \nthree\n]\n\n\n}\n\n\n\n// optional fields\n\n\nvar\n \nproperties\n \n=\n \n{\n\n  \n$desktop_url\n:\n \nhttp://www.example.com/desktop\n,\n\n  \n$android_url\n:\n \nhttp://www.example.com/android\n,\n\n  \n$ios_url\n:\n \nhttp://www.example.com/ios\n,\n\n  \n$ipad_url\n:\n \nhttp://www.example.com/ipad\n,\n\n  \n$deeplink_path\n:\n \ncontent/123\n,\n\n  \n$match_duration\n:\n \n2000\n,\n\n  \ncustom_string\n:\n \ndata\n,\n\n  \ncustom_integer\n:\n \nDate\n.\nnow\n(),\n\n  \ncustom_boolean\n:\n \ntrue\n,\n\n  \ncustom_array\n:\n \n[\n1\n,\n \n2\n,\n \n3\n,\n \n4\n,\n \n5\n],\n\n  \ncustom_object\n:\n \n{\n \nrandom\n:\n \ndictionary\n \n}\n\n\n}\n\n\n\nbranchUniversalObj\n.\ngenerateShortUrl\n(\nanalytics\n,\n \nproperties\n).\nthen\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n.\nurl\n))\n\n\n}).\ncatch\n(\nfunction\n \n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n))\n\n\n})\n\n\n\n\n\n\n\n\n\n\nShare Deep Link\n\n\n\n\n\n\nWill generate a Branch deep link and tag it with the channel the user selects\n\n\n\n\n\n\nNeeds a \nBranch Universal Object\n\n\n\n\n\n\nLink Data: \nDeep Link Properties\n\n\n// optional fields\n\n\nvar\n \nanalytics\n \n=\n \n{\n\n  \nchannel\n:\n \nfacebook\n,\n\n  \nfeature\n:\n \nonboarding\n,\n\n  \ncampaign\n:\n \ncontent 123 launch\n,\n\n  \nstage\n:\n \nnew user\n,\n\n  \ntags\n:\n \n[\none\n,\n \ntwo\n,\n \nthree\n]\n\n\n}\n\n\n\n// optional fields\n\n\nvar\n \nproperties\n \n=\n \n{\n\n  \n$desktop_url\n:\n \nhttp://www.example.com/desktop\n,\n\n  \ncustom_string\n:\n \ndata\n,\n\n  \ncustom_integer\n:\n \nDate\n.\nnow\n(),\n\n  \ncustom_boolean\n:\n \ntrue\n,\n\n  \ncustom_array\n:\n \n[\n1\n,\n \n2\n,\n \n3\n,\n \n4\n,\n \n5\n],\n\n  \ncustom_object\n:\n \n{\n \nrandom\n:\n \ndictionary\n \n}\n\n\n}\n\n\n\nvar\n \nmessage\n \n=\n \nCheck out this link\n\n\n\n// optional listeners (must be called before showShareSheet)\n\n\nbranchUniversalObj\n.\nonShareSheetLaunched\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \n// android only\n\n  \nconsole\n.\nlog\n(\nres\n)\n\n\n})\n\n\nbranchUniversalObj\n.\nonShareSheetDismissed\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \nconsole\n.\nlog\n(\nres\n)\n\n\n})\n\n\nbranchUniversalObj\n.\nonLinkShareResponse\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \nconsole\n.\nlog\n(\nres\n)\n\n\n})\n\n\nbranchUniversalObj\n.\nonChannelSelected\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \n// android only\n\n  \nconsole\n.\nlog\n(\nres\n)\n\n\n})\n\n\n\n// share sheet\n\n\nbranchUniversalObj\n.\nshowShareSheet\n(\nanalytics\n,\n \nproperties\n,\n \nmessage\n)\n\n\n\n\n\n\n\n\n\n\nRead Deep Link\n\n\n\n\n\n\nRetrieve Branch data from a deep link\n\n\n\n\n\n\nBest practice to receive data from the \nlistener\n\n\n\n\n\n\nListener\n    \n// Branch initialization within your deviceready and resume\n\n\nBranch\n.\ninitSession\n(\nfunction\n(\ndeepLinkData\n)\n \n{\n\n  \n// handler for deep link data on click\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\ndeepLinkData\n))\n\n\n})\n\n\n\n\n\n\n\n\n\n\nFirst data\n    \nBranch\n.\ngetFirstReferringParams\n().\nthen\n(\nfunction\n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n))\n\n\n})\n\n\n\n\n\n\n\n\n\n\nLatest data\n    \nBranch\n.\ngetLatestReferringParams\n().\nthen\n(\nfunction\n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n))\n\n\n})\n\n\n\n\n\n\n\n\n\n\nDisplay Content\n\n\n\n\n\n\nList content on iOS Spotlight\n\n\n\n\n\n\nNeeds a \nBranch Universal Object\n\n\nbranchUniversalObj\n.\nlistOnSpotlight\n().\nthen\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n \n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n))\n\n\n})\n\n\n\n\n\n\n\n\n\n\nTrack Content\n\n\n\n\n\n\nTrack how many times a user views a particular piece of content\n\n\n\n\n\n\nNeeds a \nBranch Universal Object\n\n\nbranchUniversalObj\n.\nregisterView\n().\nthen\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n \n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n))\n\n\n})\n\n\n\n\n\n\n\n\n\n\nTrack User\n\n\n\n\n\n\nSets the identity of a user (email, ID, UUID, etc) for events, deep links, and referrals\n\n\nvar\n \nuserId\n \n=\n \n123456\n\n\nBranch\n.\nsetIdentity\n(\nuserId\n).\nthen\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n \n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n.\nmessage\n))\n\n\n})\n\n\n\n\n\n\n\n\n\n\nRemoves the identity of a user\n\n\nBranch\n.\nlogout\n().\nthen\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n \n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n.\nmessage\n))\n\n\n})\n\n\n\n\n\n\n\n\n\n\nTrack Event\n\n\n\n\n\n\nRegisters custom events\n\n\n\n\n\n\nEvents named \nopen\n, \nclose\n, \ninstall\n, and \nreferred session\n are Branch restricted\n\n\n\n\n\n\nRecommened to \nTrack User\n before \nTrack Event\n to associate custom events with a user\n\n\nvar\n \neventName\n \n=\n \nclicked_on_this\n\n\nvar\n \nmetadata\n \n=\n \n{\n \ncustom_dictionary\n:\n \n123\n,\n \nanything\n:\n \neverything\n \n}\n\n\nBranch\n.\nuserCompletedAction\n(\neventName\n,\n \nmetaData\n).\nthen\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n \n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n.\nmessage\n))\n\n\n})\n\n\n\n\n\n\nvar\n \neventName\n \n=\n \nclicked_on_this\n\n\nBranch\n.\nuserCompletedAction\n(\neventName\n).\nthen\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n \n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n.\nmessage\n))\n\n\n})\n\n\n\n\n\n\n\n\n\n\nHandle Referrals\n\n\n\n\n\n\nReferral points are obtained from events triggered by users from rules created on the \nBranch Dashboard\n\n\n\n\n\n\nGet credits\n\n\n\n\n\n\nReferrer is \ntracked\n\n\n\n\n\n\nReferrer \ncreates a deep link\n\n\n\n\n\n\nReferrer \nshares the deep Link\n\n\n\n\n\n\nReferee clicks on deep link\n\n\n\n\n\n\nReferee triggers a \ncustom event\n\n\n\n\n\n\nCatch the event in your Branch Dashboard as a \nrule\n\n\n\n\n\n\nReferrer gets referral points\n\n\n\n\n\n\n\n\n\n\nSpend credits\n\n\nvar\n \namount\n \n=\n \n10\n\n\nvar\n \nbucket\n \n=\n \nthis_bucket\n\n\nBranch\n.\nredeemRewards\n(\namount\n,\n \nbucket\n).\nthen\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n \n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n))\n\n\n})\n\n\n\n\n\n\nvar\n \namount\n \n=\n \n10\n\n\nBranch\n.\nredeemRewards\n(\namount\n).\nthen\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n \n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n))\n\n\n})\n\n\n\n\n\n\n\n\n\n\nLoad credits\n\n\nvar\n \nbucket\n \n=\n \nthis_bucket\n\n\nBranch\n.\nloadRewards\n(\nbucket\n).\nthen\n(\nfunction\n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n))\n\n\n})\n\n\n\n\n\n\nBranch\n.\nloadRewards\n().\nthen\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n \n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n))\n\n\n})\n\n\n\n\n\n\n\n\n\n\nLoad history\n\n\nBranch\n.\ncreditHistory\n().\nthen\n(\nfunction\n \n(\nres\n)\n \n{\n\n  \nalert\n(\nResponse: \n \n+\n \nJSON\n.\nstringify\n(\nres\n))\n\n\n}).\ncatch\n(\nfunction\n \n(\nerr\n)\n \n{\n\n  \nalert\n(\nError: \n \n+\n \nJSON\n.\nstringify\n(\nerr\n))\n\n\n})\n\n\n\n\n\n\n\n\n\n\nTroubleshooting\n\n\n\n\n\n\nTesting: Key Points\n\n\n\n\n\n\nNeed to checkmark \"app uses IDFA and GAID\" when publishing your app\n\n\n\n\n\n\nBest to enable \nDeepviews\n (\nTesting: Supported Platforms\n)\n\n\n\n\n\n\nTesting: Optional App Config\n\n\n\n\n\n\n!-- sample config.xml --\n\n\nwidget\n \nid=\ncom.eneff.branch.cordovatestbed\n \nversion=\n1.0.0\n \nxmlns=\nhttp://www.w3.org/ns/widgets\n \nxmlns:cdv=\nhttp://cordova.apache.org/ns/1.0\n\n  \n!-- Branch --\n\n  \nplugin\n \nname=\nbranch-cordova-sdk\n \nspec=\n~2.4.2\n \n/\n \n!-- optional spec --\n\n  \nbranch-config\n\n    \nbranch-key\n \nvalue=\nkey_live_ndqptlgXNE4LHqIahH1WIpbiyFlb62J3\n \n/\n\n    \nuri-scheme\n \nvalue=\nbranchcordova\n \n/\n\n    \nlink-domain\n \nvalue=\nyourcustomdomain.com\n \n/\n\n    \nlink-domain\n \nvalue=\ncordova.app.link\n \n/\n  \n!-- optional previous link domain --\n\n    \nlink-domain\n \nvalue=\nbnc.lt\n \n/\n  \n!-- optional previous link domain --\n\n    \nios-team-release\n \nvalue=\nPW4Q8885U7\n \n/\n \n!-- required if iOS app --\n\n    \nios-team-debug\n \nvalue=\nFG35JLLMXX\n \n/\n \n!-- optional --\n\n    \nandroid-prefix\n \nvalue=\n/WSuf\n \n/\n \n!-- optional (for bnc.lt) --\n\n    \nandroid-testmode\n \nvalue=\ntrue\n \n/\n \n!-- optional (simulate installs) --\n\n  \n/branch-config\n\n\n\n\n\n\nwidget\n \nios-CFBundleIdentifier=\ncom.eneff.branch.cordovatestbedios\n \nandroid-packageName=\ncom.eneff.branch.cordovatestbedandroid\n \nversion=\n1.0.0\n \nxmlns=\nhttp://www.w3.org/ns/widgets\n \nxmlns:cdv=\nhttp://cordova.apache.org/ns/1.0\n\n\n\n\n\n\n\n\n\n\nTesting: Branch Analytics\n\n\n\n\n\n\nWhenever a user \nclicks\n on a deep link and opens the app, and will trigger either an \ninstall\n or an \nopen\n\n\n\n\n\n\ninstalls\n represent Branch recognizing the app_id and device_id for the first time\n\n\n\n\n\n\ninstalls\n represent new app users and the success rate of your Branch deep links    \n\n\n\n\n\n\ninstalls\n do \nnot\n represent App Store downloads\n\n\n\n\n\n\nnon-Branch installs\n are installs outside of Branch deep link clicks\n\n\n\n\n\n\nopens\n are non-installs\n\n\n\n\n\n\nIf a user uninstalls and reinstalls the app, this will be an \nopen\n because Branch recognizes the device\n\n\n\n\n\n\nIf a user has the app and clicks a Branch deep link, this will be an \nopen\n because the user is not new\n\n\n\n\n\n\nTesting: Simulating an Install\n\n\n\n\n\n\nDelete your app\n\n\n\n\n\n\n[iOS]\n iPhone Device -\n Settings -\n Privacy -\n Advertising -\n Reset Advertising Identifier -\n Reset Identifier\n\n\n\n\n\n\n[Android]\n Add \nandroid-testmode value=\"true\" /\n to your \nConfig.xml\n (\nTesting: Optional App Config\n)\n\n\n\n\n\n\nAdd \nBranch.setDebug(true);\n before \nBranch.initSession();\n (\nInitialize Branch Features\n)   \n\n\n\n\n\n\nClick on a deep link to navigate to your \n$fallback_url\n because your app is not installed\n\n\n\n\n\n\nInstall your app\n\n\n\n\n\n\nOpen your app\n\n\n\n\n\n\nRead from \nBranch.initSession(data)\n for \n+is_first_session = true\n \n\n\n\n\n\n\nTesting: Supported Platforms\n\n\n\n\n\n\nApps which support Branch deep links\n\n\n\n\n\n\n\n\n\n\niOS\n\n\nDetails\n\n\nAndroid\n\n\nDetails\n\n\n\n\n\n\n\n\n\n\nFacebook NewsFeed\n\n\n\u2705\n\n\nWorks when \nDeepViews\n are enabled\n\n\n\u2705\n\n\n\n\n\n\n\n\nFacebook Messanger\n\n\n\u2705\n\n\nWorks when \nDeepViews\n are enabled\n\n\n\u2705\n\n\nWorks except the \napp.link\n domain is not click-able\n\n\n\n\n\n\nTwitter\n\n\n\u2705\n\n\n\n\n\u2705\n\n\n\n\n\n\n\n\nPinterest\n\n\n\u2705\n\n\nWorks when \nDeepViews\n are enabled\n\n\n\u2705\n\n\n\n\n\n\n\n\nSlack\n\n\n\u2705\n\n\n\n\n\u2705\n\n\n\n\n\n\n\n\nChrome address bar\n\n\n\u2705\n\n\n\n\n\u2705\n\n\n\n\n\n\n\n\nChrome web page\n\n\n\u2705\n\n\n\n\n\u2705\n\n\n\n\n\n\n\n\nFireFox address bar\n\n\n\ud83c\udd7e\ufe0f\n\n\n\n\n\u2705\n\n\n\n\n\n\n\n\nFireFox web page\n\n\n\u2705\n\n\n\n\n\u2705\n\n\n\n\n\n\n\n\nSafari address bar\n\n\n\ud83c\udd7e\ufe0f\n\n\n\n\n\n\n\n\n\n\n\n\nSafari web page\n\n\n\u2705\n\n\n\n\n\n\n\n\n\n\n\n\nWeChat\n\n\n\u2705\n\n\nWorks when \nDeepViews\n are enabled\n\n\n\u2705\n\n\n\n\n\n\n\n\nWhatsApp\n\n\n\u2705\n\n\n\n\n\u2705\n\n\n\n\n\n\n\n\nHangouts\n\n\n\u2705\n\n\n\n\n\u2705\n\n\n\n\n\n\n\n\niMessage\n\n\n\u2705\n\n\n\n\n\n\n\n\n\n\n\n\nApple Mail\n\n\n\u2705\n\n\n\n\n\n\n\n\n\n\n\n\nGmail\n\n\n\u2705\n\n\n\n\n\u2705\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTesting: Sample Testing App\n\n\n\n\n\n\nBranch Testing App\n\n\n\n\n\n\nLink Data: Universal Object Properties\n\n\n\n\n\n\nFor \nCreate Content Reference\n\n\n\n\n\n\nProperties\n\n\n\n\n\n\n\n\nKey\n\n\nDefault\n\n\nUsage\n\n\nLink Property\n\n\n\n\n\n\n\n\n\n\ncanonicalIdentifier\n\n\n\n\n(Required)\n This is the unique identifier for content that will help Branch dedupe across many instances of the same thing. Suitable options: a website with pathing, or a database with identifiers for entities\n\n\n$canonical_identifier\n\n\n\n\n\n\ncanonicalUrl\n\n\n\n\nThe canonical URL, used for SEO purposes\n\n\n$canonical_url\n\n\n\n\n\n\ntitle\n\n\n\n\nThe name for the piece of content\n\n\n$og_title\n\n\n\n\n\n\ncontentDescription\n\n\n\n\nA description for the content\n\n\n$og_description\n\n\n\n\n\n\ncontentImageUrl\n\n\n\n\nThe image URL for the content. Must be an absolute path\n\n\n$og_image_url\n\n\n\n\n\n\nprice\n\n\n\n\nThe price of the item\n\n\n$amount\n\n\n\n\n\n\ncurrency\n\n\n\n\nThe currency representing the price in ISO 4217 currency code\n\n\n$currency\n\n\n\n\n\n\ncontentIndexingMode\n\n\n\"public\"\n\n\nCan be set to either \n\"public\"\n or \n\"private\"\n. Public indicates that you\u2019d like this content to be discovered by other apps.\n\n\n$publicly_indexable\n\n\n\n\n\n\ncontentMetadata\n\n\n\n\nAny custom key-value data e.g. \n{ \"custom\": \"data\" }\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLink Data: Deep Link Properties\n\n\n\n\n\n\nFor \nCreate Deep Link\n and \nShare Deep Link\n\n\n\n\n\n\nAnalytics\n\n\n\n\n\n\n\n\nKey\n\n\nDefault\n\n\nUsage\n\n\n\n\n\n\n\n\n\n\nchannel\n\n\n\n\nUse channel to tag the route that your link reaches users. For example, tag links with \n\"Facebook\"\n or \n\"LinkedIn\"\n to help track clicks and installs through those paths separately\n\n\n\n\n\n\nfeature\n\n\n\n\nThis is the feature of your app that the link might be associated with. For example, if you had built a referral program, you would label links with the feature \u2018referral\u2019\n\n\n\n\n\n\ncampaign\n\n\n\n\nUse this field to organize the links by actual campaign. For example, if you launched a new feature or product and want to run a campaign around that\n\n\n\n\n\n\nstage\n\n\n\n\nUse this to categorize the progress or category of a user when the link was generated. For example, if you had an invite system accessible on level 1, level 3 and 5, you could differentiate links generated at each level with this parameter\n\n\n\n\n\n\ntags\n\n\n\n\nThis is a free form entry with unlimited values \n[\"string\"]\n. Use it to organize your link data with labels that don\u2019t fit within the bounds of the above\n\n\n\n\n\n\nalias\n\n\n\n\nSpecify a link alias in place of the standard encoded short URL e.g. \nyourdomain.com/youralias\n. Link aliases are unique, immutable objects that cannot be deleted. You cannot change the alias of existing links. Aliases on the legacy \nbnc.lt\n domain are incompatible with Universal Links and Spotlight\n\n\n\n\n\n\ntype\n\n\n0\n\n\nSet to \n1\n to limit deep linking behavior of the generated link to a single use. Set type to \n2\n to make the link show up under \nMarketing Dashboard\n while adding \n$marketing_title\n to \ndata\n. Must be an \nint\n. Does not work with the Cordova SDK (limitation of native SDKs)\n\n\n\n\n\n\n\n\n\n\n\n\nProperties\n\n\n\n\nCustom Data\n\n\n\n\n\n\n\n\n\n\nKey\n\n\nValue\n\n\nUsage\n\n\n\n\n\n\n\n\n\n\nrandom\n\n\n123\n\n\nAny key-value pair\n\n\n\n\n\n\nhello\n\n\n\"world\"\n\n\nAny key-value pair\n\n\n\n\n\n\ncustom_data\n\n\ntrue\n\n\nAny key-value pair\n\n\n\n\n\n\n\n\n\n\nRedirection\n\n\n\n\n\n\n\n\n\n\nKey\n\n\nDefault\n\n\nUsage\n\n\n\n\n\n\n\n\n\n\n$fallback_url\n\n\n\n\nChange the redirect endpoint for all platforms - so you don\u2019t have to enable it by platform. Note that Branch will forward all robots to this URL, which \noverrides any OG tags\n entered in the link.  System-wide Default URL (set in Link Settings)\n\n\n\n\n\n\n$desktop_url\n\n\n\n\nChange the redirect endpoint on desktops Text-Me-The-App page (set in Link Settings)\n\n\n\n\n\n\n$ios_url\n\n\n\n\nChange the redirect endpoint for iOS  App Store page for your app (set in Link Settings)\n\n\n\n\n\n\n$ipad_url\n\n\n\n\nChange the redirect endpoint for iPads \n$ios_url\n value\n\n\n\n\n\n\n$android_url\n\n\n\n\nChange the redirect endpoint for Android  Play Store page for your app (set in Link Settings)\n\n\n\n\n\n\n$windows_phone_url\n\n\n\n\nChange the redirect endpoint for Windows OS Windows Phone default URL (set in Link Settings)\n\n\n\n\n\n\n$blackberry_url\n\n\n\n\nChange the redirect endpoint for Blackberry OS  BlackBerry default URL (set in Link Settings)\n\n\n\n\n\n\n$fire_url\n\n\n\n\nChange the redirect endpoint for Amazon Fire OS Fire default URL (set in Link Settings)\n\n\n\n\n\n\n$ios_wechat_url\n\n\n\n\nChange the redirect endpoint for WeChat on iOS devices \n$ios_url value\n\n\n\n\n\n\n$android_wechat_url\n\n\n\n\nChange the redirect endpoint for WeChat on Android devices  \n$android_url\n value\n\n\n\n\n\n\n$after_click_url\n\n\n\n\nURL redirect to after the main click redirect has completed\n\n\n\n\n\n\n$web_only\n\n\nfalse\n\n\nForce to open the \n$fallback_url\n instead of the app\n\n\n\n\n\n\n\n\n\n\nDeep Link\n\n\n\n\n\n\n\n\n\n\nKey\n\n\nDefault\n\n\nUsage\n\n\n\n\n\n\n\n\n\n\n$deeplink_path\n\n\nopen?link_click_id=1234\n\n\nSet the deep link path for all platforms - so you don\u2019t have to enable it by platform. When the Branch SDK receives a link with this parameter set, it will automatically load the custom URI path contained within\n\n\n\n\n\n\n$android_deeplink_path\n\n\n\n\nSet the deep link path for Android apps When the Branch SDK receives a link with this parameter set, it will automatically load the custom URI path contained within\n\n\n\n\n\n\n$ios_deeplink_path\n\n\n\n\nSet the deep link path for iOS apps. When the Branch SDK receives a link with this parameter set, it will automatically load the custom URI path contained within\n\n\n\n\n\n\n$match_duration\n\n\n7200\n\n\nLets you control the fingerprinting match timeout (the time that a click will wait for an app open to match) also known as attribution window. Specified in seconds\n\n\n\n\n\n\n$always_deeplink\n\n\ntrue\n\n\nSet to \nfalse\n to make links always fall back to your mobile site. Does not apply to Universal Links or Android App Links.\n\n\n\n\n\n\n$ios_redirect_timeout\n\n\n750\n\n\nControl the timeout that the client-side JS waits after trying to open up the app before redirecting to the App Store. Specified in milliseconds\n\n\n\n\n\n\n$android_redirect_timeout\n\n\n750\n\n\nControl the timeout that the clientside JS waits after trying to open up the app before redirecting to the Play Store. Specified in milliseconds\n\n\n\n\n\n\n$one_time_use\n\n\nfalse\n\n\nSet to \ntrue\n to limit deep linking behavior of the generated link to a single use. Can also be set using type\n\n\n\n\n\n\n$custom_sms_text\n\n\n\n\nText for SMS link sent for desktop clicks to this link. Must contain \n{{ link }}\n Value of Text me the app page in Settings\n\n\n\n\n\n\n$marketing_title\n\n\n\n\nThe Marketing Title for the deep link in the \nMarketing Dashboard\n\n\n\n\n\n\n\n\n\n\nContent\n\n\n\n\n\n\n\n\n\n\nKey\n\n\nDefault\n\n\nUsage\n\n\n\n\n\n\n\n\n\n\n$publicly_indexable\n\n\n1\n\n\nCannot modify here. Needs to be set by the Branch Universal Object\n\n\n\n\n\n\n$keywords\n\n\n\n\nKeywords for which this content should be discovered by. Just assign an array of strings with the keywords you\u2019d like to use\n\n\n\n\n\n\n$canonical_identifier\n\n\n\n\nThis is the unique identifier for content that will help Branch dedupe across many instances of the same thing. Suitable options: a website with pathing, or a database with identifiers for entities\n\n\n\n\n\n\n$exp_date\n\n\n0\n\n\nCannot modify here. Needs to be set by the Branch Universal Object. Must be epoch timestamp with milliseconds\n\n\n\n\n\n\n$content_type\n\n\n\n\nThis is a label for the type of content present. Apple recommends that you use uniform type identifier as described here\n\n\n\n\n\n\n\n\n\n\nDeepView\n\n\n\n\n\n\n\n\n\n\nKey\n\n\nDefault\n\n\nUsage\n\n\n\n\n\n\n\n\n\n\n$ios_deepview\n\n\ndefault_template\n\n\nThe name of the deepview template to use for iOS\n\n\n\n\n\n\n$android_deepview\n\n\ndefault_template\n\n\nThe name of the deepview template to use for Android\n\n\n\n\n\n\n$desktop_deepview\n\n\ndefault_template\n\n\nThe name of the deepview template to use for the Desktop\n\n\n\n\n\n\n\n\n\n\nOpen Graph\n\n\n\n\n\n\n\n\n\n\nKey\n\n\nDefault\n\n\nUsage\n\n\n\n\n\n\n\n\n\n\n$og_title\n\n\n\n\nSet the title of the link as it will be seen in social media displays\n\n\n\n\n\n\n$og_description\n\n\n\n\nSet the description of the link as it will be seen in social media displays\n\n\n\n\n\n\n$og_image_url\n\n\n\n\nSet the image of the link as it will be seen in social media displays\n\n\n\n\n\n\n$og_image_width\n\n\n\n\nSet the image\u2019s width in pixels for social media displays\n\n\n\n\n\n\n$og_image_height\n\n\n\n\nSet the image\u2019s height in pixels for social media displays\n\n\n\n\n\n\n$og_video\n\n\n\n\nSet a video as it will be seen in social media displays\n\n\n\n\n\n\n$og_url\n\n\n\n\nSet the base URL of the link as it will be seen in social media displays\n\n\n\n\n\n\n$og_type\n\n\n\n\nSet the type of custom card format link as it will be seen in social media displays\n\n\n\n\n\n\n$og_redirect\n\n\n\n\n(Advanced, not recommended) Set a custom URL that we redirect the social media robots to in order to retrieve all the appropriate tags\n\n\n\n\n\n\n$og_app_id\n\n\n\n\n(Rarely used) Sets the app id tag\n\n\n\n\n\n\n\n\n\n\nTwitter\n\n\n\n\n\n\n\n\n\n\nKey\n\n\nDefault\n\n\nUsage\n\n\n\n\n\n\n\n\n\n\n$twitter_card\n\n\n\n\nSet the Twitter card type of the link\n\n\n\n\n\n\n$twitter_title\n\n\n\n\nSet the title of the Twitter card\n\n\n\n\n\n\n$twitter_description\n\n\n\n\nSet the description of the Twitter card\n\n\n\n\n\n\n$twitter_image_url\n\n\n\n\nSet the image URL for the Twitter card\n\n\n\n\n\n\n$twitter_site\n\n\n\n\nSet the site for Twitter\n\n\n\n\n\n\n$twitter_app_country\n\n\n\n\nSet the app country for the app card\n\n\n\n\n\n\n$twitter_player\n\n\n\n\nSet the video player\u2019s URL. Defaults to the value of \n$og_video\n.\n\n\n\n\n\n\n$twitter_player_width\n\n\n\n\nSet the player\u2019s width in pixels\n\n\n\n\n\n\n$twitter_player_height\n\n\n\n\nSet the player\u2019s height in pixels\n\n\n\n\n\n\n\n\n\n\n\n\nCompiling: Cordova Dependencies\n\n\n\n\n\n\nNode\n\n\n/usr/bin/ruby -e \n$(\ncurl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install\n)\n;\n\nbrew update\n;\n\nbrew install node\n;\n\n\n\n\n\n\n\n\n\n\nXcode\n\n\n\n\n\n\nInstall \nXcode\n\n\n\n\n\n\nOpen Xcode -\n agree to SDK license agreement\n\n\n\n\n\n\nOpen Xcode -\n Create new Xcode project -\n Run simulator -\n Agree to developer mode on mac\n\n\n\n\n\n\n\n\n\n\nAndroid Studio\n\n\n\n\n\n\nRead \ninstructions\n\n\n\n\n\n\nInstall \nJVM\n\n\n\n\n\n\nInstall \nAndroid Studio\n\n\n\n\n\n\nOpen Android Studio -\n configure -\n appearance/system settings/android sdk -\n android 6.0 -\n Okay\n\n\n\n\n\n\nOpen Android Studio -\n New project -\n ... -\n Run -\n Create new emulator -\n Nexus 6p 23 -\n Finish\n\n\n\n\n\n\n# add to ~/.bash_profile\n\n\nexport\n \nANDROID_HOME\n=\n$HOME\n/Library/Android/sdk\n\nexport\n \nPATH\n=\n$ANDROID_HOME\n/tools:\n$PATH\n\n\nexport\n \nPATH\n=\n$ANDROID_HOME\n/platform-tools:\n$PATH\n\n\n\n\n\n\nsource\n ~/.bash_profile\n;\n\n\n\n\n\n\nandroid update sdk\n;\n\n\n\n\n\n\n\n\n\n\nInstall Android SDK build-tools 24.0.1\n\n\n\n\n\n\nGenerate Android Keystore\n\n\n\n\n\n\nkeytool -genkeypair -dname \ncn=Full Name, ou=Business Unit, o=Company, c=US\n -alias release -keypass aaa111 -keystore release.keystore -storepass aaa111 -validity \n10000\n \nkeytool -list -v -keystore release.keystore\n\n\n\n\n\n\n\n\n\nGenymotion \n[optional]\n\n\n\n\n\n\nInstall \nVirtual Box\n\n\n\n\n\n\nInstall \nGenymotion\n\n\n\n\n\n\nGenymotion -\n Add virtual device -\n Google Nexus 6P - 6.0.0 - API 23 -\n Next\n\n\n\n\n\n\n\n\n\n\nCompiling: Show Console Logs\n\n\n\n\n\n\niOS Simulator\n\n\n\n\n\n\ncordova run ios;\n\n\n\n\n\n\nSafari -\n Preferences -\n Advance -\n Show Develop menu in menu bar\n\n\n\n\n\n\nSafari -\n Develop -\n Simulator -\n index.html -\n Console\n\n\n\n\n\n\nMay need to unplug and replug device\n\n\n\n\n\n\nMay need to open Xcode and update provisioning profile\n\n\n\n\n\n\n\n\n\n\niOS Xcode\n\n\n\n\n\n\ncordova plugin add cordova-plugin-console;\n\n\n\n\n\n\ncordova build ios;\n\n\n\n\n\n\nXcode -\n APP_LOCATION/platforms/ios/APP_NAME.Xcodeproj\n\n\n\n\n\n\nXcode -\n App -\n General -\n Signing -\n Team\n\n\n\n\n\n\nXcode -\n Product -\n Run\n\n\n\n\n\n\nXcode -\n View -\n Debug Area -\n Activate Console\n\n\n\n\n\n\n\n\n\n\nAndroid Device\n\n\n\n\n\n\nPlug device in\n\n\n\n\n\n\ncordova run android;\n\n\n\n\n\n\nChrome -\n \nchrome://inspect/#devices\n -\n Console\n\n\n\n\n\n\n\n\n\n\nAndroid Genymotion\n\n\n\n\n\n\nGenymotion -\n Start\n\n\n\n\n\n\ncordova run android;\n\n\n\n\n\n\nChrome -\n \nchrome://inspect/#devices\n -\n Console\n\n\n\n\n\n\n\n\n\n\nCompiling: Updating Branch SDK\n\n\n\n\n\n\n# terminal\n\ncordova plugin remove io.branch.sdk\ncordova plugin remove branch-cordova-sdk\n\n\n\n\n\n!-- config.xml --\n\n\nplugin\n \nname=\nbranch-cordova-sdk\n \nspec=\n^2.5.0\n \n/\n\n\n\n\n\n\n\n\n\n\nCompiling: Incompatible Plugins\n\n\n\n\n\n\nThe following plugins will not work with the Branch SDK\n\n\n\n\n\n\nPhoneGap NFC Plugin\n\n\n\n\n\n\nCustom URL scheme\n\n\n\n\n\n\nCordova Universal Links Plugin\n\n\n\n\n\n\nIonic Deeplinks Plugin\n\n\n\n\n\n\nCompiling: Errors\n\n\n\n\n\n\nerror\n\n\nORIGINAL EXCEPTION: Branch is not defined\n\n\n\n\n\nReferenceError: Branch is not defined\n\n\n\n\n\n\n\nBranch opens and installs your app. You cannot simulate Branch in the desktop browser\n\n\n\n\n// Ionic 2 - running on browser instead of device\n\n\nif\n \n(\n!\nplatform\n.\nis\n(\ncordova\n))\n \n{\n \nreturn\n \n}\n\n\nBranch\n.\nuserCompletedAction\n(\ndid_this\n)\n\n\n\n\n\n\n// Ionic 2 - missing Branch import\n\n\ndeclare\n \nvar\n \nBranch\n\n\n\n\n\n\n\n\n\n\nerror\n\n\n** ARCHIVE FAILED **\n\nThe following build commands failed:\n  Check dependencies\n\n(\n1\n failure\n)\n\nError: Error code \n65\n \nfor\n command: xcodebuild with args: -xcconfig,/Users/eneff/Desktop/active/branch/lib/cordova-ionic-phonegap-branch-deep-linking/testbed/platforms/ios/cordova/build-debug.xcconfig,-workspace,Branch Testing.xcworkspace,-scheme,Branch Testing,-configuration,Debug,-destination,generic/platform\n=\niOS,-archivePath,Branch Testing.xcarchive,archive,CONFIGURATION_BUILD_DIR\n=\n/Users/eneff/Desktop/active/branch/lib/cordova-ionic-phonegap-branch-deep-linking/testbed/platforms/ios/build/device,SHARED_PRECOMPS_DIR\n=\n/Users/eneff/Desktop/active/branch/lib/cordova-ionic-phonegap-branch-deep-linking/testbed/platforms/ios/build/sharedpch\n\n\n\n\n\n\n\nOpen app in \nXcode\n and launch from there (to select a \nProvisioning Profile\n)\n\n\n\n\n\n\n\n\nerror\n\n\nAn invalid value \nXC com eneff branch cordova_testbed\n was provided \nfor\n the parameter \nappIdName\n.\n\n\n\n\n\nNo profiles \nfor\n \ncom.eneff.branch.cordova_testbed\n were found\n\n\n\n\n\n\n\nDon't use \ncordova\n, \nhyphens\n, or \nunderscores\n in your bundle id (widget id)", 
-            "title": "Home"
+            "title": "Features"
         }, 
         {
             "location": "/#branch-for-cordova-phonegap-and-ionic", 
@@ -167,33 +167,503 @@
         }, 
         {
             "location": "/about/", 
-            "text": "Quae noluit tenus\n\n\nQuem forte\n\n\nLorem markdownum, sit nec morantur invitaque numero unus, tempore retentus, erat\niam: me ima? Illa gravi pastoris pigre. Ripam \net rore\n nostrae lanam.\nIndulgens picto minorem venter erat ferro coniugii et Phoebus ubi serpens.\n\n\nIugalia curvamina labores simulamina eas fidere memoraverat\n\n\nVerus Iuppiter et fatalem caput cecidit fatum, mutatus eodem dicit. Eversae ne\nponere, neu eram at tegis \nvitiatur et\n primordia, torvi pererrato \nsub\n\nsubit, iuro. \nAetate\n cum vecordia\naliquod munere sine? Prodit prior Lacon caduca undas, felix edita Flentibus\nmeroque per motis Phrygia bracchia iuventus! Equorum urbs advena terras inquit\nestque, infausto liquitur prior, superosque leges Pirithoum sanguine vehit\npaelicis.\n\n\nwarm *= thread + encryptionSwipeSamba + favoritesThreading;\nexabyte.station *= 5;\nfrozen_dual += login;\nhost_optical_mode = pci;\nwaveNewbie = adware(dma_cdn);\n\n\n\n\n\nColchis venit\n\n\nAudire negare quae causamque quid cervum in mentis ultima frementis levis\nPhrygiaeque terga impetus quae sinistrum corpora. Sit canis ramis sequitur\nnumina. Arserunt modo. Est cupiens Pergama ille quam, \nfama\nsemel\n!\n\n\nIndignamque vanaque adiacet\n\n\nPlacida et ditem. Demens voluit habitus deplorata mota \ndemi\npro\n tibi consulat, cupido.\n\n\nparallelPramBoot += crt_port_open + 258008 + link;\nif (5) {\n    filePostKerning.drive = sdkScriptManagement + -3 * metal + pmuCamera;\n} else {\n    clean -= 1;\n    leafMode.directory(box_margin, 4);\n}\nbootRemote.fat = duplex;\n\n\n\n\n\nOppugnare terrore corpus. In Tlepolemus Occupat bibit erigitur terram\npatruelibus, qui turbant, nec ne. Iudicium mihi, tamen, manusque nate nihil fama\nformam?", 
-            "title": "About"
+            "text": "Testing\n\n\n123", 
+            "title": "Deep Linking"
         }, 
         {
-            "location": "/about/#quae-noluit-tenus", 
-            "text": "", 
-            "title": "Quae noluit tenus"
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
         }, 
         {
-            "location": "/about/#quem-forte", 
-            "text": "Lorem markdownum, sit nec morantur invitaque numero unus, tempore retentus, erat\niam: me ima? Illa gravi pastoris pigre. Ripam  et rore  nostrae lanam.\nIndulgens picto minorem venter erat ferro coniugii et Phoebus ubi serpens.", 
-            "title": "Quem forte"
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Creating Links"
         }, 
         {
-            "location": "/about/#iugalia-curvamina-labores-simulamina-eas-fidere-memoraverat", 
-            "text": "Verus Iuppiter et fatalem caput cecidit fatum, mutatus eodem dicit. Eversae ne\nponere, neu eram at tegis  vitiatur et  primordia, torvi pererrato  sub \nsubit, iuro.  Aetate  cum vecordia\naliquod munere sine? Prodit prior Lacon caduca undas, felix edita Flentibus\nmeroque per motis Phrygia bracchia iuventus! Equorum urbs advena terras inquit\nestque, infausto liquitur prior, superosque leges Pirithoum sanguine vehit\npaelicis.  warm *= thread + encryptionSwipeSamba + favoritesThreading;\nexabyte.station *= 5;\nfrozen_dual += login;\nhost_optical_mode = pci;\nwaveNewbie = adware(dma_cdn);", 
-            "title": "Iugalia curvamina labores simulamina eas fidere memoraverat"
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
         }, 
         {
-            "location": "/about/#colchis-venit", 
-            "text": "Audire negare quae causamque quid cervum in mentis ultima frementis levis\nPhrygiaeque terga impetus quae sinistrum corpora. Sit canis ramis sequitur\nnumina. Arserunt modo. Est cupiens Pergama ille quam,  fama\nsemel !", 
-            "title": "Colchis venit"
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Sharing Links"
         }, 
         {
-            "location": "/about/#indignamque-vanaque-adiacet", 
-            "text": "Placida et ditem. Demens voluit habitus deplorata mota  demi\npro  tibi consulat, cupido.  parallelPramBoot += crt_port_open + 258008 + link;\nif (5) {\n    filePostKerning.drive = sdkScriptManagement + -3 * metal + pmuCamera;\n} else {\n    clean -= 1;\n    leafMode.directory(box_margin, 4);\n}\nbootRemote.fat = duplex;  Oppugnare terrore corpus. In Tlepolemus Occupat bibit erigitur terram\npatruelibus, qui turbant, nec ne. Iudicium mihi, tamen, manusque nate nihil fama\nformam?", 
-            "title": "Indignamque vanaque adiacet"
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Deep Link Routing"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Track Custom Events"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Track and Refer Users"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Track and Search Content"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Increase Match Success"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Growth"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "User Value"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Revenue Analytics"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Ads Analytics (Soon)"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Email Analytics (Soon)"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "\u2026 Analytics (Soon)"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "CSV Export"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Export API"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Webhooks"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Abobe Analytics"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Adjust"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Amplitude"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "AppBoy"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Google Analytics"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Kochava"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Localytics"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Mixpanel"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Tune"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "AppMetrica"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Deep Views"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Text Me The App"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Journeys"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "App Installs"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Universal App Campaigns"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Search"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "App Installs"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "App Engagement"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Instagram"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "App Installs (Soon)"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "App Installs (Soon)"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Deep Link Feeds"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "APp Install Ads"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Journeys"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Responsys"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "SFMC"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "SendGrid"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Sailthru"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "AppBoy/Sendgrid"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Self Serve"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "iOS Roots App"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "iOS iMessage Apps"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Testing\n\n\n123", 
+            "title": "Android Instant Apps"
+        }, 
+        {
+            "location": "/about/#testing", 
+            "text": "123", 
+            "title": "Testing"
         }
     ]
 }
