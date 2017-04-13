@@ -1,9 +1,5 @@
-.md-nav__title, .md-source__facts {
+.md-nav__source, .md-source__facts {
   display: none;
-}
-
-.md-header-nav__source {
-  /*text-align: right;*/
 }
 
 .md-source__repository {
