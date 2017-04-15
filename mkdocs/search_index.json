@@ -291,7 +291,7 @@
             "title": "Deep link into your app"
         }, 
         {
-            "location": "/app/ios/createlink/", 
+            "location": "/app/cordova-phonegap-ionic/createlink/", 
             "text": "", 
             "title": "Create links"
         }, 
