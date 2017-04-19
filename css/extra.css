@@ -9,5 +9,14 @@
 }
 
 .md-nav__link[data-md-state=blur] {
-  text-decoration: line-through;
+  /*text-decoration: line-through;*/
 }
+
+/*.md-sidebar--secondary .md-sidebar__inner {
+  border-left: .1rem solid rgba(0,0,0,.07);
+  border-right: none;
+}
+
+.md-sidebar--secondary .md-nav--secondary {
+  border: none;
+}*/
