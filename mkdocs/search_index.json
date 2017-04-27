@@ -2,8 +2,13 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Hyperlinks can navigate to your website, but not to your app. Branch fixes this with deep links.\n\n\nBranch will grow your app by allowing users to install, open, and navigate to content inside your app.\n\n\nIncrease discovery of your app by sharing its content, converting web users to app users, enabling user-to-user sharing, personalizing user experiences, tracking users, tracking referrals, tracking campaigns, tracking conversions, and increasing overall engagement.\n\n\n\n\nGrow your app\n\n\n\n    \n\n        \nBox Plots\n\n        \nBubble Chart\n\n        \nBullet Charts\n\n        \nCalendar View\n\n    \n\n    \n\n        \nNon-contiguous Cartogram\n\n        \nChord Diagram\n\n        \nDendrogram\n\n        \nForce-Directed Graph\n\n    \n\n    \n\n        \nCircle Packing\n\n        \nPopulation Pyramid\n\n        \nStacked Bars\n\n        \nStreamgraph\n\n    \n\n    \n\n        \nSunburst\n\n        \nNode-Link Tree\n\n        \nTreemap\n\n        \nVoronoi Diagram\n\n    \n\n\n\n\n\nIncrease app engagement\n\n\n\n  \n\n    \nArea Chart\n\n    \nLine Chart\n\n    \nBivariate Area Chart\n\n    \nMulti-Series Line Chart\n\n  \n\n  \n\n    \nStacked Area Chart\n\n    \nBar Chart\n\n    \nStacked Bar Chart\n\n    \nNormalized Stacked Bar Chart\n\n  \n\n  \n\n    \nGrouped Bar Chart\n\n    \nScatterplot\n\n    \nDonut Chart\n\n    \nPie Chart\n\n  \n\n\n\n\n\nTrack attribution\n\n\n\n  \n\n    \nUS States\n\n    \nUS States with Dropdown Selector\n\n    \nWorld\n\n    \nUS States - Choropleth Bar\n\n    \nUS States Map - Side by Side\n\n  \n\n\n\n\n\nStatistics\n\n\n\n  \n\n    \nUniform distribution\n\n    \nNormal distribution\n\n    \nLinear regression", 
+            "text": "Branch Features\n\n\n\n\nHyperlinks can navigate to your website, but not to your app. Branch fixes this with deep links.\n\n\nBranch will grow your app by allowing users to install, open, and navigate to content inside your app.\n\n\nIncrease discovery of your app by sharing its content, converting web users to app users, enabling user-to-user sharing, personalizing user experiences, tracking users, tracking referrals, tracking campaigns, tracking conversions, and increasing overall engagement.\n\n\n\n\n\n  \n\n\n\n\n\nGrow your app\n\n\n\n    \n\n        \nBox Plots\n\n        \nBubble Chart\n\n        \nBullet Charts\n\n        \nCalendar View\n\n    \n\n    \n\n        \nNon-contiguous Cartogram\n\n        \nChord Diagram\n\n        \nDendrogram\n\n        \nForce-Directed Graph\n\n    \n\n    \n\n        \nCircle Packing\n\n        \nPopulation Pyramid\n\n        \nStacked Bars\n\n        \nStreamgraph\n\n    \n\n    \n\n        \nSunburst\n\n        \nNode-Link Tree\n\n        \nTreemap\n\n        \nVoronoi Diagram\n\n    \n\n\n\n\n\nIncrease app engagement\n\n\n\n  \n\n    \nArea Chart\n\n    \nLine Chart\n\n    \nBivariate Area Chart\n\n    \nMulti-Series Line Chart\n\n  \n\n  \n\n    \nStacked Area Chart\n\n    \nBar Chart\n\n    \nStacked Bar Chart\n\n    \nNormalized Stacked Bar Chart\n\n  \n\n  \n\n    \nGrouped Bar Chart\n\n    \nScatterplot\n\n    \nDonut Chart\n\n    \nPie Chart\n\n  \n\n\n\n\n\nTrack attribution\n\n\n\n  \n\n    \nUS States\n\n    \nUS States with Dropdown Selector\n\n    \nWorld\n\n    \nUS States - Choropleth Bar\n\n    \nUS States Map - Side by Side\n\n  \n\n\n\n\n\nStatistics\n\n\n\n  \n\n    \nUniform distribution\n\n    \nNormal distribution\n\n    \nLinear regression", 
             "title": "Features"
+        }, 
+        {
+            "location": "/#branch-features", 
+            "text": "Hyperlinks can navigate to your website, but not to your app. Branch fixes this with deep links.  Branch will grow your app by allowing users to install, open, and navigate to content inside your app.  Increase discovery of your app by sharing its content, converting web users to app users, enabling user-to-user sharing, personalizing user experiences, tracking users, tracking referrals, tracking campaigns, tracking conversions, and increasing overall engagement.", 
+            "title": "Branch Features"
         }, 
         {
             "location": "/#grow-your-app", 
@@ -783,7 +788,7 @@
         {
             "location": "/other/", 
             "text": "", 
-            "title": "APp Install Ads"
+            "title": "App Install Ads"
         }, 
         {
             "location": "/other/", 
