@@ -12,6 +12,10 @@
   /*text-decoration: line-through;*/
 }
 
+div.md-sidebar--primary ul.md-nav__list li:first-child {
+  /*display: none;*/
+}
+
 /*.md-sidebar--secondary .md-sidebar__inner {
   border-left: .1rem solid rgba(0,0,0,.07);
   border-right: none;
