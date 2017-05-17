@@ -63,3 +63,9 @@ STICKY FOOTER
 .md-nav--secondary .md-nav__link--active {
   color: inherit;
 }
+
+
+/* SEARCH */
+article.md-search-result__article.md-search-result__article--document {
+  background-color: #f5f5f5;
+}
