@@ -21,7 +21,7 @@
     
     
       
-        <title>Understand links - Branch documentation</title>
+        <title>Understanding links - Branch documentation</title>
       
     
     
@@ -86,11 +86,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Managing links
+                  Configuring links
                 </span>
               
             
-            Understand links
+            Understanding links
           
         </span>
       </div>
@@ -371,11 +371,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
-      Managing links
+      Configuring links
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        Managing links
+        Configuring links
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -393,11 +393,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Understand links
+        Understanding links
       </label>
     
-    <a href="./" title="Understand links" class="md-nav__link md-nav__link--active">
-      Understand links
+    <a href="./" title="Understanding links" class="md-nav__link md-nav__link--active">
+      Understanding links
     </a>
     
       
@@ -451,15 +451,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#universal-object" title="Universal Object" class="md-nav__link">
-    Universal Object
+  <a href="#structure" title="Structure" class="md-nav__link">
+    Structure
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#analytics" title="Analytics" class="md-nav__link">
-    Analytics
+  <a href="#analytical-labels" title="Analytical labels" class="md-nav__link">
+    Analytical labels
   </a>
   
 </li>
@@ -539,8 +539,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../create-links/" title="Create links" class="md-nav__link">
-      Create links
+    <a href="../create-links/" title="Creating links" class="md-nav__link">
+      Creating links
     </a>
   </li>
 
@@ -1175,15 +1175,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#universal-object" title="Universal Object" class="md-nav__link">
-    Universal Object
+  <a href="#structure" title="Structure" class="md-nav__link">
+    Structure
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#analytics" title="Analytics" class="md-nav__link">
-    Analytics
+  <a href="#analytical-labels" title="Analytical labels" class="md-nav__link">
+    Analytical labels
   </a>
   
 </li>
@@ -1265,7 +1265,7 @@
                   <a href="https://github.com/ethanneff/branch-docs/edit/master/docs/managing-links/understand-links.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Understand links</h1>
+                  <h1>Understanding links</h1>
                 
                 <h2 id="link-behavior">Link behavior<a class="headerlink" href="#link-behavior" title="Permanent link">&para;</a></h2>
 <h4 id="default-behavior">Default behavior<a class="headerlink" href="#default-behavior" title="Permanent link">&para;</a></h4>
@@ -1437,82 +1437,51 @@
 </li>
 </ul>
 <h2 id="link-data">Link data<a class="headerlink" href="#link-data" title="Permanent link">&para;</a></h2>
-<h4 id="universal-object">Universal Object<a class="headerlink" href="#universal-object" title="Permanent link">&para;</a></h4>
+<h4 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>For <a href="#create-content-reference">Create Content Reference</a></p>
-</li>
-<li>
-<p>Properties</p>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th align="center">Default</th>
-<th>Usage</th>
-<th align="center">Link Property</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>canonicalIdentifier</td>
-<td align="center"></td>
-<td><strong>(Required)</strong> This is the unique identifier for content that will help Branch dedupe across many instances of the same thing. Suitable options: a website with pathing, or a database with identifiers for entities</td>
-<td align="center"><code>$canonical_identifier</code></td>
-</tr>
-<tr>
-<td>canonicalUrl</td>
-<td align="center"></td>
-<td>The canonical URL, used for SEO purposes</td>
-<td align="center"><code>$canonical_url</code></td>
-</tr>
-<tr>
-<td>title</td>
-<td align="center"></td>
-<td>The name for the piece of content</td>
-<td align="center"><code>$og_title</code></td>
-</tr>
-<tr>
-<td>contentDescription</td>
-<td align="center"></td>
-<td>A description for the content</td>
-<td align="center"><code>$og_description</code></td>
-</tr>
-<tr>
-<td>contentImageUrl</td>
-<td align="center"></td>
-<td>The image URL for the content. Must be an absolute path</td>
-<td align="center"><code>$og_image_url</code></td>
-</tr>
-<tr>
-<td>price</td>
-<td align="center"></td>
-<td>The price of the item</td>
-<td align="center"><code>$amount</code></td>
-</tr>
-<tr>
-<td>currency</td>
-<td align="center"></td>
-<td>The currency representing the price in ISO 4217 currency code</td>
-<td align="center"><code>$currency</code></td>
-</tr>
-<tr>
-<td>contentIndexingMode</td>
-<td align="center"><code>"public"</code></td>
-<td>Can be set to either <code>"public"</code> or <code>"private"</code>. Public indicates that you’d like this content to be discovered by other apps.</td>
-<td align="center"><code>$publicly_indexable</code></td>
-</tr>
-<tr>
-<td>contentMetadata</td>
-<td align="center"></td>
-<td>Any custom key-value data e.g. <code>{ "custom": "data" }</code></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
+<p>Deep link data structure</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="err">tags:</span> <span class="err">[</span> <span class="err">&#39;tag1&#39;,</span> <span class="err">&#39;tag2&#39;</span> <span class="err">],</span>
+    <span class="err">channel:</span> <span class="err">&#39;facebook&#39;,</span>
+    <span class="err">feature:</span> <span class="err">&#39;dashboard&#39;,</span>
+    <span class="err">stage:</span> <span class="err">&#39;new</span> <span class="err">user&#39;,</span>
+    <span class="err">alias:</span> <span class="err">&#39;myalias&#39;,</span>
+    <span class="err">data:</span> <span class="err">{</span>
+        <span class="err">mydata:</span> <span class="err">&#39;something&#39;,</span>
+        <span class="err">foo:</span> <span class="err">&#39;bar&#39;,</span>
+        <span class="err">&#39;$desktop_url&#39;:</span> <span class="err">&#39;http://myappwebsite.com&#39;,</span>
+        <span class="err">&#39;$ios_url&#39;:</span> <span class="err">&#39;http://myappwebsite.com/ios&#39;,</span>
+        <span class="err">&#39;$android_url&#39;:</span> <span class="err">&#39;http://myappwebsite.com/android&#39;,</span>
+        <span class="err">&#39;$og_app_id&#39;:</span> <span class="err">&#39;12345&#39;,</span>
+        <span class="err">&#39;$og_title&#39;:</span> <span class="err">&#39;My</span> <span class="err">App&#39;,</span>
+        <span class="err">&#39;$og_description&#39;:</span> <span class="err">&#39;My</span> <span class="err">app\&#39;s</span> <span class="err">description.&#39;,</span>
+        <span class="err">&#39;$og_image_url&#39;:</span> <span class="err">&#39;http://myappwebsite.com/image.png&#39;</span>
+    <span class="p">}</span>
+<span class="err">}</span>
+</pre></div>
+</td></tr></table>
+
 </li>
 </ul>
-<h4 id="analytics">Analytics<a class="headerlink" href="#analytics" title="Permanent link">&para;</a></h4>
+<h4 id="analytical-labels">Analytical labels<a class="headerlink" href="#analytical-labels" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p>For <a href="#create-deep-link">Create Deep Link</a> and <a href="#share-deep-link">Share Deep Link</a></p>
