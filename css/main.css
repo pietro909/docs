@@ -17,8 +17,7 @@ div.md-sidebar--primary ul.md-nav__list li:first-child {
   /*display: none;*/
 }
 
-/*
-SIDEBAR BORDERS
+/* SIDEBAR BORDERS
 
 .md-sidebar--secondary .md-sidebar__inner {
   border-left: .1rem solid rgba(0,0,0,.07);
@@ -30,8 +29,7 @@ SIDEBAR BORDERS
 }
 */
 
-/*
-STICKY FOOTER
+/* STICKY FOOTER
 
 .md-footer {
   position:fixed;
@@ -49,7 +47,6 @@ STICKY FOOTER
 }
 */
 
-
 /* MARKDOWN */
 .md-typeset h2 {
   font-weight: 700;
@@ -64,8 +61,12 @@ STICKY FOOTER
   color: inherit;
 }
 
-
 /* SEARCH */
 article.md-search-result__article.md-search-result__article--document {
   background-color: #f5f5f5;
+}
+
+/* HIGHLIGHT */
+.codehilite .hll {
+  background-color: rgba(0,0,0,.07);
 }
