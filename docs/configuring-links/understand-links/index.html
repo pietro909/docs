@@ -30,7 +30,7 @@
         <meta name="description" content="Branch Documentation for Deep Linking">
       
       
-        <link rel="canonical" href="https://ethanneff.github.io/branch-docs/docs/managing-links/understand-links/">
+        <link rel="canonical" href="https://ethanneff.github.io/branch-docs/docs/configuring-links/understand-links/">
       
       
         <meta name="author" content="Branch">
@@ -443,8 +443,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#analytical-tracking" title="Analytical tracking" class="md-nav__link">
-    Analytical tracking
+  <a href="#custom-behavior" title="Custom behavior" class="md-nav__link">
+    Custom behavior
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#social-behavior" title="Social behavior" class="md-nav__link">
+    Social behavior
   </a>
   
 </li>
@@ -452,6 +459,26 @@
           <li class="md-nav__item">
   <a href="#supported-platforms" title="Supported platforms" class="md-nav__link">
     Supported platforms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytical-behavior" title="Analytical behavior" class="md-nav__link">
+    Analytical behavior
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analytical-tracking" title="Analytical tracking" class="md-nav__link">
+    Analytical tracking
   </a>
   
 </li>
@@ -1167,8 +1194,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#analytical-tracking" title="Analytical tracking" class="md-nav__link">
-    Analytical tracking
+  <a href="#custom-behavior" title="Custom behavior" class="md-nav__link">
+    Custom behavior
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#social-behavior" title="Social behavior" class="md-nav__link">
+    Social behavior
   </a>
   
 </li>
@@ -1176,6 +1210,26 @@
           <li class="md-nav__item">
   <a href="#supported-platforms" title="Supported platforms" class="md-nav__link">
     Supported platforms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytical-behavior" title="Analytical behavior" class="md-nav__link">
+    Analytical behavior
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analytical-tracking" title="Analytical tracking" class="md-nav__link">
+    Analytical tracking
   </a>
   
 </li>
@@ -1281,7 +1335,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/ethanneff/branch-docs/edit/master/src/docs/managing-links/understand-links.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/ethanneff/branch-docs/edit/master/src/docs/configuring-links/understand-links.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
                   <h1>Understanding links</h1>
@@ -1289,33 +1343,52 @@
                 <h2 id="link-behavior">Link behavior<a class="headerlink" href="#link-behavior" title="Permanent link">&para;</a></h2>
 <h4 id="default-behavior">Default behavior<a class="headerlink" href="#default-behavior" title="Permanent link">&para;</a></h4>
 <ul>
-<li><em>App is installed</em><ul>
+<li>App is installed<ul>
 <li>User <code>clicks</code> on a Branch deep link</li>
-<li>App <code>opens</code></li>
+<li>Device <code>opens</code> app</li>
 <li>Branch passes deep link <code>data</code> into app</li>
 </ul>
 </li>
-<li><em>App is not installed</em><ul>
+<li>App is not installed<ul>
 <li>User <code>clicks</code> on a Branch deep link</li>
-<li>App Store/Google Playstore/Fallback URL opens</li>
+<li>Device navigates to the App Store, Google Playstore, or Fallback URL</li>
 <li>User <code>installs</code> and <code>opens</code> app</li>
 <li>Branch passes deep link <code>data</code> into app</li>
 </ul>
 </li>
 </ul>
-<h4 id="analytical-tracking">Analytical tracking<a class="headerlink" href="#analytical-tracking" title="Permanent link">&para;</a></h4>
+<h4 id="custom-behavior">Custom behavior<a class="headerlink" href="#custom-behavior" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Whenever a user <code>clicks</code> on a deep link and <code>opens</code> the app</li>
-<li>This triggers either an <code>install</code> or an <code>open</code><ul>
-<li><code>installs</code> represent Branch recognizing the app_id and device_id for the first time</li>
-<li><code>installs</code> represent new app users and the success rate of your Branch deep links</li>
-<li><code>installs</code> do <strong>not</strong> represent App Store downloads</li>
-<li><code>non-Branch installs</code> are installs outside of Branch deep link clicks</li>
-<li><code>opens</code> are non-installs</li>
-<li>If a user uninstalls and reinstalls the app, this will be an <code>open</code> because Branch recognizes the device</li>
-<li>If a user has the app and clicks a Branch deep link, this will be an <code>open</code> because the user is not new</li>
+<li>
+<p>Pass custom data from URL to app</p>
+<ul>
+<li>TODO</li>
 </ul>
 </li>
+<li>
+<p>Redirect to website when app is installed</p>
+<ul>
+<li>[iOS] Override <code>Universal Links</code> open by using <code>$web_only = true</code> </li>
+<li>[Android] Override <code>App Links</code> open by TODO</li>
+</ul>
+</li>
+<li>
+<p>Redirect to website when app is not installed (ordered by precedence)</p>
+<ul>
+<li>Set <code>https://name.app.link?$ios_url=https://example.com</code></li>
+<li>Set <code>$ios_url = 'https://example.com'</code> within <a href="#redirections">link data</a></li>
+<li>Set <code>$fallback_url = 'https://example.com'</code> within <a href="#redirections">link data</a></li>
+<li>Set <code>$ios_deepview = 'deepviewId'</code> within <a href="#deepview">link data</a></li>
+<li>Enable a <code>global Deep view</code> on the <a href="https://dashboard.branch.io/web/deepviews">Branch Dashboard</a></li>
+<li>Add a <code>iOS Custom URL</code> on the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
+<li>Add a <code>Default URL</code> on the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="social-behavior">Social behavior<a class="headerlink" href="#social-behavior" title="Permanent link">&para;</a></h4>
+<ul>
+<li>OG Tags TODO</li>
+<li>Deep view TODO</li>
 </ul>
 <h4 id="supported-platforms">Supported platforms<a class="headerlink" href="#supported-platforms" title="Permanent link">&para;</a></h4>
 <ul>
@@ -1326,9 +1399,9 @@
 <tr>
 <th></th>
 <th align="center">iOS</th>
-<th>Details</th>
+<th>Usage</th>
 <th align="center">Android</th>
-<th>Details</th>
+<th>Usage</th>
 </tr>
 </thead>
 <tbody>
@@ -1345,6 +1418,20 @@
 <td><a href="https://dashboard.branch.io/settings/deepviews">Deep Views</a> must be enabled</td>
 <td align="center">✅</td>
 <td></td>
+</tr>
+<tr>
+<td>Instagram</td>
+<td align="center">✅</td>
+<td><a href="https://dashboard.branch.io/settings/deepviews">Deep Views</a> must be enabled</td>
+<td align="center">✅</td>
+<td></td>
+</tr>
+<tr>
+<td>SnapChat</td>
+<td align="center">✅</td>
+<td><a href="https://dashboard.branch.io/settings/deepviews">Deep Views</a> must be enabled</td>
+<td align="center">🅾️</td>
+<td><code>app.link</code> deep links are not clickable</td>
 </tr>
 <tr>
 <td>Twitter</td>
@@ -1455,49 +1542,71 @@
 </table>
 </li>
 </ul>
+<h2 id="analytical-behavior">Analytical behavior<a class="headerlink" href="#analytical-behavior" title="Permanent link">&para;</a></h2>
+<h4 id="analytical-tracking">Analytical tracking<a class="headerlink" href="#analytical-tracking" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Whenever a user <code>clicks</code> on a deep link and <code>opens</code> the app</li>
+<li>This triggers either an <code>install</code> or an <code>open</code><ul>
+<li><code>installs</code> represent Branch recognizing the app_id and device_id for the first time</li>
+<li><code>installs</code> represent new app users and the success rate of your Branch deep links</li>
+<li><code>installs</code> do <strong>not</strong> represent App Store downloads</li>
+<li><code>non-Branch installs</code> are installs outside of Branch deep link clicks</li>
+<li><code>opens</code> are non-installs</li>
+<li>If a user uninstalls and reinstalls the app, this will be an <code>open</code> because Branch recognizes the device</li>
+<li>If a user has the app and clicks a Branch deep link, this will be an <code>open</code> because the user is not new</li>
+</ul>
+</li>
+</ul>
 <h2 id="link-data">Link data<a class="headerlink" href="#link-data" title="Permanent link">&para;</a></h2>
 <h4 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p>Deep link data structure</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="err">tags:</span> <span class="err">[</span> <span class="err">&#39;tag1&#39;,</span> <span class="err">&#39;tag2&#39;</span> <span class="err">],</span>
-    <span class="err">channel:</span> <span class="err">&#39;facebook&#39;,</span>
-    <span class="err">feature:</span> <span class="err">&#39;dashboard&#39;,</span>
-    <span class="err">stage:</span> <span class="err">&#39;new</span> <span class="err">user&#39;,</span>
-    <span class="err">alias:</span> <span class="err">&#39;myalias&#39;,</span>
-    <span class="err">data:</span> <span class="err">{</span>
-        <span class="err">mydata:</span> <span class="err">&#39;something&#39;,</span>
-        <span class="err">foo:</span> <span class="err">&#39;bar&#39;,</span>
-        <span class="err">&#39;$desktop_url&#39;:</span> <span class="err">&#39;http://myappwebsite.com&#39;,</span>
-        <span class="err">&#39;$ios_url&#39;:</span> <span class="err">&#39;http://myappwebsite.com/ios&#39;,</span>
-        <span class="err">&#39;$android_url&#39;:</span> <span class="err">&#39;http://myappwebsite.com/android&#39;,</span>
-        <span class="err">&#39;$og_app_id&#39;:</span> <span class="err">&#39;12345&#39;,</span>
-        <span class="err">&#39;$og_title&#39;:</span> <span class="err">&#39;My</span> <span class="err">App&#39;,</span>
-        <span class="err">&#39;$og_description&#39;:</span> <span class="err">&#39;My</span> <span class="err">app\&#39;s</span> <span class="err">description.&#39;,</span>
-        <span class="err">&#39;$og_image_url&#39;:</span> <span class="err">&#39;http://myappwebsite.com/image.png&#39;</span>
-    <span class="p">}</span>
-<span class="err">}</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;tag1&#39;</span><span class="p">,</span> <span class="s1">&#39;tag2&#39;</span> <span class="p">],</span>
+  <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span><span class="p">,</span>
+  <span class="nx">feature</span><span class="o">:</span> <span class="s1">&#39;dashboard&#39;</span><span class="p">,</span>
+  <span class="nx">stage</span><span class="o">:</span> <span class="s1">&#39;new user&#39;</span><span class="p">,</span>
+  <span class="nx">alias</span><span class="o">:</span> <span class="s1">&#39;myalias&#39;</span><span class="p">,</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">mydata</span><span class="o">:</span> <span class="s1">&#39;something&#39;</span><span class="p">,</span>
+    <span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span>
+    <span class="nx">$desktop_url</span><span class="o">:</span> <span class="s1">&#39;http://myappwebsite.com&#39;</span><span class="p">,</span>
+    <span class="nx">$ios_url</span><span class="o">:</span> <span class="s1">&#39;http://myappwebsite.com/ios&#39;</span><span class="p">,</span>
+    <span class="nx">$android_url</span><span class="o">:</span> <span class="s1">&#39;http://myappwebsite.com/android&#39;</span><span class="p">,</span>
+    <span class="nx">$og_app_id</span><span class="o">:</span> <span class="s1">&#39;12345&#39;</span><span class="p">,</span>
+    <span class="nx">$og_title</span><span class="o">:</span> <span class="s1">&#39;My App&#39;</span><span class="p">,</span>
+    <span class="nx">$og_description</span><span class="o">:</span> <span class="s1">&#39;My app\&#39;s description.&#39;</span><span class="p">,</span>
+    <span class="nx">$og_image_url</span><span class="o">:</span> <span class="s1">&#39;http://myappwebsite.com/image.png&#39;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
-</td></tr></table>
 
+</li>
+<li>
+<p>Branch reserved keys</p>
+<table>
+<thead>
+<tr>
+<th align="center">Prefix</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">$</td>
+<td>Branch reserved keyword</td>
+</tr>
+<tr>
+<td align="center">~</td>
+<td>Branch analytical data</td>
+</tr>
+<tr>
+<td align="center">+</td>
+<td>Branch added values</td>
+</tr>
+</tbody>
+</table>
 </li>
 </ul>
 <h4 id="analytical-labels">Analytical labels<a class="headerlink" href="#analytical-labels" title="Permanent link">&para;</a></h4>
@@ -1601,9 +1710,8 @@
 </ul>
 <h4 id="redirections">Redirections<a class="headerlink" href="#redirections" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Navigate to different locations based on device information</li>
 <li>
-<p>iOS <code>Universal Links</code> will prevent this if the app is installed (TODO web-only)</p>
+<p>Navigate to different locations based on device information</p>
 <table>
 <thead>
 <tr>
@@ -1957,9 +2065,9 @@
                   <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    this.page.url = "https://ethanneff.github.io/branch-docs/docs/managing-links/understand-links/";
+    this.page.url = "https://ethanneff.github.io/branch-docs/docs/configuring-links/understand-links/";
     this.page.identifier =
-      "/docs/managing-links/understand-links/";
+      "/docs/configuring-links/understand-links/";
   };
   (function() {
     var d = document, s = d.createElement("script");

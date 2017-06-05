@@ -491,7 +491,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../managing-links/understand-links/" title="Understanding links" class="md-nav__link">
+    <a href="../../configuring-links/understand-links/" title="Understanding links" class="md-nav__link">
       Understanding links
     </a>
   </li>
@@ -503,7 +503,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../managing-links/create-links/" title="Creating links" class="md-nav__link">
+    <a href="../../configuring-links/create-links/" title="Creating links" class="md-nav__link">
       Creating links
     </a>
   </li>
@@ -1181,37 +1181,7 @@
 <ul>
 <li>
 <p>Import the Branch SDK to your <code>build.gradle</code></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">apply</span> <span class="n">plugin</span><span class="o">:</span> <span class="err">&#39;</span><span class="n">com</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">application</span><span class="err">&#39;</span>
+<div class="codehilite"><pre><span></span><span class="n">apply</span> <span class="n">plugin</span><span class="o">:</span> <span class="err">&#39;</span><span class="n">com</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">application</span><span class="err">&#39;</span>
 
 <span class="n">android</span> <span class="o">{</span>
     <span class="n">compileSdkVersion</span> <span class="mi">25</span>
@@ -1243,7 +1213,6 @@
 </span>    <span class="n">testCompile</span> <span class="err">&#39;</span><span class="n">junit</span><span class="o">:</span><span class="n">junit</span><span class="o">:</span><span class="mf">4.12</span><span class="err">&#39;</span>
 <span class="o">}</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
@@ -1251,63 +1220,7 @@
 <ul>
 <li>
 <p>Add Branch to your <code>AndroidManifest.xml</code></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="nt">&lt;manifest</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
     <span class="na">package=</span><span class="s">&quot;com.eneff.branchandroid&quot;</span><span class="nt">&gt;</span>
 
@@ -1365,7 +1278,6 @@
 
 <span class="nt">&lt;/manifest&gt;</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 <li>
@@ -1382,20 +1294,7 @@
 <ul>
 <li>
 <p>Add Branch to your <code>CustomApplicationClass.java</code></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.eneff.branchandroid</span><span class="o">;</span>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.eneff.branchandroid</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">android.app.Application</span><span class="o">;</span>
 <span class="hll"><span class="kn">import</span> <span class="nn">io.branch.referral.Branch</span><span class="o">;</span>
@@ -1410,94 +1309,11 @@
 </span>    <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 <li>
 <p>Add Branch to your <code>MainActivity.java</code></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.eneff.branchandroid</span><span class="o">;</span>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.eneff.branchandroid</span><span class="o">;</span>
 
 <span class="hll"><span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
 </span><span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
@@ -1581,7 +1397,6 @@
 </span>
 <span class="o">}</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>

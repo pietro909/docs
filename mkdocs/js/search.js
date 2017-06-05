@@ -6,8 +6,11 @@ require([
 ], function (Mustache, lunr, results_template, data) {
    "use strict";
 
+   console.log('here')
+
     function getSearchTerm()
     {
+        console.log('getSearchTerm')
         var sPageURL = window.location.search.substring(1);
         var sURLVariables = sPageURL.split('&');
         for (var i = 0; i < sURLVariables.length; i++)
@@ -37,8 +40,8 @@ require([
     }
 
     var search = function(){
-
         var query = document.getElementById('mkdocs-search-query').value;
+        console.log(query)
         var search_results = document.getElementById("mkdocs-search-results");
         while (search_results.firstChild) {
             search_results.removeChild(search_results.firstChild);
@@ -49,6 +52,7 @@ require([
         }
 
         var results = index.search(query);
+        console.log(results)
 
         if (results.length > 0){
             for (var i=0; i < results.length; i++){

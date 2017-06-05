@@ -55,6 +55,7 @@ div.md-sidebar--primary ul.md-nav__list li:first-child {
 }
 .md-typeset h4 {
   font-weight: 600;
+  font-size: 1.8rem;
 }
 
 .md-nav--secondary .md-nav__link--active {

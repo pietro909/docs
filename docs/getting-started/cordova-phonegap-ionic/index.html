@@ -399,8 +399,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#display-content" title="Display Content" class="md-nav__link">
-    Display Content
+  <a href="#display-content" title="Display content" class="md-nav__link">
+    Display content
   </a>
   
 </li>
@@ -422,6 +422,13 @@
           <li class="md-nav__item">
   <a href="#track-events" title="Track events" class="md-nav__link">
     Track events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-commerce" title="Track commerce" class="md-nav__link">
+    Track commerce
   </a>
   
 </li>
@@ -498,6 +505,13 @@
           <li class="md-nav__item">
   <a href="#deep-link-properties" title="Deep link properties" class="md-nav__link">
     Deep link properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-data-commerce-properties" title="Link Data: Commerce Properties" class="md-nav__link">
+    Link Data: Commerce Properties
   </a>
   
 </li>
@@ -671,7 +685,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../managing-links/understand-links/" title="Understanding links" class="md-nav__link">
+    <a href="../../configuring-links/understand-links/" title="Understanding links" class="md-nav__link">
       Understanding links
     </a>
   </li>
@@ -683,7 +697,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../managing-links/create-links/" title="Creating links" class="md-nav__link">
+    <a href="../../configuring-links/create-links/" title="Creating links" class="md-nav__link">
       Creating links
     </a>
   </li>
@@ -1368,8 +1382,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#display-content" title="Display Content" class="md-nav__link">
-    Display Content
+  <a href="#display-content" title="Display content" class="md-nav__link">
+    Display content
   </a>
   
 </li>
@@ -1391,6 +1405,13 @@
           <li class="md-nav__item">
   <a href="#track-events" title="Track events" class="md-nav__link">
     Track events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-commerce" title="Track commerce" class="md-nav__link">
+    Track commerce
   </a>
   
 </li>
@@ -1467,6 +1488,13 @@
           <li class="md-nav__item">
   <a href="#deep-link-properties" title="Deep link properties" class="md-nav__link">
     Deep link properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-data-commerce-properties" title="Link Data: Commerce Properties" class="md-nav__link">
+    Link Data: Commerce Properties
   </a>
   
 </li>
@@ -1549,16 +1577,7 @@
 <ul>
 <li>
 <p>Cordova and Ionic
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">&lt;!-- sample config.xml --&gt;</span>
+    <div class="codehilite"><pre><span></span><span class="c">&lt;!-- sample config.xml --&gt;</span>
 <span class="nt">&lt;widget</span> <span class="na">id=</span><span class="s">&quot;com.eneff.branch.cordovatestbed&quot;</span> <span class="na">version=</span><span class="s">&quot;0.0.1&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/ns/widgets&quot;</span> <span class="na">xmlns:cdv=</span><span class="s">&quot;http://cordova.apache.org/ns/1.0&quot;</span><span class="nt">&gt;</span>
   <span class="c">&lt;!-- Branch --&gt;</span>
   <span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">&quot;branch-cordova-sdk&quot;</span> <span class="na">spec=</span><span class="s">&quot;^2.5.0&quot;</span> <span class="nt">/&gt;</span>
@@ -1568,21 +1587,11 @@
     <span class="nt">&lt;link-domain</span> <span class="na">value=</span><span class="s">&quot;cordova.app.link&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;ios-team-release</span> <span class="na">value=</span><span class="s">&quot;PW4Q8885U7&quot;</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/branch-config&gt;</span>
-</pre></div>
-</td></tr></table></p>
+</pre></div></p>
 </li>
 <li>
 <p>PhoneGap
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">&lt;!-- sample config.xml --&gt;</span>
+    <div class="codehilite"><pre><span></span><span class="c">&lt;!-- sample config.xml --&gt;</span>
 <span class="nt">&lt;widget</span> <span class="na">id=</span><span class="s">&quot;com.eneff.branch.cordovatestbed&quot;</span> <span class="na">version=</span><span class="s">&quot;1.0.0&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/ns/widgets&quot;</span> <span class="na">xmlns:gap=</span><span class="s">&quot;http://phonegap.com/ns/1.0&quot;</span><span class="nt">&gt;</span>
   <span class="c">&lt;!-- Branch --&gt;</span>
   <span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">&quot;branch-cordova-sdk&quot;</span> <span class="na">spec=</span><span class="s">&quot;^2.5.0&quot;</span> <span class="nt">/&gt;</span>
@@ -1592,8 +1601,7 @@
     <span class="nt">&lt;link-domain</span> <span class="na">value=</span><span class="s">&quot;cordova.app.link&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;ios-team-release</span> <span class="na">value=</span><span class="s">&quot;PW4Q8885U7&quot;</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/branch-config&gt;</span>
-</pre></div>
-</td></tr></table></p>
+</pre></div></p>
 </li>
 <li>
 <p>Change the following values to match your <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></p>
@@ -1610,31 +1618,7 @@
 <ul>
 <li>
 <p>Cordova and PhoneGap
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// sample index.js</span>
+    <div class="codehilite"><pre><span></span><span class="c1">// sample index.js</span>
 <span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">bindEvents</span><span class="p">();</span>
@@ -1659,43 +1643,11 @@
 <span class="p">};</span>
 
 <span class="nx">app</span><span class="p">.</span><span class="nx">initialize</span><span class="p">();</span>
-</pre></div>
-</td></tr></table></p>
+</pre></div></p>
 </li>
 <li>
 <p>Ionic 1
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// sample app.js</span>
+    <div class="codehilite"><pre><span></span><span class="c1">// sample app.js</span>
 <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;starter&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ionic&#39;</span><span class="p">,</span> <span class="s1">&#39;starter.controllers&#39;</span><span class="p">,</span> <span class="s1">&#39;starter.services&#39;</span><span class="p">])</span>
 
 <span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$ionicPlatform</span><span class="p">)</span> <span class="p">{</span>
@@ -1727,49 +1679,11 @@
   <span class="p">});</span>
 <span class="p">})</span>
 <span class="c1">// ...</span>
-</pre></div>
-</td></tr></table></p>
+</pre></div></p>
 </li>
 <li>
 <p>Ionic 2/3</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// sample app.component.js</span>
+<div class="codehilite"><pre><span></span><span class="c1">// sample app.component.js</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">Platform</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;ionic-angular&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">StatusBar</span><span class="p">,</span> <span class="nx">Splashscreen</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;ionic-native&#39;</span><span class="p">;</span>
@@ -1808,7 +1722,6 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
@@ -1859,18 +1772,7 @@
 </li>
 <li>
 <p>Must be called on <code>deviceready</code> and <code>resume</code></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// for development and debugging only</span>
+<div class="codehilite"><pre><span></span><span class="c1">// for development and debugging only</span>
 <span class="nx">Branch</span><span class="p">.</span><span class="nx">setDebug</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
 
 <span class="c1">// Branch initialization</span>
@@ -1883,7 +1785,6 @@
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
 <span class="p">})</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
@@ -1894,31 +1795,7 @@
 </li>
 <li>
 <p>Link Data: <a href="#link-data-universal-object-properties">Universal Object Properties</a></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// only canonicalIdentifier is required</span>
+<div class="codehilite"><pre><span></span><span class="c1">// only canonicalIdentifier is required</span>
 <span class="kd">var</span> <span class="nx">properties</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">canonicalIdentifier</span><span class="o">:</span> <span class="s1">&#39;content/123&#39;</span><span class="p">,</span>
   <span class="nx">canonicalUrl</span><span class="o">:</span> <span class="s1">&#39;https://example.com/content/123&#39;</span><span class="p">,</span>
@@ -1944,7 +1821,6 @@
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
 <span class="p">})</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
@@ -1961,35 +1837,7 @@
 </li>
 <li>
 <p>Verify on the <a href="https://dashboard.branch.io/liveview/links">Branch Dashboard</a></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// optional fields</span>
+<div class="codehilite"><pre><span></span><span class="c1">// optional fields</span>
 <span class="kd">var</span> <span class="nx">analytics</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span><span class="p">,</span>
   <span class="nx">feature</span><span class="o">:</span> <span class="s1">&#39;onboarding&#39;</span><span class="p">,</span>
@@ -2019,7 +1867,6 @@
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
 <span class="p">})</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
@@ -2033,45 +1880,7 @@
 </li>
 <li>
 <p>Link Data: <a href="#link-data-deep-link-properties">Deep Link Properties</a></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// optional fields</span>
+<div class="codehilite"><pre><span></span><span class="c1">// optional fields</span>
 <span class="kd">var</span> <span class="nx">analytics</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span><span class="p">,</span>
   <span class="nx">feature</span><span class="o">:</span> <span class="s1">&#39;onboarding&#39;</span><span class="p">,</span>
@@ -2111,7 +1920,6 @@
 <span class="c1">// share sheet</span>
 <span class="nx">branchUniversalObj</span><span class="p">.</span><span class="nx">showShareSheet</span><span class="p">(</span><span class="nx">analytics</span><span class="p">,</span> <span class="nx">properties</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
@@ -2125,65 +1933,45 @@
 </li>
 <li>
 <p>Listener
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Branch initialization within your deviceready and resume</span>
+    <div class="codehilite"><pre><span></span><span class="c1">// Branch initialization within your deviceready and resume</span>
 <span class="nx">Branch</span><span class="p">.</span><span class="nx">initSession</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">deepLinkData</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// handler for deep link data on click</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">deepLinkData</span><span class="p">))</span>
 <span class="p">})</span>
-</pre></div>
-</td></tr></table></p>
+</pre></div></p>
 </li>
 <li>
 <p>First data
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">Branch</span><span class="p">.</span><span class="nx">getFirstReferringParams</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <div class="codehilite"><pre><span></span><span class="nx">Branch</span><span class="p">.</span><span class="nx">getFirstReferringParams</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
 <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
 <span class="p">})</span>
-</pre></div>
-</td></tr></table></p>
+</pre></div></p>
 </li>
 <li>
 <p>Latest data
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">Branch</span><span class="p">.</span><span class="nx">getLatestReferringParams</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <div class="codehilite"><pre><span></span><span class="nx">Branch</span><span class="p">.</span><span class="nx">getLatestReferringParams</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
 <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
 <span class="p">})</span>
-</pre></div>
-</td></tr></table></p>
+</pre></div></p>
 </li>
 </ul>
-<h4 id="display-content">Display Content<a class="headerlink" href="#display-content" title="Permanent link">&para;</a></h4>
+<h4 id="display-content">Display content<a class="headerlink" href="#display-content" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p>List content on iOS Spotlight</p>
 </li>
 <li>
 <p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">branchUniversalObj</span><span class="p">.</span><span class="nx">listOnSpotlight</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="nx">branchUniversalObj</span><span class="p">.</span><span class="nx">listOnSpotlight</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
 <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
 <span class="p">})</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
@@ -2197,17 +1985,12 @@
 </li>
 <li>
 <p>Verify on the <a href="https://dashboard.branch.io/liveview/content">Branch Dashboard</a></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">branchUniversalObj</span><span class="p">.</span><span class="nx">registerView</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="nx">branchUniversalObj</span><span class="p">.</span><span class="nx">registerView</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
 <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
 <span class="p">})</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
@@ -2218,34 +2001,23 @@
 </li>
 <li>
 <p>Verify on the <a href="https://dashboard.branch.io/liveview/identities">Branch Dashboard</a>  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">userId</span> <span class="o">=</span> <span class="s1">&#39;123456&#39;</span>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">userId</span> <span class="o">=</span> <span class="s1">&#39;123456&#39;</span>
 <span class="nx">Branch</span><span class="p">.</span><span class="nx">setIdentity</span><span class="p">(</span><span class="nx">userId</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
 <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">))</span>
 <span class="p">})</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 <li>
 <p>Removes the identity of a user</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">Branch</span><span class="p">.</span><span class="nx">logout</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="nx">Branch</span><span class="p">.</span><span class="nx">logout</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
 <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">))</span>
 <span class="p">})</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
@@ -2262,13 +2034,7 @@
 </li>
 <li>
 <p>Verify on the <a href="https://dashboard.branch.io/liveview/events">Branch Dashboard</a></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">eventName</span> <span class="o">=</span> <span class="s1">&#39;clicked_on_this&#39;</span>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">eventName</span> <span class="o">=</span> <span class="s1">&#39;clicked_on_this&#39;</span>
 <span class="kd">var</span> <span class="nx">metadata</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;custom_dictionary&#39;</span><span class="o">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;anything&#39;</span><span class="o">:</span> <span class="s1">&#39;everything&#39;</span> <span class="p">}</span>
 <span class="nx">Branch</span><span class="p">.</span><span class="nx">userCompletedAction</span><span class="p">(</span><span class="nx">eventName</span><span class="p">,</span> <span class="nx">metaData</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
@@ -2276,21 +2042,69 @@
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">))</span>
 <span class="p">})</span>
 </pre></div>
-</td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">eventName</span> <span class="o">=</span> <span class="s1">&#39;clicked_on_this&#39;</span>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">eventName</span> <span class="o">=</span> <span class="s1">&#39;clicked_on_this&#39;</span>
 <span class="nx">Branch</span><span class="p">.</span><span class="nx">userCompletedAction</span><span class="p">(</span><span class="nx">eventName</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
 <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">))</span>
 <span class="p">})</span>
 </pre></div>
-</td></tr></table>
+
+</li>
+</ul>
+<h4 id="track-commerce">Track commerce<a class="headerlink" href="#track-commerce" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Registers a custom commerce event</p>
+</li>
+<li>
+<p>Link Data: <a href="#link-data-commerce-properties">Track commerce properties</a> for <code>Currency</code> and <code>Category</code> </p>
+</li>
+<li>
+<p>Verify on the <a href="https://dashboard.branch.io/liveview/commerce">Branch Dashboard</a></p>
+<div class="codehilite"><pre><span></span><span class="c1">// only revenue is required</span>
+<span class="kd">var</span> <span class="nx">event</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;revenue&#39;</span><span class="o">:</span> <span class="mf">50.29</span><span class="p">,</span>
+  <span class="s1">&#39;currency&#39;</span><span class="o">:</span> <span class="mi">148</span><span class="p">,</span> <span class="c1">// USD</span>
+  <span class="s1">&#39;transactionID&#39;</span><span class="o">:</span> <span class="s1">&#39;transaction id&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;coupon&#39;</span><span class="o">:</span> <span class="s1">&#39;coupon&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;shipping&#39;</span><span class="o">:</span> <span class="mf">2.22</span><span class="p">,</span>
+  <span class="s1">&#39;tax&#39;</span><span class="o">:</span> <span class="mf">5.11</span><span class="p">,</span>
+  <span class="s1">&#39;affiliation&#39;</span><span class="o">:</span> <span class="s1">&#39;affiliation&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;products&#39;</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s1">&#39;sku&#39;</span><span class="o">:</span> <span class="s1">&#39;u123&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;name&#39;</span><span class="o">:</span> <span class="s1">&#39;cactus&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;price&#39;</span><span class="o">:</span> <span class="mf">4.99</span><span class="p">,</span>
+      <span class="s1">&#39;quantity&#39;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s1">&#39;brand&#39;</span><span class="o">:</span> <span class="s1">&#39;brand&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;category&#39;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span> <span class="c1">// Software</span>
+      <span class="s1">&#39;variant&#39;</span><span class="o">:</span> <span class="s1">&#39;variant&#39;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s1">&#39;sku&#39;</span><span class="o">:</span> <span class="s1">&#39;u456&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;name&#39;</span><span class="o">:</span> <span class="s1">&#39;grass&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;price&#39;</span><span class="o">:</span> <span class="mf">0.00</span><span class="p">,</span>
+      <span class="s1">&#39;quantity&#39;</span><span class="o">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1">// optional fields</span>
+<span class="kd">var</span> <span class="nx">metadata</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;custom_dictionary&#39;</span><span class="o">:</span> <span class="mi">123</span><span class="p">,</span>
+  <span class="s1">&#39;anything&#39;</span><span class="o">:</span> <span class="s1">&#39;everything&#39;</span>
+<span class="p">}</span>
+
+<span class="nx">Branch</span><span class="p">.</span><span class="nx">sendCommerceEvent</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">metadata</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
+<span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">))</span>
+<span class="p">})</span>
+</pre></div>
 
 </li>
 </ul>
@@ -2330,13 +2144,7 @@
 </li>
 <li>
 <p>Spend credits</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">amount</span> <span class="o">=</span> <span class="mi">10</span>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">amount</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="kd">var</span> <span class="nx">bucket</span> <span class="o">=</span> <span class="s1">&#39;this_bucket&#39;</span>
 <span class="nx">Branch</span><span class="p">.</span><span class="nx">redeemRewards</span><span class="p">(</span><span class="nx">amount</span><span class="p">,</span> <span class="nx">bucket</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
@@ -2344,65 +2152,42 @@
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
 <span class="p">})</span>
 </pre></div>
-</td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">amount</span> <span class="o">=</span> <span class="mi">10</span>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">amount</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="nx">Branch</span><span class="p">.</span><span class="nx">redeemRewards</span><span class="p">(</span><span class="nx">amount</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
 <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
 <span class="p">})</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 <li>
 <p>Load credits</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">bucket</span> <span class="o">=</span> <span class="s1">&#39;this_bucket&#39;</span>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">bucket</span> <span class="o">=</span> <span class="s1">&#39;this_bucket&#39;</span>
 <span class="nx">Branch</span><span class="p">.</span><span class="nx">loadRewards</span><span class="p">(</span><span class="nx">bucket</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
 <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
 <span class="p">})</span>
 </pre></div>
-</td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">Branch</span><span class="p">.</span><span class="nx">loadRewards</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="nx">Branch</span><span class="p">.</span><span class="nx">loadRewards</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
 <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
 <span class="p">})</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 <li>
 <p>Load history</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">Branch</span><span class="p">.</span><span class="nx">creditHistory</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="nx">Branch</span><span class="p">.</span><span class="nx">creditHistory</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
 <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
 <span class="p">})</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
@@ -2420,21 +2205,7 @@
 <ul>
 <li>
 <p>Additional configuration for custom link domains, simulating installs, unique bundle identifiers, etc</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">&lt;!-- sample config.xml --&gt;</span>
+<div class="codehilite"><pre><span></span><span class="c">&lt;!-- sample config.xml --&gt;</span>
 <span class="nt">&lt;widget</span> <span class="na">id=</span><span class="s">&quot;com.eneff.branch.cordovatestbed&quot;</span> <span class="na">version=</span><span class="s">&quot;1.0.0&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/ns/widgets&quot;</span> <span class="na">xmlns:cdv=</span><span class="s">&quot;http://cordova.apache.org/ns/1.0&quot;</span><span class="nt">&gt;</span>
   <span class="c">&lt;!-- Branch --&gt;</span>
   <span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">&quot;branch-cordova-sdk&quot;</span> <span class="na">spec=</span><span class="s">&quot;~2.4.2&quot;</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- optional spec --&gt;</span>
@@ -2450,11 +2221,9 @@
     <span class="nt">&lt;android-testmode</span> <span class="na">value=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- optional (simulate installs) --&gt;</span>
   <span class="nt">&lt;/branch-config&gt;</span>
 </pre></div>
-</td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">&lt;widget</span> <span class="na">ios-CFBundleIdentifier=</span><span class="s">&quot;com.eneff.branch.cordovatestbedios&quot;</span> <span class="na">android-packageName=</span><span class="s">&quot;com.eneff.branch.cordovatestbedandroid&quot;</span> <span class="na">version=</span><span class="s">&quot;1.0.0&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/ns/widgets&quot;</span> <span class="na">xmlns:cdv=</span><span class="s">&quot;http://cordova.apache.org/ns/1.0&quot;</span><span class="nt">&gt;</span>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;widget</span> <span class="na">ios-CFBundleIdentifier=</span><span class="s">&quot;com.eneff.branch.cordovatestbedios&quot;</span> <span class="na">android-packageName=</span><span class="s">&quot;com.eneff.branch.cordovatestbedandroid&quot;</span> <span class="na">version=</span><span class="s">&quot;1.0.0&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/ns/widgets&quot;</span> <span class="na">xmlns:cdv=</span><span class="s">&quot;http://cordova.apache.org/ns/1.0&quot;</span><span class="nt">&gt;</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
@@ -2573,17 +2342,598 @@
 <ul>
 <li>TODO redirection</li>
 </ul>
+<h4 id="link-data-commerce-properties">Link Data: Commerce Properties<a class="headerlink" href="#link-data-commerce-properties" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>For <a href="#track-commerce">Track Commerce</a></p>
+</li>
+<li>
+<p>Categories</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Category</th>
+<th>Value</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Animals &amp; Pet Supplies</td>
+<td>11</td>
+<td>Home &amp; Garden</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Apparel &amp; Accessories</td>
+<td>12</td>
+<td>Luggage &amp; Bags</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Arts &amp; Entertainment</td>
+<td>13</td>
+<td>Mature</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Baby &amp; Toddler</td>
+<td>14</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Business &amp; Industrial</td>
+<td>15</td>
+<td>Office Supplies</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Camera &amp; Optics</td>
+<td>16</td>
+<td>Religious &amp; Ceremonial</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Electronics</td>
+<td>17</td>
+<td>Software</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Food, Beverage &amp; Tobacco</td>
+<td>18</td>
+<td>Sporting Goods</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Furniture</td>
+<td>19</td>
+<td>Toys &amp; Games</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Hardware</td>
+<td>20</td>
+<td>Vehicles &amp; Parts</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Health &amp; Beauty</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Currencies</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Currency</th>
+<th>Value</th>
+<th>Currency</th>
+<th>Value</th>
+<th>Currency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>AED</td>
+<td>60</td>
+<td>HKD</td>
+<td>120</td>
+<td>RSD</td>
+</tr>
+<tr>
+<td>1</td>
+<td>AFN</td>
+<td>61</td>
+<td>HNL</td>
+<td>121</td>
+<td>RUB</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ALL</td>
+<td>62</td>
+<td>HRK</td>
+<td>122</td>
+<td>RWF</td>
+</tr>
+<tr>
+<td>3</td>
+<td>AMD</td>
+<td>63</td>
+<td>HTG</td>
+<td>123</td>
+<td>SAR</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ANG</td>
+<td>64</td>
+<td>HUF</td>
+<td>124</td>
+<td>SBD</td>
+</tr>
+<tr>
+<td>5</td>
+<td>AOA</td>
+<td>65</td>
+<td>IDR</td>
+<td>125</td>
+<td>SCR</td>
+</tr>
+<tr>
+<td>6</td>
+<td>ARS</td>
+<td>66</td>
+<td>ILS</td>
+<td>126</td>
+<td>SDG</td>
+</tr>
+<tr>
+<td>7</td>
+<td>AUD</td>
+<td>67</td>
+<td>INR</td>
+<td>127</td>
+<td>SEK</td>
+</tr>
+<tr>
+<td>8</td>
+<td>AWG</td>
+<td>68</td>
+<td>IQD</td>
+<td>128</td>
+<td>SGD</td>
+</tr>
+<tr>
+<td>9</td>
+<td>AZN</td>
+<td>69</td>
+<td>IRR</td>
+<td>129</td>
+<td>SHP</td>
+</tr>
+<tr>
+<td>10</td>
+<td>BAM</td>
+<td>70</td>
+<td>ISK</td>
+<td>130</td>
+<td>SLL</td>
+</tr>
+<tr>
+<td>11</td>
+<td>BBD</td>
+<td>71</td>
+<td>JMD</td>
+<td>131</td>
+<td>SOS</td>
+</tr>
+<tr>
+<td>12</td>
+<td>BDT</td>
+<td>72</td>
+<td>JOD</td>
+<td>132</td>
+<td>SRD</td>
+</tr>
+<tr>
+<td>13</td>
+<td>BGN</td>
+<td>73</td>
+<td>JPY</td>
+<td>133</td>
+<td>SSP</td>
+</tr>
+<tr>
+<td>14</td>
+<td>BHD</td>
+<td>74</td>
+<td>KES</td>
+<td>134</td>
+<td>STD</td>
+</tr>
+<tr>
+<td>15</td>
+<td>BIF</td>
+<td>75</td>
+<td>KGS</td>
+<td>135</td>
+<td>SYP</td>
+</tr>
+<tr>
+<td>16</td>
+<td>BMD</td>
+<td>76</td>
+<td>KHR</td>
+<td>136</td>
+<td>SZL</td>
+</tr>
+<tr>
+<td>17</td>
+<td>BND</td>
+<td>77</td>
+<td>KMF</td>
+<td>137</td>
+<td>THB</td>
+</tr>
+<tr>
+<td>18</td>
+<td>BOB</td>
+<td>78</td>
+<td>KPW</td>
+<td>138</td>
+<td>TJS</td>
+</tr>
+<tr>
+<td>19</td>
+<td>BOV</td>
+<td>79</td>
+<td>KRW</td>
+<td>139</td>
+<td>TMT</td>
+</tr>
+<tr>
+<td>20</td>
+<td>BRL</td>
+<td>80</td>
+<td>KWD</td>
+<td>140</td>
+<td>TND</td>
+</tr>
+<tr>
+<td>21</td>
+<td>BSD</td>
+<td>81</td>
+<td>KYD</td>
+<td>141</td>
+<td>TOP</td>
+</tr>
+<tr>
+<td>22</td>
+<td>BTN</td>
+<td>82</td>
+<td>KZT</td>
+<td>142</td>
+<td>TRY</td>
+</tr>
+<tr>
+<td>23</td>
+<td>BWP</td>
+<td>83</td>
+<td>LAK</td>
+<td>143</td>
+<td>TTD</td>
+</tr>
+<tr>
+<td>24</td>
+<td>BYN</td>
+<td>84</td>
+<td>LBP</td>
+<td>144</td>
+<td>TWD</td>
+</tr>
+<tr>
+<td>25</td>
+<td>BYR</td>
+<td>85</td>
+<td>LKR</td>
+<td>145</td>
+<td>TZS</td>
+</tr>
+<tr>
+<td>26</td>
+<td>BZD</td>
+<td>86</td>
+<td>LRD</td>
+<td>146</td>
+<td>UAH</td>
+</tr>
+<tr>
+<td>27</td>
+<td>CAD</td>
+<td>87</td>
+<td>LSL</td>
+<td>147</td>
+<td>UGX</td>
+</tr>
+<tr>
+<td>28</td>
+<td>CDF</td>
+<td>88</td>
+<td>LYD</td>
+<td>148</td>
+<td>USD</td>
+</tr>
+<tr>
+<td>29</td>
+<td>CHE</td>
+<td>89</td>
+<td>MAD</td>
+<td>149</td>
+<td>USN</td>
+</tr>
+<tr>
+<td>30</td>
+<td>CHF</td>
+<td>90</td>
+<td>MDL</td>
+<td>150</td>
+<td>UYI</td>
+</tr>
+<tr>
+<td>31</td>
+<td>CHW</td>
+<td>91</td>
+<td>MGA</td>
+<td>151</td>
+<td>UYU</td>
+</tr>
+<tr>
+<td>32</td>
+<td>CLF</td>
+<td>92</td>
+<td>MKD</td>
+<td>152</td>
+<td>UZS</td>
+</tr>
+<tr>
+<td>33</td>
+<td>CLP</td>
+<td>93</td>
+<td>MMK</td>
+<td>153</td>
+<td>VEF</td>
+</tr>
+<tr>
+<td>34</td>
+<td>CNY</td>
+<td>94</td>
+<td>MNT</td>
+<td>154</td>
+<td>VND</td>
+</tr>
+<tr>
+<td>35</td>
+<td>COP</td>
+<td>95</td>
+<td>MOP</td>
+<td>155</td>
+<td>VUV</td>
+</tr>
+<tr>
+<td>36</td>
+<td>COU</td>
+<td>96</td>
+<td>MRO</td>
+<td>156</td>
+<td>WST</td>
+</tr>
+<tr>
+<td>37</td>
+<td>CRC</td>
+<td>97</td>
+<td>MUR</td>
+<td>157</td>
+<td>XAF</td>
+</tr>
+<tr>
+<td>38</td>
+<td>CUC</td>
+<td>98</td>
+<td>MVR</td>
+<td>158</td>
+<td>XAG</td>
+</tr>
+<tr>
+<td>39</td>
+<td>CUP</td>
+<td>99</td>
+<td>MWK</td>
+<td>159</td>
+<td>XAU</td>
+</tr>
+<tr>
+<td>40</td>
+<td>CVE</td>
+<td>100</td>
+<td>MXN</td>
+<td>160</td>
+<td>XBA</td>
+</tr>
+<tr>
+<td>41</td>
+<td>CZK</td>
+<td>101</td>
+<td>MXV</td>
+<td>161</td>
+<td>XBB</td>
+</tr>
+<tr>
+<td>42</td>
+<td>DJF</td>
+<td>102</td>
+<td>MYR</td>
+<td>162</td>
+<td>XBC</td>
+</tr>
+<tr>
+<td>43</td>
+<td>DKK</td>
+<td>103</td>
+<td>MZN</td>
+<td>163</td>
+<td>XBD</td>
+</tr>
+<tr>
+<td>44</td>
+<td>DOP</td>
+<td>104</td>
+<td>NAD</td>
+<td>164</td>
+<td>XCD</td>
+</tr>
+<tr>
+<td>45</td>
+<td>DZD</td>
+<td>105</td>
+<td>NGN</td>
+<td>165</td>
+<td>XDR</td>
+</tr>
+<tr>
+<td>46</td>
+<td>EGP</td>
+<td>106</td>
+<td>NIO</td>
+<td>166</td>
+<td>XFU</td>
+</tr>
+<tr>
+<td>47</td>
+<td>ERN</td>
+<td>107</td>
+<td>NOK</td>
+<td>167</td>
+<td>XOF</td>
+</tr>
+<tr>
+<td>48</td>
+<td>ETB</td>
+<td>108</td>
+<td>NPR</td>
+<td>168</td>
+<td>XPD</td>
+</tr>
+<tr>
+<td>49</td>
+<td>EUR</td>
+<td>109</td>
+<td>NZD</td>
+<td>169</td>
+<td>XPF</td>
+</tr>
+<tr>
+<td>50</td>
+<td>FJD</td>
+<td>110</td>
+<td>OMR</td>
+<td>170</td>
+<td>XPT</td>
+</tr>
+<tr>
+<td>51</td>
+<td>FKP</td>
+<td>111</td>
+<td>PAB</td>
+<td>171</td>
+<td>XSU</td>
+</tr>
+<tr>
+<td>52</td>
+<td>GBP</td>
+<td>112</td>
+<td>PEN</td>
+<td>172</td>
+<td>XTS</td>
+</tr>
+<tr>
+<td>53</td>
+<td>GEL</td>
+<td>113</td>
+<td>PGK</td>
+<td>173</td>
+<td>XUA</td>
+</tr>
+<tr>
+<td>54</td>
+<td>GHS</td>
+<td>114</td>
+<td>PHP</td>
+<td>174</td>
+<td>XXX</td>
+</tr>
+<tr>
+<td>55</td>
+<td>GIP</td>
+<td>115</td>
+<td>PKR</td>
+<td>175</td>
+<td>YER</td>
+</tr>
+<tr>
+<td>56</td>
+<td>GMD</td>
+<td>116</td>
+<td>PLN</td>
+<td>176</td>
+<td>ZAR</td>
+</tr>
+<tr>
+<td>57</td>
+<td>GNF</td>
+<td>117</td>
+<td>PYG</td>
+<td>177</td>
+<td>ZMW</td>
+</tr>
+<tr>
+<td>58</td>
+<td>GTQ</td>
+<td>118</td>
+<td>QAR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>59</td>
+<td>GYD</td>
+<td>119</td>
+<td>RON</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
 <h4 id="cordova-dependencies">Cordova dependencies<a class="headerlink" href="#cordova-dependencies" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p>Node</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>/usr/bin/ruby -e <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">&quot;</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span>/usr/bin/ruby -e <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">&quot;</span><span class="p">;</span>
 brew update<span class="p">;</span>
 brew install node<span class="p">;</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 <li>
@@ -2617,23 +2967,17 @@ brew install node<span class="p">;</span>
 </li>
 <li>
 <p>Open Android Studio -&gt; New project -&gt; ... -&gt; Run -&gt; Create new emulator -&gt; Nexus 6p 23 -&gt; Finish</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># add to ~/.bash_profile</span>
+<div class="codehilite"><pre><span></span><span class="c1"># add to ~/.bash_profile</span>
 <span class="nb">export</span> <span class="nv">ANDROID_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/Library/Android/sdk
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$ANDROID_HOME</span>/tools:<span class="nv">$PATH</span>
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$ANDROID_HOME</span>/platform-tools:<span class="nv">$PATH</span>
 </pre></div>
-</td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">source</span> ~/.bash_profile<span class="p">;</span>
+<div class="codehilite"><pre><span></span><span class="nb">source</span> ~/.bash_profile<span class="p">;</span>
 </pre></div>
-</td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>android update sdk<span class="p">;</span>
+<div class="codehilite"><pre><span></span>android update sdk<span class="p">;</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 <li>
@@ -2641,11 +2985,9 @@ brew install node<span class="p">;</span>
 </li>
 <li>
 <p>Generate Android Keystore</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>keytool -genkeypair -dname <span class="s2">&quot;cn=Full Name, ou=Business Unit, o=Company, c=US&quot;</span> -alias release -keypass aaa111 -keystore release.keystore -storepass aaa111 -validity <span class="m">10000</span> 
+<div class="codehilite"><pre><span></span>keytool -genkeypair -dname <span class="s2">&quot;cn=Full Name, ou=Business Unit, o=Company, c=US&quot;</span> -alias release -keypass aaa111 -keystore release.keystore -storepass aaa111 -validity <span class="m">10000</span> 
 keytool -list -v -keystore release.keystore
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
@@ -2743,19 +3085,14 @@ keytool -list -v -keystore release.keystore
 <ul>
 <li>
 <p>To get the latest improvements and capabilities</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># terminal</span>
+<div class="codehilite"><pre><span></span><span class="c1"># terminal</span>
 cordova plugin remove io.branch.sdk
 cordova plugin remove branch-cordova-sdk
 </pre></div>
-</td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">&lt;!-- config.xml --&gt;</span>
+<div class="codehilite"><pre><span></span><span class="c">&lt;!-- config.xml --&gt;</span>
 <span class="nt">&lt;plugin</span> <span class="na">name=</span><span class="s">&quot;branch-cordova-sdk&quot;</span> <span class="na">spec=</span><span class="s">&quot;^2.5.0&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
@@ -2783,49 +3120,36 @@ cordova plugin remove branch-cordova-sdk
 <ul>
 <li>
 <p>Error</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ORIGINAL EXCEPTION: Branch is not defined
+<div class="codehilite"><pre><span></span>ORIGINAL EXCEPTION: Branch is not defined
 </pre></div>
-</td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ReferenceError: Branch is not defined
+<div class="codehilite"><pre><span></span>ReferenceError: Branch is not defined
 </pre></div>
-</td></tr></table>
 
 <ul>
 <li>
 <p>Fix: Branch opens and installs your app. You cannot simulate Branch in the desktop browser</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Ionic 2/3 - running on browser instead of device</span>
+<div class="codehilite"><pre><span></span><span class="c1">// Ionic 2/3 - running on browser instead of device</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">platform</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="s1">&#39;cordova&#39;</span><span class="p">))</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
 <span class="nx">Branch</span><span class="p">.</span><span class="nx">userCompletedAction</span><span class="p">(</span><span class="s1">&#39;did_this&#39;</span><span class="p">)</span>
 </pre></div>
-</td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Ionic 2/3 - missing Branch import</span>
+<div class="codehilite"><pre><span></span><span class="c1">// Ionic 2/3 - missing Branch import</span>
 <span class="nx">declare</span> <span class="kd">var</span> <span class="nx">Branch</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
 </li>
 <li>
 <p>Error</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>** ARCHIVE FAILED **
+<div class="codehilite"><pre><span></span>** ARCHIVE FAILED **
 
 The following build commands failed:
   Check dependencies
 <span class="o">(</span><span class="m">1</span> failure<span class="o">)</span>
 Error: Error code <span class="m">65</span> <span class="k">for</span> command: xcodebuild with args: -xcconfig,cordova/build-debug.xcconfig,-workspace,Branch Testing.xcworkspace,-scheme,Branch Testing,-configuration,Debug,-destination,generic/platform<span class="o">=</span>iOS,-archivePath,Branch Testing.xcarchive,archive,CONFIGURATION_BUILD_DIR<span class="o">=</span>build/device,SHARED_PRECOMPS_DIR<span class="o">=</span>build/sharedpch
 </pre></div>
-</td></tr></table>
 
 <ul>
 <li>Fix: Open app in <code>Xcode</code> and launch from there (to select a <code>Provisioning Profile</code>)</li>
@@ -2833,20 +3157,17 @@ Error: Error code <span class="m">65</span> <span class="k">for</span> command: 
 </li>
 <li>
 <p>error</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>An invalid value <span class="s1">&#39;XC com eneff branch cordova_testbed&#39;</span> was provided <span class="k">for</span> the parameter <span class="s1">&#39;appIdName&#39;</span>.
+<div class="codehilite"><pre><span></span>An invalid value <span class="s1">&#39;XC com eneff branch cordova_testbed&#39;</span> was provided <span class="k">for</span> the parameter <span class="s1">&#39;appIdName&#39;</span>.
 </pre></div>
-</td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>No profiles <span class="k">for</span> <span class="s1">&#39;com.eneff.branch.cordova_testbed&#39;</span> were found
+<div class="codehilite"><pre><span></span>No profiles <span class="k">for</span> <span class="s1">&#39;com.eneff.branch.cordova_testbed&#39;</span> were found
 </pre></div>
-</td></tr></table>
 
 <ul>
 <li>
 <p>Fix: Don't use <code>cordova</code>, <code>hyphens</code> (Android), or <code>underscores</code> (iOS) in your bundle id (widget id)</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Error: Error code <span class="m">1</span> <span class="k">for</span> command: /gradlew with args: cdvBuildDebug,-b,/build.gradle,-Dorg.gradle.daemon<span class="o">=</span>true,-Pandroid.useDeprecatedNdk<span class="o">=</span><span class="nb">true</span>
+<div class="codehilite"><pre><span></span>Error: Error code <span class="m">1</span> <span class="k">for</span> command: /gradlew with args: cdvBuildDebug,-b,/build.gradle,-Dorg.gradle.daemon<span class="o">=</span>true,-Pandroid.useDeprecatedNdk<span class="o">=</span><span class="nb">true</span>
 </pre></div>
-</td></tr></table>
 
 </li>
 </ul>
