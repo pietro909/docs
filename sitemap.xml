@@ -3,7 +3,7 @@
 
     
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -12,83 +12,67 @@
     
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/getting-started/ios/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/getting-started/ios/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/getting-started/android/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/getting-started/android/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/getting-started/adobe-air/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/getting-started/adobe-air/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/getting-started/cordova-phonegap-ionic/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/getting-started/cordova-phonegap-ionic/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/getting-started/imessage/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/getting-started/imessage/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/getting-started/mparticle-android/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/getting-started/mparticle-android/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/getting-started/mparticle-ios/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/getting-started/mparticle-ios/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/getting-started/titanium/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/getting-started/titanium/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/getting-started/react-native/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/getting-started/react-native/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/getting-started/unity/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/getting-started/unity/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/getting-started/xamarin/</loc>
-     <lastmod>2017-06-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/configuring-links/understand-links/</loc>
-     <lastmod>2017-06-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/configuring-links/create-links/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/getting-started/xamarin/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -98,19 +82,13 @@
     
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/web-to-app/deep-views/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/configuring-links/understand-links/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/web-to-app/text-me-the-app/</loc>
-     <lastmod>2017-06-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/web-to-app/journeys/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/configuring-links/create-links/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -120,61 +98,19 @@
     
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/ads-to-app/deep-link-feeds/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/web-to-app/deep-views/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/ads-to-app/app-install-ads/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/web-to-app/text-me-the-app/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/ads-to-app/google-app-installs/</loc>
-     <lastmod>2017-06-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/ads-to-app/google-universal-app-campaigns/</loc>
-     <lastmod>2017-06-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/ads-to-app/google-search/</loc>
-     <lastmod>2017-06-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/ads-to-app/facebook-app-installs/</loc>
-     <lastmod>2017-06-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/ads-to-app/facebook-app-engagement/</loc>
-     <lastmod>2017-06-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/ads-to-app/facebook-instagram/</loc>
-     <lastmod>2017-06-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/ads-to-app/pinterest-app-installs/</loc>
-     <lastmod>2017-06-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/ads-to-app/snapchat-app-installs/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/web-to-app/journeys/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -184,81 +120,61 @@
     
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/emails-to-app/responsys/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/ads-to-app/deep-link-feeds/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/emails-to-app/sfmc/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/ads-to-app/app-install-ads/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/emails-to-app/sendgrid/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/ads-to-app/google-app-installs/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/emails-to-app/sailthru/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/ads-to-app/google-universal-app-campaigns/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/emails-to-app/appboy/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/ads-to-app/google-search/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/emails-to-app/self-serve/</loc>
-     <lastmod>2017-06-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/track-analytics/growth-attribution/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/ads-to-app/facebook-app-installs/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/track-analytics/user-value attribution/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/ads-to-app/facebook-app-engagement/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/track-analytics/revenue-attribution/</loc>
-     <lastmod>2017-06-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/export-analytics/export-csv/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/ads-to-app/facebook-instagram/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/export-analytics/export-api/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/ads-to-app/pinterest-app-installs/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/export-analytics/export-webhooks/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/ads-to-app/snapchat-app-installs/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -268,61 +184,145 @@
     
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/integrate-analytics/abobe-analytics/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/emails-to-app/responsys/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/integrate-analytics/adjust/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/emails-to-app/sfmc/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/integrate-analytics/amplitude/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/emails-to-app/sendgrid/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/integrate-analytics/appboy/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/emails-to-app/sailthru/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/integrate-analytics/google-analytics/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/emails-to-app/appboy/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/integrate-analytics/kochava/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/emails-to-app/self-serve/</loc>
+     <lastmod>2017-06-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://branchmetrics.github.io/ddocs/pages/track-analytics/growth-attribution/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/integrate-analytics/localytics/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/track-analytics/user-value attribution/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/integrate-analytics/mixpanel/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/track-analytics/revenue-attribution/</loc>
+     <lastmod>2017-06-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://branchmetrics.github.io/ddocs/pages/export-analytics/export-csv/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/integrate-analytics/tune/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/export-analytics/export-api/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://ethanneff.github.io/branch-docs/docs/integrate-analytics/appmetrica/</loc>
+     <loc>https://branchmetrics.github.io/ddocs/pages/export-analytics/export-webhooks/</loc>
+     <lastmod>2017-06-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://branchmetrics.github.io/ddocs/pages/integrate-analytics/abobe-analytics/</loc>
+     <lastmod>2017-06-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/ddocs/pages/integrate-analytics/adjust/</loc>
+     <lastmod>2017-06-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/ddocs/pages/integrate-analytics/amplitude/</loc>
+     <lastmod>2017-06-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/ddocs/pages/integrate-analytics/appboy/</loc>
+     <lastmod>2017-06-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/ddocs/pages/integrate-analytics/google-analytics/</loc>
+     <lastmod>2017-06-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/ddocs/pages/integrate-analytics/kochava/</loc>
+     <lastmod>2017-06-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/ddocs/pages/integrate-analytics/localytics/</loc>
+     <lastmod>2017-06-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/ddocs/pages/integrate-analytics/mixpanel/</loc>
+     <lastmod>2017-06-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/ddocs/pages/integrate-analytics/tune/</loc>
+     <lastmod>2017-06-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/ddocs/pages/integrate-analytics/appmetrica/</loc>
      <lastmod>2017-06-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
