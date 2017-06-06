@@ -1370,16 +1370,10 @@
 <h4 id="custom-behavior">Custom behavior<a class="headerlink" href="#custom-behavior" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Pass custom data from URL to app</p>
+<p>Pass custom data from a deep link to app</p>
 <ul>
+<li><code>https://s3z3.app.link/fzmLEhobLD?$custom_data = 123</code> </li>
 <li>TODO</li>
-</ul>
-</li>
-<li>
-<p>Redirect to website when app is installed</p>
-<ul>
-<li>[iOS] Override <code>Universal Links</code> open by using <code>$web_only = true</code> </li>
-<li>[Android] Override <code>App Links</code> open by TODO</li>
 </ul>
 </li>
 <li>
@@ -1392,6 +1386,21 @@
 <li>Enable a <code>global Deep view</code> on the <a href="https://dashboard.branch.io/web/deepviews">Branch Dashboard</a></li>
 <li>Add a <code>iOS Custom URL</code> on the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
 <li>Add a <code>Default URL</code> on the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
+</ul>
+</li>
+<li>
+<p>Redirect to website when app is installed</p>
+<ul>
+<li>iOS override <code>Universal Links</code> app open<ul>
+<li>Add <code>$web_only = true</code> <a href="#redirections">docs</a></li>
+<li>[or] Append <code>/e/</code> by <code>https://s3z3.app.link/fzmLEhobLD</code> -&gt; <code>https://s3z3.app.link/e/fzmLEhobLD</code></li>
+</ul>
+</li>
+<li>Android override <code>App Links</code> app open<ul>
+<li>Uncheck <code>Enable App Links</code> and <code>Save</code> the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
+<li>Use a broken URI Scheme with <code>$android_deeplink_path = 'random'</code></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1635,7 +1644,7 @@
 <tr>
 <td>channel</td>
 <td></td>
-<td>Use channel to tag the route that your link reaches users. For example, tag links with <code>"Facebook"</code> or <code>"LinkedIn"</code> to help track clicks and installs through those paths separately</td>
+<td>Use channel to tag the route that your link reaches users. For example, tag links with <code>'Facebook'</code> or <code>'LinkedIn'</code> to help track clicks and installs through those paths separately</td>
 </tr>
 <tr>
 <td>feature</td>
@@ -1655,7 +1664,7 @@
 <tr>
 <td>tags</td>
 <td></td>
-<td>This is a free form entry with unlimited values <code>["string"]</code>. Use it to organize your link data with labels that don’t fit within the bounds of the above</td>
+<td>This is a free form entry with unlimited values <code>['string']</code>. Use it to organize your link data with labels that don’t fit within the bounds of the above</td>
 </tr>
 <tr>
 <td>alias</td>
@@ -1691,7 +1700,7 @@
 </tr>
 <tr>
 <td>hello</td>
-<td><code>"world"</code></td>
+<td><code>'world'</code></td>
 <td>Any key-value pair</td>
 </tr>
 <tr>
@@ -1701,7 +1710,7 @@
 </tr>
 <tr>
 <td>any_value</td>
-<td><code>{ "random": "dictionary" }</code></td>
+<td><code>{ 'random': 'dictionary' }</code></td>
 <td>Any key-value pair</td>
 </tr>
 <tr>
