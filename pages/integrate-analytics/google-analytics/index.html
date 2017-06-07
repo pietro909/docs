@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
+
     <!-- Branch: Google Optimize and Analytics -->
     <style>
       .async-hide { opacity: 0 !important}
@@ -22,15 +23,17 @@
       ga('require', 'GTM-PDHLH8M');
       ga('send', 'pageview');
     </script>
+
     <!-- Branch: DocSearch -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
     <script type="text/javascript">
-    docsearch({
-      apiKey: '<API_KEY>',
-      indexName: '<INDEX_NAME>',
-      inputSelector: '<YOUR_INPUT_DOM_SELECTOR>'
-    });
+      docsearch({
+        apiKey: '887017d17a2c1e9490ad2c44caa7e817',
+        indexName: 'branchmetrics',
+        inputSelector: '.md-search__input',
+        debug: false
+      });
     </script>
 
     
@@ -189,6 +192,9 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
+
+  <input id="search" type="text" placeholder="search" name="search">
+
   <label class="md-nav__title md-nav__title--site" for="drawer">
     
       <i class="md-icon md-icon--home md-nav__button"></i>
