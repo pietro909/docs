@@ -91,7 +91,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header" data-md-component="header">
+      <input id="algolia-doc-search" type="text" placeholder="Search docs..." />
+
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
@@ -183,8 +186,6 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-
-  <input id="algolia-doc-search" type="text" placeholder="Search docs..." />
 
   <label class="md-nav__title md-nav__title--site" for="drawer">
     
@@ -1861,6 +1862,8 @@
     
       
     
+
+    <!-- Branch: DocSearch -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
     <script type="text/javascript">
       docsearch({
