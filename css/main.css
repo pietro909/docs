@@ -1,6 +1,6 @@
 /* DOCSEARCH */
 .algolia-docsearch-suggestion--category-header, .algolia-docsearch-footer--logo {
-  display: none;
+  display: none !important;
 }
 
 /* HEADER GIT STATS */
