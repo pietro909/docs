@@ -4,7 +4,7 @@
     
     <url>
      <loc>https://branchmetrics.github.io/docs/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,90 +12,68 @@
     
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/getting-started/ios/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/apps/ios/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/getting-started/android/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/apps/android/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/getting-started/adobe-air/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/apps/adobe-air/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/getting-started/cordova-phonegap-ionic/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/apps/cordova-phonegap-ionic/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/getting-started/imessage/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/apps/imessage/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/getting-started/mparticle-android/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/apps/mparticle-android/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/getting-started/mparticle-ios/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/apps/mparticle-ios/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/getting-started/titanium/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/apps/titanium/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/getting-started/react-native/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/apps/react-native/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/getting-started/unity/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/apps/unity/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/getting-started/xamarin/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/web-to-app/deep-views/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/web-to-app/text-me-the-app/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/web-to-app/journeys/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/apps/xamarin/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -104,78 +82,20 @@
     
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/configuring-links/understand-links/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/web/deep-views/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/configuring-links/create-links/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads-to-app/deep-link-feeds/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/web/text-me-the-app/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads-to-app/app-install-ads/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads-to-app/google-app-installs/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads-to-app/google-universal-app-campaigns/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads-to-app/google-search/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads-to-app/facebook-app-installs/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads-to-app/facebook-app-engagement/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads-to-app/facebook-instagram/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads-to-app/pinterest-app-installs/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads-to-app/snapchat-app-installs/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/web/journeys/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -184,38 +104,20 @@
     
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/emails-to-app/responsys/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/links/behavior/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/emails-to-app/sfmc/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/links/data/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/emails-to-app/sendgrid/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/emails-to-app/sailthru/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/emails-to-app/appboy/</loc>
-     <lastmod>2017-06-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/emails-to-app/self-serve/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/links/create/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -224,20 +126,62 @@
     
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/track-analytics/growth-attribution/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/ads/deep-link-feeds/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/track-analytics/user-value attribution/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/ads/app-install-ads/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/track-analytics/revenue-attribution/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/ads/google-app-installs/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/ads/google-universal-app-campaigns/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/ads/google-search/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/ads/facebook-app-installs/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/ads/facebook-app-engagement/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/ads/facebook-instagram/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/ads/pinterest-app-installs/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/ads/snapchat-app-installs/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -246,20 +190,38 @@
     
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/export-analytics/export-csv/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/emails/responsys/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/export-analytics/export-api/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/emails/sfmc/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/export-analytics/export-webhooks/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/emails/sendgrid/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/emails/sailthru/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/emails/appboy/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/emails/self-serve/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -268,62 +230,112 @@
     
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/integrate-analytics/abobe-analytics/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/analytics/behavior/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/integrate-analytics/adjust/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/analytics/growth-attribution/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/integrate-analytics/amplitude/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/analytics/user-value attribution/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/integrate-analytics/appboy/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/analytics/revenue-attribution/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/exports/export-csv/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/integrate-analytics/google-analytics/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/exports/export-api/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/integrate-analytics/kochava/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/exports/export-webhooks/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/integrations/abobe-analytics/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/integrate-analytics/localytics/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/integrations/adjust/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/integrate-analytics/mixpanel/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/integrations/amplitude/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/integrate-analytics/tune/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/integrations/appboy/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/integrate-analytics/appmetrica/</loc>
-     <lastmod>2017-06-12</lastmod>
+     <loc>https://branchmetrics.github.io/docs/pages/integrations/google-analytics/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/integrations/kochava/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/integrations/localytics/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/integrations/mixpanel/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/integrations/tune/</loc>
+     <lastmod>2017-06-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/integrations/appmetrica/</loc>
+     <lastmod>2017-06-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

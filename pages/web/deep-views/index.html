@@ -1,0 +1,1796 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+
+    <!-- Branch: Google Optimize and Analytics -->
+    <style>
+      .async-hide { opacity: 0 !important}
+    </style>
+    <script>
+      (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+      h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+      (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+      })(window,document.documentElement,'async-hide','dataLayer',4000,
+      {'GTM-PDHLH8M':true});
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-98205710-1', 'auto');
+      ga('require', 'GTM-PDHLH8M');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- Branch: DocSearch -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+    <script type="text/javascript">
+      docsearch({
+        apiKey: '887017d17a2c1e9490ad2c44caa7e817',
+        indexName: 'branchmetrics',
+        inputSelector: 'search',
+        debug: true
+      });
+    </script>
+
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Branch Documentation for Deep Linking">
+      
+      
+        <link rel="canonical" href="https://branchmetrics.github.io/docs/pages/web/deep-views/">
+      
+      
+        <meta name="author" content="Branch">
+      
+      
+        <link rel="shortcut icon" href="../../../img/favicon-96x96.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.3">
+    
+    
+      
+        <title>Deepviews - Branch documentation</title>
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-e2807e330f.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-f78e5cb881.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../../css/main.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://branchmetrics.github.io/docs" title="Branch documentation" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Configure your website
+                </span>
+              
+            
+            Deepviews
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/branchmetrics/docs" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Branch Documentation
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+
+  <input id="search" type="text" placeholder="search" name="search">
+
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Branch documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/branchmetrics/docs" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Branch Documentation
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Features" class="md-nav__link">
+      Features
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Configure your app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Configure your app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/ios/" title="iOS" class="md-nav__link">
+      iOS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/android/" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/adobe-air/" title="Adobe AIR" class="md-nav__link">
+      Adobe AIR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/cordova-phonegap-ionic/" title="Cordova PhoneGap Ionic" class="md-nav__link">
+      Cordova PhoneGap Ionic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/imessage/" title="iMessage" class="md-nav__link">
+      iMessage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/mparticle-android/" title="mParticle Android" class="md-nav__link">
+      mParticle Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/mparticle-ios/" title="mParticle iOS" class="md-nav__link">
+      mParticle iOS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/titanium/" title="Titanium" class="md-nav__link">
+      Titanium
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/react-native/" title="React Native" class="md-nav__link">
+      React Native
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/unity/" title="Unity" class="md-nav__link">
+      Unity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/xamarin/" title="Xamarin" class="md-nav__link">
+      Xamarin
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Configure your website
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Configure your website
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Deepviews
+      </label>
+    
+    <a href="./" title="Deepviews" class="md-nav__link md-nav__link--active">
+      Deepviews
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-deepviews" title="Enable Deepviews" class="md-nav__link">
+    Enable Deepviews
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-analytics" title="View Analytics" class="md-nav__link">
+    View Analytics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" title="Advanced" class="md-nav__link">
+    Advanced
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customizing-deepviews" title="Customizing Deepviews" class="md-nav__link">
+    Customizing Deepviews
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-per-link-deepviews" title="Enable per-link Deepviews" class="md-nav__link">
+    Enable per-link Deepviews
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-per-link-deepviews" title="Disable per-link Deepviews" class="md-nav__link">
+    Disable per-link Deepviews
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-new-deepview-templates" title="Create New Deepview Templates" class="md-nav__link">
+    Create New Deepview Templates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-deepview-templates" title="Edit Deepview Templates" class="md-nav__link">
+    Edit Deepview Templates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inject-other-data-into-deepviews" title="Inject Other Data Into Deepviews" class="md-nav__link">
+    Inject Other Data Into Deepviews
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary" title="Glossary" class="md-nav__link">
+    Glossary
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-deepviews" title="Active Deepviews" class="md-nav__link">
+    Active Deepviews
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive-deepviews" title="Passive Deepviews" class="md-nav__link">
+    Passive Deepviews
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../text-me-the-app/" title="Text me the app" class="md-nav__link">
+      Text me the app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../journeys/" title="Journeys" class="md-nav__link">
+      Journeys
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Configure your links
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Configure your links
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../links/behavior/" title="Link behavior" class="md-nav__link">
+      Link behavior
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../links/data/" title="Link data" class="md-nav__link">
+      Link data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../links/create/" title="Creating links" class="md-nav__link">
+      Creating links
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Configure your ads
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Configure your ads
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ads/deep-link-feeds/" title="Deep Link Feeds" class="md-nav__link">
+      Deep Link Feeds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ads/app-install-ads/" title="App Install Ads" class="md-nav__link">
+      App Install Ads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ads/google-app-installs/" title="Google App Installs" class="md-nav__link">
+      Google App Installs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ads/google-universal-app-campaigns/" title="Google Universal App Campaigns" class="md-nav__link">
+      Google Universal App Campaigns
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ads/google-search/" title="Google Search Ads" class="md-nav__link">
+      Google Search Ads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ads/facebook-app-installs/" title="Facebook App Installs" class="md-nav__link">
+      Facebook App Installs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ads/facebook-app-engagement/" title="Facebook App Engagement" class="md-nav__link">
+      Facebook App Engagement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ads/facebook-instagram/" title="Facebook Instagram" class="md-nav__link">
+      Facebook Instagram
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ads/pinterest-app-installs/" title="Pinterets App Installs" class="md-nav__link">
+      Pinterets App Installs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ads/snapchat-app-installs/" title="Snapchat App Installs" class="md-nav__link">
+      Snapchat App Installs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Configure your emails
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Configure your emails
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/responsys/" title="Responsys" class="md-nav__link">
+      Responsys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/sfmc/" title="SFMC" class="md-nav__link">
+      SFMC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/sendgrid/" title="SendGrid" class="md-nav__link">
+      SendGrid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/sailthru/" title="Sailthru" class="md-nav__link">
+      Sailthru
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/appboy/" title="AppBoy" class="md-nav__link">
+      AppBoy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/self-serve/" title="Self Serve" class="md-nav__link">
+      Self Serve
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Track your analytics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Track your analytics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analytics/behavior/" title="Behavior" class="md-nav__link">
+      Behavior
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analytics/growth-attribution/" title="Growth" class="md-nav__link">
+      Growth
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analytics/user-value attribution/" title="User Value" class="md-nav__link">
+      User Value
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analytics/revenue-attribution/" title="Revenue" class="md-nav__link">
+      Revenue
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Export your analytics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Export your analytics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../exports/export-csv/" title="CSV Export" class="md-nav__link">
+      CSV Export
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../exports/export-api/" title="Export API" class="md-nav__link">
+      Export API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../exports/export-webhooks/" title="Webhooks" class="md-nav__link">
+      Webhooks
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Integrate your analytics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Integrate your analytics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/abobe-analytics/" title="Abobe Analytics" class="md-nav__link">
+      Abobe Analytics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/adjust/" title="Adjust" class="md-nav__link">
+      Adjust
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/amplitude/" title="Amplitude" class="md-nav__link">
+      Amplitude
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/appboy/" title="AppBoy" class="md-nav__link">
+      AppBoy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/google-analytics/" title="Google Analytics" class="md-nav__link">
+      Google Analytics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/kochava/" title="Kochava" class="md-nav__link">
+      Kochava
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/localytics/" title="Localytics" class="md-nav__link">
+      Localytics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/mixpanel/" title="Mixpanel" class="md-nav__link">
+      Mixpanel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/tune/" title="Tune" class="md-nav__link">
+      Tune
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/appmetrica/" title="AppMetrica" class="md-nav__link">
+      AppMetrica
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-deepviews" title="Enable Deepviews" class="md-nav__link">
+    Enable Deepviews
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-analytics" title="View Analytics" class="md-nav__link">
+    View Analytics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" title="Advanced" class="md-nav__link">
+    Advanced
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customizing-deepviews" title="Customizing Deepviews" class="md-nav__link">
+    Customizing Deepviews
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-per-link-deepviews" title="Enable per-link Deepviews" class="md-nav__link">
+    Enable per-link Deepviews
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-per-link-deepviews" title="Disable per-link Deepviews" class="md-nav__link">
+    Disable per-link Deepviews
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-new-deepview-templates" title="Create New Deepview Templates" class="md-nav__link">
+    Create New Deepview Templates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-deepview-templates" title="Edit Deepview Templates" class="md-nav__link">
+    Edit Deepview Templates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inject-other-data-into-deepviews" title="Inject Other Data Into Deepviews" class="md-nav__link">
+    Inject Other Data Into Deepviews
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary" title="Glossary" class="md-nav__link">
+    Glossary
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-deepviews" title="Active Deepviews" class="md-nav__link">
+    Active Deepviews
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive-deepviews" title="Passive Deepviews" class="md-nav__link">
+    Passive Deepviews
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/web/deep-views.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                  <h1>Deepviews</h1>
+                
+                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>A Deepview is a mobile web splash page, hosted by Branch, that gives a preview of the in-app content behind a given Branch link. When a visitor opens one of your Branch links and does not have your app installed, you can show them a Deepview instead of sending them directly to the App/Play Store.</p>
+<p>Deepviews are discoverable in all search portals (Google, Apple Spotlight, Bing, etc), opening up new mechanisms for people to find your app, and drive much higher conversions to install than sending visitors to the App/Play Store directly. Here's an example flow:</p>
+<p><img alt="image" src="../../../img/pages/deepviews/deepviews_allthecooks.gif" /></p>
+<div class="admonition note">
+<p class="admonition-title">If you already have a mobile website</p>
+<p>The <a href="../{{base.url}}/features/website-to-app-routing">Website to App Routing</a> feature can be used to recreate the functionality of Deepviews using your own website. If you already host your own content previews, this is a good alternative!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For Deepviews to function as intended, you should <a href="../{{base.url}}/getting-started/sdk-integration-guide">integrate the Branch SDK</a> into your app and <a href="../{{base.url}}/getting-started/deep-link-routing">configure deep link routing</a>.</p>
+</div>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<h3 id="enable-deepviews">Enable Deepviews<a class="headerlink" href="#enable-deepviews" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Head to the <a href="https://dashboard.branch.io/web/deepviews">Deepviews configuration page</a> on the Branch dashboard.</li>
+<li>Deepviews are configured separately for visitors on each platform (iOS, Android, and desktop). Select the platforms you want and click <strong>Enable</strong>.</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/deepviews/deepviews_enable.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you enable desktop Deepviews, they will override any <a href="../{{base.url}}/features/text-me-the-app">Text-Me-The-App</a> page you have configured.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Changing the app icon</p>
+<p>If we pulled the wrong app icon, you can upload a new one in the <em>Social Media Display Customization</em> section of the <a href="https://dashboard.branch.io/link-settings">dashboard Settings</a>.</p>
+</div>
+<h3 id="view-analytics">View Analytics<a class="headerlink" href="#view-analytics" title="Permanent link">&para;</a></h3>
+<p>Branch lets you track the flow of users through Deepviews. You can find this information on the <a href="https://dashboard.branch.io/">summary page</a> of the Branch dashboard.</p>
+<p><img alt="image" src="../../../img/pages/deepviews/deepview_analytics.png" /></p>
+<p>There are various metrics to understand when deep linking from your mobile website.</p>
+<ul>
+<li><strong>Views:</strong> a user viewed the mobile site.</li>
+<li><strong>Clicks:</strong> a user clicked on the Deepview CTA</li>
+<li><strong>Installs:</strong> a user installed the app for the first time</li>
+<li><strong>Upgrades:</strong> a user re-opened or upgraded the app from a previous version</li>
+</ul>
+<p>Only users who do not have the app will go through this flow. You can view the total counts and conversion rate from each step on this chart.</p>
+<h2 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h2>
+<h3 id="customizing-deepviews">Customizing Deepviews<a class="headerlink" href="#customizing-deepviews" title="Permanent link">&para;</a></h3>
+<p>The default Deepview template simply displays the content from three of the link's <a href="../{{base.url}}/getting-started/configuring-links">control parameters</a>. You can specify the content of these parameters when creating your link to control what will display in that link’s Deepview. If nothing is set for a particular link, we will gracefully fall back to the OG values set for your entire app in <em>Settings &gt; Link Settings &gt; Social Media Display Customization.</em></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>$og_title</strong></td>
+<td>The title you'd like to appear on the deepview</td>
+</tr>
+<tr>
+<td><strong>$og_description</strong></td>
+<td>The description you'd like to appear on the deepview</td>
+</tr>
+<tr>
+<td><strong>$og_image_url</strong></td>
+<td>The URL for the image you'd like to appear on the deepview</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Hosting your own OG tags</p>
+<p>If you want to use OG tags you host elsewhere, leave these parameters empty and specify a <strong>$desktop_url</strong> control parameter when you create the link. Branch will perform a one-time scrape to populate the Deepview using the OG tags from the URL you specify.</p>
+</div>
+<p>If you're creating a link by appending query parameters, just append the parameters to the URL. Please make sure to URL encode everything, lest the link will break.</p>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;https://[branchsubdomain]?%24og_title=MyApp%20is%20disrupting%20apps&amp;$og_image_url=http%3A%2F%2Fmyapp.com%2Fimage.png&quot;</span>
+</pre></div>
+
+<p>When you create links via a mobile SDK, you simply need to set the OG tag parameters.</p>
+<!--- iOS -->
+
+<div class="codehilite"><pre><span></span><span class="n">BranchUniversalObject</span> <span class="o">*</span><span class="n">branchUniversalObject</span> <span class="o">=</span> <span class="p">[[</span><span class="n">BranchUniversalObject</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithCanonicalIdentifier</span><span class="p">:</span><span class="s">@&quot;item/12345&quot;</span><span class="p">];</span>
+<span class="c1">// Facebook OG tags -- this will overwrite any defaults you set up on the Branch Dashboard</span>
+<span class="n">branchUniversalObject</span><span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="s">@&quot;My Content Title&quot;</span><span class="p">;</span>
+<span class="n">branchUniversalObject</span><span class="p">.</span><span class="n">contentDescription</span> <span class="o">=</span> <span class="s">@&quot;My Content Description&quot;</span><span class="p">;</span>
+<span class="n">branchUniversalObject</span><span class="p">.</span><span class="n">imageUrl</span> <span class="o">=</span> <span class="s">@&quot;https://example.com/mycontent-12345.png&quot;</span><span class="p">;</span>
+
+<span class="c1">// Add any additional custom OG tags here</span>
+<span class="p">[</span><span class="n">branchUniversalObject</span> <span class="nl">addMetadataKey</span><span class="p">:</span><span class="s">@&quot;$og_video&quot;</span> <span class="nl">value</span><span class="p">:</span><span class="s">@&quot;http://mysite/video.mpg&quot;</span><span class="p">];</span>
+</pre></div>
+
+<p><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">branchUniversalObject</span><span class="p">:</span> <span class="n">BranchUniversalObject</span> <span class="p">=</span> <span class="n">BranchUniversalObject</span><span class="p">(</span><span class="n">canonicalIdentifier</span><span class="p">:</span> <span class="s">&quot;item/12345&quot;</span><span class="p">)</span>
+<span class="c1">// Facebook OG tags -- this will overwrite any defaults you set up on the Branch Dashboard</span>
+<span class="n">branchUniversalObject</span><span class="p">.</span><span class="n">title</span> <span class="p">=</span> <span class="s">&quot;My Content Title&quot;</span>
+<span class="n">branchUniversalObject</span><span class="p">.</span><span class="n">contentDescription</span> <span class="p">=</span> <span class="s">&quot;My Content Description&quot;</span>
+<span class="n">branchUniversalObject</span><span class="p">.</span><span class="n">imageUrl</span> <span class="p">=</span> <span class="s">&quot;https://example.com/mycontent-12345.png&quot;</span>
+
+<span class="c1">// Add any additional custom OG tags here</span>
+<span class="n">branchUniversalObject</span><span class="p">.</span><span class="n">addMetadataKey</span><span class="p">(</span><span class="s">&quot;$og_video&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="s">&quot;http://mysite/video.mpg&quot;</span><span class="p">)</span>
+</pre></div>
+<!--- /iOS --></p>
+<!--- Android -->
+
+<p><div class="codehilite"><pre><span></span> <span class="n">BranchUniversalObject</span> <span class="n">branchUniversalObject</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BranchUniversalObject</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">setCanonicalIdentifier</span><span class="o">(</span><span class="s">&quot;item/12345&quot;</span><span class="o">)</span>
+<span class="c1">// Facebook OG tags -- This will overwrite any defaults you have set on the Branch Dashboard</span>
+                <span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">&quot;My Content Title&quot;</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">setContentDescription</span><span class="o">(</span><span class="s">&quot;My Content Description&quot;</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">setContentImageUrl</span><span class="o">(</span><span class="s">&quot;https://example.com/mycontent-12345.png&quot;</span><span class="o">)</span>
+
+<span class="c1">// Add any additional custom OG tags here</span>
+                <span class="o">.</span><span class="na">addContentMetadata</span><span class="o">(</span><span class="s">&quot;$og_video&quot;</span><span class="o">,</span> <span class="s">&quot;http://mysite/video.mpg&quot;</span><span class="o">);</span>
+</pre></div>
+<!--- /Android --></p>
+<p>Edit the Title, Description and Image URL in the <em>Social Media</em> section.</p>
+<p><img alt="image" src="../../../img/pages/deepviews/deepviews_social_media_descriptions.png" /></p>
+<p><strong>Note:</strong> the <em>Deep Link</em> section accepts most link control parameters, but <code>$og_title</code>, <code>$og_description</code> and <code>$og_image_url</code> <strong>cannot</strong> be specified there.</p>
+<h3 id="enable-per-link-deepviews">Enable per-link Deepviews<a class="headerlink" href="#enable-per-link-deepviews" title="Permanent link">&para;</a></h3>
+<p>If you don't want to enable Deepviews globally, you can do it for each platform on a per link basis by inserting custom link control parameters <a href="../{{base.url}}/getting-started/configuring-links">link control parameters</a>.</p>
+<p>Enable Desktop Deepviews by appending query parameters:</p>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;https://[branchsubdomain]?%24desktop_deepview=default_template&amp;%24ios_deepview=default_template&quot;</span>
+</pre></div>
+
+<p>Enable iOS and Android Deepviews through the SDK:</p>
+<!--- iOS -->
+
+<p><div class="codehilite"><pre><span></span><span class="n">BranchLinkProperties</span> <span class="o">*</span><span class="n">linkProperties</span> <span class="o">=</span> <span class="p">[[</span><span class="n">BranchLinkProperties</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+<span class="n">linkProperties</span><span class="p">.</span><span class="n">feature</span> <span class="o">=</span> <span class="s">@&quot;sharing&quot;</span><span class="p">;</span>
+<span class="n">linkProperties</span><span class="p">.</span><span class="n">channel</span> <span class="o">=</span> <span class="s">@&quot;facebook&quot;</span><span class="p">;</span>
+<span class="p">[</span><span class="n">linkProperties</span> <span class="nl">addControlParam</span><span class="p">:</span><span class="s">@&quot;$ios_deepview&quot;</span> <span class="nl">withValue</span><span class="p">:</span><span class="s">@&quot;default_template&quot;</span><span class="p">];</span>
+<span class="p">[</span><span class="n">linkProperties</span> <span class="nl">addControlParam</span><span class="p">:</span><span class="s">@&quot;$android_deepview&quot;</span> <span class="nl">withValue</span><span class="p">:</span><span class="s">@&quot;default_template&quot;</span><span class="p">];</span>
+</pre></div>
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">linkProperties</span><span class="p">:</span> <span class="n">BranchLinkProperties</span> <span class="p">=</span> <span class="n">BranchLinkProperties</span><span class="p">()</span>
+<span class="n">linkProperties</span><span class="p">.</span><span class="n">feature</span> <span class="p">=</span> <span class="s">&quot;sharing&quot;</span>
+<span class="n">linkProperties</span><span class="p">.</span><span class="n">channel</span> <span class="p">=</span> <span class="s">&quot;facebook&quot;</span>
+<span class="n">linkProperties</span><span class="p">.</span><span class="n">addControlParam</span><span class="p">(</span><span class="s">&quot;$ios_deepview&quot;</span><span class="p">,</span> <span class="n">withValue</span><span class="p">:</span> <span class="s">&quot;default_template&quot;</span><span class="p">)</span>
+<span class="n">linkProperties</span><span class="p">.</span><span class="n">addControlParam</span><span class="p">(</span><span class="s">&quot;$android_deepview&quot;</span><span class="p">,</span> <span class="n">withValue</span><span class="p">:</span> <span class="s">&quot;default_template&quot;</span><span class="p">)</span>
+</pre></div>
+<!--- /iOS --></p>
+<!--- Android -->
+
+<p><div class="codehilite"><pre><span></span>LinkProperties linkProperties = new LinkProperties()
+               .setChannel(&quot;facebook&quot;)
+               .setFeature(&quot;sharing&quot;)
+               .addControlParameter(&quot;$ios_deepview&quot;, &quot;default_template&quot;)
+               .addControlParameter(&quot;$android_deepview&quot;, &quot;default_template&quot;);
+</pre></div>
+<!--- /Android --></p>
+<p>Finally, enable Deepviews for an individual link on the <a href="https://dashboard.branch.io/quick-links/mlc/define">Marketing dashboard</a> by selecting Deepviews as a redirect option under the second page.</p>
+<p><img alt="image" src="../../../img/pages/deepviews/deepviews-mlc.png" /></p>
+<h3 id="disable-per-link-deepviews">Disable per-link Deepviews<a class="headerlink" href="#disable-per-link-deepviews" title="Permanent link">&para;</a></h3>
+<p>If you've enabled Deepviews globally, it's likely that you'll want to disable them now and again for specific use cases. To do so, just follow the instructions for <a href="#enable-per-link-deepviews"><em>enabling Deepviews for one link</em></a> and set one or more of the key values to <code>false</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>$ios_deepview</strong></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>$android_deepview</strong></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>$desktop_deepview</strong></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>When creating Quick Links on the Branch dashboard</strong></p>
+<p>You can disable Deepviews for an individual link on the <a href="https://dashboard.branch.io/quick-links/mlc/define">Marketing dashboard</a> by selecting Deepviews as a redirect option in Configure Options &gt; Redirects and setting it to false.</p>
+<p><img alt="image" src="../../../img/pages/deepviews/deepviews-disable-mlc.png" /></p>
+<h3 id="create-new-deepview-templates">Create New Deepview Templates<a class="headerlink" href="#create-new-deepview-templates" title="Permanent link">&para;</a></h3>
+<p>You can create new Deepview templates using the <a href="https://dashboard.branch.io/web/deepviews">Deepviews configuration page</a> on the Branch dashboard, either by duplicating the default Branch Public Template, or by creating a new one from scratch. New Deepview templates are shared between all platforms (iOS, Android, and desktop), and cannot be deleted after creation.</p>
+<p><img alt="image" src="../../../img/pages/deepviews/deepview-create-template.png" /></p>
+<p>The Deepview editing screen contains two tabs: <strong>Basic</strong> and <strong>Editor</strong>.</p>
+<p><strong>Basic</strong></p>
+<p>The Basic tab displays your new template, and allows you to modify the default fallback OG tags used if none are specified for a link.</p>
+<p><img alt="image" src="../../../img/pages/deepviews/deepviews_editor_basic.png" /></p>
+<p><strong>Deepview Settings</strong></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td>Internal name for your reference</td>
+</tr>
+<tr>
+<td>Key</td>
+<td>The value that you will reference when creating a link. E.g., <code>$ios_deepview: [key]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>App Settings</strong></p>
+<div class="admonition warning">
+<p>These fields are duplicates of the <em>Social Media</em> section of your app's <a href="https://dashboard.branch.io/link-settings">main link settings page</a>. Any updates will be applied in both locations.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OG Title</td>
+<td>Default value used if <code>$og_title</code> is not specified for a link.</td>
+</tr>
+<tr>
+<td>OG Description</td>
+<td>Default value used if <code>$og_description</code> is not specified for a link.</td>
+</tr>
+<tr>
+<td>OG Image Url</td>
+<td>Default value used if <code>$og_image_url</code> is not specified for a link.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="edit-deepview-templates">Edit Deepview Templates<a class="headerlink" href="#edit-deepview-templates" title="Permanent link">&para;</a></h3>
+<p>You can use the Deepview editor to edit created templates. You cannot edit pre-created templates. The Editor tab allows you to edit the raw HTML and CSS for your template. The rendered template will update as you modify the markup.</p>
+<p><img alt="image" src="../../../img/pages/deepviews/deepviews_editor_code.png" /></p>
+<div class="admonition failure">
+<p class="admonition-title">Javascript not allowed</p>
+<p>Before rendering the template, we sanitize the markup of Javascript for security reasons. This includes script tags and event attributes on tags.</p>
+</div>
+<h3 id="inject-other-data-into-deepviews">Inject Other Data Into Deepviews<a class="headerlink" href="#inject-other-data-into-deepviews" title="Permanent link">&para;</a></h3>
+<p>By customizing your Deepview template, you have the ability to pass through other parameters from your link's <a href="../{{base.url}}/getting-started/configuring-links">data dictionary</a>.</p>
+<p>Here's a full list of liquid available tags:</p>
+<p><strong>app</strong></p>
+<p>This is the App object, which contains app data not specific to any link. This will allow you to surface information like your app name or other properties. You can surface this object in your Deepview like so:</p>
+<div class="codehilite"><pre><span></span><span class="cp">{{</span><span class="nv">app</span><span class="cp">}}</span><span class="x"></span>
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>app.branch_key</code></td>
+<td>Your Branch key from <a href="https://dashboard.branch.io/#/settings">Settings</a>.</td>
+</tr>
+<tr>
+<td><code>app.name</code></td>
+<td>The name of your app from <a href="https://dashboard.branch.io/#/settings">Settings</a>.</td>
+</tr>
+<tr>
+<td><code>app.og_title</code></td>
+<td>The <strong>Link Title</strong> set in the <em>Social Media Display Customization</em> section of your app's <a href="https://dashboard.branch.io/#/settings/link">Link Settings</a>.</td>
+</tr>
+<tr>
+<td><code>app.og_description</code></td>
+<td>The <strong>Description</strong> set in the <em>Social Media Display Customization</em> section of your app's <a href="https://dashboard.branch.io/#/settings/link">Link Settings</a>.</td>
+</tr>
+<tr>
+<td><code>app.og_image_url</code></td>
+<td>The <strong>Thumbnail Image</strong> set in the <em>Social Media Display Customization</em> section of your app's <a href="https://dashboard.branch.io/#/settings/link">Link Settings</a>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition success">
+<p>If you want to show your app's name inside a Deepview, you would expose it like so: <code>&lt;h1&gt;Get {% raw %}{{app.name}}{% endraw %}&lt;/h1&gt;</code></p>
+</div>
+<p><strong>link data</strong></p>
+<p>Link Object, which contains all of your link's parameters, including your deep link values from the data dictionary. See the <a href="../{{base.url}}/getting-started/configuring-links">Configuring Links</a> page for more information. You can surface this object in your Deepview like so:</p>
+<div class="codehilite"><pre><span></span><span class="cp">{{</span><span class="nv">link_data</span><span class="cp">}}</span><span class="x"></span>
+</pre></div>
+
+<div class="admonition success">
+<p>If you want to expose a key value pair of <code>'welcome_message' : 'Welcome to my App'</code>, you would do the following: <code>&lt;h1&gt;{% raw %}{{link_data.welcome_message}}{% endraw %}&lt;/h1&gt;</code>, and this would render <code>Welcome to my App</code>.</p>
+</div>
+<p><strong>action</strong></p>
+<p>The URL of the Branch link itself. If you create a new call to action in your Deepview, use this. You can surface this object in your Deepview like so:</p>
+<div class="codehilite"><pre><span></span><span class="cp">{{</span><span class="nv">action</span><span class="cp">}}</span><span class="x"></span>
+</pre></div>
+
+<div class="admonition success">
+<p>Create a new call to action link: <code>&lt;a href="{% raw %}{{action}}{% endraw %}"&gt;Click&lt;/a&gt;</code>.</p>
+</div>
+<h2 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">&para;</a></h2>
+<h4 id="active-deepviews">Active Deepviews<a class="headerlink" href="#active-deepviews" title="Permanent link">&para;</a></h4>
+<p>Active deepviews should only show when the app is <em>not</em> installed (or when direct deep linking doesn't work like in the Facebook webview), and pause on the deepview page. These let the user preview the content, ultimately deciding if they want to install the app. The user must click the call-to-action of <code>Get The App</code> in order to be sent to the appropriate App or Play Store page.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Default Template</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ios_deepview</td>
+<td>The name of the template to use for iOS.</td>
+<td><code>default_template</code></td>
+</tr>
+<tr>
+<td>$android_deepview</td>
+<td>The name of the template to use for Android.</td>
+<td><code>default_template</code></td>
+</tr>
+<tr>
+<td>$desktop_deepview</td>
+<td>The name of the template to use for the desktop.</td>
+<td><code>default_template</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="passive-deepviews">Passive Deepviews<a class="headerlink" href="#passive-deepviews" title="Permanent link">&para;</a></h4>
+<p>Passive deepviews should also only appear when the app is <em>not</em> installed, but instead of pausing on the deepview page, they will attempt to redirect to the App/Play Store immediately without the user taking action. These should be used when you don't want a blank white screen to be left in a browser after the user clicks a link to go install your app. Note that these are automatically enabled in Safari iOS 10.3 and Facebook iOS webviews if you're attempting to redirect to your Store page.</p>
+<p>To disable passive deepviews, simply set the value to <code>false</code> in the link data.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ios_passive_deepview</td>
+<td>The name of the template to use for iOS.</td>
+<td><code>default_template</code></td>
+</tr>
+<tr>
+<td>$android_passive_deepview</td>
+<td>The name of the template to use for Android.</td>
+<td><code>default_template</code></td>
+</tr>
+</tbody>
+</table>
+<p>If you're creating a link by appending query parameters, you simply need to append the parameters to the URL. Please make sure to URL encode everything, lest the link will break.</p>
+                
+                  
+                
+              
+              
+                
+                  <h2 id="__comments">Comments</h2>
+                  <div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = "https://branchmetrics.github.io/docs/pages/web/deep-views/";
+    this.page.identifier =
+      "/pages/web/deep-views/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "//branch-docs.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../apps/xamarin/" title="Xamarin" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Xamarin
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../text-me-the-app/" title="Text me the app" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Text me the app
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 <a href="https://branch.io">Branch</a>
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://branch.io" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/BranchMetrics/Documentation" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/branchmetrics" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.facebook.com/branchmetrics" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://www.linkedin.com/company-beta/3813083" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application-6b4ff16fa7.js"></script>
+      <script>app.initialize({url:{base:"../../.."}})</script>
+      
+        <script src="../../../js/main.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
