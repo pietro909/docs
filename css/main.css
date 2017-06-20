@@ -1,20 +1,8 @@
-/* FEATURES */
-
-.branch-feature {
-  font-size: 1.2em;
-  text-align: center;
-  margin: 0 !important;
-  padding-bottom: 1em;
+/* DOCSEARCH */
+.algolia-docsearch-suggestion--category-header, .algolia-docsearch-footer--logo {
+  display: none;
 }
 
-/*.branch-table td {
-  width: 33%;
-}*/
-/*
-.branch-table img {
-  width: 76%;
-}
-*/
 /* HEADER GIT STATS */
 .md-nav__source, .md-source__facts, .md-source__icon {
   display: none;
