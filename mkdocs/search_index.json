@@ -751,6 +751,61 @@
             "title": "Snapchat App Installs"
         }, 
         {
+            "location": "/marketing-channels/content-sharing/", 
+            "text": "Overview\n\n\nIf your users are creating content in your app, they will probably want to share that content with their friends. You can encourage this by making it easy to generate sharing links that open your app \nand\n route back exactly to the piece of content that was originally shared. This will even work when the user who opens the link doesn't have your app installed yet. Since content is vital to your growth strategy, Branch's product--Content Sharing--facilitates sending and tracking your in-app content out of the box.\n\n\nThe Branch Content Sharing product features a baked-in share sheet native to the operating system that allows for some customizations, as well. Follow our guide to set your content growth channel.\n\n\nSetup\n\n\nGenerate Links\n\n\nTo enable content sharing, you will need to use the proper SDK methods for link generation. These links will contain data about the content being shared. These links will generate analytics data and allow your app to route straight back to the content when clicked.\n\n\nLinks are created through Branch Universal Objects. These objects combine links with data (your content data, as well as anaytics information), and let you show a share sheet on each link.\n\n\n// Adding content data to a link.\n\n\nBranchUniversalObject\n \n*\nbranchUniversalObject\n \n=\n \n[[\nBranchUniversalObject\n \nalloc\n]\n \ninitWithCanonicalIdentifier\n:\n@\nmonster/12345\n];\n\n\nbranchUniversalObject\n.\ntitle\n \n=\n \n@\nMeet Mr. Squiggles\n;\n\n\nbranchUniversalObject\n.\ncontentDescription\n \n=\n \n@\nYour friend Josh has invited you to meet his awesome monster, Mr. Squiggles!\n;\n\n\nbranchUniversalObject\n.\nimageUrl\n \n=\n \n@\nhttps://example.com/monster-pic-12345.png\n;\n\n\n[\nbranchUniversalObject\n \naddMetadataKey\n:\n@\nuserId\n \nvalue\n:\n@\n12345\n];\n\n\n[\nbranchUniversalObject\n \naddMetadataKey\n:\n@\nuserName\n \nvalue\n:\n@\nJosh\n];\n\n\n[\nbranchUniversalObject\n \naddMetadataKey\n:\n@\nmonsterName\n \nvalue\n:\n@\nMr. Squiggles\n];\n\n\n\n\n\n// Adding analytics data to a link.\n\n\nBranchLinkProperties\n \n*\nlinkProperties\n \n=\n \n[[\nBranchLinkProperties\n \nalloc\n]\n \ninit\n];\n\n\nlinkProperties\n.\nfeature\n \n=\n \n@\nshare\n;\n\n\nlinkProperties\n.\nchannel\n \n=\n \n@\nfacebook\n;\n\n\n\n\n\n// Finally showing it.\n\n\n[\nbranchUniversalObject\n \nshowShareSheetWithLinkProperties\n:\nlinkProperties\n\n                                           \nandShareText\n:\n@\nSuper amazing thing I want to share!\n\n                                     \nfromViewController\n:\nself\n\n                                            \ncompletion\n:\n^\n(\nNSString\n*\n \nactivityType\n,\n \nBOOL\n \ncompleted\n)\n \n{\n\n    \nNSLog\n(\n@\nfinished presenting\n);\n\n\n}];\n\n\n\n\n\n\n\nProperly identify your content\n\n\nThe \ncanonicalIdentifier\n parameter greatly improves the content analytics data Branch captures. It should be unique to that piece of content and helps Branch dedupe across many instances of the same thing. Suitable options: a website with pathing, or a database with identifiers for entities.\n\n\n\n\nTrack Analytics\n\n\nThe \nContent Analytics\n lets you view content-level data. This view will help answer questions like the most popular or shareable content. You can also use the \nLive View page\n to see content-links in real time.\n\n\n\n\nTrack your influencers, too!\n\n\nThe \nInfluencers page\n on the dashboard will automatically track which of your users drive the most conversions.\n\n\n\n\nAdvanced\n\n\nCreate Links Without Share Sheet\n\n\nIf you've built your own share sheet and you want to just create a Branch link for an individual share message or have another use case, you can create deep links directly with the following call:\n\n\n[\nbranchUniversalObject\n \ngetShortUrlWithLinkProperties\n:\nlinkProperties\n \nandCallback\n:\n^\n(\nNSString\n*\n \nurl\n,\n \nNSError\n*\n \nerror\n)\n \n{\n\n    \nif\n \n(\n!\nerror\n)\n \n{\n\n        \nNSLog\n(\n@\ngot my Branch invite link to share: %@\n,\n \nurl\n);\n\n    \n}\n\n\n}];\n\n\n\n\n\nSpecifying an Email Subject with Share Sheet\n\n\nThe majority of share options only include one string of text, except email, which has a subject and a body. The share text will fill in the body and you can specify the email subject in the link properties as shown below.\n\n\nBranchLinkProperties\n \n*\nlinkProperties\n \n=\n \n[[\nBranchLinkProperties\n \nalloc\n]\n \ninit\n];\n\n\nlinkProperties\n.\nfeature\n \n=\n \n@\nshare\n;\n\n\nlinkProperties\n.\nchannel\n \n=\n \n@\nfacebook\n;\n\n\n[\nlinkProperties\n \naddControlParam\n:\n@\n$email_subject\n \nwithValue\n:\n@\nTherapists hate him\n];\n\n\n\n\n\nFAQ\n\n\nHow can I see a preview or debug this link?\n\n\nIf you want to preview the link to see what it'll look like on social media websites, use the \nOG Tag tester\n.\n\n\nIf you want to see the data associated with your link, simply add a \n?debug=1\n to the end of the Branch link. For example, if your link was branch.app.link/abcde, you would enter \nbranch.app.link/abcde?debug=1\n in your browser to see data.", 
+            "title": "Content Sharing"
+        }, 
+        {
+            "location": "/marketing-channels/content-sharing/#overview", 
+            "text": "If your users are creating content in your app, they will probably want to share that content with their friends. You can encourage this by making it easy to generate sharing links that open your app  and  route back exactly to the piece of content that was originally shared. This will even work when the user who opens the link doesn't have your app installed yet. Since content is vital to your growth strategy, Branch's product--Content Sharing--facilitates sending and tracking your in-app content out of the box.  The Branch Content Sharing product features a baked-in share sheet native to the operating system that allows for some customizations, as well. Follow our guide to set your content growth channel.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/marketing-channels/content-sharing/#setup", 
+            "text": "", 
+            "title": "Setup"
+        }, 
+        {
+            "location": "/marketing-channels/content-sharing/#generate-links", 
+            "text": "To enable content sharing, you will need to use the proper SDK methods for link generation. These links will contain data about the content being shared. These links will generate analytics data and allow your app to route straight back to the content when clicked.  Links are created through Branch Universal Objects. These objects combine links with data (your content data, as well as anaytics information), and let you show a share sheet on each link.  // Adding content data to a link.  BranchUniversalObject   * branchUniversalObject   =   [[ BranchUniversalObject   alloc ]   initWithCanonicalIdentifier : @ monster/12345 ];  branchUniversalObject . title   =   @ Meet Mr. Squiggles ;  branchUniversalObject . contentDescription   =   @ Your friend Josh has invited you to meet his awesome monster, Mr. Squiggles! ;  branchUniversalObject . imageUrl   =   @ https://example.com/monster-pic-12345.png ;  [ branchUniversalObject   addMetadataKey : @ userId   value : @ 12345 ];  [ branchUniversalObject   addMetadataKey : @ userName   value : @ Josh ];  [ branchUniversalObject   addMetadataKey : @ monsterName   value : @ Mr. Squiggles ];   // Adding analytics data to a link.  BranchLinkProperties   * linkProperties   =   [[ BranchLinkProperties   alloc ]   init ];  linkProperties . feature   =   @ share ;  linkProperties . channel   =   @ facebook ;   // Finally showing it.  [ branchUniversalObject   showShareSheetWithLinkProperties : linkProperties \n                                            andShareText : @ Super amazing thing I want to share! \n                                      fromViewController : self \n                                             completion : ^ ( NSString *   activityType ,   BOOL   completed )   { \n     NSLog ( @ finished presenting );  }];    Properly identify your content  The  canonicalIdentifier  parameter greatly improves the content analytics data Branch captures. It should be unique to that piece of content and helps Branch dedupe across many instances of the same thing. Suitable options: a website with pathing, or a database with identifiers for entities.", 
+            "title": "Generate Links"
+        }, 
+        {
+            "location": "/marketing-channels/content-sharing/#track-analytics", 
+            "text": "The  Content Analytics  lets you view content-level data. This view will help answer questions like the most popular or shareable content. You can also use the  Live View page  to see content-links in real time.   Track your influencers, too!  The  Influencers page  on the dashboard will automatically track which of your users drive the most conversions.", 
+            "title": "Track Analytics"
+        }, 
+        {
+            "location": "/marketing-channels/content-sharing/#advanced", 
+            "text": "", 
+            "title": "Advanced"
+        }, 
+        {
+            "location": "/marketing-channels/content-sharing/#create-links-without-share-sheet", 
+            "text": "If you've built your own share sheet and you want to just create a Branch link for an individual share message or have another use case, you can create deep links directly with the following call:  [ branchUniversalObject   getShortUrlWithLinkProperties : linkProperties   andCallback : ^ ( NSString *   url ,   NSError *   error )   { \n     if   ( ! error )   { \n         NSLog ( @ got my Branch invite link to share: %@ ,   url ); \n     }  }];", 
+            "title": "Create Links Without Share Sheet"
+        }, 
+        {
+            "location": "/marketing-channels/content-sharing/#specifying-an-email-subject-with-share-sheet", 
+            "text": "The majority of share options only include one string of text, except email, which has a subject and a body. The share text will fill in the body and you can specify the email subject in the link properties as shown below.  BranchLinkProperties   * linkProperties   =   [[ BranchLinkProperties   alloc ]   init ];  linkProperties . feature   =   @ share ;  linkProperties . channel   =   @ facebook ;  [ linkProperties   addControlParam : @ $email_subject   withValue : @ Therapists hate him ];", 
+            "title": "Specifying an Email Subject with Share Sheet"
+        }, 
+        {
+            "location": "/marketing-channels/content-sharing/#faq", 
+            "text": "", 
+            "title": "FAQ"
+        }, 
+        {
+            "location": "/marketing-channels/content-sharing/#how-can-i-see-a-preview-or-debug-this-link", 
+            "text": "If you want to preview the link to see what it'll look like on social media websites, use the  OG Tag tester .  If you want to see the data associated with your link, simply add a  ?debug=1  to the end of the Branch link. For example, if your link was branch.app.link/abcde, you would enter  branch.app.link/abcde?debug=1  in your browser to see data.", 
+            "title": "How can I see a preview or debug this link?"
+        }, 
+        {
+            "location": "/marketing-channels/custom-onboarding/", 
+            "text": "", 
+            "title": "User Onboarding"
+        }, 
+        {
             "location": "/pages/emails/responsys/", 
             "text": "", 
             "title": "Responsys"
@@ -782,13 +837,38 @@
         }, 
         {
             "location": "/pages/analytics/behavior/", 
-            "text": "Analytical behavior\n\n\n\n\nWhenever a user \nclicks\n on a deep link and \nopens\n the app\n\n\nThis triggers either an \ninstall\n or an \nopen\n\n\ninstalls\n represent Branch recognizing the app_id and device_id for the first time\n\n\ninstalls\n represent new app users and the success rate of your Branch deep links\n\n\ninstalls\n do \nnot\n represent App Store downloads\n\n\nnon-Branch installs\n are installs outside of Branch deep link clicks\n\n\nopens\n are non-installs\n\n\nIf a user uninstalls and reinstalls the app, this will be an \nopen\n because Branch recognizes the device\n\n\nIf a user has the app and clicks a Branch deep link, this will be an \nopen\n because the user is not new", 
+            "text": "Analytical behavior\n\n\n\n\nWhenever a user \nclicks\n on a deep link and \nopens\n the app\n\n\nThis triggers either an \ninstall\n or an \nopen\n\n\ninstalls\n represent Branch recognizing the app_id and device_id for the first time\n\n\ninstalls\n represent new app users and the success rate of your Branch deep links\n\n\ninstalls\n do \nnot\n represent App Store downloads\n\n\nnon-Branch installs\n are installs outside of Branch deep link clicks\n\n\nopens\n are non-installs\n\n\nIf a user uninstalls and reinstalls the app, this will be an \nopen\n because Branch recognizes the device\n\n\nIf a user has the app and clicks a Branch deep link, this will be an \nopen\n because the user is not new\n\n\n\n\n\n\n\n\nDashboard pages\n\n\n\n\n\n\nQuick Links\n\n\n\n\n\n\nSources\n\n\n\n\n\n\nContent\n\n\n\n\nDashboard Content\n\n\nUpdates every 1.5 hours \n\n\nBased on the deep links which are shared (clicks which lead to open/installs)\n\n\nEach content must be meaningful unique\n\n\n$canonical_identifier\n\n\n$og_title\n\n\n$og_description\n\n\n$og_image_url\n\n\n\n\n\n\n\n\n\n\n\n\nLiveview", 
             "title": "Behavior"
         }, 
         {
             "location": "/pages/analytics/behavior/#analytical-behavior", 
             "text": "Whenever a user  clicks  on a deep link and  opens  the app  This triggers either an  install  or an  open  installs  represent Branch recognizing the app_id and device_id for the first time  installs  represent new app users and the success rate of your Branch deep links  installs  do  not  represent App Store downloads  non-Branch installs  are installs outside of Branch deep link clicks  opens  are non-installs  If a user uninstalls and reinstalls the app, this will be an  open  because Branch recognizes the device  If a user has the app and clicks a Branch deep link, this will be an  open  because the user is not new", 
             "title": "Analytical behavior"
+        }, 
+        {
+            "location": "/pages/analytics/behavior/#dashboard-pages", 
+            "text": "", 
+            "title": "Dashboard pages"
+        }, 
+        {
+            "location": "/pages/analytics/behavior/#quick-links", 
+            "text": "", 
+            "title": "Quick Links"
+        }, 
+        {
+            "location": "/pages/analytics/behavior/#sources", 
+            "text": "", 
+            "title": "Sources"
+        }, 
+        {
+            "location": "/pages/analytics/behavior/#content", 
+            "text": "Dashboard Content  Updates every 1.5 hours   Based on the deep links which are shared (clicks which lead to open/installs)  Each content must be meaningful unique  $canonical_identifier  $og_title  $og_description  $og_image_url", 
+            "title": "Content"
+        }, 
+        {
+            "location": "/pages/analytics/behavior/#liveview", 
+            "text": "", 
+            "title": "Liveview"
         }, 
         {
             "location": "/pages/analytics/growth-attribution/", 
