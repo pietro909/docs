@@ -154,3 +154,20 @@ article.md-search-result__article.md-search-result__article--document {
     color: #4E4726;
   }
 }
+
+/* Basic image size modifiers */
+.third {
+  width: 33%;
+}
+
+.half {
+  width: 50%;
+}
+
+.3-quarters {
+  width: 75%;
+}
+
+.full-width {
+  width: 100%;
+}
