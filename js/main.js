@@ -13,7 +13,7 @@
       route(window.location.hash);
     }
     function add(hash, func) {
-      events.subscribe(hash, func)
+      events.subscribe(hash, func);
     }
     function remove() {
       history.pushState("", document.title, window.location.pathname + window.location.search);
@@ -70,11 +70,10 @@
     var cache = {};
 
     // main
-    addCache()
+    addCache();
     function addCache() {
       var modals = document.getElementsByClassName('modal');
       for (var i = 0; i < modals.length; i++) {
-        var self = this;
         var modal = modals[i];
         var id = modal.id;
         var type = modal.classList.contains('notification') ? 'notification' : 'dialog';
@@ -82,11 +81,11 @@
         var background = null;
         var close = null;
         for (var j = 0; j < children.length; j++) {
-          var child = children[j]
+          var child = children[j];
           var subchildren = child.children;
           background = (child.classList.contains('modal-background')) ? child : background;
           for (var k = 0; k < subchildren.length; k++) {
-            var subchild = subchildren[k]
+            var subchild = subchildren[k];
             close = (subchild.classList.contains('modal-close')) ? subchild : close;
             break;
           }
@@ -112,13 +111,13 @@
       if (!modal) return;
       var isModalOpen = modal.classList.contains('active');
       var time = (duration) ? duration : 0;
-      var type = (type === 'notification') ? 'notification' : 'dialog';
+      var types = (type === 'notification') ? 'notification' : 'dialog';
 
       isModalOpen ? modal.classList.remove('active') : modal.className += ' active';
-      if (type === 'dialog') {
+      if (types === 'dialog') {
         isModalOpen ? document.body.classList.remove('modal') : document.body.className += ' modal';
         isModalOpen ? router.remove() : null;
-      } else if (type === 'notification') {
+      } else if (types === 'notification') {
         setTimeout(function() {
             modal.classList.remove('active');
             router.remove();
@@ -137,7 +136,7 @@
     var statement = 'mailto:support@branch.io?subject=I need some assistance&body=Hello Branch Support,%0A%0AI am viewing (' + window.location.href + ').%0A%0AMy Branch Key (https%3A%2F%2Fdashboard.branch.io%2Faccount-settings%2Fapp) is:%0A%0A I need assistance with ';
 
     // main
-    load()
+    load();
     function load() {
       var supports = document.getElementsByClassName('contact-support');
       for (var i = 0; i < supports.length; i++) {
@@ -153,7 +152,7 @@
     return {
       load: load,
       contact: contact
-    }
+    };
   })();
 
   // analytics
