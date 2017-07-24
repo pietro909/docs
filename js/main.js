@@ -175,7 +175,7 @@
     var search = document.getElementById('algolia-doc-search');
 
     router.add('route-#header-helpful', function() {
-      modal.toggle('modal-helpful', 'notification', 100500);
+      modal.toggle('modal-helpful', 'notification', 1500);
     });
     router.add('route-#header-unhelpful', function() {
       modal.toggle('modal-unhelpful', 'dialog');
