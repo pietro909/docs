@@ -21,7 +21,7 @@
     
     
       
-        <title>SFMC - Branch documentation</title>
+        <title>SFMC - Branch Documentation</title>
       
     
     
@@ -46,6 +46,9 @@
     
       <style>.async-hide { opacity: 0 !important }</style>
       <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date; h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')}; (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c; })(window,document.documentElement,'async-hide','dataLayer',4000, {'GTM-PDHLH8M':true});(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', '', 'auto');ga('require', 'GTM-PDHLH8M');ga('send', 'pageview');</script>
+    
+    
+      <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments, 0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" "); for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]); mixpanel.init("47ec8ea9ac102b1370221dcda476091c");</script>
     
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
@@ -78,7 +81,7 @@
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href="https://branchmetrics.github.io/docs" title="Branch documentation" class="md-icon md-icon--home md-header-nav__button">
+          <a href="https://branchmetrics.github.io/docs" title="Branch Documentation" class="md-icon md-icon--home md-header-nav__button">
           </a>
         
       </div>
@@ -91,7 +94,7 @@
             
               
                 <span class="md-header-nav__parent">
-                  Configure your emails
+                  Convert emails to app
                 </span>
               
             
@@ -99,7 +102,39 @@
           
         </span>
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
+      
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="#header-helpful" id="header-helpful" title="Helpful">
+            <i class="branch-header-icon md-icon material-icons">thumb_up</i>
+            <p class="branch-header-label">Helpful</p>
+          </a>
+        </div>
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="#header-unhelpful" id="header-unhelpful" title="Unhelpful">
+            <i class="branch-header-icon md-icon material-icons">thumb_down</i>
+            <p class="branch-header-label">Unhelpful</p>
+          </a>
+        </div>
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/emails/sfmc.md" title="Improve This Doc">
+            <i class="branch-header-icon md-icon material-icons">mode_edit</i>
+            <p class="branch-header-label">Improve</p>
+          </a>
+        </div>
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="#" class="contact-support" title="Contact support">
+            <i class="branch-header-icon md-icon material-icons">help_outline</i>
+            <p class="branch-header-label">Support</p>
+          </a>
+        </div>
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="#header-search" id="header-search" title="Search">
+            <i class="branch-header-icon md-icon material-icons">search</i>
+            <p class="branch-header-label">Search</p>
+          </a>
+        </div>
+      
+      <div class="md-flex__cell md-flex__cell--shrink" style=" display:none; ">
         
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
@@ -158,10 +193,6 @@
       
       
       <main class="md-main">
-
-      <input id="algolia-doc-search" type="text" placeholder="Search docs..." />
-      
-
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -174,7 +205,7 @@
     
       <i class="md-icon md-icon--home md-nav__button"></i>
     
-    Branch documentation
+    Branch Documentation
   </label>
   
     <div class="md-nav__source">
@@ -364,6 +395,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/api/" title="API" class="md-nav__link">
+      API
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -374,10 +417,58 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Configure deep links
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Configure deep links
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../../apps/universal-app-links/" title="Universal and App Links" class="md-nav__link">
-      Universal and App Links
+    <a href="../../links/behavior/" title="Link behavior" class="md-nav__link">
+      Link behavior
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../links/data/" title="Link data" class="md-nav__link">
+      Link data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../links/create/" title="Creating links" class="md-nav__link">
+      Creating links
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -391,11 +482,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Configre Web To App Routing
+      Convert web to app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        Configre Web To App Routing
+        Convert web to app
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -451,71 +542,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
-      Configure your links
+      Convert ads to app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
-        Configure your links
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../links/behavior/" title="Link behavior" class="md-nav__link">
-      Link behavior
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../links/data/" title="Link data" class="md-nav__link">
-      Link data
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../links/create/" title="Creating links" class="md-nav__link">
-      Creating links
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      Configure your ads
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        Configure your ads
+        Convert ads to app
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -652,14 +683,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-7">
-      Share Your App Content
+    <label class="md-nav__link" for="nav-6">
+      Convert organic search
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        Share Your App Content
+      <label class="md-nav__title" for="nav-6">
+        Convert organic search
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -670,8 +701,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../marketing-channels/content-sharing/" title="Content Sharing" class="md-nav__link">
-      Content Sharing
+    <a href="../../organic-search/firebase/" title="Firebase" class="md-nav__link">
+      Firebase
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../organic-search/spotlight/" title="Spotlight" class="md-nav__link">
+      Spotlight
     </a>
   </li>
 
@@ -690,14 +733,14 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
-    <label class="md-nav__link" for="nav-8">
-      Configure your emails
+    <label class="md-nav__link" for="nav-7">
+      Convert emails to app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        Configure your emails
+      <label class="md-nav__title" for="nav-7">
+        Convert emails to app
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -793,14 +836,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-9">
-      Link App to App
+    <label class="md-nav__link" for="nav-8">
+      Convert app to app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        Link App to App
+      <label class="md-nav__title" for="nav-8">
+        Convert app to app
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -829,6 +872,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app-to-app/facebook-app-invites/" title="Facebook App Invites" class="md-nav__link">
+      Facebook App Invites
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -841,14 +896,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-10">
-      Track your analytics
+    <label class="md-nav__link" for="nav-9">
+      Track analytics
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        Track your analytics
+      <label class="md-nav__title" for="nav-9">
+        Track analytics
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -913,14 +968,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
-    <label class="md-nav__link" for="nav-11">
-      Export your analytics
+    <label class="md-nav__link" for="nav-10">
+      Export analytics
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        Export your analytics
+      <label class="md-nav__title" for="nav-10">
+        Export analytics
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -973,14 +1028,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-12">
-      Integrate your analytics
+    <label class="md-nav__link" for="nav-11">
+      Integrate analytics
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
-        Integrate your analytics
+      <label class="md-nav__title" for="nav-11">
+        Integrate analytics
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1169,6 +1224,44 @@
         </div>
       </main>
       
+        <div id="modal-search" class="modal dialog">
+          <div class="modal-background"></div>
+          <div class="modal-content" id="algolia-search-container">
+            <i class="material-icons modal-close right">close</i>
+            <h2>Search</h2>
+            <input placeholder="search" type="text" id="algolia-doc-search">
+          </div>
+        </div>
+        <div id="modal-unhelpful" class="modal dialog">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <i class="material-icons modal-close right">close</i>
+            <h2>Unhelpful?</h2>
+            <p>How can we improve or assist you?</p>
+            <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/emails/sfmc.md" title="Improve This Doc">Improve this doc</a>
+            <a href="#" class="contact-support" title="Contact support">Contact support</a>
+          </div>
+        </div>
+        <div id="modal-choose-app" class="modal dialog">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <i class="material-icons modal-close right">close</i>
+            <h2>Choose your app</h2>
+            <button type="button">iOS</button>
+            <button type="button">Android</button>
+            <button type="button">Cordova Ionic PhoneGap</button>
+            <button type="button">React Native</button>
+          </div>
+        </div>
+        <div id="modal-helpful" class="modal notification">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <i class="material-icons modal-close right">close</i>
+            <h2>Thank you</h2>
+          </div>
+        </div>
+      
+      
         
 <footer class="md-footer">
   
@@ -1215,11 +1308,7 @@
             Copyright &copy; 2017 <a href="https://branch.io">Branch</a>
           </div>
         
-        powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
-        and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
-          Material for MkDocs</a>
+        All rights reserved
       </div>
       
         
