@@ -97,7 +97,7 @@
 }
 .modal.dialog .modal-content {
   transition: opacity 0.3s ease-in-out;
-  max-width: 50em;
+  max-width: 60em;
 }
 .modal.notification .modal-content {
   transition: 0.3s ease-in-out;
@@ -165,7 +165,7 @@ body.modal {
 .algolia-autocomplete, #algolia-doc-search {
   width: 100%;
 }
-#algolia-search-container {
+.modal.active > #algolia-search-container {
   top: 50%;
   height: 75%;
 }
@@ -194,6 +194,7 @@ body.modal {
 .md-nav__link[data-md-state=blur] {
   text-decoration: line-through;
 }*/
+
 
 
 /* ////////////////////////////// */
