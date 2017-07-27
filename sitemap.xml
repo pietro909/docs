@@ -302,19 +302,19 @@
     
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/exports/export-csv/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/exports/csv/</loc>
      <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/exports/export-api/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/exports/api/</loc>
      <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/exports/export-webhooks/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/exports/webhooks/</loc>
      <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>

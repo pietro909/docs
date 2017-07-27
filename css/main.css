@@ -44,8 +44,8 @@
   font-weight: 600;
   font-size: 1.8rem;
 }
-.md-typeset li > h4:before  {
-  content: close-quote !important; /* added - #### to markdown */
+.md-typeset li > h4:before, .md-typeset li > h5:before, .md-typeset li > h6:before {
+  content: close-quote !important;
 }
 .md-nav--secondary .md-nav__link--active {
   color: inherit;
@@ -129,12 +129,8 @@ body.modal {
   font-weight: bold;
   cursor: pointer;
 }
-.modal-close:hover, .modal-close:focus, .branch-header-button:hover, .branch-header-button:focus {
-  cursor: pointer;
-  color: #ccc;
-}
-.modal-content a:hover, .modal-content a:focus {
-  background-color: #ccc;
+.modal-close:hover, .modal-close:focus, .branch-header-button:hover, .branch-header-button:focus, .modal-content a:hover, .modal-content a:focus {
+  opacity: 0.7;
 }
 .modal-content h2 {
   font-size: 2.25em;

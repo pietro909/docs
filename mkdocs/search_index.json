@@ -307,8 +307,108 @@
         }, 
         {
             "location": "/pages/apps/adobe-air/", 
-            "text": "", 
+            "text": "Integrate Branch\n\n\n\n\n\n\nConfigure Branch\n\n\n\n\n\n\nConfigure app\n\n\n\n\n\n\nInitialize Branch\n\n\n\n\n\n\nTest deep link\n\n\n\n\n\n\nImplement features\n\n\n\n\n\n\nCreate content reference\n\n\n\n\n\n\nCreate deep link\n\n\n\n\n\n\nShare deep link\n\n\n\n\n\n\nRead deep link\n\n\n\n\n\n\nNavigate to content\n\n\n\n\n\n\nDisplay content\n\n\n\n\n\n\nTrack content\n\n\n\n\n\n\nTrack users\n\n\n\n\n\n\nTrack events\n\n\n\n\n\n\nTrack commerce\n\n\n\n\n\n\nHandle referrals\n\n\n\n\n\n\nTroubleshoot issues\n\n\n\n\n\n\nRecommendations\n\n\n\n\n\n\nSample app", 
             "title": "Adobe AIR"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#integrate-branch", 
+            "text": "", 
+            "title": "Integrate Branch"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#configure-branch", 
+            "text": "", 
+            "title": "Configure Branch"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#configure-app", 
+            "text": "", 
+            "title": "Configure app"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#initialize-branch", 
+            "text": "", 
+            "title": "Initialize Branch"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#test-deep-link", 
+            "text": "", 
+            "title": "Test deep link"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#implement-features", 
+            "text": "", 
+            "title": "Implement features"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#create-content-reference", 
+            "text": "", 
+            "title": "Create content reference"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#create-deep-link", 
+            "text": "", 
+            "title": "Create deep link"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#share-deep-link", 
+            "text": "", 
+            "title": "Share deep link"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#read-deep-link", 
+            "text": "", 
+            "title": "Read deep link"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#navigate-to-content", 
+            "text": "", 
+            "title": "Navigate to content"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#display-content", 
+            "text": "", 
+            "title": "Display content"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#track-content", 
+            "text": "", 
+            "title": "Track content"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#track-users", 
+            "text": "", 
+            "title": "Track users"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#track-events", 
+            "text": "", 
+            "title": "Track events"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#track-commerce", 
+            "text": "", 
+            "title": "Track commerce"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#handle-referrals", 
+            "text": "", 
+            "title": "Handle referrals"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#troubleshoot-issues", 
+            "text": "", 
+            "title": "Troubleshoot issues"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#recommendations", 
+            "text": "", 
+            "title": "Recommendations"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#sample-app", 
+            "text": "", 
+            "title": "Sample app"
         }, 
         {
             "location": "/pages/apps/cordova-phonegap-ionic/", 
@@ -1976,17 +2076,17 @@
             "title": "Revenue"
         }, 
         {
-            "location": "/pages/exports/export-csv/", 
+            "location": "/pages/exports/csv/", 
             "text": "", 
             "title": "CSV Export"
         }, 
         {
-            "location": "/pages/exports/export-api/", 
+            "location": "/pages/exports/api/", 
             "text": "", 
             "title": "Export API"
         }, 
         {
-            "location": "/pages/exports/export-webhooks/", 
+            "location": "/pages/exports/webhooks/", 
             "text": "", 
             "title": "Webhooks"
         }, 

@@ -1,16 +1,23 @@
-// no globals and run on load
+// no globals
 (function() {
   'use strict';
 
   // router
   var router = (function() {
-    // handle hash change
+    // listener
     window.addEventListener('hashchange', function(event) {
-      route(event.target.location.hash);
+      // handle hash change
+      _route(event.target.location.hash);
     }, false);
-    // methods
-    function load() {
-      route(window.location.hash);
+
+    // private
+    function _route(hash) {
+      events.publish('route-' + hash);
+    }
+
+    // public
+    function init() {
+      _route(window.location.hash);
     }
     function add(hash, func) {
       events.subscribe(hash, func);
@@ -18,16 +25,30 @@
     function remove() {
       history.pushState("", document.title, window.location.pathname + window.location.search);
     }
-    function route(hash) {
-      events.publish('route-' + hash);
-    }
-
-    // public
     return {
       add: add,
       remove: remove,
-      load: load
+      init: init
     };
+  })();
+
+  // routes
+  var routes =  (function() {
+    // public
+    function init() {
+      router.add('route-#header-helpful', function() {
+        modal.toggle('modal-helpful', 'notification', 1500);
+      });
+      router.add('route-#header-unhelpful', function() {
+        modal.toggle('modal-unhelpful', 'dialog');
+      });
+      router.add('route-#header-search', function() {
+        modal.toggle('modal-search', 'dialog');
+      });
+    }
+    return {
+      init: init
+    }
   })();
 
   // pub sub
@@ -119,8 +140,8 @@
         isModalOpen ? router.remove() : null;
       } else if (types === 'notification') {
         setTimeout(function() {
-            modal.classList.remove('active');
-            router.remove();
+          modal.classList.remove('active');
+          router.remove();
         }, time);
       }
     }
@@ -131,26 +152,51 @@
     };
   })();
 
-  var support = (function() {
-    // <a href="#" class="contact-support" title="Contact support">Contact support</a>
-    var statement = 'mailto:integration@branch.io?subject=[DOCS] I need some assistance&body=Hello Branch Support,%0A%0AI am viewing (' + window.location.href + ').%0A%0AMy Branch Key (https%3A%2F%2Fdashboard.branch.io%2Faccount-settings%2Fapp) is:%0A%0A I need assistance with ';
-
-    // main
-    load();
-    function load() {
-      var supports = document.getElementsByClassName('contact-support');
-      for (var i = 0; i < supports.length; i++) {
-        var support = supports[i];
-        support.setAttribute('href', statement);
+  var buttons = (function() {
+    // properties
+    var buttons = {
+      support: {
+        url: _getSupportUrl(),
+        buttons: document.getElementsByClassName('contact-support'),
+        example: '<a href="#" class="contact-support" title="Contact support">Contact support</a>',
+      },
+      improve: {
+        url: _getImproveUrl(),
+        buttons: document.getElementsByClassName('improve-doc'),
+        example: '<a href="#" class="improve-doc" title="Improve This Doc">Improve this docs</a>',
       }
     }
 
-    function contact() {
-      window.location.href = statement;
+    // private
+    function _getSupportUrl() {
+      return 'mailto:integration@branch.io?subject=I need some assistance&body=Hello Branch,%0A%0AI am viewing (' + window.location.href + ').%0A%0AMy Branch Key (https%3A%2F%2Fdashboard.branch.io%2Faccount-settings%2Fapp) is:%0A%0A I need assistance with '
+    }
+    function _getImproveUrl() {
+      var trim = window.location.pathname.slice(0, -1);
+      var path = (trim === '') ? '/index' : trim;
+      return 'https://github.com/branchmetrics/docs/edit/master/src' + path + '.md';
     }
 
+    // public
+    function init() {
+      for (var key1 in buttons) {
+        var button = buttons[key1];
+        for (var key2 in button) {
+          var value = button[key2];
+          if (key2 === 'buttons') {
+            for (var i = 0; i < value.length; i++) {
+              var element = value[i];
+              element.setAttribute('href', button.url);
+            }
+          }
+        }
+      }
+    }
+    function contact(button) {
+      window.location.href = buttons.button.url;
+    }
     return {
-      load: load,
+      init: init,
       contact: contact
     };
   })();
@@ -171,21 +217,10 @@
 
   // page load
   function onload() {
-    var search = document.getElementById('algolia-doc-search');
-
-    router.add('route-#header-helpful', function() {
-      modal.toggle('modal-helpful', 'notification', 1500);
-    });
-    router.add('route-#header-unhelpful', function() {
-      modal.toggle('modal-unhelpful', 'dialog');
-    });
-    router.add('route-#header-search', function() {
-      modal.toggle('modal-search', 'dialog');
-      search.focus();
-    });
-
     analytics.track('viewed page ' + window.location.href);
-    router.load();
+    routes.init();
+    buttons.init();
+    router.init();
   }
   onload();
 })();
