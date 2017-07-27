@@ -187,7 +187,7 @@
         }, 
         {
             "location": "/pages/apps/android/", 
-            "text": "Integrate Branch\n\n\n\n\n\n\nConfigure Branch\n\n\n\n\n\n\nComplete your \nBranch Dashboard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInstall Branch\n\n\n\n\n\n\nImport the Branch SDK to your \nbuild.gradle\n\n\napply\n \nplugin\n:\n \ncom\n.\nandroid\n.\napplication\n\n\n\nandroid\n \n{\n\n    \ncompileSdkVersion\n \n25\n\n    \nbuildToolsVersion\n \n25.0.2\n\n    \ndefaultConfig\n \n{\n\n        \napplicationId\n \ncom.eneff.branchandroid\n\n        \nminSdkVersion\n \n15\n\n        \ntargetSdkVersion\n \n25\n\n        \nversionCode\n \n1\n\n        \nversionName\n \n1.0\n\n        \ntestInstrumentationRunner\n \nandroid.support.test.runner.AndroidJUnitRunner\n\n    \n}\n\n    \nbuildTypes\n \n{\n\n        \nrelease\n \n{\n\n            \nminifyEnabled\n \nfalse\n\n            \nproguardFiles\n \ngetDefaultProguardFile\n(\nproguard\n-\nandroid\n.\ntxt\n),\n \nproguard\n-\nrules\n.\npro\n\n        \n}\n\n    \n}\n\n\n}\n\n\n\ndependencies\n \n{\n\n    \ncompile\n \nfileTree\n(\ndir\n:\n \nlibs\n,\n \ninclude\n:\n \n[\n*.\njar\n])\n\n    \nandroidTestCompile\n(\ncom\n.\nandroid\n.\nsupport\n.\ntest\n.\nespresso\n:\nespresso\n-\ncore\n:\n2.2.2\n,\n \n{\n\n        \nexclude\n \ngroup\n:\n \ncom\n.\nandroid\n.\nsupport\n,\n \nmodule\n:\n \nsupport\n-\nannotations\n\n    \n})\n\n    \ncompile\n \ncom\n.\nandroid\n.\nsupport\n:\nappcompat\n-\nv7\n:\n25.2.0\n\n    \ncompile\n \ncom\n.\nandroid\n.\nsupport\n:\ndesign\n:\n25.2.0\n\n\n    \ncompile\n \nio\n.\nbranch\n.\nsdk\n.\nandroid\n:\nlibrary\n:\n2.\n+\n\n\n    \ntestCompile\n \njunit\n:\njunit\n:\n4.12\n\n\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\nConfigure app\n\n\n\n\n\n\nAdd Branch to your \nAndroidManifest.xml\n\n\n?xml version=\n1.0\n encoding=\nutf-8\n?\n\n\nmanifest\n \nxmlns:android=\nhttp://schemas.android.com/apk/res/android\n\n    \npackage=\ncom.eneff.branchandroid\n\n\n    \nuses-permission\n \nandroid:name=\nandroid.permission.INTERNET\n \n/\n\n\n    \napplication\n\n        \nandroid:allowBackup=\ntrue\n\n\n        \nandroid:name=\ncom.eneff.branchandroid.CustomApplicationClass\n\n\n        \nandroid:icon=\n@mipmap/ic_launcher\n\n        \nandroid:label=\n@string/app_name\n\n        \nandroid:supportsRtl=\ntrue\n\n        \nandroid:theme=\n@style/AppTheme\n\n\n        \nactivity\n\n            \nandroid:name=\n.MainActivity\n\n\n            \nandroid:launchMode=\nsingleTask\n\n\n            \nandroid:label=\n@string/app_name\n\n            \nandroid:theme=\n@style/AppTheme.NoActionBar\n\n\n            \nintent-filter\n\n                \naction\n \nandroid:name=\nandroid.intent.action.MAIN\n \n/\n\n                \ncategory\n \nandroid:name=\nandroid.intent.category.LAUNCHER\n \n/\n\n            \n/intent-filter\n\n\n\n            \n!-- Branch URI Scheme --\n\n\n            \nintent-filter\n\n\n                \ndata\n \nandroid:scheme=\nbranchandroid\n \n/\n\n\n                \naction\n \nandroid:name=\nandroid.intent.action.VIEW\n \n/\n\n\n                \ncategory\n \nandroid:name=\nandroid.intent.category.DEFAULT\n \n/\n\n\n                \ncategory\n \nandroid:name=\nandroid.intent.category.BROWSABLE\n \n/\n\n\n            \n/intent-filter\n\n\n\n\n            \n!-- Branch App Links (optional) --\n\n\n            \nintent-filter\n \nandroid:autoVerify=\ntrue\n\n\n                \naction\n \nandroid:name=\nandroid.intent.action.VIEW\n \n/\n\n\n                \ncategory\n \nandroid:name=\nandroid.intent.category.DEFAULT\n \n/\n\n\n                \ncategory\n \nandroid:name=\nandroid.intent.category.BROWSABLE\n \n/\n\n\n                \ndata\n \nandroid:scheme=\nhttps\n \nandroid:host=\nuobg.app.link\n \n/\n\n\n            \n/intent-filter\n\n\n        \n/activity\n\n\n\n        \n!-- Branch init --\n\n\n        \nmeta-data\n \nandroid:name=\nio.branch.sdk.BranchKey\n \nandroid:value=\nkey_live_gdzsepIaUf7wG3dEWb3aBkmcutm0PwJa\n \n/\n\n\n        \nmeta-data\n \nandroid:name=\nio.branch.sdk.BranchKey.test\n \nandroid:value=\nkey_test_edwDakKcMeWzJ3hC3aZs9kniyuaWGCTa\n \n/\n\n\n        \nmeta-data\n \nandroid:name=\nio.branch.sdk.TestMode\n \nandroid:value=\nfalse\n \n/\n\n\n\n\n        \n!-- Branch install referrer tracking (optional) --\n\n\n        \nreceiver\n \nandroid:name=\nio.branch.referral.InstallListener\n \nandroid:exported=\ntrue\n\n\n            \nintent-filter\n\n\n                \naction\n \nandroid:name=\ncom.android.vending.INSTALL_REFERRER\n \n/\n\n\n            \n/intent-filter\n\n\n        \n/receiver\n\n\n\n    \n/application\n\n\n\n/manifest\n\n\n\n\n\n\n\n\n\nReplace the following with values from your \nBranch Dashboard\n\n\n\n\nbranchandroid\n\n\nuobg.app.link\n\n\nkey_live_gdzsepIaUf7wG3dEWb3aBkmcutm0PwJa\n\n\nkey_test_edwDakKcMeWzJ3hC3aZs9kniyuaWGCTa\n\n\n\n\n\n\n\n\n\n\n\n\nInitialize Branch\n\n\n\n\n\n\nAdd Branch to your \nCustomApplicationClass.java\n\n\npackage\n \ncom.eneff.branchandroid\n;\n\n\n\nimport\n \nandroid.app.Application\n;\n\n\nimport\n \nio.branch.referral.Branch\n;\n\n\n\n\npublic\n \nclass\n \nCustomApplicationClass\n \nextends\n \nApplication\n \n{\n\n    \n@Override\n\n    \npublic\n \nvoid\n \nonCreate\n()\n \n{\n\n        \nsuper\n.\nonCreate\n();\n\n\n\n        \n// Branch logging for debugging\n\n\n        \nBranch\n.\nenableLogging\n();\n\n\n\n\n        \n// Branch object initialization\n\n\n        \nBranch\n.\ngetAutoInstance\n(\nthis\n);\n\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\n\n\nAdd Branch to your \nMainActivity.java\n\n\npackage\n \ncom.eneff.branchandroid\n;\n\n\n\nimport\n \nandroid.content.Intent\n;\n\n\nimport\n \nandroid.os.Bundle\n;\n\n\nimport\n \nandroid.support.design.widget.FloatingActionButton\n;\n\n\nimport\n \nandroid.support.design.widget.Snackbar\n;\n\n\nimport\n \nandroid.support.v7.app.AppCompatActivity\n;\n\n\nimport\n \nandroid.support.v7.widget.Toolbar\n;\n\n\nimport\n \nandroid.util.Log\n;\n\n\nimport\n \nandroid.view.View\n;\n\n\nimport\n \nandroid.view.Menu\n;\n\n\nimport\n \nandroid.view.MenuItem\n;\n\n\n\nimport\n \norg.json.JSONObject\n;\n\n\n\n\nimport\n \nio.branch.referral.Branch\n;\n\n\nimport\n \nio.branch.referral.BranchError\n;\n\n\n\n\npublic\n \nclass\n \nMainActivity\n \nextends\n \nAppCompatActivity\n \n{\n\n\n    \n@Override\n\n    \nprotected\n \nvoid\n \nonCreate\n(\nBundle\n \nsavedInstanceState\n)\n \n{\n\n        \nsuper\n.\nonCreate\n(\nsavedInstanceState\n);\n\n        \nsetContentView\n(\nR\n.\nlayout\n.\nactivity_main\n);\n\n        \nToolbar\n \ntoolbar\n \n=\n \n(\nToolbar\n)\n \nfindViewById\n(\nR\n.\nid\n.\ntoolbar\n);\n\n        \nsetSupportActionBar\n(\ntoolbar\n);\n\n\n        \nFloatingActionButton\n \nfab\n \n=\n \n(\nFloatingActionButton\n)\n \nfindViewById\n(\nR\n.\nid\n.\nfab\n);\n\n        \nfab\n.\nsetOnClickListener\n(\nnew\n \nView\n.\nOnClickListener\n()\n \n{\n\n            \n@Override\n\n            \npublic\n \nvoid\n \nonClick\n(\nView\n \nview\n)\n \n{\n\n                \nSnackbar\n.\nmake\n(\nview\n,\n \nReplace with your own action\n,\n \nSnackbar\n.\nLENGTH_LONG\n)\n\n                        \n.\nsetAction\n(\nAction\n,\n \nnull\n).\nshow\n();\n\n            \n}\n\n        \n});\n\n    \n}\n\n\n    \n@Override\n\n    \npublic\n \nboolean\n \nonCreateOptionsMenu\n(\nMenu\n \nmenu\n)\n \n{\n\n        \n// Inflate the menu; this adds items to the action bar if it is present.\n\n        \ngetMenuInflater\n().\ninflate\n(\nR\n.\nmenu\n.\nmenu_main\n,\n \nmenu\n);\n\n        \nreturn\n \ntrue\n;\n\n    \n}\n\n\n    \n@Override\n\n    \npublic\n \nboolean\n \nonOptionsItemSelected\n(\nMenuItem\n \nitem\n)\n \n{\n\n        \n// Handle action bar item clicks here. The action bar will\n\n        \n// automatically handle clicks on the Home/Up button, so long\n\n        \n// as you specify a parent activity in AndroidManifest.xml.\n\n        \nint\n \nid\n \n=\n \nitem\n.\ngetItemId\n();\n\n\n        \n//noinspection SimplifiableIfStatement\n\n        \nif\n \n(\nid\n \n==\n \nR\n.\nid\n.\naction_settings\n)\n \n{\n\n            \nreturn\n \ntrue\n;\n\n        \n}\n\n\n        \nreturn\n \nsuper\n.\nonOptionsItemSelected\n(\nitem\n);\n\n    \n}\n\n\n    \n@Override\n\n    \npublic\n \nvoid\n \nonStart\n()\n \n{\n\n        \nsuper\n.\nonStart\n();\n\n\n\n        \n// Branch Init\n\n\n        \nBranch\n.\ngetInstance\n().\ninitSession\n(\nnew\n \nBranch\n.\nBranchReferralInitListener\n()\n \n{\n\n\n            \n// Branch Link Data\n\n\n            \n@Override\n\n\n            \npublic\n \nvoid\n \nonInitFinished\n(\nJSONObject\n \nreferringParams\n,\n \nBranchError\n \nerror\n)\n \n{\n\n\n                \nif\n \n(\nerror\n \n==\n \nnull\n)\n \n{\n\n\n                    \nLog\n.\ni\n(\nBRANCH SDK\n,\n \nreferringParams\n.\ntoString\n());\n\n\n                \n}\n \nelse\n \n{\n\n\n                    \nLog\n.\ni\n(\nBRANCH SDK\n,\n \nerror\n.\ngetMessage\n());\n\n\n                \n}\n\n\n            \n}\n\n\n        \n},\n \nthis\n.\ngetIntent\n().\ngetData\n(),\n \nthis\n);\n\n\n    \n}\n\n\n\n    \n@Override\n\n\n    \npublic\n \nvoid\n \nonNewIntent\n(\nIntent\n \nintent\n)\n \n{\n\n\n        \nthis\n.\nsetIntent\n(\nintent\n);\n\n\n    \n}\n\n\n\n\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest deep link\n\n\n\n\n\n\nImplement features\n\n\n\n\n\n\nCreate content reference\n\n\n\n\n\n\nCreate deep link\n\n\n\n\n\n\nShare deep link\n\n\n\n\n\n\nRead deep link\n\n\n\n\n\n\nNavigate to content\n\n\n\n\n\n\nDisplay content\n\n\n\n\n\n\nTrack content\n\n\n\n\n\n\nTrack users\n\n\n\n\n\n\nTrack events\n\n\n\n\n\n\nTrack commerce\n\n\n\n\n\n\nHandle referrals\n\n\n\n\n\n\nTroubleshoot issues\n\n\n\n\n\n\nRecommendations\n\n\n\n\n\n\nOptional app config\n\n\n\n\n\n\nSimulate an install\n\n\n\n\n\n\nSample app\n\n\n\n\n\n\nUniversal Object properties\n\n\n\n\n\n\nCommerce properties\n\n\n\n\n\n\nCordova dependencies\n\n\n\n\n\n\nDisplay console logs\n\n\n\n\n\n\nUpdate the Branch SDK\n\n\n\n\n\n\nIncompatible plugins\n\n\n\n\n\n\nCordova errors", 
+            "text": "Integrate Branch\n\n\n\n\n\n\nConfigure Branch\n\n\n\n\n\n\nComplete your \nBranch Dashboard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInstall Branch\n\n\n\n\n\n\nImport the Branch SDK to your \nbuild.gradle\n\n\napply\n \nplugin\n:\n \ncom\n.\nandroid\n.\napplication\n\n\n\nandroid\n \n{\n\n    \ncompileSdkVersion\n \n25\n\n    \nbuildToolsVersion\n \n25.0.2\n\n    \ndefaultConfig\n \n{\n\n        \napplicationId\n \ncom.eneff.branchandroid\n\n        \nminSdkVersion\n \n15\n\n        \ntargetSdkVersion\n \n25\n\n        \nversionCode\n \n1\n\n        \nversionName\n \n1.0\n\n        \ntestInstrumentationRunner\n \nandroid.support.test.runner.AndroidJUnitRunner\n\n    \n}\n\n    \nbuildTypes\n \n{\n\n        \nrelease\n \n{\n\n            \nminifyEnabled\n \nfalse\n\n            \nproguardFiles\n \ngetDefaultProguardFile\n(\nproguard\n-\nandroid\n.\ntxt\n),\n \nproguard\n-\nrules\n.\npro\n\n        \n}\n\n    \n}\n\n\n}\n\n\n\ndependencies\n \n{\n\n    \ncompile\n \nfileTree\n(\ndir\n:\n \nlibs\n,\n \ninclude\n:\n \n[\n*.\njar\n])\n\n    \nandroidTestCompile\n(\ncom\n.\nandroid\n.\nsupport\n.\ntest\n.\nespresso\n:\nespresso\n-\ncore\n:\n2.2.2\n,\n \n{\n\n        \nexclude\n \ngroup\n:\n \ncom\n.\nandroid\n.\nsupport\n,\n \nmodule\n:\n \nsupport\n-\nannotations\n\n    \n})\n\n    \ncompile\n \ncom\n.\nandroid\n.\nsupport\n:\nappcompat\n-\nv7\n:\n25.2.0\n\n    \ncompile\n \ncom\n.\nandroid\n.\nsupport\n:\ndesign\n:\n25.2.0\n\n\n    \n// Branch SDK: library\n\n\n    \ncompile\n \nio\n.\nbranch\n.\nsdk\n.\nandroid\n:\nlibrary\n:\n2.\n+\n \n\n    \n// Branch SDK: matching with chrome tabs (optional)\n\n\n    \ncompile\n \ncom\n.\nandroid\n.\nsupport\n:\ncustomtabs\n:\n23.3.0\n \n\n    \n// Branch SDK: matching with GAID (optional)\n\n\n    \ncompile\n \ncom\n.\ngoogle\n.\nandroid\n.\ngms\n:\nplay\n-\nservices\n:\n9.0.0\n\n\n    \n// Branch SDK: firebase app indexing (optional)\n\n\n    \ncompile\n \ncom\n.\ngoogle\n.\nandroid\n.\ngms\n:\nplay\n-\nservices\n-\nappindexing\n:\n9.\n+\n\n\n    \ntestCompile\n \njunit\n:\njunit\n:\n4.12\n\n\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\nConfigure app\n\n\n\n\n\n\nAdd Branch to your \nAndroidManifest.xml\n\n\n?xml version=\n1.0\n encoding=\nutf-8\n?\n\n\nmanifest\n \nxmlns:android=\nhttp://schemas.android.com/apk/res/android\n\n    \npackage=\ncom.eneff.branchandroid\n\n\n    \nuses-permission\n \nandroid:name=\nandroid.permission.INTERNET\n \n/\n\n\n    \napplication\n\n        \nandroid:allowBackup=\ntrue\n\n\n        \nandroid:name=\ncom.eneff.branchandroid.CustomApplicationClass\n\n\n        \nandroid:icon=\n@mipmap/ic_launcher\n\n        \nandroid:label=\n@string/app_name\n\n        \nandroid:supportsRtl=\ntrue\n\n        \nandroid:theme=\n@style/AppTheme\n\n\n        \nactivity\n\n            \nandroid:name=\n.MainActivity\n\n\n            \nandroid:launchMode=\nsingleTask\n\n\n            \nandroid:label=\n@string/app_name\n\n            \nandroid:theme=\n@style/AppTheme.NoActionBar\n\n\n            \nintent-filter\n\n                \naction\n \nandroid:name=\nandroid.intent.action.MAIN\n \n/\n\n                \ncategory\n \nandroid:name=\nandroid.intent.category.LAUNCHER\n \n/\n\n            \n/intent-filter\n\n\n\n            \n!-- Branch URI Scheme --\n\n\n            \nintent-filter\n\n\n                \ndata\n \nandroid:scheme=\nbranchandroid\n \n/\n\n\n                \naction\n \nandroid:name=\nandroid.intent.action.VIEW\n \n/\n\n\n                \ncategory\n \nandroid:name=\nandroid.intent.category.DEFAULT\n \n/\n\n\n                \ncategory\n \nandroid:name=\nandroid.intent.category.BROWSABLE\n \n/\n\n\n            \n/intent-filter\n\n\n\n\n            \n!-- Branch App Links (optional) --\n\n\n            \nintent-filter\n \nandroid:autoVerify=\ntrue\n\n\n                \naction\n \nandroid:name=\nandroid.intent.action.VIEW\n \n/\n\n\n                \ncategory\n \nandroid:name=\nandroid.intent.category.DEFAULT\n \n/\n\n\n                \ncategory\n \nandroid:name=\nandroid.intent.category.BROWSABLE\n \n/\n\n\n                \ndata\n \nandroid:scheme=\nhttps\n \nandroid:host=\nuobg.app.link\n \n/\n\n\n            \n/intent-filter\n\n\n        \n/activity\n\n\n\n        \n!-- Branch init --\n\n\n        \nmeta-data\n \nandroid:name=\nio.branch.sdk.BranchKey\n \nandroid:value=\nkey_live_gdzsepIaUf7wG3dEWb3aBkmcutm0PwJa\n \n/\n\n\n        \nmeta-data\n \nandroid:name=\nio.branch.sdk.BranchKey.test\n \nandroid:value=\nkey_test_edwDakKcMeWzJ3hC3aZs9kniyuaWGCTa\n \n/\n\n\n        \nmeta-data\n \nandroid:name=\nio.branch.sdk.TestMode\n \nandroid:value=\nfalse\n \n/\n\n\n\n\n        \n!-- Branch install referrer tracking (optional) --\n\n\n        \nreceiver\n \nandroid:name=\nio.branch.referral.InstallListener\n \nandroid:exported=\ntrue\n\n\n            \nintent-filter\n\n\n                \naction\n \nandroid:name=\ncom.android.vending.INSTALL_REFERRER\n \n/\n\n\n            \n/intent-filter\n\n\n        \n/receiver\n\n\n\n    \n/application\n\n\n\n/manifest\n\n\n\n\n\n\n\n\n\nReplace the following with values from your \nBranch Dashboard\n\n\n\n\nbranchandroid\n\n\nuobg.app.link\n\n\nkey_live_gdzsepIaUf7wG3dEWb3aBkmcutm0PwJa\n\n\nkey_test_edwDakKcMeWzJ3hC3aZs9kniyuaWGCTa\n\n\n\n\n\n\n\n\n\n\n\n\nInitialize Branch\n\n\n\n\n\n\nAdd Branch to your \nCustomApplicationClass.java\n\n\npackage\n \ncom.eneff.branchandroid\n;\n\n\n\nimport\n \nandroid.app.Application\n;\n\n\nimport\n \nio.branch.referral.Branch\n;\n\n\n\n\npublic\n \nclass\n \nCustomApplicationClass\n \nextends\n \nApplication\n \n{\n\n    \n@Override\n\n    \npublic\n \nvoid\n \nonCreate\n()\n \n{\n\n        \nsuper\n.\nonCreate\n();\n\n\n\n        \n// Branch logging for debugging\n\n\n        \nBranch\n.\nenableLogging\n();\n\n\n\n\n        \n// Branch object initialization\n\n\n        \nBranch\n.\ngetAutoInstance\n(\nthis\n);\n\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\n\n\nAdd Branch to your \nMainActivity.java\n\n\npackage\n \ncom.eneff.branchandroid\n;\n\n\n\nimport\n \nandroid.content.Intent\n;\n\n\nimport\n \nandroid.os.Bundle\n;\n\n\nimport\n \nandroid.support.design.widget.FloatingActionButton\n;\n\n\nimport\n \nandroid.support.design.widget.Snackbar\n;\n\n\nimport\n \nandroid.support.v7.app.AppCompatActivity\n;\n\n\nimport\n \nandroid.support.v7.widget.Toolbar\n;\n\n\nimport\n \nandroid.util.Log\n;\n\n\nimport\n \nandroid.view.View\n;\n\n\nimport\n \nandroid.view.Menu\n;\n\n\nimport\n \nandroid.view.MenuItem\n;\n\n\n\nimport\n \norg.json.JSONObject\n;\n\n\n\n\nimport\n \nio.branch.referral.Branch\n;\n\n\nimport\n \nio.branch.referral.BranchError\n;\n\n\n\n\npublic\n \nclass\n \nMainActivity\n \nextends\n \nAppCompatActivity\n \n{\n\n\n    \n@Override\n\n    \nprotected\n \nvoid\n \nonCreate\n(\nBundle\n \nsavedInstanceState\n)\n \n{\n\n        \nsuper\n.\nonCreate\n(\nsavedInstanceState\n);\n\n        \nsetContentView\n(\nR\n.\nlayout\n.\nactivity_main\n);\n\n        \nToolbar\n \ntoolbar\n \n=\n \n(\nToolbar\n)\n \nfindViewById\n(\nR\n.\nid\n.\ntoolbar\n);\n\n        \nsetSupportActionBar\n(\ntoolbar\n);\n\n\n        \nFloatingActionButton\n \nfab\n \n=\n \n(\nFloatingActionButton\n)\n \nfindViewById\n(\nR\n.\nid\n.\nfab\n);\n\n        \nfab\n.\nsetOnClickListener\n(\nnew\n \nView\n.\nOnClickListener\n()\n \n{\n\n            \n@Override\n\n            \npublic\n \nvoid\n \nonClick\n(\nView\n \nview\n)\n \n{\n\n                \nSnackbar\n.\nmake\n(\nview\n,\n \nReplace with your own action\n,\n \nSnackbar\n.\nLENGTH_LONG\n)\n\n                        \n.\nsetAction\n(\nAction\n,\n \nnull\n).\nshow\n();\n\n            \n}\n\n        \n});\n\n    \n}\n\n\n    \n@Override\n\n    \npublic\n \nboolean\n \nonCreateOptionsMenu\n(\nMenu\n \nmenu\n)\n \n{\n\n        \n// Inflate the menu; this adds items to the action bar if it is present.\n\n        \ngetMenuInflater\n().\ninflate\n(\nR\n.\nmenu\n.\nmenu_main\n,\n \nmenu\n);\n\n        \nreturn\n \ntrue\n;\n\n    \n}\n\n\n    \n@Override\n\n    \npublic\n \nboolean\n \nonOptionsItemSelected\n(\nMenuItem\n \nitem\n)\n \n{\n\n        \n// Handle action bar item clicks here. The action bar will\n\n        \n// automatically handle clicks on the Home/Up button, so long\n\n        \n// as you specify a parent activity in AndroidManifest.xml.\n\n        \nint\n \nid\n \n=\n \nitem\n.\ngetItemId\n();\n\n\n        \n//noinspection SimplifiableIfStatement\n\n        \nif\n \n(\nid\n \n==\n \nR\n.\nid\n.\naction_settings\n)\n \n{\n\n            \nreturn\n \ntrue\n;\n\n        \n}\n\n\n        \nreturn\n \nsuper\n.\nonOptionsItemSelected\n(\nitem\n);\n\n    \n}\n\n\n    \n@Override\n\n    \npublic\n \nvoid\n \nonStart\n()\n \n{\n\n        \nsuper\n.\nonStart\n();\n\n\n\n        \n// Branch Init\n\n\n        \nBranch\n.\ngetInstance\n().\ninitSession\n(\nnew\n \nBranch\n.\nBranchReferralInitListener\n()\n \n{\n\n\n            \n// Branch Link Data\n\n\n            \n@Override\n\n\n            \npublic\n \nvoid\n \nonInitFinished\n(\nJSONObject\n \nreferringParams\n,\n \nBranchError\n \nerror\n)\n \n{\n\n\n                \nif\n \n(\nerror\n \n==\n \nnull\n)\n \n{\n\n\n                    \nLog\n.\ni\n(\nBRANCH SDK\n,\n \nreferringParams\n.\ntoString\n());\n\n\n                \n}\n \nelse\n \n{\n\n\n                    \nLog\n.\ni\n(\nBRANCH SDK\n,\n \nerror\n.\ngetMessage\n());\n\n\n                \n}\n\n\n            \n}\n\n\n        \n},\n \nthis\n.\ngetIntent\n().\ngetData\n(),\n \nthis\n);\n\n\n    \n}\n\n\n\n    \n@Override\n\n\n    \npublic\n \nvoid\n \nonNewIntent\n(\nIntent\n \nintent\n)\n \n{\n\n\n        \nthis\n.\nsetIntent\n(\nintent\n);\n\n\n    \n}\n\n\n\n\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest deep link\n\n\n\n\n\n\nCreate a deep link from the \nBranch Dashboard\n\n\n\n\n\n\nDelete your app from the device\n\n\n\n\n\n\nCompile your app to your device\n\n\n\n\n\n\nPaste deep link in \nGoogle Hangouts\n\n\n\n\n\n\nClick on the deep link to open your app\n\n\n\n\n\n\n\n\n\n\nImplement features\n\n\n\n\n\n\nCreate content reference\n\n\nBranchUniversalObject\n \nbranchUniversalObject\n \n=\n \nnew\n \nBranchUniversalObject\n()\n\n    \n// The identifier is what Branch will use to de-dupe the content across many different Universal Objects\n\n   \n.\nsetCanonicalIdentifier\n(\nitem/12345\n)\n\n\n   \n// The canonical URL for SEO purposes (optional)\n\n   \n.\nsetCanonicalUrl\n(\nhttps://branch.io/deepviews\n)\n\n\n   \n// This is where you define the open graph structure and how the object will appear on Facebook or in a deepview\n\n   \n.\nsetTitle\n(\nMy Content Title\n)\n\n   \n.\nsetContentDescription\n(\nMy Content Description\n)\n\n   \n.\nsetContentImageUrl\n(\nhttps://example.com/mycontent-12345.png\n)\n\n\n   \n// You use this to specify whether this content can be discovered publicly - default is public\n\n   \n.\nsetContentIndexingMode\n(\nBranchUniversalObject\n.\nCONTENT_INDEX_MODE\n.\nPUBLIC\n)\n\n\n    \n// Here is where you can add custom keys/values to the deep link data\n\n   \n.\naddContentMetadata\n(\nproperty1\n,\n \nblue\n)\n\n   \n.\naddContentMetadata\n(\nproperty2\n,\n \nred\n);\n\n\n\n\n\n\n\n\n\nCreate deep link\n\n\nLinkProperties\n \nlinkProperties\n \n=\n \nnew\n \nLinkProperties\n()\n\n   \n.\nsetChannel\n(\nfacebook\n)\n\n   \n.\nsetFeature\n(\nsharing\n)\n\n   \n.\naddControlParameter\n(\n$desktop_url\n,\n \nhttp://example.com/home\n)\n\n   \n.\naddControlParameter\n(\n$ios_url\n,\n \nhttp://example.com/ios\n);\n\n\n\nbranchUniversalObject\n.\ngenerateShortUrl\n(\nthis\n,\n \nlinkProperties\n,\n \nnew\n     \nBranchLinkCreateListener\n()\n \n{\n\n    \n@Override\n\n    \npublic\n \nvoid\n \nonLinkCreate\n(\nString\n \nurl\n,\n \nBranchError\n \nerror\n)\n \n{\n\n       \nif\n \n(\nerror\n \n==\n \nnull\n)\n \n{\n\n           \nLog\n.\ni\n(\nMyApp\n,\n \ngot my Branch link to share: \n \n+\n \nurl\n);\n\n       \n}\n\n    \n}\n\n\n});\n                   \n\n\n\n\n\n\n\n\nShare deep link\n\n\nShareSheetStyle\n \nshareSheetStyle\n \n=\n \nnew\n \nShareSheetStyle\n(\nMainActivity\n.\nthis\n,\n \nCheck this out!\n,\n \nThis stuff is awesome: \n)\n\n    \n.\nsetCopyUrlStyle\n(\ngetResources\n().\ngetDrawable\n(\nandroid\n.\nR\n.\ndrawable\n.\nic_menu_send\n),\n \nCopy\n,\n \nAdded to clipboard\n)\n\n    \n.\nsetMoreOptionStyle\n(\ngetResources\n().\ngetDrawable\n(\nandroid\n.\nR\n.\ndrawable\n.\nic_menu_search\n),\n \nShow more\n)\n\n    \n.\naddPreferredSharingOption\n(\nSharingHelper\n.\nSHARE_WITH\n.\nFACEBOOK\n)\n\n    \n.\naddPreferredSharingOption\n(\nSharingHelper\n.\nSHARE_WITH\n.\nEMAIL\n)\n\n    \n.\nsetAsFullWidthStyle\n(\ntrue\n)\n\n    \n.\nsetSharingTitle\n(\nShare With\n);\n\n\n\nbranchUniversalObject\n.\nshowShareSheet\n(\nthis\n,\n \n                                      \nlinkProperties\n,\n\n                                      \nshareSheetStyle\n,\n\n                                       \nnew\n \nBranch\n.\nBranchLinkShareListener\n()\n \n{\n\n    \n@Override\n\n    \npublic\n \nvoid\n \nonShareLinkDialogLaunched\n()\n \n{\n\n    \n}\n\n    \n@Override\n\n    \npublic\n \nvoid\n \nonShareLinkDialogDismissed\n()\n \n{\n\n    \n}\n\n    \n@Override\n\n    \npublic\n \nvoid\n \nonLinkShareResponse\n(\nString\n \nsharedLink\n,\n \nString\n \nsharedChannel\n,\n \nBranchError\n \nerror\n)\n \n{\n\n    \n}\n\n    \n@Override\n\n    \npublic\n \nvoid\n \nonChannelSelected\n(\nString\n \nchannelName\n)\n \n{\n\n    \n}\n\n\n});\n\n\n\n\n\n\n\n\n\nRead deep link\n\n\n\n\n\n\nNavigate to content\n\n\n\n\n\n\nDisplay content\n\n\n\n\n\n\nTrack content\n\n\n\n\n\n\nTrack users\n\n\nBranch\n \nbranch\n \n=\n \nBranch\n.\ngetInstance\n(\ngetApplicationContext\n());\n\n\nbranch\n.\nsetIdentity\n(\nyour\n \nuser\n \nid\n);\n \n// your user id should not exceed 127 characters\n\n\n\n\n\nBranch\n.\ngetInstance\n(\ngetApplicationContext\n()).\nlogout\n();\n\n\n\n\n\n\n\n\n\nTrack events\n\n\nBranch\n \nbranch\n \n=\n \nBranch\n.\ngetInstance\n(\ngetApplicationContext\n());\n\n\nbranch\n.\nuserCompletedAction\n(\nyour_custom_event\n);\n\n\n\n\n\nBranch\n \nbranch\n \n=\n \nBranch\n.\ngetInstance\n(\ngetApplicationContext\n());\n\n\nbranch\n.\nuserCompletedAction\n(\nyour_custom_event\n,\n \n(\nJSONObject\n)\nappState\n);\n \n// same 63 characters max limit\n\n\n\n\n\n\n\n\n\nTrack commerce\n\n\n\n\n\n\nHandle referrals\n\n\n\n\n\n\nTroubleshoot issues\n\n\n\n\n\n\nRecommendations\n\n\n\n\n\n\nSimulate an install\n\n\n\n\n\n\nSample app\n\n\n\n\n\n\nAndroid instant app", 
             "title": "Android"
         }, 
         {
@@ -202,7 +202,7 @@
         }, 
         {
             "location": "/pages/apps/android/#install-branch", 
-            "text": "Import the Branch SDK to your  build.gradle  apply   plugin :   com . android . application  android   { \n     compileSdkVersion   25 \n     buildToolsVersion   25.0.2 \n     defaultConfig   { \n         applicationId   com.eneff.branchandroid \n         minSdkVersion   15 \n         targetSdkVersion   25 \n         versionCode   1 \n         versionName   1.0 \n         testInstrumentationRunner   android.support.test.runner.AndroidJUnitRunner \n     } \n     buildTypes   { \n         release   { \n             minifyEnabled   false \n             proguardFiles   getDefaultProguardFile ( proguard - android . txt ),   proguard - rules . pro \n         } \n     }  }  dependencies   { \n     compile   fileTree ( dir :   libs ,   include :   [ *. jar ]) \n     androidTestCompile ( com . android . support . test . espresso : espresso - core : 2.2.2 ,   { \n         exclude   group :   com . android . support ,   module :   support - annotations \n     }) \n     compile   com . android . support : appcompat - v7 : 25.2.0 \n     compile   com . android . support : design : 25.2.0       compile   io . branch . sdk . android : library : 2. +       testCompile   junit : junit : 4.12  }", 
+            "text": "Import the Branch SDK to your  build.gradle  apply   plugin :   com . android . application  android   { \n     compileSdkVersion   25 \n     buildToolsVersion   25.0.2 \n     defaultConfig   { \n         applicationId   com.eneff.branchandroid \n         minSdkVersion   15 \n         targetSdkVersion   25 \n         versionCode   1 \n         versionName   1.0 \n         testInstrumentationRunner   android.support.test.runner.AndroidJUnitRunner \n     } \n     buildTypes   { \n         release   { \n             minifyEnabled   false \n             proguardFiles   getDefaultProguardFile ( proguard - android . txt ),   proguard - rules . pro \n         } \n     }  }  dependencies   { \n     compile   fileTree ( dir :   libs ,   include :   [ *. jar ]) \n     androidTestCompile ( com . android . support . test . espresso : espresso - core : 2.2.2 ,   { \n         exclude   group :   com . android . support ,   module :   support - annotations \n     }) \n     compile   com . android . support : appcompat - v7 : 25.2.0 \n     compile   com . android . support : design : 25.2.0       // Branch SDK: library       compile   io . branch . sdk . android : library : 2. +        // Branch SDK: matching with chrome tabs (optional)       compile   com . android . support : customtabs : 23.3.0        // Branch SDK: matching with GAID (optional)       compile   com . google . android . gms : play - services : 9.0.0       // Branch SDK: firebase app indexing (optional)       compile   com . google . android . gms : play - services - appindexing : 9. +       testCompile   junit : junit : 4.12  }", 
             "title": "Install Branch"
         }, 
         {
@@ -217,7 +217,7 @@
         }, 
         {
             "location": "/pages/apps/android/#test-deep-link", 
-            "text": "", 
+            "text": "Create a deep link from the  Branch Dashboard    Delete your app from the device    Compile your app to your device    Paste deep link in  Google Hangouts    Click on the deep link to open your app", 
             "title": "Test deep link"
         }, 
         {
@@ -227,17 +227,17 @@
         }, 
         {
             "location": "/pages/apps/android/#create-content-reference", 
-            "text": "", 
+            "text": "BranchUniversalObject   branchUniversalObject   =   new   BranchUniversalObject () \n     // The identifier is what Branch will use to de-dupe the content across many different Universal Objects \n    . setCanonicalIdentifier ( item/12345 ) \n\n    // The canonical URL for SEO purposes (optional) \n    . setCanonicalUrl ( https://branch.io/deepviews ) \n\n    // This is where you define the open graph structure and how the object will appear on Facebook or in a deepview \n    . setTitle ( My Content Title ) \n    . setContentDescription ( My Content Description ) \n    . setContentImageUrl ( https://example.com/mycontent-12345.png ) \n\n    // You use this to specify whether this content can be discovered publicly - default is public \n    . setContentIndexingMode ( BranchUniversalObject . CONTENT_INDEX_MODE . PUBLIC ) \n\n     // Here is where you can add custom keys/values to the deep link data \n    . addContentMetadata ( property1 ,   blue ) \n    . addContentMetadata ( property2 ,   red );", 
             "title": "Create content reference"
         }, 
         {
             "location": "/pages/apps/android/#create-deep-link", 
-            "text": "", 
+            "text": "LinkProperties   linkProperties   =   new   LinkProperties () \n    . setChannel ( facebook ) \n    . setFeature ( sharing ) \n    . addControlParameter ( $desktop_url ,   http://example.com/home ) \n    . addControlParameter ( $ios_url ,   http://example.com/ios );  branchUniversalObject . generateShortUrl ( this ,   linkProperties ,   new       BranchLinkCreateListener ()   { \n     @Override \n     public   void   onLinkCreate ( String   url ,   BranchError   error )   { \n        if   ( error   ==   null )   { \n            Log . i ( MyApp ,   got my Branch link to share:    +   url ); \n        } \n     }  });", 
             "title": "Create deep link"
         }, 
         {
             "location": "/pages/apps/android/#share-deep-link", 
-            "text": "", 
+            "text": "ShareSheetStyle   shareSheetStyle   =   new   ShareSheetStyle ( MainActivity . this ,   Check this out! ,   This stuff is awesome:  ) \n     . setCopyUrlStyle ( getResources (). getDrawable ( android . R . drawable . ic_menu_send ),   Copy ,   Added to clipboard ) \n     . setMoreOptionStyle ( getResources (). getDrawable ( android . R . drawable . ic_menu_search ),   Show more ) \n     . addPreferredSharingOption ( SharingHelper . SHARE_WITH . FACEBOOK ) \n     . addPreferredSharingOption ( SharingHelper . SHARE_WITH . EMAIL ) \n     . setAsFullWidthStyle ( true ) \n     . setSharingTitle ( Share With );  branchUniversalObject . showShareSheet ( this ,  \n                                       linkProperties , \n                                       shareSheetStyle , \n                                        new   Branch . BranchLinkShareListener ()   { \n     @Override \n     public   void   onShareLinkDialogLaunched ()   { \n     } \n     @Override \n     public   void   onShareLinkDialogDismissed ()   { \n     } \n     @Override \n     public   void   onLinkShareResponse ( String   sharedLink ,   String   sharedChannel ,   BranchError   error )   { \n     } \n     @Override \n     public   void   onChannelSelected ( String   channelName )   { \n     }  });", 
             "title": "Share deep link"
         }, 
         {
@@ -262,12 +262,12 @@
         }, 
         {
             "location": "/pages/apps/android/#track-users", 
-            "text": "", 
+            "text": "Branch   branch   =   Branch . getInstance ( getApplicationContext ());  branch . setIdentity ( your   user   id );   // your user id should not exceed 127 characters   Branch . getInstance ( getApplicationContext ()). logout ();", 
             "title": "Track users"
         }, 
         {
             "location": "/pages/apps/android/#track-events", 
-            "text": "", 
+            "text": "Branch   branch   =   Branch . getInstance ( getApplicationContext ());  branch . userCompletedAction ( your_custom_event );   Branch   branch   =   Branch . getInstance ( getApplicationContext ());  branch . userCompletedAction ( your_custom_event ,   ( JSONObject ) appState );   // same 63 characters max limit", 
             "title": "Track events"
         }, 
         {
@@ -291,11 +291,6 @@
             "title": "Recommendations"
         }, 
         {
-            "location": "/pages/apps/android/#optional-app-config", 
-            "text": "", 
-            "title": "Optional app config"
-        }, 
-        {
             "location": "/pages/apps/android/#simulate-an-install", 
             "text": "", 
             "title": "Simulate an install"
@@ -306,39 +301,9 @@
             "title": "Sample app"
         }, 
         {
-            "location": "/pages/apps/android/#universal-object-properties", 
+            "location": "/pages/apps/android/#android-instant-app", 
             "text": "", 
-            "title": "Universal Object properties"
-        }, 
-        {
-            "location": "/pages/apps/android/#commerce-properties", 
-            "text": "", 
-            "title": "Commerce properties"
-        }, 
-        {
-            "location": "/pages/apps/android/#cordova-dependencies", 
-            "text": "", 
-            "title": "Cordova dependencies"
-        }, 
-        {
-            "location": "/pages/apps/android/#display-console-logs", 
-            "text": "", 
-            "title": "Display console logs"
-        }, 
-        {
-            "location": "/pages/apps/android/#update-the-branch-sdk", 
-            "text": "", 
-            "title": "Update the Branch SDK"
-        }, 
-        {
-            "location": "/pages/apps/android/#incompatible-plugins", 
-            "text": "", 
-            "title": "Incompatible plugins"
-        }, 
-        {
-            "location": "/pages/apps/android/#cordova-errors", 
-            "text": "", 
-            "title": "Cordova errors"
+            "title": "Android instant app"
         }, 
         {
             "location": "/pages/apps/adobe-air/", 
@@ -504,111 +469,6 @@
             "location": "/pages/apps/cordova-phonegap-ionic/#cordova-errors", 
             "text": "Branch opens and installs your app, so you cannot simulate Branch in the desktop browser    Error  ORIGINAL EXCEPTION: Branch is not defined  ReferenceError: Branch is not defined    Solution   // Ionic 2/3 - running on browser instead of device  if   ( ! platform . is ( cordova ))   {   return   }  Branch . userCompletedAction ( did_this )   // Ionic 2/3 - missing Branch import  declare   var   Branch       Provisioning Profile missing    Error  ** ARCHIVE FAILED **\n\nThe following build commands failed:\n  Check dependencies ( 1  failure ) \nError: Error code  65   for  command: xcodebuild with args: -xcconfig,cordova/build-debug.xcconfig,-workspace,Branch Testing.xcworkspace,-scheme,Branch Testing,-configuration,Debug,-destination,generic/platform = iOS,-archivePath,Branch Testing.xcarchive,archive,CONFIGURATION_BUILD_DIR = build/device,SHARED_PRECOMPS_DIR = build/sharedpch  No profiles  for   com.eneff.branch.cordova_testbed  were found    Solution     Fix by opening your app in  Xcode  and launch from there (to select a  Provisioning Profile )       Invalid bundle id    Error  An invalid value  XC com eneff branch cordova_testbed  was provided  for  the parameter  appIdName .  Error: Error code  1   for  command: /gradlew with args: cdvBuildDebug,-b,/build.gradle,-Dorg.gradle.daemon = true,-Pandroid.useDeprecatedNdk = true     Solution   Don't use  cordova ,  hyphens  (Android), or  underscores  (iOS) in your bundle id (widget id)", 
             "title": "Cordova errors"
-        }, 
-        {
-            "location": "/pages/apps/imessage/", 
-            "text": "Integrate Branch\n\n\n\n\n\n\nConfigure Branch\n\n\n\n\n\n\nConfigure app\n\n\n\n\n\n\nInitialize Branch\n\n\n\n\n\n\nTest deep link\n\n\n\n\n\n\nImplement features\n\n\n\n\n\n\nCreate content reference\n\n\n\n\n\n\nCreate deep link\n\n\n\n\n\n\nShare deep link\n\n\n\n\n\n\nRead deep link\n\n\n\n\n\n\nNavigate to content\n\n\n\n\n\n\nDisplay content\n\n\n\n\n\n\nTrack content\n\n\n\n\n\n\nTrack users\n\n\n\n\n\n\nTrack events\n\n\n\n\n\n\nTrack commerce\n\n\n\n\n\n\nHandle referrals\n\n\n\n\n\n\nTroubleshoot issues\n\n\n\n\n\n\nRecommendations\n\n\n\n\n\n\nSample app", 
-            "title": "iMessage"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#integrate-branch", 
-            "text": "", 
-            "title": "Integrate Branch"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#configure-branch", 
-            "text": "", 
-            "title": "Configure Branch"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#configure-app", 
-            "text": "", 
-            "title": "Configure app"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#initialize-branch", 
-            "text": "", 
-            "title": "Initialize Branch"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#test-deep-link", 
-            "text": "", 
-            "title": "Test deep link"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#implement-features", 
-            "text": "", 
-            "title": "Implement features"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#create-content-reference", 
-            "text": "", 
-            "title": "Create content reference"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#create-deep-link", 
-            "text": "", 
-            "title": "Create deep link"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#share-deep-link", 
-            "text": "", 
-            "title": "Share deep link"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#read-deep-link", 
-            "text": "", 
-            "title": "Read deep link"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#navigate-to-content", 
-            "text": "", 
-            "title": "Navigate to content"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#display-content", 
-            "text": "", 
-            "title": "Display content"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#track-content", 
-            "text": "", 
-            "title": "Track content"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#track-users", 
-            "text": "", 
-            "title": "Track users"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#track-events", 
-            "text": "", 
-            "title": "Track events"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#track-commerce", 
-            "text": "", 
-            "title": "Track commerce"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#handle-referrals", 
-            "text": "", 
-            "title": "Handle referrals"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#troubleshoot-issues", 
-            "text": "", 
-            "title": "Troubleshoot issues"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#recommendations", 
-            "text": "", 
-            "title": "Recommendations"
-        }, 
-        {
-            "location": "/pages/apps/imessage/#sample-app", 
-            "text": "", 
-            "title": "Sample app"
         }, 
         {
             "location": "/pages/apps/mparticle-android/", 

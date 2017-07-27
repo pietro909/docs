@@ -133,7 +133,7 @@
 
   var support = (function() {
     // <a href="#" class="contact-support" title="Contact support">Contact support</a>
-    var statement = 'mailto:support@branch.io?subject=I need some assistance&body=Hello Branch Support,%0A%0AI am viewing (' + window.location.href + ').%0A%0AMy Branch Key (https%3A%2F%2Fdashboard.branch.io%2Faccount-settings%2Fapp) is:%0A%0A I need assistance with ';
+    var statement = 'mailto:integration@branch.io?subject=[DOCS] I need some assistance&body=Hello Branch Support,%0A%0AI am viewing (' + window.location.href + ').%0A%0AMy Branch Key (https%3A%2F%2Fdashboard.branch.io%2Faccount-settings%2Fapp) is:%0A%0A I need assistance with ';
 
     // main
     load();
