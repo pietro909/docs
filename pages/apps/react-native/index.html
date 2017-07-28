@@ -393,6 +393,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#install-branch" title="Install Branch" class="md-nav__link">
+    Install Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configure-app" title="Configure app" class="md-nav__link">
     Configure app
   </a>
@@ -407,8 +414,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#test-deep-link" title="Test deep link" class="md-nav__link">
-    Test deep link
+  <a href="#test-deep-link-ios" title="Test deep link iOS" class="md-nav__link">
+    Test deep link iOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-deep-link-android" title="Test deep link Android" class="md-nav__link">
+    Test deep link Android
   </a>
   
 </li>
@@ -1393,6 +1407,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#install-branch" title="Install Branch" class="md-nav__link">
+    Install Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configure-app" title="Configure app" class="md-nav__link">
     Configure app
   </a>
@@ -1407,8 +1428,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#test-deep-link" title="Test deep link" class="md-nav__link">
-    Test deep link
+  <a href="#test-deep-link-ios" title="Test deep link iOS" class="md-nav__link">
+    Test deep link iOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-deep-link-android" title="Test deep link Android" class="md-nav__link">
+    Test deep link Android
   </a>
   
 </li>
@@ -1564,15 +1592,351 @@
 <ul>
 <li>
 <h4 id="configure-branch">Configure Branch<a class="headerlink" href="#configure-branch" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Complete your <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></p>
+<p><img alt="image" src="http://i.imgur.com/wazVu3U.png" />
+<img alt="image" src="http://i.imgur.com/9PEylbS.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="install-branch">Install Branch<a class="headerlink" href="#install-branch" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Option 1: Simple (iOS or Android)</p>
+<div class="codehilite"><pre><span></span><span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">save</span> <span class="n">react</span><span class="o">-</span><span class="n">native</span><span class="o">-</span><span class="n">branch</span><span class="mf">@2.0.0</span><span class="o">-</span><span class="n">beta</span><span class="mf">.7</span>
+<span class="n">react</span><span class="o">-</span><span class="n">native</span> <span class="n">link</span> <span class="n">react</span><span class="o">-</span><span class="n">native</span><span class="o">-</span><span class="n">branch</span>
+</pre></div>
+
+</li>
+<li>
+<p>Option 2: <a href="https://cocoapods.org/">CocoaPods</a></p>
+<div class="codehilite"><pre><span></span>pod &quot;React&quot;, path: &quot;../node_modules/react-native&quot;
+
+# The following line is necessary with use_frameworks! or RN &gt;= 0.42.
+pod &quot;Yoga&quot;, path: &quot;../node_modules/react-native/ReactCommon/yoga&quot;
+
+pod &quot;react-native-branch&quot;, path: &quot;../node_modules/react-native-branch&quot;
+pod &quot;Branch-SDK&quot;, path: &quot;../node_modules/react-native-branch/ios&quot;
+</pre></div>
+
+</li>
+<li>
+<p>Option 3: <a href="https://github.com/Carthage/Carthage">Carthage</a></p>
+<div class="codehilite"><pre><span></span>github &quot;BranchMetrics/ios-branch-deep-linking&quot;
+carthage update
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h4 id="configure-app">Configure app<a class="headerlink" href="#configure-app" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>iOS</p>
+<ul>
+<li>
+<p>Configure bundle identifier</p>
+<ul>
+<li>
+<p>Bundle Id matches <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></p>
+<p><img alt="image" src="http://i.imgur.com/BHAQIQf.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Configure associated domains</p>
+<ul>
+<li>
+<p>Add <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a> values</p>
+<p><img alt="image" src="http://i.imgur.com/67t6hSY.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Configure entitlements</p>
+<ul>
+<li>
+<p>Confirm entitlements are within target</p>
+<p><img alt="image" src="http://i.imgur.com/vhwis7f.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Configure info.pList</p>
+<ul>
+<li>
+<p>Add <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a> values</p>
+<p><img alt="image" src="http://i.imgur.com/PwXnHWz.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Confirm app prefix</p>
+<ul>
+<li>
+<p>From your <a href="https://developer.apple.com/account/ios/identifier/bundle">Apple Developer Account</a></p>
+<p><img alt="image" src="http://i.imgur.com/2EoN1i0.png" /></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Android</p>
+<ul>
+<li>
+<p><code>Android Manifest.xml</code></p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;manifest</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="na">package=</span><span class="s">&quot;com.eneff.branchandroid&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&quot;android.permission.INTERNET&quot;</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;application</span>
+        <span class="na">android:allowBackup=</span><span class="s">&quot;true&quot;</span>
+<span class="hll">        <span class="na">android:name=</span><span class="s">&quot;com.eneff.branchandroid.CustomApplicationClass&quot;</span>
+</span>        <span class="na">android:icon=</span><span class="s">&quot;@mipmap/ic_launcher&quot;</span>
+        <span class="na">android:label=</span><span class="s">&quot;@string/app_name&quot;</span>
+        <span class="na">android:supportsRtl=</span><span class="s">&quot;true&quot;</span>
+        <span class="na">android:theme=</span><span class="s">&quot;@style/AppTheme&quot;</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;activity</span>
+            <span class="na">android:name=</span><span class="s">&quot;.MainActivity&quot;</span>
+<span class="hll">            <span class="na">android:launchMode=</span><span class="s">&quot;singleTask&quot;</span>
+</span>            <span class="na">android:label=</span><span class="s">&quot;@string/app_name&quot;</span>
+            <span class="na">android:theme=</span><span class="s">&quot;@style/AppTheme.NoActionBar&quot;</span><span class="nt">&gt;</span>
+
+            <span class="nt">&lt;intent-filter&gt;</span>
+                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.MAIN&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.LAUNCHER&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/intent-filter&gt;</span>
+
+<span class="hll">            <span class="c">&lt;!-- Branch URI Scheme --&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;intent-filter&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;branchandroid&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;/intent-filter&gt;</span>
+</span>
+<span class="hll">            <span class="c">&lt;!-- Branch App Links (optional) --&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;intent-filter</span> <span class="na">android:autoVerify=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;uobg.app.link&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;/intent-filter&gt;</span>
+</span>        <span class="nt">&lt;/activity&gt;</span>
+
+<span class="hll">        <span class="c">&lt;!-- Branch init --&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.BranchKey&quot;</span> <span class="na">android:value=</span><span class="s">&quot;key_live_gdzsepIaUf7wG3dEWb3aBkmcutm0PwJa&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.BranchKey.test&quot;</span> <span class="na">android:value=</span><span class="s">&quot;key_test_edwDakKcMeWzJ3hC3aZs9kniyuaWGCTa&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.TestMode&quot;</span> <span class="na">android:value=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+</span>
+<span class="hll">        <span class="c">&lt;!-- Branch install referrer tracking (optional) --&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;receiver</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.referral.InstallListener&quot;</span> <span class="na">android:exported=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;intent-filter&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;com.android.vending.INSTALL_REFERRER&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;/intent-filter&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;/receiver&gt;</span>
+</span>
+    <span class="nt">&lt;/application&gt;</span>
+
+<span class="nt">&lt;/manifest&gt;</span>
+</pre></div>
+
+</li>
+<li>
+<p>Replace the following with values from your <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></p>
+<ul>
+<li><code>branchandroid</code></li>
+<li><code>uobg.app.link</code></li>
+<li><code>key_live_gdzsepIaUf7wG3dEWb3aBkmcutm0PwJa</code></li>
+<li><code>key_test_edwDakKcMeWzJ3hC3aZs9kniyuaWGCTa</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
 <h4 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Swift 3.0 <code>AppDelegate.swift</code></p>
+<div class="codehilite"><pre><span></span><span class="c1">// Initialize the Branch Session at the top of existing application:didFinishLaunchingWithOptions:</span>
+<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span><span class="p">:</span> <span class="p">[</span><span class="n">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+<span class="hll">    <span class="c1">// Uncomment this line to use the test key instead of the live one.</span>
+</span><span class="hll">    <span class="c1">// RNBranch.useTestInstance()</span>
+</span><span class="hll">    <span class="n">RNBranch</span><span class="p">.</span><span class="n">initSession</span><span class="p">(</span><span class="n">launchOptions</span><span class="p">:</span> <span class="n">launchOptions</span><span class="p">,</span> <span class="n">isReferrable</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span> <span class="c1">// &lt;-- add this</span>
+</span>
+    <span class="c1">//...</span>
+<span class="p">}</span>
+
+<span class="c1">// Add the openURL and continueUserActivity functions</span>
+<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">app</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">open</span> <span class="n">url</span><span class="p">:</span> <span class="n">URL</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="p">[</span><span class="n">UIApplicationOpenURLOptionsKey</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">]</span> <span class="p">=</span> <span class="p">[:])</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+<span class="hll">    <span class="k">return</span> <span class="n">RNBranch</span><span class="p">.</span><span class="n">handleDeepLink</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span><span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="k">continue</span> <span class="n">userActivity</span><span class="p">:</span> <span class="bp">NSUserActivity</span><span class="p">,</span> <span class="n">restorationHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">([</span><span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+<span class="hll">    <span class="k">return</span> <span class="n">RNBranch</span><span class="p">.</span><span class="k">continue</span><span class="p">(</span><span class="n">userActivity</span><span class="p">)</span>
+</span><span class="p">}</span>
+</pre></div>
+
 </li>
 <li>
-<h4 id="test-deep-link">Test deep link<a class="headerlink" href="#test-deep-link" title="Permanent link">&para;</a></h4>
+<p>Objective C <code>AppDelegate.m</code></p>
+<div class="codehilite"><pre><span></span><span class="hll"><span class="cp">#import &lt;react-native-branch/RNBranch.h&gt; </span><span class="c1">// at the top</span>
+</span>
+<span class="c1">// Initialize the Branch Session at the top of existing application:didFinishLaunchingWithOptions:</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">didFinishLaunchingWithOptions:</span><span class="p">(</span><span class="bp">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">launchOptions</span>
+<span class="p">{</span>
+<span class="hll">    <span class="c1">// Uncomment this line to use the test key instead of the live one.</span>
+</span><span class="hll">    <span class="c1">// [RNBranch useTestInstance]</span>
+</span><span class="hll">    <span class="p">[</span><span class="n">RNBranch</span> <span class="nl">initSessionWithLaunchOptions</span><span class="p">:</span><span class="n">launchOptions</span> <span class="nl">isReferrable</span><span class="p">:</span><span class="nb">YES</span><span class="p">];</span> <span class="c1">// &lt;-- add this</span>
+</span>
+    <span class="bp">NSURL</span> <span class="o">*</span><span class="n">jsCodeLocation</span><span class="p">;</span>
+    <span class="c1">//...</span>
+<span class="p">}</span>
+
+<span class="c1">// Add the openURL and continueUserActivity functions</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">openURL:</span><span class="p">(</span><span class="bp">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">options:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">&lt;</span><span class="n">UIApplicationOpenURLOptionsKey</span><span class="p">,</span><span class="kt">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="p">{</span>
+<span class="hll">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">[</span><span class="n">RNBranch</span> <span class="nl">handleDeepLink</span><span class="p">:</span><span class="n">url</span><span class="p">])</span> <span class="p">{</span>
+</span><span class="hll">        <span class="c1">// do other deep link routing for the Facebook SDK, Pinterest SDK, etc</span>
+</span><span class="hll">        <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
+</span><span class="hll">    <span class="p">}</span>
+</span><span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">continueUserActivity:</span><span class="p">(</span><span class="bp">NSUserActivity</span> <span class="o">*</span><span class="p">)</span><span class="nv">userActivity</span> <span class="nf">restorationHandler:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="bp">NSArray</span> <span class="o">*</span><span class="n">restorableObjects</span><span class="p">))</span><span class="nv">restorationHandler</span> <span class="p">{</span>
+<span class="hll">    <span class="k">return</span> <span class="p">[</span><span class="n">RNBranch</span> <span class="nl">continueUserActivity</span><span class="p">:</span><span class="n">userActivity</span><span class="p">];</span>
+</span><span class="p">}</span>
+</pre></div>
+
+</li>
+<li>
+<p>Android</p>
+<ul>
+<li>
+<p><code>MainApplication.java</code></p>
+<div class="codehilite"><pre><span></span><span class="c1">// ...</span>
+
+<span class="hll"><span class="c1">// import Branch and RNBranch</span>
+</span><span class="hll"><span class="kn">import</span> <span class="nn">io.branch.rnbranch.*</span><span class="o">;</span>
+</span><span class="hll"><span class="kn">import</span> <span class="nn">io.branch.referral.Branch</span><span class="o">;</span>
+</span>
+<span class="c1">//...</span>
+
+<span class="c1">// add RNBranchPackage to react-native package list</span>
+<span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">ReactPackage</span><span class="o">&gt;</span> <span class="nf">getPackages</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">Arrays</span><span class="o">.&lt;</span><span class="n">ReactPackage</span><span class="o">&gt;</span><span class="n">asList</span><span class="o">(</span>
+            <span class="k">new</span> <span class="n">MainReactPackage</span><span class="o">(),</span>
+<span class="hll">            <span class="k">new</span> <span class="n">RNBranchPackage</span><span class="o">(),</span> <span class="c1">// &lt;-- add this</span>
+</span>
+<span class="c1">// ...</span>
+
+<span class="c1">// add onCreate() override</span>
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">();</span>
+<span class="hll">  <span class="n">Branch</span><span class="o">.</span><span class="na">getAutoInstance</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+</span><span class="o">}</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="hll"><span class="kn">import</span> <span class="nn">io.branch.rnbranch.*</span><span class="o">;</span> <span class="c1">// &lt;-- add this</span>
+</span><span class="hll"><span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span> <span class="c1">// &lt;-- and this</span>
+</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">ReactActivity</span> <span class="o">{</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="nf">getMainComponentName</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="s">&quot;base&quot;</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Override onStart, onNewIntent:</span>
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onStart</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onStart</span><span class="o">();</span>
+<span class="hll">        <span class="n">RNBranchModule</span><span class="o">.</span><span class="na">initSession</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">getIntent</span><span class="o">().</span><span class="na">getData</span><span class="o">(),</span> <span class="k">this</span><span class="o">);</span>
+</span>    <span class="o">}</span>
+
+<span class="hll">    <span class="nd">@Override</span>
+</span><span class="hll">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onNewIntent</span><span class="o">(</span><span class="n">Intent</span> <span class="n">intent</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="hll">        <span class="k">this</span><span class="o">.</span><span class="na">setIntent</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
+</span><span class="hll">    <span class="o">}</span>
+</span>    <span class="c1">// ...</span>
+<span class="o">}</span>
+</pre></div>
+
+</li>
+<li>
+<p><code>CustomApplicationClass.java</code>
+    <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">android.app.Application</span><span class="o">;</span>
+<span class="hll"><span class="kn">import</span> <span class="nn">io.branch.referral.Branch</span><span class="o">;</span>
+</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomApplicationClass</span> <span class="kd">extends</span> <span class="n">Application</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">();</span>
+
+<span class="hll">        <span class="c1">// Branch logging for debugging</span>
+</span><span class="hll">        <span class="n">Branch</span><span class="o">.</span><span class="na">enableLogging</span><span class="o">();</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="c1">// Branch object initialization</span>
+</span><span class="hll">        <span class="n">Branch</span><span class="o">.</span><span class="na">getAutoInstance</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+</span>    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="test-deep-link-ios">Test deep link iOS<a class="headerlink" href="#test-deep-link-ios" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Create a deep link from the <a href="https://dashboard.branch.io/marketing">Branch Marketing Dashboard</a></p>
+</li>
+<li>
+<p>Delete your app from the device</p>
+</li>
+<li>
+<p>Compile your app <em>(<code>cordova run ios</code> <code>phonegap run ios</code> <code>ionic run ios</code>)</em></p>
+</li>
+<li>
+<p>Paste deep link in <code>Apple Notes</code></p>
+</li>
+<li>
+<p>Long press on the deep link <em>(not 3D Touch)</em></p>
+</li>
+<li>
+<p>Click <code>Open in "APP_NAME"</code> to open your app <em>(<a href="http://i.imgur.com/VJVICXd.png">example</a>)</em></p>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="test-deep-link-android">Test deep link Android<a class="headerlink" href="#test-deep-link-android" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Create a deep link from the <a href="https://dashboard.branch.io/marketing">Branch Marketing Dashboard</a></p>
+</li>
+<li>
+<p>Delete your app from the device</p>
+</li>
+<li>
+<p>Compile your app <em>(<code>cordova run android</code> <code>phonegap run android</code> <code>ionic run android</code>)</em></p>
+</li>
+<li>
+<p>Paste deep link in <code>Google Hangouts</code></p>
+</li>
+<li>
+<p>Click on the deep link to open your app</p>
+</li>
+</ul>
 </li>
 </ul>
 <h2 id="implement-features">Implement features<a class="headerlink" href="#implement-features" title="Permanent link">&para;</a></h2>
