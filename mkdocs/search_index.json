@@ -1616,6 +1616,46 @@
             "title": "Why have the SMS links sent from Text Me The App expired?"
         }, 
         {
+            "location": "/pages/ads/apple/", 
+            "text": "Overview\n\n\nBranch can help track your Apple Search Ad campaigns by fetching the search ad attribution from Apple at app install.  You can then use the parameters you've set in the Apple Search Ad dashboard, parameters such as the campaign name, and take special action in you app after an install, or simply track the effectiveness of a campaign in the Branch dashboard, along with other your other Branch statistics, such as total installs, referrals, and app link statistics.\n\n\n\n\nApple Search Ads\n\n\nApple Search Ads for Developers\n\n\nApple Search Ads WWDC\n\n\n\n\nSetup\n\n\nIn order to check if the user came from an Apple Search Ad, you must make the attribution call before Branch initializes. As a warning, Apple's API is extremely slow often taking more than 1 second round trip. This means that your call to Branch's initSession to the execution of the callback block will be delayed by this additional 1 second.\n\n\nYou must add Apple's iAd.framework to your project to enable Apple Search Ad checking.\n\n\nEnable Apple Search Ads Check\n\n\nTo enable this check, add a \ndelayInitToCheckForSearchAds\n call to your \nAppDelegate.m\n (or \nAppDelegate.swift\n) file after you create the Branch singleton, but \nbefore\n you call \ninitSession\n. Your code will end up looking something like this:\n\n\nBranch\n \n*\nbranch\n \n=\n \n[\nBranch\n \ngetInstance\n];\n\n\n[\nbranch\n \ndelayInitToCheckForSearchAds\n];\n\n\n[\nbranch\n \ninitSession\n.....\n\n\n\n\n\nlet\n \nbranch\n:\n \nBranch\n \n=\n \nBranch\n.\ngetInstance\n()\n\n\nbranch\n.\ndelayInitToCheckForSearchAds\n()\n\n\nbranch\n.\ninitSession\n.....\n\n\n\n\n\nIf you're concerned about the additional 1 second latency, the call to \ndelayInitToCheckForSearchAds\n can be called conditionally at run time. So, if you want to only check on first install, or the like, then just don't call this method.\n\n\nApple Search Ads Debug\n\n\nWe've also added a debug mode which will demonstrate the functionality. You can enable it like so, but just remember to remove this before release!\n\n\nBranch\n \n*\nbranch\n \n=\n \n[\nBranch\n \ngetInstance\n];\n\n\n[\nbranch\n \nsetAppleSearchAdsDebugMode\n];\n\n\n[\nbranch\n \ndelayInitToCheckForSearchAds\n];\n\n\n[\nbranch\n \ninitSession\n.....\n\n\n\n\n\nlet\n \nbranch\n:\n \nBranch\n \n=\n \nBranch\n.\ngetInstance\n()\n\n\nbranch\n.\nsetAppleSearchAdsDebugMode\n()\n\n\nbranch\n.\ndelayInitToCheckForSearchAds\n()\n\n\nbranch\n.\ninitSession\n.....\n\n\n\n\n\nView Attribution on Dashboard\n\n\nAll the attribution can be visible on the \nBranch dashboard summary page\n. All installs and opens registered from this channel will automatically be tagged with the \nchannel\n: \nApple App Store\n and the \nfeature\n: \nSearch Ads\n. The \ncampaign\n will be set to the Campaign Name you've configured in the Apple Search Ads dashboard.\n\n\nNote that these stats are \nlimited to the date range\n at the top of the page. You can expand the range if you'd like.\n\n\nSupport\n\n\nAdding deep linking to Apple Search Ads\n\n\nSince this integration doesn't utilize Branch links, options for deep linking are limited. We'll pass back the value you use for \ncampaign\n in the Apple Ads dashboard. Since this value is controlled by you, you can put anything there, but it will reflect on the Apple ads dashboard. We will track installs regularly.", 
+            "title": "Apple Search Ads"
+        }, 
+        {
+            "location": "/pages/ads/apple/#overview", 
+            "text": "Branch can help track your Apple Search Ad campaigns by fetching the search ad attribution from Apple at app install.  You can then use the parameters you've set in the Apple Search Ad dashboard, parameters such as the campaign name, and take special action in you app after an install, or simply track the effectiveness of a campaign in the Branch dashboard, along with other your other Branch statistics, such as total installs, referrals, and app link statistics.   Apple Search Ads  Apple Search Ads for Developers  Apple Search Ads WWDC", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/pages/ads/apple/#setup", 
+            "text": "In order to check if the user came from an Apple Search Ad, you must make the attribution call before Branch initializes. As a warning, Apple's API is extremely slow often taking more than 1 second round trip. This means that your call to Branch's initSession to the execution of the callback block will be delayed by this additional 1 second.  You must add Apple's iAd.framework to your project to enable Apple Search Ad checking.", 
+            "title": "Setup"
+        }, 
+        {
+            "location": "/pages/ads/apple/#enable-apple-search-ads-check", 
+            "text": "To enable this check, add a  delayInitToCheckForSearchAds  call to your  AppDelegate.m  (or  AppDelegate.swift ) file after you create the Branch singleton, but  before  you call  initSession . Your code will end up looking something like this:  Branch   * branch   =   [ Branch   getInstance ];  [ branch   delayInitToCheckForSearchAds ];  [ branch   initSession .....   let   branch :   Branch   =   Branch . getInstance ()  branch . delayInitToCheckForSearchAds ()  branch . initSession .....   If you're concerned about the additional 1 second latency, the call to  delayInitToCheckForSearchAds  can be called conditionally at run time. So, if you want to only check on first install, or the like, then just don't call this method.", 
+            "title": "Enable Apple Search Ads Check"
+        }, 
+        {
+            "location": "/pages/ads/apple/#apple-search-ads-debug", 
+            "text": "We've also added a debug mode which will demonstrate the functionality. You can enable it like so, but just remember to remove this before release!  Branch   * branch   =   [ Branch   getInstance ];  [ branch   setAppleSearchAdsDebugMode ];  [ branch   delayInitToCheckForSearchAds ];  [ branch   initSession .....   let   branch :   Branch   =   Branch . getInstance ()  branch . setAppleSearchAdsDebugMode ()  branch . delayInitToCheckForSearchAds ()  branch . initSession .....", 
+            "title": "Apple Search Ads Debug"
+        }, 
+        {
+            "location": "/pages/ads/apple/#view-attribution-on-dashboard", 
+            "text": "All the attribution can be visible on the  Branch dashboard summary page . All installs and opens registered from this channel will automatically be tagged with the  channel :  Apple App Store  and the  feature :  Search Ads . The  campaign  will be set to the Campaign Name you've configured in the Apple Search Ads dashboard.  Note that these stats are  limited to the date range  at the top of the page. You can expand the range if you'd like.", 
+            "title": "View Attribution on Dashboard"
+        }, 
+        {
+            "location": "/pages/ads/apple/#support", 
+            "text": "", 
+            "title": "Support"
+        }, 
+        {
+            "location": "/pages/ads/apple/#adding-deep-linking-to-apple-search-ads", 
+            "text": "Since this integration doesn't utilize Branch links, options for deep linking are limited. We'll pass back the value you use for  campaign  in the Apple Ads dashboard. Since this value is controlled by you, you can put anything there, but it will reflect on the Apple ads dashboard. We will track installs regularly.", 
+            "title": "Adding deep linking to Apple Search Ads"
+        }, 
+        {
             "location": "/pages/ads/deep-link-feeds/", 
             "text": "", 
             "title": "Deep Link Feeds"
@@ -1624,6 +1664,61 @@
             "location": "/pages/ads/app-install-ads/", 
             "text": "", 
             "title": "App Install Ads"
+        }, 
+        {
+            "location": "/pages/ads/doubleclick/", 
+            "text": "Overview\n\n\nTrack your Doubleclick campaigns using Branch's Universal Ads product. Branch's Ad Product will enable you to update your Doubleclick Campaign Manager (DCM) campaigns with deep links that send data back to Doubleclick's servers.\n\n\nYou can now run campaigns on a variety of in-app and mobile web publishing sites, and provide your users with the smoothest experience with Branch's deep links. Read on to learn how to set everything up.\n\n\nSetup\n\n\nDoubleclick Campaign Manager Set Up\n\n\nBefore we start anything on the Branch side, we need to configure options on the DCM side. Start by heading to your DCM dashboard, and navigating to the advertisers section.\n\n\nGrab Advertiser ID\n\n\nFirst, we'll need to grab the advertiser ID. Select the advertiser you want to track with, and grab the Advertiser ID. In this example, it is 6637276. This is the advertiser you will track campaigns with. Please keep note of it.\n\n\n\n\nGrab Server to Server Token\n\n\nOnce you've captured the advertiser ID and selected the advertiser, navigate to \nFloodlight Configuration\n. From there, go to \"server to server\", and make sure \"in-app attribution tracking\" is check-marked. Click new token, call it \u201cBranch token\u201d, and save it. Copy this value, as well.\n\n\n\n\nNow that you have \nAdvertiser ID\n and \nServer to Server Token\n, the last step is to find the events you need to track.\n\n\nGrab Tags for Events\n\n\nGo to the \nFloodlight activities\n tab. For all the events you want to track, grab the \nActivity tag String\n and \nGroup tag String\n.\n\n\n\n\nIn the above screenshot, the two values for \nActivity tag String\n are \nact-ios\n and \nact-android\n. The one value for \nGroup tag String\n is \nsales\n. Do this for all activities you want to track.\n\n\nOnce you're done with this exercise, you should have at least 4 unique values:\n\n\n\n\nServer to Server token\n\n\nAdvertiser ID\n\n\nActivity tag String (per event)\n\n\nGroup tag String (per event)\n\n\n\n\nBranch Dashboard Setup\n\n\nLet's take these values and place them in Branch's dashboard. Begin by navigating to the \npartners page\n.\n\n\nEnable\n\n\nFind doubleclick in the search box. Hit enable. In the \nAccount Settings\n tab, insert your \nServer to Server token\n.\n\n\nMap Events\n\n\nAt this point, you have enabled Branch to communicate with Doubleclick. Now we need to map Branch events to \nFloodlight Activities\n found on the Doubleclick dashboard. Click the \nPostback Config\n tab. You should see a URL for the event \nInstall\n. For demonstration purposes, we will assume you have a corresponding Install event on the Doubleclick dashboard, but this applies to any event you add.\n\n\nStart by grabbing your \nAdvertiser ID\n, \nActivity tag String\n, and \nGroup tag String\n.\n\n\nIn the screenshot above, we have two events, \"In App Activations - Android\", and \"In App Activations - iOS\", which correspond to the Branch Install event. For this example, the \nActivity tag Strings\n are \nact-and\n and \nact-ios\n. The \nGroup tag String\n is \nsales\n.\n\n\nCopy the existing URL in Install, and replace the \nsrc\n, \ncat\n, and \ntype\n variables. Your end result should look exactly like this:\n\n\nhttps://ad.doubleclick.net/ddm/s2s/appactivity/src=6637276;cat=\n#if user_data.os==\"IOS\"\nact-ios\n/#if\n#if user_data.os==\"ANDROID\"\nact-and\n/#if\n;type=sales;ord=${ (id)! }\n\n\nIf you don't have two different tags for iOS and Android, then it will look simpler:\n\n\nhttps://ad.doubleclick.net/ddm/s2s/appactivity/src=6637276;cat=act-tag;type=sales;ord=${ (id)! }\n\n\n\n\nSimply update and hit save.\n\n\nRun campaigns\n\n\nAt this point, you can now create a link for the Doubleclick network and send data back. Take your Branch link, and place it as the Click Through URL for your placement.", 
+            "title": "Doubleclick"
+        }, 
+        {
+            "location": "/pages/ads/doubleclick/#overview", 
+            "text": "Track your Doubleclick campaigns using Branch's Universal Ads product. Branch's Ad Product will enable you to update your Doubleclick Campaign Manager (DCM) campaigns with deep links that send data back to Doubleclick's servers.  You can now run campaigns on a variety of in-app and mobile web publishing sites, and provide your users with the smoothest experience with Branch's deep links. Read on to learn how to set everything up.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/pages/ads/doubleclick/#setup", 
+            "text": "", 
+            "title": "Setup"
+        }, 
+        {
+            "location": "/pages/ads/doubleclick/#doubleclick-campaign-manager-set-up", 
+            "text": "Before we start anything on the Branch side, we need to configure options on the DCM side. Start by heading to your DCM dashboard, and navigating to the advertisers section.", 
+            "title": "Doubleclick Campaign Manager Set Up"
+        }, 
+        {
+            "location": "/pages/ads/doubleclick/#grab-advertiser-id", 
+            "text": "First, we'll need to grab the advertiser ID. Select the advertiser you want to track with, and grab the Advertiser ID. In this example, it is 6637276. This is the advertiser you will track campaigns with. Please keep note of it.", 
+            "title": "Grab Advertiser ID"
+        }, 
+        {
+            "location": "/pages/ads/doubleclick/#grab-server-to-server-token", 
+            "text": "Once you've captured the advertiser ID and selected the advertiser, navigate to  Floodlight Configuration . From there, go to \"server to server\", and make sure \"in-app attribution tracking\" is check-marked. Click new token, call it \u201cBranch token\u201d, and save it. Copy this value, as well.   Now that you have  Advertiser ID  and  Server to Server Token , the last step is to find the events you need to track.", 
+            "title": "Grab Server to Server Token"
+        }, 
+        {
+            "location": "/pages/ads/doubleclick/#grab-tags-for-events", 
+            "text": "Go to the  Floodlight activities  tab. For all the events you want to track, grab the  Activity tag String  and  Group tag String .   In the above screenshot, the two values for  Activity tag String  are  act-ios  and  act-android . The one value for  Group tag String  is  sales . Do this for all activities you want to track.  Once you're done with this exercise, you should have at least 4 unique values:   Server to Server token  Advertiser ID  Activity tag String (per event)  Group tag String (per event)", 
+            "title": "Grab Tags for Events"
+        }, 
+        {
+            "location": "/pages/ads/doubleclick/#branch-dashboard-setup", 
+            "text": "Let's take these values and place them in Branch's dashboard. Begin by navigating to the  partners page .", 
+            "title": "Branch Dashboard Setup"
+        }, 
+        {
+            "location": "/pages/ads/doubleclick/#enable", 
+            "text": "Find doubleclick in the search box. Hit enable. In the  Account Settings  tab, insert your  Server to Server token .", 
+            "title": "Enable"
+        }, 
+        {
+            "location": "/pages/ads/doubleclick/#map-events", 
+            "text": "At this point, you have enabled Branch to communicate with Doubleclick. Now we need to map Branch events to  Floodlight Activities  found on the Doubleclick dashboard. Click the  Postback Config  tab. You should see a URL for the event  Install . For demonstration purposes, we will assume you have a corresponding Install event on the Doubleclick dashboard, but this applies to any event you add.  Start by grabbing your  Advertiser ID ,  Activity tag String , and  Group tag String .  In the screenshot above, we have two events, \"In App Activations - Android\", and \"In App Activations - iOS\", which correspond to the Branch Install event. For this example, the  Activity tag Strings  are  act-and  and  act-ios . The  Group tag String  is  sales .  Copy the existing URL in Install, and replace the  src ,  cat , and  type  variables. Your end result should look exactly like this:  https://ad.doubleclick.net/ddm/s2s/appactivity/src=6637276;cat= #if user_data.os==\"IOS\" act-ios /#if #if user_data.os==\"ANDROID\" act-and /#if ;type=sales;ord=${ (id)! }  If you don't have two different tags for iOS and Android, then it will look simpler:  https://ad.doubleclick.net/ddm/s2s/appactivity/src=6637276;cat=act-tag;type=sales;ord=${ (id)! }   Simply update and hit save.", 
+            "title": "Map Events"
+        }, 
+        {
+            "location": "/pages/ads/doubleclick/#run-campaigns", 
+            "text": "At this point, you can now create a link for the Doubleclick network and send data back. Take your Branch link, and place it as the Click Through URL for your placement.", 
+            "title": "Run campaigns"
         }, 
         {
             "location": "/pages/ads/google-app-installs/", 
@@ -1656,14 +1751,49 @@
             "title": "Facebook Instagram"
         }, 
         {
-            "location": "/pages/ads/pinterest-app-installs/", 
-            "text": "", 
-            "title": "Pinterets App Installs"
+            "location": "/pages/ads/twitter/", 
+            "text": "Overview\n\n\nConfiguring Twitter install ads to use Branch links is very simple. The only trick is that you will be using the website click/conversion ads instead of the standard app install ad. Using Branch links allows you to track ad-driven installs on the Branch dashboard and deep link those new users directly to content the first time they open your app.\n\n\nSetup\n\n\nCreate Quick Links\n\n\n\n\nVisit the \nMarketing page\n on the Branch dashboard and click \n+ Add link\n.\n\n\nCreate a link, and fill in values for \ncampaign\n and \nchannel\n. Make sure to add deep link data.\n\n\n\n\nConfigure ad campaign on Twitter\n\n\n\n\nSelect campaign type\n\n\nGo to Twitter and set up a new ad campaign. When selecting the campaign type that you want, select \nWebsite Clicks or Conversions\n.\n\n\nSet the device targeting\n\n\nSet the device targeting as desired.\n\n\nEnter Branch Quick Link\n\n\nOn the ad creation card, enter the Branch Quick Link you created in the \nWebsite URL\n field.\n\n\n\n\nView your data using the Branch dashboard\n\n\nThe \nMarketing page\n on the Branch dashboard shows the performance of each individual link. You can find your link listed in the table with a quick summary of the \ntotal\n clicks and installs.\n\n\n\n\nTo view more details stats, click the \nsmall button that looks like a bar chart\n on the far right. Note that these stats are \nlimited to the date range\n at the top. You can expand the range if you'd like.", 
+            "title": "Twitter Ads"
         }, 
         {
-            "location": "/pages/ads/snapchat-app-installs/", 
+            "location": "/pages/ads/twitter/#overview", 
+            "text": "Configuring Twitter install ads to use Branch links is very simple. The only trick is that you will be using the website click/conversion ads instead of the standard app install ad. Using Branch links allows you to track ad-driven installs on the Branch dashboard and deep link those new users directly to content the first time they open your app.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/pages/ads/twitter/#setup", 
             "text": "", 
-            "title": "Snapchat App Installs"
+            "title": "Setup"
+        }, 
+        {
+            "location": "/pages/ads/twitter/#create-quick-links", 
+            "text": "Visit the  Marketing page  on the Branch dashboard and click  + Add link .  Create a link, and fill in values for  campaign  and  channel . Make sure to add deep link data.", 
+            "title": "Create Quick Links"
+        }, 
+        {
+            "location": "/pages/ads/twitter/#configure-ad-campaign-on-twitter", 
+            "text": "", 
+            "title": "Configure ad campaign on Twitter"
+        }, 
+        {
+            "location": "/pages/ads/twitter/#select-campaign-type", 
+            "text": "Go to Twitter and set up a new ad campaign. When selecting the campaign type that you want, select  Website Clicks or Conversions .", 
+            "title": "Select campaign type"
+        }, 
+        {
+            "location": "/pages/ads/twitter/#set-the-device-targeting", 
+            "text": "Set the device targeting as desired.", 
+            "title": "Set the device targeting"
+        }, 
+        {
+            "location": "/pages/ads/twitter/#enter-branch-quick-link", 
+            "text": "On the ad creation card, enter the Branch Quick Link you created in the  Website URL  field.", 
+            "title": "Enter Branch Quick Link"
+        }, 
+        {
+            "location": "/pages/ads/twitter/#view-your-data-using-the-branch-dashboard", 
+            "text": "The  Marketing page  on the Branch dashboard shows the performance of each individual link. You can find your link listed in the table with a quick summary of the  total  clicks and installs.   To view more details stats, click the  small button that looks like a bar chart  on the far right. Note that these stats are  limited to the date range  at the top. You can expand the range if you'd like.", 
+            "title": "View your data using the Branch dashboard"
         }, 
         {
             "location": "/pages/organic-search/firebase/", 

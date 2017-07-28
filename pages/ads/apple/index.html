@@ -10,7 +10,7 @@
         <meta name="description" content="Branch Documentation for Deep Linking">
       
       
-        <link rel="canonical" href="https://branchmetrics.github.io/docs/pages/integrations/localytics/">
+        <link rel="canonical" href="https://branchmetrics.github.io/docs/pages/ads/apple/">
       
       
         <meta name="author" content="Branch">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Localytics - Branch Documentation</title>
+        <title>Apple Search Ads - Branch Documentation</title>
       
     
     
@@ -95,11 +95,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Integrate analytics
+                  Convert ads to app
                 </span>
               
             
-            Localytics
+            Apple Search Ads
           
         </span>
       </div>
@@ -524,10 +524,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Convert ads to app
@@ -543,11 +545,103 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../ads/apple/" title="Apple Search Ads" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Apple Search Ads
+      </label>
+    
+    <a href="./" title="Apple Search Ads" class="md-nav__link md-nav__link--active">
       Apple Search Ads
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-apple-search-ads-check" title="Enable Apple Search Ads Check" class="md-nav__link">
+    Enable Apple Search Ads Check
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apple-search-ads-debug" title="Apple Search Ads Debug" class="md-nav__link">
+    Apple Search Ads Debug
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-attribution-on-dashboard" title="View Attribution on Dashboard" class="md-nav__link">
+    View Attribution on Dashboard
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" title="Support" class="md-nav__link">
+    Support
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-deep-linking-to-apple-search-ads" title="Adding deep linking to Apple Search Ads" class="md-nav__link">
+    Adding deep linking to Apple Search Ads
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -557,7 +651,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ads/deep-link-feeds/" title="Deep Link Feeds" class="md-nav__link">
+    <a href="../deep-link-feeds/" title="Deep Link Feeds" class="md-nav__link">
       Deep Link Feeds
     </a>
   </li>
@@ -569,7 +663,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ads/app-install-ads/" title="App Install Ads" class="md-nav__link">
+    <a href="../app-install-ads/" title="App Install Ads" class="md-nav__link">
       App Install Ads
     </a>
   </li>
@@ -581,7 +675,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ads/doubleclick/" title="Doubleclick" class="md-nav__link">
+    <a href="../doubleclick/" title="Doubleclick" class="md-nav__link">
       Doubleclick
     </a>
   </li>
@@ -593,7 +687,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ads/google-app-installs/" title="Google App Installs" class="md-nav__link">
+    <a href="../google-app-installs/" title="Google App Installs" class="md-nav__link">
       Google App Installs
     </a>
   </li>
@@ -605,7 +699,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ads/google-universal-app-campaigns/" title="Google Universal App Campaigns" class="md-nav__link">
+    <a href="../google-universal-app-campaigns/" title="Google Universal App Campaigns" class="md-nav__link">
       Google Universal App Campaigns
     </a>
   </li>
@@ -617,7 +711,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ads/google-search/" title="Google Search Ads" class="md-nav__link">
+    <a href="../google-search/" title="Google Search Ads" class="md-nav__link">
       Google Search Ads
     </a>
   </li>
@@ -629,7 +723,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ads/facebook-app-installs/" title="Facebook App Installs" class="md-nav__link">
+    <a href="../facebook-app-installs/" title="Facebook App Installs" class="md-nav__link">
       Facebook App Installs
     </a>
   </li>
@@ -641,7 +735,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ads/facebook-app-engagement/" title="Facebook App Engagement" class="md-nav__link">
+    <a href="../facebook-app-engagement/" title="Facebook App Engagement" class="md-nav__link">
       Facebook App Engagement
     </a>
   </li>
@@ -653,7 +747,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ads/facebook-instagram/" title="Facebook Instagram" class="md-nav__link">
+    <a href="../facebook-instagram/" title="Facebook Instagram" class="md-nav__link">
       Facebook Instagram
     </a>
   </li>
@@ -665,7 +759,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ads/twitter/" title="Twitter Ads" class="md-nav__link">
+    <a href="../twitter/" title="Twitter Ads" class="md-nav__link">
       Twitter Ads
     </a>
   </li>
@@ -1028,12 +1122,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
     <label class="md-nav__link" for="nav-11">
       Integrate analytics
@@ -1051,7 +1143,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../abobe-analytics/" title="Abobe Analytics" class="md-nav__link">
+    <a href="../../integrations/abobe-analytics/" title="Abobe Analytics" class="md-nav__link">
       Abobe Analytics
     </a>
   </li>
@@ -1063,7 +1155,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../adjust/" title="Adjust" class="md-nav__link">
+    <a href="../../integrations/adjust/" title="Adjust" class="md-nav__link">
       Adjust
     </a>
   </li>
@@ -1075,7 +1167,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../amplitude/" title="Amplitude" class="md-nav__link">
+    <a href="../../integrations/amplitude/" title="Amplitude" class="md-nav__link">
       Amplitude
     </a>
   </li>
@@ -1087,7 +1179,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../appboy/" title="AppBoy" class="md-nav__link">
+    <a href="../../integrations/appboy/" title="AppBoy" class="md-nav__link">
       AppBoy
     </a>
   </li>
@@ -1099,7 +1191,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../google-analytics/" title="Google Analytics" class="md-nav__link">
+    <a href="../../integrations/google-analytics/" title="Google Analytics" class="md-nav__link">
       Google Analytics
     </a>
   </li>
@@ -1111,7 +1203,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../kochava/" title="Kochava" class="md-nav__link">
+    <a href="../../integrations/kochava/" title="Kochava" class="md-nav__link">
       Kochava
     </a>
   </li>
@@ -1121,18 +1213,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-    <a href="./" title="Localytics" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../integrations/localytics/" title="Localytics" class="md-nav__link">
       Localytics
     </a>
-    
   </li>
 
         
@@ -1142,7 +1227,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../mixpanel/" title="Mixpanel" class="md-nav__link">
+    <a href="../../integrations/mixpanel/" title="Mixpanel" class="md-nav__link">
       Mixpanel
     </a>
   </li>
@@ -1154,7 +1239,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../tune/" title="Tune" class="md-nav__link">
+    <a href="../../integrations/tune/" title="Tune" class="md-nav__link">
       Tune
     </a>
   </li>
@@ -1166,7 +1251,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../appmetrica/" title="AppMetrica" class="md-nav__link">
+    <a href="../../integrations/appmetrica/" title="AppMetrica" class="md-nav__link">
       AppMetrica
     </a>
   </li>
@@ -1192,6 +1277,80 @@
   
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-apple-search-ads-check" title="Enable Apple Search Ads Check" class="md-nav__link">
+    Enable Apple Search Ads Check
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apple-search-ads-debug" title="Apple Search Ads Debug" class="md-nav__link">
+    Apple Search Ads Debug
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-attribution-on-dashboard" title="View Attribution on Dashboard" class="md-nav__link">
+    View Attribution on Dashboard
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" title="Support" class="md-nav__link">
+    Support
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-deep-linking-to-apple-search-ads" title="Adding deep linking to Apple Search Ads" class="md-nav__link">
+    Adding deep linking to Apple Search Ads
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1202,12 +1361,54 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/integrations/localytics.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/ads/apple.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Localytics</h1>
+                  <h1>Apple Search Ads</h1>
                 
-                
+                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Branch can help track your Apple Search Ad campaigns by fetching the search ad attribution from Apple at app install.  You can then use the parameters you've set in the Apple Search Ad dashboard, parameters such as the campaign name, and take special action in you app after an install, or simply track the effectiveness of a campaign in the Branch dashboard, along with other your other Branch statistics, such as total installs, referrals, and app link statistics.</p>
+<ul>
+<li><a href="https://searchads.apple.com/">Apple Search Ads</a></li>
+<li><a href="https://developer.apple.com/app-store/search-ads/">Apple Search Ads for Developers</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2016/302/">Apple Search Ads WWDC</a></li>
+</ul>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<p>In order to check if the user came from an Apple Search Ad, you must make the attribution call before Branch initializes. As a warning, Apple's API is extremely slow often taking more than 1 second round trip. This means that your call to Branch's initSession to the execution of the callback block will be delayed by this additional 1 second.</p>
+<p>You must add Apple's iAd.framework to your project to enable Apple Search Ad checking.</p>
+<h3 id="enable-apple-search-ads-check">Enable Apple Search Ads Check<a class="headerlink" href="#enable-apple-search-ads-check" title="Permanent link">&para;</a></h3>
+<p>To enable this check, add a <code>delayInitToCheckForSearchAds</code> call to your <strong>AppDelegate.m</strong> (or <strong>AppDelegate.swift</strong>) file after you create the Branch singleton, but <em>before</em> you call <code>initSession</code>. Your code will end up looking something like this:</p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span> <span class="o">*</span><span class="n">branch</span> <span class="o">=</span> <span class="p">[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">];</span>
+<span class="p">[</span><span class="n">branch</span> <span class="n">delayInitToCheckForSearchAds</span><span class="p">];</span>
+<span class="p">[</span><span class="n">branch</span> <span class="n">initSession</span><span class="p">.....</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">branch</span><span class="p">:</span> <span class="n">Branch</span> <span class="p">=</span> <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">()</span>
+<span class="n">branch</span><span class="p">.</span><span class="n">delayInitToCheckForSearchAds</span><span class="p">()</span>
+<span class="n">branch</span><span class="p">.</span><span class="n">initSession</span><span class="p">.....</span>
+</pre></div>
+
+<p>If you're concerned about the additional 1 second latency, the call to <code>delayInitToCheckForSearchAds</code> can be called conditionally at run time. So, if you want to only check on first install, or the like, then just don't call this method.</p>
+<h3 id="apple-search-ads-debug">Apple Search Ads Debug<a class="headerlink" href="#apple-search-ads-debug" title="Permanent link">&para;</a></h3>
+<p>We've also added a debug mode which will demonstrate the functionality. You can enable it like so, but just remember to remove this before release!</p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span> <span class="o">*</span><span class="n">branch</span> <span class="o">=</span> <span class="p">[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">];</span>
+<span class="p">[</span><span class="n">branch</span> <span class="n">setAppleSearchAdsDebugMode</span><span class="p">];</span>
+<span class="p">[</span><span class="n">branch</span> <span class="n">delayInitToCheckForSearchAds</span><span class="p">];</span>
+<span class="p">[</span><span class="n">branch</span> <span class="n">initSession</span><span class="p">.....</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">branch</span><span class="p">:</span> <span class="n">Branch</span> <span class="p">=</span> <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">()</span>
+<span class="n">branch</span><span class="p">.</span><span class="n">setAppleSearchAdsDebugMode</span><span class="p">()</span>
+<span class="n">branch</span><span class="p">.</span><span class="n">delayInitToCheckForSearchAds</span><span class="p">()</span>
+<span class="n">branch</span><span class="p">.</span><span class="n">initSession</span><span class="p">.....</span>
+</pre></div>
+
+<h3 id="view-attribution-on-dashboard">View Attribution on Dashboard<a class="headerlink" href="#view-attribution-on-dashboard" title="Permanent link">&para;</a></h3>
+<p>All the attribution can be visible on the <a href="https://dashboard.branch.io/">Branch dashboard summary page</a>. All installs and opens registered from this channel will automatically be tagged with the <code>channel</code>: <code>Apple App Store</code> and the <code>feature</code>: <code>Search Ads</code>. The <code>campaign</code> will be set to the Campaign Name you've configured in the Apple Search Ads dashboard.</p>
+<p>Note that these stats are <strong>limited to the date range</strong> at the top of the page. You can expand the range if you'd like.</p>
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<h3 id="adding-deep-linking-to-apple-search-ads">Adding deep linking to Apple Search Ads<a class="headerlink" href="#adding-deep-linking-to-apple-search-ads" title="Permanent link">&para;</a></h3>
+<p>Since this integration doesn't utilize Branch links, options for deep linking are limited. We'll pass back the value you use for <code>campaign</code> in the Apple Ads dashboard. Since this value is controlled by you, you can put anything there, but it will reflect on the Apple ads dashboard. We will track installs regularly.</p>
                 
                   
                 
@@ -1218,9 +1419,9 @@
                   <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    this.page.url = "https://branchmetrics.github.io/docs/pages/integrations/localytics/";
+    this.page.url = "https://branchmetrics.github.io/docs/pages/ads/apple/";
     this.page.identifier =
-      "/pages/integrations/localytics/";
+      "/pages/ads/apple/";
   };
   (function() {
     var d = document, s = d.createElement("script");
@@ -1282,7 +1483,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../kochava/" title="Kochava" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../web/text-me-the-app/" title="Text Me The App" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1291,19 +1492,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Kochava
+                Text Me The App
               </span>
             </div>
           </a>
         
         
-          <a href="../mixpanel/" title="Mixpanel" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../deep-link-feeds/" title="Deep Link Feeds" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Mixpanel
+                Deep Link Feeds
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
