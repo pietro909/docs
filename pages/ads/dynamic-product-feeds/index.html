@@ -10,7 +10,7 @@
         <meta name="description" content="Branch Documentation for Deep Linking">
       
       
-        <link rel="canonical" href="https://branchmetrics.github.io/docs/pages/ads/deep-link-feeds/">
+        <link rel="canonical" href="https://branchmetrics.github.io/docs/pages/ads/dynamic-product-feeds/">
       
       
         <meta name="author" content="Branch">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Deep Link Feeds - Branch Documentation</title>
+        <title>Dynamic Product Feeds - Branch Documentation</title>
       
     
     
@@ -99,7 +99,7 @@
                 </span>
               
             
-            Deep Link Feeds
+            Dynamic Product Feeds
           
         </span>
       </div>
@@ -565,9 +565,198 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
-    <a href="./" title="Deep Link Feeds" class="md-nav__link md-nav__link--active">
-      Deep Link Feeds
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Dynamic Product Feeds
+      </label>
+    
+    <a href="./" title="Dynamic Product Feeds" class="md-nav__link md-nav__link--active">
+      Dynamic Product Feeds
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites" title="Pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-your-feed-source" title="Prepare your Feed Source" class="md-nav__link">
+    Prepare your Feed Source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-a-feed-source" title="Upload a Feed Source" class="md-nav__link">
+    Upload a Feed Source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-deep-linked-feed" title="Create a New Deep Linked Feed" class="md-nav__link">
+    Create a New Deep Linked Feed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-linked-feed-creation-flow" title="Deep Linked Feed Creation Flow" class="md-nav__link">
+    Deep Linked Feed Creation Flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-your-deep-linked-feed" title="Getting your Deep Linked Feed" class="md-nav__link">
+    Getting your Deep Linked Feed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedule-refresh" title="Schedule refresh" class="md-nav__link">
+    Schedule refresh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-csv" title="Download CSV" class="md-nav__link">
+    Download CSV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-your-deep-linked-feed" title="Use your Deep Linked Feed" class="md-nav__link">
+    Use your Deep Linked Feed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-ad-performance" title="Understand Ad Performance" class="md-nav__link">
+    Understand Ad Performance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" title="Advanced" class="md-nav__link">
+    Advanced
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-additional-link-data-in-your-feed-source" title="Add additional link data in your Feed Source" class="md-nav__link">
+    Add additional link data in your Feed Source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-segmentation-with-data-integrations" title="Advanced segmentation with Data Integrations" class="md-nav__link">
+    Advanced segmentation with Data Integrations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" title="Support" class="md-nav__link">
+    Support
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-branch-create-a-deep-linked-feed" title="How does Branch create a Deep Linked Feed?" class="md-nav__link">
+    How does Branch create a Deep Linked Feed?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#links-dont-open-the-app" title="Links don't open the app" class="md-nav__link">
+    Links don't open the app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-links-arent-working" title="Deep links aren't working" class="md-nav__link">
+    Deep links aren't working
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feed-source-wont-upload" title="Feed Source won't upload" class="md-nav__link">
+    Feed Source won't upload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report-issues" title="Report issues" class="md-nav__link">
+    Report issues
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1192,6 +1381,184 @@
   
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites" title="Pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-your-feed-source" title="Prepare your Feed Source" class="md-nav__link">
+    Prepare your Feed Source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-a-feed-source" title="Upload a Feed Source" class="md-nav__link">
+    Upload a Feed Source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-deep-linked-feed" title="Create a New Deep Linked Feed" class="md-nav__link">
+    Create a New Deep Linked Feed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-linked-feed-creation-flow" title="Deep Linked Feed Creation Flow" class="md-nav__link">
+    Deep Linked Feed Creation Flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-your-deep-linked-feed" title="Getting your Deep Linked Feed" class="md-nav__link">
+    Getting your Deep Linked Feed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedule-refresh" title="Schedule refresh" class="md-nav__link">
+    Schedule refresh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-csv" title="Download CSV" class="md-nav__link">
+    Download CSV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-your-deep-linked-feed" title="Use your Deep Linked Feed" class="md-nav__link">
+    Use your Deep Linked Feed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-ad-performance" title="Understand Ad Performance" class="md-nav__link">
+    Understand Ad Performance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" title="Advanced" class="md-nav__link">
+    Advanced
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-additional-link-data-in-your-feed-source" title="Add additional link data in your Feed Source" class="md-nav__link">
+    Add additional link data in your Feed Source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-segmentation-with-data-integrations" title="Advanced segmentation with Data Integrations" class="md-nav__link">
+    Advanced segmentation with Data Integrations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" title="Support" class="md-nav__link">
+    Support
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-branch-create-a-deep-linked-feed" title="How does Branch create a Deep Linked Feed?" class="md-nav__link">
+    How does Branch create a Deep Linked Feed?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#links-dont-open-the-app" title="Links don't open the app" class="md-nav__link">
+    Links don't open the app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-links-arent-working" title="Deep links aren't working" class="md-nav__link">
+    Deep links aren't working
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feed-source-wont-upload" title="Feed Source won't upload" class="md-nav__link">
+    Feed Source won't upload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report-issues" title="Report issues" class="md-nav__link">
+    Report issues
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1202,12 +1569,167 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/ads/deep-link-feeds.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/ads/dynamic-product-feeds.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Deep Link Feeds</h1>
+                  <h1>Dynamic Product Feeds</h1>
                 
-                
+                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Branch is your preferred linking infrastructure for mobile. With Deep Linked Feeds for Dynamic Ads, advertisers can easily create mobile-optimized links at scale for dynamic ad campaigns. By taking users to the most relevant content on the most relevant platform (web or app) advertisers can maximize revenue and engagement opportunities on mobile.</p>
+<p>Deep Linked Feeds takes an existing product feed and adds correct deep links for each piece of content.</p>
+<p>Take advantage of our visual interface for uploading and managing feeds, or set up a more automated integration between you, Branch and your ad network of choice.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This product is a part of Branch Universal Ads.</p>
+</div>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<h3 id="pre-requisites">Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h3>
+<ul>
+<li>To use Deep Linked Feeds you must integrate the Branch SDK.</li>
+<li>To use your Deep Linked Feed on Facebook, make sure you've configured and enabled Facebook as an advertising partner on the <a href="https://dashboard.branch.io/ads/partner-management/">Branch</a> dashboard.</li>
+</ul>
+<h3 id="prepare-your-feed-source">Prepare your Feed Source<a class="headerlink" href="#prepare-your-feed-source" title="Permanent link">&para;</a></h3>
+<p>To create a deep linked feed, upload a content or product feed. In Branch terminology, this is called a <strong>Feed Source</strong>.</p>
+<p>When you need to create a <strong>Deep Linked Feed</strong> you'll go through a creation flow that will ask you to select a Feed Source for modification.</p>
+<p>You'll be asked to enter some attribution tags and optionally configure linking. After you've done this, Branch will prepare a Deep Linked Feed, adding any missing columns that are needed, or editing existing columns to use the correct links for deep linking. More specifics on the transformation process can be found in our Advanced section.</p>
+<p>A couple of things to note:</p>
+<ul>
+<li>Be sure that your Feed Source has a <code>link</code> column with each product's web URL. This is the minimum requirement for Branch to create deep links (although it will likely not be sufficient to be accepted by Facebook or partners.)</li>
+<li>We recommend <a href="../../../getting-started/hosted-deep-link-data/guide/">hosting deep link data</a> on your website for each web URL in your feed. We won't use it to modify your feed, but when your link is clicked from an ad, we'll get the link data from your website and return it to your app.</li>
+</ul>
+<p>If you choose this option, go to your <a href="https://dashboard.branch.io/link-settings">Link Settings</a> &gt; Advanced Settings and check <strong>Enable Link Scraping</strong>. This option is only available once you've enabled the Deep Linked Feeds product for your account (you can enable the product by creating and downloading a Deep Linked Feed).</p>
+<p><img alt="image" src="../../../img/pages/ads/dynamic-product-ads/enable-link-scraping.png" /></p>
+<ul>
+<li>If you can't host your link data, add the necessary link data as a column in the Feed Source.</li>
+<li>Want to get creative with your Feed Sources? Check out our <a href="../../../pages/ads/dynamic-product-ads/advanced">Advanced section</a> for some power user tips.</li>
+<li>Branch accepts feed sources that are compatible with Facebook’s format. If you’re not sure about the compatibility of your feed, please use <a href="https://business.facebook.com/ads/product_feed/debug">Facebook’s Product Feed Debug Tool</a> to test and debug it.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Example Feed Source</p>
+<p>Facebook has example CSVs that Branch accepts as Feed Sources on the <a href="https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/product-catalog">Facebook Developer Portal</a>. Scroll down to "Supported Formats" to find the feed examples.</p>
+</div>
+<h3 id="upload-a-feed-source">Upload a Feed Source<a class="headerlink" href="#upload-a-feed-source" title="Permanent link">&para;</a></h3>
+<p>Go directly to <a href="https://dashboard.branch.io/ads/analytics?modal=ad-link">Ads section</a> in the Branch dashboard to get started.</p>
+<ol>
+<li>Click on the "Create Product Link" tab.</li>
+<li>Click the <strong>Feed Sources</strong> button. <img alt="image" src="../../../img/pages/ads/dynamic-product-ads/add-new-feed-source.png" /></li>
+<li>Name your Feed Source. You can supply a URL (recommended) or upload a file. <img alt="image" src="../../../img/pages/ads/dynamic-product-ads/name-and-upload-feed-source.png" /></li>
+</ol>
+<p>You can see all of the <strong>Feed Sources</strong> you've uploaded by going to the <a href="http://dashboard.branch.io/ads/feedsources">Feed Sources</a> tab.</p>
+<h3 id="create-a-new-deep-linked-feed">Create a New Deep Linked Feed<a class="headerlink" href="#create-a-new-deep-linked-feed" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click the <strong>Add Deep Linked Feed</strong> button from either tab. <img alt="image" src="../../../img/pages/ads/dynamic-product-ads/add-deep-linked-feed.png" /></li>
+</ol>
+<h3 id="deep-linked-feed-creation-flow">Deep Linked Feed Creation Flow<a class="headerlink" href="#deep-linked-feed-creation-flow" title="Permanent link">&para;</a></h3>
+<ol>
+<li>In "Deep Linked Feed Information" you'll name your Deep Linked Feed for reference, and specify which Feed Source you'd like to turn into a Deep Linked Feed. You'll also input the Ad Platform on which you'd like to run your campaigns. This information will be used to modify the feed and insert well-structured Branch attribution data into the links.
+<img alt="image" src="../../../img/pages/ads/dynamic-product-ads/dlf-step-1.png" /></li>
+<li>In "Create Deep Links" you'll be presented with two optional elements. The first is a list of column names from your feed source. To add deep link data to each link, select the column that contains the relevant data.</li>
+</ol>
+<p>Let's say you have a column in your product feed titled <code>id</code>. That column contains the product id for each piece of content in your Feed Source file, and your app needs that id to deep link correctly. To create deep links with that id for each product, select the column by checking the box on the left hand side. If you'd like to change the name of the key (for example, from <code>id</code> to <code>product_id</code>) you can write the new name for the key in the text box on the right hand side. This will add the correct <code>product_id</code> to each link for every single product in your feed (e.g. the first item will have <code>"product_id":1392</code>, the second item will have <code>"product_id":5284</code>).</p>
+<p><img alt="image" src="../../../img/pages/ads/dynamic-product-ads/customize-columns.png" /></p>
+<h3 id="getting-your-deep-linked-feed">Getting your Deep Linked Feed<a class="headerlink" href="#getting-your-deep-linked-feed" title="Permanent link">&para;</a></h3>
+<p>Finally, in "Get Deep Linked Feed" you can choose to get a URL that will host your Deep Linked Feed or download a file with your Deep Linked Feed.</p>
+<p>Once you get to the final step, you will see "Your links are being created..." Feel free to navigate away if you have a large feed source. Once this process has completed, you will receive a dashboard notification and an email with a link to your finished Deep Linked Feed.</p>
+<p><img alt="image" src="../../../img/pages/ads/dynamic-product-ads/generating-dlf.png" /></p>
+<p><img alt="image" src="../../../img/pages/ads/dynamic-product-ads/getting-dlf.png" /></p>
+<h3 id="schedule-refresh">Schedule refresh<a class="headerlink" href="#schedule-refresh" title="Permanent link">&para;</a></h3>
+<p>If you used a Feed Source hosted on a URL (recommended), you will see two options for accessing your feed. We recommend selecting "Schedule Refresh." If you select this option, Branch will host a URL for your Deep Linked Feed that will update itself from your Feed Source URL at regular intervals. You can then provide the Deep Linked Feed URL to your partners, and Branch will keep the content up to date.</p>
+<p><img alt="image" src="../../../img/pages/ads/dynamic-product-ads/hosted-dlf.png" /></p>
+<p>You can see all of the <strong>Deep Linked Feeds</strong> you've created by going to the <a href="http://dashboard.branch.io/ads/deeplinkedfeeds">Deep Linked Feeds</a> tab.</p>
+<h3 id="download-csv">Download CSV<a class="headerlink" href="#download-csv" title="Permanent link">&para;</a></h3>
+<p>Click "Download CSV" if you just need a one-time file with your Deep Linked Feed.</p>
+<p>You can see all of the <strong>Deep Linked Feeds</strong> you've created by going to the <a href="http://dashboard.branch.io/ads/deeplinkedfeeds">Deep Linked Feeds</a> tab.</p>
+<h3 id="use-your-deep-linked-feed">Use your Deep Linked Feed<a class="headerlink" href="#use-your-deep-linked-feed" title="Permanent link">&para;</a></h3>
+<p>After you've downloaded your feed, it's time to use it!</p>
+<div class="admonition tip">
+<p class="admonition-title">Facebook Dynamic Ads</p>
+<p>Launch a <a href="../../../ads/facebook-dynamic-ads/guide/">Facebook Dynamic Ad Campaign</a> to drive engagement or installs with your Deep Linked Feed!</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Ad Network Integrations</p>
+<p>Branch Deep Linked Feeds are accepted by top remarketing companies like <a href="../../../ads/criteo-dynamic-ads/guide/">Criteo</a>, Remerge and AppNexus. Ask your Account Manager about launching your campaign with Branch deep links.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Drive Installs With Your Content</p>
+<p>Use <a href="https://dashboard.branch.io/analytics/content">Content Analytics</a> to see which products are driving results, then use Deep Linked Feeds to create the links you need at scale with every type of ad.</p>
+</div>
+<h3 id="understand-ad-performance">Understand Ad Performance<a class="headerlink" href="#understand-ad-performance" title="Permanent link">&para;</a></h3>
+<p>Your Deep Linked Feed provides a bevy of important insights for you to optimize your campaigns and your content.</p>
+<table>
+<thead>
+<tr>
+<th>Deep Linked Feed Field</th>
+<th>Branch Analytics Tag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature</td>
+<td>Paid Ads</td>
+</tr>
+<tr>
+<td>Campaign</td>
+<td>Campaign</td>
+</tr>
+<tr>
+<td>Ad Platform</td>
+<td>Channel</td>
+</tr>
+<tr>
+<td>Ad Type</td>
+<td>Tag</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Visit <a href="https://dashboard.branch.io/analytics/content">Content Analytics</a> to see which products are driving clicks, opens, installs and conversions</li>
+<li>Check out <a href="https://dashboard.branch.io/analytics/source">Source Analytics</a> to simply understand which Ad Channels are most impactful for you.</li>
+<li>Set up a <a href="https://branch.io/data-integrations">Data Integration</a> to send your Dynamic Ads data to another attribution or analytics dashboard.</li>
+</ul>
+<h2 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h2>
+<h3 id="add-additional-link-data-in-your-feed-source">Add additional link data in your Feed Source<a class="headerlink" href="#add-additional-link-data-in-your-feed-source" title="Permanent link">&para;</a></h3>
+<p>You can add additional data to each link by adding a column to your Feed Source called <code>branch_query_params</code>. This column accepts parameters in the web query parameter format <code>key1=value1&amp;key2=value2</code>.</p>
+<h3 id="advanced-segmentation-with-data-integrations">Advanced segmentation with Data Integrations<a class="headerlink" href="#advanced-segmentation-with-data-integrations" title="Permanent link">&para;</a></h3>
+<p>The attribution Data Integrations (Tune, Kochava, AppsFlyer, Localytics and Adjust) support additional network segmentation with additional measurement parameters that can be appended to HTTP deep links.</p>
+<p>To get started, please visit the <em>Advanced</em> documentation for your Data Integration for instructions on how to generate and construct the correct query parameters for your campaign and ad network.</p>
+<p>This field accepts parameters in the web query parameter format <code>key1=value1&amp;key2=value2</code> so do not include <code>?</code> at the beginning of the entry.</p>
+<p>Once you've created the right parameters, add them in the <code>Advanced: Add Measurement Parameters</code> text field in Step 2. Your parameters will be added to every HTTP Branch link in the <code>link</code> column.</p>
+<p><img alt="image" src="../../../img/pages/ads/dynamic-product-ads/add-measurement-parameters.png" /></p>
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<h3 id="how-does-branch-create-a-deep-linked-feed">How does Branch create a Deep Linked Feed?<a class="headerlink" href="#how-does-branch-create-a-deep-linked-feed" title="Permanent link">&para;</a></h3>
+<p>When we create a Deep Linked Feed, we take your Feed Source, your Link Settings, and any input you provide to generate a working feed.</p>
+<p>We look for the presence of the following columns, and for each one we either modify the existing column, or add a new one with the relevant information:
+- link (by default, we use a Branch link with a web fallback)
+- ios_url
+- ios_app_name
+- ios_app_store_id
+- android_url
+- android_app_name
+- android_package</p>
+<h3 id="links-dont-open-the-app">Links don't open the app<a class="headerlink" href="#links-dont-open-the-app" title="Permanent link">&para;</a></h3>
+<ul>
+<li>First, understand what the <a href="../../../getting-started/link-behavior/guide/">intended behavior</a> of your link should be.</li>
+<li>Links created by the Deep Linked Feeds tool currently fall back to the Web URL you originally specified in the <code>link</code> column by default. You can override this behavior by including a column called <code>branch_query_params</code> and including <code>$fallback_method=app_wide</code> as the value for every row. This will make each link fall back to the platform fallback you have specified in your <a href="https://dashboard.branch.io/settings/link">Link Settings</a>, which is usually the App Store.</li>
+<li>Facebook requires certain <a href="https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/mobile-app-events#deeplinksetup">"applink treatment"</a> values to be present to change fallback behavior. We're working on adding these to our interface, but for the moment, include them in your feed source.</li>
+</ul>
+<h3 id="deep-links-arent-working">Deep links aren't working<a class="headerlink" href="#deep-links-arent-working" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ensure you've included your deep link data. Branch will scrape any <a href="../../../getting-started/hosted-deep-link-data/guide/">Hosted Deep Link Data</a> corresponding to the Web URL in your Feed Source's <code>link</code> column for every link. Alternatively, you can include deep link data as a column in your Feed Source and then select the relevant data in Step 2 of Deep Linked creation.</li>
+<li>To see which data is getting through to your app, click the link and then view the link click in <a href="https://dashboard.branch.io/liveview/link_clicks">Live View</a> to see the data going through to your app.</li>
+<li>If you don't know what deep link data you need to include, ask a technical teammate to show you which data is included in a working Branch link.</li>
+</ul>
+<h3 id="feed-source-wont-upload">Feed Source won't upload<a class="headerlink" href="#feed-source-wont-upload" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Branch accepts Feed Sources that are compatible with Facebook’s <a href="https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/product-catalog">feed format</a>. Please use <a href="https://business.facebook.com/ads/product_feed/debug">Facebook’s Product Feed Debug Tool</a> to test and debug your Product Feed format.</li>
+<li>Please ensure you have a column titled <code>link</code> in your Feed Source</li>
+<li>The largest file size accepted by the tool is 50MB. Please contact <a href="mailto:integrations@branch.io"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#116;&#101;&#103;&#114;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;">&#105;&#110;&#116;&#101;&#103;&#114;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;</a></a> if you need to upload a larger file.</li>
+</ul>
+<h3 id="report-issues">Report issues<a class="headerlink" href="#report-issues" title="Permanent link">&para;</a></h3>
+<ul>
+<li>For Facebook data discrepancies, please see our <a href="../../../ads/facebook-ads/support/">Facebook Advertising troubleshooting documentation</a>.</li>
+</ul>
+<p>If you run into any issues, or have questions, please contact <a href="mailto:integrations@branch.io"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#116;&#101;&#103;&#114;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;">&#105;&#110;&#116;&#101;&#103;&#114;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;</a></a>.</p>
                 
                   
                 
@@ -1218,9 +1740,9 @@
                   <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    this.page.url = "https://branchmetrics.github.io/docs/pages/ads/deep-link-feeds/";
+    this.page.url = "https://branchmetrics.github.io/docs/pages/ads/dynamic-product-feeds/";
     this.page.identifier =
-      "/pages/ads/deep-link-feeds/";
+      "/pages/ads/dynamic-product-feeds/";
   };
   (function() {
     var d = document, s = d.createElement("script");
