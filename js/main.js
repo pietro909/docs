@@ -172,9 +172,10 @@
       return 'mailto:integration@branch.io?subject=I need some assistance&body=Hello Branch,%0A%0AI am viewing (' + window.location.href + ').%0A%0AMy Branch Key (https%3A%2F%2Fdashboard.branch.io%2Faccount-settings%2Fapp) is:%0A%0A I need assistance with '
     }
     function _getImproveUrl() {
-      var trim = window.location.pathname.slice(0, -1);
-      var path = (trim === '') ? '/index' : trim;
-      return 'https://github.com/branchmetrics/docs/edit/master/src' + path + '.md';
+      var trim = window.location.pathname.replace(/^\/|\/$/g, '').split('/');
+      trim = trim[0] === 'docs' ? trim.slice(1, trim.length) : trim;
+      var path = (trim === '') ? '/index' : trim.join('/');
+      return 'https://github.com/branchmetrics/docs/edit/master/src/' + path + '.md';
     }
 
     // public
