@@ -20,6 +20,33 @@
 
 
 /* ////////////////////////////// */
+/* BRANCH CODE TABS */
+/* ////////////////////////////// */
+.tab-code-button * {
+  display: inline-block;
+}
+.tab-code-separator {
+  color: hsla(0,0%,60%,.5);
+  padding: 1em;
+}
+.tab-code-button {
+  color: inherit;
+  padding: 0.5em 0;
+}
+.tab-code-button.active {
+  color: #03a9f4;
+  border-bottom: 2px solid #03a9f4;
+}
+.tab-code-content {
+  display: none;
+}
+.tab-code-content.active {
+  display: block;
+}
+
+
+
+/* ////////////////////////////// */
 /* TABLE OF CONTENTS */
 /* ////////////////////////////// */
 .md-sidebar--secondary .md-sidebar__inner {
