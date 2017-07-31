@@ -23,7 +23,7 @@
       events.subscribe(hash, func);
     }
     function remove() {
-      history.pushState("", document.title, window.location.pathname + window.location.search);
+      history.pushState('', document.title, window.location.pathname + window.location.search);
     }
     return {
       add: add,
@@ -37,12 +37,15 @@
     // public
     function init() {
       router.add('route-#header-helpful', function() {
+        analytics.track('viewed modal helpful');
         modal.toggle('modal-helpful', 'notification', 1500);
       });
       router.add('route-#header-unhelpful', function() {
+        analytics.track('viewed modal unhelpful');
         modal.toggle('modal-unhelpful', 'dialog');
       });
       router.add('route-#header-search', function() {
+        analytics.track('viewed modal search');
         modal.toggle('modal-search', 'dialog');
       });
     }
@@ -177,6 +180,9 @@
       var path = (trim === '') ? 'index' : trim;
       return 'https://github.com/branchmetrics/docs/edit/master/src/' + path + '.md';
     }
+    function _listen(type) {
+      analytics.track('pressed button ' + type);
+    }
 
     // public
     function init() {
@@ -188,6 +194,7 @@
             for (var i = 0; i < value.length; i++) {
               var element = value[i];
               element.setAttribute('href', button.url);
+              _listen(key1);
             }
           }
         }
@@ -335,7 +342,7 @@
       function _generateHtmlCodeSectionSeparator(index) {
         var output = document.createElement('span');
         output.setAttribute('class', 'tab-code-separator');
-        output.innerHTML = "|";
+        output.innerHTML = '|';
         return output;
       }
 
