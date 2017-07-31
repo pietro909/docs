@@ -441,6 +441,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#import-branch" title="Import Branch" class="md-nav__link">
+    Import Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#create-content-reference" title="Create content reference" class="md-nav__link">
     Create content reference
   </a>
@@ -1455,6 +1462,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#import-branch" title="Import Branch" class="md-nav__link">
+    Import Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#create-content-reference" title="Create content reference" class="md-nav__link">
     Create content reference
   </a>
@@ -1776,15 +1790,15 @@ carthage update
     <span class="c1">//...</span>
 <span class="p">}</span>
 
-<span class="c1">// Add the openURL and continueUserActivity functions</span>
-<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">app</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">open</span> <span class="n">url</span><span class="p">:</span> <span class="n">URL</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="p">[</span><span class="n">UIApplicationOpenURLOptionsKey</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">]</span> <span class="p">=</span> <span class="p">[:])</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
-<span class="hll">    <span class="k">return</span> <span class="n">RNBranch</span><span class="p">.</span><span class="n">handleDeepLink</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-</span><span class="p">}</span>
-
-<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="k">continue</span> <span class="n">userActivity</span><span class="p">:</span> <span class="bp">NSUserActivity</span><span class="p">,</span> <span class="n">restorationHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">([</span><span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
-<span class="hll">    <span class="k">return</span> <span class="n">RNBranch</span><span class="p">.</span><span class="k">continue</span><span class="p">(</span><span class="n">userActivity</span><span class="p">)</span>
-</span><span class="p">}</span>
-</pre></div>
+<span class="hll"><span class="c1">// Add the openURL and continueUserActivity functions</span>
+</span><span class="hll"><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">app</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">open</span> <span class="n">url</span><span class="p">:</span> <span class="n">URL</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="p">[</span><span class="n">UIApplicationOpenURLOptionsKey</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">]</span> <span class="p">=</span> <span class="p">[:])</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+</span><span class="hll">    <span class="k">return</span> <span class="n">RNBranch</span><span class="p">.</span><span class="n">branch</span><span class="p">.</span><span class="n">application</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">open</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="n">options</span><span class="p">)</span>
+</span><span class="hll"><span class="p">}</span>
+</span><span class="hll">
+</span><span class="hll"><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="k">continue</span> <span class="n">userActivity</span><span class="p">:</span> <span class="bp">NSUserActivity</span><span class="p">,</span> <span class="n">restorationHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">([</span><span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+</span><span class="hll">    <span class="k">return</span> <span class="n">RNBranch</span><span class="p">.</span><span class="k">continue</span><span class="p">(</span><span class="n">userActivity</span><span class="p">)</span>
+</span><span class="hll"><span class="p">}</span>
+</span></pre></div>
 
 </li>
 <li>
@@ -1802,18 +1816,16 @@ carthage update
     <span class="c1">//...</span>
 <span class="p">}</span>
 
-<span class="c1">// Add the openURL and continueUserActivity functions</span>
-<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">openURL:</span><span class="p">(</span><span class="bp">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">options:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">&lt;</span><span class="n">UIApplicationOpenURLOptionsKey</span><span class="p">,</span><span class="kt">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="p">{</span>
-<span class="hll">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">[</span><span class="n">RNBranch</span> <span class="nl">handleDeepLink</span><span class="p">:</span><span class="n">url</span><span class="p">])</span> <span class="p">{</span>
-</span><span class="hll">        <span class="c1">// do other deep link routing for the Facebook SDK, Pinterest SDK, etc</span>
-</span><span class="hll">        <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
-</span><span class="hll">    <span class="p">}</span>
-</span><span class="p">}</span>
-
-<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">continueUserActivity:</span><span class="p">(</span><span class="bp">NSUserActivity</span> <span class="o">*</span><span class="p">)</span><span class="nv">userActivity</span> <span class="nf">restorationHandler:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="bp">NSArray</span> <span class="o">*</span><span class="n">restorableObjects</span><span class="p">))</span><span class="nv">restorationHandler</span> <span class="p">{</span>
-<span class="hll">    <span class="k">return</span> <span class="p">[</span><span class="n">RNBranch</span> <span class="nl">continueUserActivity</span><span class="p">:</span><span class="n">userActivity</span><span class="p">];</span>
-</span><span class="p">}</span>
-</pre></div>
+<span class="hll"><span class="c1">// Add the openURL and continueUserActivity functions</span>
+</span><span class="hll"><span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">openURL:</span><span class="p">(</span><span class="bp">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">options:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">&lt;</span><span class="n">UIApplicationOpenURLOptionsKey</span><span class="p">,</span><span class="kt">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span>
+</span><span class="hll"><span class="p">{</span>
+</span><span class="hll">  <span class="k">return</span> <span class="p">[</span><span class="n">RNBranch</span><span class="p">.</span><span class="n">branch</span> <span class="nl">application</span><span class="p">:</span><span class="n">app</span> <span class="nl">openURL</span><span class="p">:</span><span class="n">url</span> <span class="nl">options</span><span class="p">:</span><span class="n">options</span><span class="p">];</span>
+</span><span class="hll"><span class="p">}</span>
+</span><span class="hll">
+</span><span class="hll"><span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">continueUserActivity:</span><span class="p">(</span><span class="bp">NSUserActivity</span> <span class="o">*</span><span class="p">)</span><span class="nv">userActivity</span> <span class="nf">restorationHandler:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="bp">NSArray</span> <span class="o">*</span><span class="n">restorableObjects</span><span class="p">))</span><span class="nv">restorationHandler</span> <span class="p">{</span>
+</span><span class="hll">    <span class="k">return</span> <span class="p">[</span><span class="n">RNBranch</span> <span class="nl">continueUserActivity</span><span class="p">:</span><span class="n">userActivity</span><span class="p">];</span>
+</span><span class="hll"><span class="p">}</span>
+</span></pre></div>
 
 </li>
 <li>
@@ -1942,13 +1954,61 @@ carthage update
 <h2 id="implement-features">Implement features<a class="headerlink" href="#implement-features" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
+<h4 id="import-branch">Import Branch<a class="headerlink" href="#import-branch" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>index.ios.js</code>/<code>index.android.js</code></p>
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="nx">branch</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">AddToCartEvent</span><span class="p">,</span>
+  <span class="nx">AddToWishlistEvent</span><span class="p">,</span>
+  <span class="nx">PurchasedEvent</span><span class="p">,</span>
+  <span class="nx">PurchaseInitiatedEvent</span><span class="p">,</span>
+  <span class="nx">RegisterViewEvent</span><span class="p">,</span>
+  <span class="nx">ShareCompletedEvent</span><span class="p">,</span>
+  <span class="nx">ShareInitiatedEvent</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-native-branch&#39;</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+<li>
 <h4 id="create-content-reference">Create content reference<a class="headerlink" href="#create-content-reference" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The <code>Branch Universal Object</code> encapsulates the thing you want to share</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1">// only canonicalIdentifier is required</span>
+<span class="kd">let</span> <span class="nx">branchUniversalObject</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">createBranchUniversalObject</span><span class="p">(</span><span class="s1">&#39;canonicalIdentifier&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">automaticallyListOnSpotlight</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">metadata</span><span class="o">:</span> <span class="p">{</span><span class="nx">prop1</span><span class="o">:</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="nx">prop2</span><span class="o">:</span> <span class="s1">&#39;abc&#39;</span><span class="p">},</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Cool Content!&#39;</span><span class="p">,</span>
+    <span class="nx">contentDescription</span><span class="o">:</span> <span class="s1">&#39;Cool Content Description&#39;</span><span class="p">})</span>
+</pre></div>
+
 </li>
 <li>
 <h4 id="create-deep-link">Create deep link<a class="headerlink" href="#create-deep-link" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nx">linkProperties</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">feature</span><span class="o">:</span> <span class="s1">&#39;share&#39;</span><span class="p">,</span>
+    <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">controlParams</span> <span class="o">=</span> <span class="p">{</span>
+     <span class="nx">$desktop_url</span><span class="o">:</span> <span class="s1">&#39;http://desktop-url.com/monster/12345&#39;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="p">{</span><span class="nx">url</span><span class="p">}</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branchUniversalObject</span><span class="p">.</span><span class="nx">generateShortUrl</span><span class="p">(</span><span class="nx">linkProperties</span><span class="p">,</span> <span class="nx">controlParams</span><span class="p">)</span>
+</pre></div>
+
 </li>
 <li>
 <h4 id="share-deep-link">Share deep link<a class="headerlink" href="#share-deep-link" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nx">shareOptions</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">messageHeader</span><span class="o">:</span> <span class="s1">&#39;Check this out&#39;</span><span class="p">,</span> <span class="nx">messageBody</span><span class="o">:</span> <span class="s1">&#39;No really, check this out!&#39;</span> <span class="p">}</span>
+<span class="kd">let</span> <span class="nx">linkProperties</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">feature</span><span class="o">:</span> <span class="s1">&#39;share&#39;</span><span class="p">,</span> <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;RNApp&#39;</span> <span class="p">}</span>
+<span class="kd">let</span> <span class="nx">controlParams</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">$desktop_url</span><span class="o">:</span> <span class="s1">&#39;http://example.com/home&#39;</span><span class="p">,</span> <span class="nx">$ios_url</span><span class="o">:</span> <span class="s1">&#39;http://example.com/ios&#39;</span> <span class="p">}</span>
+<span class="kd">let</span> <span class="p">{</span><span class="nx">channel</span><span class="p">,</span> <span class="nx">completed</span><span class="p">,</span> <span class="nx">error</span><span class="p">}</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branchUniversalObject</span><span class="p">.</span><span class="nx">showShareSheet</span><span class="p">(</span><span class="nx">shareOptions</span><span class="p">,</span> <span class="nx">linkProperties</span><span class="p">,</span> <span class="nx">controlParams</span><span class="p">)</span>
+</pre></div>
+
 </li>
 <li>
 <h4 id="read-deep-link">Read deep link<a class="headerlink" href="#read-deep-link" title="Permanent link">&para;</a></h4>
