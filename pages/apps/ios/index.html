@@ -509,6 +509,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#track-content-properties" title="Track content properties" class="md-nav__link">
+    Track content properties
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1656,6 +1663,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#track-content-properties" title="Track content properties" class="md-nav__link">
+    Track content properties
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1700,6 +1714,7 @@
 </li>
 <li>
 <h4 id="configure-bundle-identifier">Configure bundle identifier<a class="headerlink" href="#configure-bundle-identifier" title="Permanent link">&para;</a></h4>
+<p>local</p>
 <ul>
 <li>
 <p>Bundle Id matches <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></p>
@@ -1766,7 +1781,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 
 </li>
 <li>
-<p>Option 3: Manually install <a href="https://github.com/BranchMetrics/ios-branch-deep-linking/releases">source code</a> and dependencies</p>
+<p>Option 3: Manually install the <a href="https://github.com/BranchMetrics/ios-branch-deep-linking/releases">source code</a> with dependencies</p>
 <p><img alt="image" src="http://i.imgur.com/0NcOrkE.png" /></p>
 </li>
 </ul>
@@ -1775,7 +1790,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 <h4 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Swift 3.0</p>
+<p><em>Swift 3.0</em></p>
 <div class="codehilite"><pre><span></span><span class="kd">import</span> <span class="nc">UIKit</span>
 <span class="hll"><span class="kd">import</span> <span class="nc">Branch</span>
 </span>
@@ -1786,7 +1801,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 
 <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="n">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="n">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
 <span class="hll">  <span class="c1">// for debug and development only</span>
-</span><span class="hll">  <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">setDebug</span><span class="p">()</span> 
+</span><span class="hll">  <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">setDebug</span><span class="p">()</span>
 </span><span class="hll">  <span class="c1">// listener for Branch Deep Link data</span>
 </span><span class="hll">  <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">initSession</span><span class="p">(</span><span class="n">launchOptions</span><span class="p">:</span> <span class="n">launchOptions</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
 </span><span class="hll">    <span class="c1">// do stuff with deep link data (nav to page, display content, etc)</span>
@@ -1815,7 +1830,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 
 </li>
 <li>
-<p>Objective-C</p>
+<p><em>Objective-C</em></p>
 <div class="codehilite"><pre><span></span><span class="cp">#import &quot;AppDelegate.h&quot;</span>
 <span class="hll"><span class="cp">#import &quot;Branch/Branch.h&quot;</span>
 </span>
@@ -1892,7 +1907,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 <p>The <code>Branch Universal Object</code> encapsulates the thing you want to share </p>
 </li>
 <li>
-<p>Swift 3.0</p>
+<p><em>Swift 3.0</em></p>
 <div class="codehilite"><pre><span></span><span class="c1">// only canonical identifier is required</span>
 <span class="kd">let</span> <span class="nv">buo</span> <span class="p">=</span> <span class="n">BranchUniversalObject</span><span class="p">(</span><span class="n">canonicalIdentifier</span><span class="p">:</span> <span class="s">&quot;item/12345&quot;</span><span class="p">)</span>
 <span class="n">buo</span><span class="p">.</span><span class="n">title</span> <span class="p">=</span> <span class="n">UUID</span><span class="p">.</span><span class="kd">init</span><span class="p">().</span><span class="n">uuidString</span>
@@ -1905,7 +1920,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 
 </li>
 <li>
-<p>Objective-C</p>
+<p><em>Objective-C</em></p>
 <div class="codehilite"><pre><span></span><span class="c1">// only canonical identifier is required</span>
 <span class="n">BranchUniversalObject</span> <span class="o">*</span><span class="n">buo</span> <span class="o">=</span> <span class="p">[[</span><span class="n">BranchUniversalObject</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithCanonicalIdentifier</span><span class="p">:</span><span class="s">@&quot;item/12345&quot;</span><span class="p">];</span>
 <span class="n">buo</span><span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="s">@&quot;My Content Title&quot;</span><span class="p">;</span>
@@ -1922,10 +1937,16 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 <h4 id="create-deep-link">Create deep link<a class="headerlink" href="#create-deep-link" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Generate a deep link within your app</p>
+<p>Generates a deep link within your app</p>
 </li>
 <li>
-<p>Swift 3.0</p>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/links">Branch Dashboard</a></p>
+</li>
+<li>
+<p><em>Swift 3.0</em></p>
 <div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">lp</span><span class="p">:</span> <span class="n">BranchLinkProperties</span> <span class="p">=</span> <span class="n">BranchLinkProperties</span><span class="p">()</span>
 <span class="n">lp</span><span class="p">.</span><span class="n">feature</span> <span class="p">=</span> <span class="s">&quot;sharing&quot;</span>
 <span class="n">lp</span><span class="p">.</span><span class="n">channel</span> <span class="p">=</span> <span class="s">&quot;facebook&quot;</span>
@@ -1941,7 +1962,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 
 </li>
 <li>
-<p>Objective-C</p>
+<p><em>Objective-C</em></p>
 <div class="codehilite"><pre><span></span><span class="n">BranchLinkProperties</span> <span class="o">*</span><span class="n">lp</span> <span class="o">=</span> <span class="p">[[</span><span class="n">BranchLinkProperties</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
 <span class="n">lp</span><span class="p">.</span><span class="n">feature</span> <span class="o">=</span> <span class="s">@&quot;sharing&quot;</span><span class="p">;</span>
 <span class="n">lp</span><span class="p">.</span><span class="n">channel</span> <span class="o">=</span> <span class="s">@&quot;facebook&quot;</span><span class="p">;</span>
@@ -1962,10 +1983,13 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 <h4 id="share-deep-link">Share deep link<a class="headerlink" href="#share-deep-link" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Share deep links between users and apps</p>
+<p>Share a deep link between users and apps</p>
 </li>
 <li>
-<p>Swift 3.0</p>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+</li>
+<li>
+<p><em>Swift 3.0</em></p>
 <div class="codehilite"><pre><span></span><span class="c1">// optional values</span>
 <span class="kd">let</span> <span class="nv">lp</span><span class="p">:</span> <span class="n">BranchLinkProperties</span> <span class="p">=</span> <span class="n">BranchLinkProperties</span><span class="p">()</span>
 <span class="n">lp</span><span class="p">.</span><span class="n">feature</span> <span class="p">=</span> <span class="s">&quot;sharing&quot;</span>
@@ -1982,7 +2006,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 
 </li>
 <li>
-<p>Objective-C</p>
+<p><em>Objective-C</em></p>
 <div class="codehilite"><pre><span></span><span class="c1">// optional values</span>
 <span class="n">BranchLinkProperties</span> <span class="o">*</span><span class="n">lp</span> <span class="o">=</span> <span class="p">[[</span><span class="n">BranchLinkProperties</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
 <span class="n">lp</span><span class="p">.</span><span class="n">feature</span> <span class="o">=</span> <span class="s">@&quot;sharing&quot;</span><span class="p">;</span>
@@ -1991,7 +2015,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 <span class="p">[</span><span class="n">lp</span> <span class="nl">addControlParam</span><span class="p">:</span><span class="s">@&quot;$ios_url&quot;</span> <span class="nl">withValue</span><span class="p">:</span><span class="s">@&quot;http://example.com/ios&quot;</span><span class="p">];</span>
 
 <span class="c1">// share link</span>
-<span class="p">[</span><span class="n">branchUniversalObject</span> <span class="nl">showShareSheetWithLinkProperties</span><span class="p">:</span><span class="n">lp</span> <span class="nl">andShareText</span><span class="p">:</span><span class="s">@&quot;Super amazing thing I want to share!&quot;</span> <span class="nl">fromViewController</span><span class="p">:</span><span class="nb">self</span> <span class="nl">completion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSString</span><span class="o">*</span> <span class="n">activityType</span><span class="p">,</span> <span class="kt">BOOL</span> <span class="n">completed</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">[</span><span class="n">buo</span> <span class="nl">showShareSheetWithLinkProperties</span><span class="p">:</span><span class="n">lp</span> <span class="nl">andShareText</span><span class="p">:</span><span class="s">@&quot;Super amazing thing I want to share!&quot;</span> <span class="nl">fromViewController</span><span class="p">:</span><span class="nb">self</span> <span class="nl">completion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSString</span><span class="o">*</span> <span class="n">activityType</span><span class="p">,</span> <span class="kt">BOOL</span> <span class="n">completed</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;finished presenting&quot;</span><span class="p">);</span>
 <span class="p">}];</span>
 </pre></div>
@@ -2001,21 +2025,59 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 </li>
 <li>
 <h4 id="read-deep-link">Read deep link<a class="headerlink" href="#read-deep-link" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Retrieve Branch data from a deep link</p>
+</li>
+<li>
+<p>Best practice to receive data from the <code>listener</code> (to prevent a race condition)</p>
+</li>
+<li>
+<p><em>Swift 3.0</em></p>
+<div class="codehilite"><pre><span></span><span class="c1">// listener (within AppDelegate)</span>
+<span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">initSession</span><span class="p">(</span><span class="n">launchOptions</span><span class="p">:</span> <span class="n">launchOptions</span><span class="p">)</span> <span class="p">{</span> <span class="n">params</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+  <span class="bp">print</span><span class="p">(</span><span class="n">params</span> <span class="k">as</span><span class="p">?</span> <span class="p">[</span><span class="nb">String</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">]</span> <span class="p">??</span> <span class="p">{})</span>
+<span class="p">}</span>
+
+<span class="c1">// latest</span>
+<span class="kd">let</span> <span class="nv">sessionParams</span> <span class="p">=</span> <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">getLatestReferringParams</span><span class="p">()</span>
+
+<span class="c1">// first</span>
+<span class="kd">let</span> <span class="nv">installParams</span> <span class="p">=</span> <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">getFirstReferringParams</span><span class="p">()</span>
+</pre></div>
+
+</li>
+<li>
+<p><em>Objective-C</em></p>
+<div class="codehilite"><pre><span></span><span class="c1">// listener (within AppDelegate.m)</span>
+<span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">initSessionWithLaunchOptions</span><span class="p">:</span><span class="n">launchOptions</span> <span class="nl">andRegisterDeepLinkHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">params</span><span class="p">,</span> <span class="bp">NSError</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@&quot;</span><span class="p">,</span> <span class="n">params</span><span class="p">);</span>  
+<span class="p">}];</span>
+
+<span class="c1">// latest</span>
+<span class="bp">NSDictionary</span> <span class="o">*</span><span class="n">sessionParams</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">getLatestReferringParams</span><span class="p">];</span>
+
+<span class="c1">// first</span>
+<span class="bp">NSDictionary</span> <span class="o">*</span><span class="n">installParams</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">getFirstReferringParams</span><span class="p">];</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h4 id="navigate-to-content">Navigate to content<a class="headerlink" href="#navigate-to-content" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Navigate to any ViewController based on the deep link data from</p>
+<p>Navigate to any ViewController based on data from a deep link</p>
 </li>
 <li>
-<p>Swift 3.0</p>
+<p><em>Swift 3.0</em></p>
 <div class="codehilite"><pre><span></span><span class="c1">// within AppDelegate application.didFinishLaunchingWithOptions</span>
 <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">initSession</span><span class="p">(</span><span class="n">launchOptions</span><span class="p">:</span> <span class="n">launchOptions</span><span class="p">)</span> <span class="p">{</span> <span class="n">params</span> <span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
-  <span class="c1">// catch deep link data</span>
+  <span class="c1">// read deep link data</span>
   <span class="k">guard</span> <span class="kd">let</span> <span class="nv">data</span> <span class="p">=</span> <span class="n">params</span> <span class="k">as</span><span class="p">?</span> <span class="p">[</span><span class="nb">String</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">]</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
 
-  <span class="c1">// save deep link data into global model to be referenced by any view controller</span>
+  <span class="c1">// save deep link data to global model </span>
   <span class="n">BranchData</span><span class="p">.</span><span class="n">sharedInstance</span><span class="p">.</span><span class="n">data</span> <span class="p">=</span> <span class="n">data</span>
 
   <span class="c1">// navigate to view controller based on deep link data[&quot;type&quot;] (&quot;type&quot; can be any custom key-value pair)</span>
@@ -2031,7 +2093,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 
 </li>
 <li>
-<p>Objective-C</p>
+<p><em>Objective-C</em></p>
 <div class="codehilite"><pre><span></span>
 </pre></div>
 
@@ -2040,18 +2102,139 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 </li>
 <li>
 <h4 id="display-content">Display content<a class="headerlink" href="#display-content" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Lists content on iOS Spotlight for local and cloud indexing</p>
+</li>
+<li>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+</li>
+<li>
+<p><em>Swift 3.0</em></p>
+<div class="codehilite"><pre><span></span><span class="n">buo</span><span class="p">.</span><span class="n">automaticallyListOnSpotlight</span> <span class="p">=</span> <span class="kc">true</span>
+<span class="n">buo</span><span class="p">.</span><span class="n">userCompletedAction</span><span class="p">(</span><span class="n">BNCRegisterViewEvent</span><span class="p">)</span>
+</pre></div>
+
+</li>
+<li>
+<p><em>Objective-C</em></p>
+<div class="codehilite"><pre><span></span><span class="n">buo</span><span class="p">.</span><span class="n">automaticallyListOnSpotlight</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+<span class="p">[</span><span class="n">buo</span> <span class="nl">userCompletedAction</span><span class="p">:</span><span class="n">BNCRegisterViewEvent</span><span class="p">];</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h4 id="track-content">Track content<a class="headerlink" href="#track-content" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Track how many times a piece of content is viewed</p>
+</li>
+<li>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+</li>
+<li>
+<p>Use <a href="#track-content-properties">Track content properties</a></p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/content">Branch Dashboard</a></p>
+</li>
+<li>
+<p><em>Swift 3.0</em></p>
+<div class="codehilite"><pre><span></span><span class="n">buo</span><span class="p">.</span><span class="n">userCompletedAction</span><span class="p">(</span><span class="n">BNCRegisterViewEvent</span><span class="p">)</span> 
+</pre></div>
+
+</li>
+<li>
+<p><em>Objective-C</em></p>
+<div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">buo</span> <span class="nl">userCompletedAction</span><span class="p">:</span><span class="n">BNCRegisterViewEvent</span><span class="p">];</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h4 id="track-users">Track users<a class="headerlink" href="#track-users" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Sets the identity of a user (email, ID, UUID, etc) for events, deep links, and referrals</p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/identities">Branch Dashboard</a>  </p>
+</li>
+<li>
+<p><em>Swift 3.0</em></p>
+<div class="codehilite"><pre><span></span><span class="c1">// login</span>
+<span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">setIdentity</span><span class="p">(</span><span class="s">&quot;your_user_id&quot;</span><span class="p">)</span> 
+
+<span class="c1">// logout</span>
+<span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">logout</span><span class="p">()</span>  
+</pre></div>
+
+</li>
+<li>
+<p><em>Objective-C</em></p>
+<div class="codehilite"><pre><span></span><span class="c1">// login</span>
+<span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">setIdentity</span><span class="p">:</span><span class="s">@&quot;your_user_id&quot;</span><span class="p">];</span>   
+
+<span class="c1">// logout</span>
+<span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">logout</span><span class="p">];</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h4 id="track-events">Track events<a class="headerlink" href="#track-events" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Track custom events</p>
+</li>
+<li>
+<p>Events named <code>open</code>, <code>close</code>, <code>install</code>, and <code>referred session</code> are Branch restricted</p>
+</li>
+<li>
+<p><code>63</code> max event name length</p>
+</li>
+<li>
+<p>Best to <a href="#track-users">Track users</a> before <a href="#track-events">Track events</a> to associate a custom event to a user</p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/events">Branch Dashboard</a></p>
+</li>
+<li>
+<p><em>Swift 3.0</em></p>
+<div class="codehilite"><pre><span></span><span class="c1">// option 1</span>
+<span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">userCompletedAction</span><span class="p">(</span><span class="s">&quot;your_custom_event&quot;</span><span class="p">)</span> 
+
+<span class="c1">// option 2</span>
+<span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">userCompletedAction</span><span class="p">(</span><span class="s">&quot;your_custom_event&quot;</span><span class="p">,</span> <span class="n">withState</span><span class="p">:</span> <span class="p">[</span><span class="nb">String</span><span class="p">:</span> <span class="nb">String</span><span class="p">]())</span>
+</pre></div>
+
+</li>
+<li>
+<p><em>Objective-C</em></p>
+<div class="codehilite"><pre><span></span><span class="c1">// option 1</span>
+<span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">userCompletedAction</span><span class="p">:</span><span class="s">@&quot;your_custom_event&quot;</span><span class="p">];</span>
+
+<span class="c1">// option 2</span>
+<span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">userCompletedAction</span><span class="p">:</span><span class="s">@&quot;your_custom_event&quot;</span> <span class="nl">withState</span><span class="p">:(</span><span class="bp">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="n">appState</span><span class="p">];</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h4 id="track-commerce">Track commerce<a class="headerlink" href="#track-commerce" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Registers a custom commerce event</p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/commerce">Branch Dashboard</a></p>
+</li>
+</ul>
 </li>
 <li>
 <h4 id="handle-referrals">Handle referrals<a class="headerlink" href="#handle-referrals" title="Permanent link">&para;</a></h4>
@@ -2076,6 +2259,52 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 </li>
 <li>
 <h4 id="deep-links-are-long">Deep links are long<a class="headerlink" href="#deep-links-are-long" title="Permanent link">&para;</a></h4>
+</li>
+<li>
+<h4 id="track-content-properties">Track content properties<a class="headerlink" href="#track-content-properties" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Used for <a href="#track-content">Track content</a></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BNCRegisterViewEvent</td>
+<td>User viewed the object</td>
+</tr>
+<tr>
+<td>BNCAddToWishlistEvent</td>
+<td>User added the object to their wishlist</td>
+</tr>
+<tr>
+<td>BNCAddToCartEvent</td>
+<td>User added object to cart</td>
+</tr>
+<tr>
+<td>BNCPurchaseInitiatedEvent</td>
+<td>User started to check out</td>
+</tr>
+<tr>
+<td>BNCPurchasedEvent</td>
+<td>User purchased the item</td>
+</tr>
+<tr>
+<td>BNCShareInitiatedEvent</td>
+<td>User started to share the object</td>
+</tr>
+<tr>
+<td>BNCShareCompletedEvent</td>
+<td>User completed a share</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
 </li>
 </ul>
                 
@@ -2225,7 +2454,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
       <script>app.initialize({url:{base:"../../.."}})</script>
       
         <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-        <script>docsearch({apiKey:"887017d17a2c1e9490ad2c44caa7e817",indexName:"branchmetrics",inputSelector:"#algolia-doc-search",debug:"True",algoliaOptions:{hitsPerPage:"20"}})</script>
+        <script>docsearch({apiKey:"887017d17a2c1e9490ad2c44caa7e817",indexName:"branchmetrics",inputSelector:"#algolia-doc-search",debug:"True",algoliaOptions:{hitsPerPage:"15"}})</script>
       
       
         <script src="../../../js/main.js"></script>

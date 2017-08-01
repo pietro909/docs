@@ -77,11 +77,13 @@
 .md-nav--secondary .md-nav__link--active {
   color: inherit;
 }
-.codehilite .nx {
+.codehilite .nx, .codehilite .n {
   color: #24292e;
 }
 .codehilite .hll {
   background-color: rgba(0,0,0,.07);
+  display: inline;
+  padding: 0 0 0 1.2rem;
 }
 
 

@@ -34,6 +34,9 @@
 
   // routes
   var routes =  (function() {
+    // properties
+    var search = document.getElementById('algolia-doc-search');
+
     // public
     function init() {
       router.add('route-#header-helpful', function() {
@@ -47,6 +50,7 @@
       router.add('route-#header-search', function() {
         analytics.track('viewed modal search');
         modal.toggle('modal-search', 'dialog');
+        search.focus();
       });
     }
     return {
@@ -393,10 +397,12 @@
                 codes.push(section);
               } else {
                 // append html
-                codeContainer = _generateCodeContainer(key, codes);
-                block.group.appendChild(codeContainer);
+                if (codes.length > 0) {
+                  codeContainer = _generateCodeContainer(key, codes);
+                  block.group.appendChild(codeContainer);
+                  codes = [];
+                }
                 block.group.appendChild(section.code);
-                codes = [];
               }
             }
 

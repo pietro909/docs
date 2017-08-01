@@ -1786,19 +1786,19 @@
     <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;resume&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onDeviceResume</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
   <span class="p">},</span>
   <span class="nx">onDeviceReady</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">app</span><span class="p">.</span><span class="nx">branchInit</span><span class="p">();</span>
-  <span class="p">},</span>
+<span class="hll">    <span class="nx">app</span><span class="p">.</span><span class="nx">branchInit</span><span class="p">();</span>
+</span>  <span class="p">},</span>
   <span class="nx">onDeviceResume</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">app</span><span class="p">.</span><span class="nx">branchInit</span><span class="p">();</span>
-  <span class="p">},</span>
-  <span class="nx">branchInit</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// Branch initialization</span>
-    <span class="nx">Branch</span><span class="p">.</span><span class="nx">initSession</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-      <span class="c1">// read deep link data on click</span>
-      <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Deep Link Data: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
-    <span class="p">});</span>
-  <span class="p">}</span>
-<span class="p">};</span>
+<span class="hll">    <span class="nx">app</span><span class="p">.</span><span class="nx">branchInit</span><span class="p">();</span>
+</span>  <span class="p">},</span>
+<span class="hll">  <span class="nx">branchInit</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class="hll">    <span class="c1">// Branch initialization</span>
+</span><span class="hll">    <span class="nx">Branch</span><span class="p">.</span><span class="nx">initSession</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">      <span class="c1">// read deep link data on click</span>
+</span><span class="hll">      <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Deep Link Data: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
+</span><span class="hll">    <span class="p">});</span>
+</span><span class="hll">  <span class="p">}</span>
+</span><span class="p">};</span>
 
 <span class="nx">app</span><span class="p">.</span><span class="nx">initialize</span><span class="p">();</span>
 </pre></div>
@@ -1821,21 +1821,21 @@
 
     <span class="c1">// Branch</span>
     <span class="nx">$ionicPlatform</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;deviceready&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">branchInit</span><span class="p">();</span>
-    <span class="p">});</span>
+<span class="hll">      <span class="nx">branchInit</span><span class="p">();</span>
+</span>    <span class="p">});</span>
 
     <span class="nx">$ionicPlatform</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;resume&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">branchInit</span><span class="p">();</span>
-    <span class="p">});</span>
+<span class="hll">      <span class="nx">branchInit</span><span class="p">();</span>
+</span>    <span class="p">});</span>
 
-    <span class="kd">function</span> <span class="nx">branchInit</span><span class="p">()</span> <span class="p">{</span>
-      <span class="c1">// Branch initialization</span>
-      <span class="nx">Branch</span><span class="p">.</span><span class="nx">initSession</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// read deep link data on click</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Deep Link Data: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
-      <span class="p">});</span>
-    <span class="p">}</span>
-  <span class="p">});</span>
+<span class="hll">    <span class="kd">function</span> <span class="nx">branchInit</span><span class="p">()</span> <span class="p">{</span>
+</span><span class="hll">      <span class="c1">// Branch initialization</span>
+</span><span class="hll">      <span class="nx">Branch</span><span class="p">.</span><span class="nx">initSession</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">        <span class="c1">// read deep link data on click</span>
+</span><span class="hll">        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Deep Link Data: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
+</span><span class="hll">      <span class="p">});</span>
+</span><span class="hll">    <span class="p">}</span>
+</span>  <span class="p">});</span>
 <span class="p">})</span>
 <span class="c1">// ...</span>
 </pre></div>
@@ -1851,8 +1851,8 @@
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">TabsPage</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../pages/tabs/tabs&#39;</span><span class="p">;</span>
 
 <span class="c1">// Branch import</span>
-<span class="kr">declare</span> <span class="kd">var</span> <span class="nx">Branch</span><span class="p">;</span>
-
+<span class="hll"><span class="kr">declare</span> <span class="kd">var</span> <span class="nx">Branch</span><span class="p">;</span>
+</span>
 <span class="kd">@Component</span><span class="p">({</span>
   <span class="nx">template</span><span class="o">:</span> <span class="sb">`&lt;ion-nav [root]=&quot;rootPage&quot;&gt;&lt;/ion-nav&gt;`</span>
 <span class="p">})</span>
@@ -1863,23 +1863,23 @@
     <span class="nx">platform</span><span class="p">.</span><span class="nx">ready</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="nx">StatusBar</span><span class="p">.</span><span class="nx">styleDefault</span><span class="p">();</span>
       <span class="nx">Splashscreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
-      <span class="nx">branchInit</span><span class="p">();</span>
-    <span class="p">});</span>
+<span class="hll">      <span class="nx">branchInit</span><span class="p">();</span>
+</span>    <span class="p">});</span>
 
     <span class="nx">platform</span><span class="p">.</span><span class="nx">resume</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="nx">branchInit</span><span class="p">();</span>
-    <span class="p">});</span>
+<span class="hll">      <span class="nx">branchInit</span><span class="p">();</span>
+</span>    <span class="p">});</span>
 
     <span class="c1">// Branch initialization</span>
-    <span class="kr">const</span> <span class="nx">branchInit</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="c1">// only on devices</span>
-      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">platform</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="s1">&#39;cordova&#39;</span><span class="p">))</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
-      <span class="nx">Branch</span><span class="p">.</span><span class="nx">initSession</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="c1">// read deep link data on click</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Deep Link Data: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
-      <span class="p">});</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
+<span class="hll">    <span class="kr">const</span> <span class="nx">branchInit</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class="hll">      <span class="c1">// only on devices</span>
+</span><span class="hll">      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">platform</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="s1">&#39;cordova&#39;</span><span class="p">))</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+</span><span class="hll">      <span class="nx">Branch</span><span class="p">.</span><span class="nx">initSession</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class="hll">        <span class="c1">// read deep link data on click</span>
+</span><span class="hll">        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Deep Link Data: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
+</span><span class="hll">      <span class="p">});</span>
+</span><span class="hll">    <span class="p">}</span>
+</span>  <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -1890,7 +1890,7 @@
 <h4 id="test-deep-link-ios">Test deep link iOS<a class="headerlink" href="#test-deep-link-ios" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Create a deep link from the <a href="https://dashboard.branch.io/marketing">Branch Marketing Dashboard</a></p>
+<p>Create a deep link from the <a href="https://dashboard.branch.io/marketing">Branch Dashboard</a></p>
 </li>
 <li>
 <p>Delete your app from the device</p>
@@ -1913,7 +1913,7 @@
 <h4 id="test-deep-link-android">Test deep link Android<a class="headerlink" href="#test-deep-link-android" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Create a deep link from the <a href="https://dashboard.branch.io/marketing">Branch Marketing Dashboard</a></p>
+<p>Create a deep link from the <a href="https://dashboard.branch.io/marketing">Branch Dashboard</a></p>
 </li>
 <li>
 <p>Delete your app from the device</p>
@@ -1964,7 +1964,7 @@
 <p>The <code>Branch Universal Object</code> encapsulates the thing you want to share (content or user)</p>
 </li>
 <li>
-<p>Link Data: <a href="#link-data-universal-object-properties">Universal Object Properties</a></p>
+<p>Uses the <a href="#universal-object-properties">Universal Object Properties</a></p>
 <div class="codehilite"><pre><span></span><span class="c1">// only canonicalIdentifier is required</span>
 <span class="kd">var</span> <span class="nx">properties</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">canonicalIdentifier</span><span class="o">:</span> <span class="s1">&#39;content/123&#39;</span><span class="p">,</span>
@@ -2005,10 +2005,10 @@
 <p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
 </li>
 <li>
-<p>Link Data: <a href="#link-data-deep-link-properties">Deep Link Properties</a></p>
+<p>Uses <a href="../../../pages/links/data/">Deep Link Properties</a></p>
 </li>
 <li>
-<p>Verify on the <a href="https://dashboard.branch.io/liveview/links">Branch Dashboard</a></p>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/links">Branch Dashboard</a></p>
 <div class="codehilite"><pre><span></span><span class="c1">// optional fields</span>
 <span class="kd">var</span> <span class="nx">analytics</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span><span class="p">,</span>
@@ -2053,7 +2053,7 @@
 <p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
 </li>
 <li>
-<p>Link Data: <a href="#link-data-deep-link-properties">Deep Link Properties</a></p>
+<p>Uses <a href="../../../pages/links/data/">Deep Link Properties</a></p>
 <div class="codehilite"><pre><span></span><span class="c1">// optional fields</span>
 <span class="kd">var</span> <span class="nx">analytics</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span><span class="p">,</span>
@@ -2142,14 +2142,31 @@
 <li>
 <h4 id="navigate-to-content">Navigate to content<a class="headerlink" href="#navigate-to-content" title="Permanent link">&para;</a></h4>
 <ul>
-<li>TODO</li>
+<li>
+<p>Handled within <code>Branch.initSession()</code></p>
+</li>
+<li>
+<p>Branch allows you to pass any custom key-value from URLs to your app. Use this data to navigate to content, display a personalized welcome screen, login a user, offer a promotion, etc.</p>
+<div class="codehilite"><pre><span></span><span class="nx">Branch</span><span class="p">.</span><span class="nx">initSession</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// option 1: save to model to be used later</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">[</span><span class="s1">&#39;branchData&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+
+  <span class="c1">// option 2: navigate to page</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;#/content/123&#39;</span>
+
+  <span class="c1">// option 3: display data</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
+<span class="p">});</span>
+</pre></div>
+
+</li>
 </ul>
 </li>
 <li>
 <h4 id="display-content">Display content<a class="headerlink" href="#display-content" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>List content on iOS Spotlight</p>
+<p>List content on <code>iOS Spotlight</code></p>
 </li>
 <li>
 <p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
@@ -2167,13 +2184,13 @@
 <h4 id="track-content">Track content<a class="headerlink" href="#track-content" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Track how many times a user views a particular piece of content</p>
+<p>Track how many times a piece of content is viewed</p>
 </li>
 <li>
 <p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
 </li>
 <li>
-<p>Verify on the <a href="https://dashboard.branch.io/liveview/content">Branch Dashboard</a></p>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/content">Branch Dashboard</a></p>
 <div class="codehilite"><pre><span></span><span class="nx">branchUniversalObj</span><span class="p">.</span><span class="nx">registerView</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
 <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
@@ -2191,7 +2208,7 @@
 <p>Sets the identity of a user (email, ID, UUID, etc) for events, deep links, and referrals</p>
 </li>
 <li>
-<p>Verify on the <a href="https://dashboard.branch.io/liveview/identities">Branch Dashboard</a>  </p>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/identities">Branch Dashboard</a>  </p>
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">userId</span> <span class="o">=</span> <span class="s1">&#39;123456&#39;</span>
 <span class="nx">Branch</span><span class="p">.</span><span class="nx">setIdentity</span><span class="p">(</span><span class="nx">userId</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
@@ -2217,16 +2234,16 @@
 <h4 id="track-events">Track events<a class="headerlink" href="#track-events" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Registers custom events</p>
+<p>Registers a custom event</p>
 </li>
 <li>
 <p>Events named <code>open</code>, <code>close</code>, <code>install</code>, and <code>referred session</code> are Branch restricted</p>
 </li>
 <li>
-<p>Recommened to <a href="#track-user">Track User</a> before <a href="#track-event">Track Event</a> to associate custom events with a user</p>
+<p>Best to <a href="#track-users">Track users</a> before <a href="#track-events">Track events</a> to associate a custom event to a user</p>
 </li>
 <li>
-<p>Verify on the <a href="https://dashboard.branch.io/liveview/events">Branch Dashboard</a></p>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/events">Branch Dashboard</a></p>
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">eventName</span> <span class="o">=</span> <span class="s1">&#39;clicked_on_this&#39;</span>
 <span class="kd">var</span> <span class="nx">metadata</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;custom_dictionary&#39;</span><span class="o">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;anything&#39;</span><span class="o">:</span> <span class="s1">&#39;everything&#39;</span> <span class="p">}</span>
 <span class="nx">Branch</span><span class="p">.</span><span class="nx">userCompletedAction</span><span class="p">(</span><span class="nx">eventName</span><span class="p">,</span> <span class="nx">metaData</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
@@ -2254,10 +2271,10 @@
 <p>Registers a custom commerce event</p>
 </li>
 <li>
-<p>Link Data: <a href="#commerce-properties">Track commerce properties</a> for <code>Currency</code> and <code>Category</code> </p>
+<p>Uses <a href="#commerce-properties">Track commerce properties</a> for <code>Currency</code> and <code>Category</code> </p>
 </li>
 <li>
-<p>Verify on the <a href="https://dashboard.branch.io/liveview/commerce">Branch Dashboard</a></p>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/commerce">Branch Dashboard</a></p>
 <div class="codehilite"><pre><span></span><span class="c1">// only revenue is required</span>
 <span class="kd">var</span> <span class="nx">event</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s1">&#39;revenue&#39;</span><span class="o">:</span> <span class="mf">50.29</span><span class="p">,</span>
@@ -2311,36 +2328,13 @@
 <p>Referral points are obtained from events triggered by users from rules created on the <a href="https://dashboard.branch.io/referrals/rules">Branch Dashboard</a></p>
 </li>
 <li>
-<p>Verify on the <a href="https://dashboard.branch.io/referrals/analytics">Branch Dashboard</a></p>
+<p>Validate on the <a href="https://dashboard.branch.io/referrals/analytics">Branch Dashboard</a></p>
 </li>
 <li>
-<p>Get credits</p>
-<ul>
-<li>
-<p>Referrer is <a href="#track-user">tracked</a></p>
+<p>Reward credits with the <a href="../../../pages/analytics/referrals/">Referral guide</a></p>
 </li>
 <li>
-<p>Referrer <a href="#create-deep-link">creates a deep link</a></p>
-</li>
-<li>
-<p>Referrer <a href="#share-deep-link">shares the deep Link</a></p>
-</li>
-<li>
-<p>Referee clicks on deep link</p>
-</li>
-<li>
-<p>Referee triggers a <a href="#track-event">custom event</a></p>
-</li>
-<li>
-<p>Catch the event in your Branch Dashboard as a <a href="https://dashboard.branch.io/referrals/rules">rule</a></p>
-</li>
-<li>
-<p>Referrer gets referral points</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Spend credits</p>
+<p>Redeem credits</p>
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">amount</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="kd">var</span> <span class="nx">bucket</span> <span class="o">=</span> <span class="s1">&#39;this_bucket&#39;</span>
 <span class="nx">Branch</span><span class="p">.</span><span class="nx">redeemRewards</span><span class="p">(</span><span class="nx">amount</span><span class="p">,</span> <span class="nx">bucket</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
@@ -2399,7 +2393,7 @@
 <p>Need to select <code>"app uses IDFA or GAID"</code> when publishing your app</p>
 </li>
 <li>
-<p>Best to enable <a href="https://dashboard.branch.io/settings/deepviews">Deep views</a> (<a href="#testing-supported-platforms">Testing: Supported Platforms</a>)</p>
+<p>Best to enable <a href="https://dashboard.branch.io/settings/deepviews">Deep views</a> (<a href="../../../pages/links/behavior/#supported-platforms">Supported platforms</a>)</p>
 </li>
 </ul>
 </li>
@@ -2463,14 +2457,14 @@
 <li>
 <h4 id="sample-app">Sample app<a class="headerlink" href="#sample-app" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="https://github.com/BranchMetrics/cordova-ionic-phonegap-branch-deep-linking/tree/master/testbed">Branch Testbed App</a></li>
+<li><a href="https://github.com/BranchMetrics/cordova-ionic-phonegap-branch-deep-linking/tree/master/testbed">Branch testbed app</a></li>
 </ul>
 </li>
 <li>
 <h4 id="universal-object-properties">Universal Object properties<a class="headerlink" href="#universal-object-properties" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>For <a href="#create-content-reference">Create Content Reference</a></p>
+<p>For <a href="#create-content-reference">Create content reference</a></p>
 <table>
 <thead>
 <tr>
@@ -2544,7 +2538,7 @@
 <h4 id="commerce-properties">Commerce properties<a class="headerlink" href="#commerce-properties" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>For <a href="#track-commerce">Track Commerce</a></p>
+<p>For <a href="#track-commerce">Track commerce</a></p>
 </li>
 <li>
 <p>Categories</p>
@@ -3548,7 +3542,7 @@ Error: Error code <span class="m">65</span> <span class="k">for</span> command: 
       <script>app.initialize({url:{base:"../../.."}})</script>
       
         <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-        <script>docsearch({apiKey:"887017d17a2c1e9490ad2c44caa7e817",indexName:"branchmetrics",inputSelector:"#algolia-doc-search",debug:"True",algoliaOptions:{hitsPerPage:"20"}})</script>
+        <script>docsearch({apiKey:"887017d17a2c1e9490ad2c44caa7e817",indexName:"branchmetrics",inputSelector:"#algolia-doc-search",debug:"True",algoliaOptions:{hitsPerPage:"15"}})</script>
       
       
         <script src="../../../js/main.js"></script>
