@@ -490,13 +490,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#track-content" title="Track content" class="md-nav__link">
-    Track content
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#track-users" title="Track users" class="md-nav__link">
     Track users
   </a>
@@ -504,22 +497,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#track-events" title="Track events" class="md-nav__link">
-    Track events
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#track-commerce" title="Track commerce" class="md-nav__link">
-    Track commerce
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#handle-referrals" title="Handle referrals" class="md-nav__link">
     Handle referrals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracking-events" title="Tracking Events" class="md-nav__link">
+    Tracking Events
   </a>
   
 </li>
@@ -1511,13 +1497,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#track-content" title="Track content" class="md-nav__link">
-    Track content
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#track-users" title="Track users" class="md-nav__link">
     Track users
   </a>
@@ -1525,22 +1504,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#track-events" title="Track events" class="md-nav__link">
-    Track events
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#track-commerce" title="Track commerce" class="md-nav__link">
-    Track commerce
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#handle-referrals" title="Handle referrals" class="md-nav__link">
     Handle referrals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracking-events" title="Tracking Events" class="md-nav__link">
+    Tracking Events
   </a>
   
 </li>
@@ -1619,22 +1591,31 @@
 <ul>
 <li>
 <p>Option 1: Simple (iOS or Android)</p>
-<div class="codehilite"><pre><span></span><span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">save</span> <span class="n">react</span><span class="o">-</span><span class="n">native</span><span class="o">-</span><span class="n">branch</span><span class="mf">@2.0.0</span><span class="o">-</span><span class="n">beta</span><span class="mf">.7</span>
+<p><div class="codehilite"><pre><span></span><span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">save</span> <span class="n">react</span><span class="o">-</span><span class="n">native</span><span class="o">-</span><span class="n">branch</span><span class="mf">@2.0.0</span><span class="o">-</span><span class="n">beta</span><span class="mf">.7</span>
 <span class="n">react</span><span class="o">-</span><span class="n">native</span> <span class="n">link</span> <span class="n">react</span><span class="o">-</span><span class="n">native</span><span class="o">-</span><span class="n">branch</span>
 </pre></div>
-
+Add <code>pod "Branch"</code> as a dependency in you iOS/Podfile
+<div class="codehilite"><pre><span></span>cd ios; pod install --repo-update
+</pre></div></p>
 </li>
 <li>
 <p>Option 2: <a href="https://cocoapods.org/">CocoaPods</a></p>
-<div class="codehilite"><pre><span></span>pod &quot;React&quot;, path: &quot;../node_modules/react-native&quot;
-
-# The following line is necessary with use_frameworks! or RN &gt;= 0.42.
+<p><div class="codehilite"><pre><span></span>pod &quot;React&quot;,
+  path: &quot;../node_modules/react-native&quot;,
+  subspecs: %w{
+    Core
+    RCTAnimation
+    RCTImage
+    RCTText
+    RCTNetwork
+    RCTWebSocket
+  }
 pod &quot;Yoga&quot;, path: &quot;../node_modules/react-native/ReactCommon/yoga&quot;
-
 pod &quot;react-native-branch&quot;, path: &quot;../node_modules/react-native-branch&quot;
 pod &quot;Branch-SDK&quot;, path: &quot;../node_modules/react-native-branch/ios&quot;
 </pre></div>
-
+<div class="codehilite"><pre><span></span>cd ios; pod install --repo-update
+</pre></div></p>
 </li>
 <li>
 <p>Option 3: <a href="https://github.com/Carthage/Carthage">Carthage</a></p>
@@ -1781,6 +1762,7 @@ carthage update
 <ul>
 <li>
 <p>Swift 3.0 <code>AppDelegate.swift</code></p>
+<p>Add <code>#import &lt;react-native-branch/RNBranch.h&gt;</code> to your Bridging header.
 <div class="codehilite"><pre><span></span><span class="c1">// Initialize the Branch Session at the top of existing application:didFinishLaunchingWithOptions:</span>
 <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span><span class="p">:</span> <span class="p">[</span><span class="n">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
 <span class="hll">    <span class="c1">// Uncomment this line to use the test key instead of the live one.</span>
@@ -1792,14 +1774,13 @@ carthage update
 
 <span class="hll"><span class="c1">// Add the openURL and continueUserActivity functions</span>
 </span><span class="hll"><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">app</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">open</span> <span class="n">url</span><span class="p">:</span> <span class="n">URL</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="p">[</span><span class="n">UIApplicationOpenURLOptionsKey</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">]</span> <span class="p">=</span> <span class="p">[:])</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
-</span><span class="hll">    <span class="k">return</span> <span class="n">RNBranch</span><span class="p">.</span><span class="n">branch</span><span class="p">.</span><span class="n">application</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">open</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="n">options</span><span class="p">)</span>
+</span><span class="hll">    <span class="k">return</span> <span class="n">RNBranch</span><span class="p">.</span><span class="n">handleDeepLink</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </span><span class="hll"><span class="p">}</span>
 </span><span class="hll">
 </span><span class="hll"><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="k">continue</span> <span class="n">userActivity</span><span class="p">:</span> <span class="bp">NSUserActivity</span><span class="p">,</span> <span class="n">restorationHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">([</span><span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
 </span><span class="hll">    <span class="k">return</span> <span class="n">RNBranch</span><span class="p">.</span><span class="k">continue</span><span class="p">(</span><span class="n">userActivity</span><span class="p">)</span>
 </span><span class="hll"><span class="p">}</span>
-</span></pre></div>
-
+</span></pre></div></p>
 </li>
 <li>
 <p>Objective C <code>AppDelegate.m</code></p>
@@ -1816,10 +1797,11 @@ carthage update
     <span class="c1">//...</span>
 <span class="p">}</span>
 
-<span class="hll"><span class="c1">// Add the openURL and continueUserActivity functions</span>
-</span><span class="hll"><span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">openURL:</span><span class="p">(</span><span class="bp">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">options:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">&lt;</span><span class="n">UIApplicationOpenURLOptionsKey</span><span class="p">,</span><span class="kt">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span>
-</span><span class="hll"><span class="p">{</span>
-</span><span class="hll">  <span class="k">return</span> <span class="p">[</span><span class="n">RNBranch</span><span class="p">.</span><span class="n">branch</span> <span class="nl">application</span><span class="p">:</span><span class="n">app</span> <span class="nl">openURL</span><span class="p">:</span><span class="n">url</span> <span class="nl">options</span><span class="p">:</span><span class="n">options</span><span class="p">];</span>
+<span class="hll"><span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">openURL:</span><span class="p">(</span><span class="bp">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">sourceApplication:</span><span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">sourceApplication</span> <span class="nf">annotation:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">annotation</span> <span class="p">{</span>
+</span><span class="hll">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">[</span><span class="n">RNBranch</span><span class="p">.</span><span class="n">branch</span> <span class="nl">application</span><span class="p">:</span><span class="n">application</span> <span class="nl">openURL</span><span class="p">:</span><span class="n">url</span> <span class="nl">sourceApplication</span><span class="p">:</span><span class="n">sourceApplication</span> <span class="nl">annotation</span><span class="p">:</span><span class="n">annotation</span><span class="p">])</span> <span class="p">{</span>
+</span><span class="hll">        <span class="c1">// do other deep link routing for the Facebook SDK, Pinterest SDK, etc</span>
+</span><span class="hll">    <span class="p">}</span>
+</span><span class="hll">    <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
 </span><span class="hll"><span class="p">}</span>
 </span><span class="hll">
 </span><span class="hll"><span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">continueUserActivity:</span><span class="p">(</span><span class="bp">NSUserActivity</span> <span class="o">*</span><span class="p">)</span><span class="nv">userActivity</span> <span class="nf">restorationHandler:</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="bp">NSArray</span> <span class="o">*</span><span class="n">restorableObjects</span><span class="p">))</span><span class="nv">restorationHandler</span> <span class="p">{</span>
@@ -2012,36 +1994,99 @@ carthage update
 </li>
 <li>
 <h4 id="read-deep-link">Read deep link<a class="headerlink" href="#read-deep-link" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="c1">// Subscribe to incoming links (both Branch &amp; non-Branch)</span>
+<span class="nx">branch</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(({</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">params</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">params</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// grab deep link data and route appropriately.</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+
+<span class="kd">let</span> <span class="nx">lastParams</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">getLatestReferringParams</span><span class="p">()</span> <span class="c1">// params from last open</span>
+<span class="kd">let</span> <span class="nx">installParams</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">getFirstReferringParams</span><span class="p">()</span> <span class="c1">// params from original install</span>
+</pre></div>
+
 </li>
 <li>
 <h4 id="navigate-to-content">Navigate to content<a class="headerlink" href="#navigate-to-content" title="Permanent link">&para;</a></h4>
+<p>TO-DO</p>
 </li>
 <li>
 <h4 id="display-content">Display content<a class="headerlink" href="#display-content" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="track-content">Track content<a class="headerlink" href="#track-content" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nx">spotlightResult</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branchUniversalObject</span><span class="p">.</span><span class="nx">listOnSpotlight</span><span class="p">()</span>
+</pre></div>
+
 </li>
 <li>
 <h4 id="track-users">Track users<a class="headerlink" href="#track-users" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="track-events">Track events<a class="headerlink" href="#track-events" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="track-commerce">Track commerce<a class="headerlink" href="#track-commerce" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">setIdentity</span><span class="p">(</span><span class="s1">&#39;theUserId&#39;</span><span class="p">)</span>
+<span class="nx">branch</span><span class="p">.</span><span class="nx">logout</span><span class="p">()</span>
+</pre></div>
+
 </li>
 <li>
 <h4 id="handle-referrals">Handle referrals<a class="headerlink" href="#handle-referrals" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nx">rewards</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">loadRewards</span><span class="p">()</span>
+<span class="kd">let</span> <span class="nx">redeemResult</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">redeemRewards</span><span class="p">(</span><span class="nx">amount</span><span class="p">,</span> <span class="nx">bucket</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nx">creditHistory</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">getCreditHistory</span><span class="p">()</span>
+</pre></div>
+
+</li>
+<li>
+<h4 id="tracking-events">Tracking Events<a class="headerlink" href="#tracking-events" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RegisterViewEvent</td>
+<td>User viewed the object</td>
+</tr>
+<tr>
+<td>AddToWishlistEvent</td>
+<td>User added the object to their wishlist</td>
+</tr>
+<tr>
+<td>AddToCartEvent</td>
+<td>User added object to cart</td>
+</tr>
+<tr>
+<td>PurchaseInitiatedEvent</td>
+<td>User started to check out</td>
+</tr>
+<tr>
+<td>PurchasedEvent</td>
+<td>User purchased the item</td>
+</tr>
+<tr>
+<td>ShareInitiatedEvent</td>
+<td>User started to share the object</td>
+</tr>
+<tr>
+<td>ShareCompletedEvent</td>
+<td>User completed a share</td>
+</tr>
+</tbody>
+</table>
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="nx">branch</span><span class="p">,</span> <span class="p">{</span> <span class="nx">RegisterViewEvent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-native-branch&#39;</span>
+<span class="kd">let</span> <span class="nx">universalObject</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">createUniversalObject</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="p">{})</span>
+<span class="nx">universalObject</span><span class="p">.</span><span class="nx">userCompletedAction</span><span class="p">(</span><span class="nx">RegisterViewEvent</span><span class="p">)</span>
+</pre></div>
+
 </li>
 </ul>
 <h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <h4 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">&para;</a></h4>
+<p>TO-DO</p>
 </li>
 <li>
 <h4 id="sample-app">Sample app<a class="headerlink" href="#sample-app" title="Permanent link">&para;</a></h4>
+<p><a href="https://github.com/BranchMetrics/react-native-branch-deep-linking/tree/master/examples">Examples</a></p>
 </li>
 </ul>
                 
