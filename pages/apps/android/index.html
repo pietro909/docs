@@ -362,6 +362,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#initialize-branch-features" title="Initialize Branch features" class="md-nav__link">
+    Initialize Branch features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#create-content-reference" title="Create content reference" class="md-nav__link">
     Create content reference
   </a>
@@ -425,13 +432,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#track-commerce" title="Track commerce" class="md-nav__link">
-    Track commerce
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#handle-referrals" title="Handle referrals" class="md-nav__link">
     Handle referrals
   </a>
@@ -452,29 +452,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#recommendations" title="Recommendations" class="md-nav__link">
-    Recommendations
+  <a href="#track-content-properties" title="Track content properties" class="md-nav__link">
+    Track content properties
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#simulate-an-install" title="Simulate an install" class="md-nav__link">
-    Simulate an install
+  <a href="#universal-object-best-practices" title="Universal object best practices" class="md-nav__link">
+    Universal object best practices
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sample-app" title="Sample app" class="md-nav__link">
-    Sample app
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#android-instant-app" title="Android instant app" class="md-nav__link">
-    Android instant app
+  <a href="#using-bnclt-or-a-custom-link-domain" title="Using bnc.lt or a custom link domain" class="md-nav__link">
+    Using bnc.lt or a custom link domain
   </a>
   
 </li>
@@ -1455,6 +1448,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#initialize-branch-features" title="Initialize Branch features" class="md-nav__link">
+    Initialize Branch features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#create-content-reference" title="Create content reference" class="md-nav__link">
     Create content reference
   </a>
@@ -1518,13 +1518,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#track-commerce" title="Track commerce" class="md-nav__link">
-    Track commerce
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#handle-referrals" title="Handle referrals" class="md-nav__link">
     Handle referrals
   </a>
@@ -1545,29 +1538,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#recommendations" title="Recommendations" class="md-nav__link">
-    Recommendations
+  <a href="#track-content-properties" title="Track content properties" class="md-nav__link">
+    Track content properties
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#simulate-an-install" title="Simulate an install" class="md-nav__link">
-    Simulate an install
+  <a href="#universal-object-best-practices" title="Universal object best practices" class="md-nav__link">
+    Universal object best practices
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sample-app" title="Sample app" class="md-nav__link">
-    Sample app
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#android-instant-app" title="Android instant app" class="md-nav__link">
-    Android instant app
+  <a href="#using-bnclt-or-a-custom-link-domain" title="Using bnc.lt or a custom link domain" class="md-nav__link">
+    Using bnc.lt or a custom link domain
   </a>
   
 </li>
@@ -1647,15 +1633,16 @@
     <span class="o">})</span>
     <span class="n">compile</span> <span class="err">&#39;</span><span class="n">com</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">support</span><span class="o">:</span><span class="n">appcompat</span><span class="o">-</span><span class="n">v7</span><span class="o">:</span><span class="mf">25.2.0</span><span class="err">&#39;</span>
     <span class="n">compile</span> <span class="err">&#39;</span><span class="n">com</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">support</span><span class="o">:</span><span class="n">design</span><span class="o">:</span><span class="mf">25.2.0</span><span class="err">&#39;</span>
-<span class="hll">    <span class="c1">// Branch SDK: library</span>
-</span><span class="hll">    <span class="n">compile</span> <span class="err">&#39;</span><span class="n">io</span><span class="o">.</span><span class="na">branch</span><span class="o">.</span><span class="na">sdk</span><span class="o">.</span><span class="na">android</span><span class="o">:</span><span class="n">library</span><span class="o">:</span><span class="mf">2.</span><span class="o">+</span><span class="err">&#39;</span> 
-</span><span class="hll">    <span class="c1">// Branch SDK: matching with chrome tabs (optional)</span>
+
+<span class="hll">    <span class="c1">// required</span>
+</span><span class="hll">    <span class="n">compile</span> <span class="err">&#39;</span><span class="n">io</span><span class="o">.</span><span class="na">branch</span><span class="o">.</span><span class="na">sdk</span><span class="o">.</span><span class="na">android</span><span class="o">:</span><span class="n">library</span><span class="o">:</span><span class="mf">2.</span><span class="o">+</span><span class="err">&#39;</span>
+</span>
+<span class="hll">    <span class="c1">// optional</span>
 </span><span class="hll">    <span class="n">compile</span> <span class="err">&#39;</span><span class="n">com</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">support</span><span class="o">:</span><span class="n">customtabs</span><span class="o">:</span><span class="mf">23.3.0</span><span class="err">&#39;</span> 
-</span><span class="hll">    <span class="c1">// Branch SDK: matching with GAID (optional)</span>
 </span><span class="hll">    <span class="n">compile</span> <span class="err">&#39;</span><span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">:</span><span class="n">play</span><span class="o">-</span><span class="n">services</span><span class="o">:</span><span class="mf">9.0.0</span><span class="err">&#39;</span>
-</span><span class="hll">    <span class="c1">// Branch SDK: firebase app indexing (optional)</span>
 </span><span class="hll">    <span class="n">compile</span> <span class="err">&#39;</span><span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">:</span><span class="n">play</span><span class="o">-</span><span class="n">services</span><span class="o">-</span><span class="n">appindexing</span><span class="o">:</span><span class="mf">9.</span><span class="o">+</span><span class="err">&#39;</span>
-</span>    <span class="n">testCompile</span> <span class="err">&#39;</span><span class="n">junit</span><span class="o">:</span><span class="n">junit</span><span class="o">:</span><span class="mf">4.12</span><span class="err">&#39;</span>
+</span>
+    <span class="n">testCompile</span> <span class="err">&#39;</span><span class="n">junit</span><span class="o">:</span><span class="n">junit</span><span class="o">:</span><span class="mf">4.12</span><span class="err">&#39;</span>
 <span class="o">}</span>
 </pre></div>
 
@@ -1706,21 +1693,22 @@
 </span><span class="hll">                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
 </span><span class="hll">                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span> <span class="nt">/&gt;</span>
 </span><span class="hll">                <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;uobg.app.link&quot;</span> <span class="nt">/&gt;</span>
-</span><span class="hll">            <span class="nt">&lt;/intent-filter&gt;</span>
-</span>        <span class="nt">&lt;/activity&gt;</span>
-
-<span class="hll">        <span class="c">&lt;!-- Branch init --&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;uobg-alternate.app.link&quot;</span> <span class="nt">/&gt;</span>
+</span>            <span class="nt">&lt;/intent-filter&gt;</span>
+        <span class="nt">&lt;/activity&gt;</span>
+<span class="hll">
+</span><span class="hll">        <span class="c">&lt;!-- Branch init --&gt;</span>
 </span><span class="hll">        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.BranchKey&quot;</span> <span class="na">android:value=</span><span class="s">&quot;key_live_gdzsepIaUf7wG3dEWb3aBkmcutm0PwJa&quot;</span> <span class="nt">/&gt;</span>
 </span><span class="hll">        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.BranchKey.test&quot;</span> <span class="na">android:value=</span><span class="s">&quot;key_test_edwDakKcMeWzJ3hC3aZs9kniyuaWGCTa&quot;</span> <span class="nt">/&gt;</span>
-</span><span class="hll">        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.TestMode&quot;</span> <span class="na">android:value=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
-</span>
-<span class="hll">        <span class="c">&lt;!-- Branch install referrer tracking (optional) --&gt;</span>
+</span>        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.TestMode&quot;</span> <span class="na">android:value=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+<span class="hll">
+</span><span class="hll">        <span class="c">&lt;!-- Branch install referrer tracking (optional) --&gt;</span>
 </span><span class="hll">        <span class="nt">&lt;receiver</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.referral.InstallListener&quot;</span> <span class="na">android:exported=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
 </span><span class="hll">            <span class="nt">&lt;intent-filter&gt;</span>
 </span><span class="hll">                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;com.android.vending.INSTALL_REFERRER&quot;</span> <span class="nt">/&gt;</span>
 </span><span class="hll">            <span class="nt">&lt;/intent-filter&gt;</span>
-</span><span class="hll">        <span class="nt">&lt;/receiver&gt;</span>
-</span>
+</span>        <span class="nt">&lt;/receiver&gt;</span>
+
     <span class="nt">&lt;/application&gt;</span>
 
 <span class="nt">&lt;/manifest&gt;</span>
@@ -1877,61 +1865,108 @@
 <h2 id="implement-features">Implement features<a class="headerlink" href="#implement-features" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="create-content-reference">Create content reference<a class="headerlink" href="#create-content-reference" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="n">BranchUniversalObject</span> <span class="n">branchUniversalObject</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BranchUniversalObject</span><span class="o">()</span>
-    <span class="c1">// The identifier is what Branch will use to de-dupe the content across many different Universal Objects</span>
-   <span class="o">.</span><span class="na">setCanonicalIdentifier</span><span class="o">(</span><span class="s">&quot;item/12345&quot;</span><span class="o">)</span>
-
-   <span class="c1">// The canonical URL for SEO purposes (optional)</span>
-   <span class="o">.</span><span class="na">setCanonicalUrl</span><span class="o">(</span><span class="s">&quot;https://branch.io/deepviews&quot;</span><span class="o">)</span>
-
-   <span class="c1">// This is where you define the open graph structure and how the object will appear on Facebook or in a deepview</span>
-   <span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">&quot;My Content Title&quot;</span><span class="o">)</span>
-   <span class="o">.</span><span class="na">setContentDescription</span><span class="o">(</span><span class="s">&quot;My Content Description&quot;</span><span class="o">)</span>
-   <span class="o">.</span><span class="na">setContentImageUrl</span><span class="o">(</span><span class="s">&quot;https://example.com/mycontent-12345.png&quot;</span><span class="o">)</span>
-
-   <span class="c1">// You use this to specify whether this content can be discovered publicly - default is public</span>
-   <span class="o">.</span><span class="na">setContentIndexingMode</span><span class="o">(</span><span class="n">BranchUniversalObject</span><span class="o">.</span><span class="na">CONTENT_INDEX_MODE</span><span class="o">.</span><span class="na">PUBLIC</span><span class="o">)</span>
-
-    <span class="c1">// Here is where you can add custom keys/values to the deep link data</span>
-   <span class="o">.</span><span class="na">addContentMetadata</span><span class="o">(</span><span class="s">&quot;property1&quot;</span><span class="o">,</span> <span class="s">&quot;blue&quot;</span><span class="o">)</span>
-   <span class="o">.</span><span class="na">addContentMetadata</span><span class="o">(</span><span class="s">&quot;property2&quot;</span><span class="o">,</span> <span class="s">&quot;red&quot;</span><span class="o">);</span>
+<h4 id="initialize-branch-features">Initialize Branch features<a class="headerlink" href="#initialize-branch-features" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Loads Branch into your app</p>
+</li>
+<li>
+<p>Must be called on <code>deviceready</code> and <code>resume</code></p>
+<div class="codehilite"><pre><span></span>
 </pre></div>
 
+</li>
+</ul>
+</li>
+<li>
+<h4 id="create-content-reference">Create content reference<a class="headerlink" href="#create-content-reference" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>The <code>Branch Universal Object</code> encapsulates the thing you want to share (content or user)</p>
+</li>
+<li>
+<p>Uses the <a href="#universal-object-properties">Universal Object Properties</a></p>
+<div class="codehilite"><pre><span></span><span class="n">BranchUniversalObject</span> <span class="n">buo</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BranchUniversalObject</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">setCanonicalIdentifier</span><span class="o">(</span><span class="s">&quot;content/12345&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">&quot;My Content Title&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">setContentDescription</span><span class="o">(</span><span class="s">&quot;My Content Description&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">setContentImageUrl</span><span class="o">(</span><span class="s">&quot;https://lorempixel.com/400/400&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">setContentIndexingMode</span><span class="o">(</span><span class="n">BranchUniversalObject</span><span class="o">.</span><span class="na">CONTENT_INDEX_MODE</span><span class="o">.</span><span class="na">PUBLIC</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">addContentMetadata</span><span class="o">(</span><span class="s">&quot;custom_data&quot;</span><span class="o">,</span> <span class="s">&quot;123&quot;</span><span class="o">);</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h4 id="create-deep-link">Create deep link<a class="headerlink" href="#create-deep-link" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="n">LinkProperties</span> <span class="n">linkProperties</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkProperties</span><span class="o">()</span>
-   <span class="o">.</span><span class="na">setChannel</span><span class="o">(</span><span class="s">&quot;facebook&quot;</span><span class="o">)</span>
-   <span class="o">.</span><span class="na">setFeature</span><span class="o">(</span><span class="s">&quot;sharing&quot;</span><span class="o">)</span>
-   <span class="o">.</span><span class="na">addControlParameter</span><span class="o">(</span><span class="s">&quot;$desktop_url&quot;</span><span class="o">,</span> <span class="s">&quot;http://example.com/home&quot;</span><span class="o">)</span>
-   <span class="o">.</span><span class="na">addControlParameter</span><span class="o">(</span><span class="s">&quot;$ios_url&quot;</span><span class="o">,</span> <span class="s">&quot;http://example.com/ios&quot;</span><span class="o">);</span>
+<ul>
+<li>
+<p>Creates a deep link URL with encapsulated data</p>
+</li>
+<li>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+</li>
+<li>
+<p>Uses <a href="../../../pages/links/data/">Deep Link Properties</a></p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/links">Branch Dashboard</a></p>
+<div class="codehilite"><pre><span></span><span class="n">LinkProperties</span> <span class="n">lp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkProperties</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">setChannel</span><span class="o">(</span><span class="s">&quot;facebook&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">setFeature</span><span class="o">(</span><span class="s">&quot;sharing&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">setCampaign</span><span class="o">(</span><span class="s">&quot;content 123 launch&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">setStage</span><span class="o">(</span><span class="s">&quot;new user&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">addControlParameter</span><span class="o">(</span><span class="s">&quot;$deeplink_path&quot;</span><span class="o">,</span> <span class="s">&quot;content/123&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">addControlParameter</span><span class="o">(</span><span class="s">&quot;$desktop_url&quot;</span><span class="o">,</span> <span class="s">&quot;http://example.com/home&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">addControlParameter</span><span class="o">(</span><span class="s">&quot;custom&quot;</span><span class="o">,</span> <span class="s">&quot;data&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">addControlParameter</span><span class="o">(</span><span class="s">&quot;custom_random&quot;</span><span class="o">,</span> <span class="n">Long</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getTimeInMillis</span><span class="o">()));</span>
 
-<span class="n">branchUniversalObject</span><span class="o">.</span><span class="na">generateShortUrl</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">linkProperties</span><span class="o">,</span> <span class="k">new</span>     <span class="n">BranchLinkCreateListener</span><span class="o">()</span> <span class="o">{</span>
+<span class="n">buo</span><span class="o">.</span><span class="na">generateShortUrl</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">lp</span><span class="o">,</span> <span class="k">new</span> <span class="n">Branch</span><span class="o">.</span><span class="na">BranchLinkCreateListener</span><span class="o">()</span> <span class="o">{</span>
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onLinkCreate</span><span class="o">(</span><span class="n">String</span> <span class="n">url</span><span class="o">,</span> <span class="n">BranchError</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
-       <span class="k">if</span> <span class="o">(</span><span class="n">error</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-           <span class="n">Log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="s">&quot;MyApp&quot;</span><span class="o">,</span> <span class="s">&quot;got my Branch link to share: &quot;</span> <span class="o">+</span> <span class="n">url</span><span class="o">);</span>
-       <span class="o">}</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">error</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">Log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="s">&quot;MyApp&quot;</span><span class="o">,</span> <span class="s">&quot;got my Branch link to share: &quot;</span> <span class="o">+</span> <span class="n">url</span><span class="o">);</span>
+        <span class="o">}</span>
     <span class="o">}</span>
-<span class="o">});</span>                   
+<span class="o">});</span>
 </pre></div>
 
 </li>
+</ul>
+</li>
 <li>
 <h4 id="share-deep-link">Share deep link<a class="headerlink" href="#share-deep-link" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="n">ShareSheetStyle</span> <span class="n">shareSheetStyle</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ShareSheetStyle</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&quot;Check this out!&quot;</span><span class="o">,</span> <span class="s">&quot;This stuff is awesome: &quot;</span><span class="o">)</span>
-    <span class="o">.</span><span class="na">setCopyUrlStyle</span><span class="o">(</span><span class="n">getResources</span><span class="o">().</span><span class="na">getDrawable</span><span class="o">(</span><span class="n">android</span><span class="o">.</span><span class="na">R</span><span class="o">.</span><span class="na">drawable</span><span class="o">.</span><span class="na">ic_menu_send</span><span class="o">),</span> <span class="s">&quot;Copy&quot;</span><span class="o">,</span> <span class="s">&quot;Added to clipboard&quot;</span><span class="o">)</span>
-    <span class="o">.</span><span class="na">setMoreOptionStyle</span><span class="o">(</span><span class="n">getResources</span><span class="o">().</span><span class="na">getDrawable</span><span class="o">(</span><span class="n">android</span><span class="o">.</span><span class="na">R</span><span class="o">.</span><span class="na">drawable</span><span class="o">.</span><span class="na">ic_menu_search</span><span class="o">),</span> <span class="s">&quot;Show more&quot;</span><span class="o">)</span>
+<ul>
+<li>
+<p>Will generate a Branch deep link and tag it with the channel the user selects</p>
+</li>
+<li>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+</li>
+<li>
+<p>Uses <a href="../../../pages/links/data/">Deep Link Properties</a></p>
+<div class="codehilite"><pre><span></span><span class="n">LinkProperties</span> <span class="n">lp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkProperties</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">setChannel</span><span class="o">(</span><span class="s">&quot;facebook&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">setFeature</span><span class="o">(</span><span class="s">&quot;sharing&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">setCampaign</span><span class="o">(</span><span class="s">&quot;content 123 launch&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">setStage</span><span class="o">(</span><span class="s">&quot;new user&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">addControlParameter</span><span class="o">(</span><span class="s">&quot;$deeplink_path&quot;</span><span class="o">,</span> <span class="s">&quot;content/123&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">addControlParameter</span><span class="o">(</span><span class="s">&quot;$desktop_url&quot;</span><span class="o">,</span> <span class="s">&quot;http://example.com/home&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">addControlParameter</span><span class="o">(</span><span class="s">&quot;custom&quot;</span><span class="o">,</span> <span class="s">&quot;data&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">addControlParameter</span><span class="o">(</span><span class="s">&quot;custom_random&quot;</span><span class="o">,</span> <span class="n">Long</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getTimeInMillis</span><span class="o">()));</span>
+
+<span class="n">ShareSheetStyle</span> <span class="n">ss</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ShareSheetStyle</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">,</span> <span class="s">&quot;Check this out!&quot;</span><span class="o">,</span> <span class="s">&quot;This stuff is awesome: &quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">setCopyUrlStyle</span><span class="o">(</span><span class="n">ContextCompat</span><span class="o">.</span><span class="na">getDrawable</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">android</span><span class="o">.</span><span class="na">R</span><span class="o">.</span><span class="na">drawable</span><span class="o">.</span><span class="na">ic_menu_send</span><span class="o">),</span> <span class="s">&quot;Copy&quot;</span><span class="o">,</span> <span class="s">&quot;Added to clipboard&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">setMoreOptionStyle</span><span class="o">(</span><span class="n">ContextCompat</span><span class="o">.</span><span class="na">getDrawable</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">android</span><span class="o">.</span><span class="na">R</span><span class="o">.</span><span class="na">drawable</span><span class="o">.</span><span class="na">ic_menu_search</span><span class="o">),</span> <span class="s">&quot;Show more&quot;</span><span class="o">)</span>
     <span class="o">.</span><span class="na">addPreferredSharingOption</span><span class="o">(</span><span class="n">SharingHelper</span><span class="o">.</span><span class="na">SHARE_WITH</span><span class="o">.</span><span class="na">FACEBOOK</span><span class="o">)</span>
     <span class="o">.</span><span class="na">addPreferredSharingOption</span><span class="o">(</span><span class="n">SharingHelper</span><span class="o">.</span><span class="na">SHARE_WITH</span><span class="o">.</span><span class="na">EMAIL</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">addPreferredSharingOption</span><span class="o">(</span><span class="n">SharingHelper</span><span class="o">.</span><span class="na">SHARE_WITH</span><span class="o">.</span><span class="na">MESSAGE</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">addPreferredSharingOption</span><span class="o">(</span><span class="n">SharingHelper</span><span class="o">.</span><span class="na">SHARE_WITH</span><span class="o">.</span><span class="na">HANGOUT</span><span class="o">)</span>
     <span class="o">.</span><span class="na">setAsFullWidthStyle</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
     <span class="o">.</span><span class="na">setSharingTitle</span><span class="o">(</span><span class="s">&quot;Share With&quot;</span><span class="o">);</span>
 
-<span class="n">branchUniversalObject</span><span class="o">.</span><span class="na">showShareSheet</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> 
-                                      <span class="n">linkProperties</span><span class="o">,</span>
-                                      <span class="n">shareSheetStyle</span><span class="o">,</span>
-                                       <span class="k">new</span> <span class="n">Branch</span><span class="o">.</span><span class="na">BranchLinkShareListener</span><span class="o">()</span> <span class="o">{</span>
+<span class="n">buo</span><span class="o">.</span><span class="na">showShareSheet</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">lp</span><span class="o">,</span>  <span class="n">ss</span><span class="o">,</span>  <span class="k">new</span> <span class="n">Branch</span><span class="o">.</span><span class="na">BranchLinkShareListener</span><span class="o">()</span> <span class="o">{</span>
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onShareLinkDialogLaunched</span><span class="o">()</span> <span class="o">{</span>
     <span class="o">}</span>
@@ -1948,59 +1983,303 @@
 </pre></div>
 
 </li>
+</ul>
+</li>
 <li>
 <h4 id="read-deep-link">Read deep link<a class="headerlink" href="#read-deep-link" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Retrieve Branch data from a deep link</p>
+</li>
+<li>
+<p>Best practice to receive data from the <code>listener</code> (to prevent a race condition)</p>
+<div class="codehilite"><pre><span></span><span class="c1">// listener (within Main Activity&#39;s onStart)</span>
+<span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">initSession</span><span class="o">(</span><span class="k">new</span> <span class="n">Branch</span><span class="o">.</span><span class="na">BranchReferralInitListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Branch Link Data</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onInitFinished</span><span class="o">(</span><span class="n">JSONObject</span> <span class="n">referringParams</span><span class="o">,</span> <span class="n">BranchError</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">error</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">Log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="s">&quot;BRANCH SDK&quot;</span><span class="o">,</span> <span class="n">referringParams</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="n">Log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="s">&quot;BRANCH SDK&quot;</span><span class="o">,</span> <span class="n">error</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">},</span> <span class="k">this</span><span class="o">.</span><span class="na">getIntent</span><span class="o">().</span><span class="na">getData</span><span class="o">(),</span> <span class="k">this</span><span class="o">);</span>
+
+<span class="c1">// latest</span>
+<span class="n">JSONObject</span> <span class="n">sessionParams</span> <span class="o">=</span> <span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">()).</span><span class="na">getLatestReferringParams</span><span class="o">();</span>
+
+<span class="c1">// first</span>
+<span class="n">JSONObject</span> <span class="n">installParams</span> <span class="o">=</span> <span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">()).</span><span class="na">getFirstReferringParams</span><span class="o">();</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h4 id="navigate-to-content">Navigate to content<a class="headerlink" href="#navigate-to-content" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Handled within <code>Branch.initSession()</code></p>
+</li>
+<li>
+<p>Branch allows you to pass any custom key-value from URLs to your app. Use this data to navigate to content, display a personalized welcome screen, login a user, offer a promotion, etc.</p>
+<div class="codehilite"><pre><span></span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h4 id="display-content">Display content<a class="headerlink" href="#display-content" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>List content on <code>Google Index Search</code></p>
+</li>
+<li>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+<div class="codehilite"><pre><span></span><span class="n">buo</span><span class="o">.</span><span class="na">listOnGoogleSearch</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
+</pre></div>
+
+</li>
+<li>
+<p>Needs <code>build.gradle</code> library</p>
+<div class="codehilite"><pre><span></span><span class="n">compile</span> <span class="err">&#39;</span><span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">:</span><span class="n">play</span><span class="o">-</span><span class="n">services</span><span class="o">-</span><span class="n">appindexing</span><span class="o">:</span><span class="mf">9.</span><span class="o">+</span><span class="err">&#39;</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h4 id="track-content">Track content<a class="headerlink" href="#track-content" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Track how many times a piece of content is viewed</p>
+</li>
+<li>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+</li>
+<li>
+<p>Uses <a href="#track-content-properties">Track content properties</a></p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/content">Branch Dashboard</a></p>
+<div class="codehilite"><pre><span></span><span class="n">buo</span><span class="o">.</span><span class="na">userCompletedAction</span><span class="o">(</span><span class="n">BranchEvent</span><span class="o">.</span><span class="na">VIEW</span><span class="o">);</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h4 id="track-users">Track users<a class="headerlink" href="#track-users" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="n">Branch</span> <span class="n">branch</span> <span class="o">=</span> <span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">());</span>
-<span class="n">branch</span><span class="o">.</span><span class="na">setIdentity</span><span class="o">(</span><span class="n">your</span> <span class="n">user</span> <span class="n">id</span><span class="o">);</span> <span class="c1">// your user id should not exceed 127 characters</span>
+<ul>
+<li>
+<p>Sets the identity of a user (email, ID, UUID, etc) for events, deep links, and referrals</p>
+</li>
+<li>
+<p><code>127</code> character max for user id</p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/identities">Branch Dashboard</a>  </p>
+<div class="codehilite"><pre><span></span><span class="c1">// login</span>
+<span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">()).</span><span class="na">setIdentity</span><span class="o">(</span><span class="s">&quot;your_user_id&quot;</span><span class="o">);</span>
+
+<span class="c1">// logout</span>
+<span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">()).</span><span class="na">logout</span><span class="o">();</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span><span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">()).</span><span class="na">logout</span><span class="o">();</span>
-</pre></div>
-
+</li>
+</ul>
 </li>
 <li>
 <h4 id="track-events">Track events<a class="headerlink" href="#track-events" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="n">Branch</span> <span class="n">branch</span> <span class="o">=</span> <span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">());</span>
-<span class="n">branch</span><span class="o">.</span><span class="na">userCompletedAction</span><span class="o">(</span><span class="s">&quot;your_custom_event&quot;</span><span class="o">);</span>
-</pre></div>
+<ul>
+<li>
+<p>Registers a custom event</p>
+</li>
+<li>
+<p>Events named <code>open</code>, <code>close</code>, <code>install</code>, and <code>referred session</code> are Branch restricted</p>
+</li>
+<li>
+<p><code>63</code> character max for event name</p>
+</li>
+<li>
+<p>Best to <a href="#track-users">Track users</a> before <a href="#track-events">Track events</a> to associate a custom event to a user</p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/events">Branch Dashboard</a></p>
+<div class="codehilite"><pre><span></span><span class="c1">// option 1</span>
+<span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">()).</span><span class="na">userCompletedAction</span><span class="o">(</span><span class="s">&quot;your_custom_event&quot;</span><span class="o">);</span>
 
-<div class="codehilite"><pre><span></span><span class="n">Branch</span> <span class="n">branch</span> <span class="o">=</span> <span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">());</span>
-<span class="n">branch</span><span class="o">.</span><span class="na">userCompletedAction</span><span class="o">(</span><span class="s">&quot;your_custom_event&quot;</span><span class="o">,</span> <span class="o">(</span><span class="n">JSONObject</span><span class="o">)</span><span class="n">appState</span><span class="o">);</span> <span class="c1">// same 63 characters max limit</span>
+<span class="c1">// option 2 with metadata</span>
+<span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">()).</span><span class="na">userCompletedAction</span><span class="o">(</span><span class="s">&quot;your_custom_event&quot;</span><span class="o">,</span> <span class="o">(</span><span class="n">JSONObject</span><span class="o">)</span><span class="n">appState</span><span class="o">);</span>
 </pre></div>
 
 </li>
-<li>
-<h4 id="track-commerce">Track commerce<a class="headerlink" href="#track-commerce" title="Permanent link">&para;</a></h4>
+</ul>
 </li>
 <li>
 <h4 id="handle-referrals">Handle referrals<a class="headerlink" href="#handle-referrals" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Referral points are obtained from events triggered by users from rules created on the <a href="https://dashboard.branch.io/referrals/rules">Branch Dashboard</a></p>
+</li>
+<li>
+<p>Validate on the <a href="https://dashboard.branch.io/referrals/analytics">Branch Dashboard</a></p>
+</li>
+<li>
+<p>Reward credits with the <a href="../../../pages/analytics/referrals/">Referral guide</a></p>
+</li>
+<li>
+<p>Redeem credits</p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">()).</span><span class="na">redeemRewards</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
+</pre></div>
+
+</li>
+<li>
+<p>Load credits</p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">()).</span><span class="na">loadRewards</span><span class="o">(</span><span class="k">new</span> <span class="n">BranchReferralStateChangedListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onStateChanged</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">changed</span><span class="o">,</span> <span class="n">Branch</span><span class="o">.</span><span class="na">BranchError</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// changed boolean will indicate if the balance changed from what is currently in memory</span>
+
+        <span class="c1">// will return the balance of the current user&#39;s credits</span>
+        <span class="kt">int</span> <span class="n">credits</span> <span class="o">=</span> <span class="n">branch</span><span class="o">.</span><span class="na">getCredits</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+</pre></div>
+
+</li>
+<li>
+<p>Load history</p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">()).</span><span class="na">getCreditHistory</span><span class="o">(</span><span class="k">new</span> <span class="n">BranchListResponseListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onReceivingResponse</span><span class="o">(</span><span class="n">JSONArray</span> <span class="n">list</span><span class="o">,</span> <span class="n">Branch</span><span class="o">.</span><span class="na">BranchError</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">error</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// show the list in your app</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="n">Log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="s">&quot;MyApp&quot;</span><span class="o">,</span> <span class="n">error</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 </ul>
 <h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">&para;</a></h4>
+<h4 id="track-content-properties">Track content properties<a class="headerlink" href="#track-content-properties" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Used for <a href="#track-content">Track content</a></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BNCRegisterViewEvent</td>
+<td>User viewed the object</td>
+</tr>
+<tr>
+<td>BNCAddToWishlistEvent</td>
+<td>User added the object to their wishlist</td>
+</tr>
+<tr>
+<td>BNCAddToCartEvent</td>
+<td>User added object to cart</td>
+</tr>
+<tr>
+<td>BNCPurchaseInitiatedEvent</td>
+<td>User started to check out</td>
+</tr>
+<tr>
+<td>BNCPurchasedEvent</td>
+<td>User purchased the item</td>
+</tr>
+<tr>
+<td>BNCShareInitiatedEvent</td>
+<td>User started to share the object</td>
+</tr>
+<tr>
+<td>BNCShareCompletedEvent</td>
+<td>User completed a share</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
 </li>
 <li>
-<h4 id="simulate-an-install">Simulate an install<a class="headerlink" href="#simulate-an-install" title="Permanent link">&para;</a></h4>
+<h4 id="universal-object-best-practices">Universal object best practices<a class="headerlink" href="#universal-object-best-practices" title="Permanent link">&para;</a></h4>
+<ul>
+<li>To make sure your analytics are correct, and your content is ranking on Spotlight effectively.<ul>
+<li>Do<ul>
+<li>Set the <code>canonicalIdentifier</code> to a unique, de-duped value across instances of the app</li>
+<li>Ensure that the <code>title</code>, <code>contentDescription</code> and <code>imageUrl</code> properly represent the object</li>
+<li>Initialize the Branch Universal Object and call userCompletedAction with the <code>BranchEvent.VIEW</code> on page load</li>
+<li>Call showShareSheet and createShortLink later in the life cycle, when the user takes an action that needs a link</li>
+<li>Call the additional object events (purchase, share completed, etc) when the corresponding user action is taken</li>
+</ul>
+</li>
+<li>Don't<ul>
+<li>Don't set the same <code>title</code>, <code>contentDescription</code> and <code>imageUrl</code> across all objects</li>
+<li>Don't wait to initialize the object and register views until the user goes to share</li>
+<li>Don't wait to initialize the object until you conveniently need a link</li>
+<li>Don't create many objects at once and register views in a <code>for</code> loop.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<h4 id="sample-app">Sample app<a class="headerlink" href="#sample-app" title="Permanent link">&para;</a></h4>
+<h4 id="using-bnclt-or-a-custom-link-domain">Using bnc.lt or a custom link domain<a class="headerlink" href="#using-bnclt-or-a-custom-link-domain" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><em>bnc.lt link domain</em></p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">&quot;com.yourapp.your_activity&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- App Link your activity to Branch links--&gt;</span>
+    <span class="nt">&lt;intent-filter</span> <span class="na">android:autoVerify=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span> <span class="nt">/&gt;</span>
+         <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;bnc.lt&quot;</span> <span class="na">android:pathPrefix=</span><span class="s">&quot;/LVeu&quot;</span> <span class="nt">/&gt;</span> 
+         <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;bnc.lt&quot;</span> <span class="na">android:pathPrefix=</span><span class="s">&quot;/eVeu&quot;</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;/intent-filter&gt;</span>
+<span class="nt">&lt;/activity&gt;</span>
+</pre></div>
+
 </li>
 <li>
-<h4 id="android-instant-app">Android instant app<a class="headerlink" href="#android-instant-app" title="Permanent link">&para;</a></h4>
+<p><em>custom link domain</em></p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">&quot;com.yourapp.your_activity&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- App Link your activity to Branch links--&gt;</span>
+    <span class="nt">&lt;intent-filter</span> <span class="na">android:autoVerify=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span> <span class="nt">/&gt;</span>
+         <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;your.app.com&quot;</span> <span class="na">android:pathPrefix=</span><span class="s">&quot;/LVeu&quot;</span> <span class="nt">/&gt;</span> 
+         <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;your.app.com&quot;</span> <span class="na">android:pathPrefix=</span><span class="s">&quot;/eVeu&quot;</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;/intent-filter&gt;</span>
+<span class="nt">&lt;/activity&gt;</span>
+</pre></div>
+
+</li>
+<li>
+<p>Change the following values to match your <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></p>
+<ul>
+<li><code>/LVeu</code> (live)</li>
+<li><code>/eVeu</code> (test)</li>
+<li><code>your.app.com</code></li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
                 
