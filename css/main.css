@@ -16,6 +16,14 @@
     display: block;
   }
 }
+.branch-nav-header {
+  cursor: default;
+  padding-top: 1.25em;
+  font-weight: 700;
+}
+.branch-nav-header:hover {
+  color: black !important;
+}
 
 
 
@@ -42,19 +50,6 @@
 }
 .tab-code-content.active {
   display: block;
-}
-
-
-
-/* ////////////////////////////// */
-/* TABLE OF CONTENTS */
-/* ////////////////////////////// */
-.md-sidebar--secondary .md-sidebar__inner {
-  border-left: .1rem solid rgba(0,0,0,.07);
-  border-right: none;
-}
-.md-sidebar--secondary .md-nav--secondary {
-  border: none;
 }
 
 
@@ -216,25 +211,6 @@ a.algolia-docsearch-footer--logo {
 
 
 /* ////////////////////////////// */
-/* HEADER GITHUB STATS */
-/* ////////////////////////////// */
-/*.md-nav__source, .md-source__facts, .md-source__icon {
-  display: none;
-}
-
-.md-source__repository {
-  font-weight: 400;
-  font-size: 1.8rem;
-  overflow: visible;
-}
-
-.md-nav__link[data-md-state=blur] {
-  text-decoration: line-through;
-}*/
-
-
-
-/* ////////////////////////////// */
 /* IMAGES */
 /* ////////////////////////////// */
 .third {
@@ -252,3 +228,38 @@ a.algolia-docsearch-footer--logo {
 .full-width {
   width: 100%;
 }
+
+
+
+
+/* ////////////////////////////// */
+/* TABLE OF CONTENTS */
+/* ////////////////////////////// */
+/* .md-sidebar--secondary .md-sidebar__inner {
+border-left: .1rem solid rgba(0,0,0,.07);
+border-right: none;
+}
+.md-sidebar--secondary .md-nav--secondary {
+border: none;
+}*/
+
+
+
+
+/* ////////////////////////////// */
+/* HEADER GITHUB STATS */
+/* ////////////////////////////// */
+/*.md-nav__source, .md-source__facts, .md-source__icon {
+display: none;
+}
+
+.md-source__repository {
+font-weight: 400;
+font-size: 1.8rem;
+overflow: visible;
+}
+
+.md-nav__link[data-md-state=blur] {
+text-decoration: line-through;
+}*/
+

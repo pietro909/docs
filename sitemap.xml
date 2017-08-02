@@ -82,6 +82,28 @@
     
         
     <url>
+     <loc>https://branchmetrics.github.io/docs/pages/web/deep-views/</loc>
+     <lastmod>2017-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/web/journeys/</loc>
+     <lastmod>2017-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/web/text-me-the-app/</loc>
+     <lastmod>2017-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>https://branchmetrics.github.io/docs/pages/links/behavior/</loc>
      <lastmod>2017-08-02</lastmod>
      <changefreq>daily</changefreq>
@@ -104,19 +126,31 @@
     
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/web/deep-views/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/analytics/behavior/</loc>
      <lastmod>2017-08-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/web/journeys/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/analytics/referrals/</loc>
      <lastmod>2017-08-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/web/text-me-the-app/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/analytics/growth-attribution/</loc>
+     <lastmod>2017-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/analytics/user-value attribution/</loc>
+     <lastmod>2017-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/analytics/revenue-attribution/</loc>
      <lastmod>2017-08-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -196,22 +230,6 @@
     
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/organic-search/firebase/</loc>
-     <lastmod>2017-08-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/organic-search/spotlight/</loc>
-     <lastmod>2017-08-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
      <loc>https://branchmetrics.github.io/docs/pages/emails/responsys/</loc>
      <lastmod>2017-08-02</lastmod>
      <changefreq>daily</changefreq>
@@ -252,6 +270,22 @@
     
         
     <url>
+     <loc>https://branchmetrics.github.io/docs/pages/organic-search/firebase/</loc>
+     <lastmod>2017-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/organic-search/spotlight/</loc>
+     <lastmod>2017-08-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>https://branchmetrics.github.io/docs/pages/app-to-app/android-instant-apps/</loc>
      <lastmod>2017-08-02</lastmod>
      <changefreq>daily</changefreq>
@@ -265,40 +299,6 @@
         
     <url>
      <loc>https://branchmetrics.github.io/docs/pages/app-to-app/facebook-app-invites/</loc>
-     <lastmod>2017-08-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/analytics/behavior/</loc>
-     <lastmod>2017-08-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/analytics/referrals/</loc>
-     <lastmod>2017-08-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/analytics/growth-attribution/</loc>
-     <lastmod>2017-08-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/analytics/user-value attribution/</loc>
-     <lastmod>2017-08-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/analytics/revenue-attribution/</loc>
      <lastmod>2017-08-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
