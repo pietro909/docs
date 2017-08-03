@@ -625,6 +625,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#universal-object" title="Universal Object" class="md-nav__link">
+    Universal Object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" title="Properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
         <li class="md-nav__item">
@@ -1445,6 +1465,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#universal-object" title="Universal Object" class="md-nav__link">
+    Universal Object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" title="Properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
         <li class="md-nav__item">
@@ -1995,6 +2035,78 @@
 <td>$twitter_player_height</td>
 <td></td>
 <td>Set the player’s height in pixels</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="universal-object">Universal Object<a class="headerlink" href="#universal-object" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<h4 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th align="center">Default</th>
+<th>Usage</th>
+<th align="center">Link Property</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>canonicalIdentifier</td>
+<td align="center"></td>
+<td><strong>(Required)</strong> This is the unique identifier for content that will help Branch dedupe across many instances of the same thing. Suitable options: a website with pathing, or a database with identifiers for entities</td>
+<td align="center"><code>$canonical_identifier</code></td>
+</tr>
+<tr>
+<td>canonicalUrl</td>
+<td align="center"></td>
+<td>The canonical URL, used for SEO purposes</td>
+<td align="center"><code>$canonical_url</code></td>
+</tr>
+<tr>
+<td>title</td>
+<td align="center"></td>
+<td>The name for the piece of content</td>
+<td align="center"><code>$og_title</code></td>
+</tr>
+<tr>
+<td>contentDescription</td>
+<td align="center"></td>
+<td>A description for the content</td>
+<td align="center"><code>$og_description</code></td>
+</tr>
+<tr>
+<td>contentImageUrl</td>
+<td align="center"></td>
+<td>The image URL for the content. Must be an absolute path</td>
+<td align="center"><code>$og_image_url</code></td>
+</tr>
+<tr>
+<td>price</td>
+<td align="center"></td>
+<td>The price of the item</td>
+<td align="center"><code>$amount</code></td>
+</tr>
+<tr>
+<td>currency</td>
+<td align="center"></td>
+<td>The currency representing the price in ISO 4217 currency code</td>
+<td align="center"><code>$currency</code></td>
+</tr>
+<tr>
+<td>contentIndexingMode</td>
+<td align="center"><code>"public"</code></td>
+<td>Can be set to either <code>"public"</code> or <code>"private"</code>. Public indicates that you’d like this content to be discovered by other apps.</td>
+<td align="center"><code>$publicly_indexable</code></td>
+</tr>
+<tr>
+<td>contentMetadata</td>
+<td align="center"></td>
+<td>Any custom key-value data e.g. <code>{ "custom": "data" }</code></td>
+<td align="center"></td>
 </tr>
 </tbody>
 </table>
