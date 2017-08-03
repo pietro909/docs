@@ -506,6 +506,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#track-content" title="Track content" class="md-nav__link">
+    Track content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#track-users" title="Track users" class="md-nav__link">
     Track users
   </a>
@@ -513,15 +520,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#handle-referrals" title="Handle referrals" class="md-nav__link">
-    Handle referrals
+  <a href="#track-events" title="Track events" class="md-nav__link">
+    Track events
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tracking-events" title="Tracking Events" class="md-nav__link">
-    Tracking Events
+  <a href="#track-commerce" title="Track commerce" class="md-nav__link">
+    Track commerce
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handle-referrals" title="Handle referrals" class="md-nav__link">
+    Handle referrals
   </a>
   
 </li>
@@ -540,8 +554,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#recommendations" title="Recommendations" class="md-nav__link">
-    Recommendations
+  <a href="#track-content-properties" title="Track content properties" class="md-nav__link">
+    Track content properties
   </a>
   
 </li>
@@ -725,6 +739,18 @@
   <li class="md-nav__item">
     <a href="../../links/data/" title="Link data" class="md-nav__link">
       Link data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../links/link-domain/" title="Link domain" class="md-nav__link">
+      Link domain
     </a>
   </li>
 
@@ -1571,6 +1597,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#track-content" title="Track content" class="md-nav__link">
+    Track content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#track-users" title="Track users" class="md-nav__link">
     Track users
   </a>
@@ -1578,15 +1611,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#handle-referrals" title="Handle referrals" class="md-nav__link">
-    Handle referrals
+  <a href="#track-events" title="Track events" class="md-nav__link">
+    Track events
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tracking-events" title="Tracking Events" class="md-nav__link">
-    Tracking Events
+  <a href="#track-commerce" title="Track commerce" class="md-nav__link">
+    Track commerce
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handle-referrals" title="Handle referrals" class="md-nav__link">
+    Handle referrals
   </a>
   
 </li>
@@ -1605,8 +1645,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#recommendations" title="Recommendations" class="md-nav__link">
-    Recommendations
+  <a href="#track-content-properties" title="Track content properties" class="md-nav__link">
+    Track content properties
   </a>
   
 </li>
@@ -1973,7 +2013,7 @@ carthage update
 <p>Delete your app from the device</p>
 </li>
 <li>
-<p>Compile your app <em>(<code>cordova run ios</code> <code>phonegap run ios</code> <code>ionic run ios</code>)</em></p>
+<p>Compile your app with Xcode</p>
 </li>
 <li>
 <p>Paste deep link in <code>Apple Notes</code></p>
@@ -1996,7 +2036,7 @@ carthage update
 <p>Delete your app from the device</p>
 </li>
 <li>
-<p>Compile your app <em>(<code>cordova run android</code> <code>phonegap run android</code> <code>ionic run android</code>)</em></p>
+<p>Compile your app with Android Studio</p>
 </li>
 <li>
 <p>Paste deep link in <code>Google Hangouts</code></p>
@@ -2031,7 +2071,12 @@ carthage update
 <li>
 <h4 id="create-content-reference">Create content reference<a class="headerlink" href="#create-content-reference" title="Permanent link">&para;</a></h4>
 <ul>
-<li>The <code>Branch Universal Object</code> encapsulates the thing you want to share</li>
+<li>
+<p>The <code>Branch Universal Object</code> encapsulates the thing you want to share (content or user)</p>
+</li>
+<li>
+<p>Uses the <a href="../../../pages/links/data/#universal-object">Universal Object Properties</a></p>
+</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="c1">// only canonicalIdentifier is required</span>
 <span class="kd">let</span> <span class="nx">branchUniversalObject</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">createBranchUniversalObject</span><span class="p">(</span><span class="s1">&#39;canonicalIdentifier&#39;</span><span class="p">,</span> <span class="p">{</span>
@@ -2044,6 +2089,20 @@ carthage update
 </li>
 <li>
 <h4 id="create-deep-link">Create deep link<a class="headerlink" href="#create-deep-link" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Creates a deep link URL with encapsulated data</p>
+</li>
+<li>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+</li>
+<li>
+<p>Uses <a href="../../../pages/links/data/">Deep Link Properties</a></p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/links">Branch Dashboard</a></p>
+</li>
+</ul>
 <div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nx">linkProperties</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">feature</span><span class="o">:</span> <span class="s1">&#39;share&#39;</span><span class="p">,</span>
     <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span>
@@ -2059,6 +2118,17 @@ carthage update
 </li>
 <li>
 <h4 id="share-deep-link">Share deep link<a class="headerlink" href="#share-deep-link" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Will generate a Branch deep link and tag it with the channel the user selects</p>
+</li>
+<li>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+</li>
+<li>
+<p>Uses <a href="../../../pages/links/data/">Deep Link Properties</a></p>
+</li>
+</ul>
 <div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nx">shareOptions</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">messageHeader</span><span class="o">:</span> <span class="s1">&#39;Check this out&#39;</span><span class="p">,</span> <span class="nx">messageBody</span><span class="o">:</span> <span class="s1">&#39;No really, check this out!&#39;</span> <span class="p">}</span>
 <span class="kd">let</span> <span class="nx">linkProperties</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">feature</span><span class="o">:</span> <span class="s1">&#39;share&#39;</span><span class="p">,</span> <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;RNApp&#39;</span> <span class="p">}</span>
 <span class="kd">let</span> <span class="nx">controlParams</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">$desktop_url</span><span class="o">:</span> <span class="s1">&#39;http://example.com/home&#39;</span><span class="p">,</span> <span class="nx">$ios_url</span><span class="o">:</span> <span class="s1">&#39;http://example.com/ios&#39;</span> <span class="p">}</span>
@@ -2068,6 +2138,17 @@ carthage update
 </li>
 <li>
 <h4 id="read-deep-link">Read deep link<a class="headerlink" href="#read-deep-link" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Retrieve Branch data from a deep link</p>
+</li>
+<li>
+<p>Best practice to receive data from the <code>listener</code> (to prevent a race condition)</p>
+</li>
+<li>
+<p>Listener</p>
+</li>
+</ul>
 <div class="codehilite"><pre><span></span><span class="c1">// Subscribe to incoming links (both Branch &amp; non-Branch)</span>
 <span class="nx">branch</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(({</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">params</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">params</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
@@ -2086,27 +2167,118 @@ carthage update
 </li>
 <li>
 <h4 id="display-content">Display content<a class="headerlink" href="#display-content" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>List content on iOS Spotlight</p>
+</li>
+<li>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+</li>
+</ul>
 <div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nx">spotlightResult</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branchUniversalObject</span><span class="p">.</span><span class="nx">listOnSpotlight</span><span class="p">()</span>
 </pre></div>
 
 </li>
 <li>
+<h4 id="track-content">Track content<a class="headerlink" href="#track-content" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Track how many times a piece of content is viewed</p>
+</li>
+<li>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+</li>
+<li>
+<p>Uses <a href="#track-content-properties">Track content properties</a></p>
+</li>
+<li>
+<p>Validate with the [Branch Dashboard](<a href="https://dashboard.branch.io/liveview/content">https://dashboard.branch.io/liveview/content</a></p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="nx">branch</span><span class="p">,</span> <span class="p">{</span> <span class="nx">RegisterViewEvent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-native-branch&#39;</span>
+<span class="nx">branchUniversalObject</span><span class="p">.</span><span class="nx">userCompletedAction</span><span class="p">(</span><span class="nx">RegisterViewEvent</span><span class="p">)</span>
+</pre></div>
+
+</li>
+<li>
 <h4 id="track-users">Track users<a class="headerlink" href="#track-users" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Sets the identity of a user (email, ID, UUID, etc) for events, deep links, and referrals</p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/identities">Branch Dashboard</a></p>
+</li>
+</ul>
 <div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">setIdentity</span><span class="p">(</span><span class="s1">&#39;theUserId&#39;</span><span class="p">)</span>
 <span class="nx">branch</span><span class="p">.</span><span class="nx">logout</span><span class="p">()</span>
 </pre></div>
 
 </li>
 <li>
-<h4 id="handle-referrals">Handle referrals<a class="headerlink" href="#handle-referrals" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nx">rewards</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">loadRewards</span><span class="p">()</span>
-<span class="kd">let</span> <span class="nx">redeemResult</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">redeemRewards</span><span class="p">(</span><span class="nx">amount</span><span class="p">,</span> <span class="nx">bucket</span><span class="p">)</span>
-<span class="kd">let</span> <span class="nx">creditHistory</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">getCreditHistory</span><span class="p">()</span>
+<h4 id="track-events">Track events<a class="headerlink" href="#track-events" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Track custom events</p>
+</li>
+<li>
+<p>Events named <code>open</code>, <code>close</code>, <code>install</code>, and <code>referred session</code> are Branch restricted</p>
+</li>
+<li>
+<p><code>63</code> max event name length</p>
+</li>
+<li>
+<p>Best to <a href="#track-users">Track users</a> before <a href="#track-events">Track events</a> to associate a custom event to a user</p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/events">Branch Dashboard</a></p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="nx">branchUniversalObject</span><span class="p">.</span><span class="nx">userCompletedAction</span><span class="p">(</span><span class="s1">&#39;Custom Action&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;value&#39;</span> <span class="p">})</span>
 </pre></div>
 
 </li>
 <li>
-<h4 id="tracking-events">Tracking Events<a class="headerlink" href="#tracking-events" title="Permanent link">&para;</a></h4>
+<h4 id="track-commerce">Track commerce<a class="headerlink" href="#track-commerce" title="Permanent link">&para;</a></h4>
+<p>TODO</p>
+</li>
+<li>
+<h4 id="handle-referrals">Handle referrals<a class="headerlink" href="#handle-referrals" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Referral points are obtained from events triggered by users from rules created on the <a href="https://dashboard.branch.io/referrals/rules">Branch Dashboard</a></p>
+</li>
+<li>
+<p>Validate on the <a href="https://dashboard.branch.io/referrals/analytics">Branch Dashboard</a></p>
+</li>
+<li>
+<p>Reward credits with the <a href="../../../pages/analytics/referrals/">Referral guide</a></p>
+</li>
+<li>
+<p>Redeem rewards</p>
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nx">redeemResult</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">redeemRewards</span><span class="p">(</span><span class="nx">amount</span><span class="p">,</span> <span class="nx">bucket</span><span class="p">)</span>
+</pre></div>
+
+</li>
+<li>
+<p>Load rewards</p>
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nx">rewards</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">loadRewards</span><span class="p">()</span>
+</pre></div>
+
+</li>
+<li>
+<p>Load history</p>
+<div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nx">creditHistory</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">getCreditHistory</span><span class="p">()</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<h4 id="track-content-properties">Track content properties<a class="headerlink" href="#track-content-properties" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -2145,18 +2317,6 @@ carthage update
 </tr>
 </tbody>
 </table>
-<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="nx">branch</span><span class="p">,</span> <span class="p">{</span> <span class="nx">RegisterViewEvent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-native-branch&#39;</span>
-<span class="kd">let</span> <span class="nx">universalObject</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">createUniversalObject</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="p">{})</span>
-<span class="nx">universalObject</span><span class="p">.</span><span class="nx">userCompletedAction</span><span class="p">(</span><span class="nx">RegisterViewEvent</span><span class="p">)</span>
-</pre></div>
-
-</li>
-</ul>
-<h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<h4 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">&para;</a></h4>
-<p>TO-DO</p>
 </li>
 <li>
 <h4 id="sample-app">Sample app<a class="headerlink" href="#sample-app" title="Permanent link">&para;</a></h4>
