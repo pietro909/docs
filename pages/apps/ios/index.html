@@ -525,6 +525,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#deep-link-push-notifications" title="Deep link push notifications" class="md-nav__link">
+    Deep link push notifications
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1730,6 +1737,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#deep-link-push-notifications" title="Deep link push notifications" class="md-nav__link">
+    Deep link push notifications
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2157,7 +2171,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 </li>
 <li>
 <p><em>Objective-C</em></p>
-<div class="codehilite"><pre><span></span>
+<div class="codehilite"><pre><span></span><span class="n">TODO</span>
 </pre></div>
 
 </li>
@@ -2353,6 +2367,32 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 </tr>
 </tbody>
 </table>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="deep-link-push-notifications">Deep link push notifications<a class="headerlink" href="#deep-link-push-notifications" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Include the Branch push notification handler in <a href="#initialize-branch">Initialize Branch</a></p>
+</li>
+<li>
+<p>Add a Branch deep link in your push notification  <code>payload</code> </p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;aps&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;alert&quot;</span><span class="p">:</span> <span class="s2">&quot;Push notification with a Branch deep link&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;badge&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+  <span class="p">},</span>
+<span class="hll">  <span class="nt">&quot;branch&quot;</span><span class="p">:</span> <span class="s2">&quot;https://s3z3.app.link/u3fzDwyyjF&quot;</span>
+</span><span class="p">}</span>
+</pre></div>
+
+<ul>
+<li>Replace <code>https://s3z3.app.link/u3fzDwyyjF</code> with your deep link</li>
+</ul>
+</li>
+<li>
+<p>Read deep link data from <code>Branch.getInstance().initSession</code> <a href="#initialize-branch">Initialize Branch</a> (<a href="http://i.imgur.com/5QHWDX9.gif">demo</a>)</p>
 </li>
 </ul>
 </li>

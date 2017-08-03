@@ -475,6 +475,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#sample-testing-apps" title="Sample testing apps" class="md-nav__link">
+    Sample testing apps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulate-an-install" title="Simulate an install" class="md-nav__link">
+    Simulate an install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#universal-object-best-practices" title="Universal Object best practices" class="md-nav__link">
     Universal Object best practices
   </a>
@@ -498,6 +512,20 @@
           <li class="md-nav__item">
   <a href="#branch-with-fabric-answers" title="Branch with Fabric Answers" class="md-nav__link">
     Branch with Fabric Answers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-link-routes" title="Deep link routes" class="md-nav__link">
+    Deep link routes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-link-activity-finishes" title="Deep link activity finishes" class="md-nav__link">
+    Deep link activity finishes
   </a>
   
 </li>
@@ -561,6 +589,13 @@
           <li class="md-nav__item">
   <a href="#proguard-warning-or-errors-with-answers-shim-module" title="Proguard warning or errors with answers-shim module" class="md-nav__link">
     Proguard warning or errors with answers-shim module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unable-to-open-this-link-error" title="Unable to open this link error" class="md-nav__link">
+    Unable to open this link error
   </a>
   
 </li>
@@ -1696,6 +1731,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#sample-testing-apps" title="Sample testing apps" class="md-nav__link">
+    Sample testing apps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulate-an-install" title="Simulate an install" class="md-nav__link">
+    Simulate an install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#universal-object-best-practices" title="Universal Object best practices" class="md-nav__link">
     Universal Object best practices
   </a>
@@ -1719,6 +1768,20 @@
           <li class="md-nav__item">
   <a href="#branch-with-fabric-answers" title="Branch with Fabric Answers" class="md-nav__link">
     Branch with Fabric Answers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-link-routes" title="Deep link routes" class="md-nav__link">
+    Deep link routes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-link-activity-finishes" title="Deep link activity finishes" class="md-nav__link">
+    Deep link activity finishes
   </a>
   
 </li>
@@ -1782,6 +1845,13 @@
           <li class="md-nav__item">
   <a href="#proguard-warning-or-errors-with-answers-shim-module" title="Proguard warning or errors with answers-shim module" class="md-nav__link">
     Proguard warning or errors with answers-shim module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unable-to-open-this-link-error" title="Unable to open this link error" class="md-nav__link">
+    Unable to open this link error
   </a>
   
 </li>
@@ -1924,19 +1994,19 @@
 </span><span class="hll">                <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;uobg-alternate.app.link&quot;</span> <span class="nt">/&gt;</span>
 </span>            <span class="nt">&lt;/intent-filter&gt;</span>
         <span class="nt">&lt;/activity&gt;</span>
-<span class="hll">
-</span><span class="hll">        <span class="c">&lt;!-- Branch init --&gt;</span>
+
+<span class="hll">        <span class="c">&lt;!-- Branch init --&gt;</span>
 </span><span class="hll">        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.BranchKey&quot;</span> <span class="na">android:value=</span><span class="s">&quot;key_live_gdzsepIaUf7wG3dEWb3aBkmcutm0PwJa&quot;</span> <span class="nt">/&gt;</span>
 </span><span class="hll">        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.BranchKey.test&quot;</span> <span class="na">android:value=</span><span class="s">&quot;key_test_edwDakKcMeWzJ3hC3aZs9kniyuaWGCTa&quot;</span> <span class="nt">/&gt;</span>
-</span>        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.TestMode&quot;</span> <span class="na">android:value=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
-<span class="hll">
-</span><span class="hll">        <span class="c">&lt;!-- Branch install referrer tracking (optional) --&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.TestMode&quot;</span> <span class="na">android:value=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+</span>
+<span class="hll">        <span class="c">&lt;!-- Branch install referrer tracking (optional) --&gt;</span>
 </span><span class="hll">        <span class="nt">&lt;receiver</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.referral.InstallListener&quot;</span> <span class="na">android:exported=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
 </span><span class="hll">            <span class="nt">&lt;intent-filter&gt;</span>
 </span><span class="hll">                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;com.android.vending.INSTALL_REFERRER&quot;</span> <span class="nt">/&gt;</span>
 </span><span class="hll">            <span class="nt">&lt;/intent-filter&gt;</span>
-</span>        <span class="nt">&lt;/receiver&gt;</span>
-
+</span><span class="hll">        <span class="nt">&lt;/receiver&gt;</span>
+</span>
     <span class="nt">&lt;/application&gt;</span>
 
 <span class="nt">&lt;/manifest&gt;</span>
@@ -2629,6 +2699,48 @@
 <h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
+<h4 id="sample-testing-apps">Sample testing apps<a class="headerlink" href="#sample-testing-apps" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><a href="https://github.com/BranchMetrics/Branch-Example-Deep-Linking-Branchster-Android">Branchsters</a></p>
+</li>
+<li>
+<p><a href="https://github.com/BranchMetrics/android-branch-deep-linking/tree/master/Branch-SDK-TestBed">Testbed</a></p>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="simulate-an-install">Simulate an install<a class="headerlink" href="#simulate-an-install" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Need to bypass the device's hardware_id</p>
+<ul>
+<li>
+<p>Set <code>true</code> in your <code>AndroidManifest.xml</code></p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.TestMode&quot;</span> <span class="na">android:value=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+
+</li>
+<li>
+<p>Do not use <code>TestMode</code> in production or in the Google Play Store</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Uninstall your app from the device</p>
+</li>
+<li>
+<p>Click on any Branch deep link (will navigate to the fallback URL since the app is not installed)</p>
+</li>
+<li>
+<p>Reinstall your app</p>
+</li>
+<li>
+<p>Read deep link data from <code>Branch.initSession()</code> for <code>+is_first_session=true</code></p>
+</li>
+</ul>
+</li>
+<li>
 <h4 id="universal-object-best-practices">Universal Object best practices<a class="headerlink" href="#universal-object-best-practices" title="Permanent link">&para;</a></h4>
 <ul>
 <li>To make sure your analytics are correct, and your content is ranking on Spotlight effectively.<ul>
@@ -2748,6 +2860,54 @@
 <div class="codehilite"><pre><span></span>compile (&#39;io.branch.sdk.android:library:2.+&#39;) {
   exclude module: &#39;answers-shim&#39;
 }   
+</pre></div>
+
+</li>
+</ul>
+</li>
+<li>
+<h4 id="deep-link-routes">Deep link routes<a class="headerlink" href="#deep-link-routes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Loads a specific URI path from <code>$deeplink_path</code> or <code>$android_deeplink_path</code></p>
+</li>
+<li>
+<p>Not recommend (better to route within your <code>Branch.initSession()</code>)</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>&lt;meta-data android:name=&quot;io.branch.sdk.auto_link_path&quot; android:value=&quot;custom/path/*,another/path/&quot; /&gt;
+</pre></div>
+
+</li>
+<li>
+<h4 id="deep-link-activity-finishes">Deep link activity finishes<a class="headerlink" href="#deep-link-activity-finishes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Be notified when the deep link Activity finishes</li>
+</ul>
+<div class="codehilite"><pre><span></span>&lt;meta-data android:name=&quot;io.branch.sdk.auto_link_request_code&quot; android:value=&quot;@integer/AutoDeeplinkRequestCode&quot; /&gt;
+</pre></div>
+
+<ul>
+<li>
+<p><em>Java</em></p>
+<div class="codehilite"><pre><span></span>@Override
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+
+    //Checking if the previous activity is launched on branch Auto deep link.
+    if(requestCode == getResources().getInteger(R.integer.AutoDeeplinkRequestCode)){
+        //Decide here where  to navigate  when an auto deep linked activity finishes.
+        //For e.g. Go to HomeActivity or a  SignUp Activity.
+        Intent i = new Intent(getApplicationContext(), CreditHistoryActivity.class);
+        startActivity(i);
+    }
+}
+</pre></div>
+
+</li>
+<li>
+<p><em>Kotlin</em></p>
+<div class="codehilite"><pre><span></span>TODO
 </pre></div>
 
 </li>
@@ -2903,6 +3063,13 @@
 <h4 id="proguard-warning-or-errors-with-answers-shim-module">Proguard warning or errors with answers-shim module<a class="headerlink" href="#proguard-warning-or-errors-with-answers-shim-module" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Often caused when you exclude the <code>answers-shim</code>. Try adding -dontwarn com.crashlytics.android.answers.shim<code>to your</code>Proguard` file</li>
+</ul>
+</li>
+<li>
+<h4 id="unable-to-open-this-link-error">Unable to open this link error<a class="headerlink" href="#unable-to-open-this-link-error" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Happens whenever URI Scheme redirection fails.</li>
+<li>Make sure you do not have <code>$deeplink_path</code> or you have a <code>$deeplink_path</code> which your <code>AndroidManfiest.xml</code> can accept</li>
 </ul>
 </li>
 </ul>
