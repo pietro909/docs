@@ -573,22 +573,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pass-data-from-link-to-app" title="Pass data from link to app" class="md-nav__link">
-    Pass data from link to app
+  <a href="#pass-data-from-deep-link-to-app" title="Pass data from deep link to app" class="md-nav__link">
+    Pass data from deep link to app
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#redirect-when-app-is-not-installed" title="Redirect when app is not installed" class="md-nav__link">
-    Redirect when app is not installed
+  <a href="#set-redirect-when-app-is-not-installed" title="Set redirect when app is not installed" class="md-nav__link">
+    Set redirect when app is not installed
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#redirect-when-app-is-installed" title="Redirect when app is installed" class="md-nav__link">
-    Redirect when app is installed
+  <a href="#set-redirect-when-app-is-installed" title="Set redirect when app is installed" class="md-nav__link">
+    Set redirect when app is installed
   </a>
   
 </li>
@@ -1404,22 +1404,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pass-data-from-link-to-app" title="Pass data from link to app" class="md-nav__link">
-    Pass data from link to app
+  <a href="#pass-data-from-deep-link-to-app" title="Pass data from deep link to app" class="md-nav__link">
+    Pass data from deep link to app
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#redirect-when-app-is-not-installed" title="Redirect when app is not installed" class="md-nav__link">
-    Redirect when app is not installed
+  <a href="#set-redirect-when-app-is-not-installed" title="Set redirect when app is not installed" class="md-nav__link">
+    Set redirect when app is not installed
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#redirect-when-app-is-installed" title="Redirect when app is installed" class="md-nav__link">
-    Redirect when app is installed
+  <a href="#set-redirect-when-app-is-installed" title="Set redirect when app is installed" class="md-nav__link">
+    Set redirect when app is installed
   </a>
   
 </li>
@@ -1482,7 +1482,7 @@
 <h4 id="app-is-not-installed">App is not installed<a class="headerlink" href="#app-is-not-installed" title="Permanent link">&para;</a></h4>
 <ul>
 <li>User <code>clicks</code> on a Branch deep link</li>
-<li>Device navigates to the App Store, Google Playstore, or Fallback URL</li>
+<li>Device <code>navigates</code> to the App Store, Google Playstore, or Fallback URL</li>
 <li>User <code>installs</code> and <code>opens</code> app</li>
 <li>Branch passes deep link <code>data</code> into app</li>
 </ul>
@@ -1491,38 +1491,42 @@
 <h2 id="custom-behavior">Custom behavior<a class="headerlink" href="#custom-behavior" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="pass-data-from-link-to-app">Pass data from link to app<a class="headerlink" href="#pass-data-from-link-to-app" title="Permanent link">&para;</a></h4>
+<h4 id="pass-data-from-deep-link-to-app">Pass data from deep link to app<a class="headerlink" href="#pass-data-from-deep-link-to-app" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>https://s3z3.app.link/fzmLEhobLD?$custom_data=123</code> </li>
-<li>TODO dashboard TODO sdks</li>
+<li>Add query string <code>https://s3z3.app.link/fzmLEhobLD?$custom_data=123</code> </li>
+<li>Add link data (TODO)</li>
+<li>Add quick link key-values (TODO)</li>
 </ul>
 </li>
 <li>
-<h4 id="redirect-when-app-is-not-installed">Redirect when app is not installed<a class="headerlink" href="#redirect-when-app-is-not-installed" title="Permanent link">&para;</a></h4>
+<h4 id="set-redirect-when-app-is-not-installed">Set redirect when app is not installed<a class="headerlink" href="#set-redirect-when-app-is-not-installed" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>https://name.app.link?$ios_url=https://example.com</code> query string</li>
-<li><code>$ios_url = 'https://example.com'</code> added to <a href="#redirections">link data</a></li>
-<li><code>$fallback_url = 'https://example.com'</code> added to <a href="#redirections">link data</a></li>
-<li><code>$ios_deepview = 'deepviewId'</code> added to <a href="#deepview">link data</a></li>
-<li><code>Deep view</code> enabled globally on the <a href="https://dashboard.branch.io/web/deepviews">Branch Dashboard</a></li>
-<li><code>iOS Custom URL</code> added on the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
-<li><code>Default URL</code> added on the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
+<li>Add query string <code>https://s3z3.app.link?$ios_url=https://example.com</code></li>
+<li>Add link data <code>$ios_url = 'https://example.com'</code> (<a href="../../../pages/links/data/#redirections">docs</a>)</li>
+<li>Add link data <code>$fallback_url = 'https://example.com'</code> (<a href="../../../pages/links/data/#redirections">docs</a>)</li>
+<li>Add link data for a deep view <code>$ios_deepview = 'deepviewId'</code>  (<a href="../../../pages/links/data/#deepview">docs</a>)</li>
+<li>Enable a <code>Deep View</code> globally on the <a href="https://dashboard.branch.io/web/deepviews">Branch Dashboard</a></li>
+<li>Add <code>iOS/Android Custom URL</code> on the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
+<li>Add <code>Default URL</code> (<code>$fallback_url</code>) on the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
 <li><em>(ordered by precedence)</em></li>
 </ul>
 </li>
 <li>
-<h4 id="redirect-when-app-is-installed">Redirect when app is installed<a class="headerlink" href="#redirect-when-app-is-installed" title="Permanent link">&para;</a></h4>
+<h4 id="set-redirect-when-app-is-installed">Set redirect when app is installed<a class="headerlink" href="#set-redirect-when-app-is-installed" title="Permanent link">&para;</a></h4>
 <ul>
 <li><em>iOS:</em> need to override <code>Universal Links</code><ul>
-<li>Add <code>$web_only = true</code> <a href="#redirections">docs</a></li>
-<li>Add redirect <code>$ios_url = 'https://google.com'</code></li>
-<li><em>or</em> Append <code>/e/</code> by <code>https://s3z3.app.link/fzmLEhobLD</code> -&gt; <code>https://s3z3.app.link/e/fzmLEhobLD</code></li>
+<li>Add <code>$web_only = true</code> (<a href="../../../pages/links/data/#redirections">docs</a>)</li>
+<li>Add redirect <code>$ios_url = 'https://google.com'</code> (<a href="../../../pages/links/data/#redirections">docs</a>)</li>
+<li><em>or:</em> Append <code>/e/</code> to the deep link<ul>
+<li>e.g. <code>https://s3z3.app.link/fzmLEhobLD</code> -&gt; <code>https://s3z3.app.link/e/fzmLEhobLD</code></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><em>Android:</em> need to override <code>App Links</code><ul>
 <li>Uncheck <code>Enable App Links</code> and <code>Save</code> the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
-<li>Add redirect <code>$android_url = 'https://google.com'</code></li>
-<li>Add a broken URI Scheme with <code>$android_deeplink_path = 'random'</code></li>
+<li>Add redirect <code>$android_url = 'https://google.com'</code> (<a href="../../../pages/links/data/#redirections">docs</a>)</li>
+<li>Add a broken URI Scheme with <code>$android_deeplink_path = 'random'</code> (<a href="../../../pages/links/data/#deep-linking">docs</a>)</li>
 </ul>
 </li>
 </ul>
