@@ -1157,7 +1157,7 @@
         }, 
         {
             "location": "/pages/apps/unity/", 
-            "text": "Integrate Branch\n\n\n\n\n\n\nConfigure Branch\n\n\n\n\n\n\nConfigure app\n\n\n\n\n\n\nInitialize Branch\n\n\n\n\n\n\nTest deep link\n\n\n\n\n\n\nImplement features\n\n\n\n\n\n\nCreate content reference\n\n\n\n\n\n\nCreate deep link\n\n\n\n\n\n\nShare deep link\n\n\n\n\n\n\nRead deep link\n\n\n\n\n\n\nNavigate to content\n\n\n\n\n\n\nDisplay content\n\n\n\n\n\n\nTrack content\n\n\n\n\n\n\nTrack users\n\n\n\n\n\n\nTrack events\n\n\n\n\n\n\nTrack commerce\n\n\n\n\n\n\nHandle referrals\n\n\n\n\n\n\nTroubleshoot issues\n\n\n\n\n\n\nRecommendations\n\n\n\n\n\n\nSample app", 
+            "text": "Integrate Branch\n\n\n\n\n\n\nConfigure Branch\n\n\n\n\n\n\nComplete your \nBranch Dashboard\n\n\n\n\n\n\n\n\nCustomize your app.link domain:\n\n\n\n\n\n\n\n\n\n\n\n\nGet the Branch SDK\n\n\n\n\n\n\nDownload the latest SDK version\n or clone our \nopen-source GitHub repository\n.\n\n\n\n\n\n\nImport the \nBranchUnityWrapper.unitypackage\n into your project by clicking \nAssets -\n Import Package\n.\n\n\n\n\n\n\n\n\n\n\nConfigure app\n\n\n\n\n\n\nAdd the Branch prefab asset to the \nfirst scene\n of your Unity project \n\n\n\n\n\n\nUpdate your Branch prefab\n\n\n\n\n\n\nDo not forget to click on the \nUpdate iOS Wrapper\n and the \nUpdate Android Manifest\n buttons once you are done.\n\n\n\n\n\n\n\n\nPrefab fields\n\n\n\n\n\n\n\n\nField name\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nSimulate Fresh Installs\n\n\nThis checkbox enables debug mode. This allows you to simulate fresh every time you uninstall and reinstall the app. Please make sure to uncheck this box before releasing your app.\n\n\n\n\n\n\nTest Mode\n\n\nThis checkbox picks the test key from your Branch prefab. If this box is unchecked, by default, your live Branch key is used.\n\n\n\n\n\n\nTest Branch Key\n\n\nThis is the test Branch key found on the \nLink Settings page\n of your Test Branch app\n\n\n\n\n\n\nTest Branch URI\n\n\nThis is the test URI scheme that you have set for your app on the \nLink Settings page\n for your Test Branch app\n\n\n\n\n\n\nTest Android Path Prefix\n\n\nThis field is only applicable if you are on the \nbnc.lt\n domain of your Test Branch app. You can find it underneath the field labeled SHA256 Cert Fingerprints on the \nLink Settings page\n once you\u2019ve enabled App Links. It will look something like this: \n/WSuf\n (the initial / character should be included).\n\n\n\n\n\n\nTest App Links\n\n\nThis field is applicable if you want to enable \nAPPLINKS\n and \nUNIVERSAL LINKS\n for your domain. Please make sure to add the correct domain found on the bottom of the \nLink Settings page\n of your Test Branch app. Add the -alternate domain to have your Branch links deeplink from your \nDeepviews\n and \nJourneys\n. If you are not using a \napp.links\n domain please write into \n\n\n\n\n\n\nLive Branch Key\n\n\nThis is the Live Branch key found on the \nLink Settings page\n of your Live Branch app\n\n\n\n\n\n\nLive Branch URI\n\n\nThis is the Live URI scheme that you have set for your app on the \nLink Settings page\n for your Live Branch app\n\n\n\n\n\n\nLive Android Path Prefix\n\n\nThis field is only applicable if you are on the \nbnc.lt\n domain \nLink Settings page\n for your Live Branch app. You can find it underneath the field labeled SHA256 Cert Fingerprints on the \nLink Settings page\n once you\u2019ve enabled App Links. It will look something like this: \n/WSuf\n (the initial / character should be included).\n\n\n\n\n\n\nLive App Links\n\n\nThis field is applicable if you want to enable \nAPPLINKS\n and \nUNIVERSAL LINKS\n for your domain. Please make sure to add the correct domain found on the bottom of the \nLink Settings page\n of your Live Branch app. Add the -alternate domain to have your Branch links deeplink from your \nDeepviews\n and \nJourneys\n. If you are not using a \napp.links\n domain please write into \n\n\n\n\n\n\n\n\n\n\nNote for Android\n\n\nOccasionally, Android will barf after you add our library due to generic issues unrelated to Branch. Please see this \nAndroid troubleshooting section\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInitialize Branch\n\n\n\n\n\n\nAdd Branch to your \nMonobehavior\n script of your \nfirst Scene\n\n\nusing\n \nUnityEngine\n;\n\n\nusing\n \nSystem.Collections\n;\n\n\n\npublic\n \nclass\n \nSpin\n \n:\n \nMonoBehaviour\n \n{\n\n\n    \n// Use this for initialization\n\n    \nvoid\n \nStart\n \n()\n \n{\n\n\n        \nBranch\n.\ninitSession\n(\nCallbackWithBranchUniversalObject\n);\n\n\n    \n}\n\n\n\n    \nvoid\n \nCallbackWithBranchUniversalObject\n(\nBranchUniversalObject\n \nbuo\n,\n \n\n                                            \nBranchLinkProperties\n \nlinkProps\n,\n \n\n                                            \nstring\n \nerror\n)\n \n{\n\n\n        \nif\n \n(\nerror\n \n!=\n \nnull\n)\n \n{\n\n\n            \nSystem\n.\nConsole\n.\nWriteLine\n(\nError : \n \n\n                                    \n+\n \nerror\n);\n\n\n        \n}\n \nelse\n \nif\n \n(\nlinkProperties\n.\ncontrolParams\n.\nCount\n \n \n0\n)\n \n{\n\n\n            \nSystem\n.\nConsole\n.\nWriteLine\n(\nDeeplink params : \n \n\n                                    \n+\n \nbuo\n.\nToJsonString\n()\n \n\n                                    \n+\n \nlinkProps\n.\nToJsonString\n());\n\n\n        \n}\n\n\n    \n}\n\n\n\n\n    \n// Update is called once per frame\n\n    \nvoid\n \nUpdate\n \n()\n \n{\n\n        \n//rotate 90 degress per second\n\n        \ntransform\n.\nRotate\n(\nVector3\n.\nup\n \n*\n \nTime\n.\ndeltaTime\n*\n90\n);\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest deep link\n\n\n\n\n\n\nCreate a Quick link\n on the Branch Dashboard\n\n\n\n\n\n\nDelete your app from the device\n\n\n\n\n\n\nPaste Quick link in \nGoogle Hangouts (Android)\n or \nNotes (iOS)\n\n\n\n\n\n\nClick on the Quick link to open your app\n\n\n\n\n\n\nCompile and download your app to your device\n\n\n\n\n\n\nYou should see deferred deep link data show in your app\n\n\n\n\n\n\n\n\n\n\nImplement features\n\n\n\n\n\n\nCreate content reference\n\n\n\n\n\n\nThe \nBranch Universal Object\n encapsulates the thing you want to share with your link\n\n\nBranchUniversalObject\n \nuniversalObject\n \n=\n \nnew\n \nBranchUniversalObject\n();\n\n\n// Content index mode: 0 - private mode, 1 - public mode\n\n\nuniversalObject\n.\ncontentIndexMode\n \n=\n \n1\n;\n\n\n//Identifier that helps Branch dedupe across many instances of the same content.\n\n\nuniversalObject\n.\ncanonicalIdentifier\n \n=\n \nid12345\n;\n\n\n// OG title\n\n\nuniversalObject\n.\ntitle\n \n=\n \nid12345 title\n;\n\n\n// OG Description\n\n\nuniversalObject\n.\ncontentDescription\n \n=\n \nMy awesome piece of content!\n;\n\n\n// OG Image\n\n\nuniversalObject\n.\nimageUrl\n \n=\n \nhttps://s3-us-west-1.amazonaws.com/branchhost/mosaic_og.png\n;\n\n\n// User defined key value pair\n\n\nuniversalObject\n.\nmetadata\n.\nAdd\n(\nfoo\n,\n \nbar\n);\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreate deep link\n\n\n\n\n\n\nAfter you have created a \nBranch Universal Object\n, Define Link Properties\n\n\nBranchLinkProperties\n \nlinkProperties\n \n=\n \nnew\n \nBranchLinkProperties\n();\n\n\nlinkProperties\n.\ntags\n.\nAdd\n(\ntag1\n);\n\n\nlinkProperties\n.\ntags\n.\nAdd\n(\ntag2\n);\n\n\n// Feature link is associated with. Eg. Sharing\n\n\nlinkProperties\n.\nfeature\n \n=\n \ninvite\n;\n\n\n// The channel where you plan on sharing the link Eg.Facebook, Twitter, SMS etc\n\n\nlinkProperties\n.\nchannel\n \n=\n \nTwitter\n;\n\n\n// The Campaign that drives this link\n\n\nlinkProperties\n.\ncampaign\n \n=\n \nreferral\n;\n\n\nlinkProperties\n.\nstage\n \n=\n \n2\n;\n\n\n// Parameters used to control Link behavior\n\n\nlinkProperties\n.\ncontrolParams\n.\nAdd\n(\n$desktop_url\n,\n \nhttp://example.com\n);\n\n\n\n\n\n\n\n\n\nGenerate a Branch link\n\n\nBranch\n.\ngetShortURL\n(\nuniversalObject\n,\n \nlinkProperties\n,\n \n(\nparams\n,\n \nerror\n)\n \n=\n \n{\n\n    \nif\n \n(\nerror\n \n!=\n \nnull\n)\n \n{\n\n        \nDebug\n.\nLogError\n(\nBranch.getShortURL failed: \n \n+\n \nerror\n);\n\n    \n}\n \nelse\n \nif\n \n(\nparams\n \n!=\n \nnull\n)\n \n{\n\n        \nDebug\n.\nLog\n(\nBranch.getShortURL shared params: \n \n+\n \nurl\n);\n\n    \n}\n\n\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\nShare deep link\n\n\n\n\n\n\nShare deep links between users and apps\n\n\nBranch\n.\nshareLink\n(\nuniversalObject\n,\n \nlinkProperties\n,\n \nSharing link: \n,\n \n(\nurl\n,\n \nerror\n)\n \n=\n \n{\n\n    \nif\n \n(\nerror\n \n!=\n \nnull\n)\n \n{\n\n        \nDebug\n.\nLogError\n(\nBranch.shareLink failed: \n \n+\n \nerror\n);\n\n    \n}\n \nelse\n \n{\n\n        \nDebug\n.\nLog\n(\nBranch.shareLink shared params: \n \n+\n \nurl\n);\n\n    \n}\n\n\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\nRead deep link\n\n\n\n\n\n\nRead Deeplink params from a \nBUO\n in your \nBranchInitSession callback\n\n\npublic\n \nvoid\n \nCallbackWithBranchUniversalObject\n(\nBranchUniversalObject\n \nuniversalObject\n,\n \nBranchLinkProperties\n \nlinkProperties\n,\n \nstring\n \nerror\n)\n \n{\n\n    \nif\n \n(\nerror\n \n!=\n \nnull\n)\n \n{\n\n        \nDebug\n.\nLogError\n(\nBranch Error: \n \n+\n \nerror\n);\n\n    \n}\n \nelse\n \n{\n\n        \nDebug\n.\nLog\n(\nBranch initialization completed: \n);\n\n        \nDebug\n.\nLog\n(\nUniversal Object: \n \n+\n \nuniversalObject\n.\nToJsonString\n());\n\n        \nDebug\n.\nLog\n(\nLink Properties: \n \n+\n \nlinkProperties\n.\nToJsonString\n());\n\n    \n}\n\n\n}\n\n\n\n\n\nRead session (install or open) parameters from anywhere after Branch initsession\n\n\nBranchUniversalObject\n \nobj\n \n=\n \nBranch\n.\ngetLatestReferringBranchUniversalObject\n();\n\n\nBranchLinkProperties\n \nlink\n \n=\n \nBranch\n.\ngetLatestReferringBranchLinkProperties\n();\n\n\n\n\n\n\n\nThis refereshes with every session (App Installs and App Opens)\n\n\n\n\nRead install (install or open) parameters from anywhere after Branch initsession\n\n\nBranchUniversalObject\n \nobj\n \n=\n \nBranch\n.\ngetFirstReferringBranchUniversalObject\n();\n\n\nBranchLinkProperties\n \nlink\n \n=\n \nBranch\n.\ngetFirstReferringBranchLinkProperties\n();\n\n\n\n\n\n\n\n\n\n\n\n\n\nNavigate and Display content\n\n\n\n\n\n\nUse the link parameters to decide which view you wish to load\n\n\npublic\n \nclass\n \nMyCoolBehaviorScript\n \n:\n \nMonoBehaviour\n \n{\n\n    \nvoid\n \nStart\n \n()\n \n{\n\n        \nBranch\n.\ninitSession\n(\ndelegate\n(\nDictionary\nstring\n,\n \nobject\n \nparameters\n,\n \nstring\n \nerror\n)\n \n{\n\n            \nif\n \n(\nparameters\n.\nContainsKey\n(\npicture_id\n)\n \n{\n\n                \n// load the Scene to show the picture\n\n                \nSceneManager\n.\nLoadSceneAsync\n(\nImageScene\n,\n \nLoadSceneMode\n.\nAdditive\n);\n\n            \n}\n \nelse\n \n{\n\n                \n// load your normal Scene\n\n                \nSceneManager\n.\nLoadSceneAsync\n(\nNormalScene\n,\n \nLoadSceneMode\n.\nSingle\n);\n\n            \n}\n\n        \n});\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrack content\n\n\n\n\n\n\nIf you want to track the number of times a user views a BUO content\n\n\nBranch\n.\nregisterView\n(\nuniversalObject\n);\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrack users\n\n\n\n\n\n\nSet User-Ids on Login/Register\n\n\nBranch\n.\nsetIdentity\n(\nyour user id\n);\n\n\n\n\n\n\n\n\n\nUnSet User-Ids on logout\n\n\nBranch\n.\nlogout\n();\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrack events\n\n\n\n\n\n\nTrack custom events\n\n\nBranch\n.\nuserCompletedAction\n(\nyour_custom_event\n);\n \n\n\n\n\n\n\n\n\nStore meta data with these custom events\n\n\nDictionary\nstring\n,\n \nobject\n \nstateItems\n \n=\n \nnew\n \nDictionary\nstring\n,\n \nobject\n\n\n{\n\n    \n{\n \nusername\n,\n \nJoe\n \n},\n\n    \n{\n \ndescription\n,\n \nJoe likes long walks on the beach...\n \n}\n\n\n};\n\n\nBranch\n.\nuserCompletedAction\n(\nyour_custom_event\n,\n \nstateItems\n);\n \n// same 63 characters max limit\n\n\n\n\n\n\n\n\n\n\n\n\n\nHandle referrals\n\n\n\n\n\n\nTypical Referral Flow\n\n\n\n\nSetup a Reward rule on your \nBranch Dashboard\n.\n\n\nReferrer has his/her identity set at \nlogin/signup\n\n\nReferrer \ncreates\n a Branch link.\n\n\nReferrer \nshares\n the Branch link.\n\n\nReferee clicks on the Branch link, installs the app.\n\n\nThe referee has his/her identity set at \nlogin/signup\n\n\nReferee \ntriggers a custom event\n after login/Signup.\n\n\nUse the following SDK methods to see a user's \ncurrent credits\n, \nredeem credits\n and check a user's entire \ncredit history\n.\n\n\n\n\n\n\n\n\nGet Reward balance\n\n\nBranch\n.\nloadRewards\n(\ndelegate\n(\nbool\n \nchanged\n,\n \nstring\n \nerror\n)\n \n{\n\n    \n// changed boolean will indicate if the balance changed from what is currently in memory\n\n\n    \n// will return the balance of the current user\ns credits\n\n    \nint\n \ncredits\n \n=\n \nBranch\n.\ngetCredits\n();\n\n\n});\n\n\n\n\n\n\n\n\n\nRedeem Rewards\n\n\nBranch\n.\nredeemRewards\n(\n5\n);\n\n\n\n\n\n\n\n\n\nGet Credit History\n\n\nBranch\n.\ngetCreditHistory\n(\ndelegate\n(\nList\nstring\n \nhistoryItems\n,\n \nstring\n \nerror\n)\n \n{\n\n    \nif\n \n(\nerror\n \n==\n \nnull\n)\n \n{\n\n    \n// process history\n\n    \n}\n\n\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\nTroubleshoot issues\n\n\n\n\n\n\niOS + Unity 4.6 Note\n\n\nBranch requires ARC, and we don\u2019t intend to add checks thoughout the SDK to try and support pre-ARC. \nHowever, you can add flags to the project to compile the Branch files with ARC. If you wish to do this \nadd \n-fobjc-arc\n to all Branch files.\n\n\n\n\nNote: we by default have this flag checked, but please check before building for iOS.\n\n\n\n\n\n\n\n\nAndroid - Using your own Custom Application Class\n\n\nIf you are using your own Custom Application class, you will need to add Branch android library into your project and call the following in method OnCreate():\n\n\nBranch\n.\ngetAutoInstance\n(\nthis\n.\ngetApplicationContext\n());\n\n\n\n\n\nIf you are using your own custom Activity class, please make sure that you are overridding the following Activities:\n\n\n@Override\n\n\npublic\n \nvoid\n \nonCreate\n(\nBundle\n \nsavedInstanceState\n)\n \n{\n\n    \nsuper\n.\nonCreate\n(\nsavedInstanceState\n);\n\n\n}\n\n\n\n@Override\n\n\npublic\n \nvoid\n \nonNewIntent\n(\nIntent\n \nintent\n)\n \n{\n\n    \nthis\n.\nsetIntent\n(\nintent\n);\n\n\n}\n\n\n\n\n\n\n\n\n\nSupport Branch with different Plugins\n\n\nThe Branch SDK has its own custom \nactivity\n and \napplication\n class. Other plugins that use their own \ncustom activity and application classes can cause \"conflicts\" between these classes. To resolve these conflicts:\n\n\n\n\nCreate a empty android library\n\n\nAdd the Branch plugin along with the other plugins into your project\n\n\nCreate a custom Activity and Application class that will contain the custom logic for all your plugins\n\n\nBuild your library\n\n\nAdd your library into Unity project\n\n\nChange android:name to name of your custom Application class in the \napplication\n tag of your Manifest\n\n\nChange android:name to name of your custom Activity class in the \nactivity\n tag of your Manifest\n\n\n\n\n\n\n\n\nSupport several IMPL_APP_CONTROLLER_SUBCLASS\n\n\nThe Branch Unity SDK plugin uses its own UnityAppController that expands default AppController. This is used to catch Universal Links.\n\n\n@interface\n \nBranchAppController\n \n:\n \nUnityAppController\n\n\n{\n\n\n}\n\n\n@end\n\n\n\n@implementation\n \nBranchAppController\n\n\n\n-\n \n(\nBOOL\n)\napplication\n:(\nUIApplication\n \n*)\napplication\n \ncontinueUserActivity\n:(\nNSUserActivity\n \n*)\nuserActivity\n \nrestorationHandler\n:(\nvoid\n \n(^)(\nNSArray\n \n*))\nrestorationHandler\n \n{\n\n    \nBOOL\n \nhandledByBranch\n \n=\n \n[[\nBranchUnityWrapper\n \nsharedInstance\n]\n \ncontinueUserActivity\n:\nuserActivity\n];\n\n    \nreturn\n \nhandledByBranch\n;\n\n\n}\n\n\n\n@end\n\n\n\nIMPL_APP_CONTROLLER_SUBCLASS\n(\nBranchAppController\n)\n\n\n\n\n\nSome Plugins expand the default AppController the same was as Branch does like Cardboard SDK plugin. To resolve conflicts:\n\n\n\n\nMerge all custom AppControllers in one.\n\n\nComment code in other AppControllers (or delete other AppControllers).\n\n\n\n\n\n\n\n\nSample app\n\n\n\n\nBranch Testbed app\n\n\nCode Samples\n for resolving conflicts with other 3rd party plugins", 
             "title": "Unity"
         }, 
         {
@@ -1167,22 +1167,37 @@
         }, 
         {
             "location": "/pages/apps/unity/#configure-branch", 
-            "text": "", 
+            "text": "Complete your  Branch Dashboard     Customize your app.link domain:", 
             "title": "Configure Branch"
         }, 
         {
+            "location": "/pages/apps/unity/#get-the-branch-sdk", 
+            "text": "Download the latest SDK version  or clone our  open-source GitHub repository .    Import the  BranchUnityWrapper.unitypackage  into your project by clicking  Assets -  Import Package .", 
+            "title": "Get the Branch SDK"
+        }, 
+        {
             "location": "/pages/apps/unity/#configure-app", 
-            "text": "", 
+            "text": "Add the Branch prefab asset to the  first scene  of your Unity project", 
             "title": "Configure app"
         }, 
         {
+            "location": "/pages/apps/unity/#update-your-branch-prefab", 
+            "text": "Do not forget to click on the  Update iOS Wrapper  and the  Update Android Manifest  buttons once you are done.", 
+            "title": "Update your Branch prefab"
+        }, 
+        {
+            "location": "/pages/apps/unity/#prefab-fields", 
+            "text": "Field name  Description      Simulate Fresh Installs  This checkbox enables debug mode. This allows you to simulate fresh every time you uninstall and reinstall the app. Please make sure to uncheck this box before releasing your app.    Test Mode  This checkbox picks the test key from your Branch prefab. If this box is unchecked, by default, your live Branch key is used.    Test Branch Key  This is the test Branch key found on the  Link Settings page  of your Test Branch app    Test Branch URI  This is the test URI scheme that you have set for your app on the  Link Settings page  for your Test Branch app    Test Android Path Prefix  This field is only applicable if you are on the  bnc.lt  domain of your Test Branch app. You can find it underneath the field labeled SHA256 Cert Fingerprints on the  Link Settings page  once you\u2019ve enabled App Links. It will look something like this:  /WSuf  (the initial / character should be included).    Test App Links  This field is applicable if you want to enable  APPLINKS  and  UNIVERSAL LINKS  for your domain. Please make sure to add the correct domain found on the bottom of the  Link Settings page  of your Test Branch app. Add the -alternate domain to have your Branch links deeplink from your  Deepviews  and  Journeys . If you are not using a  app.links  domain please write into     Live Branch Key  This is the Live Branch key found on the  Link Settings page  of your Live Branch app    Live Branch URI  This is the Live URI scheme that you have set for your app on the  Link Settings page  for your Live Branch app    Live Android Path Prefix  This field is only applicable if you are on the  bnc.lt  domain  Link Settings page  for your Live Branch app. You can find it underneath the field labeled SHA256 Cert Fingerprints on the  Link Settings page  once you\u2019ve enabled App Links. It will look something like this:  /WSuf  (the initial / character should be included).    Live App Links  This field is applicable if you want to enable  APPLINKS  and  UNIVERSAL LINKS  for your domain. Please make sure to add the correct domain found on the bottom of the  Link Settings page  of your Live Branch app. Add the -alternate domain to have your Branch links deeplink from your  Deepviews  and  Journeys . If you are not using a  app.links  domain please write into       Note for Android  Occasionally, Android will barf after you add our library due to generic issues unrelated to Branch. Please see this  Android troubleshooting section", 
+            "title": "Prefab fields"
+        }, 
+        {
             "location": "/pages/apps/unity/#initialize-branch", 
-            "text": "", 
+            "text": "Add Branch to your  Monobehavior  script of your  first Scene  using   UnityEngine ;  using   System.Collections ;  public   class   Spin   :   MonoBehaviour   { \n\n     // Use this for initialization \n     void   Start   ()   {           Branch . initSession ( CallbackWithBranchUniversalObject );       }       void   CallbackWithBranchUniversalObject ( BranchUniversalObject   buo ,                                                BranchLinkProperties   linkProps ,                                                string   error )   {           if   ( error   !=   null )   {               System . Console . WriteLine ( Error :                                         +   error );           }   else   if   ( linkProperties . controlParams . Count     0 )   {               System . Console . WriteLine ( Deeplink params :                                         +   buo . ToJsonString ()                                        +   linkProps . ToJsonString ());           }       }        // Update is called once per frame \n     void   Update   ()   { \n         //rotate 90 degress per second \n         transform . Rotate ( Vector3 . up   *   Time . deltaTime * 90 ); \n     }  }", 
             "title": "Initialize Branch"
         }, 
         {
             "location": "/pages/apps/unity/#test-deep-link", 
-            "text": "", 
+            "text": "Create a Quick link  on the Branch Dashboard    Delete your app from the device    Paste Quick link in  Google Hangouts (Android)  or  Notes (iOS)    Click on the Quick link to open your app    Compile and download your app to your device    You should see deferred deep link data show in your app", 
             "title": "Test deep link"
         }, 
         {
@@ -1192,37 +1207,42 @@
         }, 
         {
             "location": "/pages/apps/unity/#create-content-reference", 
-            "text": "", 
+            "text": "The  Branch Universal Object  encapsulates the thing you want to share with your link  BranchUniversalObject   universalObject   =   new   BranchUniversalObject ();  // Content index mode: 0 - private mode, 1 - public mode  universalObject . contentIndexMode   =   1 ;  //Identifier that helps Branch dedupe across many instances of the same content.  universalObject . canonicalIdentifier   =   id12345 ;  // OG title  universalObject . title   =   id12345 title ;  // OG Description  universalObject . contentDescription   =   My awesome piece of content! ;  // OG Image  universalObject . imageUrl   =   https://s3-us-west-1.amazonaws.com/branchhost/mosaic_og.png ;  // User defined key value pair  universalObject . metadata . Add ( foo ,   bar );", 
             "title": "Create content reference"
         }, 
         {
             "location": "/pages/apps/unity/#create-deep-link", 
-            "text": "", 
+            "text": "After you have created a  Branch Universal Object , Define Link Properties  BranchLinkProperties   linkProperties   =   new   BranchLinkProperties ();  linkProperties . tags . Add ( tag1 );  linkProperties . tags . Add ( tag2 );  // Feature link is associated with. Eg. Sharing  linkProperties . feature   =   invite ;  // The channel where you plan on sharing the link Eg.Facebook, Twitter, SMS etc  linkProperties . channel   =   Twitter ;  // The Campaign that drives this link  linkProperties . campaign   =   referral ;  linkProperties . stage   =   2 ;  // Parameters used to control Link behavior  linkProperties . controlParams . Add ( $desktop_url ,   http://example.com );     Generate a Branch link  Branch . getShortURL ( universalObject ,   linkProperties ,   ( params ,   error )   =   { \n     if   ( error   !=   null )   { \n         Debug . LogError ( Branch.getShortURL failed:    +   error ); \n     }   else   if   ( params   !=   null )   { \n         Debug . Log ( Branch.getShortURL shared params:    +   url ); \n     }  });", 
             "title": "Create deep link"
         }, 
         {
             "location": "/pages/apps/unity/#share-deep-link", 
-            "text": "", 
+            "text": "Share deep links between users and apps  Branch . shareLink ( universalObject ,   linkProperties ,   Sharing link:  ,   ( url ,   error )   =   { \n     if   ( error   !=   null )   { \n         Debug . LogError ( Branch.shareLink failed:    +   error ); \n     }   else   { \n         Debug . Log ( Branch.shareLink shared params:    +   url ); \n     }  });", 
             "title": "Share deep link"
         }, 
         {
             "location": "/pages/apps/unity/#read-deep-link", 
-            "text": "", 
+            "text": "Read Deeplink params from a  BUO  in your  BranchInitSession callback  public   void   CallbackWithBranchUniversalObject ( BranchUniversalObject   universalObject ,   BranchLinkProperties   linkProperties ,   string   error )   { \n     if   ( error   !=   null )   { \n         Debug . LogError ( Branch Error:    +   error ); \n     }   else   { \n         Debug . Log ( Branch initialization completed:  ); \n         Debug . Log ( Universal Object:    +   universalObject . ToJsonString ()); \n         Debug . Log ( Link Properties:    +   linkProperties . ToJsonString ()); \n     }  }", 
             "title": "Read deep link"
         }, 
         {
-            "location": "/pages/apps/unity/#navigate-to-content", 
-            "text": "", 
-            "title": "Navigate to content"
+            "location": "/pages/apps/unity/#read-session-install-or-open-parameters-from-anywhere-after-branch-initsession", 
+            "text": "BranchUniversalObject   obj   =   Branch . getLatestReferringBranchUniversalObject ();  BranchLinkProperties   link   =   Branch . getLatestReferringBranchLinkProperties ();    This refereshes with every session (App Installs and App Opens)", 
+            "title": "Read session (install or open) parameters from anywhere after Branch initsession"
         }, 
         {
-            "location": "/pages/apps/unity/#display-content", 
-            "text": "", 
-            "title": "Display content"
+            "location": "/pages/apps/unity/#read-install-install-or-open-parameters-from-anywhere-after-branch-initsession", 
+            "text": "BranchUniversalObject   obj   =   Branch . getFirstReferringBranchUniversalObject ();  BranchLinkProperties   link   =   Branch . getFirstReferringBranchLinkProperties ();", 
+            "title": "Read install (install or open) parameters from anywhere after Branch initsession"
+        }, 
+        {
+            "location": "/pages/apps/unity/#navigate-and-display-content", 
+            "text": "Use the link parameters to decide which view you wish to load  public   class   MyCoolBehaviorScript   :   MonoBehaviour   { \n     void   Start   ()   { \n         Branch . initSession ( delegate ( Dictionary string ,   object   parameters ,   string   error )   { \n             if   ( parameters . ContainsKey ( picture_id )   { \n                 // load the Scene to show the picture \n                 SceneManager . LoadSceneAsync ( ImageScene ,   LoadSceneMode . Additive ); \n             }   else   { \n                 // load your normal Scene \n                 SceneManager . LoadSceneAsync ( NormalScene ,   LoadSceneMode . Single ); \n             } \n         }); \n     }  }", 
+            "title": "Navigate and Display content"
         }, 
         {
             "location": "/pages/apps/unity/#track-content", 
-            "text": "", 
+            "text": "If you want to track the number of times a user views a BUO content  Branch . registerView ( universalObject );", 
             "title": "Track content"
         }, 
         {
@@ -1231,14 +1251,29 @@
             "title": "Track users"
         }, 
         {
+            "location": "/pages/apps/unity/#set-user-ids-on-loginregister", 
+            "text": "Branch . setIdentity ( your user id );", 
+            "title": "Set User-Ids on Login/Register"
+        }, 
+        {
+            "location": "/pages/apps/unity/#unset-user-ids-on-logout", 
+            "text": "Branch . logout ();", 
+            "title": "UnSet User-Ids on logout"
+        }, 
+        {
             "location": "/pages/apps/unity/#track-events", 
             "text": "", 
             "title": "Track events"
         }, 
         {
-            "location": "/pages/apps/unity/#track-commerce", 
-            "text": "", 
-            "title": "Track commerce"
+            "location": "/pages/apps/unity/#track-custom-events", 
+            "text": "Branch . userCompletedAction ( your_custom_event );", 
+            "title": "Track custom events"
+        }, 
+        {
+            "location": "/pages/apps/unity/#store-meta-data-with-these-custom-events", 
+            "text": "Dictionary string ,   object   stateItems   =   new   Dictionary string ,   object  { \n     {   username ,   Joe   }, \n     {   description ,   Joe likes long walks on the beach...   }  };  Branch . userCompletedAction ( your_custom_event ,   stateItems );   // same 63 characters max limit", 
+            "title": "Store meta data with these custom events"
         }, 
         {
             "location": "/pages/apps/unity/#handle-referrals", 
@@ -1246,18 +1281,53 @@
             "title": "Handle referrals"
         }, 
         {
+            "location": "/pages/apps/unity/#typical-referral-flow", 
+            "text": "Setup a Reward rule on your  Branch Dashboard .  Referrer has his/her identity set at  login/signup  Referrer  creates  a Branch link.  Referrer  shares  the Branch link.  Referee clicks on the Branch link, installs the app.  The referee has his/her identity set at  login/signup  Referee  triggers a custom event  after login/Signup.  Use the following SDK methods to see a user's  current credits ,  redeem credits  and check a user's entire  credit history .", 
+            "title": "Typical Referral Flow"
+        }, 
+        {
+            "location": "/pages/apps/unity/#get-reward-balance", 
+            "text": "Branch . loadRewards ( delegate ( bool   changed ,   string   error )   { \n     // changed boolean will indicate if the balance changed from what is currently in memory \n\n     // will return the balance of the current user s credits \n     int   credits   =   Branch . getCredits ();  });", 
+            "title": "Get Reward balance"
+        }, 
+        {
+            "location": "/pages/apps/unity/#redeem-rewards", 
+            "text": "Branch . redeemRewards ( 5 );", 
+            "title": "Redeem Rewards"
+        }, 
+        {
+            "location": "/pages/apps/unity/#get-credit-history", 
+            "text": "Branch . getCreditHistory ( delegate ( List string   historyItems ,   string   error )   { \n     if   ( error   ==   null )   { \n     // process history \n     }  });", 
+            "title": "Get Credit History"
+        }, 
+        {
             "location": "/pages/apps/unity/#troubleshoot-issues", 
             "text": "", 
             "title": "Troubleshoot issues"
         }, 
         {
-            "location": "/pages/apps/unity/#recommendations", 
-            "text": "", 
-            "title": "Recommendations"
+            "location": "/pages/apps/unity/#ios-unity-46-note", 
+            "text": "Branch requires ARC, and we don\u2019t intend to add checks thoughout the SDK to try and support pre-ARC. \nHowever, you can add flags to the project to compile the Branch files with ARC. If you wish to do this \nadd  -fobjc-arc  to all Branch files.   Note: we by default have this flag checked, but please check before building for iOS.", 
+            "title": "iOS + Unity 4.6 Note"
+        }, 
+        {
+            "location": "/pages/apps/unity/#android-using-your-own-custom-application-class", 
+            "text": "If you are using your own Custom Application class, you will need to add Branch android library into your project and call the following in method OnCreate():  Branch . getAutoInstance ( this . getApplicationContext ());   If you are using your own custom Activity class, please make sure that you are overridding the following Activities:  @Override  public   void   onCreate ( Bundle   savedInstanceState )   { \n     super . onCreate ( savedInstanceState );  }  @Override  public   void   onNewIntent ( Intent   intent )   { \n     this . setIntent ( intent );  }", 
+            "title": "Android - Using your own Custom Application Class"
+        }, 
+        {
+            "location": "/pages/apps/unity/#support-branch-with-different-plugins", 
+            "text": "The Branch SDK has its own custom  activity  and  application  class. Other plugins that use their own \ncustom activity and application classes can cause \"conflicts\" between these classes. To resolve these conflicts:   Create a empty android library  Add the Branch plugin along with the other plugins into your project  Create a custom Activity and Application class that will contain the custom logic for all your plugins  Build your library  Add your library into Unity project  Change android:name to name of your custom Application class in the  application  tag of your Manifest  Change android:name to name of your custom Activity class in the  activity  tag of your Manifest", 
+            "title": "Support Branch with different Plugins"
+        }, 
+        {
+            "location": "/pages/apps/unity/#support-several-impl_app_controller_subclass", 
+            "text": "The Branch Unity SDK plugin uses its own UnityAppController that expands default AppController. This is used to catch Universal Links.  @interface   BranchAppController   :   UnityAppController  {  }  @end  @implementation   BranchAppController  -   ( BOOL ) application :( UIApplication   *) application   continueUserActivity :( NSUserActivity   *) userActivity   restorationHandler :( void   (^)( NSArray   *)) restorationHandler   { \n     BOOL   handledByBranch   =   [[ BranchUnityWrapper   sharedInstance ]   continueUserActivity : userActivity ]; \n     return   handledByBranch ;  }  @end  IMPL_APP_CONTROLLER_SUBCLASS ( BranchAppController )   Some Plugins expand the default AppController the same was as Branch does like Cardboard SDK plugin. To resolve conflicts:   Merge all custom AppControllers in one.  Comment code in other AppControllers (or delete other AppControllers).", 
+            "title": "Support several IMPL_APP_CONTROLLER_SUBCLASS"
         }, 
         {
             "location": "/pages/apps/unity/#sample-app", 
-            "text": "", 
+            "text": "Branch Testbed app  Code Samples  for resolving conflicts with other 3rd party plugins", 
             "title": "Sample app"
         }, 
         {
