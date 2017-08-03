@@ -358,6 +358,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#load-branch" title="Load Branch" class="md-nav__link">
+    Load Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#test-deep-link" title="Test deep link" class="md-nav__link">
     Test deep link
   </a>
@@ -1572,6 +1579,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#load-branch" title="Load Branch" class="md-nav__link">
+    Load Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#test-deep-link" title="Test deep link" class="md-nav__link">
     Test deep link
   </a>
@@ -1944,37 +1958,6 @@
 <h4 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Add Branch to your <code>CustomApplicationClass.java</code></p>
-</li>
-<li>
-<p><em>Java</em></p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.eneff.branchandroid</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">android.app.Application</span><span class="o">;</span>
-<span class="hll"><span class="kn">import</span> <span class="nn">io.branch.referral.Branch</span><span class="o">;</span>
-</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomApplicationClass</span> <span class="kd">extends</span> <span class="n">Application</span> <span class="o">{</span>
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">()</span> <span class="o">{</span>
-        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">();</span>
-
-<span class="hll">        <span class="c1">// Branch logging for debugging</span>
-</span><span class="hll">        <span class="n">Branch</span><span class="o">.</span><span class="na">enableLogging</span><span class="o">();</span>
-</span>
-<span class="hll">        <span class="c1">// Branch object initialization</span>
-</span><span class="hll">        <span class="n">Branch</span><span class="o">.</span><span class="na">getAutoInstance</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
-</span>    <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
-
-</li>
-<li>
-<p><em>Kotlin</em></p>
-<div class="codehilite"><pre><span></span><span class="n">TODO</span>
-</pre></div>
-
-</li>
-<li>
 <p>Add Branch to your <code>MainActivity.java</code></p>
 </li>
 <li>
@@ -2017,28 +2000,6 @@
     <span class="o">}</span>
 
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onCreateOptionsMenu</span><span class="o">(</span><span class="n">Menu</span> <span class="n">menu</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">// Inflate the menu; this adds items to the action bar if it is present.</span>
-        <span class="n">getMenuInflater</span><span class="o">().</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">menu</span><span class="o">.</span><span class="na">menu_main</span><span class="o">,</span> <span class="n">menu</span><span class="o">);</span>
-        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onOptionsItemSelected</span><span class="o">(</span><span class="n">MenuItem</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">// Handle action bar item clicks here. The action bar will</span>
-        <span class="c1">// automatically handle clicks on the Home/Up button, so long</span>
-        <span class="c1">// as you specify a parent activity in AndroidManifest.xml.</span>
-        <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="na">getItemId</span><span class="o">();</span>
-
-        <span class="c1">//noinspection SimplifiableIfStatement</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">id</span> <span class="o">==</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">action_settings</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-        <span class="o">}</span>
-
-        <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">onOptionsItemSelected</span><span class="o">(</span><span class="n">item</span><span class="o">);</span>
-    <span class="o">}</span>
-
-    <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onStart</span><span class="o">()</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">.</span><span class="na">onStart</span><span class="o">();</span>
 
@@ -2053,14 +2014,50 @@
 </span><span class="hll">                <span class="o">}</span>
 </span><span class="hll">            <span class="o">}</span>
 </span><span class="hll">        <span class="o">},</span> <span class="k">this</span><span class="o">.</span><span class="na">getIntent</span><span class="o">().</span><span class="na">getData</span><span class="o">(),</span> <span class="k">this</span><span class="o">);</span>
-</span><span class="hll">    <span class="o">}</span>
-</span>
+</span>    <span class="o">}</span>
+
 <span class="hll">    <span class="nd">@Override</span>
 </span><span class="hll">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onNewIntent</span><span class="o">(</span><span class="n">Intent</span> <span class="n">intent</span><span class="o">)</span> <span class="o">{</span>
 </span><span class="hll">        <span class="k">this</span><span class="o">.</span><span class="na">setIntent</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
 </span><span class="hll">    <span class="o">}</span>
-</span><span class="hll">
-</span><span class="o">}</span>
+</span>
+<span class="o">}</span>
+</pre></div>
+
+</li>
+<li>
+<p><em>Kotlin</em></p>
+<div class="codehilite"><pre><span></span><span class="n">TODO</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+<li>
+<h4 id="load-branch">Load Branch<a class="headerlink" href="#load-branch" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Add Branch to your <code>CustomApplicationClass.java</code></p>
+</li>
+<li>
+<p><em>Java</em></p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.eneff.branchandroid</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.app.Application</span><span class="o">;</span>
+<span class="hll"><span class="kn">import</span> <span class="nn">io.branch.referral.Branch</span><span class="o">;</span>
+</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomApplicationClass</span> <span class="kd">extends</span> <span class="n">Application</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">();</span>
+
+<span class="hll">        <span class="c1">// Branch logging for debugging</span>
+</span><span class="hll">        <span class="n">Branch</span><span class="o">.</span><span class="na">enableLogging</span><span class="o">();</span>
+</span>
+<span class="hll">        <span class="c1">// Branch object initialization</span>
+</span><span class="hll">        <span class="n">Branch</span><span class="o">.</span><span class="na">getAutoInstance</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+</span>    <span class="o">}</span>
+<span class="o">}</span>
 </pre></div>
 
 </li>
