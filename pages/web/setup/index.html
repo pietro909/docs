@@ -10,7 +10,7 @@
         <meta name="description" content="Branch Documentation for Deep Linking">
       
       
-        <link rel="canonical" href="https://branchmetrics.github.io/docs/pages/emails/appboy/">
+        <link rel="canonical" href="https://branchmetrics.github.io/docs/pages/web/setup/">
       
       
         <meta name="author" content="Branch">
@@ -22,7 +22,7 @@
     
     
       
-        <title>AppBoy - Branch Documentation</title>
+        <title>Setup - Branch Documentation</title>
       
     
     
@@ -95,11 +95,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Deep link emails
+                  Integrate your website
                 </span>
               
             
-            AppBoy
+            Setup
           
         </span>
       </div>
@@ -426,10 +426,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Integrate your website
@@ -445,11 +447,207 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../web/setup/" title="Setup" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Setup
+      </label>
+    
+    <a href="./" title="Setup" class="md-nav__link md-nav__link--active">
       Setup
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#integrate-branch" title="Integrate Branch" class="md-nav__link">
+    Integrate Branch
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-branch" title="Configure Branch" class="md-nav__link">
+    Configure Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-app" title="Integrate App" class="md-nav__link">
+    Integrate App
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialize-branch" title="Initialize Branch" class="md-nav__link">
+    Initialize Branch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implement-features" title="Implement features" class="md-nav__link">
+    Implement features
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialize-branch-features" title="Initialize Branch features" class="md-nav__link">
+    Initialize Branch features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-deep-link" title="Create deep link" class="md-nav__link">
+    Create deep link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#share-deep-link" title="Share deep link" class="md-nav__link">
+    Share deep link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-deep-link" title="Read deep link" class="md-nav__link">
+    Read deep link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigate-to-content" title="Navigate to content" class="md-nav__link">
+    Navigate to content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-content" title="Display content" class="md-nav__link">
+    Display content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-content" title="Track content" class="md-nav__link">
+    Track content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-users" title="Track users" class="md-nav__link">
+    Track users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-events" title="Track events" class="md-nav__link">
+    Track events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-commerce" title="Track commerce" class="md-nav__link">
+    Track commerce
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handle-referrals" title="Handle referrals" class="md-nav__link">
+    Handle referrals
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshoot-issues" title="Troubleshoot issues" class="md-nav__link">
+    Troubleshoot issues
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-testing-apps" title="Sample testing apps" class="md-nav__link">
+    Sample testing apps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bower-or-npm-compatibility" title="Bower or Npm compatibility" class="md-nav__link">
+    Bower or Npm compatibility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commonjs-and-requirejs-compatibility" title="CommonJS and RequireJS compatibility" class="md-nav__link">
+    CommonJS and RequireJS compatibility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-access-control-error" title="No Access-Control Error" class="md-nav__link">
+    No Access-Control Error
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -459,7 +657,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../web/deep-views/" title="Deepviews" class="md-nav__link">
+    <a href="../deep-views/" title="Deepviews" class="md-nav__link">
       Deepviews
     </a>
   </li>
@@ -471,7 +669,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../web/journeys/" title="Journeys App Banners" class="md-nav__link">
+    <a href="../journeys/" title="Journeys App Banners" class="md-nav__link">
       Journeys App Banners
     </a>
   </li>
@@ -483,7 +681,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../web/text-me-the-app/" title="Text Me The App" class="md-nav__link">
+    <a href="../text-me-the-app/" title="Text Me The App" class="md-nav__link">
       Text Me The App
     </a>
   </li>
@@ -838,12 +1036,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       Deep link emails
@@ -861,7 +1057,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../responsys/" title="Responsys" class="md-nav__link">
+    <a href="../../emails/responsys/" title="Responsys" class="md-nav__link">
       Responsys
     </a>
   </li>
@@ -873,7 +1069,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../sfmc/" title="SFMC" class="md-nav__link">
+    <a href="../../emails/sfmc/" title="SFMC" class="md-nav__link">
       SFMC
     </a>
   </li>
@@ -885,7 +1081,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../sendgrid/" title="SendGrid" class="md-nav__link">
+    <a href="../../emails/sendgrid/" title="SendGrid" class="md-nav__link">
       SendGrid
     </a>
   </li>
@@ -897,7 +1093,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../sailthru/" title="Sailthru" class="md-nav__link">
+    <a href="../../emails/sailthru/" title="Sailthru" class="md-nav__link">
       Sailthru
     </a>
   </li>
@@ -907,18 +1103,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-    <a href="./" title="AppBoy" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../emails/appboy/" title="AppBoy" class="md-nav__link">
       AppBoy
     </a>
-    
   </li>
 
         
@@ -928,7 +1117,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../self-serve/" title="Self Serve" class="md-nav__link">
+    <a href="../../emails/self-serve/" title="Self Serve" class="md-nav__link">
       Self Serve
     </a>
   </li>
@@ -1290,6 +1479,184 @@
   
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#integrate-branch" title="Integrate Branch" class="md-nav__link">
+    Integrate Branch
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-branch" title="Configure Branch" class="md-nav__link">
+    Configure Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-app" title="Integrate App" class="md-nav__link">
+    Integrate App
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initialize-branch" title="Initialize Branch" class="md-nav__link">
+    Initialize Branch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implement-features" title="Implement features" class="md-nav__link">
+    Implement features
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialize-branch-features" title="Initialize Branch features" class="md-nav__link">
+    Initialize Branch features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-deep-link" title="Create deep link" class="md-nav__link">
+    Create deep link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#share-deep-link" title="Share deep link" class="md-nav__link">
+    Share deep link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-deep-link" title="Read deep link" class="md-nav__link">
+    Read deep link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigate-to-content" title="Navigate to content" class="md-nav__link">
+    Navigate to content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-content" title="Display content" class="md-nav__link">
+    Display content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-content" title="Track content" class="md-nav__link">
+    Track content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-users" title="Track users" class="md-nav__link">
+    Track users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-events" title="Track events" class="md-nav__link">
+    Track events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-commerce" title="Track commerce" class="md-nav__link">
+    Track commerce
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handle-referrals" title="Handle referrals" class="md-nav__link">
+    Handle referrals
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshoot-issues" title="Troubleshoot issues" class="md-nav__link">
+    Troubleshoot issues
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-testing-apps" title="Sample testing apps" class="md-nav__link">
+    Sample testing apps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bower-or-npm-compatibility" title="Bower or Npm compatibility" class="md-nav__link">
+    Bower or Npm compatibility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commonjs-and-requirejs-compatibility" title="CommonJS and RequireJS compatibility" class="md-nav__link">
+    CommonJS and RequireJS compatibility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-access-control-error" title="No Access-Control Error" class="md-nav__link">
+    No Access-Control Error
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1300,12 +1667,270 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/emails/appboy.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/web/setup.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>AppBoy</h1>
+                  <h1>Setup</h1>
                 
-                
+                <h2 id="integrate-branch">Integrate Branch<a class="headerlink" href="#integrate-branch" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<h4 id="configure-branch">Configure Branch<a class="headerlink" href="#configure-branch" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Complete your <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></p>
+<p><img alt="image" src="http://i.imgur.com/zaKY7Mh.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="integrate-app">Integrate App<a class="headerlink" href="#integrate-app" title="Permanent link">&para;</a></h4>
+<ul>
+<li>TODO</li>
+</ul>
+</li>
+<li>
+<h4 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="hll">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+</span>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="hll">  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span class="hll">    <span class="c1">// load Branch</span>
+</span><span class="hll">    <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">a</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">c</span><span class="p">,</span><span class="nx">h</span><span class="p">,</span><span class="nx">_</span><span class="p">,</span><span class="nx">s</span><span class="p">,</span><span class="nx">d</span><span class="p">,</span><span class="nx">k</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">b</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span><span class="o">||!</span><span class="nx">b</span><span class="p">[</span><span class="nx">n</span><span class="p">].</span><span class="nx">_q</span><span class="p">){</span><span class="k">for</span><span class="p">(;</span><span class="nx">s</span><span class="o">&lt;</span><span class="nx">_</span><span class="p">.</span><span class="nx">length</span><span class="p">;)</span><span class="nx">c</span><span class="p">(</span><span class="nx">h</span><span class="p">,</span><span class="nx">_</span><span class="p">[</span><span class="nx">s</span><span class="o">++</span><span class="p">]);</span><span class="nx">d</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span><span class="nx">d</span><span class="p">.</span><span class="nx">async</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">d</span><span class="p">.</span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;https://cdn.branch.io/branch-latest.min.js&quot;</span><span class="p">;</span><span class="nx">k</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">a</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span><span class="nx">k</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span><span class="nx">k</span><span class="p">);</span><span class="nx">b</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span><span class="o">=</span><span class="nx">h</span><span class="p">}})(</span><span class="nb">window</span><span class="p">,</span><span class="nb">document</span><span class="p">,</span><span class="s2">&quot;script&quot;</span><span class="p">,</span><span class="s2">&quot;branch&quot;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="nx">b</span><span class="p">[</span><span class="nx">r</span><span class="p">]</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="nx">b</span><span class="p">.</span><span class="nx">_q</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">r</span><span class="p">,</span><span class="nx">arguments</span><span class="p">])}},{</span><span class="nx">_q</span><span class="o">:</span><span class="p">[],</span><span class="nx">_v</span><span class="o">:</span><span class="mi">1</span><span class="p">},</span><span class="s2">&quot;addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent&quot;</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">),</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class="hll">    <span class="c1">// init Branch</span>
+</span><span class="hll">    <span class="nx">branch</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="s1">&#39;key_live_ndqptlgXNE4LHqIahH1WIpbiyFlb62J3&#39;</span><span class="p">);</span>
+</span><span class="hll">  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+<ul>
+<li>Change <code>key_live_nmEmfIlcPqjEsuDHIQZ8GdcpsFbXW3gG</code> to match your <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="implement-features">Implement features<a class="headerlink" href="#implement-features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<h4 id="initialize-branch-features">Initialize Branch features<a class="headerlink" href="#initialize-branch-features" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Loads Branch into your app</p>
+</li>
+<li>
+<p><code>branch.init()</code> is queued so all other Branch functions will always happen afterwards</p>
+<div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="s1">&#39;key_live_nmEmfIlcPqjEsuDHIQZ8GdcpsFbXW3gG&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+<li>
+<h4 id="create-deep-link">Create deep link<a class="headerlink" href="#create-deep-link" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Creates a deep link URL with encapsulated data</p>
+</li>
+<li>
+<p>Needs <a href="#initialize-branch">Initialize Branch</a></p>
+</li>
+<li>
+<p>Uses <a href="../../../pages/links/data/">Deep Link Properties</a></p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/links">Branch Dashboard</a></p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">linkData</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">campaign</span><span class="o">:</span> <span class="s1">&#39;content 123&#39;</span><span class="p">,</span>
+  <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span><span class="p">,</span>
+  <span class="nx">feature</span><span class="o">:</span> <span class="s1">&#39;dashboard&#39;</span><span class="p">,</span>
+  <span class="nx">stage</span><span class="o">:</span> <span class="s1">&#39;new user&#39;</span><span class="p">,</span>
+  <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;tag1&#39;</span><span class="p">,</span> <span class="s1">&#39;tag2&#39;</span><span class="p">,</span> <span class="s1">&#39;tag3&#39;</span> <span class="p">],</span>
+  <span class="nx">alias</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s1">&#39;custom_bool&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s1">&#39;custom_int&#39;</span><span class="o">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
+    <span class="s1">&#39;custom_string&#39;</span><span class="o">:</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;$og_title&#39;</span><span class="o">:</span> <span class="s1">&#39;Title&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;$og_description&#39;</span><span class="o">:</span> <span class="s1">&#39;Description&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;$og_image_url&#39;</span><span class="o">:</span><span class="s1">&#39;http://lorempixel.com/400/400&#39;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">branch</span><span class="p">.</span><span class="nx">link</span><span class="p">(</span><span class="nx">linkData</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">link</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">link</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+<li>
+<h4 id="share-deep-link">Share deep link<a class="headerlink" href="#share-deep-link" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Will generate a Branch deep link and tag it with the channel the user selects</p>
+</li>
+<li>
+<p>Uses <a href="../../../pages/links/data/">Deep Link Properties</a></p>
+<div class="codehilite"><pre><span></span><span class="c">&lt;!-- shareable elements --&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;button&#39;</span><span class="p">&gt;</span>deep link<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;anchor&#39;</span><span class="p">&gt;</span>deep link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="c1">// create link</span>
+<span class="kd">var</span> <span class="nx">linkData</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">campaign</span><span class="o">:</span> <span class="nb">String</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">())</span>
+<span class="p">};</span>
+<span class="nx">branch</span><span class="p">.</span><span class="nx">link</span><span class="p">(</span><span class="nx">linkData</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">link</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// share link</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">link</span> <span class="o">||</span> <span class="nx">err</span><span class="p">);</span>
+  <span class="p">};</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;anchor&#39;</span><span class="p">).</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">link</span> <span class="o">||</span> <span class="nx">err</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+<li>
+<h4 id="read-deep-link">Read deep link<a class="headerlink" href="#read-deep-link" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Make a deep link redirect to your website </p>
+<div class="codehilite"><pre><span></span>https://a60f.app.link/mwSWBbPRjF?$fallback_url=https://example.com
+</pre></div>
+
+</li>
+<li>
+<p>Website will open with <code>_branch_match_id</code></p>
+<div class="codehilite"><pre><span></span>https://example.com/?$fallback_url=https://example.com&amp;_branch_match_id=418480444086051524
+</pre></div>
+
+</li>
+<li>
+<p>Read <code>_branch_match_id</code></p>
+<div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="s1">&#39;key_live_nmEmfIlcPqjEsuDHIQZ8GdcpsFbXW3gG&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+<li>
+<h4 id="navigate-to-content">Navigate to content<a class="headerlink" href="#navigate-to-content" title="Permanent link">&para;</a></h4>
+</li>
+<li>
+<h4 id="display-content">Display content<a class="headerlink" href="#display-content" title="Permanent link">&para;</a></h4>
+</li>
+<li>
+<h4 id="track-content">Track content<a class="headerlink" href="#track-content" title="Permanent link">&para;</a></h4>
+</li>
+<li>
+<h4 id="track-users">Track users<a class="headerlink" href="#track-users" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Sets the identity of a user (email, ID, UUID, etc) for events, deep links, and referrals</p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/identities">Branch Dashboard</a>  </p>
+<div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">setIdentity</span><span class="p">(</span><span class="s1">&#39;123456&#39;</span><span class="p">);</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">setIdentity</span><span class="p">(</span><span class="s1">&#39;123456&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="p">});</span>
+</pre></div>
+
+</li>
+<li>
+<p>Removes the identity of a user</p>
+<div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">logout</span><span class="p">();</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">logout</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+
+<span class="p">});</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+<li>
+<h4 id="track-events">Track events<a class="headerlink" href="#track-events" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Registers a custom event</p>
+</li>
+<li>
+<p>Events named <code>open</code>, <code>close</code>, <code>install</code>, and <code>referred session</code> are Branch restricted</p>
+</li>
+<li>
+<p>Best to <a href="#track-users">Track users</a> before <a href="#track-events">Track events</a> to associate a custom event to a user</p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/events">Branch Dashboard</a></p>
+<div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">track</span><span class="p">(</span><span class="s1">&#39;signup&#39;</span><span class="p">);</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">track</span><span class="p">(</span><span class="s1">&#39;signup&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">metadata</span><span class="o">:</span> <span class="s1">&#39;123&#39;</span> <span class="p">});</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">track</span><span class="p">(</span><span class="s1">&#39;signup&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">custom</span><span class="o">:</span> <span class="s1">&#39;123&#39;</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+
+<span class="p">});</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+<li>
+<h4 id="track-commerce">Track commerce<a class="headerlink" href="#track-commerce" title="Permanent link">&para;</a></h4>
+</li>
+<li>
+<h4 id="handle-referrals">Handle referrals<a class="headerlink" href="#handle-referrals" title="Permanent link">&para;</a></h4>
+</li>
+</ul>
+<h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<h4 id="sample-testing-apps">Sample testing apps<a class="headerlink" href="#sample-testing-apps" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://cdn.branch.io/example.html">https://cdn.branch.io/example.html</a></li>
+<li><a href="http://cdn.branch.io/branchster-angular">http://cdn.branch.io/branchster-angular</a></li>
+</ul>
+</li>
+<li>
+<h4 id="bower-or-npm-compatibility">Bower or Npm compatibility<a class="headerlink" href="#bower-or-npm-compatibility" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Use <code>bower install branch-sdk</code> or <code>npm install branch-sdk</code></li>
+</ul>
+</li>
+<li>
+<h4 id="commonjs-and-requirejs-compatibility">CommonJS and RequireJS compatibility<a class="headerlink" href="#commonjs-and-requirejs-compatibility" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Add <code>require('branch')</code> or <code>define(['branch'], function(branch) { ... });</code></li>
+</ul>
+</li>
+<li>
+<h4 id="no-access-control-error">No Access-Control Error<a class="headerlink" href="#no-access-control-error" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Make sure the Branch key is the same within the deep link and website</p>
+<div class="codehilite"><pre><span></span>XMLHttpRequest cannot load https://api.branch.io/v1/open. No &#39;Access-Control-Allow-Origin&#39; header is present on the requested resource. Origin &#39;null&#39; is therefore not allowed access. The response had HTTP status code 400.
+</pre></div>
+
+</li>
+</ul>
+</li>
+</ul>
                 
                   
                 
@@ -1316,9 +1941,9 @@
                   <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    this.page.url = "https://branchmetrics.github.io/docs/pages/emails/appboy/";
+    this.page.url = "https://branchmetrics.github.io/docs/pages/web/setup/";
     this.page.identifier =
-      "/pages/emails/appboy/";
+      "/pages/web/setup/";
   };
   (function() {
     var d = document, s = d.createElement("script");
@@ -1380,7 +2005,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../sailthru/" title="Sailthru" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../apps/api/" title="API" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1389,19 +2014,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Sailthru
+                API
               </span>
             </div>
           </a>
         
         
-          <a href="../self-serve/" title="Self Serve" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../deep-views/" title="Deepviews" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Self Serve
+                Deepviews
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
