@@ -397,8 +397,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configure-app" title="Configure app" class="md-nav__link">
-    Configure app
+  <a href="#configure-app" title="Configure App" class="md-nav__link">
+    Configure App
   </a>
   
 </li>
@@ -411,8 +411,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#test-deep-link" title="Test deep link" class="md-nav__link">
-    Test deep link
+  <a href="#test-deep-link-ios" title="Test deep link iOS" class="md-nav__link">
+    Test deep link iOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-deep-link-android" title="Test deep link Android" class="md-nav__link">
+    Test deep link Android
   </a>
   
 </li>
@@ -459,20 +466,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#navigate-to-content" title="Navigate to content" class="md-nav__link">
-    Navigate to content
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#display-content" title="Display content" class="md-nav__link">
-    Display content
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#track-content" title="Track content" class="md-nav__link">
     Track content
   </a>
@@ -494,15 +487,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#track-commerce" title="Track commerce" class="md-nav__link">
-    Track commerce
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#handle-referrals" title="Handle referrals" class="md-nav__link">
-    Handle referrals
+  <a href="#handle-referral" title="Handle referral" class="md-nav__link">
+    Handle referral
   </a>
   
 </li>
@@ -519,13 +505,6 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#recommendations" title="Recommendations" class="md-nav__link">
-    Recommendations
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#sample-app" title="Sample app" class="md-nav__link">
@@ -1491,8 +1470,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configure-app" title="Configure app" class="md-nav__link">
-    Configure app
+  <a href="#configure-app" title="Configure App" class="md-nav__link">
+    Configure App
   </a>
   
 </li>
@@ -1505,8 +1484,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#test-deep-link" title="Test deep link" class="md-nav__link">
-    Test deep link
+  <a href="#test-deep-link-ios" title="Test deep link iOS" class="md-nav__link">
+    Test deep link iOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-deep-link-android" title="Test deep link Android" class="md-nav__link">
+    Test deep link Android
   </a>
   
 </li>
@@ -1553,20 +1539,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#navigate-to-content" title="Navigate to content" class="md-nav__link">
-    Navigate to content
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#display-content" title="Display content" class="md-nav__link">
-    Display content
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#track-content" title="Track content" class="md-nav__link">
     Track content
   </a>
@@ -1588,15 +1560,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#track-commerce" title="Track commerce" class="md-nav__link">
-    Track commerce
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#handle-referrals" title="Handle referrals" class="md-nav__link">
-    Handle referrals
+  <a href="#handle-referral" title="Handle referral" class="md-nav__link">
+    Handle referral
   </a>
   
 </li>
@@ -1613,13 +1578,6 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#recommendations" title="Recommendations" class="md-nav__link">
-    Recommendations
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#sample-app" title="Sample app" class="md-nav__link">
@@ -1662,60 +1620,416 @@
 <ul>
 <li>
 <h4 id="configure-branch">Configure Branch<a class="headerlink" href="#configure-branch" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Complete your <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></p>
+<p><img alt="image" src="http://i.imgur.com/wazVu3U.png" />
+<img alt="image" src="http://i.imgur.com/9PEylbS.png" /></p>
+</li>
+</ul>
 </li>
 <li>
-<h4 id="configure-app">Configure app<a class="headerlink" href="#configure-app" title="Permanent link">&para;</a></h4>
+<h4 id="configure-app">Configure App<a class="headerlink" href="#configure-app" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>iOS</p>
+<ul>
+<li>
+<p>Add your Branch key and register a URI scheme</p>
+<ul>
+<li>In your project’s tiapp.xml file, insert the snippet below. Change yourapp to the URI scheme you’ve selected.</li>
+</ul>
+<div class="codehilite"><pre><span></span>   <span class="nt">&lt;ios&gt;</span>
+       <span class="nt">&lt;plist&gt;</span>
+         <span class="nt">&lt;dict&gt;</span>
+           <span class="c">&lt;!-- Add branch key as key-value pair --&gt;</span>
+           <span class="nt">&lt;key&gt;</span>branch_key<span class="nt">&lt;/key&gt;</span>
+           <span class="nt">&lt;string&gt;</span>key_live_xxxxxxxxxxxxxxx<span class="nt">&lt;/string&gt;</span>
+           <span class="c">&lt;!-- Add unique string for direct deep links --&gt;</span>
+           <span class="nt">&lt;key&gt;</span>CFBundleURLTypes<span class="nt">&lt;/key&gt;</span>
+           <span class="nt">&lt;array&gt;</span>
+             <span class="nt">&lt;dict&gt;</span>
+               <span class="nt">&lt;key&gt;</span>CFBundleURLSchemes<span class="nt">&lt;/key&gt;</span>
+               <span class="nt">&lt;array&gt;</span>
+                 <span class="nt">&lt;string&gt;</span>yourapp<span class="nt">&lt;/string&gt;</span>
+               <span class="nt">&lt;/array&gt;</span>
+             <span class="nt">&lt;/dict&gt;</span>
+           <span class="nt">&lt;/array&gt;</span>
+         <span class="nt">&lt;/dict&gt;</span>
+       <span class="nt">&lt;/plist&gt;</span>
+     <span class="nt">&lt;/ios&gt;</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+<li>
+<p>Android</p>
+<ul>
+<li>
+<p>Add your Branch Key and register a URI Scheme</p>
+<ul>
+<li>
+<p>Open your tiapp.xml and add the following <meta-data> tag:
+<div class="codehilite"><pre><span></span>    <span class="nt">&lt;application&gt;</span>
+        <span class="c">&lt;!-- Other existing entries --&gt;</span>
+        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.BranchKey&quot;</span> <span class="na">android:value=</span><span class="s">&quot;key_live_xxxxxxxxxxxxxxx&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/application&gt;</span>
+</pre></div></p>
+</li>
+<li>
+<p>Within your Deep Link Activity's definition, insert the intent filter provided below. Change yourapp under android:scheme to the URI scheme you’ve selected.</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>    <span class="nt">&lt;intent-filter&gt;</span>
+      <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;yourapp&quot;</span> <span class="na">android:host=</span><span class="s">&quot;open&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/intent-filter&gt;</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
 <h4 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Initialize the SDK by inserting the following snippet into your index.js file:</p>
+<div class="codehilite"><pre><span></span><span class="o">$</span><span class="p">.</span><span class="nc">initialize</span> <span class="o">=</span> <span class="nt">function</span><span class="o">(</span><span class="nt">params</span><span class="o">)</span> <span class="p">{</span>
+       <span class="err">$.window.open()</span><span class="p">;</span>
+
+       <span class="err">$.initializeViews()</span><span class="p">;</span>
+       <span class="err">$.initializeHandlers()</span><span class="p">;</span>
+
+       <span class="err">Ti.API.info(&quot;start</span> <span class="err">initSession&quot;)</span><span class="p">;</span>
+       <span class="err">branch.initSession()</span><span class="p">;</span>
+       <span class="err">branch.addEventListener(&quot;</span><span class="n">bio</span><span class="p">:</span><span class="n">initSession</span><span class="s2">&quot;, $.onInitSessionFinished);</span>
+
+<span class="s2">       if (OS_ANDROID) {</span>
+<span class="s2">           Ti.Android.currentActivity.addEventListener(&quot;</span><span class="n">newintent</span><span class="s2">&quot;, function(e) {</span>
+<span class="s2">               Ti.API.info(&quot;</span><span class="kc">inside</span> <span class="n">newintent</span><span class="o">:</span> <span class="s2">&quot; + e);</span>
+<span class="s2">               $.window.open();</span>
+<span class="s2">               branch.initSession();</span>
+<span class="s2">           });</span>
+<span class="s2">       }</span>
+<span class="s2">   };</span>
+
+<span class="s2">   $.onInitSessionFinished = function(data) {</span>
+<span class="s2">       Ti.API.info(&quot;</span><span class="kc">inside</span> <span class="n">onInitSessionFinished</span><span class="s2">&quot;);</span>
+<span class="s2">       for (key in data) {</span>
+<span class="s2">           if ((key != &quot;</span><span class="n">type</span><span class="s2">&quot; &amp;&amp; key != &quot;</span><span class="n">source</span><span class="s2">&quot; &amp;&amp; key != &quot;</span><span class="n">bubbles</span><span class="s2">&quot; &amp;&amp; key != &quot;</span><span class="n">cancelBubble</span><span class="err">&quot;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">data</span><span class="cp">[</span><span class="nx">key</span><span class="cp">]</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span> <span class="err">{</span>
+               <span class="n">Ti</span><span class="o">.</span><span class="n">API</span><span class="o">.</span><span class="nf">info</span><span class="p">(</span><span class="n">key</span> <span class="o">+</span> <span class="n">data</span><span class="cp">[</span><span class="s2">&quot;key&quot;</span><span class="cp">]</span><span class="p">);</span>
+           <span class="p">}</span>
+       <span class="err">}</span>
+   <span class="err">}</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
-<h4 id="test-deep-link">Test deep link<a class="headerlink" href="#test-deep-link" title="Permanent link">&para;</a></h4>
+<h4 id="test-deep-link-ios">Test deep link iOS<a class="headerlink" href="#test-deep-link-ios" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Create a deep link from the <a href="https://dashboard.branch.io/marketing">Branch Marketing Dashboard</a></p>
+</li>
+<li>
+<p>Delete your app from the device</p>
+</li>
+<li>
+<p>Compile your app</p>
+</li>
+<li>
+<p>Paste deep link in <code>Apple Notes</code> </p>
+</li>
+<li>
+<p>Long press on the deep link <em>(not 3D Touch)</em></p>
+</li>
+<li>
+<p>Click <code>Open in "APP_NAME"</code> to open your app <em>(<a href="http://i.imgur.com/VJVICXd.png">example</a>)</em></p>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="test-deep-link-android">Test deep link Android<a class="headerlink" href="#test-deep-link-android" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Create a deep link from the <a href="https://dashboard.branch.io/marketing">Branch Dashboard</a></p>
+</li>
+<li>
+<p>Delete your app from the device</p>
+</li>
+<li>
+<p>Compile your app</p>
+</li>
+<li>
+<p>Paste deep link in <code>Google Hangouts</code></p>
+</li>
+<li>
+<p>Click on the deep link to open your app</p>
+</li>
+</ul>
 </li>
 </ul>
 <h2 id="implement-features">Implement features<a class="headerlink" href="#implement-features" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <h4 id="create-content-reference">Create content reference<a class="headerlink" href="#create-content-reference" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>The <code>Branch Universal Object</code> encapsulates the thing you want to share</p>
+</li>
+<li>
+<p>Uses the Universal Object Properties listed below:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Key</strong></th>
+<th>Type</th>
+<th><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>canonicalIdentifier</td>
+<td><code>string</code></td>
+<td>The identifier of the object</td>
+</tr>
+<tr>
+<td>title</td>
+<td><code>string</code></td>
+<td>The title of the object</td>
+</tr>
+<tr>
+<td>contentDescription</td>
+<td><code>string</code></td>
+<td>The short description of the object</td>
+</tr>
+<tr>
+<td>contentImageUrl</td>
+<td><code>string</code></td>
+<td>URL of the image used by the object</td>
+</tr>
+<tr>
+<td>contentIndexingMode</td>
+<td><code>string</code></td>
+<td>Indexing mode of the object. Set as "private" or "public".</td>
+</tr>
+<tr>
+<td>contentMetadata</td>
+<td><code>dictionary</code></td>
+<td>Custom keys and values as metadata of the object</td>
+</tr>
+</tbody>
+</table>
+<div class="codehilite"><pre><span></span>    <span class="kd">var</span> <span class="nx">branchUniversalObject</span> <span class="o">=</span> <span class="nx">branch</span><span class="p">.</span><span class="nx">createBranchUniversalObject</span><span class="p">({</span>
+        <span class="s2">&quot;canonicalIdentifier&quot;</span> <span class="o">:</span> <span class="s2">&quot;content/12345&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span> <span class="o">:</span> <span class="s2">&quot;My Content Title&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;contentDescription&quot;</span> <span class="o">:</span> <span class="s2">&quot;My Content Description&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;contentImageUrl&quot;</span> <span class="o">:</span> <span class="s2">&quot;https://example.com/mycontent-12345.png&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;contentIndexingMode&quot;</span> <span class="o">:</span> <span class="s2">&quot;public&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;contentMetadata&quot;</span> <span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;product_picture&quot;</span> <span class="o">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user_id&quot;</span> <span class="o">:</span> <span class="s2">&quot;6789&quot;</span>
+        <span class="p">},</span>
+    <span class="p">});</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h4 id="create-deep-link">Create deep link<a class="headerlink" href="#create-deep-link" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Creates a deep link URL with encapsulated data</p>
 </li>
+<li>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+</li>
+<li>
+<p>Uses <a href="../../../pages/links/data/">Deep Link Properties</a></p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/links">Branch Dashboard</a></p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>    <span class="nx">branchUniversalObject</span><span class="p">.</span><span class="nx">generateShortUrl</span><span class="p">({</span>
+      <span class="s2">&quot;feature&quot;</span> <span class="o">:</span> <span class="s2">&quot;sample-feature&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;channel&quot;</span> <span class="o">:</span> <span class="s2">&quot;sample-channel&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;stage&quot;</span> <span class="o">:</span> <span class="s2">&quot;sample-stage&quot;</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="s2">&quot;$desktop_url&quot;</span> <span class="o">:</span> <span class="s2">&quot;http://desktop-url.com&quot;</span><span class="p">,</span>
+    <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">Ti</span><span class="p">.</span><span class="nx">API</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;Completed link generation&#39;</span><span class="p">);</span>
+        <span class="nx">Ti</span><span class="p">.</span><span class="nx">API</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+    <span class="p">});</span>
+</pre></div>
+
+<ul>
+<li>The event listener bio:generateShortUrl returns a string object containing the generated link:
+<div class="codehilite"><pre><span></span>    <span class="nx">branchUniversalObject</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;bio:generateShortUrl&quot;</span><span class="p">,</span> <span class="nx">$</span><span class="p">.</span><span class="nx">onGenerateUrlFinished</span><span class="p">);</span>
+</pre></div></li>
 <li>
 <h4 id="share-deep-link">Share deep link<a class="headerlink" href="#share-deep-link" title="Permanent link">&para;</a></h4>
 </li>
 <li>
+<p>Will generate a Branch deep link and tag it with the channel the user selects</p>
+</li>
+<li>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+</li>
+<li>
+<p>Uses <a href="../../../pages/links/data/">Deep Link Properties</a></p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>    <span class="nx">branchUniversalObject</span><span class="p">.</span><span class="nx">showShareSheet</span><span class="p">({</span>
+      <span class="s2">&quot;feature&quot;</span> <span class="o">:</span> <span class="s2">&quot;sample-feature&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;channel&quot;</span> <span class="o">:</span> <span class="s2">&quot;sample-channel&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;stage&quot;</span> <span class="o">:</span> <span class="s2">&quot;sample-stage&quot;</span><span class="p">,</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="s2">&quot;$desktop_url&quot;</span> <span class="o">:</span> <span class="s2">&quot;http://desktop-url.com&quot;</span><span class="p">,</span>
+    <span class="p">});</span>
+</pre></div>
+
+<ul>
+<li>Android only (Callbacks in iOS are ignored. There is no need to implement them as the events are handled by UIActivityViewController)</li>
+</ul>
+<div class="codehilite"><pre><span></span>    <span class="nx">branchUniversalObject</span><span class="p">.</span><span class="nx">shareLinkDialogLaunched</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Share sheet launched&#39;</span><span class="p">);</span>
+    <span class="p">});</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>    <span class="nx">branchUniversalObject</span><span class="p">.</span><span class="nx">shareLinkDialogDismissed</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Share sheet dimissed&#39;</span><span class="p">);</span>
+   <span class="p">});</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>    <span class="nx">branchUniversalObject</span><span class="p">.</span><span class="nx">shareLinkResponse</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Share link response: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">));</span>
+    <span class="p">});</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>    <span class="nx">branchUniversalObject</span><span class="p">.</span><span class="nx">shareChannelSelected</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Channel selected: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">));</span>
+    <span class="p">});</span>
+</pre></div>
+
+</li>
+<li>
 <h4 id="read-deep-link">Read deep link<a class="headerlink" href="#read-deep-link" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="navigate-to-content">Navigate to content<a class="headerlink" href="#navigate-to-content" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="display-content">Display content<a class="headerlink" href="#display-content" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Refer to <code>$.onInitSessionFinished()</code> in <a href="#initialize-branch">Initialize Branch</a></li>
+</ul>
 </li>
 <li>
 <h4 id="track-content">Track content<a class="headerlink" href="#track-content" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Track how many times a piece of content is viewed</p>
+</li>
+<li>
+<p>Needs a <a href="#create-content-reference">Branch Universal Object</a></p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/content">Branch Dashboard</a></p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>    <span class="nx">branchUniversalObject</span><span class="p">.</span><span class="nx">registerView</span><span class="p">();</span>
+</pre></div>
+
 </li>
 <li>
 <h4 id="track-users">Track users<a class="headerlink" href="#track-users" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Sets the identity of a user (email, ID, UUID, etc) for events, deep links, and referrals</p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/identities">Branch Dashboard</a>  </p>
+<div class="codehilite"><pre><span></span>    <span class="kd">var</span> <span class="nx">userId</span> <span class="o">=</span> <span class="s1">&#39;123456&#39;</span><span class="p">;</span>
+    <span class="nx">branch</span><span class="p">.</span><span class="nx">setIdentity</span><span class="p">(</span><span class="nx">userId</span><span class="p">);</span>
+</pre></div>
+
+</li>
+<li>
+<p>Removes the identity of a user</p>
+<div class="codehilite"><pre><span></span>    <span class="nx">branch</span><span class="p">.</span><span class="nx">logout</span><span class="p">();</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h4 id="track-events">Track events<a class="headerlink" href="#track-events" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Registers a custom event</p>
 </li>
 <li>
-<h4 id="track-commerce">Track commerce<a class="headerlink" href="#track-commerce" title="Permanent link">&para;</a></h4>
+<p>Events named <code>open</code>, <code>close</code>, <code>install</code>, and <code>referred session</code> are Branch restricted</p>
 </li>
 <li>
-<h4 id="handle-referrals">Handle referrals<a class="headerlink" href="#handle-referrals" title="Permanent link">&para;</a></h4>
+<p>Best to <a href="#track-users">Track users</a> before <a href="#track-events">Track events</a> to associate a custom event to a user</p>
+</li>
+<li>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/events">Branch Dashboard</a></p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>    <span class="kd">var</span> <span class="nx">eventName</span> <span class="o">=</span> <span class="s1">&#39;clicked_on_this&#39;</span><span class="p">;</span>
+    <span class="nx">branch</span><span class="p">.</span><span class="nx">userCompletedAction</span><span class="p">(</span><span class="nx">eventName</span><span class="p">);</span>
+</pre></div>
+
+</li>
+<li>
+<h4 id="handle-referral">Handle referral<a class="headerlink" href="#handle-referral" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Referral points are obtained from events triggered by users from rules created on the <a href="https://dashboard.branch.io/referrals/rules">Branch Dashboard</a></p>
+</li>
+<li>
+<p>Validate on the <a href="https://dashboard.branch.io/referrals/analytics">Branch Dashboard</a></p>
+</li>
+<li>
+<p>Reward credits with the <a href="../../../pages/analytics/referrals/">Referral guide</a></p>
+</li>
+<li>
+<p>Redeem credits</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>    <span class="kr">int</span> <span class="nx">value</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="nx">branch</span><span class="p">.</span><span class="nx">redeemRewards</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+</pre></div>
+
+<ul>
+<li>Load credits</li>
+</ul>
+<div class="codehilite"><pre><span></span>    <span class="kd">var</span> <span class="nx">bucket</span> <span class="o">=</span> <span class="s1">&#39;this_bucket&#39;</span>
+    <span class="nx">branch</span><span class="p">.</span><span class="nx">loadRewards</span><span class="p">(</span><span class="nx">bucket</span><span class="p">);</span>  
+</pre></div>
+
+<div class="codehilite"><pre><span></span>    <span class="nx">branch</span><span class="p">.</span><span class="nx">loadRewards</span><span class="p">();</span>  
+</pre></div>
+
+<p>To implement the callback, you must add a listener to the event bio:loadRewards. The event returns a dictionary object containing the balance.</p>
+</li>
+<li>
+<p>Load history</p>
+<p><code>branch.getCreditHistory();</code></p>
+<p>Implement the callback, by adding a listener to the event bio:getCreditHistory.</p>
 </li>
 </ul>
 <h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">&para;</a></h4>
-</li>
-<li>
 <h4 id="sample-app">Sample app<a class="headerlink" href="#sample-app" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://github.com/BranchMetrics/titanium-branch-deep-linking/tree/master/testbed">Branch testbed app</a></li>
+</ul>
 </li>
 </ul>
                 

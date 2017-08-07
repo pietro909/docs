@@ -942,7 +942,7 @@
         }, 
         {
             "location": "/pages/apps/titanium/", 
-            "text": "Integrate Branch\n\n\n\n\n\n\nConfigure Branch\n\n\n\n\n\n\nConfigure app\n\n\n\n\n\n\nInitialize Branch\n\n\n\n\n\n\nTest deep link\n\n\n\n\n\n\nImplement features\n\n\n\n\n\n\nCreate content reference\n\n\n\n\n\n\nCreate deep link\n\n\n\n\n\n\nShare deep link\n\n\n\n\n\n\nRead deep link\n\n\n\n\n\n\nNavigate to content\n\n\n\n\n\n\nDisplay content\n\n\n\n\n\n\nTrack content\n\n\n\n\n\n\nTrack users\n\n\n\n\n\n\nTrack events\n\n\n\n\n\n\nTrack commerce\n\n\n\n\n\n\nHandle referrals\n\n\n\n\n\n\nTroubleshoot issues\n\n\n\n\n\n\nRecommendations\n\n\n\n\n\n\nSample app", 
+            "text": "Integrate Branch\n\n\n\n\n\n\nConfigure Branch\n\n\n\n\n\n\nComplete your \nBranch Dashboard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConfigure App\n\n\n\n\n\n\niOS\n\n\n\n\n\n\nAdd your Branch key and register a URI scheme\n\n\n\n\nIn your project\u2019s tiapp.xml file, insert the snippet below. Change yourapp to the URI scheme you\u2019ve selected.\n\n\n\n\n   \nios\n\n       \nplist\n\n         \ndict\n\n           \n!-- Add branch key as key-value pair --\n\n           \nkey\nbranch_key\n/key\n\n           \nstring\nkey_live_xxxxxxxxxxxxxxx\n/string\n\n           \n!-- Add unique string for direct deep links --\n\n           \nkey\nCFBundleURLTypes\n/key\n\n           \narray\n\n             \ndict\n\n               \nkey\nCFBundleURLSchemes\n/key\n\n               \narray\n\n                 \nstring\nyourapp\n/string\n\n               \n/array\n\n             \n/dict\n\n           \n/array\n\n         \n/dict\n\n       \n/plist\n\n     \n/ios\n\n\n\n\n\n\n\n\n\n\n\n\n\nAndroid\n\n\n\n\n\n\nAdd your Branch Key and register a URI Scheme\n\n\n\n\n\n\nOpen your tiapp.xml and add the following \n tag:\n\n    \napplication\n\n        \n!-- Other existing entries --\n\n        \nmeta-data\n \nandroid:name=\nio.branch.sdk.BranchKey\n \nandroid:value=\nkey_live_xxxxxxxxxxxxxxx\n \n/\n\n    \n/application\n\n\n\n\n\n\n\n\nWithin your Deep Link Activity's definition, insert the intent filter provided below. Change yourapp under android:scheme to the URI scheme you\u2019ve selected.\n\n\n\n\n\n\n    \nintent-filter\n\n      \ndata\n \nandroid:scheme=\nyourapp\n \nandroid:host=\nopen\n \n/\n\n      \naction\n \nandroid:name=\nandroid.intent.action.VIEW\n \n/\n\n      \ncategory\n \nandroid:name=\nandroid.intent.category.DEFAULT\n \n/\n\n      \ncategory\n \nandroid:name=\nandroid.intent.category.BROWSABLE\n \n/\n\n    \n/intent-filter\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInitialize Branch\n\n\n\n\n\n\nInitialize the SDK by inserting the following snippet into your index.js file:\n\n\n$\n.\ninitialize\n \n=\n \nfunction\n(\nparams\n)\n \n{\n\n       \n$.window.open()\n;\n\n\n       \n$.initializeViews()\n;\n\n       \n$.initializeHandlers()\n;\n\n\n       \nTi.API.info(\nstart\n \ninitSession\n)\n;\n\n       \nbranch.initSession()\n;\n\n       \nbranch.addEventListener(\nbio\n:\ninitSession\n, $.onInitSessionFinished);\n\n\n\n       if (OS_ANDROID) {\n\n\n           Ti.Android.currentActivity.addEventListener(\nnewintent\n, function(e) {\n\n\n               Ti.API.info(\ninside\n \nnewintent\n:\n \n + e);\n\n\n               $.window.open();\n\n\n               branch.initSession();\n\n\n           });\n\n\n       }\n\n\n   };\n\n\n\n   $.onInitSessionFinished = function(data) {\n\n\n       Ti.API.info(\ninside\n \nonInitSessionFinished\n);\n\n\n       for (key in data) {\n\n\n           if ((key != \ntype\n \n key != \nsource\n \n key != \nbubbles\n \n key != \ncancelBubble\n)\n \n \ndata\n[\nkey\n]\n \n!=\n \nnull\n)\n \n{\n\n               \nTi\n.\nAPI\n.\ninfo\n(\nkey\n \n+\n \ndata\n[\nkey\n]\n);\n\n           \n}\n\n       \n}\n\n   \n}\n\n\n\n\n\n\n\n\n\n\n\n\n\nTest deep link iOS\n\n\n\n\n\n\nCreate a deep link from the \nBranch Marketing Dashboard\n\n\n\n\n\n\nDelete your app from the device\n\n\n\n\n\n\nCompile your app\n\n\n\n\n\n\nPaste deep link in \nApple Notes\n \n\n\n\n\n\n\nLong press on the deep link \n(not 3D Touch)\n\n\n\n\n\n\nClick \nOpen in \"APP_NAME\"\n to open your app \n(\nexample\n)\n\n\n\n\n\n\n\n\n\n\nTest deep link Android\n\n\n\n\n\n\nCreate a deep link from the \nBranch Dashboard\n\n\n\n\n\n\nDelete your app from the device\n\n\n\n\n\n\nCompile your app\n\n\n\n\n\n\nPaste deep link in \nGoogle Hangouts\n\n\n\n\n\n\nClick on the deep link to open your app\n\n\n\n\n\n\n\n\n\n\nImplement features\n\n\n\n\n\n\nCreate content reference\n\n\n\n\n\n\nThe \nBranch Universal Object\n encapsulates the thing you want to share\n\n\n\n\n\n\nUses the Universal Object Properties listed below:\n\n\n\n\n\n\n\n\nKey\n\n\nType\n\n\nMeaning\n\n\n\n\n\n\n\n\n\n\ncanonicalIdentifier\n\n\nstring\n\n\nThe identifier of the object\n\n\n\n\n\n\ntitle\n\n\nstring\n\n\nThe title of the object\n\n\n\n\n\n\ncontentDescription\n\n\nstring\n\n\nThe short description of the object\n\n\n\n\n\n\ncontentImageUrl\n\n\nstring\n\n\nURL of the image used by the object\n\n\n\n\n\n\ncontentIndexingMode\n\n\nstring\n\n\nIndexing mode of the object. Set as \"private\" or \"public\".\n\n\n\n\n\n\ncontentMetadata\n\n\ndictionary\n\n\nCustom keys and values as metadata of the object\n\n\n\n\n\n\n\n\n    \nvar\n \nbranchUniversalObject\n \n=\n \nbranch\n.\ncreateBranchUniversalObject\n({\n\n        \ncanonicalIdentifier\n \n:\n \ncontent/12345\n,\n\n        \ntitle\n \n:\n \nMy Content Title\n,\n\n        \ncontentDescription\n \n:\n \nMy Content Description\n,\n\n        \ncontentImageUrl\n \n:\n \nhttps://example.com/mycontent-12345.png\n,\n\n        \ncontentIndexingMode\n \n:\n \npublic\n,\n\n        \ncontentMetadata\n \n:\n \n{\n\n            \nproduct_picture\n \n:\n \n12345\n,\n\n            \nuser_id\n \n:\n \n6789\n\n        \n},\n\n    \n});\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreate deep link\n\n\n\n\n\n\nCreates a deep link URL with encapsulated data\n\n\n\n\n\n\nNeeds a \nBranch Universal Object\n\n\n\n\n\n\nUses \nDeep Link Properties\n\n\n\n\n\n\nValidate with the \nBranch Dashboard\n\n\n\n\n\n\n    \nbranchUniversalObject\n.\ngenerateShortUrl\n({\n\n      \nfeature\n \n:\n \nsample-feature\n,\n\n      \nchannel\n \n:\n \nsample-channel\n,\n\n      \nstage\n \n:\n \nsample-stage\n\n    \n},\n \n{\n\n      \n$desktop_url\n \n:\n \nhttp://desktop-url.com\n,\n\n    \n},\n \nfunction\n \n(\nres\n)\n \n{\n\n        \nTi\n.\nAPI\n.\ninfo\n(\nCompleted link generation\n);\n\n        \nTi\n.\nAPI\n.\ninfo\n(\nres\n);\n\n    \n});\n\n\n\n\n\n\n\nThe event listener bio:generateShortUrl returns a string object containing the generated link:\n\n    \nbranchUniversalObject\n.\naddEventListener\n(\nbio:generateShortUrl\n,\n \n$\n.\nonGenerateUrlFinished\n);\n\n\n\n\n\n\nShare deep link\n\n\n\n\n\n\nWill generate a Branch deep link and tag it with the channel the user selects\n\n\n\n\n\n\nNeeds a \nBranch Universal Object\n\n\n\n\n\n\nUses \nDeep Link Properties\n\n\n\n\n\n\n    \nbranchUniversalObject\n.\nshowShareSheet\n({\n\n      \nfeature\n \n:\n \nsample-feature\n,\n\n      \nchannel\n \n:\n \nsample-channel\n,\n\n      \nstage\n \n:\n \nsample-stage\n,\n\n    \n},\n \n{\n\n      \n$desktop_url\n \n:\n \nhttp://desktop-url.com\n,\n\n    \n});\n\n\n\n\n\n\n\nAndroid only (Callbacks in iOS are ignored. There is no need to implement them as the events are handled by UIActivityViewController)\n\n\n\n\n    \nbranchUniversalObject\n.\nshareLinkDialogLaunched\n(\nfunction\n \n()\n \n{\n\n      \nconsole\n.\nlog\n(\nShare sheet launched\n);\n\n    \n});\n\n\n\n\n\n    \nbranchUniversalObject\n.\nshareLinkDialogDismissed\n(\nfunction\n \n()\n \n{\n\n     \nconsole\n.\nlog\n(\nShare sheet dimissed\n);\n\n   \n});\n\n\n\n\n\n    \nbranchUniversalObject\n.\nshareLinkResponse\n(\nfunction\n \n(\nres\n)\n \n{\n\n      \nconsole\n.\nlog\n(\nShare link response: \n \n+\n \nJSON\n.\nstringify\n(\nres\n));\n\n    \n});\n\n\n\n\n\n    \nbranchUniversalObject\n.\nshareChannelSelected\n(\nfunction\n \n(\nres\n)\n \n{\n\n      \nconsole\n.\nlog\n(\nChannel selected: \n \n+\n \nJSON\n.\nstringify\n(\nres\n));\n\n    \n});\n\n\n\n\n\n\n\n\n\nRead deep link\n\n\n\n\nRefer to \n$.onInitSessionFinished()\n in \nInitialize Branch\n\n\n\n\n\n\n\n\nTrack content\n\n\n\n\n\n\nTrack how many times a piece of content is viewed\n\n\n\n\n\n\nNeeds a \nBranch Universal Object\n\n\n\n\n\n\nValidate with the \nBranch Dashboard\n\n\n\n\n\n\n    \nbranchUniversalObject\n.\nregisterView\n();\n\n\n\n\n\n\n\n\n\nTrack users\n\n\n\n\n\n\nSets the identity of a user (email, ID, UUID, etc) for events, deep links, and referrals\n\n\n\n\n\n\nValidate with the \nBranch Dashboard\n  \n\n\n    \nvar\n \nuserId\n \n=\n \n123456\n;\n\n    \nbranch\n.\nsetIdentity\n(\nuserId\n);\n\n\n\n\n\n\n\n\n\nRemoves the identity of a user\n\n\n    \nbranch\n.\nlogout\n();\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrack events\n\n\n\n\n\n\nRegisters a custom event\n\n\n\n\n\n\nEvents named \nopen\n, \nclose\n, \ninstall\n, and \nreferred session\n are Branch restricted\n\n\n\n\n\n\nBest to \nTrack users\n before \nTrack events\n to associate a custom event to a user\n\n\n\n\n\n\nValidate with the \nBranch Dashboard\n\n\n\n\n\n\n    \nvar\n \neventName\n \n=\n \nclicked_on_this\n;\n\n    \nbranch\n.\nuserCompletedAction\n(\neventName\n);\n\n\n\n\n\n\n\n\n\nHandle referral\n\n\n\n\n\n\nReferral points are obtained from events triggered by users from rules created on the \nBranch Dashboard\n\n\n\n\n\n\nValidate on the \nBranch Dashboard\n\n\n\n\n\n\nReward credits with the \nReferral guide\n\n\n\n\n\n\nRedeem credits\n\n\n\n\n\n\n    \nint\n \nvalue\n \n=\n \n10\n;\n\n    \nbranch\n.\nredeemRewards\n(\nvalue\n);\n\n\n\n\n\n\n\nLoad credits\n\n\n\n\n    \nvar\n \nbucket\n \n=\n \nthis_bucket\n\n    \nbranch\n.\nloadRewards\n(\nbucket\n);\n  \n\n\n\n\n    \nbranch\n.\nloadRewards\n();\n  \n\n\n\n\nTo implement the callback, you must add a listener to the event bio:loadRewards. The event returns a dictionary object containing the balance.\n\n\n\n\n\n\nLoad history\n\n\nbranch.getCreditHistory();\n\n\nImplement the callback, by adding a listener to the event bio:getCreditHistory.\n\n\n\n\n\n\nTroubleshoot issues\n\n\n\n\n\n\nSample app\n\n\n\n\nBranch testbed app", 
             "title": "Titanium"
         }, 
         {
@@ -952,23 +952,28 @@
         }, 
         {
             "location": "/pages/apps/titanium/#configure-branch", 
-            "text": "", 
+            "text": "Complete your  Branch Dashboard", 
             "title": "Configure Branch"
         }, 
         {
             "location": "/pages/apps/titanium/#configure-app", 
-            "text": "", 
-            "title": "Configure app"
+            "text": "iOS    Add your Branch key and register a URI scheme   In your project\u2019s tiapp.xml file, insert the snippet below. Change yourapp to the URI scheme you\u2019ve selected.       ios \n        plist \n          dict \n            !-- Add branch key as key-value pair -- \n            key branch_key /key \n            string key_live_xxxxxxxxxxxxxxx /string \n            !-- Add unique string for direct deep links -- \n            key CFBundleURLTypes /key \n            array \n              dict \n                key CFBundleURLSchemes /key \n                array \n                  string yourapp /string \n                /array \n              /dict \n            /array \n          /dict \n        /plist \n      /ios       Android    Add your Branch Key and register a URI Scheme    Open your tiapp.xml and add the following   tag:      application \n         !-- Other existing entries -- \n         meta-data   android:name= io.branch.sdk.BranchKey   android:value= key_live_xxxxxxxxxxxxxxx   / \n     /application     Within your Deep Link Activity's definition, insert the intent filter provided below. Change yourapp under android:scheme to the URI scheme you\u2019ve selected.         intent-filter \n       data   android:scheme= yourapp   android:host= open   / \n       action   android:name= android.intent.action.VIEW   / \n       category   android:name= android.intent.category.DEFAULT   / \n       category   android:name= android.intent.category.BROWSABLE   / \n     /intent-filter", 
+            "title": "Configure App"
         }, 
         {
             "location": "/pages/apps/titanium/#initialize-branch", 
-            "text": "", 
+            "text": "Initialize the SDK by inserting the following snippet into your index.js file:  $ . initialize   =   function ( params )   { \n        $.window.open() ; \n\n        $.initializeViews() ; \n        $.initializeHandlers() ; \n\n        Ti.API.info( start   initSession ) ; \n        branch.initSession() ; \n        branch.addEventListener( bio : initSession , $.onInitSessionFinished);         if (OS_ANDROID) {             Ti.Android.currentActivity.addEventListener( newintent , function(e) {                 Ti.API.info( inside   newintent :    + e);                 $.window.open();                 branch.initSession();             });         }     };     $.onInitSessionFinished = function(data) {         Ti.API.info( inside   onInitSessionFinished );         for (key in data) {             if ((key !=  type    key !=  source    key !=  bubbles    key !=  cancelBubble )     data [ key ]   !=   null )   { \n                Ti . API . info ( key   +   data [ key ] ); \n            } \n        } \n    }", 
             "title": "Initialize Branch"
         }, 
         {
-            "location": "/pages/apps/titanium/#test-deep-link", 
-            "text": "", 
-            "title": "Test deep link"
+            "location": "/pages/apps/titanium/#test-deep-link-ios", 
+            "text": "Create a deep link from the  Branch Marketing Dashboard    Delete your app from the device    Compile your app    Paste deep link in  Apple Notes      Long press on the deep link  (not 3D Touch)    Click  Open in \"APP_NAME\"  to open your app  ( example )", 
+            "title": "Test deep link iOS"
+        }, 
+        {
+            "location": "/pages/apps/titanium/#test-deep-link-android", 
+            "text": "Create a deep link from the  Branch Dashboard    Delete your app from the device    Compile your app    Paste deep link in  Google Hangouts    Click on the deep link to open your app", 
+            "title": "Test deep link Android"
         }, 
         {
             "location": "/pages/apps/titanium/#implement-features", 
@@ -977,58 +982,43 @@
         }, 
         {
             "location": "/pages/apps/titanium/#create-content-reference", 
-            "text": "", 
+            "text": "The  Branch Universal Object  encapsulates the thing you want to share    Uses the Universal Object Properties listed below:     Key  Type  Meaning      canonicalIdentifier  string  The identifier of the object    title  string  The title of the object    contentDescription  string  The short description of the object    contentImageUrl  string  URL of the image used by the object    contentIndexingMode  string  Indexing mode of the object. Set as \"private\" or \"public\".    contentMetadata  dictionary  Custom keys and values as metadata of the object          var   branchUniversalObject   =   branch . createBranchUniversalObject ({ \n         canonicalIdentifier   :   content/12345 , \n         title   :   My Content Title , \n         contentDescription   :   My Content Description , \n         contentImageUrl   :   https://example.com/mycontent-12345.png , \n         contentIndexingMode   :   public , \n         contentMetadata   :   { \n             product_picture   :   12345 , \n             user_id   :   6789 \n         }, \n     });", 
             "title": "Create content reference"
         }, 
         {
             "location": "/pages/apps/titanium/#create-deep-link", 
-            "text": "", 
+            "text": "Creates a deep link URL with encapsulated data    Needs a  Branch Universal Object    Uses  Deep Link Properties    Validate with the  Branch Dashboard         branchUniversalObject . generateShortUrl ({ \n       feature   :   sample-feature , \n       channel   :   sample-channel , \n       stage   :   sample-stage \n     },   { \n       $desktop_url   :   http://desktop-url.com , \n     },   function   ( res )   { \n         Ti . API . info ( Completed link generation ); \n         Ti . API . info ( res ); \n     });    The event listener bio:generateShortUrl returns a string object containing the generated link:      branchUniversalObject . addEventListener ( bio:generateShortUrl ,   $ . onGenerateUrlFinished );", 
             "title": "Create deep link"
         }, 
         {
             "location": "/pages/apps/titanium/#share-deep-link", 
-            "text": "", 
+            "text": "Will generate a Branch deep link and tag it with the channel the user selects    Needs a  Branch Universal Object    Uses  Deep Link Properties         branchUniversalObject . showShareSheet ({ \n       feature   :   sample-feature , \n       channel   :   sample-channel , \n       stage   :   sample-stage , \n     },   { \n       $desktop_url   :   http://desktop-url.com , \n     });    Android only (Callbacks in iOS are ignored. There is no need to implement them as the events are handled by UIActivityViewController)        branchUniversalObject . shareLinkDialogLaunched ( function   ()   { \n       console . log ( Share sheet launched ); \n     });        branchUniversalObject . shareLinkDialogDismissed ( function   ()   { \n      console . log ( Share sheet dimissed ); \n    });        branchUniversalObject . shareLinkResponse ( function   ( res )   { \n       console . log ( Share link response:    +   JSON . stringify ( res )); \n     });        branchUniversalObject . shareChannelSelected ( function   ( res )   { \n       console . log ( Channel selected:    +   JSON . stringify ( res )); \n     });", 
             "title": "Share deep link"
         }, 
         {
             "location": "/pages/apps/titanium/#read-deep-link", 
-            "text": "", 
+            "text": "Refer to  $.onInitSessionFinished()  in  Initialize Branch", 
             "title": "Read deep link"
         }, 
         {
-            "location": "/pages/apps/titanium/#navigate-to-content", 
-            "text": "", 
-            "title": "Navigate to content"
-        }, 
-        {
-            "location": "/pages/apps/titanium/#display-content", 
-            "text": "", 
-            "title": "Display content"
-        }, 
-        {
             "location": "/pages/apps/titanium/#track-content", 
-            "text": "", 
+            "text": "Track how many times a piece of content is viewed    Needs a  Branch Universal Object    Validate with the  Branch Dashboard         branchUniversalObject . registerView ();", 
             "title": "Track content"
         }, 
         {
             "location": "/pages/apps/titanium/#track-users", 
-            "text": "", 
+            "text": "Sets the identity of a user (email, ID, UUID, etc) for events, deep links, and referrals    Validate with the  Branch Dashboard          var   userId   =   123456 ; \n     branch . setIdentity ( userId );     Removes the identity of a user       branch . logout ();", 
             "title": "Track users"
         }, 
         {
             "location": "/pages/apps/titanium/#track-events", 
-            "text": "", 
+            "text": "Registers a custom event    Events named  open ,  close ,  install , and  referred session  are Branch restricted    Best to  Track users  before  Track events  to associate a custom event to a user    Validate with the  Branch Dashboard         var   eventName   =   clicked_on_this ; \n     branch . userCompletedAction ( eventName );", 
             "title": "Track events"
         }, 
         {
-            "location": "/pages/apps/titanium/#track-commerce", 
-            "text": "", 
-            "title": "Track commerce"
-        }, 
-        {
-            "location": "/pages/apps/titanium/#handle-referrals", 
-            "text": "", 
-            "title": "Handle referrals"
+            "location": "/pages/apps/titanium/#handle-referral", 
+            "text": "Referral points are obtained from events triggered by users from rules created on the  Branch Dashboard    Validate on the  Branch Dashboard    Reward credits with the  Referral guide    Redeem credits         int   value   =   10 ; \n     branch . redeemRewards ( value );    Load credits        var   bucket   =   this_bucket \n     branch . loadRewards ( bucket );          branch . loadRewards ();     To implement the callback, you must add a listener to the event bio:loadRewards. The event returns a dictionary object containing the balance.    Load history  branch.getCreditHistory();  Implement the callback, by adding a listener to the event bio:getCreditHistory.", 
+            "title": "Handle referral"
         }, 
         {
             "location": "/pages/apps/titanium/#troubleshoot-issues", 
@@ -1036,13 +1026,8 @@
             "title": "Troubleshoot issues"
         }, 
         {
-            "location": "/pages/apps/titanium/#recommendations", 
-            "text": "", 
-            "title": "Recommendations"
-        }, 
-        {
             "location": "/pages/apps/titanium/#sample-app", 
-            "text": "", 
+            "text": "Branch testbed app", 
             "title": "Sample app"
         }, 
         {
