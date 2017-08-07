@@ -94,7 +94,7 @@
   left: 0;
   z-index: 1;
   background-color: rgba(0,0,0,0);
-  transition: background 0.3s ease-in-out;
+  transition: background 0.25s ease-in-out;
 }
 .modal.active.dialog .modal-background {
   transform: translate(0, 100%);
@@ -115,11 +115,11 @@
   padding: 1.5em;
 }
 .modal.dialog .modal-content {
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
   max-width: 60em;
 }
 .modal.notification .modal-content {
-  transition: 0.3s ease-in-out;
+  transition: 0.25s ease-in-out;
   transform: translate(-50%, 0%);
   max-width: 30em;
 }
