@@ -80,6 +80,9 @@
   display: inline;
   padding: 0 0 0 1.2rem;
 }
+.highlight pre {
+  background-color: #f6f8fa;
+}
 
 
 
