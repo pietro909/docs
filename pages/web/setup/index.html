@@ -549,15 +549,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-text-message" title="Create text message" class="md-nav__link">
-    Create text message
+  <a href="#create-journey-banner" title="Create Journey banner" class="md-nav__link">
+    Create Journey banner
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-journey-banner" title="Create Journey banner" class="md-nav__link">
-    Create Journey banner
+  <a href="#create-text-message" title="Create text message" class="md-nav__link">
+    Create text message
   </a>
   
 </li>
@@ -1639,15 +1639,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-text-message" title="Create text message" class="md-nav__link">
-    Create text message
+  <a href="#create-journey-banner" title="Create Journey banner" class="md-nav__link">
+    Create Journey banner
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-journey-banner" title="Create Journey banner" class="md-nav__link">
-    Create Journey banner
+  <a href="#create-text-message" title="Create text message" class="md-nav__link">
+    Create text message
   </a>
   
 </li>
@@ -1981,6 +1981,52 @@
 </ul>
 </li>
 <li>
+<h4 id="create-journey-banner">Create Journey banner<a class="headerlink" href="#create-journey-banner" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Converts mobile users to app users</p>
+</li>
+<li>
+<p>Create a <code>Journey</code> on the <a href="https://dashboard.branch.io/web/journeys">Branch Dashboard</a></p>
+</li>
+<li>
+<p>Validate by testing your website on a mobile device</p>
+</li>
+<li>
+<p>Append additional deep link data to the Journey button (optional)</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">linkData</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">campaign</span><span class="o">:</span> <span class="s1">&#39;content 123&#39;</span><span class="p">,</span>
+  <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span><span class="p">,</span>
+  <span class="nx">feature</span><span class="o">:</span> <span class="s1">&#39;dashboard&#39;</span><span class="p">,</span>
+  <span class="nx">stage</span><span class="o">:</span> <span class="s1">&#39;new user&#39;</span><span class="p">,</span>
+  <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;tag1&#39;</span><span class="p">,</span> <span class="s1">&#39;tag2&#39;</span><span class="p">,</span> <span class="s1">&#39;tag3&#39;</span> <span class="p">],</span>
+  <span class="nx">alias</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s1">&#39;custom_bool&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s1">&#39;custom_int&#39;</span><span class="o">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
+    <span class="s1">&#39;custom_string&#39;</span><span class="o">:</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;$og_title&#39;</span><span class="o">:</span> <span class="s1">&#39;Title&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;$og_description&#39;</span><span class="o">:</span> <span class="s1">&#39;Description&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;$og_image_url&#39;</span><span class="o">:</span><span class="s1">&#39;http://lorempixel.com/400/400&#39;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">branch</span><span class="p">.</span><span class="nx">setBranchViewData</span><span class="p">(</span><span class="nx">linkData</span><span class="p">);</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="c1">// close</span>
+<span class="nx">branch</span><span class="p">.</span><span class="nx">closeJourney</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span> 
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span> 
+<span class="p">});</span>
+
+<span class="c1">// reopen</span>
+<span class="nx">branch</span><span class="p">.</span><span class="nx">track</span><span class="p">(</span><span class="s2">&quot;pageview&quot;</span><span class="p">);</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+<li>
 <h4 id="create-text-message">Create text message<a class="headerlink" href="#create-text-message" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
@@ -2017,43 +2063,6 @@
 <span class="nx">branch</span><span class="p">.</span><span class="nx">sendSMS</span><span class="p">(</span><span class="nx">phoneNumber</span><span class="p">,</span> <span class="nx">linkData</span><span class="p">,</span> <span class="nx">linkOptions</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
 <span class="p">});</span>
-</pre></div>
-
-</li>
-</ul>
-</li>
-<li>
-<h4 id="create-journey-banner">Create Journey banner<a class="headerlink" href="#create-journey-banner" title="Permanent link">&para;</a></h4>
-<ul>
-<li>
-<p>Converts mobile users to app users</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">linkData</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">campaign</span><span class="o">:</span> <span class="s1">&#39;content 123&#39;</span><span class="p">,</span>
-  <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span><span class="p">,</span>
-  <span class="nx">feature</span><span class="o">:</span> <span class="s1">&#39;dashboard&#39;</span><span class="p">,</span>
-  <span class="nx">stage</span><span class="o">:</span> <span class="s1">&#39;new user&#39;</span><span class="p">,</span>
-  <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;tag1&#39;</span><span class="p">,</span> <span class="s1">&#39;tag2&#39;</span><span class="p">,</span> <span class="s1">&#39;tag3&#39;</span> <span class="p">],</span>
-  <span class="nx">alias</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s1">&#39;custom_bool&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s1">&#39;custom_int&#39;</span><span class="o">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
-    <span class="s1">&#39;custom_string&#39;</span><span class="o">:</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;$og_title&#39;</span><span class="o">:</span> <span class="s1">&#39;Title&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;$og_description&#39;</span><span class="o">:</span> <span class="s1">&#39;Description&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;$og_image_url&#39;</span><span class="o">:</span><span class="s1">&#39;http://lorempixel.com/400/400&#39;</span>
-  <span class="p">}</span>
-<span class="p">};</span>
-
-<span class="nx">branch</span><span class="p">.</span><span class="nx">setBranchViewData</span><span class="p">(</span><span class="nx">linkData</span><span class="p">);</span>
-</pre></div>
-
-<div class="codehilite"><pre><span></span><span class="c1">// close</span>
-<span class="nx">branch</span><span class="p">.</span><span class="nx">closeJourney</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span> 
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span> 
-<span class="p">});</span>
-
-<span class="c1">// reopen</span>
-<span class="nx">branch</span><span class="p">.</span><span class="nx">track</span><span class="p">(</span><span class="s2">&quot;pageview&quot;</span><span class="p">);</span>
 </pre></div>
 
 </li>
