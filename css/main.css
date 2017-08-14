@@ -141,12 +141,6 @@ body.modal {
 .modal > ::-webkit-scrollbar {
   display: none;
 }
-
-
-
-/* ////////////////////////////// */
-/* ICONS */
-/* ////////////////////////////// */
 .right {
   float: right;
 }
@@ -172,6 +166,18 @@ body.modal {
   color: white;
   padding: 1em;
   margin-right: 1em;
+}
+
+.modal.active.dialog.image .modal-content {
+  top: 50%;
+  max-width: 100em;
+}
+.modal.active.dialog.image #modal-image-link {
+  display: block;
+  background: none;
+}
+.modal.active.dialog.image #modal-image-img {
+  width: 100%;
 }
 
 
