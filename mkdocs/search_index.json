@@ -387,7 +387,7 @@
         }, 
         {
             "location": "/pages/apps/adobe-air/", 
-            "text": "Integrate Branch\n\n\n\n\n\n\nConfigure Branch\n\n\n\n\n\n\nConfigure app\n\n\n\n\n\n\nInitialize Branch\n\n\n\n\n\n\nTest deep link\n\n\n\n\n\n\nImplement features\n\n\n\n\n\n\nCreate content reference\n\n\n\n\n\n\nCreate deep link\n\n\n\n\n\n\nShare deep link\n\n\n\n\n\n\nRead deep link\n\n\n\n\n\n\nNavigate to content\n\n\n\n\n\n\nDisplay content\n\n\n\n\n\n\nTrack content\n\n\n\n\n\n\nTrack users\n\n\n\n\n\n\nTrack events\n\n\n\n\n\n\nTrack commerce\n\n\n\n\n\n\nHandle referrals\n\n\n\n\n\n\nTroubleshoot issues\n\n\n\n\n\n\nRecommendations\n\n\n\n\n\n\nSample app", 
+            "text": "Integrate Branch\n\n\n\n\n\n\nConfigure Branch\n\n\n\n\n\n\nComplete your \nBranch Dashboard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConfigure app\n\n\nIn your project\u2019s \n*-app.xml\n file, insert the platform-specific snippet(s) below. Change \nyourapp\n to the URI scheme you\u2019ve selected.\n\n\n\n\n\n\niOS\n\n\niPhone\nInfoAdditions\n!\n[\nCDATA\n[\n\n    \n!--\n \nother\n \nstuff\n \n--\n\n    \nkey\nbranch_key\n/key\n\n    \nstring\nkey_live_xxxxxxxxxxxxxxx\n/string\n\n\n]]\n/InfoAdditions\n/iPhone\n\n\n\n\n\n\n\n\n\nAndroid\n\n\nandroid\nmanifestAdditions\n!\n[\nCDATA\n[\n\n    \n!--\n \nother\n \nstuff\n \n--\n\n    \napplication\n\n        \nmeta\n-\ndata\n \nandroid\n:\nname\n=\nio.branch.sdk.BranchKey\n \nandroid\n:\nvalue\n=\nkey_live_xxxxxxxxxxxxxxx\n \n/\n\n        \nactivity\n \nandroid\n:\nname\n=\nio.branch.nativeExtensions.branch.BranchActivity\n \nandroid\n:\nlaunchMode\n=\nsingleTask\n \nandroid\n:\ntheme\n=\n@android:style/Theme.Translucent.NoTitleBar.Fullscreen\n \n/\n\n    \n/application\n\n\n]]\n/manifestAdditions\n/android\n\n\n\n\n\n\n\n\n\n\n\n\n\nInitialize Branch\n\n\nIn \nMain.as\n\n\n// Import\n\n\nimport\n \nio.branch.nativeExtensions.branch.Branch\n;\n\n\nimport\n \nio.branch.nativeExtensions.branch.BranchEvent\n;\n\n\n\n// Then create a Branch instance:\n\n\nvar\n \nbranch\n:\nBranch\n \n=\n \nnew\n \nBranch\n();\n\n\n\n// Register two events before initializing the SDK:\n\n\nbranch\n.\naddEventListener\n(\nBranchEvent\n.\nINIT_FAILED\n,\n \ninitFailed\n);\n\n\nbranch\n.\naddEventListener\n(\nBranchEvent\n.\nINIT_SUCCESSED\n,\n \ninitSuccessed\n);\n\n\n\nprivate\n \nfunction \ninitFailed\n(\nbEvt\n:\nBranchEvent\n):\nvoid\n \n{\n\n    \ntrace\n(\nBranchEvent.INIT_FAILED\n,\n \nbEvt\n.\ninformations\n);\n\n\n}\n\n\n\nprivate\n \nfunction \ninitSuccessed\n(\nbEvt\n:\nBranchEvent\n):\nvoid\n \n{\n\n    \ntrace\n(\nBranchEvent.INIT_SUCCESSED\n,\n \nbEvt\n.\ninformations\n);\n\n\n    \n// params are the deep linked params associated with the link that the user clicked before showing up\n\n    \n// params will be empty if no data found\n\n    \nvar\n \nreferringParams\n:\nObject\n \n=\n \nJSON\n.\nparse\n(\nbEvt\n.\ninformations\n);\n\n\n    \n//trace(referringParams.user);\n\n\n}\n\n\n\n// Initialize the SDK:\n\n\nbranch\n.\ninit\n();\n\n\n\n\n\n\n\nWarning\n\n\nBe sure to have the INIT_SUCCESSED event called, otherwise read the bEvt.informations from the INIT_FAILED event.\n\n\n\n\n\n\n\n\nCompiling ANE\n\n\n\n\n\n\nTo compile this ANE, you need to have \nANT\n installed on your (OS X) machine, and \nJava 1.6\n.\n\n\n\n\n\n\nClone the repository, and change the \nbuild.config\n to match your computer settings with the path to your AIR SDK (you should have the latest one), to the Android SDK, and to a keystore (a certificate for Air, which may be a self-signed certificate created with adt).\n\n\n\n\n\n\nFinally open a command line, \ncd\n in the directory and just call \nant\n.\n\n\n\n\n\n\n\n\n\n\nTest deep link iOS\n\n\n\n\n\n\nCreate a deep link from the \nBranch Dashboard\n\n\n\n\n\n\nDelete your app from the device\n\n\n\n\n\n\nCompile your app\n\n\n\n\n\n\nPaste deep link in \nApple Notes\n\n\n\n\n\n\nLong press on the deep link \n(not 3D Touch)\n\n\n\n\n\n\nClick \nOpen in \"APP_NAME\"\n to open your app \n(\nexample\n)\n\n\n\n\n\n\n\n\n\n\nTest deep link Android\n\n\n\n\n\n\nCreate a deep link from the \nBranch Dashboard\n\n\n\n\n\n\nDelete your app from the device\n\n\n\n\n\n\nCompile your app\n\n\n\n\n\n\nPaste deep link in \nGoogle Hangouts\n\n\n\n\n\n\nClick on the deep link to open your app\n\n\n\n\n\n\n\n\n\n\nImplement features\n\n\n\n\n\n\nCreate deep link\n\n\n//be sure to add the event listeners:\n\n\nbranch\n.\naddEventListener\n(\nBranchEvent\n.\nGET_SHORT_URL_FAILED\n,\n \ngetShortUrlFailed\n);\n\n\nbranch\n.\naddEventListener\n(\nBranchEvent\n.\nGET_SHORT_URL_SUCCESSED\n,\n \ngetShortUrlSuccessed\n);\n\n\n\nprivate\n \nfunction \ngetShortUrlSuccessed\n(\nbEvt\n:\nBranchEvent\n):\nvoid\n \n{\n\n    \ntrace\n(\nBranchEvent.GET_SHORT_URL_SUCCESSED\n,\n \nmy short url is: \n \n+\n \nbEvt\n.\ninformations\n);\n\n\n}\n\n\n\nprivate\n \nfunction \ngetShortUrlFailed\n(\nbEvt\n:\nBranchEvent\n):\nvoid\n \n{\n\n    \ntrace\n(\nBranchEvent.GET_SHORT_URL_FAILED\n,\n \nbEvt\n.\ninformations\n);\n\n\n}\n\n\n\nvar\n \ndataToInclude\n:\nObject\n \n=\n \n{\n\n  \narticle_id\n:\n \n1234\n,\n\n  \n$og_title\n:\n \nHot off the presses!\n,\n\n  \n$og_image_url\n:\n \nmysite.com/image.png\n,\n\n  \n$desktop_url\n:\n \nmysite.com/article1234\n\n\n};\n\n\n\nbranch\n.\ngetShortUrl\n(\ntags\n,\n \nsms\n,\n \nBranchConst\n.\nFEATURE_TAG_SHARE\n,\n \nJSON\n.\nstringify\n(\ndataToInclude\n));\n\n\n\n\n\n\n\n\n\nRead deep link\n\n\n\n\n\n\nInstall \n Open\n\n\nvar\n \nsessionParams\n:\nString\n \n=\n \nbranch\n.\ngetLatestReferringParams\n();\n\n\nvar\n \nsessionParamsObj\n:\nObject\n \n=\n \nJSON\n.\nparse\n(\nsessionParams\n);\n\n\n\n\n\n\n\n\n\nInstall Only\n    \nvar\n \ninstallParams\n:\nString\n \n=\n \nbranch\n.\ngetFirstReferringParams\n();\n\n\nvar\n \ninstallParamsObj\n:\nObject\n \n=\n \nJSON\n.\nparse\n(\ninstallParams\n);\n\n\n\n\n\n\n\n\n\n\n\n\nTrack users\n\n\nbranch\n.\nsetIdentity\n(\nyour user id\n);\n\n\nbranch\n.\nlogout\n();\n\n\n\n\n\n\n\n\n\nHandle referrals\n\n\n\n\n\n\nReferral points are obtained from events triggered by users from rules created on the \nBranch Dashboard\n\n\n\n\n\n\nValidate on the \nBranch Dashboard\n\n\n\n\n\n\nReward credits with the \nReferral guide\n\n\n\n\n\n\nRedeem credits\n\n\nbranch\n.\nredeemRewards\n(\n5\n);\n\n\n\n\n\n\n\n\n\nLoad credits\n\n\nbranch\n.\ngetCredits\n();\n\n\n\n\n\n\n\n\n\nLoad history\n\n\nbranch\n.\ngetCreditsHistory\n();\n\n\n\n\n\n\n\n\n\n\n\n\n\nTroubleshoot issues\n\n\n\n\n\n\nRecommendations\n\n\n\n\n\n\nSample app", 
             "title": "Adobe AIR"
         }, 
         {
@@ -397,23 +397,33 @@
         }, 
         {
             "location": "/pages/apps/adobe-air/#configure-branch", 
-            "text": "", 
+            "text": "Complete your  Branch Dashboard", 
             "title": "Configure Branch"
         }, 
         {
             "location": "/pages/apps/adobe-air/#configure-app", 
-            "text": "", 
+            "text": "In your project\u2019s  *-app.xml  file, insert the platform-specific snippet(s) below. Change  yourapp  to the URI scheme you\u2019ve selected.    iOS  iPhone InfoAdditions ! [ CDATA [ \n     !--   other   stuff   -- \n     key branch_key /key \n     string key_live_xxxxxxxxxxxxxxx /string  ]] /InfoAdditions /iPhone     Android  android manifestAdditions ! [ CDATA [ \n     !--   other   stuff   -- \n     application \n         meta - data   android : name = io.branch.sdk.BranchKey   android : value = key_live_xxxxxxxxxxxxxxx   / \n         activity   android : name = io.branch.nativeExtensions.branch.BranchActivity   android : launchMode = singleTask   android : theme = @android:style/Theme.Translucent.NoTitleBar.Fullscreen   / \n     /application  ]] /manifestAdditions /android", 
             "title": "Configure app"
         }, 
         {
             "location": "/pages/apps/adobe-air/#initialize-branch", 
-            "text": "", 
+            "text": "In  Main.as  // Import  import   io.branch.nativeExtensions.branch.Branch ;  import   io.branch.nativeExtensions.branch.BranchEvent ;  // Then create a Branch instance:  var   branch : Branch   =   new   Branch ();  // Register two events before initializing the SDK:  branch . addEventListener ( BranchEvent . INIT_FAILED ,   initFailed );  branch . addEventListener ( BranchEvent . INIT_SUCCESSED ,   initSuccessed );  private   function  initFailed ( bEvt : BranchEvent ): void   { \n     trace ( BranchEvent.INIT_FAILED ,   bEvt . informations );  }  private   function  initSuccessed ( bEvt : BranchEvent ): void   { \n     trace ( BranchEvent.INIT_SUCCESSED ,   bEvt . informations ); \n\n     // params are the deep linked params associated with the link that the user clicked before showing up \n     // params will be empty if no data found \n     var   referringParams : Object   =   JSON . parse ( bEvt . informations ); \n\n     //trace(referringParams.user);  }  // Initialize the SDK:  branch . init ();    Warning  Be sure to have the INIT_SUCCESSED event called, otherwise read the bEvt.informations from the INIT_FAILED event.", 
             "title": "Initialize Branch"
         }, 
         {
-            "location": "/pages/apps/adobe-air/#test-deep-link", 
-            "text": "", 
-            "title": "Test deep link"
+            "location": "/pages/apps/adobe-air/#compiling-ane", 
+            "text": "To compile this ANE, you need to have  ANT  installed on your (OS X) machine, and  Java 1.6 .    Clone the repository, and change the  build.config  to match your computer settings with the path to your AIR SDK (you should have the latest one), to the Android SDK, and to a keystore (a certificate for Air, which may be a self-signed certificate created with adt).    Finally open a command line,  cd  in the directory and just call  ant .", 
+            "title": "Compiling ANE"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#test-deep-link-ios", 
+            "text": "Create a deep link from the  Branch Dashboard    Delete your app from the device    Compile your app    Paste deep link in  Apple Notes    Long press on the deep link  (not 3D Touch)    Click  Open in \"APP_NAME\"  to open your app  ( example )", 
+            "title": "Test deep link iOS"
+        }, 
+        {
+            "location": "/pages/apps/adobe-air/#test-deep-link-android", 
+            "text": "Create a deep link from the  Branch Dashboard    Delete your app from the device    Compile your app    Paste deep link in  Google Hangouts    Click on the deep link to open your app", 
+            "title": "Test deep link Android"
         }, 
         {
             "location": "/pages/apps/adobe-air/#implement-features", 
@@ -421,58 +431,23 @@
             "title": "Implement features"
         }, 
         {
-            "location": "/pages/apps/adobe-air/#create-content-reference", 
-            "text": "", 
-            "title": "Create content reference"
-        }, 
-        {
             "location": "/pages/apps/adobe-air/#create-deep-link", 
-            "text": "", 
+            "text": "//be sure to add the event listeners:  branch . addEventListener ( BranchEvent . GET_SHORT_URL_FAILED ,   getShortUrlFailed );  branch . addEventListener ( BranchEvent . GET_SHORT_URL_SUCCESSED ,   getShortUrlSuccessed );  private   function  getShortUrlSuccessed ( bEvt : BranchEvent ): void   { \n     trace ( BranchEvent.GET_SHORT_URL_SUCCESSED ,   my short url is:    +   bEvt . informations );  }  private   function  getShortUrlFailed ( bEvt : BranchEvent ): void   { \n     trace ( BranchEvent.GET_SHORT_URL_FAILED ,   bEvt . informations );  }  var   dataToInclude : Object   =   { \n   article_id :   1234 , \n   $og_title :   Hot off the presses! , \n   $og_image_url :   mysite.com/image.png , \n   $desktop_url :   mysite.com/article1234  };  branch . getShortUrl ( tags ,   sms ,   BranchConst . FEATURE_TAG_SHARE ,   JSON . stringify ( dataToInclude ));", 
             "title": "Create deep link"
         }, 
         {
-            "location": "/pages/apps/adobe-air/#share-deep-link", 
-            "text": "", 
-            "title": "Share deep link"
-        }, 
-        {
             "location": "/pages/apps/adobe-air/#read-deep-link", 
-            "text": "", 
+            "text": "Install   Open  var   sessionParams : String   =   branch . getLatestReferringParams ();  var   sessionParamsObj : Object   =   JSON . parse ( sessionParams );     Install Only\n     var   installParams : String   =   branch . getFirstReferringParams ();  var   installParamsObj : Object   =   JSON . parse ( installParams );", 
             "title": "Read deep link"
         }, 
         {
-            "location": "/pages/apps/adobe-air/#navigate-to-content", 
-            "text": "", 
-            "title": "Navigate to content"
-        }, 
-        {
-            "location": "/pages/apps/adobe-air/#display-content", 
-            "text": "", 
-            "title": "Display content"
-        }, 
-        {
-            "location": "/pages/apps/adobe-air/#track-content", 
-            "text": "", 
-            "title": "Track content"
-        }, 
-        {
             "location": "/pages/apps/adobe-air/#track-users", 
-            "text": "", 
+            "text": "branch . setIdentity ( your user id );  branch . logout ();", 
             "title": "Track users"
         }, 
         {
-            "location": "/pages/apps/adobe-air/#track-events", 
-            "text": "", 
-            "title": "Track events"
-        }, 
-        {
-            "location": "/pages/apps/adobe-air/#track-commerce", 
-            "text": "", 
-            "title": "Track commerce"
-        }, 
-        {
             "location": "/pages/apps/adobe-air/#handle-referrals", 
-            "text": "", 
+            "text": "Referral points are obtained from events triggered by users from rules created on the  Branch Dashboard    Validate on the  Branch Dashboard    Reward credits with the  Referral guide    Redeem credits  branch . redeemRewards ( 5 );     Load credits  branch . getCredits ();     Load history  branch . getCreditsHistory ();", 
             "title": "Handle referrals"
         }, 
         {

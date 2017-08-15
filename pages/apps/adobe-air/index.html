@@ -369,8 +369,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#test-deep-link" title="Test deep link" class="md-nav__link">
-    Test deep link
+  <a href="#compiling-ane" title="Compiling ANE" class="md-nav__link">
+    Compiling ANE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-deep-link-ios" title="Test deep link iOS" class="md-nav__link">
+    Test deep link iOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-deep-link-android" title="Test deep link Android" class="md-nav__link">
+    Test deep link Android
   </a>
   
 </li>
@@ -389,22 +403,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-content-reference" title="Create content reference" class="md-nav__link">
-    Create content reference
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#create-deep-link" title="Create deep link" class="md-nav__link">
     Create deep link
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#share-deep-link" title="Share deep link" class="md-nav__link">
-    Share deep link
   </a>
   
 </li>
@@ -417,43 +417,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#navigate-to-content" title="Navigate to content" class="md-nav__link">
-    Navigate to content
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#display-content" title="Display content" class="md-nav__link">
-    Display content
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#track-content" title="Track content" class="md-nav__link">
-    Track content
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#track-users" title="Track users" class="md-nav__link">
     Track users
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#track-events" title="Track events" class="md-nav__link">
-    Track events
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#track-commerce" title="Track commerce" class="md-nav__link">
-    Track commerce
   </a>
   
 </li>
@@ -1553,8 +1518,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#test-deep-link" title="Test deep link" class="md-nav__link">
-    Test deep link
+  <a href="#compiling-ane" title="Compiling ANE" class="md-nav__link">
+    Compiling ANE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-deep-link-ios" title="Test deep link iOS" class="md-nav__link">
+    Test deep link iOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-deep-link-android" title="Test deep link Android" class="md-nav__link">
+    Test deep link Android
   </a>
   
 </li>
@@ -1573,22 +1552,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-content-reference" title="Create content reference" class="md-nav__link">
-    Create content reference
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#create-deep-link" title="Create deep link" class="md-nav__link">
     Create deep link
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#share-deep-link" title="Share deep link" class="md-nav__link">
-    Share deep link
   </a>
   
 </li>
@@ -1601,43 +1566,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#navigate-to-content" title="Navigate to content" class="md-nav__link">
-    Navigate to content
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#display-content" title="Display content" class="md-nav__link">
-    Display content
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#track-content" title="Track content" class="md-nav__link">
-    Track content
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#track-users" title="Track users" class="md-nav__link">
     Track users
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#track-events" title="Track events" class="md-nav__link">
-    Track events
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#track-commerce" title="Track commerce" class="md-nav__link">
-    Track commerce
   </a>
   
 </li>
@@ -1710,51 +1640,220 @@
 <ul>
 <li>
 <h4 id="configure-branch">Configure Branch<a class="headerlink" href="#configure-branch" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Complete your <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></p>
+<p><img alt="image" src="http://i.imgur.com/wazVu3U.png" />
+<img alt="image" src="http://i.imgur.com/9PEylbS.png" /></p>
+</li>
+</ul>
 </li>
 <li>
 <h4 id="configure-app">Configure app<a class="headerlink" href="#configure-app" title="Permanent link">&para;</a></h4>
+<p>In your project’s <code>*-app.xml</code> file, insert the platform-specific snippet(s) below. Change <code>yourapp</code> to the URI scheme you’ve selected.</p>
+<ul>
+<li>
+<p><em>iOS</em></p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">iPhone</span><span class="o">&gt;&lt;</span><span class="nx">InfoAdditions</span><span class="o">&gt;&lt;!</span><span class="p">[</span><span class="nx">CDATA</span><span class="p">[</span>
+    <span class="c">&lt;!--</span> <span class="nx">other</span> <span class="nx">stuff</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="nx">key</span><span class="o">&gt;</span><span class="nx">branch_key</span><span class="o">&lt;</span><span class="err">/key&gt;</span>
+    <span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="nx">key_live_xxxxxxxxxxxxxxx</span><span class="o">&lt;</span><span class="err">/string&gt;</span>
+<span class="p">]]</span><span class="o">&gt;&lt;</span><span class="err">/InfoAdditions&gt;&lt;/iPhone&gt;</span>
+</pre></div>
+
+</li>
+<li>
+<p><em>Android</em></p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">android</span><span class="o">&gt;&lt;</span><span class="nx">manifestAdditions</span><span class="o">&gt;&lt;!</span><span class="p">[</span><span class="nx">CDATA</span><span class="p">[</span>
+    <span class="c">&lt;!--</span> <span class="nx">other</span> <span class="nx">stuff</span> <span class="o">--&gt;</span>
+    <span class="o">&lt;</span><span class="nx">application</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">meta</span><span class="o">-</span><span class="nx">data</span> <span class="nx">android</span><span class="o">:</span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;io.branch.sdk.BranchKey&quot;</span> <span class="nx">android</span><span class="o">:</span><span class="nx">value</span><span class="o">=</span><span class="s2">&quot;key_live_xxxxxxxxxxxxxxx&quot;</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">activity</span> <span class="nx">android</span><span class="o">:</span><span class="nx">name</span><span class="o">=</span><span class="s2">&quot;io.branch.nativeExtensions.branch.BranchActivity&quot;</span> <span class="nx">android</span><span class="o">:</span><span class="nx">launchMode</span><span class="o">=</span><span class="s2">&quot;singleTask&quot;</span> <span class="nx">android</span><span class="o">:</span><span class="nx">theme</span><span class="o">=</span><span class="s2">&quot;@android:style/Theme.Translucent.NoTitleBar.Fullscreen&quot;</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/application&gt;</span>
+<span class="p">]]</span><span class="o">&gt;&lt;</span><span class="err">/manifestAdditions&gt;&lt;/android&gt;</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h4 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h4>
+<p>In <code>Main.as</code></p>
+<div class="codehilite"><pre><span></span><span class="c1">// Import</span>
+<span class="k">import</span> <span class="nn">io.branch.nativeExtensions.branch.Branch</span><span class="o">;</span>
+<span class="k">import</span> <span class="nn">io.branch.nativeExtensions.branch.BranchEvent</span><span class="o">;</span>
+
+<span class="c1">// Then create a Branch instance:</span>
+<span class="kd">var</span> <span class="n">branch</span><span class="p">:</span><span class="kt">Branch</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">Branch</span><span class="o">();</span>
+
+<span class="c1">// Register two events before initializing the SDK:</span>
+<span class="n">branch</span><span class="o">.</span><span class="na">addEventListener</span><span class="o">(</span><span class="n">BranchEvent</span><span class="o">.</span><span class="na">INIT_FAILED</span><span class="o">,</span> <span class="n">initFailed</span><span class="o">);</span>
+<span class="n">branch</span><span class="o">.</span><span class="na">addEventListener</span><span class="o">(</span><span class="n">BranchEvent</span><span class="o">.</span><span class="na">INIT_SUCCESSED</span><span class="o">,</span> <span class="n">initSuccessed</span><span class="o">);</span>
+
+<span class="kd">private</span> <span class="kd">function </span><span class="nf">initFailed</span><span class="o">(</span><span class="n">bEvt</span><span class="o">:</span><span class="kt">BranchEvent</span><span class="o">):</span><span class="kt">void</span> <span class="o">{</span>
+    <span class="nf">trace</span><span class="o">(</span><span class="s2">&quot;BranchEvent.INIT_FAILED&quot;</span><span class="o">,</span> <span class="n">bEvt</span><span class="o">.</span><span class="na">informations</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">private</span> <span class="kd">function </span><span class="nf">initSuccessed</span><span class="o">(</span><span class="n">bEvt</span><span class="o">:</span><span class="kt">BranchEvent</span><span class="o">):</span><span class="kt">void</span> <span class="o">{</span>
+    <span class="nf">trace</span><span class="o">(</span><span class="s2">&quot;BranchEvent.INIT_SUCCESSED&quot;</span><span class="o">,</span> <span class="n">bEvt</span><span class="o">.</span><span class="na">informations</span><span class="o">);</span>
+
+    <span class="c1">// params are the deep linked params associated with the link that the user clicked before showing up</span>
+    <span class="c1">// params will be empty if no data found</span>
+    <span class="kd">var</span> <span class="n">referringParams</span><span class="p">:</span><span class="kt">Object</span> <span class="o">=</span> <span class="n">JSON</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">bEvt</span><span class="o">.</span><span class="na">informations</span><span class="o">);</span>
+
+    <span class="c1">//trace(referringParams.user);</span>
+<span class="o">}</span>
+
+<span class="c1">// Initialize the SDK:</span>
+<span class="n">branch</span><span class="o">.</span><span class="na">init</span><span class="o">();</span>
+</pre></div>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be sure to have the INIT_SUCCESSED event called, otherwise read the bEvt.informations from the INIT_FAILED event.</p>
+</div>
 </li>
 <li>
-<h4 id="test-deep-link">Test deep link<a class="headerlink" href="#test-deep-link" title="Permanent link">&para;</a></h4>
+<h4 id="compiling-ane">Compiling ANE<a class="headerlink" href="#compiling-ane" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>To compile this ANE, you need to have <a href="http://ant.apache.org/">ANT</a> installed on your (OS X) machine, and <a href="https://support.apple.com/kb/DL1572">Java 1.6</a>.</p>
+</li>
+<li>
+<p>Clone the repository, and change the <a href="https://github.com/BranchMetrics/Branch-AIR-ANE-SDK/blob/master/build/build.config">build.config</a> to match your computer settings with the path to your AIR SDK (you should have the latest one), to the Android SDK, and to a keystore (a certificate for Air, which may be a self-signed certificate created with adt).</p>
+</li>
+<li>
+<p>Finally open a command line, <code>cd</code> in the directory and just call <code>ant</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="test-deep-link-ios">Test deep link iOS<a class="headerlink" href="#test-deep-link-ios" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Create a deep link from the <a href="https://dashboard.branch.io/marketing">Branch Dashboard</a></p>
+</li>
+<li>
+<p>Delete your app from the device</p>
+</li>
+<li>
+<p>Compile your app</p>
+</li>
+<li>
+<p>Paste deep link in <code>Apple Notes</code></p>
+</li>
+<li>
+<p>Long press on the deep link <em>(not 3D Touch)</em></p>
+</li>
+<li>
+<p>Click <code>Open in "APP_NAME"</code> to open your app <em>(<a href="http://i.imgur.com/VJVICXd.png">example</a>)</em></p>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="test-deep-link-android">Test deep link Android<a class="headerlink" href="#test-deep-link-android" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Create a deep link from the <a href="https://dashboard.branch.io/marketing">Branch Dashboard</a></p>
+</li>
+<li>
+<p>Delete your app from the device</p>
+</li>
+<li>
+<p>Compile your app</p>
+</li>
+<li>
+<p>Paste deep link in <code>Google Hangouts</code></p>
+</li>
+<li>
+<p>Click on the deep link to open your app</p>
+</li>
+</ul>
 </li>
 </ul>
 <h2 id="implement-features">Implement features<a class="headerlink" href="#implement-features" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="create-content-reference">Create content reference<a class="headerlink" href="#create-content-reference" title="Permanent link">&para;</a></h4>
-</li>
-<li>
 <h4 id="create-deep-link">Create deep link<a class="headerlink" href="#create-deep-link" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="share-deep-link">Share deep link<a class="headerlink" href="#share-deep-link" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="c1">//be sure to add the event listeners:</span>
+<span class="n">branch</span><span class="o">.</span><span class="na">addEventListener</span><span class="o">(</span><span class="n">BranchEvent</span><span class="o">.</span><span class="na">GET_SHORT_URL_FAILED</span><span class="o">,</span> <span class="n">getShortUrlFailed</span><span class="o">);</span>
+<span class="n">branch</span><span class="o">.</span><span class="na">addEventListener</span><span class="o">(</span><span class="n">BranchEvent</span><span class="o">.</span><span class="na">GET_SHORT_URL_SUCCESSED</span><span class="o">,</span> <span class="n">getShortUrlSuccessed</span><span class="o">);</span>
+
+<span class="kd">private</span> <span class="kd">function </span><span class="nf">getShortUrlSuccessed</span><span class="o">(</span><span class="n">bEvt</span><span class="o">:</span><span class="kt">BranchEvent</span><span class="o">):</span><span class="kt">void</span> <span class="o">{</span>
+    <span class="nf">trace</span><span class="o">(</span><span class="s2">&quot;BranchEvent.GET_SHORT_URL_SUCCESSED&quot;</span><span class="o">,</span> <span class="s2">&quot;my short url is: &quot;</span> <span class="o">+</span> <span class="n">bEvt</span><span class="o">.</span><span class="na">informations</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">private</span> <span class="kd">function </span><span class="nf">getShortUrlFailed</span><span class="o">(</span><span class="n">bEvt</span><span class="o">:</span><span class="kt">BranchEvent</span><span class="o">):</span><span class="kt">void</span> <span class="o">{</span>
+    <span class="nf">trace</span><span class="o">(</span><span class="s2">&quot;BranchEvent.GET_SHORT_URL_FAILED&quot;</span><span class="o">,</span> <span class="n">bEvt</span><span class="o">.</span><span class="na">informations</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">var</span> <span class="n">dataToInclude</span><span class="p">:</span><span class="kt">Object</span> <span class="o">=</span> <span class="o">{</span>
+  <span class="s2">&quot;article_id&quot;</span><span class="o">:</span> <span class="s2">&quot;1234&quot;</span><span class="o">,</span>
+  <span class="s2">&quot;$og_title&quot;</span><span class="o">:</span> <span class="s2">&quot;Hot off the presses!&quot;</span><span class="o">,</span>
+  <span class="s2">&quot;$og_image_url&quot;</span><span class="o">:</span> <span class="s2">&quot;mysite.com/image.png&quot;</span><span class="o">,</span>
+  <span class="s2">&quot;$desktop_url&quot;</span><span class="o">:</span> <span class="s2">&quot;mysite.com/article1234&quot;</span>
+<span class="o">};</span>
+
+<span class="n">branch</span><span class="o">.</span><span class="na">getShortUrl</span><span class="o">(</span><span class="n">tags</span><span class="o">,</span> <span class="s2">&quot;sms&quot;</span><span class="o">,</span> <span class="n">BranchConst</span><span class="o">.</span><span class="na">FEATURE_TAG_SHARE</span><span class="o">,</span> <span class="n">JSON</span><span class="o">.</span><span class="na">stringify</span><span class="o">(</span><span class="n">dataToInclude</span><span class="o">));</span>
+</pre></div>
+
 </li>
 <li>
 <h4 id="read-deep-link">Read deep link<a class="headerlink" href="#read-deep-link" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Install &amp; Open</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="n">sessionParams</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="n">branch</span><span class="o">.</span><span class="na">getLatestReferringParams</span><span class="o">();</span>
+<span class="kd">var</span> <span class="n">sessionParamsObj</span><span class="p">:</span><span class="kt">Object</span> <span class="o">=</span> <span class="n">JSON</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">sessionParams</span><span class="o">);</span>
+</pre></div>
+
 </li>
 <li>
-<h4 id="navigate-to-content">Navigate to content<a class="headerlink" href="#navigate-to-content" title="Permanent link">&para;</a></h4>
+<p>Install Only
+    <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="n">installParams</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="n">branch</span><span class="o">.</span><span class="na">getFirstReferringParams</span><span class="o">();</span>
+<span class="kd">var</span> <span class="n">installParamsObj</span><span class="p">:</span><span class="kt">Object</span> <span class="o">=</span> <span class="n">JSON</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">installParams</span><span class="o">);</span>
+</pre></div></p>
 </li>
-<li>
-<h4 id="display-content">Display content<a class="headerlink" href="#display-content" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="track-content">Track content<a class="headerlink" href="#track-content" title="Permanent link">&para;</a></h4>
+</ul>
 </li>
 <li>
 <h4 id="track-users">Track users<a class="headerlink" href="#track-users" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="track-events">Track events<a class="headerlink" href="#track-events" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="track-commerce">Track commerce<a class="headerlink" href="#track-commerce" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="n">branch</span><span class="o">.</span><span class="na">setIdentity</span><span class="o">(</span><span class="s2">&quot;your user id&quot;</span><span class="o">);</span>
+<span class="n">branch</span><span class="o">.</span><span class="na">logout</span><span class="o">();</span>
+</pre></div>
+
 </li>
 <li>
 <h4 id="handle-referrals">Handle referrals<a class="headerlink" href="#handle-referrals" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Referral points are obtained from events triggered by users from rules created on the <a href="https://dashboard.branch.io/referrals/rules">Branch Dashboard</a></p>
+</li>
+<li>
+<p>Validate on the <a href="https://dashboard.branch.io/referrals/analytics">Branch Dashboard</a></p>
+</li>
+<li>
+<p>Reward credits with the <a href="../../../pages/analytics/referrals/">Referral guide</a></p>
+</li>
+<li>
+<p>Redeem credits</p>
+<div class="codehilite"><pre><span></span><span class="n">branch</span><span class="o">.</span><span class="na">redeemRewards</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
+</pre></div>
+
+</li>
+<li>
+<p>Load credits</p>
+<div class="codehilite"><pre><span></span><span class="n">branch</span><span class="o">.</span><span class="na">getCredits</span><span class="o">();</span>
+</pre></div>
+
+</li>
+<li>
+<p>Load history</p>
+<div class="codehilite"><pre><span></span><span class="n">branch</span><span class="o">.</span><span class="na">getCreditsHistory</span><span class="o">();</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 </ul>
 <h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
