@@ -4382,8 +4382,53 @@
         }, 
         {
             "location": "/pages/integrations/localytics/", 
-            "text": "", 
+            "text": "Overview\n\n\nWe've partnered with Localytics to provide an easy way to deliver Branch installs and attributions to your Localytics dashboard. This is great for segmenting your users and providing higher granularity for your organic cohorts vs paid cohorts.\n\n\nHow it works\n\n\nWe have built a custom integration to automatically send all Branch install data to Localytics without any extra work on your side (besides integrating both SDKs). We just need some configuration information from your Localytics account, and we'll take care of the rest.\n\n\n\n\nHow do we differentiate Localytics and Branch installs?\n\n\nWe rely on a Branch link being clicked which leads to an install. This sets an internal boolean that an install came from Branch.\n\n\n\n\nSetup\n\n\n\n\nPre-requisite\n\n\n\n\nThis guide requires you to have already \nintegrated the Branch SDK\n into your app.\n\n\nYou also need to \nsign up for a Localytics account\n and \ninstall the Localytics SDK\n.\n\n\n\n\n\n\nSet up Localytics\n\n\n\n\nOn the Localytics dashboard, navigate to the \nAttribution\n section, click the \n\u2022\u2022\u2022\n (overflow) button, and select \nSettings\n.\n\n\n\nOnce there, you'll need to add your \nStore ID\n (iTunes for iOS, Play Store for Android).\n\n\nUnder the section \nAd Tracking Setup\n, check the box labeled \nThird-party Attribution\n. This will enable an \nAttribution ID\n for you. Copy it, and have it handy for the next steps.\n\n\n\n\n\n\n\nWhat does this mean?\n\n\nOnce you have selected to allow third-party attribution, Localytics will attribute non-Localytics installs to your dashboard. \nThis information is delayed by 10 minutes.\n\n\n\n\nConfigure the Branch Dashboard\n\n\n\n\nOn the Branch Dashboard (dashboard.branch.io), navigate to the \nIntegrations page\n.\n\n\nLocate Localytics and choose \nEnable\n.\n\n\nIf you have not yet entered billing information, please do so now.\n\n\nEnter your Localytics API Key for each platform and hit \nSave\n\n\n\n\n\n\n\n\nPlease test your integration!\n\n\nBranch is not responsible for inaccurate API keys.\n\n\n\n\nAdvanced\n\n\nWhat Branch sends to Localytics\n\n\n\n\n\n\n\n\nBranch Analytics Tag\n\n\nLocalytics Data Placeholder Tag\n\n\n\n\n\n\n\n\n\n\nCampaign\n\n\ncampaign\n\n\n\n\n\n\nChannel\n\n\nadgroup\n\n\n\n\n\n\nFeature\n\n\ncreative_name\n\n\n\n\n\n\n\n\nBranch will also send any arbitrary parameters you attach to a link on to Localytics.\n\n\nSupport\n\n\nDebugging strategies\n\n\nWhen debugging Localytics, be sure to wait 10 minutes after you simulate an install. Also be sure to collect IDFA or Google Advertising ID.", 
             "title": "Localytics"
+        }, 
+        {
+            "location": "/pages/integrations/localytics/#overview", 
+            "text": "We've partnered with Localytics to provide an easy way to deliver Branch installs and attributions to your Localytics dashboard. This is great for segmenting your users and providing higher granularity for your organic cohorts vs paid cohorts.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/pages/integrations/localytics/#how-it-works", 
+            "text": "We have built a custom integration to automatically send all Branch install data to Localytics without any extra work on your side (besides integrating both SDKs). We just need some configuration information from your Localytics account, and we'll take care of the rest.   How do we differentiate Localytics and Branch installs?  We rely on a Branch link being clicked which leads to an install. This sets an internal boolean that an install came from Branch.", 
+            "title": "How it works"
+        }, 
+        {
+            "location": "/pages/integrations/localytics/#setup", 
+            "text": "Pre-requisite   This guide requires you to have already  integrated the Branch SDK  into your app.  You also need to  sign up for a Localytics account  and  install the Localytics SDK .", 
+            "title": "Setup"
+        }, 
+        {
+            "location": "/pages/integrations/localytics/#set-up-localytics", 
+            "text": "On the Localytics dashboard, navigate to the  Attribution  section, click the  \u2022\u2022\u2022  (overflow) button, and select  Settings .  Once there, you'll need to add your  Store ID  (iTunes for iOS, Play Store for Android).  Under the section  Ad Tracking Setup , check the box labeled  Third-party Attribution . This will enable an  Attribution ID  for you. Copy it, and have it handy for the next steps.    What does this mean?  Once you have selected to allow third-party attribution, Localytics will attribute non-Localytics installs to your dashboard.  This information is delayed by 10 minutes.", 
+            "title": "Set up Localytics"
+        }, 
+        {
+            "location": "/pages/integrations/localytics/#configure-the-branch-dashboard", 
+            "text": "On the Branch Dashboard (dashboard.branch.io), navigate to the  Integrations page .  Locate Localytics and choose  Enable .  If you have not yet entered billing information, please do so now.  Enter your Localytics API Key for each platform and hit  Save     Please test your integration!  Branch is not responsible for inaccurate API keys.", 
+            "title": "Configure the Branch Dashboard"
+        }, 
+        {
+            "location": "/pages/integrations/localytics/#advanced", 
+            "text": "", 
+            "title": "Advanced"
+        }, 
+        {
+            "location": "/pages/integrations/localytics/#what-branch-sends-to-localytics", 
+            "text": "Branch Analytics Tag  Localytics Data Placeholder Tag      Campaign  campaign    Channel  adgroup    Feature  creative_name     Branch will also send any arbitrary parameters you attach to a link on to Localytics.", 
+            "title": "What Branch sends to Localytics"
+        }, 
+        {
+            "location": "/pages/integrations/localytics/#support", 
+            "text": "", 
+            "title": "Support"
+        }, 
+        {
+            "location": "/pages/integrations/localytics/#debugging-strategies", 
+            "text": "When debugging Localytics, be sure to wait 10 minutes after you simulate an install. Also be sure to collect IDFA or Google Advertising ID.", 
+            "title": "Debugging strategies"
         }, 
         {
             "location": "/pages/integrations/mixpanel/", 
