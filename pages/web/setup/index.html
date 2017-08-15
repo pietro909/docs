@@ -2029,7 +2029,20 @@
 </pre></div>
 
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">linkData</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">campaign</span><span class="o">:</span> <span class="nb">String</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">())</span>
+  <span class="nx">campaign</span><span class="o">:</span> <span class="s1">&#39;content 123&#39;</span><span class="p">,</span>
+  <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span><span class="p">,</span>
+  <span class="nx">feature</span><span class="o">:</span> <span class="s1">&#39;dashboard&#39;</span><span class="p">,</span>
+  <span class="nx">stage</span><span class="o">:</span> <span class="s1">&#39;new user&#39;</span><span class="p">,</span>
+  <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;tag1&#39;</span><span class="p">,</span> <span class="s1">&#39;tag2&#39;</span><span class="p">,</span> <span class="s1">&#39;tag3&#39;</span> <span class="p">],</span>
+  <span class="nx">alias</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s1">&#39;custom_bool&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s1">&#39;custom_int&#39;</span><span class="o">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
+    <span class="s1">&#39;custom_string&#39;</span><span class="o">:</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;$og_title&#39;</span><span class="o">:</span> <span class="s1">&#39;Title&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;$og_description&#39;</span><span class="o">:</span> <span class="s1">&#39;Description&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;$og_image_url&#39;</span><span class="o">:</span><span class="s1">&#39;http://lorempixel.com/400/400&#39;</span>
+  <span class="p">}</span>
 <span class="p">};</span>
 
 <span class="nx">branch</span><span class="p">.</span><span class="nx">link</span><span class="p">(</span><span class="nx">linkData</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">link</span><span class="p">)</span> <span class="p">{</span>
@@ -2655,20 +2668,7 @@
 <li>
 <p>(<strong>Deprecated</strong>) Recommend to use <a href="#create-journey-banner">Create Journey banner</a> instead</p>
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">linkData</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">campaign</span><span class="o">:</span> <span class="s1">&#39;content 123&#39;</span><span class="p">,</span>
-  <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span><span class="p">,</span>
-  <span class="nx">feature</span><span class="o">:</span> <span class="s1">&#39;dashboard&#39;</span><span class="p">,</span>
-  <span class="nx">stage</span><span class="o">:</span> <span class="s1">&#39;new user&#39;</span><span class="p">,</span>
-  <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;tag1&#39;</span><span class="p">,</span> <span class="s1">&#39;tag2&#39;</span><span class="p">,</span> <span class="s1">&#39;tag3&#39;</span> <span class="p">],</span>
-  <span class="nx">alias</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s1">&#39;custom_bool&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s1">&#39;custom_int&#39;</span><span class="o">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
-    <span class="s1">&#39;custom_string&#39;</span><span class="o">:</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;$og_title&#39;</span><span class="o">:</span> <span class="s1">&#39;Title&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;$og_description&#39;</span><span class="o">:</span> <span class="s1">&#39;Description&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;$og_image_url&#39;</span><span class="o">:</span><span class="s1">&#39;http://lorempixel.com/400/400&#39;</span>
-  <span class="p">}</span>
+  <span class="nx">campaign</span><span class="o">:</span> <span class="nb">String</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">())</span>
 <span class="p">};</span>
 <span class="kd">var</span> <span class="nx">bannerData</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;http://icons.iconarchive.com/icons/wineass/ios7-redesign/512/Appstore-icon.png&#39;</span><span class="p">,</span>
@@ -2714,22 +2714,8 @@
 <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;branch.deepviewCta()&quot;</span><span class="p">&gt;</span>deep link<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">phoneNumber</span> <span class="o">=</span> <span class="s1">&#39;9999999999&#39;</span> <span class="c1">// +919812345678, +442071234567</span>
-<span class="kd">var</span> <span class="nx">linkData</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">campaign</span><span class="o">:</span> <span class="s1">&#39;content 123&#39;</span><span class="p">,</span>
-  <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span><span class="p">,</span>
-  <span class="nx">feature</span><span class="o">:</span> <span class="s1">&#39;dashboard&#39;</span><span class="p">,</span>
-  <span class="nx">stage</span><span class="o">:</span> <span class="s1">&#39;new user&#39;</span><span class="p">,</span>
-  <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;tag1&#39;</span><span class="p">,</span> <span class="s1">&#39;tag2&#39;</span><span class="p">,</span> <span class="s1">&#39;tag3&#39;</span> <span class="p">],</span>
-  <span class="nx">alias</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s1">&#39;custom_bool&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s1">&#39;custom_int&#39;</span><span class="o">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
-    <span class="s1">&#39;custom_string&#39;</span><span class="o">:</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;$og_title&#39;</span><span class="o">:</span> <span class="s1">&#39;Title&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;$og_description&#39;</span><span class="o">:</span> <span class="s1">&#39;Description&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;$og_image_url&#39;</span><span class="o">:</span><span class="s1">&#39;http://lorempixel.com/400/400&#39;</span>
-  <span class="p">}</span>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">linkData</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">campaign</span><span class="o">:</span> <span class="nb">String</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">())</span>
 <span class="p">};</span>
 <span class="kd">var</span> <span class="nx">linkOptions</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">make_new_link</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// don&#39;t create a new deep link if one already exists (e.g. _branch_match_id is in the address bar)</span>
