@@ -412,6 +412,12 @@
     </url>
         
     <url>
+     <loc>https://branchmetrics.github.io/docs/pages/integrations/appmetrica/</loc>
+     <lastmod>2017-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://branchmetrics.github.io/docs/pages/integrations/appboy/</loc>
      <lastmod>2017-08-15</lastmod>
      <changefreq>daily</changefreq>
@@ -419,6 +425,12 @@
         
     <url>
      <loc>https://branchmetrics.github.io/docs/pages/integrations/appsflyer/</loc>
+     <lastmod>2017-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/integrations/fabric-answers/</loc>
      <lastmod>2017-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -449,12 +461,6 @@
         
     <url>
      <loc>https://branchmetrics.github.io/docs/pages/integrations/tune/</loc>
-     <lastmod>2017-08-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/integrations/appmetrica/</loc>
      <lastmod>2017-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>

@@ -4257,18 +4257,13 @@
         }, 
         {
             "location": "/pages/integrations/adobe-analytics/", 
-            "text": "Adobe Analytics\n\n\nWith a push of a button you can send your Branch data to your Adobe Analytics dashboard, helping you understand the power of Branch as an acquisition pathway.\n\n\nHow does it work?\n\n\nOnce the Branch SDK is integrated into an app, Branch can detect which links are leading to installs, re-opens, and users' actions. Enabling this integration and providing your Adobe Analytics Information will result in Branch automatically forwarding referred events to Adobe Analytics.\n\n\nWhat events does Branch send?\n\n\nBranch will send \nreferred\n \ninstalls\n and \nopens\n, as well as any \ncustom events\n you track with Branch. Non-referred events, clicks, web session starts, and pageviews will be excluded. Branch also sends all the analytics tags that are attached to the link that drove the referred event. This will allow you to analyze which campaigns, channels, etc. are helping you acquire and engage users.\n\n\nWhat does it look like?\n\n\nBranch events will appear on the Adobe Analytics dashboard through \nReports \n Custom Conversion \n Branch eVar\n. Note, this will automatically appear once the Branch Data Connector is enabled through the Adobe Analytics dashboard.\n\n\nYou'll have the flexibility to analyze data as needed in the Adobe Analytics platform, as the data Branch sends maps in Adobe Analytics to a top level eVar. This eVar contains campaign, channel, target, event name, and action property, which are your analytics tags.\n\n\n{% image src=\"/img/pages/third-party-integrations/adobe-analytics/adobe-analytics-conversion.png\" 3-quarters center %}\n\n\nBranch events are similar to Adobe Analytics events in that they can be used to build custom reports and are tracked on the various pages and dashboards. However, unlike normal events, Branch events contain valuable information about how users ended up in your app in the first place.\n\n\nSetup\n\n\n\n\nThis guide requires you to have already \nintegrated the Branch SDK\n.\n\n\nYou also need to be a Adobe Analytics customer and have the Adobe Analytics SDK.\n\n\n\n\nActivate the Branch Data Connector\n\n\nIn your Adobe Analytics dashboard, under the \nAdmin\n tab, find \nData Connectors\n.\n\n\n{% image src=\"/img/pages/third-party-integrations/adobe-analytics/select-data-connectors.png\" 3-quarters center %}\n\n\nClick \n+Add New\n, search for \"Branch,\" and click \nActivate\n.\n\n\n{% image src=\"/img/pages/third-party-integrations/adobe-analytics/activate-connector.png\" half center %}\n\n\nConfigure the Branch Data Connector\n\n\nIntegration Settings\n\n\nThese are automatically configured when you activate the Data Connector.\n\n\nVariable Mappings\n\n\nMap your Branch events to your chosen eVar. In the example below, it will be mapped to \nCustom eVar 1\n, renamed to the SiteCatalyst metric \nBranch\n.\n\n\n{% image src=\"/img/pages/third-party-integrations/adobe-analytics/variable-mappings.png\" 3-quarters center %}\n\n\nData Settings\n\n\nBranch has provided a default classification rule set for the Branch data that will be ingested. This maps Branch analytics data to Adobe classifications as follows. You can change this classification rule set if you would like to, but editing is not required. We also include Branch tags so you can create a new rule that further segments your analytics data for advanced visibility.\n\n\n\n\n\n\n\n\nAdobe Classification\n\n\nBranch Analytics Tag\n\n\n\n\n\n\n\n\n\n\nSource\n\n\nChannel\n\n\n\n\n\n\nCampaign\n\n\nCampaign\n\n\n\n\n\n\nMedium\n\n\nFeature\n\n\n\n\n\n\nAction\n\n\nBranch Event Name\n\n\n\n\n\n\nAction Property\n\n\nBranch Tags\n\n\n\n\n\n\n\n\n{% image src=\"/img/pages/third-party-integrations/adobe-analytics/data-settings.png\" 3-quarters center %}\n\n\nReview Summary\n\n\nFinally, review the integration, scroll to the bottom of the screen and click \nActivate Now\n to enable the integration.\n\n\n{% image src=\"/img/pages/third-party-integrations/adobe-analytics/final-activation.png\" half center %}\n\n\nRetrieve your Adobe Analytics Information\n\n\nIn your Adobe Analytics dashboard, navigate to the Mobile Marketing UI and find your app.\n\n\nUnder Manage App Setting -\n SDK Analytics Options, find the following data\n\n\n\n\n\n\n\n\nBranch field\n\n\nAdobe field value\n\n\n\n\n\n\n\n\n\n\nProtocol\n\n\nUse HTTPS Check Box (if checked, select HTTPS)\n\n\n\n\n\n\nAnalytics Server Domain\n\n\nTracking Server\n\n\n\n\n\n\nOmniture iOS/Android Server Key\n\n\nReport Suite ID for that app\n\n\n\n\n\n\nTimestamp\n\n\nOffline Tracking\n\n\n\n\n\n\n\n\nFor \nAnalytics Server Domain\n, please do not include \nhttp\n or \nhttps\n. If your value for this is \nhttp://test.com\n, simply put in \ntest.com\n. This means no extra slashes, and no protocol.\n\n\nConfigure the Branch Dashboard\n\n\n\n\nOn the Branch Dashboard (dashboard.branch.io), navigate to the \nIntegrations page\n.\n\n\nLocate Adobe Analytics and choose \nEnable\n.\n\n\nIf you have not yet entered billing information, please do so now.\n\n\nEnter your Adobe Analytics information and hit \nSave\n.\n\n\n\n\nPass Adobe Visitor ID\n\n\nWhen you're ready to send data through Branch, you'll need to make sure you pass through the configured Adobe Visitor ID through the Branch SDKs. In order to do so, figure out which ID you use for user tracking in the Adobe SDK, and pass this value through \nsetRequestMetadataKey\n on the Branch SDKs.\n\n\nThere are three possible identities you can track via this integration. Please verify which ID you use, and send that. For example, if your Adobe integration uses Marketing Cloud Visitor ID, retrieve it from the Adobe SDK, and pass in a key value pair, with the key being \n$marketing_cloud_visitor_id\n. The value would be the value retrieved through the Adobe SDK.\n\n\n\n\nMarketing Cloud Visitor ID - \n$marketing_cloud_visitor_id\n\n\nAnalytics Visitor ID - \n$adobe_visitor_id\n\n\nAnalytics Custom Visitor ID - \n$analytics_visitor_id\n\n\n\n\nHere's a sample snippet showing this. \nNOTE\n you must set the correct key before calling \ninitSession\n. You must also initialize the Adobe SDK before setting the request metadata in the Branch SDK.\n\n\niOS\n\n\nInside \ndidFinishLaunchingWithOptions\n\n\nBranch\n \n*\nbranch\n \n=\n \n[\nBranch\n \ngetInstance\n];\n\n\n[[\nBranch\n \ngetInstance\n]\n \nsetRequestMetadataKey\n:\n@\n$adobe_visitor_id\n \nvalue\n:[\nADBMobile\n \ntrackingIdentifier\n]];\n\n\n\n\n\nSwift\n\n\nInside \ndidFinishLaunchingWithOptions\n\n\nif\n \nlet\n \nbranch\n \n=\n \nBranch\n.\ngetInstance\n()\n \n{\n\n    \nbranch\n.\nsetRequestMetadataKey\n(\n$adobe_visitor_id\n,\n \nvalue\n:\nADBMobile\n.\ntrackingIdentifier\n()\n \nas\n \nNSObject\n!);\n\n\n}\n\n\n\n\n\nAndroid\n\n\nBefore you initialize in your Application#onCreate or Deep Link Activity's #onCreate.\n\n\nBranch\n \nbranch\n \n=\n \nBranch\n.\ngetInstance\n();\n\n\nbranch\n.\nsetRequestMetadata\n(\n$adobe_visitor_id\n,\n \nAnalytics\n.\ngetTrackingIdentifier\n());\n\n\n\n...\n\n\n\nBranch\n.\ninitSession\n(...);\n\n\n\n\n\nAdvanced\n\n\nWhat Branch Sends to Adobe Analytics\n\n\nBranch sends the following values from Branch link data:\n\n\n\n\n\n\n\n\nAdobe Classification\n\n\nBranch Analytics Tag\n\n\n\n\n\n\n\n\n\n\nSource\n\n\nChannel\n\n\n\n\n\n\nCampaign\n\n\nCampaign\n\n\n\n\n\n\nMedium\n\n\nFeature\n\n\n\n\n\n\nAction\n\n\nBranch Event Name\n\n\n\n\n\n\nAction Property\n\n\nBranch Tags\n\n\n\n\n\n\n\n\nIf you create a Quick Link and specify analytics, those analytics will appear in the Adobe Analytics reporting suite.\n\n\nSupport\n\n\nThere are common strategies to take while trouble shooting.\n\n\nData isn't appearing after simulating an event\n\n\nWith Adobe Analytics' dashboard, it may take up to ~2 hours for data to appear. We'd recommend you simulate 10-15 events in one testing session, and validate that they show up two hours later, so that feedback is transparent and obvious.\n\n\nAnother thing to do is make sure a valid adobe_visitor_id is being passed up through the Branch SDK. Call \nsetDebug\n and inspect the requests to \nv1/open\n. The key you want to find in this request payload is \n$adobe_visitor_id\n.\n\n\n{% endif %}", 
+            "text": "Overview\n\n\nWith a push of a button you can send your Branch data to your Adobe Analytics dashboard, helping you understand the power of Branch as an acquisition pathway.\n\n\nHow does it work?\n\n\nOnce the Branch SDK is integrated into an app, Branch can detect which links are leading to installs, re-opens, and users' actions. Enabling this integration and providing your Adobe Analytics Information will result in Branch automatically forwarding referred events to Adobe Analytics.\n\n\nWhat events does Branch send?\n\n\nBranch will send \nreferred\n \ninstalls\n and \nopens\n, as well as any \ncustom events\n you track with Branch. Non-referred events, clicks, web session starts, and pageviews will be excluded. Branch also sends all the analytics tags that are attached to the link that drove the referred event. This will allow you to analyze which campaigns, channels, etc. are helping you acquire and engage users.\n\n\nWhat does it look like?\n\n\nBranch events will appear on the Adobe Analytics dashboard through \nReports \n Custom Conversion \n Branch eVar\n. Note, this will automatically appear once the Branch Data Connector is enabled through the Adobe Analytics dashboard.\n\n\nYou'll have the flexibility to analyze data as needed in the Adobe Analytics platform, as the data Branch sends maps in Adobe Analytics to a top level eVar. This eVar contains campaign, channel, target, event name, and action property, which are your analytics tags.\n\n\n\n\nBranch events are similar to Adobe Analytics events in that they can be used to build custom reports and are tracked on the various pages and dashboards. However, unlike normal events, Branch events contain valuable information about how users ended up in your app in the first place.\n\n\n\n\nPrerequisite\n\n\nThis guide requires you to have already \nintegrated the Branch SDK\n.\n\n\nYou also need to be a Adobe Analytics customer and have the Adobe Analytics SDK integrated.\n\n\n\n\n\n\n\n\nActivate the Branch Data Connector\n\n\nIn your Adobe Analytics dashboard, under the \nAdmin\n tab, find \nData Connectors\n.\n\n\n\n\nClick \n+Add New\n, search for \"Branch,\" and click \nActivate\n.\n\n\n\n\nConfigure the Branch Data Connector\n\n\nIntegration Settings\n\n\nThese are automatically configured when you activate the Data Connector.\n\n\nVariable Mappings\n\n\nMap your Branch events to your chosen eVar. In the example below, it will be mapped to \nCustom eVar 1\n, renamed to the SiteCatalyst metric \nBranch\n.\n\n\n\n\nData Settings\n\n\nBranch has provided a default classification rule set for the Branch data that will be ingested. This maps Branch analytics data to Adobe classifications as follows. You can change this classification rule set if you would like to, but editing is not required. We also include Branch tags so you can create a new rule that further segments your analytics data for advanced visibility.\n\n\n\n\n\n\n\n\nAdobe Classification\n\n\nBranch Analytics Tag\n\n\n\n\n\n\n\n\n\n\nSource\n\n\nChannel\n\n\n\n\n\n\nCampaign\n\n\nCampaign\n\n\n\n\n\n\nMedium\n\n\nFeature\n\n\n\n\n\n\nAction\n\n\nBranch Event Name\n\n\n\n\n\n\nAction Property\n\n\nBranch Tags\n\n\n\n\n\n\n\n\n\n\nReview Summary\n\n\nFinally, review the integration, scroll to the bottom of the screen and click \nActivate Now\n to enable the integration.\n\n\n\n\nConfigure the Branch Dashboard\n\n\nRetrieve your Adobe Analytics Information\n\n\nBefore navigating to Branch, in your Adobe Analytics dashboard, navigate to the Mobile Marketing UI and find your app.\n\n\nUnder Manage App Setting -\n SDK Analytics Options, find the following data\n\n\n\n\n\n\n\n\nBranch field\n\n\nAdobe field value\n\n\n\n\n\n\n\n\n\n\nProtocol\n\n\nUse HTTPS Check Box (if checked, select HTTPS)\n\n\n\n\n\n\nAnalytics Server Domain\n\n\nTracking Server\n\n\n\n\n\n\nOmniture iOS/Android Server Key\n\n\nReport Suite ID for that app\n\n\n\n\n\n\nTimestamp\n\n\nOffline Tracking\n\n\n\n\n\n\n\n\nFor \nAnalytics Server Domain\n, please do not include \nhttp\n or \nhttps\n. If your value for this is \nhttp://test.com\n, simply put in \ntest.com\n. This means no extra slashes, and no protocol.\n\n\nConfigure the Branch Dashboard\n\n\n\n\nOn the Branch Dashboard (dashboard.branch.io), navigate to the \nIntegrations page\n.\n\n\nLocate Adobe Analytics and choose \nEnable\n.\n\n\nIf you have not yet entered billing information, please do so now.\n\n\nEnter your Adobe Analytics information and hit \nSave\n.\n\n\n\n\nPass Adobe Visitor ID\n\n\nWhen you're ready to send data through Branch, you'll need to make sure you pass through the configured Adobe Visitor ID through the Branch SDKs. In order to do so, figure out which ID you use for user tracking in the Adobe SDK, and pass this value through \nsetRequestMetadataKey\n on the Branch SDKs.\n\n\nThere are three possible identities you can track via this integration. Please verify which ID you use, and send that. For example, if your Adobe integration uses Marketing Cloud Visitor ID, retrieve it from the Adobe SDK, and pass in a key value pair, with the key being \n$marketing_cloud_visitor_id\n. The value would be the value retrieved through the Adobe SDK.\n\n\n\n\nMarketing Cloud Visitor ID - \n$marketing_cloud_visitor_id\n\n\nAnalytics Visitor ID - \n$adobe_visitor_id\n\n\nAnalytics Custom Visitor ID - \n$analytics_visitor_id\n\n\n\n\nHere's a sample snippet showing this. \nNOTE\n you must set the correct key before calling \ninitSession\n. You must also initialize the Adobe SDK before setting the request metadata in the Branch SDK.\n\n\niOS\n\n\nInside \ndidFinishLaunchingWithOptions\n\n\nBranch\n \n*\nbranch\n \n=\n \n[\nBranch\n \ngetInstance\n];\n\n\n[[\nBranch\n \ngetInstance\n]\n \nsetRequestMetadataKey\n:\n@\n$adobe_visitor_id\n \nvalue\n:[\nADBMobile\n \ntrackingIdentifier\n]];\n\n\n\n\n\nSwift\n\n\nInside \ndidFinishLaunchingWithOptions\n\n\nif\n \nlet\n \nbranch\n \n=\n \nBranch\n.\ngetInstance\n()\n \n{\n\n    \nbranch\n.\nsetRequestMetadataKey\n(\n$adobe_visitor_id\n,\n \nvalue\n:\nADBMobile\n.\ntrackingIdentifier\n()\n \nas\n \nNSObject\n!);\n\n\n}\n\n\n\n\n\nAndroid\n\n\nBefore you initialize in your Application#onCreate or Deep Link Activity's #onCreate.\n\n\nBranch\n \nbranch\n \n=\n \nBranch\n.\ngetInstance\n();\n\n\nbranch\n.\nsetRequestMetadata\n(\n$adobe_visitor_id\n,\n \nAnalytics\n.\ngetTrackingIdentifier\n());\n\n\n\n...\n\n\n\nBranch\n.\ninitSession\n(...);\n\n\n\n\n\nAdvanced\n\n\nWhat Branch Sends to Adobe Analytics\n\n\nBranch sends the following values from Branch link data:\n\n\n\n\n\n\n\n\nAdobe Classification\n\n\nBranch Analytics Tag\n\n\n\n\n\n\n\n\n\n\nSource\n\n\nChannel\n\n\n\n\n\n\nCampaign\n\n\nCampaign\n\n\n\n\n\n\nMedium\n\n\nFeature\n\n\n\n\n\n\nAction\n\n\nBranch Event Name\n\n\n\n\n\n\nAction Property\n\n\nBranch Tags\n\n\n\n\n\n\n\n\nIf you create a Quick Link and specify analytics, those analytics will appear in the Adobe Analytics reporting suite.\n\n\nSupport\n\n\nThere are common strategies to take while trouble shooting.\n\n\nData isn't appearing after simulating an event\n\n\nWith Adobe Analytics' dashboard, it may take up to ~2 hours for data to appear. We'd recommend you simulate 10-15 events in one testing session, and validate that they show up two hours later, so that feedback is transparent and obvious.\n\n\nAnother thing to do is make sure a valid adobe_visitor_id is being passed up through the Branch SDK. Call \nsetDebug\n and inspect the requests to \nv1/open\n. The key you want to find in this request payload is \n$adobe_visitor_id\n.", 
             "title": "Abobe Analytics"
         }, 
         {
-            "location": "/pages/integrations/adobe-analytics/#adobe-analytics", 
-            "text": "", 
-            "title": "Adobe Analytics"
-        }, 
-        {
-            "location": "/pages/integrations/adobe-analytics/#with-a-push-of-a-button-you-can-send-your-branch-data-to-your-adobe-analytics-dashboard-helping-you-understand-the-power-of-branch-as-an-acquisition-pathway", 
-            "text": "", 
-            "title": "With a push of a button you can send your Branch data to your Adobe Analytics dashboard, helping you understand the power of Branch as an acquisition pathway."
+            "location": "/pages/integrations/adobe-analytics/#overview", 
+            "text": "With a push of a button you can send your Branch data to your Adobe Analytics dashboard, helping you understand the power of Branch as an acquisition pathway.", 
+            "title": "Overview"
         }, 
         {
             "location": "/pages/integrations/adobe-analytics/#how-does-it-work", 
@@ -4282,17 +4277,12 @@
         }, 
         {
             "location": "/pages/integrations/adobe-analytics/#what-does-it-look-like", 
-            "text": "Branch events will appear on the Adobe Analytics dashboard through  Reports   Custom Conversion   Branch eVar . Note, this will automatically appear once the Branch Data Connector is enabled through the Adobe Analytics dashboard.  You'll have the flexibility to analyze data as needed in the Adobe Analytics platform, as the data Branch sends maps in Adobe Analytics to a top level eVar. This eVar contains campaign, channel, target, event name, and action property, which are your analytics tags.  {% image src=\"/img/pages/third-party-integrations/adobe-analytics/adobe-analytics-conversion.png\" 3-quarters center %}  Branch events are similar to Adobe Analytics events in that they can be used to build custom reports and are tracked on the various pages and dashboards. However, unlike normal events, Branch events contain valuable information about how users ended up in your app in the first place.", 
+            "text": "Branch events will appear on the Adobe Analytics dashboard through  Reports   Custom Conversion   Branch eVar . Note, this will automatically appear once the Branch Data Connector is enabled through the Adobe Analytics dashboard.  You'll have the flexibility to analyze data as needed in the Adobe Analytics platform, as the data Branch sends maps in Adobe Analytics to a top level eVar. This eVar contains campaign, channel, target, event name, and action property, which are your analytics tags.   Branch events are similar to Adobe Analytics events in that they can be used to build custom reports and are tracked on the various pages and dashboards. However, unlike normal events, Branch events contain valuable information about how users ended up in your app in the first place.   Prerequisite  This guide requires you to have already  integrated the Branch SDK .  You also need to be a Adobe Analytics customer and have the Adobe Analytics SDK integrated.", 
             "title": "What does it look like?"
         }, 
         {
-            "location": "/pages/integrations/adobe-analytics/#setup", 
-            "text": "This guide requires you to have already  integrated the Branch SDK .  You also need to be a Adobe Analytics customer and have the Adobe Analytics SDK.", 
-            "title": "Setup"
-        }, 
-        {
             "location": "/pages/integrations/adobe-analytics/#activate-the-branch-data-connector", 
-            "text": "In your Adobe Analytics dashboard, under the  Admin  tab, find  Data Connectors .  {% image src=\"/img/pages/third-party-integrations/adobe-analytics/select-data-connectors.png\" 3-quarters center %}  Click  +Add New , search for \"Branch,\" and click  Activate .  {% image src=\"/img/pages/third-party-integrations/adobe-analytics/activate-connector.png\" half center %}", 
+            "text": "In your Adobe Analytics dashboard, under the  Admin  tab, find  Data Connectors .   Click  +Add New , search for \"Branch,\" and click  Activate .", 
             "title": "Activate the Branch Data Connector"
         }, 
         {
@@ -4307,26 +4297,31 @@
         }, 
         {
             "location": "/pages/integrations/adobe-analytics/#variable-mappings", 
-            "text": "Map your Branch events to your chosen eVar. In the example below, it will be mapped to  Custom eVar 1 , renamed to the SiteCatalyst metric  Branch .  {% image src=\"/img/pages/third-party-integrations/adobe-analytics/variable-mappings.png\" 3-quarters center %}", 
+            "text": "Map your Branch events to your chosen eVar. In the example below, it will be mapped to  Custom eVar 1 , renamed to the SiteCatalyst metric  Branch .", 
             "title": "Variable Mappings"
         }, 
         {
             "location": "/pages/integrations/adobe-analytics/#data-settings", 
-            "text": "Branch has provided a default classification rule set for the Branch data that will be ingested. This maps Branch analytics data to Adobe classifications as follows. You can change this classification rule set if you would like to, but editing is not required. We also include Branch tags so you can create a new rule that further segments your analytics data for advanced visibility.     Adobe Classification  Branch Analytics Tag      Source  Channel    Campaign  Campaign    Medium  Feature    Action  Branch Event Name    Action Property  Branch Tags     {% image src=\"/img/pages/third-party-integrations/adobe-analytics/data-settings.png\" 3-quarters center %}", 
+            "text": "Branch has provided a default classification rule set for the Branch data that will be ingested. This maps Branch analytics data to Adobe classifications as follows. You can change this classification rule set if you would like to, but editing is not required. We also include Branch tags so you can create a new rule that further segments your analytics data for advanced visibility.     Adobe Classification  Branch Analytics Tag      Source  Channel    Campaign  Campaign    Medium  Feature    Action  Branch Event Name    Action Property  Branch Tags", 
             "title": "Data Settings"
         }, 
         {
             "location": "/pages/integrations/adobe-analytics/#review-summary", 
-            "text": "Finally, review the integration, scroll to the bottom of the screen and click  Activate Now  to enable the integration.  {% image src=\"/img/pages/third-party-integrations/adobe-analytics/final-activation.png\" half center %}", 
+            "text": "Finally, review the integration, scroll to the bottom of the screen and click  Activate Now  to enable the integration.", 
             "title": "Review Summary"
         }, 
         {
+            "location": "/pages/integrations/adobe-analytics/#configure-the-branch-dashboard", 
+            "text": "", 
+            "title": "Configure the Branch Dashboard"
+        }, 
+        {
             "location": "/pages/integrations/adobe-analytics/#retrieve-your-adobe-analytics-information", 
-            "text": "In your Adobe Analytics dashboard, navigate to the Mobile Marketing UI and find your app.  Under Manage App Setting -  SDK Analytics Options, find the following data     Branch field  Adobe field value      Protocol  Use HTTPS Check Box (if checked, select HTTPS)    Analytics Server Domain  Tracking Server    Omniture iOS/Android Server Key  Report Suite ID for that app    Timestamp  Offline Tracking     For  Analytics Server Domain , please do not include  http  or  https . If your value for this is  http://test.com , simply put in  test.com . This means no extra slashes, and no protocol.", 
+            "text": "Before navigating to Branch, in your Adobe Analytics dashboard, navigate to the Mobile Marketing UI and find your app.  Under Manage App Setting -  SDK Analytics Options, find the following data     Branch field  Adobe field value      Protocol  Use HTTPS Check Box (if checked, select HTTPS)    Analytics Server Domain  Tracking Server    Omniture iOS/Android Server Key  Report Suite ID for that app    Timestamp  Offline Tracking     For  Analytics Server Domain , please do not include  http  or  https . If your value for this is  http://test.com , simply put in  test.com . This means no extra slashes, and no protocol.", 
             "title": "Retrieve your Adobe Analytics Information"
         }, 
         {
-            "location": "/pages/integrations/adobe-analytics/#configure-the-branch-dashboard", 
+            "location": "/pages/integrations/adobe-analytics/#configure-the-branch-dashboard_1", 
             "text": "On the Branch Dashboard (dashboard.branch.io), navigate to the  Integrations page .  Locate Adobe Analytics and choose  Enable .  If you have not yet entered billing information, please do so now.  Enter your Adobe Analytics information and hit  Save .", 
             "title": "Configure the Branch Dashboard"
         }, 
@@ -4352,7 +4347,7 @@
         }, 
         {
             "location": "/pages/integrations/adobe-analytics/#data-isnt-appearing-after-simulating-an-event", 
-            "text": "With Adobe Analytics' dashboard, it may take up to ~2 hours for data to appear. We'd recommend you simulate 10-15 events in one testing session, and validate that they show up two hours later, so that feedback is transparent and obvious.  Another thing to do is make sure a valid adobe_visitor_id is being passed up through the Branch SDK. Call  setDebug  and inspect the requests to  v1/open . The key you want to find in this request payload is  $adobe_visitor_id .  {% endif %}", 
+            "text": "With Adobe Analytics' dashboard, it may take up to ~2 hours for data to appear. We'd recommend you simulate 10-15 events in one testing session, and validate that they show up two hours later, so that feedback is transparent and obvious.  Another thing to do is make sure a valid adobe_visitor_id is being passed up through the Branch SDK. Call  setDebug  and inspect the requests to  v1/open . The key you want to find in this request payload is  $adobe_visitor_id .", 
             "title": "Data isn't appearing after simulating an event"
         }, 
         {
@@ -4496,6 +4491,61 @@
             "title": "Testing your Amplitude integration"
         }, 
         {
+            "location": "/pages/integrations/appmetrica/", 
+            "text": "Overview\n\n\nWith a push of a button you can send your Branch data to your AppMetrica dashboard, helping you segment users and understand the power of Branch links in acquiring users.\n\n\nWhat events does Branch send to AppMetrica?\n\n\nBranch will send all \nBranch link clicks\n to AppMetrica. Branch also sends all the data that is attached to the link. AppMetrica then matches all downstream actions (installs, opens, custom events, payouts) back to the referring link. This will allow you to analyze which campaigns, channels, etc. are helping you acquire and engage users. You can see the list of fields that we send to AppMetrica \nhere\n.\n\n\nWhat does it look like?\n\n\nSee your Branch organic acquisition campaigns alongside your AppMetrica data.\n\n\n\n\nSetup\n\n\nPrerequisites\n\n\n\n\nThis guide requires you to have already \nintegrated the Branch SDK\n.\n\n\nYou also need to be an AppMetrica customer and have the \nAppMetrica SDK\n installed in your app.\n\n\n\n\nGet credentials from your AppMetrica dashboard\n\n\nTo set up the integration you will need to create new trackers in the AppMetrica dashboard for Branch (separate tracker for iOS and Android). After creating the trackers you will need the \ntracking URL\n for the integration.\n\n\n\n\nTo create a tracker navigate to the \nTrackers\n tab and press the \nCreate Tracker\n button.\n\n\n\n\n\n\n\n\nSelect \"Branch\" in \nPartner\n dropdown\n\n\nSelect a \nDestination URL\n. If there are no active destination URL's created for this app press the \nNew\u00a0destination\u00a0URL\n button and fill in a link to your website or app\n\n\n\n\n\n\n\n\nCopy the \nTracking URL\n\n\n\n\n\n\nEnable the AppMetrica card in your Branch dashboard\n\n\n\n\nOn the Branch Dashboard (\nhttps://dashboard.branch.io\n) navigate to the \nIntegrations page\n.\n\n\nLocate AppMetrica and choose \nEnable\n.\n\n\nIf you have not yet entered billing information, please do so now.\n\n\nEnter your \nTracking URL\n.\n\n\nHit \nSave\n.\n\n\n\n\n\n\nAdvanced\n\n\nWhat Branch sends to AppMetrica\n\n\nBranch will send any parameters that you append to a link on to AppMetrica. By default, if you don't append any additional parameters to your link, Branch will pass Branch Analytics tags on to AppMetrica with the below mapping.\n\n\n\n\n\n\n\n\nBranch Analytics Tag\n\n\nAppMetrica Data Placeholder Tag\n\n\n\n\n\n\n\n\n\n\nCampaign\n\n\nmy_campaign\n\n\n\n\n\n\nChannel\n\n\nmy_placement\n\n\n\n\n\n\nFeature\n\n\nmy_keyword\n\n\n\n\n\n\nBranch Click ID\n\n\ntracking_id\n\n\n\n\n\n\n\n\nAdvanced AppMetrica Tracker Settings\n\n\nIf you are interested in controlling advanced attribution policies, check out AppMetrica's \ndocumentation\n on this topic.", 
+            "title": "AppMetrica"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#overview", 
+            "text": "With a push of a button you can send your Branch data to your AppMetrica dashboard, helping you segment users and understand the power of Branch links in acquiring users.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#what-events-does-branch-send-to-appmetrica", 
+            "text": "Branch will send all  Branch link clicks  to AppMetrica. Branch also sends all the data that is attached to the link. AppMetrica then matches all downstream actions (installs, opens, custom events, payouts) back to the referring link. This will allow you to analyze which campaigns, channels, etc. are helping you acquire and engage users. You can see the list of fields that we send to AppMetrica  here .", 
+            "title": "What events does Branch send to AppMetrica?"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#what-does-it-look-like", 
+            "text": "See your Branch organic acquisition campaigns alongside your AppMetrica data.", 
+            "title": "What does it look like?"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#setup", 
+            "text": "", 
+            "title": "Setup"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#prerequisites", 
+            "text": "This guide requires you to have already  integrated the Branch SDK .  You also need to be an AppMetrica customer and have the  AppMetrica SDK  installed in your app.", 
+            "title": "Prerequisites"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#get-credentials-from-your-appmetrica-dashboard", 
+            "text": "To set up the integration you will need to create new trackers in the AppMetrica dashboard for Branch (separate tracker for iOS and Android). After creating the trackers you will need the  tracking URL  for the integration.   To create a tracker navigate to the  Trackers  tab and press the  Create Tracker  button.     Select \"Branch\" in  Partner  dropdown  Select a  Destination URL . If there are no active destination URL's created for this app press the  New\u00a0destination\u00a0URL  button and fill in a link to your website or app     Copy the  Tracking URL", 
+            "title": "Get credentials from your AppMetrica dashboard"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#enable-the-appmetrica-card-in-your-branch-dashboard", 
+            "text": "On the Branch Dashboard ( https://dashboard.branch.io ) navigate to the  Integrations page .  Locate AppMetrica and choose  Enable .  If you have not yet entered billing information, please do so now.  Enter your  Tracking URL .  Hit  Save .", 
+            "title": "Enable the AppMetrica card in your Branch dashboard"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#advanced", 
+            "text": "", 
+            "title": "Advanced"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#what-branch-sends-to-appmetrica", 
+            "text": "Branch will send any parameters that you append to a link on to AppMetrica. By default, if you don't append any additional parameters to your link, Branch will pass Branch Analytics tags on to AppMetrica with the below mapping.     Branch Analytics Tag  AppMetrica Data Placeholder Tag      Campaign  my_campaign    Channel  my_placement    Feature  my_keyword    Branch Click ID  tracking_id", 
+            "title": "What Branch sends to AppMetrica"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#advanced-appmetrica-tracker-settings", 
+            "text": "If you are interested in controlling advanced attribution policies, check out AppMetrica's  documentation  on this topic.", 
+            "title": "Advanced AppMetrica Tracker Settings"
+        }, 
+        {
             "location": "/pages/integrations/appboy/", 
             "text": "Overview\n\n\nThe Branch partnership with \nAppboy\n provides a push-button way to deliver Branch installs and attributions to your Appboy dashboard. This allows you to analyze your users coming in from Branch deep linked campaigns.\n\n\nAt this time, our integration only applies to the iOS platform.\n\n\nHow it works\n\n\nWe have built a custom integration to automatically send all Branch install data to Appboy without any extra work on your side (besides integrating both SDKs). Simply click a button, and you'll be good to go!\n\n\n\n\nHow do we differentiate Appboy and Branch installs?\n\n\nWe rely on a Branch link being clicked, which leads to an install. This sets an internal boolean that an install came from Branch.\n\n\n\n\nSetup\n\n\n\n\nThis guide requires you to have already \nintegrated the Branch SDK\n into your app.\n\n\nYou also need to \nsign up for an Appboy account\n and \ninstall the Appboy SDK\n.\n\n\nEnsure Appboy's SDK is \ncollecting the IDFA\n.\n\n\n\n\nGet the Appboy API key\n\n\n\n\nOn the Appboy dashboard, navigate to the \nApp Settings\n section, and click \n3rd Party Integrations\n.\n\n\nFrom there, grab your API key (this will be the same for all attribution partners listed on the page).\n\n\n\n\nConfigure the Branch Dashboard\n\n\n\n\nOn the Branch Dashboard (dashboard.branch.io), navigate to the \nIntegrations page\n.\n\n\nLocate Appboy and choose \nEnable\n.\n\n\nIf you have not yet entered billing information, please do so now.\n\n\nEnter your Appboy iOS API Key and hit \nSave\n.\n\n\n\n\n\n\nAdvanced\n\n\nWhat Branch sends to Appboy\n\n\n\n\n\n\n\n\nBranch Analytics Tag\n\n\nAppboy Data Placeholder Tag\n\n\n\n\n\n\n\n\n\n\nCampaign\n\n\ncampaign\n\n\n\n\n\n\nChannel\n\n\nadgroup", 
             "title": "Appboy"
@@ -4599,6 +4649,21 @@
             "location": "/pages/integrations/appsflyer/#installs-not-being-attributed-to-branch", 
             "text": "For AppsFlyer to attribute installs properly to Branch, fingerprinting must be enabled for your app in your AppsFlyer settings. If you see Branch clicks but not installs appearing, this may be the issue. Ask your AppsFlyer Account Manager to enable fingerprinting for your app.", 
             "title": "Installs not being attributed to Branch"
+        }, 
+        {
+            "location": "/pages/integrations/fabric-answers/", 
+            "text": "Overview\n\n\nIntegration with Fabric's Answers is totally automatic as long as you've integrated both Branch and Answers. Branch will automatically send the following three events to Answers:\n\n\n\n\nBranch Install\n: This event is sent when a user installs your app after clicking a Branch link.\n\n\nBranch Open\n: This event is sent when a user clicks a Branch link but already has your app installed.\n\n\nBranch Share\n: This event is sent when the has shared a link on a channel using the \nBranch share sheet\n.\n\n\n\n\nWith every single event that's recorded, the following custom Branch link analytics labels are sent as Answers event attributes \nif present\n:\n\n\n\n\nchannel\n\n\ncampaign\n\n\nfeature\n\n\nstage\n\n\ntags\n\n\nreferring_link\n\n\n\n\nEnable Answers\n\n\nIf you're looking to get started on this, it's very simple. Just follow the simple step by step instructions:\n\n\n\n\nIntegrate the Branch SDKs and start using links! Make sure you're using iOS 0.12.3+ or Android 1.13.2+.\n\n\nHead to your \nFabric dashboard\n\n\nFind the \nAnswers\n kit on the left hand nav bar\n\n\nClick it and accept terms of service for Answers.\n\n\nStart getting critical Branch growth insights in your Answers dash", 
+            "title": "Fabric Answers"
+        }, 
+        {
+            "location": "/pages/integrations/fabric-answers/#overview", 
+            "text": "Integration with Fabric's Answers is totally automatic as long as you've integrated both Branch and Answers. Branch will automatically send the following three events to Answers:   Branch Install : This event is sent when a user installs your app after clicking a Branch link.  Branch Open : This event is sent when a user clicks a Branch link but already has your app installed.  Branch Share : This event is sent when the has shared a link on a channel using the  Branch share sheet .   With every single event that's recorded, the following custom Branch link analytics labels are sent as Answers event attributes  if present :   channel  campaign  feature  stage  tags  referring_link", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/pages/integrations/fabric-answers/#enable-answers", 
+            "text": "If you're looking to get started on this, it's very simple. Just follow the simple step by step instructions:   Integrate the Branch SDKs and start using links! Make sure you're using iOS 0.12.3+ or Android 1.13.2+.  Head to your  Fabric dashboard  Find the  Answers  kit on the left hand nav bar  Click it and accept terms of service for Answers.  Start getting critical Branch growth insights in your Answers dash", 
+            "title": "Enable Answers"
         }, 
         {
             "location": "/pages/integrations/google-analytics/", 
@@ -4954,61 +5019,6 @@
             "location": "/pages/integrations/tune/#issues-with-facebook-data-discrepancies", 
             "text": "If you are finding data discrepancies between Branch, Tune and Facebook - please ensure you have followed the Facebook Ads setup and troubleshooting steps  here .  If you're using the Tune integration and Branch links in Facebook ads, Branch must initialize and complete before the Tune SDK. When this happens, Branch will be able fetch the necessary attribution parameters and pass them to Tune via the integration.", 
             "title": "Issues with Facebook data discrepancies."
-        }, 
-        {
-            "location": "/pages/integrations/appmetrica/", 
-            "text": "Overview\n\n\nWith a push of a button you can send your Branch data to your AppMetrica dashboard, helping you segment users and understand the power of Branch links in acquiring users.\n\n\nWhat events does Branch send to AppMetrica?\n\n\nBranch will send all \nBranch link clicks\n to AppMetrica. Branch also sends all the data that is attached to the link. AppMetrica then matches all downstream actions (installs, opens, custom events, payouts) back to the referring link. This will allow you to analyze which campaigns, channels, etc. are helping you acquire and engage users. You can see the list of fields that we send to AppMetrica \nhere\n.\n\n\nWhat does it look like?\n\n\nSee your Branch organic acquisition campaigns alongside your AppMetrica data.\n\n\n\n\nSupport\n\n\nPrerequisites\n\n\n\n\nThis guide requires you to have already \nintegrated the Branch SDK\n.\n\n\nYou also need to be an AppMetrica customer and have the \nAppMetrica SDK\n installed in your app.\n\n\n\n\nGet credentials from your AppMetrica dashboard\n\n\nTo set up the integration you will need to create new trackers in the AppMetrica dashboard for Branch (separate tracker for iOS and Android). After creating the trackers you will need the \ntracking URL\n for the integration.\n\n\n\n\nTo create a tracker navigate to the \nTrackers\n tab and press the \nCreate Tracker\n button.\n\n\n\n\n\n\n\n\nSelect \"Branch\" in \nPartner\n dropdown\n\n\nSelect a \nDestination URL\n. If there are no active destination URL's created for this app press the \nNew\u00a0destination\u00a0URL\n button and fill in a link to your website or app\n\n\n\n\n\n\n\n\nCopy the \nTracking URL\n\n\n\n\n\n\nEnable the AppMetrica card in your Branch dashboard\n\n\n\n\nOn the Branch Dashboard (\nhttps://dashboard.branch.io\n) navigate to the \nIntegrations page\n.\n\n\nLocate AppMetrica and choose \nEnable\n.\n\n\nIf you have not yet entered billing information, please do so now.\n\n\nEnter your \nTracking URL\n.\n\n\nHit \nSave\n.\n\n\n\n\n\n\nAdvanced\n\n\nWhat Branch sends to AppMetrica\n\n\nBranch will send any parameters that you append to a link on to AppMetrica. By default, if you don't append any additional parameters to your link, Branch will pass Branch Analytics tags on to AppMetrica with the below mapping.\n\n\n\n\n\n\n\n\nBranch Analytics Tag\n\n\nAppMetrica Data Placeholder Tag\n\n\n\n\n\n\n\n\n\n\nCampaign\n\n\nmy_campaign\n\n\n\n\n\n\nChannel\n\n\nmy_placement\n\n\n\n\n\n\nFeature\n\n\nmy_keyword\n\n\n\n\n\n\nBranch Click ID\n\n\ntracking_id\n\n\n\n\n\n\n\n\nAdvanced AppMetrica Tracker Settings\n\n\nIf you are interested in controlling advanced attribution policies, check out AppMetrica's \ndocumentation\n on this topic.", 
-            "title": "AppMetrica"
-        }, 
-        {
-            "location": "/pages/integrations/appmetrica/#overview", 
-            "text": "With a push of a button you can send your Branch data to your AppMetrica dashboard, helping you segment users and understand the power of Branch links in acquiring users.", 
-            "title": "Overview"
-        }, 
-        {
-            "location": "/pages/integrations/appmetrica/#what-events-does-branch-send-to-appmetrica", 
-            "text": "Branch will send all  Branch link clicks  to AppMetrica. Branch also sends all the data that is attached to the link. AppMetrica then matches all downstream actions (installs, opens, custom events, payouts) back to the referring link. This will allow you to analyze which campaigns, channels, etc. are helping you acquire and engage users. You can see the list of fields that we send to AppMetrica  here .", 
-            "title": "What events does Branch send to AppMetrica?"
-        }, 
-        {
-            "location": "/pages/integrations/appmetrica/#what-does-it-look-like", 
-            "text": "See your Branch organic acquisition campaigns alongside your AppMetrica data.", 
-            "title": "What does it look like?"
-        }, 
-        {
-            "location": "/pages/integrations/appmetrica/#support", 
-            "text": "", 
-            "title": "Support"
-        }, 
-        {
-            "location": "/pages/integrations/appmetrica/#prerequisites", 
-            "text": "This guide requires you to have already  integrated the Branch SDK .  You also need to be an AppMetrica customer and have the  AppMetrica SDK  installed in your app.", 
-            "title": "Prerequisites"
-        }, 
-        {
-            "location": "/pages/integrations/appmetrica/#get-credentials-from-your-appmetrica-dashboard", 
-            "text": "To set up the integration you will need to create new trackers in the AppMetrica dashboard for Branch (separate tracker for iOS and Android). After creating the trackers you will need the  tracking URL  for the integration.   To create a tracker navigate to the  Trackers  tab and press the  Create Tracker  button.     Select \"Branch\" in  Partner  dropdown  Select a  Destination URL . If there are no active destination URL's created for this app press the  New\u00a0destination\u00a0URL  button and fill in a link to your website or app     Copy the  Tracking URL", 
-            "title": "Get credentials from your AppMetrica dashboard"
-        }, 
-        {
-            "location": "/pages/integrations/appmetrica/#enable-the-appmetrica-card-in-your-branch-dashboard", 
-            "text": "On the Branch Dashboard ( https://dashboard.branch.io ) navigate to the  Integrations page .  Locate AppMetrica and choose  Enable .  If you have not yet entered billing information, please do so now.  Enter your  Tracking URL .  Hit  Save .", 
-            "title": "Enable the AppMetrica card in your Branch dashboard"
-        }, 
-        {
-            "location": "/pages/integrations/appmetrica/#advanced", 
-            "text": "", 
-            "title": "Advanced"
-        }, 
-        {
-            "location": "/pages/integrations/appmetrica/#what-branch-sends-to-appmetrica", 
-            "text": "Branch will send any parameters that you append to a link on to AppMetrica. By default, if you don't append any additional parameters to your link, Branch will pass Branch Analytics tags on to AppMetrica with the below mapping.     Branch Analytics Tag  AppMetrica Data Placeholder Tag      Campaign  my_campaign    Channel  my_placement    Feature  my_keyword    Branch Click ID  tracking_id", 
-            "title": "What Branch sends to AppMetrica"
-        }, 
-        {
-            "location": "/pages/integrations/appmetrica/#advanced-appmetrica-tracker-settings", 
-            "text": "If you are interested in controlling advanced attribution policies, check out AppMetrica's  documentation  on this topic.", 
-            "title": "Advanced AppMetrica Tracker Settings"
         }
     ]
 }
