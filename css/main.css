@@ -238,6 +238,11 @@ a.algolia-docsearch-footer--logo {
   width: 100%;
 }
 
+.center {
+  display:block;
+  margin: auto;
+}
+
 
 
 
@@ -271,4 +276,3 @@ overflow: visible;
 .md-nav__link[data-md-state=blur] {
 text-decoration: line-through;
 }*/
-

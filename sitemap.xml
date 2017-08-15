@@ -182,67 +182,109 @@
     
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads/apple/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/apple/</loc>
      <lastmod>2017-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads/dynamic-product-feeds/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/dynamic-product-feeds/</loc>
      <lastmod>2017-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads/branch-universal-ads/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/branch-universal-ads/</loc>
      <lastmod>2017-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads/doubleclick/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/doubleclick/</loc>
      <lastmod>2017-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads/google-app-installs/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/google-ads-overview/</loc>
      <lastmod>2017-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads/google-universal-app-campaigns/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/google-search-install-ads/</loc>
      <lastmod>2017-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads/google-search/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/google-search-engagement-ads/</loc>
      <lastmod>2017-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads/facebook-app-installs/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/google-display-install-ads/</loc>
      <lastmod>2017-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads/facebook-app-engagement/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/google-display-engagement-ads/</loc>
      <lastmod>2017-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads/facebook-instagram/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/google-uac/</loc>
      <lastmod>2017-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/ads/twitter/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/google-xplatform-search-ads/</loc>
+     <lastmod>2017-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/google-xplatform-display-ads/</loc>
+     <lastmod>2017-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/google-conversions/</loc>
+     <lastmod>2017-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/google-video-ads/</loc>
+     <lastmod>2017-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/facebook-app-installs/</loc>
+     <lastmod>2017-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/facebook-app-engagement/</loc>
+     <lastmod>2017-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/facebook-instagram/</loc>
+     <lastmod>2017-08-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/twitter/</loc>
      <lastmod>2017-08-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
