@@ -4377,8 +4377,63 @@
         }, 
         {
             "location": "/pages/integrations/kochava/", 
-            "text": "", 
+            "text": "Overview\n\n\nThe Kochava integration sends \nall clicks on a Branch link\n from Branch to Kochava, for the enabled platform. Now you can see your valuable Branch attribution data in your Kochava dashboard.\n\n\nKochava offers unique, holistic and unbiased app measurement. From attribution and analytics to optimization, the Kochava platform provides precise, real-time visualization of campaign and app performance from ad impression through user lifetime value. Kochava customers enjoy a suite of optimization tools including Configurable Attribution, Fraud Detection and over 2200 certified network \n publisher integrations including super publishers like Facebook, Instagram, Google and Pandora.\n\n\nSetup\n\n\n\n\nPre-requisite\n\n\nThis guide requires you to have already \nintegrated the Branch SDK\n into your app.\nYou also need to be a Kochava customer and have the \nKochava SDK installed\n in your app.\n\n\n\n\nCreate Campaign IDs in Kochava\n\n\nFor each platform (iOS and Android) you should create campaign IDs. You will do this in the Kochava dashboard.\n\n\nCreate a campaign\n\n\n\n\nLog in to Kochava.\n\n\nSelect the desired app .\n\n\nSelect \nApp Tools \n Campaign Manager\n\n\nClick \nAdd a Campaign\n\n\nEnter a unique Campaign name.\n\n\n\n\nCreate a Segment\n\n\n\n\nSelect \nCampaign Tools\nNew Segment\n\n\nEnter a Segment Name.\n\n\nClick submit\n\n\n\n\nCreate a tracker\n\n\n\n\nClick \nSegment Tools \n New Tracker\n\n\nEnter the Tracker Name.\n\n\nSelect \nTracker Type\n3rd Party Tracking\n (default setting)\n\n\nSelect \nSelect A Network \n Branch\n\n\nClick submit. (If no further trackers need to be created).\n\n\n\n\nOnce you've clicked \nSubmit\n you should see a screen with the campaign ID.\n\n\n\n\nConfigure the Branch Dashboard\n\n\n\n\nIn the Branch dashboard, go to the \nIntegrations page\n and look for the \nKochava\n card.\n\n\nClick \nEnable\n on the card\n\n\nEnter your Kochava campaign ID for the relevant platform\n\n\nHit \nSave\n\n\n\n\n\n\nAdvanced\n\n\nAdvanced network segmentation with Kochava\n\n\nIf you are interested in advanced network attribution segmentation in Kochava, you can use the same attribution parameters from a Kochava Click URL with your Branch link, and switch out campaign_ids. Please note that using this method will override the default attribution of Branch links to their default campaign in Kochava (only the specific Branch links that you do this for will not attribute to the default campaign).\n\n\n\n\nStart with an existing Branch link, for example, a \n Quick Link\n.\n\n\nNext, \ncreate a Kochava Click URL\n in the Kochava Dashboard with the parameters you'd like to capture.\n\n\nSelect the \"Click\" URL (as opposed to the Impression URL)\n\n\nAfter creating the URL, copy everything after \nclick\n value and append the parameters to the end of your Branch link.\n\n\n\n\n\n\n\n\nExample\n\n\nHere's an example of a finalized link for Branch and Kochava:\n\n\nhttps://mylinks.app.link/8AHjQx0fyv?\n    campaign_id=kokochavabranchdemo90128398\n\n    network=Bing\n\n\n\n\nsupport\n\n\nGeneral debugging tips\n\n\nWhen working with Kochava, be sure you are \nnot\n using test mode.", 
             "title": "Kochava"
+        }, 
+        {
+            "location": "/pages/integrations/kochava/#overview", 
+            "text": "The Kochava integration sends  all clicks on a Branch link  from Branch to Kochava, for the enabled platform. Now you can see your valuable Branch attribution data in your Kochava dashboard.  Kochava offers unique, holistic and unbiased app measurement. From attribution and analytics to optimization, the Kochava platform provides precise, real-time visualization of campaign and app performance from ad impression through user lifetime value. Kochava customers enjoy a suite of optimization tools including Configurable Attribution, Fraud Detection and over 2200 certified network   publisher integrations including super publishers like Facebook, Instagram, Google and Pandora.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/pages/integrations/kochava/#setup", 
+            "text": "Pre-requisite  This guide requires you to have already  integrated the Branch SDK  into your app.\nYou also need to be a Kochava customer and have the  Kochava SDK installed  in your app.", 
+            "title": "Setup"
+        }, 
+        {
+            "location": "/pages/integrations/kochava/#create-campaign-ids-in-kochava", 
+            "text": "For each platform (iOS and Android) you should create campaign IDs. You will do this in the Kochava dashboard.", 
+            "title": "Create Campaign IDs in Kochava"
+        }, 
+        {
+            "location": "/pages/integrations/kochava/#create-a-campaign", 
+            "text": "Log in to Kochava.  Select the desired app .  Select  App Tools   Campaign Manager  Click  Add a Campaign  Enter a unique Campaign name.", 
+            "title": "Create a campaign"
+        }, 
+        {
+            "location": "/pages/integrations/kochava/#create-a-segment", 
+            "text": "Select  Campaign Tools New Segment  Enter a Segment Name.  Click submit", 
+            "title": "Create a Segment"
+        }, 
+        {
+            "location": "/pages/integrations/kochava/#create-a-tracker", 
+            "text": "Click  Segment Tools   New Tracker  Enter the Tracker Name.  Select  Tracker Type 3rd Party Tracking  (default setting)  Select  Select A Network   Branch  Click submit. (If no further trackers need to be created).   Once you've clicked  Submit  you should see a screen with the campaign ID.", 
+            "title": "Create a tracker"
+        }, 
+        {
+            "location": "/pages/integrations/kochava/#configure-the-branch-dashboard", 
+            "text": "In the Branch dashboard, go to the  Integrations page  and look for the  Kochava  card.  Click  Enable  on the card  Enter your Kochava campaign ID for the relevant platform  Hit  Save", 
+            "title": "Configure the Branch Dashboard"
+        }, 
+        {
+            "location": "/pages/integrations/kochava/#advanced", 
+            "text": "", 
+            "title": "Advanced"
+        }, 
+        {
+            "location": "/pages/integrations/kochava/#advanced-network-segmentation-with-kochava", 
+            "text": "If you are interested in advanced network attribution segmentation in Kochava, you can use the same attribution parameters from a Kochava Click URL with your Branch link, and switch out campaign_ids. Please note that using this method will override the default attribution of Branch links to their default campaign in Kochava (only the specific Branch links that you do this for will not attribute to the default campaign).   Start with an existing Branch link, for example, a   Quick Link .  Next,  create a Kochava Click URL  in the Kochava Dashboard with the parameters you'd like to capture.  Select the \"Click\" URL (as opposed to the Impression URL)  After creating the URL, copy everything after  click  value and append the parameters to the end of your Branch link.     Example  Here's an example of a finalized link for Branch and Kochava:  https://mylinks.app.link/8AHjQx0fyv?\n    campaign_id=kokochavabranchdemo90128398 \n    network=Bing", 
+            "title": "Advanced network segmentation with Kochava"
+        }, 
+        {
+            "location": "/pages/integrations/kochava/#support", 
+            "text": "", 
+            "title": "support"
+        }, 
+        {
+            "location": "/pages/integrations/kochava/#general-debugging-tips", 
+            "text": "When working with Kochava, be sure you are  not  using test mode.", 
+            "title": "General debugging tips"
         }, 
         {
             "location": "/pages/integrations/localytics/", 
