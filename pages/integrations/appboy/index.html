@@ -1323,9 +1323,100 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Appboy
+      </label>
+    
     <a href="./" title="Appboy" class="md-nav__link md-nav__link--active">
       Appboy
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" title="How it works" class="md-nav__link">
+    How it works
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-the-appboy-api-key" title="Get the Appboy API key" class="md-nav__link">
+    Get the Appboy API key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-branch-dashboard" title="Configure the Branch Dashboard" class="md-nav__link">
+    Configure the Branch Dashboard
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" title="Advanced" class="md-nav__link">
+    Advanced
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-branch-sends-to-appboy" title="What Branch sends to Appboy" class="md-nav__link">
+    What Branch sends to Appboy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1434,6 +1525,86 @@
   
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" title="How it works" class="md-nav__link">
+    How it works
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-the-appboy-api-key" title="Get the Appboy API key" class="md-nav__link">
+    Get the Appboy API key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-branch-dashboard" title="Configure the Branch Dashboard" class="md-nav__link">
+    Configure the Branch Dashboard
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" title="Advanced" class="md-nav__link">
+    Advanced
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-branch-sends-to-appboy" title="What Branch sends to Appboy" class="md-nav__link">
+    What Branch sends to Appboy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1449,7 +1620,54 @@
                 
                   <h1>Appboy</h1>
                 
-                
+                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The Branch partnership with <a href="https://www.appboy.com">Appboy</a> provides a push-button way to deliver Branch installs and attributions to your Appboy dashboard. This allows you to analyze your users coming in from Branch deep linked campaigns.</p>
+<p><strong>At this time, our integration only applies to the iOS platform.</strong></p>
+<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
+<p>We have built a custom integration to automatically send all Branch install data to Appboy without any extra work on your side (besides integrating both SDKs). Simply click a button, and you'll be good to go!</p>
+<div class="admonition protip">
+<p class="admonition-title">How do we differentiate Appboy and Branch installs?</p>
+<p>We rely on a Branch link being clicked, which leads to an install. This sets an internal boolean that an install came from Branch.</p>
+</div>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<ul>
+<li>This guide requires you to have already <a href="../{{base.url}}/getting-started/sdk-integration-guide">integrated the Branch SDK</a> into your app.</li>
+<li>You also need to <a href="https://dashboard.appboy.com/developers/sign_up">sign up for an Appboy account</a> and <a href="https://documentation.appboy.com/">install the Appboy SDK</a>.</li>
+<li>Ensure Appboy's SDK is <a href="https://documentation.appboy.com/iOS/#optional-idfa-collection">collecting the IDFA</a>.</li>
+</ul>
+<h3 id="get-the-appboy-api-key">Get the Appboy API key<a class="headerlink" href="#get-the-appboy-api-key" title="Permanent link">&para;</a></h3>
+<ol>
+<li>On the Appboy dashboard, navigate to the <strong>App Settings</strong> section, and click <strong>3rd Party Integrations</strong>.</li>
+<li>From there, grab your API key (this will be the same for all attribution partners listed on the page).</li>
+</ol>
+<h3 id="configure-the-branch-dashboard">Configure the Branch Dashboard<a class="headerlink" href="#configure-the-branch-dashboard" title="Permanent link">&para;</a></h3>
+<ol>
+<li>On the Branch Dashboard (dashboard.branch.io), navigate to the <a href="https://dashboard.branch.io/integrations">Integrations page</a>.</li>
+<li>Locate Appboy and choose <strong>Enable</strong>.</li>
+<li>If you have not yet entered billing information, please do so now.</li>
+<li>Enter your Appboy iOS API Key and hit <strong>Save</strong>.</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/integrations/appboy/enable-appboy-integration.png" /></p>
+<h2 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h2>
+<h3 id="what-branch-sends-to-appboy">What Branch sends to Appboy<a class="headerlink" href="#what-branch-sends-to-appboy" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Branch Analytics Tag</th>
+<th>Appboy Data Placeholder Tag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Campaign</td>
+<td>campaign</td>
+</tr>
+<tr>
+<td>Channel</td>
+<td>adgroup</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 

@@ -4357,18 +4357,183 @@
         }, 
         {
             "location": "/pages/integrations/adjust/", 
-            "text": "", 
+            "text": "Overview\n\n\nSend data to Adjust to maximize your understanding of your mobile acquisition efforts, while deep linking your users through Branch.\n\n\nWhat events does Branch send to Adjust?\n\n\nThe integration automatically sends \nBranch link clicks\n to Adjust, specifically we send:\n\n\n\n\nAll Android clicks\n\n\niOS Universal Link clicks\n\n\n\n\nThis means that for iOS install campaigns (which doesn't use Universal Links), you must use Adjust as your fallback URL.\n\n\nWhat data can I expect to see in Adjust?\n\n\nOnce you enable an integration with Adjust, we'll automatically send all eligible clicks to Adjust's servers. From there, you'll see how many users came from Branch, along with installs, opens and downstream events attributed back to the Branch link. This will give you automatic segmentation and cohorting for users acquired via Branch links.\n\n\nWe'll pass along all of the Branch link's analytics data, which will map to labels inside Adjust. Check the \"Advanced\" section to see all of the labels.\n\n\nSetup\n\n\nPrerequisites\n\n\n\n\nThis guide requires you to have \nintegrated the Branch SDK\n.\n\n\nYou also need an account with Adjust and have the Adjust SDK (\niOS\n, \nAndroid\n) installed in your app.\n\n\n\n\nGet credentials from your Adjust account\n\n\nTo set up the integration, you will need to navigate to your Adjust dashboard, and create a new tracking link for your mobile app. Start by selecting 'Settings' of your mobile app.\n\n\n\n\nFrom there, you will need to create a new tracker, which is found under Data Management \n Trackers \n Click Trackers, and \"Create a new tracker\" below. Be sure to call it \"Branch.\" Once created, grab the 6 digit value after the \napp.adjust.com\n portion. This is your tracker.\n\n\n\n\nEnable the Adjust card in your Branch dashboard\n\n\n\n\nOn the Branch Dashboard (dashboard.branch.io), navigate to the \nIntegrations page\n.\n\n\nLocate Adjust and choose \nEnable\n.\n\n\nIf you have not yet entered billing information, please do so now.\n\n\nEnter your tracker for iOS and Android.\n\n\nHit \nSave\n.\n\n\n\n\n\n\nAdd Adjust tracking link to your Branch Settings\n\n\nIf you'd like to track iOS installs from Branch links in Adjust, you'll need to create an Adjust tracking link and put in your Branch settings page.\n\n\nYou need to point the iOS Custom Redirect to Adjust. Take the tracker you just created in Adjust and set the Custom Redirects of your \nBranch Settings\n as follows. This means that Branch will fall back to the App Store via Adjust when your user doesn't have the app and isn't going to mobile web. Remember to click the \"Save\" button at the bottom of the Link Settings page.\n\n\n\n\n\n\n\n\nPlatform\n\n\nURL\n\n\n\n\n\n\n\n\n\n\niOS\n\n\nhttps://app.adjust.io/abcdef\n\n\n\n\n\n\n\n\n\n\nAdvanced\n\n\nWhat Branch sends to Adjust\n\n\nBy default, Branch sends the following parameters to Adjust as part of the integration.\n\n\n\n\n\n\n\n\nBranch Analytics Tag\n\n\nAdjust Data Tag\n\n\n\n\n\n\n\n\n\n\nCampaign\n\n\ncampaign\n\n\n\n\n\n\nChannel\n\n\nadgroup\n\n\n\n\n\n\nFeature\n\n\ncreative\n\n\n\n\n\n\nBranch Click ID\n\n\nexternal_click_id\n\n\n\n\n\n\n\n\nAdvanced network segmentation with Adjust\n\n\nBy default, installs and events via Branch links will be attributed to Branch via your default tracker. If you'd like to use Branch links on your paid ad networks for deep linking, but you'd like more granular network attribution, you can create a new tracker in Adjust then use the tracker id in your Branch link. This will override the default Branch attribution.\n\n\n\n\nName your Adjust tracker something like \"TapjoyBranch\"\n\n\nTake the 6 letter identifier for your tracker and put it as a key value pair with key \ntracker_id\n in your deep link data for that specific link.", 
             "title": "Adjust"
         }, 
         {
-            "location": "/pages/integrations/amplitude/", 
+            "location": "/pages/integrations/adjust/#overview", 
+            "text": "Send data to Adjust to maximize your understanding of your mobile acquisition efforts, while deep linking your users through Branch.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/pages/integrations/adjust/#what-events-does-branch-send-to-adjust", 
+            "text": "The integration automatically sends  Branch link clicks  to Adjust, specifically we send:   All Android clicks  iOS Universal Link clicks   This means that for iOS install campaigns (which doesn't use Universal Links), you must use Adjust as your fallback URL.", 
+            "title": "What events does Branch send to Adjust?"
+        }, 
+        {
+            "location": "/pages/integrations/adjust/#what-data-can-i-expect-to-see-in-adjust", 
+            "text": "Once you enable an integration with Adjust, we'll automatically send all eligible clicks to Adjust's servers. From there, you'll see how many users came from Branch, along with installs, opens and downstream events attributed back to the Branch link. This will give you automatic segmentation and cohorting for users acquired via Branch links.  We'll pass along all of the Branch link's analytics data, which will map to labels inside Adjust. Check the \"Advanced\" section to see all of the labels.", 
+            "title": "What data can I expect to see in Adjust?"
+        }, 
+        {
+            "location": "/pages/integrations/adjust/#setup", 
             "text": "", 
+            "title": "Setup"
+        }, 
+        {
+            "location": "/pages/integrations/adjust/#prerequisites", 
+            "text": "This guide requires you to have  integrated the Branch SDK .  You also need an account with Adjust and have the Adjust SDK ( iOS ,  Android ) installed in your app.", 
+            "title": "Prerequisites"
+        }, 
+        {
+            "location": "/pages/integrations/adjust/#get-credentials-from-your-adjust-account", 
+            "text": "To set up the integration, you will need to navigate to your Adjust dashboard, and create a new tracking link for your mobile app. Start by selecting 'Settings' of your mobile app.   From there, you will need to create a new tracker, which is found under Data Management   Trackers   Click Trackers, and \"Create a new tracker\" below. Be sure to call it \"Branch.\" Once created, grab the 6 digit value after the  app.adjust.com  portion. This is your tracker.", 
+            "title": "Get credentials from your Adjust account"
+        }, 
+        {
+            "location": "/pages/integrations/adjust/#enable-the-adjust-card-in-your-branch-dashboard", 
+            "text": "On the Branch Dashboard (dashboard.branch.io), navigate to the  Integrations page .  Locate Adjust and choose  Enable .  If you have not yet entered billing information, please do so now.  Enter your tracker for iOS and Android.  Hit  Save .", 
+            "title": "Enable the Adjust card in your Branch dashboard"
+        }, 
+        {
+            "location": "/pages/integrations/adjust/#add-adjust-tracking-link-to-your-branch-settings", 
+            "text": "If you'd like to track iOS installs from Branch links in Adjust, you'll need to create an Adjust tracking link and put in your Branch settings page.  You need to point the iOS Custom Redirect to Adjust. Take the tracker you just created in Adjust and set the Custom Redirects of your  Branch Settings  as follows. This means that Branch will fall back to the App Store via Adjust when your user doesn't have the app and isn't going to mobile web. Remember to click the \"Save\" button at the bottom of the Link Settings page.     Platform  URL      iOS  https://app.adjust.io/abcdef", 
+            "title": "Add Adjust tracking link to your Branch Settings"
+        }, 
+        {
+            "location": "/pages/integrations/adjust/#advanced", 
+            "text": "", 
+            "title": "Advanced"
+        }, 
+        {
+            "location": "/pages/integrations/adjust/#what-branch-sends-to-adjust", 
+            "text": "By default, Branch sends the following parameters to Adjust as part of the integration.     Branch Analytics Tag  Adjust Data Tag      Campaign  campaign    Channel  adgroup    Feature  creative    Branch Click ID  external_click_id", 
+            "title": "What Branch sends to Adjust"
+        }, 
+        {
+            "location": "/pages/integrations/adjust/#advanced-network-segmentation-with-adjust", 
+            "text": "By default, installs and events via Branch links will be attributed to Branch via your default tracker. If you'd like to use Branch links on your paid ad networks for deep linking, but you'd like more granular network attribution, you can create a new tracker in Adjust then use the tracker id in your Branch link. This will override the default Branch attribution.   Name your Adjust tracker something like \"TapjoyBranch\"  Take the 6 letter identifier for your tracker and put it as a key value pair with key  tracker_id  in your deep link data for that specific link.", 
+            "title": "Advanced network segmentation with Adjust"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/", 
+            "text": "Overview\n\n\nWith a push of a button you can send your Branch data to your Amplitude dashboard, helping you understand the power of Branch as an acquisition pathway.\n\n\nHow does it work?\n\n\nOnce the Branch SDK is integrated into an app, Branch can detect which links are leading to installs, re-opens, and users' actions. Enabling this integration and providing your Amplitude API Key will result in Branch automatically forwarding referred events to Amplitude, in the exact format Amplitude expects.\n\n\nWhat events does Branch send?\n\n\nBranch will send \nreferred\n \ninstalls\n and \nopens\n, as well as any \ncustom events\n you track with Branch. Non-referred events, clicks, web session starts, and pageviews will be excluded. Branch also sends all the data that is attached to the link that drove the referred event. This will allow you to analyze which campaigns, channels, etc. are helping you acquire and engage users. You can see the list of fields that we send to Amplitude \nhere\n.\n\n\nWhat does it look like?\n\n\nBranch events will appear alongside your other tracked events in Amplitude. These events will automatically have \n[Branch]\n prepended. Here is an example of a Branch event in the Real Time Activity view:\n\n\n\n\nAdditionally, individual events, such as those seen in Live View or visible when looking at individual users, will have Branch link data included. Here's an example:\n\n\n\n\nBranch events are similar to Amplitude events in that they can be used in your existing funnels and tracked on the various pages and dashboards. However, unlike normal events, Branch events contain invaluable information about how users ended up in your app in the first place.\n\n\nSetup\n\n\nPrerequisites\n\n\n\n\nThis guide requires you to have already \nintegrated the Branch SDK\n.\n\n\nYou also need to be an Amplitude customer and have the \nAmplitude SDK installed\n in your app.\n\n\n\n\nRetrieve your Amplitude API Key\n\n\nFind your Amplitude Project Key and enter it into the Branch Dashboard.\n\n\n\n\nLog in to your \nAmplitude account\n  and navigate to Settings by clicking your username in the top right hand corner.\n\n\n\nIn settings, select \"Projects\" from the left hand navigation.\n\n\n\nCopy the Project Key of whichever app you\u2019re going to use with Branch.\n\n\n\n\n\nConfigure the Branch Dashboard\n\n\n\n\nOn the Branch Dashboard (dashboard.branch.io), navigate to the \nIntegrations page\n.\n\n\nLocate Amplitude and choose \nEnable\n.\n\n\nIf you have not yet entered billing information, please do so now.\n\n\nEnter your Amplitude Project Key in the relevant app under \"[iOS/Android] API key\" and hit \nSave\n. If you use the same key for iOS and Android, it's fine to enter the same key twice.\n\n\n\n\n\n\nCapture IDFA/GAID\n\n\nEnsure that you are capturing both the \nGoogle Advertising Identifier (GAID) on Android\n, and the \nIDFA on iOS\n (by importing the \nAdSupport.framework\n).\n\n\n\n\nGoogle Advertising ID is required\n\n\n\n\nAmplitude now requires the Google Advertising ID to be sent. Android ID (the hardware ID) alone is not enough.\n\n\nUpgrade to the latest SDKs [if necessary]\n\n\nPlease ensure you're using the Branch iOS SDK 0.12.2 or greater, and Android SDK v1.12.1 or greater. If you implemented Branch after May 28th 2016, you are likely already on this version or later.\n\n\nAdvanced\n\n\nWhat Branch Sends to Amplitude\n\n\n\n\n\n\n\n\nProperty Name\n\n\nValue\n\n\nSourced from\n\n\nExample\n\n\nReq\n\n\n\n\n\n\n\n\n\n\n\n\napi_key\n\n\nAPI Key\n\n\nBranch Dashboard\n\n\n70d1db75922b0b4be56b819c42bxxxxx\n\n\nY\n\n\n\n\n\n\n\n\nevent_type\n\n\nBranch event\n\n\nevent name\n\n\n[Branch] install\n\n\nY\n\n\n\n\n\n\n\n\nplatform\n\n\nios\n or \nandroid\n\n\ncollected by Branch SDK\n\n\nios\n\n\nY\n\n\n\n\n\n\n\n\nidfa\n\n\nIDFA\n\n\ncollected by Branch SDK\n\n\nAEBE52E7-03EE-455A-B3C4-E57283966239\n\n\n*\n\n\n\n\n\n\n\n\nidfv\n\n\nIDFV\n\n\ncollected by Branch SDK\n\n\nAEBE52E7-03EE-455A-B3C4-E57283966239\n\n\n*\n\n\n\n\n\n\n\n\nandroid_id\n\n\nAndroid ID\n\n\ncollected by Branch SDK\n\n\nf07a13984f6d116a\n\n\nN\n\n\n\n\n\n\n\n\nadid\n\n\nGAID\n\n\ncollected by Branch SDK\n\n\nAEBE52E7-03EE-455A-B3C4-E57283966239\n\n\n*\n\n\n\n\n\n\n\n\ndevice_id\n\n\nUnique ID for device\n\n\n$amplitude_device_id\n\n\nAEBE52E7-03EE-455A-B3C4-E57283966239\n\n\nN\n\n\n\n\n\n\n\n\nuser_id\n\n\nUnique ID for user\n\n\n$amplitude_user_id\n\n\nUser A\n\n\nN\n\n\n\n\n\n\n\n\nip\n\n\nUser\u2019s IP Address\n\n\ncollected by Branch SDK\n\n\n111.111.111.111\n\n\nN\n\n\n\n\n\n\n\n\nevent_properties.ANY-KEY (many)\n\n\nThe value associated with the key\n\n\nevent metadata or referring link data\n\n\n~channel: facebook\n\n\nN\n\n\n\n\n\n\n\n\n\n\n\n\nOn iOS, \nidfa\n or \nidfv\n is required. On Android, \nadid\n is required.\n\n\n\n\nCustom identity support\n\n\nYou can use the following code to let Branch know what device_id and user_id should be sent to Amplitude. Please make sure you are using SDK version 0.12.2 or later.\n\n\niOS:\n\n\n[[\nBranch\n \ngetInstance\n]\n \nsetRequestMetadataKey\n:\n@\n$amplitude_device_id\n \nvalue\n:\n@\nDevice A\n];\n\n\n[[\nBranch\n \ngetInstance\n]\n \nsetRequestMetadataKey\n:\n@\n$amplitude_user_id\n \nvalue\n:\n@\nUser A\n];\n\n\n\n\n\nAndroid:\n\n\nBranch\n.\ngetInstance\n().\nsetRequestMetadata\n(\n$amplitude_device_id\n,\n \n12345\n);\n\n\nBranch\n.\ngetInstance\n().\nsetRequestMetadata\n(\n$amplitude_user_id\n,\n \nuser-12345\n);\n\n\n\n\n\nSupport\n\n\nTesting your Amplitude integration\n\n\nThe simplest way to test your integration is working end to end is to open your app \nfrom a Branch link\n then verify the data appears in Amplitude. After doing this, you will know how you to test more advanced scenarios.\n\n\n\n\nCreate a Branch Quick Link at \nhttps://dashboard.branch.io/quick-links\n.\n\n\nClick that Branch link to open your app.\n\n\nIn your Branch dashboard, verify you see the open event show as a \"referred session\" with a \"session referring link URL\" in your Branch dashboard under \"Liveview \n Events\"\n\n\n\n\n\n\n\n\nGo to your Amplitude dashboard and click on \"User Activity\" and look at the \"Real-time activity\" section. You should see events with \n[Branch]\n prepended. There can sometimes be a delay in events appearing, so check back 30 minutes after testing.", 
             "title": "Amplitude"
         }, 
         {
-            "location": "/pages/integrations/appboy/", 
+            "location": "/pages/integrations/amplitude/#overview", 
+            "text": "With a push of a button you can send your Branch data to your Amplitude dashboard, helping you understand the power of Branch as an acquisition pathway.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/#how-does-it-work", 
+            "text": "Once the Branch SDK is integrated into an app, Branch can detect which links are leading to installs, re-opens, and users' actions. Enabling this integration and providing your Amplitude API Key will result in Branch automatically forwarding referred events to Amplitude, in the exact format Amplitude expects.", 
+            "title": "How does it work?"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/#what-events-does-branch-send", 
+            "text": "Branch will send  referred   installs  and  opens , as well as any  custom events  you track with Branch. Non-referred events, clicks, web session starts, and pageviews will be excluded. Branch also sends all the data that is attached to the link that drove the referred event. This will allow you to analyze which campaigns, channels, etc. are helping you acquire and engage users. You can see the list of fields that we send to Amplitude  here .", 
+            "title": "What events does Branch send?"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/#what-does-it-look-like", 
+            "text": "Branch events will appear alongside your other tracked events in Amplitude. These events will automatically have  [Branch]  prepended. Here is an example of a Branch event in the Real Time Activity view:   Additionally, individual events, such as those seen in Live View or visible when looking at individual users, will have Branch link data included. Here's an example:   Branch events are similar to Amplitude events in that they can be used in your existing funnels and tracked on the various pages and dashboards. However, unlike normal events, Branch events contain invaluable information about how users ended up in your app in the first place.", 
+            "title": "What does it look like?"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/#setup", 
             "text": "", 
+            "title": "Setup"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/#prerequisites", 
+            "text": "This guide requires you to have already  integrated the Branch SDK .  You also need to be an Amplitude customer and have the  Amplitude SDK installed  in your app.", 
+            "title": "Prerequisites"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/#retrieve-your-amplitude-api-key", 
+            "text": "Find your Amplitude Project Key and enter it into the Branch Dashboard.   Log in to your  Amplitude account   and navigate to Settings by clicking your username in the top right hand corner.  In settings, select \"Projects\" from the left hand navigation.  Copy the Project Key of whichever app you\u2019re going to use with Branch.", 
+            "title": "Retrieve your Amplitude API Key"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/#configure-the-branch-dashboard", 
+            "text": "On the Branch Dashboard (dashboard.branch.io), navigate to the  Integrations page .  Locate Amplitude and choose  Enable .  If you have not yet entered billing information, please do so now.  Enter your Amplitude Project Key in the relevant app under \"[iOS/Android] API key\" and hit  Save . If you use the same key for iOS and Android, it's fine to enter the same key twice.", 
+            "title": "Configure the Branch Dashboard"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/#capture-idfagaid", 
+            "text": "Ensure that you are capturing both the  Google Advertising Identifier (GAID) on Android , and the  IDFA on iOS  (by importing the  AdSupport.framework ).   Google Advertising ID is required   Amplitude now requires the Google Advertising ID to be sent. Android ID (the hardware ID) alone is not enough.", 
+            "title": "Capture IDFA/GAID"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/#upgrade-to-the-latest-sdks-if-necessary", 
+            "text": "Please ensure you're using the Branch iOS SDK 0.12.2 or greater, and Android SDK v1.12.1 or greater. If you implemented Branch after May 28th 2016, you are likely already on this version or later.", 
+            "title": "Upgrade to the latest SDKs [if necessary]"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/#advanced", 
+            "text": "", 
+            "title": "Advanced"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/#what-branch-sends-to-amplitude", 
+            "text": "Property Name  Value  Sourced from  Example  Req       api_key  API Key  Branch Dashboard  70d1db75922b0b4be56b819c42bxxxxx  Y     event_type  Branch event  event name  [Branch] install  Y     platform  ios  or  android  collected by Branch SDK  ios  Y     idfa  IDFA  collected by Branch SDK  AEBE52E7-03EE-455A-B3C4-E57283966239  *     idfv  IDFV  collected by Branch SDK  AEBE52E7-03EE-455A-B3C4-E57283966239  *     android_id  Android ID  collected by Branch SDK  f07a13984f6d116a  N     adid  GAID  collected by Branch SDK  AEBE52E7-03EE-455A-B3C4-E57283966239  *     device_id  Unique ID for device  $amplitude_device_id  AEBE52E7-03EE-455A-B3C4-E57283966239  N     user_id  Unique ID for user  $amplitude_user_id  User A  N     ip  User\u2019s IP Address  collected by Branch SDK  111.111.111.111  N     event_properties.ANY-KEY (many)  The value associated with the key  event metadata or referring link data  ~channel: facebook  N       On iOS,  idfa  or  idfv  is required. On Android,  adid  is required.", 
+            "title": "What Branch Sends to Amplitude"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/#custom-identity-support", 
+            "text": "You can use the following code to let Branch know what device_id and user_id should be sent to Amplitude. Please make sure you are using SDK version 0.12.2 or later.  iOS:  [[ Branch   getInstance ]   setRequestMetadataKey : @ $amplitude_device_id   value : @ Device A ];  [[ Branch   getInstance ]   setRequestMetadataKey : @ $amplitude_user_id   value : @ User A ];   Android:  Branch . getInstance (). setRequestMetadata ( $amplitude_device_id ,   12345 );  Branch . getInstance (). setRequestMetadata ( $amplitude_user_id ,   user-12345 );", 
+            "title": "Custom identity support"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/#support", 
+            "text": "", 
+            "title": "Support"
+        }, 
+        {
+            "location": "/pages/integrations/amplitude/#testing-your-amplitude-integration", 
+            "text": "The simplest way to test your integration is working end to end is to open your app  from a Branch link  then verify the data appears in Amplitude. After doing this, you will know how you to test more advanced scenarios.   Create a Branch Quick Link at  https://dashboard.branch.io/quick-links .  Click that Branch link to open your app.  In your Branch dashboard, verify you see the open event show as a \"referred session\" with a \"session referring link URL\" in your Branch dashboard under \"Liveview   Events\"     Go to your Amplitude dashboard and click on \"User Activity\" and look at the \"Real-time activity\" section. You should see events with  [Branch]  prepended. There can sometimes be a delay in events appearing, so check back 30 minutes after testing.", 
+            "title": "Testing your Amplitude integration"
+        }, 
+        {
+            "location": "/pages/integrations/appboy/", 
+            "text": "Overview\n\n\nThe Branch partnership with \nAppboy\n provides a push-button way to deliver Branch installs and attributions to your Appboy dashboard. This allows you to analyze your users coming in from Branch deep linked campaigns.\n\n\nAt this time, our integration only applies to the iOS platform.\n\n\nHow it works\n\n\nWe have built a custom integration to automatically send all Branch install data to Appboy without any extra work on your side (besides integrating both SDKs). Simply click a button, and you'll be good to go!\n\n\n\n\nHow do we differentiate Appboy and Branch installs?\n\n\nWe rely on a Branch link being clicked, which leads to an install. This sets an internal boolean that an install came from Branch.\n\n\n\n\nSetup\n\n\n\n\nThis guide requires you to have already \nintegrated the Branch SDK\n into your app.\n\n\nYou also need to \nsign up for an Appboy account\n and \ninstall the Appboy SDK\n.\n\n\nEnsure Appboy's SDK is \ncollecting the IDFA\n.\n\n\n\n\nGet the Appboy API key\n\n\n\n\nOn the Appboy dashboard, navigate to the \nApp Settings\n section, and click \n3rd Party Integrations\n.\n\n\nFrom there, grab your API key (this will be the same for all attribution partners listed on the page).\n\n\n\n\nConfigure the Branch Dashboard\n\n\n\n\nOn the Branch Dashboard (dashboard.branch.io), navigate to the \nIntegrations page\n.\n\n\nLocate Appboy and choose \nEnable\n.\n\n\nIf you have not yet entered billing information, please do so now.\n\n\nEnter your Appboy iOS API Key and hit \nSave\n.\n\n\n\n\n\n\nAdvanced\n\n\nWhat Branch sends to Appboy\n\n\n\n\n\n\n\n\nBranch Analytics Tag\n\n\nAppboy Data Placeholder Tag\n\n\n\n\n\n\n\n\n\n\nCampaign\n\n\ncampaign\n\n\n\n\n\n\nChannel\n\n\nadgroup", 
             "title": "Appboy"
+        }, 
+        {
+            "location": "/pages/integrations/appboy/#overview", 
+            "text": "The Branch partnership with  Appboy  provides a push-button way to deliver Branch installs and attributions to your Appboy dashboard. This allows you to analyze your users coming in from Branch deep linked campaigns.  At this time, our integration only applies to the iOS platform.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/pages/integrations/appboy/#how-it-works", 
+            "text": "We have built a custom integration to automatically send all Branch install data to Appboy without any extra work on your side (besides integrating both SDKs). Simply click a button, and you'll be good to go!   How do we differentiate Appboy and Branch installs?  We rely on a Branch link being clicked, which leads to an install. This sets an internal boolean that an install came from Branch.", 
+            "title": "How it works"
+        }, 
+        {
+            "location": "/pages/integrations/appboy/#setup", 
+            "text": "This guide requires you to have already  integrated the Branch SDK  into your app.  You also need to  sign up for an Appboy account  and  install the Appboy SDK .  Ensure Appboy's SDK is  collecting the IDFA .", 
+            "title": "Setup"
+        }, 
+        {
+            "location": "/pages/integrations/appboy/#get-the-appboy-api-key", 
+            "text": "On the Appboy dashboard, navigate to the  App Settings  section, and click  3rd Party Integrations .  From there, grab your API key (this will be the same for all attribution partners listed on the page).", 
+            "title": "Get the Appboy API key"
+        }, 
+        {
+            "location": "/pages/integrations/appboy/#configure-the-branch-dashboard", 
+            "text": "On the Branch Dashboard (dashboard.branch.io), navigate to the  Integrations page .  Locate Appboy and choose  Enable .  If you have not yet entered billing information, please do so now.  Enter your Appboy iOS API Key and hit  Save .", 
+            "title": "Configure the Branch Dashboard"
+        }, 
+        {
+            "location": "/pages/integrations/appboy/#advanced", 
+            "text": "", 
+            "title": "Advanced"
+        }, 
+        {
+            "location": "/pages/integrations/appboy/#what-branch-sends-to-appboy", 
+            "text": "Branch Analytics Tag  Appboy Data Placeholder Tag      Campaign  campaign    Channel  adgroup", 
+            "title": "What Branch sends to Appboy"
         }, 
         {
             "location": "/pages/integrations/appsflyer/", 
@@ -4792,8 +4957,58 @@
         }, 
         {
             "location": "/pages/integrations/appmetrica/", 
-            "text": "", 
+            "text": "Overview\n\n\nWith a push of a button you can send your Branch data to your AppMetrica dashboard, helping you segment users and understand the power of Branch links in acquiring users.\n\n\nWhat events does Branch send to AppMetrica?\n\n\nBranch will send all \nBranch link clicks\n to AppMetrica. Branch also sends all the data that is attached to the link. AppMetrica then matches all downstream actions (installs, opens, custom events, payouts) back to the referring link. This will allow you to analyze which campaigns, channels, etc. are helping you acquire and engage users. You can see the list of fields that we send to AppMetrica \nhere\n.\n\n\nWhat does it look like?\n\n\nSee your Branch organic acquisition campaigns alongside your AppMetrica data.\n\n\n\n\nSupport\n\n\nPrerequisites\n\n\n\n\nThis guide requires you to have already \nintegrated the Branch SDK\n.\n\n\nYou also need to be an AppMetrica customer and have the \nAppMetrica SDK\n installed in your app.\n\n\n\n\nGet credentials from your AppMetrica dashboard\n\n\nTo set up the integration you will need to create new trackers in the AppMetrica dashboard for Branch (separate tracker for iOS and Android). After creating the trackers you will need the \ntracking URL\n for the integration.\n\n\n\n\nTo create a tracker navigate to the \nTrackers\n tab and press the \nCreate Tracker\n button.\n\n\n\n\n\n\n\n\nSelect \"Branch\" in \nPartner\n dropdown\n\n\nSelect a \nDestination URL\n. If there are no active destination URL's created for this app press the \nNew\u00a0destination\u00a0URL\n button and fill in a link to your website or app\n\n\n\n\n\n\n\n\nCopy the \nTracking URL\n\n\n\n\n\n\nEnable the AppMetrica card in your Branch dashboard\n\n\n\n\nOn the Branch Dashboard (\nhttps://dashboard.branch.io\n) navigate to the \nIntegrations page\n.\n\n\nLocate AppMetrica and choose \nEnable\n.\n\n\nIf you have not yet entered billing information, please do so now.\n\n\nEnter your \nTracking URL\n.\n\n\nHit \nSave\n.\n\n\n\n\n\n\nAdvanced\n\n\nWhat Branch sends to AppMetrica\n\n\nBranch will send any parameters that you append to a link on to AppMetrica. By default, if you don't append any additional parameters to your link, Branch will pass Branch Analytics tags on to AppMetrica with the below mapping.\n\n\n\n\n\n\n\n\nBranch Analytics Tag\n\n\nAppMetrica Data Placeholder Tag\n\n\n\n\n\n\n\n\n\n\nCampaign\n\n\nmy_campaign\n\n\n\n\n\n\nChannel\n\n\nmy_placement\n\n\n\n\n\n\nFeature\n\n\nmy_keyword\n\n\n\n\n\n\nBranch Click ID\n\n\ntracking_id\n\n\n\n\n\n\n\n\nAdvanced AppMetrica Tracker Settings\n\n\nIf you are interested in controlling advanced attribution policies, check out AppMetrica's \ndocumentation\n on this topic.", 
             "title": "AppMetrica"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#overview", 
+            "text": "With a push of a button you can send your Branch data to your AppMetrica dashboard, helping you segment users and understand the power of Branch links in acquiring users.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#what-events-does-branch-send-to-appmetrica", 
+            "text": "Branch will send all  Branch link clicks  to AppMetrica. Branch also sends all the data that is attached to the link. AppMetrica then matches all downstream actions (installs, opens, custom events, payouts) back to the referring link. This will allow you to analyze which campaigns, channels, etc. are helping you acquire and engage users. You can see the list of fields that we send to AppMetrica  here .", 
+            "title": "What events does Branch send to AppMetrica?"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#what-does-it-look-like", 
+            "text": "See your Branch organic acquisition campaigns alongside your AppMetrica data.", 
+            "title": "What does it look like?"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#support", 
+            "text": "", 
+            "title": "Support"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#prerequisites", 
+            "text": "This guide requires you to have already  integrated the Branch SDK .  You also need to be an AppMetrica customer and have the  AppMetrica SDK  installed in your app.", 
+            "title": "Prerequisites"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#get-credentials-from-your-appmetrica-dashboard", 
+            "text": "To set up the integration you will need to create new trackers in the AppMetrica dashboard for Branch (separate tracker for iOS and Android). After creating the trackers you will need the  tracking URL  for the integration.   To create a tracker navigate to the  Trackers  tab and press the  Create Tracker  button.     Select \"Branch\" in  Partner  dropdown  Select a  Destination URL . If there are no active destination URL's created for this app press the  New\u00a0destination\u00a0URL  button and fill in a link to your website or app     Copy the  Tracking URL", 
+            "title": "Get credentials from your AppMetrica dashboard"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#enable-the-appmetrica-card-in-your-branch-dashboard", 
+            "text": "On the Branch Dashboard ( https://dashboard.branch.io ) navigate to the  Integrations page .  Locate AppMetrica and choose  Enable .  If you have not yet entered billing information, please do so now.  Enter your  Tracking URL .  Hit  Save .", 
+            "title": "Enable the AppMetrica card in your Branch dashboard"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#advanced", 
+            "text": "", 
+            "title": "Advanced"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#what-branch-sends-to-appmetrica", 
+            "text": "Branch will send any parameters that you append to a link on to AppMetrica. By default, if you don't append any additional parameters to your link, Branch will pass Branch Analytics tags on to AppMetrica with the below mapping.     Branch Analytics Tag  AppMetrica Data Placeholder Tag      Campaign  my_campaign    Channel  my_placement    Feature  my_keyword    Branch Click ID  tracking_id", 
+            "title": "What Branch sends to AppMetrica"
+        }, 
+        {
+            "location": "/pages/integrations/appmetrica/#advanced-appmetrica-tracker-settings", 
+            "text": "If you are interested in controlling advanced attribution policies, check out AppMetrica's  documentation  on this topic.", 
+            "title": "Advanced AppMetrica Tracker Settings"
         }
     ]
 }
