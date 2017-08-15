@@ -4368,7 +4368,72 @@
         {
             "location": "/pages/integrations/appboy/", 
             "text": "", 
-            "title": "AppBoy"
+            "title": "Appboy"
+        }, 
+        {
+            "location": "/pages/integrations/appsflyer/", 
+            "text": "Overview\n\n\nWith a push of a button you can send your Branch install data and attributions to your AppsFlyer dashboard, helping you understand the power of Branch as an acquisition pathway.\n\n\nHow does it work?\n\n\nOnce the Branch SDK is integrated into an app, Branch can detect which links are leading to installs, re-opens, and users' actions. Enabling this integration and providing your AppsFlyer Information will result in Branch automatically forwarding attribution information for your acquisitions. As a result, you can segment and analyze your Branch-led users in your AppsFlyer dashboard.\n\n\nWhat events does Branch send?\n\n\nBranch will send all Branch mobile link clicks to AppsFlyer. This includes sending analytics information you've added to your Branch links, such as campaign and channel.\n\n\nWhat does it look like?\n\n\nBranch events will appear on the AppsFlyer dashboard, in the overview page. Scroll to the \nAggregated Performance Report\n section, and you'll notice Branch led attributions fall under the name \nbranch_int\n.\n\n\n\n\nYou can click into \nbranch_int\n in the above screenshot and then see the breakdown of clicks and installs by campaign specified.\n\n\nSetup\n\n\n\n\nPrerequisite\n\n\n\n\nThis guide requires you to have already \nintegrated the Branch SDK\n.\n\n\nYou also need to be a AppsFlyer customer and have the AppsFlyer SDK.\n\n\n\n\n\n\nRetrieve your AppsFlyer Information\n\n\nIn your AppsFlyer dashboard, grab your app identifier information.\n\n\nFor iOS, this will be the ID of your iOS AP, without the \nid\n portion. If you have \nid123\n, simply put \n123\n into the Branch data integration card.\n\n\nFor Android, this will be your package name registered on AppsFlyer. If your package is registered as \nio.branch.test\n, then simply put \nio.branch.test\n in the Android section of the AppsFlyer Data Integration card.\n\n\nConfigure the Branch Dashboard\n\n\n\n\nOn the Branch Dashboard (dashboard.branch.io), navigate to the \nIntegrations page\n.\n\n\nLocate AppsFlyer and choose \nEnable\n.\n\n\nIf you have not yet entered billing information, please do so now.\n\n\nEnter your AppsFlyer information and hit \nSave\n.\n\n\n\n\nAdvanced\n\n\nWhat Branch Sends to AppsFlyer\n\n\n\n\n\n\n\n\nBranch Analytics Tag\n\n\nAppsFlyer Data Placeholder Tag\n\n\n\n\n\n\n\n\n\n\nCampaign\n\n\nMaps to \nAppsFlyer Campaign\n, \nc\n\n\n\n\n\n\nChannel\n\n\nMaps to \nAppsFlyer Channel\n, \naf_channel\n\n\n\n\n\n\n\n\nThe default Media Source will appear as \"branch_int\" (mandated by AppsFlyer and cannot be changed).\n\n\nYou can also append additional \nAppsFlyer Parameters in this format\n in link data or as query parameters.\n\n\nFor example, if you wanted to add Ad and Ad Set values to your link, you can do the following:\n\nhttps://mycompany.app.link/123245?af_ad=MyAd\naf_adset=MyAdSet\n\n\nSupport\n\n\nThere are common strategies to take while troubleshooting.\n\n\nData isn't appearing after simulating an event\n\n\nIt's likely that the device being tested on is already attributed. The proper steps to perform an attribution are as follows:\n\n\n\n\nDisable setDebug through the Branch SDK\n\n\nUninstall app from device.\n\n\nReset iOS IDFA, or Google Advertising ID\n\n\nClick Branch link\n\n\nDeploy app from XCode or Android Studio\n\n\nConfirm a fresh install occurred on Branch / AppsFlyer.\n\n\n\n\nInstalls not being attributed to Branch\n\n\nFor AppsFlyer to attribute installs properly to Branch, fingerprinting must be enabled for your app in your AppsFlyer settings. If you see Branch clicks but not installs appearing, this may be the issue. Ask your AppsFlyer Account Manager to enable fingerprinting for your app.", 
+            "title": "Appsflyer"
+        }, 
+        {
+            "location": "/pages/integrations/appsflyer/#overview", 
+            "text": "With a push of a button you can send your Branch install data and attributions to your AppsFlyer dashboard, helping you understand the power of Branch as an acquisition pathway.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/pages/integrations/appsflyer/#how-does-it-work", 
+            "text": "Once the Branch SDK is integrated into an app, Branch can detect which links are leading to installs, re-opens, and users' actions. Enabling this integration and providing your AppsFlyer Information will result in Branch automatically forwarding attribution information for your acquisitions. As a result, you can segment and analyze your Branch-led users in your AppsFlyer dashboard.", 
+            "title": "How does it work?"
+        }, 
+        {
+            "location": "/pages/integrations/appsflyer/#what-events-does-branch-send", 
+            "text": "Branch will send all Branch mobile link clicks to AppsFlyer. This includes sending analytics information you've added to your Branch links, such as campaign and channel.", 
+            "title": "What events does Branch send?"
+        }, 
+        {
+            "location": "/pages/integrations/appsflyer/#what-does-it-look-like", 
+            "text": "Branch events will appear on the AppsFlyer dashboard, in the overview page. Scroll to the  Aggregated Performance Report  section, and you'll notice Branch led attributions fall under the name  branch_int .   You can click into  branch_int  in the above screenshot and then see the breakdown of clicks and installs by campaign specified.", 
+            "title": "What does it look like?"
+        }, 
+        {
+            "location": "/pages/integrations/appsflyer/#setup", 
+            "text": "Prerequisite   This guide requires you to have already  integrated the Branch SDK .  You also need to be a AppsFlyer customer and have the AppsFlyer SDK.", 
+            "title": "Setup"
+        }, 
+        {
+            "location": "/pages/integrations/appsflyer/#retrieve-your-appsflyer-information", 
+            "text": "In your AppsFlyer dashboard, grab your app identifier information.  For iOS, this will be the ID of your iOS AP, without the  id  portion. If you have  id123 , simply put  123  into the Branch data integration card.  For Android, this will be your package name registered on AppsFlyer. If your package is registered as  io.branch.test , then simply put  io.branch.test  in the Android section of the AppsFlyer Data Integration card.", 
+            "title": "Retrieve your AppsFlyer Information"
+        }, 
+        {
+            "location": "/pages/integrations/appsflyer/#configure-the-branch-dashboard", 
+            "text": "On the Branch Dashboard (dashboard.branch.io), navigate to the  Integrations page .  Locate AppsFlyer and choose  Enable .  If you have not yet entered billing information, please do so now.  Enter your AppsFlyer information and hit  Save .", 
+            "title": "Configure the Branch Dashboard"
+        }, 
+        {
+            "location": "/pages/integrations/appsflyer/#advanced", 
+            "text": "", 
+            "title": "Advanced"
+        }, 
+        {
+            "location": "/pages/integrations/appsflyer/#what-branch-sends-to-appsflyer", 
+            "text": "Branch Analytics Tag  AppsFlyer Data Placeholder Tag      Campaign  Maps to  AppsFlyer Campaign ,  c    Channel  Maps to  AppsFlyer Channel ,  af_channel     The default Media Source will appear as \"branch_int\" (mandated by AppsFlyer and cannot be changed).  You can also append additional  AppsFlyer Parameters in this format  in link data or as query parameters.  For example, if you wanted to add Ad and Ad Set values to your link, you can do the following: https://mycompany.app.link/123245?af_ad=MyAd af_adset=MyAdSet", 
+            "title": "What Branch Sends to AppsFlyer"
+        }, 
+        {
+            "location": "/pages/integrations/appsflyer/#support", 
+            "text": "There are common strategies to take while troubleshooting.", 
+            "title": "Support"
+        }, 
+        {
+            "location": "/pages/integrations/appsflyer/#data-isnt-appearing-after-simulating-an-event", 
+            "text": "It's likely that the device being tested on is already attributed. The proper steps to perform an attribution are as follows:   Disable setDebug through the Branch SDK  Uninstall app from device.  Reset iOS IDFA, or Google Advertising ID  Click Branch link  Deploy app from XCode or Android Studio  Confirm a fresh install occurred on Branch / AppsFlyer.", 
+            "title": "Data isn't appearing after simulating an event"
+        }, 
+        {
+            "location": "/pages/integrations/appsflyer/#installs-not-being-attributed-to-branch", 
+            "text": "For AppsFlyer to attribute installs properly to Branch, fingerprinting must be enabled for your app in your AppsFlyer settings. If you see Branch clicks but not installs appearing, this may be the issue. Ask your AppsFlyer Account Manager to enable fingerprinting for your app.", 
+            "title": "Installs not being attributed to Branch"
         }, 
         {
             "location": "/pages/integrations/google-analytics/", 
