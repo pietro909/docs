@@ -79,7 +79,7 @@
         if (image.parentElement.tagName !== 'A') {
           var wrapper = document.createElement('a');
           var src = image.getAttribute('src');
-          var hash = '#image-' + src;
+          var hash = '#modal-image=' + src;
           wrapper.setAttribute('href', hash);
           image.parentNode.insertBefore(wrapper, image);
           wrapper.appendChild(image);
@@ -148,15 +148,15 @@
 
     function route() {
       var search = document.getElementById('algolia-doc-search');
-      router.add('route-#header-helpful', function() {
+      router.add('route-#dialog-helpful', function() {
         analytics.track('viewed modal helpful');
         modals.toggle('modal-helpful', 'notification', 1500);
       });
-      router.add('route-#header-unhelpful', function() {
+      router.add('route-#dialog-unhelpful', function() {
         analytics.track('viewed modal unhelpful');
         modals.toggle('modal-unhelpful', 'dialog');
       });
-      router.add('route-#header-search', function() {
+      router.add('route-#dialog-search', function() {
         analytics.track('viewed modal search');
         modals.toggle('modal-search', 'dialog');
         search.focus();

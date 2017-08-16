@@ -87,7 +87,7 @@
 
 
 /* ////////////////////////////// */
-/* MODAL */
+/* MODAL BASICS */
 /* ////////////////////////////// */
 .modal-background {
   position: fixed;
@@ -130,7 +130,7 @@
   opacity: 1;
 }
 .modal.active.dialog .modal-content {
-  top: 25%;
+  top: 50%;
 }
 .modal.active.notification .modal-content {
   top: 0%;
@@ -168,8 +168,12 @@ body.modal {
   margin-right: 1em;
 }
 
+
+
+/* ////////////////////////////// */
+/* MODAL IMAGES */
+/* ////////////////////////////// */
 .modal.active.dialog.image .modal-content {
-  top: 50%;
   max-width: 100em;
 }
 .modal.active.dialog.image #modal-image-link {
@@ -178,6 +182,21 @@ body.modal {
 }
 .modal.active.dialog.image #modal-image-img {
   width: 100%;
+}
+
+
+
+/* ////////////////////////////// */
+/* MODAL CODE */
+/* ////////////////////////////// */
+.modal.active.dialog.code .flex {
+  display: flex;
+  width: 100%;
+  margin-top: 1em;
+}
+.modal.active.dialog.code .flex a {
+  flex: 1;
+  margin: 0.25em 0.5em;
 }
 
 
@@ -263,16 +282,16 @@ border: none;
 /* ////////////////////////////// */
 /* HEADER GITHUB STATS */
 /* ////////////////////////////// */
-/*.md-nav__source, .md-source__facts, .md-source__icon {
-display: none;
+.md-nav__source, .md-source__facts, .md-source__icon {
+  display: none;
 }
 
 .md-source__repository {
-font-weight: 400;
-font-size: 1.8rem;
-overflow: visible;
+  font-weight: 400;
+  font-size: 1.8rem;
+  overflow: visible;
 }
 
 .md-nav__link[data-md-state=blur] {
-text-decoration: line-through;
-}*/
+  text-decoration: line-through;
+}
