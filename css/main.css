@@ -1,8 +1,32 @@
 /* ////////////////////////////// */
+/* BRANCH HEADER TITLE */
+/* ////////////////////////////// */
+.branch-header-subtitle {
+  display: none;
+  font-size: 2em;
+  margin-top: 1em;
+  padding-right: 1.5em;
+  color: hsla(0,0%,100%,.7);
+}
+@media (min-width: 960px) {
+  .branch-header-subtitle  {
+    display: block;
+  }
+}
+@media only screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title--site .md-nav__button {
+    width: 6em !important;
+    font-size: 1.5em !important;
+  }
+}
+
+
+
+/* ////////////////////////////// */
 /* BRANCH HEADER BUTTONS */
 /* ////////////////////////////// */
 .branch-header-button {
-  padding: 0 1.1rem;
+  padding: 0 1rem;
   font-size: 1.2rem;
   vertical-align: middle;
   text-align: center;
@@ -21,8 +45,15 @@
   padding-top: 1.25em;
   font-weight: 700;
 }
-.branch-nav-header:hover {
-  color: black !important;
+.md-logo.md-header-nav__button {
+  padding: 0;
+  margin: 0;
+}
+.md-logo.md-header-nav__button:first-child {
+  padding-left: 0.5em;
+}
+.md-logo.md-header-nav__button img {
+  height: 1.75em;
 }
 
 
@@ -66,11 +97,15 @@
   font-weight: 600;
   font-size: 1.8rem;
 }
+.md-typeset h5 {
+  text-transform: none;
+  color: rgba(0,0,0,.87);
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
 .md-typeset li > h4:before, .md-typeset li > h5:before, .md-typeset li > h6:before {
   content: close-quote !important;
-}
-.md-nav--secondary .md-nav__link--active {
-  color: inherit;
 }
 .codehilite .nx, .codehilite .n, .codehilite .na, .codehilite .nn {
   color: #24292e;
@@ -178,7 +213,7 @@ body.modal {
 }
 .modal.active.dialog.image #modal-image-link {
   display: block;
-  background: none;
+  background: none !important;
 }
 .modal.active.dialog.image #modal-image-img {
   width: 100%;
@@ -264,21 +299,6 @@ a.algolia-docsearch-footer--logo {
 
 
 
-
-/* ////////////////////////////// */
-/* TABLE OF CONTENTS */
-/* ////////////////////////////// */
-/* .md-sidebar--secondary .md-sidebar__inner {
-border-left: .1rem solid rgba(0,0,0,.07);
-border-right: none;
-}
-.md-sidebar--secondary .md-nav--secondary {
-border: none;
-}*/
-
-
-
-
 /* ////////////////////////////// */
 /* HEADER GITHUB STATS */
 /* ////////////////////////////// */
@@ -293,5 +313,59 @@ border: none;
 }
 
 .md-nav__link[data-md-state=blur] {
-  text-decoration: line-through;
+  color: rgba(0,0,0,.25);
+}
+
+
+
+/* ////////////////////////////// */
+/* BRANCH STYLING */
+/* ////////////////////////////// */
+/* primary */
+.md-header, .modal-content a {
+  background-color: #004875 !important;
+}
+@media only screen and (max-width: 76.1875em) {
+  .md-nav__title--site {
+    background-color: #004875 !important;
+  }
+}
+/* secondary */
+.md-nav--secondary {
+  border-left: .4rem solid #0075C9 !important;
+}
+.md-content a, .md-nav__link--active, .md-nav__link:hover, .md-typeset a:active, .md-typeset a:hover {
+  color: #0075C9 !important;
+}
+.md-content a:hover {
+  opacity: 0.7;
+}
+.md-typeset .md-content__icon {
+  color: rgba(0,0,0,.26) !important;
+}
+.md-nav--secondary .md-nav__link--active {
+  color: inherit !important;
+}
+.branch-nav-header:hover {
+  color: black !important;
+}
+.tab-code-button.active {
+  color: #0075C9;
+  border-bottom: 2px solid #0075C9;
+}
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
+  background: #0075C9 !important;
+}
+.md-footer-social__link {
+  border: none;
+  font-size: 1.25em !important;
+  line-height: 3em !important;
+}
+/* tertiary */
+.md-footer-meta {
+  background-color: #333E48;
+}
+.md-footer-social {
+  margin: 0;
+  padding: 0;
 }

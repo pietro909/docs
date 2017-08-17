@@ -1,0 +1,2171 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="An overview page of using Branch in Facebook Dynamic Ad campaigns.">
+      
+      
+        <link rel="canonical" href="https://branchmetrics.github.io/docs/pages/deep-linked-ads/facebook-dynamic-ads/">
+      
+      
+        <meta name="author" content="Branch">
+      
+      
+        <link rel="shortcut icon" href="../../../img/favicon-96x96.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.5">
+    
+    
+      
+        <title>Facebook Dynamic Ads</title>
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <style>.async-hide{opacity:0!important}</style>
+      <script>!function(e,t,a,n,o,i,c,s,g){t.className+=" "+a,i.start=1*new Date,i.end=c=function(){t.className=t.className.replace(RegExp(" ?"+a),"")},(e[n]=e[n]||[]).hide=i,setTimeout(function(){c(),i.end=null},o),i.timeout=o}(window,document.documentElement,"async-hide","dataLayer",4e3,{"GTM-PCPBXCN":!0}),function(e,t,a,n,o,i,c){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(a),c=t.getElementsByTagName(a)[0],i.async=1,i.src=n,c.parentNode.insertBefore(i,c)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","","auto"),ga("require","GTM-PCPBXCN"),ga("send","pageview")</script>
+    
+    
+      <script>!function(e,t){if(!t.__SV){var n=window;try{var i,a,p,o=n.location,r=o.hash;i=function(e,t){return(a=e.match(RegExp(t+"=([^&]*)")))?a[1]:null},r&&i(r,"state")&&(p=JSON.parse(decodeURIComponent(i(r,"state"))),"mpeditor"===p.action&&(n.sessionStorage.setItem("_mpcehash",r),history.replaceState(p.desiredHash||"",e.title,o.pathname+o.search)))}catch(e){}var l,s;window.mixpanel=t,t._i=[],t.init=function(e,n,i){function a(e,t){var n=t.split(".");2==n.length&&(e=e[n[0]],t=n[1]),e[t]=function(){e.push([t].concat(Array.prototype.slice.call(arguments,0)))}}var p=t;for("undefined"!=typeof i?p=t[i]=[]:i="mixpanel",p.people=p.people||[],p.toString=function(e){var t="mixpanel";return"mixpanel"!==i&&(t+="."+i),e||(t+=" (stub)"),t},p.people.toString=function(){return p.toString(1)+".people (stub)"},l="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" "),s=0;s<l.length;s++)a(p,l[s]);t._i.push([e,n,i])},t.__SV=1.2,n=e.createElement("script"),n.type="text/javascript",n.async=!0,n.src="undefined"!=typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js",i=e.getElementsByTagName("script")[0],i.parentNode.insertBefore(n,i)}}(document,window.mixpanel||[]),mixpanel.init("47ec8ea9ac102b1370221dcda476091c")</script>
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-769c285a91.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../../css/main.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://branchmetrics.github.io/docs" title="Branch documentation" class="md-logo md-header-nav__button">
+            <img src="../../../img/logo.svg">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="branch-header-subtitle">&nbsp;|&nbsp;Docs</div>
+        </div>
+      
+      
+        <div class="md-flex__cell md-flex__cell--stretch">
+          <span class="md-flex__ellipsis md-header-nav__title">
+            
+              
+                
+                  <span class="md-header-nav__parent">
+                    Deep link ads
+                  </span>
+                
+              
+              Facebook Dynamic Ads
+            
+          </span>
+        </div>
+      
+      
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="http://dev.branch.io/" id="header-old-docs" title="old docs">
+            <i class="branch-header-icon md-icon material-icons">restore_page</i>
+            <p class="branch-header-label">Old&nbsp;Docs</p>
+          </a>
+        </div>
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="#dialog-helpful" id="header-helpful" title="Helpful">
+            <i class="branch-header-icon md-icon material-icons">thumb_up</i>
+            <p class="branch-header-label">Helpful</p>
+          </a>
+        </div>
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="#dialog-unhelpful" id="header-unhelpful" title="Unhelpful">
+            <i class="branch-header-icon md-icon material-icons">thumb_down</i>
+            <p class="branch-header-label">Unhelpful</p>
+          </a>
+        </div>
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="#" class="improve-doc" title="Improve This Doc">
+            <i class="branch-header-icon md-icon material-icons">mode_edit</i>
+            <p class="branch-header-label">Improve</p>
+          </a>
+        </div>
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="#" class="contact-support" title="Contact support">
+            <i class="branch-header-icon md-icon material-icons">help_outline</i>
+            <p class="branch-header-label">Support</p>
+          </a>
+        </div>
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="#dialog-search" id="header-search" title="Search">
+            <i class="branch-header-icon md-icon material-icons">search</i>
+            <p class="branch-header-label">Search</p>
+          </a>
+        </div>
+        <div class="md-flex__cell md-flex__cell--shrink" style="display:none">
+      
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../../img/logo.svg">
+      </i>
+    
+    Branch documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/branchmetrics/docs" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Branch documentation
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+      
+        
+      
+        
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+    
+      
+      
+      
+      
+        
+          <li class="md-nav__item md-nav__link branch-nav-header">
+            Basic deep linking
+          </li>
+        
+      
+        
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Integrate your app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Integrate your app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/ios/" title="iOS" class="md-nav__link">
+      iOS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/android/" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/adobe-air/" title="Adobe AIR" class="md-nav__link">
+      Adobe AIR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/cordova-phonegap-ionic/" title="Cordova PhoneGap Ionic" class="md-nav__link">
+      Cordova PhoneGap Ionic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/mparticle-android/" title="mParticle Android" class="md-nav__link">
+      mParticle Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/mparticle-ios/" title="mParticle iOS" class="md-nav__link">
+      mParticle iOS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/titanium/" title="Titanium" class="md-nav__link">
+      Titanium
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/react-native/" title="React Native" class="md-nav__link">
+      React Native
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/unity/" title="Unity" class="md-nav__link">
+      Unity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/xamarin/" title="Xamarin" class="md-nav__link">
+      Xamarin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/api/" title="API" class="md-nav__link">
+      API
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+      
+        
+      
+        
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../web/setup/" title="Integrate your website" class="md-nav__link">
+      Integrate your website
+    </a>
+  </li>
+
+    
+      
+      
+      
+      
+        
+      
+        
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Create deep links
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Create deep links
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../links/behavior/" title="Link behavior" class="md-nav__link">
+      Link behavior
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../links/data/" title="Link data" class="md-nav__link">
+      Link data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../links/link-domain/" title="Link domain" class="md-nav__link">
+      Link domain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../links/create/" title="Creating links" class="md-nav__link">
+      Creating links
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+      
+        
+      
+        
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Track analytics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Track analytics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analytics/behavior/" title="Behavior" class="md-nav__link">
+      Behavior
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analytics/referrals/" title="Referrals" class="md-nav__link">
+      Referrals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analytics/growth-attribution/" title="Growth" class="md-nav__link">
+      Growth
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analytics/user-value attribution/" title="User Value" class="md-nav__link">
+      User Value
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../analytics/revenue-attribution/" title="Revenue" class="md-nav__link">
+      Revenue
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+      
+        
+      
+        
+          <li class="md-nav__item md-nav__link branch-nav-header">
+            Advance deep linking
+          </li>
+        
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Deep link web
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Deep link web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../web/deep-views/" title="Deepviews" class="md-nav__link">
+      Deepviews
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../web/journeys/" title="Journeys App Banners" class="md-nav__link">
+      Journeys App Banners
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../web/amp-journeys/" title="AMP Journeys" class="md-nav__link">
+      AMP Journeys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../web/text-me-the-app/" title="Text Me The App" class="md-nav__link">
+      Text Me The App
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+      
+        
+      
+        
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Deep link ads
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Deep link ads
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apple/" title="Apple Search Ads" class="md-nav__link">
+      Apple Search Ads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dynamic-product-feeds/" title="Dynamic Product Feeds" class="md-nav__link">
+      Dynamic Product Feeds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../branch-universal-ads/" title="Branch Universal Ads" class="md-nav__link">
+      Branch Universal Ads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../doubleclick/" title="Doubleclick" class="md-nav__link">
+      Doubleclick
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../google-ads-overview/" title="Google Ads Overview" class="md-nav__link">
+      Google Ads Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../google-search-install-ads/" title="Google Search App Install Ads" class="md-nav__link">
+      Google Search App Install Ads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../google-search-engagement-ads/" title="Google Search App Engagement Ads" class="md-nav__link">
+      Google Search App Engagement Ads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../google-display-install-ads/" title="Google Display App Install Ads" class="md-nav__link">
+      Google Display App Install Ads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../google-display-engagement-ads/" title="Google Display App Engagement Ads" class="md-nav__link">
+      Google Display App Engagement Ads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../google-uac/" title="Google Universal App Campaigns" class="md-nav__link">
+      Google Universal App Campaigns
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../google-xplatform-search-ads/" title="Google Search Network Ads" class="md-nav__link">
+      Google Search Network Ads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../google-xplatform-display-ads/" title="Google Display Network Ads" class="md-nav__link">
+      Google Display Network Ads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../google-conversions/" title="Google Adwords Conversion Setup" class="md-nav__link">
+      Google Adwords Conversion Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../google-video-ads/" title="Google Video Ads" class="md-nav__link">
+      Google Video Ads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../facebook-ads-overview/" title="Facebook Ads Overview" class="md-nav__link">
+      Facebook Ads Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../facebook-app-install-ads/" title="Facebook App Install Ads" class="md-nav__link">
+      Facebook App Install Ads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../facebook-traffic-conversion-ads/" title="Facebook Traffic and Conversion Ads" class="md-nav__link">
+      Facebook Traffic and Conversion Ads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../facebook-platform-ads/" title="Facebook Platform Ads" class="md-nav__link">
+      Facebook Platform Ads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Facebook Dynamic Ads
+      </label>
+    
+    <a href="./" title="Facebook Dynamic Ads" class="md-nav__link md-nav__link--active">
+      Facebook Dynamic Ads
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#facebook-campaign-advert-format-support-table" title="Facebook Campaign Advert Format Support Table" class="md-nav__link">
+    Facebook Campaign Advert Format Support Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-facebook-as-an-ad-partner" title="Enable Facebook as an Ad Partner" class="md-nav__link">
+    Enable Facebook as an Ad Partner
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-deep-linked-ad-feed" title="Create a Deep Linked Ad Feed" class="md-nav__link">
+    Create a Deep Linked Ad Feed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-your-feed-to-facebook" title="Upload your feed to Facebook" class="md-nav__link">
+    Upload your feed to Facebook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-app-events-and-the-facebook-pixel" title="Setting up App Events and the Facebook Pixel" class="md-nav__link">
+    Setting up App Events and the Facebook Pixel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-dynamic-ad-campaign" title="Creating a Dynamic Ad Campaign" class="md-nav__link">
+    Creating a Dynamic Ad Campaign
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-your-data" title="View Your Data" class="md-nav__link">
+    View Your Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" title="Troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugging-common-count-discrepancies" title="Debugging Common Count Discrepancies" class="md-nav__link">
+    Debugging Common Count Discrepancies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-deep-linked-ads" title="Testing Deep Linked Ads" class="md-nav__link">
+    Testing Deep Linked Ads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issues-reading-facebook-app-links" title="Issues Reading Facebook App Links" class="md-nav__link">
+    Issues Reading Facebook App Links
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-issue-with-app-restrictions" title="Known Issue with App Restrictions" class="md-nav__link">
+    Known Issue with App Restrictions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-issues-with-facebook-authentication" title="Common issues with Facebook Authentication" class="md-nav__link">
+    Common issues with Facebook Authentication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+        <li class="md-nav__item">
+          <a href="#__source" title="Source" class="md-nav__link md-nav__link--active">
+            Source
+          </a>
+        </li>
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../twitter/" title="Twitter Ads" class="md-nav__link">
+      Twitter Ads
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+      
+        
+      
+        
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Deep link emails
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Deep link emails
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/responsys/" title="Responsys" class="md-nav__link">
+      Responsys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/sfmc/" title="SFMC" class="md-nav__link">
+      SFMC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/sendgrid/" title="SendGrid" class="md-nav__link">
+      SendGrid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/sailthru/" title="Sailthru" class="md-nav__link">
+      Sailthru
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/appboy/" title="AppBoy" class="md-nav__link">
+      AppBoy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/self-serve/" title="Self Serve" class="md-nav__link">
+      Self Serve
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+      
+        
+      
+        
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Deep link organic search
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Deep link organic search
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../organic-search/firebase/" title="Firebase" class="md-nav__link">
+      Firebase
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../organic-search/spotlight/" title="Spotlight" class="md-nav__link">
+      Spotlight
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+      
+        
+      
+        
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Deep link apps
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Deep link apps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app-to-app/android-instant-apps/" title="Android Instant Apps" class="md-nav__link">
+      Android Instant Apps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app-to-app/imessage-apps/" title="iMessage Apps" class="md-nav__link">
+      iMessage Apps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../app-to-app/facebook-app-invites/" title="Facebook App Invites" class="md-nav__link">
+      Facebook App Invites
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+      
+        
+      
+        
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Export analytics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Export analytics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../exports/csv/" title="CSV Export" class="md-nav__link">
+      CSV Export
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../exports/api/" title="Export API" class="md-nav__link">
+      Export API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../exports/webhooks/" title="Webhooks" class="md-nav__link">
+      Webhooks
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+      
+        
+      
+        
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Integrate analytics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Integrate analytics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/adobe-analytics/" title="Abobe Analytics" class="md-nav__link">
+      Abobe Analytics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/adjust/" title="Adjust" class="md-nav__link">
+      Adjust
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/amplitude/" title="Amplitude" class="md-nav__link">
+      Amplitude
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/appmetrica/" title="AppMetrica" class="md-nav__link">
+      AppMetrica
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/appboy/" title="Appboy" class="md-nav__link">
+      Appboy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/appsflyer/" title="Appsflyer" class="md-nav__link">
+      Appsflyer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/fabric-answers/" title="Fabric Answers" class="md-nav__link">
+      Fabric Answers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/google-analytics/" title="Google Analytics" class="md-nav__link">
+      Google Analytics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/kochava/" title="Kochava" class="md-nav__link">
+      Kochava
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/localytics/" title="Localytics" class="md-nav__link">
+      Localytics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/mixpanel/" title="Mixpanel" class="md-nav__link">
+      Mixpanel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/tune/" title="Tune" class="md-nav__link">
+      Tune
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#facebook-campaign-advert-format-support-table" title="Facebook Campaign Advert Format Support Table" class="md-nav__link">
+    Facebook Campaign Advert Format Support Table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-facebook-as-an-ad-partner" title="Enable Facebook as an Ad Partner" class="md-nav__link">
+    Enable Facebook as an Ad Partner
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-deep-linked-ad-feed" title="Create a Deep Linked Ad Feed" class="md-nav__link">
+    Create a Deep Linked Ad Feed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-your-feed-to-facebook" title="Upload your feed to Facebook" class="md-nav__link">
+    Upload your feed to Facebook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-app-events-and-the-facebook-pixel" title="Setting up App Events and the Facebook Pixel" class="md-nav__link">
+    Setting up App Events and the Facebook Pixel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-dynamic-ad-campaign" title="Creating a Dynamic Ad Campaign" class="md-nav__link">
+    Creating a Dynamic Ad Campaign
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-your-data" title="View Your Data" class="md-nav__link">
+    View Your Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" title="Troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugging-common-count-discrepancies" title="Debugging Common Count Discrepancies" class="md-nav__link">
+    Debugging Common Count Discrepancies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-deep-linked-ads" title="Testing Deep Linked Ads" class="md-nav__link">
+    Testing Deep Linked Ads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issues-reading-facebook-app-links" title="Issues Reading Facebook App Links" class="md-nav__link">
+    Issues Reading Facebook App Links
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-issue-with-app-restrictions" title="Known Issue with App Restrictions" class="md-nav__link">
+    Known Issue with App Restrictions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-issues-with-facebook-authentication" title="Common issues with Facebook Authentication" class="md-nav__link">
+    Common issues with Facebook Authentication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+        <li class="md-nav__item">
+          <a href="#__source" title="Source" class="md-nav__link md-nav__link--active">
+            Source
+          </a>
+        </li>
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/deep-linked-ads/facebook-dynamic-ads.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                <h1 id="facebook-dynamic-ads">Facebook Dynamic Ads<a class="headerlink" href="#facebook-dynamic-ads" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Branch links can be used in conjunction with Facebook's dynamic advertisements. Dynamic remarketing campaigns on desktop have been proven to deliver 16x return on ad spend. Now you can easily set up Facebook Dynamic Ads on mobile to drive incredible results.</p>
+<p>Note: This documentation applies for Ad placements across Facebook, Instagram, and the Audience Network.</p>
+<p>This documentation supports the following Facebook Ad Campaign types:</p>
+<table>
+<thead>
+<tr>
+<th>Facebook Campaign Category</th>
+<th>Campaign Type/Objective</th>
+<th>Branch Ad Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conversion</td>
+<td>Product Catalogue Sales</td>
+<td>Cross-platform Product Links</td>
+</tr>
+</tbody>
+</table>
+<h4 id="facebook-campaign-advert-format-support-table">Facebook Campaign Advert Format Support Table<a class="headerlink" href="#facebook-campaign-advert-format-support-table" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Facebook Campaign Type</th>
+<th>Photo</th>
+<th>Video</th>
+<th>Carousel</th>
+<th>Slideshow</th>
+<th>Collection</th>
+<th>Dynamic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Catalogue Sales</td>
+<td>✔︎</td>
+<td></td>
+<td>✔︎</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p>Looking for other Facebook Ad campaign types? Please check out our <a href="../../../pages/deep-linked-ads/facebook-ads-overview">Facebook Ads Overview guide</a>.</p>
+</div>
+<div class="admonition summary">
+<p class="admonition-title">Ideas for deep linked ads</p>
+<ul>
+<li>A user clicks on an ad for 20% off all purchases before the end of the week, and upon opening the app sees the coupon and has it automatically added to the shopping cart.</li>
+<li>A user clicks on an ad for blue sneakers. You show him the blue sneakers as soon as he opens the app.</li>
+<li>You know that users clicking on your ads are already familiar with your product. So in your app you reduce the carousel shown to new users from 5 to 2 if they've come in through an ad.</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Prerequisites</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked> To track installs from Facebook Ads you should <a href="../{{base.url}}/getting-started/sdk-integration-guide TODO">integrate the Branch SDK</a> into your app.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> To use Branch links in Facebook App Install Ads ensure you have Universal Links set up on iOS or App Links enabled on Android to ensure correct routing behavior. For setup, checkout <a href="../{{base.url}}/getting-started/universal-app-links TODO">Universal and App Links</a>.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> If you want to deep link from your ads directly to content, you should <a href="../{{base.url}}/getting-started/deep-link-routing TODO">configure deep link routing</a>.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> Use <a href="../../../pages/deep-linked-ads/dynamic-product-feeds/">Branch Deep Linked Feeds</a> to create your Facebook Dynamic Ad compatible deep links.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> Ads is a premium product priced on Monthly Active Users. Sign up for the Ads product to enable this functionality.</li>
+</ul>
+</div>
+<h4 id="enable-facebook-as-an-ad-partner">Enable Facebook as an Ad Partner<a class="headerlink" href="#enable-facebook-as-an-ad-partner" title="Permanent link">&para;</a></h4>
+<p>If you haven't enabled Facebook as an Ad Partner on the Branch dashboard follow this section to do so.</p>
+<ol>
+<li>Navigate to the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management tab</a>.
+<img alt="Ads Partner Management" src="../../../img/ingredients/deep-linked-ads/enable-facebook-ad-partner/ads-partner-management.png" /></li>
+<li>Search for <strong>Facebook</strong>.
+<img alt="Find Facebook in Partner Manager" src="../../../img/ingredients/deep-linked-ads/enable-facebook-ad-partner/find-facebook-partner.png" /></li>
+<li>In order for Branch to be able to properly deep link from Facebook ad campaigns, you must allow access to your Facebook app's information through usage of your <strong>App ID</strong> and <strong>App Secret</strong>.<ul>
+<li>First register your app with Facebook. If you haven't registered an app, see instructions <a href="https://developers.facebook.com/docs/apps/register" target="_blank">here</a>.</li>
+</ul>
+</li>
+<li>Now log in to Facebook and navigate to <a href="http://developers.facebook.com/apps" target="_blank">developers.facebook.com/apps</a> and select your app. You'll need both the <strong>App ID</strong> and <strong>App Secret</strong> values.
+<img alt="Facebook Auth" src="../../../img/ingredients/deep-linked-ads/enable-facebook-ad-partner/fb-auth-id-secret.png" /></li>
+<li>Go to the following <a href="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=oauth%2Faccess_token%3Fclient_id%3D1234%26client_secret%3D5678%26grant_type%3Dclient_credentials&amp;version=v2.10">page</a> to retrieve your app access token. Where it shows client_id, replace <code>1234</code> with your Facebook <strong>App ID</strong>. Where it shows client_secret, replace <code>5678</code> with your Facebook <strong>App Secret</strong>. Hit submit and copy the returned value of <code>access_token</code>.
+<img alt="Facebook Access Token" src="../../../img/ingredients/deep-linked-ads/enable-facebook-ad-partner/og-fb.png" /></li>
+<li>Return to the Branch Ad Partner Management Page and fill out the <strong>OG App ID</strong> and <strong>App Access Token</strong> fields which correspond to the Facebook <strong>App ID</strong> and the <strong>access token</strong> respectively.
+<img alt="Facebook Auth" src="../../../img/ingredients/deep-linked-ads/enable-facebook-ad-partner/branch-dash-fb-values.png" /></li>
+<li>Click the <code>Save and Enable</code> button in the lower right hand corner.
+<img alt="Save and Enable Facebook in Partner Manager" src="../../../img/ingredients/deep-linked-ads/enable-facebook-ad-partner/save-and-enable-facebook.png" /></li>
+<li>Facebook is now enabled as an ad partner.</li>
+<li>Finally, to create a Facebook Ads link click the <code>Create Facebook Link</code> button in the top right hand corner.
+<img alt="Create Facebook Ad Link" src="../../../img/ingredients/deep-linked-ads/enable-facebook-ad-partner/create-facebook-link.png" /></li>
+</ol>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<h4 id="create-a-deep-linked-ad-feed">Create a Deep Linked Ad Feed<a class="headerlink" href="#create-a-deep-linked-ad-feed" title="Permanent link">&para;</a></h4>
+<p>Branch makes it easy for you to create and manage feeds with Facebook-compatible deep links.</p>
+<ol>
+<li>Create a Branch Deep Linked Ad Feed from the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management page</a>'s <code>Create Facebook Link</code> button under the Google Adwords Partner and select <code>Create Product Link</code>
+<img src="/img/pages/deep-linked-ads/reusable-images/create-link-product.png" alt="Link Creation" class="three-quarters center"></li>
+<li>Enter a Deep Linked Feed Name.</li>
+<li>Enter a already set up feed source or upload a new source.</li>
+<li>Configure the feed with the Ad Partner set to <strong>Facebook</strong>, and the Ad Format set to <strong>Product</strong>.
+<img alt="Ad Link Setup" src="../../../img/pages/deep-linked-ads/facebook-dynamic-ads/feed-setup.png" /></li>
+<li>On the next section, select any keys from your feed that you'd like to include in the deep linked data contained in the generated links.
+<img alt="Create Deep Linked Feed" src="../../../img/pages/deep-linked-ads/facebook-dynamic-ads/feed-keys-setup.png" /></li>
+<li>If you used a Feed Source hosted on a URL (recommended), you will see two options for accessing your feed. We recommend selecting “Schedule Refresh.” If you select this option, Branch will host a URL for your Deep Linked Feed that will update itself from your Feed Source URL at regular intervals.
+<img alt="Deep Linked Feed Scheduling" src="../../../img/pages/deep-linked-ads/facebook-dynamic-ads/hosted-dlf.png" /></li>
+<li>Download the feed data or copy the deep linked feed URL (for hosted feeds) to be used in your Ad Campaign.</li>
+</ol>
+<h4 id="upload-your-feed-to-facebook">Upload your feed to Facebook<a class="headerlink" href="#upload-your-feed-to-facebook" title="Permanent link">&para;</a></h4>
+<p>To set up a Facebook Product Catalogue campaign, you will need to first create your campaign and use a Branch link as the Deep Link URL for the advertisements. Facebook Dynamic Ads information is available <strong><a href="https://www.facebook.com/business/help/455326144628161" target="_blank">here</a></strong>.</p>
+<ol>
+<li>Navigate to your <a href="https://www.facebook.com/ads/manager/" target="_blank">Facebook Ads Manager</a>.</li>
+<li>In the top left hand corner, click into the menu, select <strong>All tools</strong>, and select <strong>Product Catalogues</strong>.
+<img alt="Facebook Product Catalogues" src="../../../img/pages/deep-linked-ads/facebook-dynamic-ads/fb-product-catalogs.png" /></li>
+<li>From the drop down menu click "Create new catalog...", name it (remember this name, you'll need it later) and select "Products sold online".
+<img src="/img/pages/deep-linked-ads/facebook-dynamic-ads/create-new-catalog.png" alt="Facebook Create New Product Catalogue" class="half center"></li>
+<li>Now that you have a product catalog, you can add a new feed. Click "Add Product Feed."
+<img alt="Add New Feed" src="../../../img/pages/deep-linked-ads/facebook-dynamic-ads/add-new-feed.png" /></li>
+<li>If you have a <a href="../../../features/deep-linked-feeds/guide/#schedule-refresh" target="_blank">Hosted Deep Linked Feed</a> (recommended), select the option "Scheduled recurring uploads." Paste your Branch-provided URL into the <strong>Feed URL</strong> text field.
+<img alt="Feed URL option" src="../../../img/pages/deep-linked-ads/facebook-dynamic-ads/new-feed-settings.png" />
+<img alt="Feed URL settings" src="../../../img/pages/deep-linked-ads/facebook-dynamic-ads/upload-feed-url.png" /></li>
+<li>If you've created a Deep Linked Feed CSV file to upload, select the option "Single upload: Upload a single file feed now." Select the Deep Linked Feed URL or CSV file you would like to upload to Facebook, and click "Upload".
+<img alt="Feed Uploaded" src="../../../img/pages/deep-linked-ads/facebook-dynamic-ads/successful-feed-upload.png" /></li>
+<li>Wait for the upload to complete successfully. If you'd like to create a "Product set" (a subset of products in your catalog for use in specific ad sets) you can do that now.</li>
+</ol>
+<h4 id="setting-up-app-events-and-the-facebook-pixel">Setting up App Events and the Facebook Pixel<a class="headerlink" href="#setting-up-app-events-and-the-facebook-pixel" title="Permanent link">&para;</a></h4>
+<p>Facebook requires you to report events about your users interacting with your content, for example: viewing, adding to cart, and purchasing. To add the Facebook Pixel to your website, and the Facebook SDK to your app, follow these instructions:</p>
+<ul>
+<li><a href="https://developers.facebook.com/docs/app-events" target="_blank">Sending App Events with the Facebook SDK</a></li>
+<li><a href="https://developers.facebook.com/docs/marketing-api/facebook-pixel/v2.8" target="_blank">Sending Web Events with the Facebook Pixel</a></li>
+</ul>
+<p>Use the "Product events" tab in your Product Catalog view to ensure that Facebook is registering the events against your Product Catalog items correctly.</p>
+<h4 id="creating-a-dynamic-ad-campaign">Creating a Dynamic Ad Campaign<a class="headerlink" href="#creating-a-dynamic-ad-campaign" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Navigate to <a href="https://www.facebook.com/ads/create" target="_blank"><a href="https://www.facebook.com/ads/create">https://www.facebook.com/ads/create</a></a> while logged in to the account that owns your Facebook app.</li>
+<li>Choose <strong>Product Catalog Sales</strong>. Select the Product Catalog to which you uploaded your Deep Linked Feed.
+<img alt="Feed Uploaded" src="../../../img/pages/deep-linked-ads/facebook-dynamic-ads/campaign-selection.png" /></li>
+<li>Select the targeting, bid, budget and placements that you'd like.</li>
+<li>Select your desired ad format and launch your campaign. The Branch deep linked feed will be automatically set up in your Facebook product catalogue ads.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Driving Installs with Dynamic Ads</p>
+<p>By default, Facebook sends customers without the app to your mobile website. To drive installs, you can send customers without your app the app store by adding a <code>web_should_fallback</code> column to your Feed Source and setting each row to <code>false</code>. Then, after you've created your campaign, edit the ad within your ad set. Under "Creative," set your "App link destination" to "Deep link, app store backup."</p>
+</div>
+<h3 id="view-your-data">View Your Data<a class="headerlink" href="#view-your-data" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p>Facebook prevents Branch from measuring the number of clicks on their ads for install campaigns, so Branch's <strong>Clicks</strong> numbers for Facebook Ads are inaccurate when users are being directed to the App Store to download your app.</p>
+</div>
+<p>The <a href="https://dashboard.branch.io/ads/analytics" target="_blank">Ads Analytics Page</a> on the Branch dashboard provides an interactive time series graph and table to view the performance of your Ad campaigns.</p>
+<p><img alt="Example Ads Analytics Graph" src="../../../img/ingredients/deep-linked-ads/view-ad-link-data/analytics-graph.png" /></p>
+<p>The table shows summary data on the performance of each Ad campaign. On the right top side of the table you can find a <strong>download button</strong> to retrieve the chart's content as a CSV file.</p>
+<p><img alt="Example Ads Table" src="../../../img/ingredients/deep-linked-ads/view-ad-link-data/analytics-table.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Interacting with your data</p>
+<p>Breakdown and compare aspects of your Ad campaigns' performance by using the <code>Compare by +</code> button to add a parameter to split the data displayed data by.</p>
+<p>Then use the <code>and +</code> button to refine the data displayed to gain deeper insight into the performance of your Ad campaigns.</p>
+</div>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h4 id="debugging-common-count-discrepancies">Debugging Common Count Discrepancies<a class="headerlink" href="#debugging-common-count-discrepancies" title="Permanent link">&para;</a></h4>
+<p>While we should always expect around a 5% discrepancy due to time zone differences and the like, if you are seeing significant discrepancies, it could be an indication of a broader problem.</p>
+<p><strong>Fewer Clicks Recorded in Branch</strong></p>
+<p>The number of clicks on a link used inside of a Branch enabled Facebook Ad will be lower in Branch's dashboard than Facebook's. This is because Facebook routes users straight to the App/Play Store without letting Branch know that a link was clicked. If the user decides not to install the app/drops off at the App/Play Store, then Facebook will have recorded one more click than Branch. Branch does not increment the link's click count until the user enters into the app. This is why you'll see more clicks in Facebook's dashboard.</p>
+<p><strong>Issue with iOS 10 and Limit Ad Tracking</strong></p>
+<p>In iOS 10, Apple broke the ability for app developers to collect the <code>IDFA</code> if the user had enabled <code>Limit Ad Tracking</code>. In this case, Branch and Facebook cannot compare notes to see who drove the install. This will account for about 15% discrepancy in counts across both platforms, where Branch's tracked installs will be lower.</p>
+<p><strong>Not Collecting Advertising ID</strong></p>
+<p>If you see absolutely 0 data coming through from your integration, it's possible that you're not collecting Google Advertising ID (GAID) on Android or IDFA on iOS.</p>
+<ul>
+<li>iOS: Add the AdSupport.framework and read this extra info about <a href="https://dev.branch.io/getting-started/sdk-integration-guide/guide/ios/#submitting-to-the-app-store TODO">submitting</a> to the store.</li>
+<li>Android: Add Google Play Services so that we can collect GAID. See <a href="https://dev.branch.io/getting-started/sdk-integration-guide/advanced/android/#use-google-advertising-id TODO">here</a>.</li>
+</ul>
+<p><strong>Intercepting Deep Links Before Branch</strong></p>
+<p>We recently discovered a discrepancy where an app was calling Facebook's SDK to fetch the deferred app link within their iOS and Android app. Branch calls uses this same mechanism via a direct API integration, but if Facebook's SDK retrieves it before we do, Branch will not see any deep link data. Please ensure to comment out any calls to the following API within your app:</p>
+<ul>
+<li><a href="https://developers.facebook.com/docs/reference/android/current/class/AppLinkData/">Android: fetchDeferredAppLink</a></li>
+<li><a href="https://developers.facebook.com/docs/reference/ios/current/class/FBSDKAppLinkUtility/">iOS: fetchDeferredAppLink</a></li>
+</ul>
+<p><strong>Installs Counted as Opens on Branch</strong></p>
+<p>One discrepancy root cause we've seen before is the scenario where Branch will classify an install as an 'open'. We remember the history of a particular user via their IDFA (in addition to using a few other methods) and will detect whether the user is actually a new user or a returning user who had previously uninstalled your app. Facebook doesn't do this.</p>
+<p>We've seen Facebook classify 're-installs' as fresh installs, where Branch will correctly classify them as 're-opens'. If you're comparing the raw install numbers on Branch, and ignoring the 're-opens', it's possible you'll see a discrepancy. To check sum up the 'installs' and 'reopens' for the given link and compare it to Facebook's total installs.</p>
+<p><img alt="Installs and Opens" src="../../../img/ingredients/deep-linked-ads/fb-ads-support/installs_plus_opens.png" /></p>
+<p>If it's close, you know that this is the root cause.</p>
+<p><strong>Don't Use setDebug</strong></p>
+<p>Facebook ads are incompatible with <a href="../{{base.url}}/getting-started/integration-testing/guide/ios/#use-debug-mode-to-simulate-fresh-installs TODO">debug mode</a>, as this prevents us from sending the correct hardware ID to Facebook.</p>
+<p><strong>Conflicts with Facebook SDK (iOS)</strong></p>
+<p>If your app integrates the FBSDK, be certain you are <em>not</em> using the <a href="https://developers.facebook.com/docs/reference/ios/current/class/FBSDKAppLinkUtility/ TODO"><code>FBSDKAppLinkUtility</code> method</a>. This has been known to cause conflicts with Branch when handling incoming deep links.</p>
+<h4 id="testing-deep-linked-ads">Testing Deep Linked Ads<a class="headerlink" href="#testing-deep-linked-ads" title="Permanent link">&para;</a></h4>
+<p>Unfortunately, the demo/preview ads used during the ads creation flow on Facebook use a different mechanism than live Facebook ads. <strong>This prevents you from testing deep linking from your Facebook ads</strong>. Do not waste time trying to get this to work. We've confirmed with Facebook representatives that this is broken.</p>
+<p>The only way to test the deep linking functionality is outside of the actual ads system is a helper tool from Facebook. Follow these instructions to test the deep linking functionality:</p>
+<ol>
+<li>Head to the <a href="https://developers.facebook.com/tools/app-ads-helper/" target="_blank">Ads tester tool</a></li>
+<li>Choose the app that you're advertising with</li>
+<li>Scroll down to the button that says 'Test Deep Link'</li>
+<li>Paste in the Branch link</li>
+<li>Check 'Send Deferred'</li>
+<li>Click 'Send to iOS/Android'</li>
+<li>Install the app and it should deep link!</li>
+</ol>
+<div class="admonition note">
+<p>If you see that someone liked your ad, do not bother trying to click and test it. Clicking your own ad that shows up in notifications <strong>will not deep link</strong>.</p>
+</div>
+<h4 id="issues-reading-facebook-app-links">Issues Reading Facebook App Links<a class="headerlink" href="#issues-reading-facebook-app-links" title="Permanent link">&para;</a></h4>
+<p>If Facebook is having trouble reading the App Links from the Branch link, you might see messages like these while trying to test out the flow. This means that there is something corrupted in the OG tags causing Facebook to not parse your link.</p>
+<p><img src="/img/ingredients/deep-linked-ads/fb-ads-support/invalid-app-links-error.png" alt="Invalid App Links" class="center three-quarters">
+<img src="/img/ingredients/deep-linked-ads/fb-ads-support/missing_applinks.png" alt="Troubleshooting" class="center half"></p>
+<p><strong>Rescrape the OG Tags</strong></p>
+<p>You can test the OG tags using the <a href="https://developers.facebook.com/tools/debug/og/object">OG tag tester tool</a> provided by Facebook:</p>
+<ol>
+<li>Paste the Branch Link into the Input URL box.</li>
+<li>Click on the Show existing scrape information button.</li>
+<li>Examine errors regarding App Links from the output window.</li>
+<li>Click on the Fetch New Scrape Information button. This last step typically resolves this problem if you are certain that your Branch Link Settings are correct.</li>
+</ol>
+<div class="admonition tip">
+<p>You can further automate the rescraping process by using this command after you create a new link and before you use it for any ads:</p>
+<div class="codehilite"><pre><span></span>curl --insecure <span class="s2">&quot;https://graph.facebook.com/?id=[YOUR-URL-TO-SCRAPE]&amp;scrape=true&quot;</span>
+</pre></div>
+
+</div>
+<p><strong>If the OG tag tester continues to report problems</strong></p>
+<ol>
+<li>Examine your <a href="https://dashboard.branch.io/#/settings/link" target="_blank">Link Settings</a> and ensure that for all platforms (for which an app is available), that a URI scheme and a link to the app in the Play/App Store is configured. If you are using a Custom URL for your iOS Redirect, then you need to append <code>?id[10-digit App Store ID]</code> to the URL. This is necessary in order to fully generate the App Links and OG tags that the Facebook scraper expects to find.<ul>
+<li>For example, if your App Store URL is <code>https://itunes.apple.com/us/app/my-app-name/id1234567890</code>, then your Custom URL value should be <code>https://example.com?id1234567890</code></li>
+</ul>
+</li>
+<li>If errors from the output window pertain to OG tags i.e. missing title, description etc. then examine link OG tags by appending <code>?debug=true</code> as described on the <a href="../{{base.url}}/getting-started/integration-testing/guide/#debugging-an-individual-link">Integration Testing page</a>.</li>
+<li>If you haven't set OG tags on a per link level, then please check your Dashboard's global Social Media Display Customization settings from the <a href="https://dashboard.branch.io/#/settings/link" target="_blank">Link Settings</a> page.</li>
+</ol>
+<p><strong>Use a direct deep link</strong></p>
+<p>As a last resort, you can manually input a direct deep link. To retrieve this:</p>
+<ol>
+<li>Go to Facebook's <a href="https://developers.facebook.com/tools/debug/og/object/">Open Graph Object Debugger</a></li>
+<li>Input the Branch link you want to use for your ad</li>
+<li>Click <strong>Fetch new scrape information</strong></li>
+<li>Find the <code>al:ios:url</code> line (it should look like <code>&lt;meta property="al:ios:url" content="myapp://open?link_click_id=link-242052337263342024" /&gt;</code>)</li>
+<li>Copy the value of this (<code>myapp://open?link_click_id=link-242052337263342024</code>) and input it as the Deep Link value of your ad</li>
+</ol>
+<p>If none of these approaches work, please reach out to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#116;&#101;&#103;&#114;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;">&#105;&#110;&#116;&#101;&#103;&#114;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;</a> immediately.</p>
+<h4 id="known-issue-with-app-restrictions">Known Issue with App Restrictions<a class="headerlink" href="#known-issue-with-app-restrictions" title="Permanent link">&para;</a></h4>
+<p>We recently discovered a bug within the Facebook system that prevents App Links from being read by the robot if you change any of these values from the defaults in your Advanced Facebook App Settings tab. Please make sure</p>
+<ul>
+<li>Contains Alcohol is set to <strong>No</strong></li>
+<li>Age Restriction is set to <strong>Anyone (13+)</strong></li>
+<li>Social Discovery is set to <strong>Yes</strong></li>
+<li>Country Restricted is set to <strong>No</strong></li>
+</ul>
+<p>It has to look like this <strong>exactly</strong>:
+<img alt="App Restrictions Troubleshooting" src="../../../img/ingredients/deep-linked-ads/fb-ads-support/app_restrictions.png" /></p>
+<p><strong>No IP Whitelists</strong></p>
+<p>Because Branch has a large distribution of API servers that will be making requests to Facebook on behalf of your app, you cannot have an IP whitelist in your <a href="https://developers.facebook.com/apps/390736167768543/settings/advanced/">Facebook advanced settings</a> and still have this integration work. Please remove any IPs from this setting if they are present.</p>
+<h4 id="common-issues-with-facebook-authentication">Common issues with Facebook Authentication<a class="headerlink" href="#common-issues-with-facebook-authentication" title="Permanent link">&para;</a></h4>
+<p>If you are having trouble authenticating with Facebook, please check the following:</p>
+<p><strong>Be sure you have the correct App ID and App Secret</strong></p>
+<p>Be sure you have the correct App ID and App Secret. This is the number one source of issues.</p>
+<p><strong>App Secret embedded?</strong></p>
+<p>If you have entered the correct App ID and Secret but are still getting issues, it may be related to how you are using your Secret. Visit the Settings &gt; Advanced page on Facebook and check that you don't have the toggle enabled for "Is your App Secret embedded?" You will only have this option if you have enabled "Native or desktop app?" on this page.</p>
+<p>So if you have enabled "Native or desktop app", then your advanced options should appear like the following:</p>
+<p><img alt="Client Secret" src="../../../img/ingredients/deep-linked-ads/fb-ads-support/facebook_secret.png" /></p>
+                
+                  
+                    <h2 id="__source">Source</h2>
+                    
+                    
+                      <a href="https://github.com/branchmetrics/docs/tree/master/src/pages/deep-linked-ads/facebook-dynamic-ads.md" title="facebook-dynamic-ads.md" class="md-source-file">
+                        facebook-dynamic-ads.md
+                      </a>
+                    
+                  
+                
+              
+              
+                
+                  <h2 id="__comments">Comments</h2>
+                  <div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = "https://branchmetrics.github.io/docs/pages/deep-linked-ads/facebook-dynamic-ads/";
+    this.page.identifier =
+      "/pages/deep-linked-ads/facebook-dynamic-ads/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "//branch-docs.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        <div class="modals">
+          <div id="modal-search" class="modal dialog">
+            <div class="modal-background"></div>
+            <div class="modal-content" id="algolia-search-container">
+              <i class="material-icons modal-close right">close</i>
+              <h2>Search</h2>
+              <input type="text" placeholder="search docs..." id="algolia-doc-search" autofocus>
+            </div>
+          </div>
+          <div id="modal-unhelpful" class="modal dialog">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <i class="material-icons modal-close right">close</i>
+              <h2>Unhelpful?</h2>
+              <p>How can we improve or assist you?</p>
+              <a href="#" class="improve-doc" title="Improve This Doc">Improve this doc</a>
+              <a href="#" class="contact-support" title="Contact support">Contact support</a>
+            </div>
+          </div>
+          <div id="modal-choose-app" class="modal dialog">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <i class="material-icons modal-close right">close</i>
+              <h2>Choose your app</h2>
+              <button type="button">iOS</button>
+              <button type="button">Android</button>
+              <button type="button">Cordova Ionic PhoneGap</button>
+              <button type="button">React Native</button>
+            </div>
+          </div>
+          <div id="modal-helpful" class="modal notification">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <i class="material-icons modal-close right">close</i>
+              <h2>Thank you</h2>
+            </div>
+          </div>
+          <div id="modal-image" class="modal dialog image">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <i class="material-icons modal-close right">close</i>
+              <h2>Image</h2>
+              <a id="modal-image-link" href="#">
+                <img id="modal-image-img">
+              </a>
+            </div>
+          </div>
+          <div id="modal-code" class="modal dialog code">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <i class="material-icons modal-close right">close</i>
+              <h2>Select your language</h2>
+              <div class="flex">
+                <a id="modal-code-ios" href="#">iOS</a>
+                <a id="modal-code-android" href="#">Android</a>
+              </div>
+              <div class="flex">
+                <a id="modal-code-adobe" href="#">Adobe AIR</a>
+                <a id="modal-code-cordova" href="#">Cordova PhoneGap Ionic</a>
+              </div>
+              <div class="flex">
+                <a id="modal-code-mparticle-android" href="#">mParticle Android</a>
+                <a id="modal-code-mparticle-ios" href="#">mParticle iOS</a>
+              </div>
+              <div class="flex">
+                <a id="modal-code-titanium" href="#">Titanium</a>
+                <a id="modal-code-react" href="#">React Native</a>
+              </div>
+              <div class="flex">
+                <a id="modal-code-unity" href="#">Unity</a>
+                <a id="modal-code-xamarin" href="#">Xamarin</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 <a href="https://branch.io">Branch</a>
+          </div>
+        
+        All rights reserved
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://branch.io" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/BranchMetrics/Documentation" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/branchmetrics" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.facebook.com/branchmetrics" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://www.linkedin.com/company-beta/3813083" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application-68a35578af.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../../.."}})</script>
+      
+        <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>docsearch({apiKey:"887017d17a2c1e9490ad2c44caa7e817",indexName:"branchmetrics",inputSelector:"#algolia-doc-search",debug:"True",algoliaOptions:{hitsPerPage:"15"}})</script>
+      
+      
+        <script src="../../../js/main.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

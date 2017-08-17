@@ -80,13 +80,11 @@
     
 
     
-        
     <url>
      <loc>https://branchmetrics.github.io/docs/pages/web/setup/</loc>
      <lastmod>2017-08-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     
 
     
@@ -266,19 +264,31 @@
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/facebook-app-installs/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/facebook-ads-overview/</loc>
      <lastmod>2017-08-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/facebook-app-engagement/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/facebook-app-install-ads/</loc>
      <lastmod>2017-08-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/facebook-instagram/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/facebook-traffic-conversion-ads/</loc>
+     <lastmod>2017-08-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/facebook-platform-ads/</loc>
+     <lastmod>2017-08-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/facebook-dynamic-ads/</loc>
      <lastmod>2017-08-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
