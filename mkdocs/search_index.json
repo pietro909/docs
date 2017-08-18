@@ -5534,6 +5534,51 @@
             "location": "/pages/integrations/tune/#issues-with-facebook-data-discrepancies", 
             "text": "If you are finding data discrepancies between Branch, Tune and Facebook - please ensure you have followed the Facebook Ads setup and troubleshooting steps  here .  If you're using the Tune integration and Branch links in Facebook ads, Branch must initialize and complete before the Tune SDK. When this happens, Branch will be able fetch the necessary attribution parameters and pass them to Tune via the integration.", 
             "title": "Issues with Facebook data discrepancies."
+        }, 
+        {
+            "location": "/pages/resources/validation-tools/", 
+            "text": "AASA Validator\n\n\nIn case you need to validate your domain, use the \nAASA Validator\n to check universal linking is set up properly.\n\n\nApp Indexing Validator\n\n\nCheck your app to see if it can properly index and surface content for Firebase through our \nApp Indexing Validator\n.", 
+            "title": "Validation Tools"
+        }, 
+        {
+            "location": "/pages/resources/validation-tools/#aasa-validator", 
+            "text": "In case you need to validate your domain, use the  AASA Validator  to check universal linking is set up properly.", 
+            "title": "AASA Validator"
+        }, 
+        {
+            "location": "/pages/resources/validation-tools/#app-indexing-validator", 
+            "text": "Check your app to see if it can properly index and surface content for Firebase through our  App Indexing Validator .", 
+            "title": "App Indexing Validator"
+        }, 
+        {
+            "location": "/pages/resources/case-studies/", 
+            "text": "Case Studies\n\n\nIf you need inspiration on what to build next, take a look at our \ncase studies\n.\n\n\nDatasheets\n\n\nUse datasheets to understand how we work with 3rd party partners, and send data out of \nBranch\n.\n\n\nInfographics\n\n\nUniversal Link Routing\n\n\nConfused at how Universal Linking works? Take a look at our \nInfographic\n.\n\n\nBranch API Overview\n\n\nWe have a simplified graphic that showcases what our \nAPI\n.", 
+            "title": "Case Studies and Infographics"
+        }, 
+        {
+            "location": "/pages/resources/case-studies/#case-studies", 
+            "text": "If you need inspiration on what to build next, take a look at our  case studies .", 
+            "title": "Case Studies"
+        }, 
+        {
+            "location": "/pages/resources/case-studies/#datasheets", 
+            "text": "Use datasheets to understand how we work with 3rd party partners, and send data out of  Branch .", 
+            "title": "Datasheets"
+        }, 
+        {
+            "location": "/pages/resources/case-studies/#infographics", 
+            "text": "", 
+            "title": "Infographics"
+        }, 
+        {
+            "location": "/pages/resources/case-studies/#universal-link-routing", 
+            "text": "Confused at how Universal Linking works? Take a look at our  Infographic .", 
+            "title": "Universal Link Routing"
+        }, 
+        {
+            "location": "/pages/resources/case-studies/#branch-api-overview", 
+            "text": "We have a simplified graphic that showcases what our  API .", 
+            "title": "Branch API Overview"
         }
     ]
 }
