@@ -22,7 +22,7 @@
     
     
       
-        <title>Webhooks - Branch documentation</title>
+        <title>Real time Webhooks - Branch documentation</title>
       
     
     
@@ -106,7 +106,7 @@
                   </span>
                 
               
-              Webhooks
+              Real time Webhooks
             
           </span>
         </div>
@@ -1071,20 +1071,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../csv/" title="CSV Export" class="md-nav__link">
-      CSV Export
-    </a>
-  </li>
-
-          
-        
-          
-            
-            
-            
-
-
-  <li class="md-nav__item">
     <a href="../api/" title="Export API" class="md-nav__link">
       Export API
     </a>
@@ -1106,11 +1092,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Webhooks
+        Real time Webhooks
       </label>
     
-    <a href="./" title="Webhooks" class="md-nav__link md-nav__link--active">
-      Webhooks
+    <a href="./" title="Real time Webhooks" class="md-nav__link md-nav__link--active">
+      Real time Webhooks
     </a>
     
       
@@ -1192,8 +1178,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#filtering-which-webhooks-are-sent" title="Filtering which webhooks are sent" class="md-nav__link">
-    Filtering which webhooks are sent
+  <a href="#filter-webhooks" title="Filter Webhooks" class="md-nav__link">
+    Filter Webhooks
   </a>
   
 </li>
@@ -1632,8 +1618,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#filtering-which-webhooks-are-sent" title="Filtering which webhooks are sent" class="md-nav__link">
-    Filtering which webhooks are sent
+  <a href="#filter-webhooks" title="Filter Webhooks" class="md-nav__link">
+    Filter Webhooks
   </a>
   
 </li>
@@ -1734,7 +1720,7 @@
                   <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/exports/webhooks.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Webhooks</h1>
+                  <h1>Real time Webhooks</h1>
                 
                 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>Branch’s webhook system allows you to receive install and down funnel event data from us as it occurs, for install attribution or conversion funnels in your own database. You simply need to specify a URL for us to send all this data to.</p>
@@ -1922,7 +1908,7 @@
 <span class="p">}</span>
 </pre></div>
 
-<h3 id="filtering-which-webhooks-are-sent">Filtering which webhooks are sent<a class="headerlink" href="#filtering-which-webhooks-are-sent" title="Permanent link">&para;</a></h3>
+<h3 id="filter-webhooks">Filter Webhooks<a class="headerlink" href="#filter-webhooks" title="Permanent link">&para;</a></h3>
 <p>Filters allow you to specify when a webhook gets sent to your URL based off criteria matches. You can configure your filters to use any webhook keyword value by using liquid tags following this convention: <code>{{ param.name }}</code>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Wildcard Filtering</p>
@@ -1985,7 +1971,7 @@
 <p>When a Branch link is opened, triggering a <strong>click</strong> event, you may access:</p>
 <ul>
 <li>Properties of the visitor who opened the link.</li>
-<li>Properties of the link that was opened. </li>
+<li>Properties of the link that was opened.</li>
 </ul>
 <table>
 <thead>
@@ -2331,7 +2317,7 @@
 <li>52.9.188.221/32</li>
 <li>52.9.188.236/32</li>
 </ul>
-<p>You can also <a href="https://dev.branch.io/cross-channel-analytics/user-value-attribution/">create events through the Branch SDK</a>, and specify a secret key inside the event metadata to pass into the URL of the webhook itself.</p>
+<p>You can also create events through the Branch SDK, and specify a secret key inside the event metadata to pass into the URL of the webhook itself.</p>
 <h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
 <h3 id="faqs">FAQs<a class="headerlink" href="#faqs" title="Permanent link">&para;</a></h3>
 <h5 id="why-is-my-app-not-sending-a-device-id">Why is my app not sending a device ID?<a class="headerlink" href="#why-is-my-app-not-sending-a-device-id" title="Permanent link">&para;</a></h5>

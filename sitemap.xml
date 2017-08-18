@@ -344,12 +344,6 @@
     
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/exports/csv/</loc>
-     <lastmod>2017-08-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>https://branchmetrics.github.io/docs/pages/exports/api/</loc>
      <lastmod>2017-08-18</lastmod>
      <changefreq>daily</changefreq>
