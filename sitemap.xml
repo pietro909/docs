@@ -142,12 +142,6 @@
     
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/apple/</loc>
-     <lastmod>2017-08-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/dynamic-product-feeds/</loc>
      <lastmod>2017-08-18</lastmod>
      <changefreq>daily</changefreq>
@@ -155,6 +149,12 @@
         
     <url>
      <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/branch-universal-ads/</loc>
+     <lastmod>2017-08-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/deep-linked-ads/apple/</loc>
      <lastmod>2017-08-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
