@@ -322,7 +322,7 @@ a.algolia-docsearch-footer--logo {
 /* BRANCH STYLING */
 /* ////////////////////////////// */
 /* primary */
-.md-header, .modal-content a {
+.md-header, .modal-content > a {
   background-color: #004875 !important;
 }
 @media only screen and (max-width: 76.1875em) {
