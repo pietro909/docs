@@ -1709,7 +1709,7 @@
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <ul>
-<li>This guide requires you to have already <a href="../{{base.url}}/getting-started/sdk-integration-guide">integrated the Branch SDK</a>.</li>
+<li>This guide requires you to have integrated the Branch SDK in your mobile apps.</li>
 <li>You also need to be an Amplitude customer and have the <a href="https://amplitude.zendesk.com/hc/en-us/articles/205406607-SDKs">Amplitude SDK installed</a> in your app.</li>
 </ul>
 <h3 id="retrieve-your-amplitude-api-key">Retrieve your Amplitude API Key<a class="headerlink" href="#retrieve-your-amplitude-api-key" title="Permanent link">&para;</a></h3>
@@ -1731,11 +1731,11 @@
 </ol>
 <p><img alt="image" src="../../../img/pages/integrations/amplitude/amplitude-marketplace.png" /></p>
 <h3 id="capture-idfagaid">Capture IDFA/GAID<a class="headerlink" href="#capture-idfagaid" title="Permanent link">&para;</a></h3>
-<p>Ensure that you are capturing both the <a href="../{{base.url}}/getting-started/sdk-integration-guide/advanced/android/#use-google-advertising-id">Google Advertising Identifier (GAID) on Android</a>, and the <a href="../{{base.url}}/getting-started/sdk-integration-guide/advanced/ios/#install-the-sdk-manually">IDFA on iOS</a> (by importing the <code>AdSupport.framework</code>).</p>
+<p>Ensure that you are capturing both the Google Advertising Identifier (GAID) on Android, and the IDFA on iOS.</p>
 <div class="admonition warning">
 <p class="admonition-title">Google Advertising ID is required</p>
+<p>Amplitude requires the Google Advertising ID to be sent. Android ID (the hardware ID) alone is not enough.</p>
 </div>
-<p>Amplitude now requires the Google Advertising ID to be sent. Android ID (the hardware ID) alone is not enough.</p>
 <h3 id="upgrade-to-the-latest-sdks-if-necessary">Upgrade to the latest SDKs [if necessary]<a class="headerlink" href="#upgrade-to-the-latest-sdks-if-necessary" title="Permanent link">&para;</a></h3>
 <p>Please ensure you're using the Branch iOS SDK 0.12.2 or greater, and Android SDK v1.12.1 or greater. If you implemented Branch after May 28th 2016, you are likely already on this version or later.</p>
 <h2 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h2>
