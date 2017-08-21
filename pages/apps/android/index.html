@@ -1996,9 +1996,10 @@
 <h4 id="configure-branch">Configure Branch<a class="headerlink" href="#configure-branch" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Complete your <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></p>
-<p><img alt="image" src="http://i.imgur.com/r057ie0.png" />
-<img alt="image" src="http://i.imgur.com/SdcICpL.png" /></p>
+<p>Complete the <code>Basic integration</code> within <a href="../../../pages/dashboard/setup/">Setup your dashboard</a></p>
+</li>
+<li>
+<p>Make sure <code>Always try to open app</code> and <code>I have an Android App</code> are both enabled</p>
 </li>
 </ul>
 </li>
@@ -2013,7 +2014,7 @@
     <span class="n">compileSdkVersion</span> <span class="mi">25</span>
     <span class="n">buildToolsVersion</span> <span class="s">&quot;25.0.2&quot;</span>
     <span class="n">defaultConfig</span> <span class="o">{</span>
-        <span class="n">applicationId</span> <span class="s">&quot;com.eneff.branchandroid&quot;</span>
+        <span class="n">applicationId</span> <span class="s">&quot;com.eneff.branch.example.android&quot;</span>
         <span class="n">minSdkVersion</span> <span class="mi">15</span>
         <span class="n">targetSdkVersion</span> <span class="mi">25</span>
         <span class="n">versionCode</span> <span class="mi">1</span>
@@ -2058,13 +2059,13 @@
 <p>Add Branch to your <code>AndroidManifest.xml</code></p>
 <div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="nt">&lt;manifest</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
-    <span class="na">package=</span><span class="s">&quot;com.eneff.branchandroid&quot;</span><span class="nt">&gt;</span>
+    <span class="na">package=</span><span class="s">&quot;com.eneff.branch.example.android&quot;</span><span class="nt">&gt;</span>
 
     <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&quot;android.permission.INTERNET&quot;</span> <span class="nt">/&gt;</span>
 
     <span class="nt">&lt;application</span>
         <span class="na">android:allowBackup=</span><span class="s">&quot;true&quot;</span>
-<span class="hll">        <span class="na">android:name=</span><span class="s">&quot;com.eneff.branchandroid.CustomApplicationClass&quot;</span>
+<span class="hll">        <span class="na">android:name=</span><span class="s">&quot;com.eneff.branch.example.android.CustomApplicationClass&quot;</span>
 </span>        <span class="na">android:icon=</span><span class="s">&quot;@mipmap/ic_launcher&quot;</span>
         <span class="na">android:label=</span><span class="s">&quot;@string/app_name&quot;</span>
         <span class="na">android:supportsRtl=</span><span class="s">&quot;true&quot;</span>
@@ -2083,7 +2084,7 @@
 
 <span class="hll">            <span class="c">&lt;!-- Branch URI Scheme --&gt;</span>
 </span><span class="hll">            <span class="nt">&lt;intent-filter&gt;</span>
-</span><span class="hll">                <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;branchandroid&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;androidexample&quot;</span> <span class="nt">/&gt;</span>
 </span><span class="hll">                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span> <span class="nt">/&gt;</span>
 </span><span class="hll">                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
 </span><span class="hll">                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span> <span class="nt">/&gt;</span>
@@ -2094,14 +2095,14 @@
 </span><span class="hll">                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span> <span class="nt">/&gt;</span>
 </span><span class="hll">                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
 </span><span class="hll">                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span> <span class="nt">/&gt;</span>
-</span><span class="hll">                <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;uobg.app.link&quot;</span> <span class="nt">/&gt;</span>
-</span><span class="hll">                <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;uobg-alternate.app.link&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;example.app.link&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;example-alternate.app.link&quot;</span> <span class="nt">/&gt;</span>
 </span>            <span class="nt">&lt;/intent-filter&gt;</span>
         <span class="nt">&lt;/activity&gt;</span>
 
 <span class="hll">        <span class="c">&lt;!-- Branch init --&gt;</span>
-</span><span class="hll">        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.BranchKey&quot;</span> <span class="na">android:value=</span><span class="s">&quot;key_live_gdzsepIaUf7wG3dEWb3aBkmcutm0PwJa&quot;</span> <span class="nt">/&gt;</span>
-</span><span class="hll">        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.BranchKey.test&quot;</span> <span class="na">android:value=</span><span class="s">&quot;key_test_edwDakKcMeWzJ3hC3aZs9kniyuaWGCTa&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.BranchKey&quot;</span> <span class="na">android:value=</span><span class="s">&quot;key_live_kaFuWw8WvY7yn1d9yYiP8gokwqjV0Sw&quot;</span> <span class="nt">/&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.BranchKey.test&quot;</span> <span class="na">android:value=</span><span class="s">&quot;key_test_hlxrWC5Zx16DkYmWu4AHiimdqugRYMr&quot;</span> <span class="nt">/&gt;</span>
 </span><span class="hll">        <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;io.branch.sdk.TestMode&quot;</span> <span class="na">android:value=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
 </span>
 <span class="hll">        <span class="c">&lt;!-- Branch install referrer tracking (optional) --&gt;</span>
@@ -2120,10 +2121,10 @@
 <li>
 <p>Replace the following with values from your <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></p>
 <ul>
-<li><code>branchandroid</code></li>
-<li><code>uobg.app.link</code></li>
-<li><code>key_live_gdzsepIaUf7wG3dEWb3aBkmcutm0PwJa</code></li>
-<li><code>key_test_edwDakKcMeWzJ3hC3aZs9kniyuaWGCTa</code></li>
+<li><code>androidexample</code></li>
+<li><code>example.app.link</code></li>
+<li><code>key_live_kaFuWw8WvY7yn1d9yYiP8gokwqjV0Sw</code></li>
+<li><code>key_test_hlxrWC5Zx16DkYmWu4AHiimdqugRYMr</code></li>
 </ul>
 </li>
 </ul>
@@ -2136,7 +2137,7 @@
 </li>
 <li>
 <p><em>Java</em></p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.eneff.branchandroid</span><span class="o">;</span>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.eneff.branch.example.android</span><span class="o">;</span>
 
 <span class="hll"><span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
 </span><span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
@@ -2189,7 +2190,7 @@
 </li>
 <li>
 <p><em>Kotlin</em></p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.eneff.branchandroid</span>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.eneff.branch.example.android</span>
 
 <span class="hll"><span class="kn">import</span> <span class="nn">android.content.Intent</span>
 </span><span class="kn">import</span> <span class="nn">android.os.Bundle</span>
@@ -2246,7 +2247,7 @@
 </li>
 <li>
 <p><em>Java</em></p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.eneff.branchandroid</span><span class="o">;</span>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.eneff.branch.example.android</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">android.app.Application</span><span class="o">;</span>
 <span class="hll"><span class="kn">import</span> <span class="nn">io.branch.referral.Branch</span><span class="o">;</span>
@@ -2268,7 +2269,7 @@
 </li>
 <li>
 <p><em>Kotlin</em></p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.eneff.branchandroid</span>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nn">com.eneff.branch.example.android</span>
 
 <span class="kn">import</span> <span class="nn">android.app.Application</span>
 <span class="hll"><span class="kn">import</span> <span class="nn">io.branch.referral.Branch</span>
@@ -3283,7 +3284,7 @@
 </li>
 <li>
 <p>Test</p>
-<div class="codehilite"><pre><span></span>adb shell am broadcast -a com.android.vending.INSTALL_REFERRER -n io.branch.branchandroiddemo/io.branch.referral.InstallListener --es <span class="s2">&quot;referrer&quot;</span> <span class="s2">&quot;link_click_id=123&quot;</span>
+<div class="codehilite"><pre><span></span>adb shell am broadcast -a com.android.vending.INSTALL_REFERRER -n io.branch.androidexampledemo/io.branch.referral.InstallListener --es <span class="s2">&quot;referrer&quot;</span> <span class="s2">&quot;link_click_id=123&quot;</span>
 </pre></div>
 
 </li>

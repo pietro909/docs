@@ -590,6 +590,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#associated-domain-details" title="Associated domain details" class="md-nav__link">
+    Associated domain details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#use-test-key" title="Use test key" class="md-nav__link">
     Use test key
   </a>
@@ -1954,6 +1961,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#associated-domain-details" title="Associated domain details" class="md-nav__link">
+    Associated domain details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#use-test-key" title="Use test key" class="md-nav__link">
     Use test key
   </a>
@@ -2023,7 +2037,12 @@
 <li>
 <h4 id="configure-branch">Configure Branch<a class="headerlink" href="#configure-branch" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Complete your <a href="../../../pages/dashboard/setup/">Setup your dashboard</a></li>
+<li>
+<p>Complete the <code>Basic integration</code> within <a href="../../../pages/dashboard/setup/">Setup your dashboard</a></p>
+</li>
+<li>
+<p>Make sure <code>I have an iOS app</code> is enabled</p>
+</li>
 </ul>
 </li>
 <li>
@@ -2038,8 +2057,9 @@
 <li>
 <h4 id="configure-associated-domains">Configure associated domains<a class="headerlink" href="#configure-associated-domains" title="Permanent link">&para;</a></h4>
 <ul>
+<li>Add <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a> values</li>
 <li>
-<p>Add <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a> values</p>
+<p>Additional <a href="#associated-domain-details">Associated domain details</a></p>
 <p><img alt="image" src="http://i.imgur.com/67t6hSY.png" /></p>
 </li>
 </ul>
@@ -2254,7 +2274,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 <p>Used for <a href="#create-deep-link">Create deep link</a> and <a href="#share-deep-link">Share deep link</a></p>
 </li>
 <li>
-<p>Uses <a href="../../../pages/links/setup/#configuring-deep-links">Configuring link data</a> and custom data</p>
+<p>Uses <a href="../../../pages/links/setup/#configure-deep-links">Configure link data</a> and custom data</p>
 </li>
 <li>
 <p><em>Swift 3</em></p>
@@ -2953,6 +2973,15 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 </pre></div>
 
 </li>
+</ul>
+</li>
+<li>
+<h4 id="associated-domain-details">Associated domain details<a class="headerlink" href="#associated-domain-details" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Used for <a href="#configure-associated-domains">Configure associated domains</a></li>
+<li><code>-alternate</code> is needed for Universal Linking with the <a href="../../../pages/web/setup/">Setup your website</a></li>
+<li><code>test-</code> is needed if you need <a href="#use-test-key">Use test key</a></li>
+<li>If you <a href="../../../pages/dashboard/setup/#change-link-domain">Change link domain</a>, you will need to include your `old link domain as well as your new link domain</li>
 </ul>
 </li>
 <li>
