@@ -681,9 +681,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshoot-deep-links" title="Troubleshoot deep links" class="md-nav__link">
-    Troubleshoot deep links
+  <a href="#troubleshoot-issues" title="Troubleshoot issues" class="md-nav__link">
+    Troubleshoot issues
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-links-do-not-open-app" title="Deep links do not open app" class="md-nav__link">
+    Deep links do not open app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-deep-link-data" title="View deep link data" class="md-nav__link">
+    View deep link data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1282,8 +1302,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../exports/webhooks/" title="Real time Webhooks" class="md-nav__link">
-      Real time Webhooks
+    <a href="../../exports/webhooks/" title="Webhooks" class="md-nav__link">
+      Webhooks
     </a>
   </li>
 
@@ -1729,9 +1749,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshoot-deep-links" title="Troubleshoot deep links" class="md-nav__link">
-    Troubleshoot deep links
+  <a href="#troubleshoot-issues" title="Troubleshoot issues" class="md-nav__link">
+    Troubleshoot issues
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-links-do-not-open-app" title="Deep links do not open app" class="md-nav__link">
+    Deep links do not open app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-deep-link-data" title="View deep link data" class="md-nav__link">
+    View deep link data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1792,9 +1832,9 @@
 <li>Redirect to website instead of app<ul>
 <li>When app is not installed <ul>
 <li>Add query string <code>https://s3z3.app.link?$ios_url=https://example.com</code></li>
-<li>Add link data <code>$ios_url = 'https://example.com'</code> (<a href="../../../pages/links/data/#redirections">docs</a>)</li>
-<li>Add link data <code>$fallback_url = 'https://example.com'</code> (<a href="../../../pages/links/data/#redirections">docs</a>)</li>
-<li>Add link data for a deep view <code>$ios_deepview = 'deepviewId'</code>  (<a href="../../../pages/links/dxata/#deepview">docs</a>)</li>
+<li>Add link data <code>$ios_url = 'https://example.com'</code> (<a href="../../../pages/links/setup/#redirections">docs</a>)</li>
+<li>Add link data <code>$fallback_url = 'https://example.com'</code> (<a href="../../../pages/links/setup/#redirections">docs</a>)</li>
+<li>Add link data for a deep view <code>$ios_deepview = 'deepviewId'</code>  (<a href="../../../pages/links/setup/#deepview">docs</a>)</li>
 <li>Enable a <code>Deep View</code> globally on the <a href="https://dashboard.branch.io/web/deepviews">Branch Dashboard</a></li>
 <li>Add <code>iOS/Android Custom URL</code> on the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
 <li>Add <code>Default URL</code> (<code>$fallback_url</code>) on the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
@@ -1803,16 +1843,16 @@
 </li>
 <li>When app is installed<ul>
 <li><em>iOS:</em> need to override <code>Universal Links</code><ul>
-<li>Add <code>$web_only = true</code> (<a href="../../../pages/links/data/#redirections">docs</a>)</li>
-<li>Add redirect <code>$ios_url = 'https://google.com'</code> (<a href="../../../pages/links/data/#redirections">docs</a>)</li>
+<li>Add <code>$web_only = true</code> (<a href="../../../pages/links/setup/#redirections">docs</a>)</li>
+<li>Add redirect <code>$ios_url = 'https://google.com'</code> (<a href="../../../pages/links/setup/#redirections">docs</a>)</li>
 <li><em>or:</em> Append <code>/e/</code> to the deep link</li>
 <li>e.g. <code>https://s3z3.app.link/fzmLEhobLD</code> -&gt; <code>https://s3z3.app.link/e/fzmLEhobLD</code></li>
 </ul>
 </li>
 <li><em>Android:</em> need to override <code>App Links</code><ul>
 <li>Uncheck <code>Enable App Links</code> and <code>Save</code> the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
-<li>Add redirect <code>$android_url = 'https://google.com'</code> (<a href="../../../pages/links/data/#redirections">docs</a>)</li>
-<li>Add a broken URI Scheme with <code>$android_deeplink_path = 'random'</code> (<a href="../../../pages/links/data/#deep-linking">docs</a>)</li>
+<li>Add redirect <code>$android_url = 'https://google.com'</code> (<a href="../../../pages/links/setup/#redirections">docs</a>)</li>
+<li>Add a broken URI Scheme with <code>$android_deeplink_path = 'random'</code> (<a href="../../../pages/links/setup/#deep-linking">docs</a>)</li>
 </ul>
 </li>
 </ul>
@@ -2093,24 +2133,49 @@
 </thead>
 <tbody>
 <tr>
+<td>~id</td>
+<td></td>
+<td>Automatically generated 18 digit ID number for the link that drove the install/open, if present (0 for dynamic and 3P links)</td>
+</tr>
+<tr>
+<td>~referring_link</td>
+<td></td>
+<td>The referring link that drove the install/open, if present</td>
+</tr>
+<tr>
+<td>~creation_source</td>
+<td></td>
+<td>Where the link was created ('API', 'Dashboard', 'SDK', 'iOS SDK', 'Android SDK', or 'Web SDK')</td>
+</tr>
+<tr>
 <td>+match_guaranteed</td>
-<td><code>false</code></td>
-<td>TODO</td>
+<td></td>
+<td>If the match was made with 100% accuracy</td>
+</tr>
+<tr>
+<td>+referrer</td>
+<td></td>
+<td>The referrer for the link click, if a link was clicked</td>
+</tr>
+<tr>
+<td>+phone_number</td>
+<td></td>
+<td>The phone number of the user, if the user texted himself/herself the app</td>
 </tr>
 <tr>
 <td>+is_first_session</td>
 <td><code>false</code></td>
-<td>TODO</td>
+<td><code>true</code> if first session (install), <code>false</code> if any other session (open)</td>
 </tr>
 <tr>
 <td>+clicked_branch_link</td>
 <td><code>false</code></td>
-<td>TODO</td>
+<td>Whether or not the user clicked a Branch link that triggered this session</td>
 </tr>
 <tr>
 <td>+non_branch_link</td>
-<td><code>false</code></td>
-<td>TODO</td>
+<td></td>
+<td>App was opened from a non Branch link (third party, invalid Branch deep link, or Branch key mismatch)</td>
 </tr>
 </tbody>
 </table>
@@ -2139,7 +2204,7 @@
 <tr>
 <td>feature</td>
 <td></td>
-<td>This is the feature of your app that the link might be associated with. For example, if you had built a referral program, you would label links with the feature ‘referral’</td>
+<td>This is the feature of your app that the link might be associated with. For example, if you had built a referral program, you would label links with the feature 'referral'</td>
 </tr>
 <tr>
 <td>campaign</td>
@@ -2154,7 +2219,7 @@
 <tr>
 <td>tags</td>
 <td></td>
-<td>This is a free form entry with unlimited values <code>['string']</code>. Use it to organize your link data with labels that don’t fit within the bounds of the above</td>
+<td>This is a free form entry with unlimited values <code>['string']</code>. Use it to organize your link data with labels that don't fit within the bounds of the above</td>
 </tr>
 <tr>
 <td>alias</td>
@@ -2188,11 +2253,6 @@
 <tr>
 <td>random</td>
 <td><code>123</code></td>
-<td>Any key-value pair</td>
-</tr>
-<tr>
-<td>hello</td>
-<td><code>'world'</code></td>
 <td>Any key-value pair</td>
 </tr>
 <tr>
@@ -2238,7 +2298,7 @@
 <tr>
 <td>$fallback_url</td>
 <td></td>
-<td>Change the redirect endpoint for all platforms - so you don’t have to enable it by platform. Note that Branch will forward all robots to this URL, which <strong>overrides any OG tags</strong> entered in the link.  System-wide Default URL (set in Link Settings)</td>
+<td>Change the redirect endpoint for all platforms - so you don't have to enable it by platform. Note that Branch will forward all robots to this URL, which <strong>overrides any OG tags</strong> entered in the link.  System-wide Default URL (set in Link Settings)</td>
 </tr>
 <tr>
 <td>$desktop_url</td>
@@ -2317,7 +2377,7 @@
 <tr>
 <td>$deeplink_path</td>
 <td><code>open?link_click_id=1234</code></td>
-<td>Set the deep link path for all platforms - so you don’t have to enable it by platform. When the Branch SDK receives a link with this parameter set, it will automatically load the custom URI path contained within</td>
+<td>Set the deep link path for all platforms - so you don't have to enable it by platform. When the Branch SDK receives a link with this parameter set, it will automatically load the custom URI path contained within</td>
 </tr>
 <tr>
 <td>$android_deeplink_path</td>
@@ -2391,7 +2451,7 @@
 <tr>
 <td>$keywords</td>
 <td></td>
-<td>Keywords for which this content should be discovered by. Just assign an array of strings with the keywords you’d like to use</td>
+<td>Keywords for which this content should be discovered by. Just assign an array of strings with the keywords you'd like to use</td>
 </tr>
 <tr>
 <td>$canonical_identifier</td>
@@ -2479,12 +2539,12 @@
 <tr>
 <td>$og_image_width</td>
 <td></td>
-<td>Set the image’s width in pixels for social media displays</td>
+<td>Set the image's width in pixels for social media displays</td>
 </tr>
 <tr>
 <td>$og_image_height</td>
 <td></td>
-<td>Set the image’s height in pixels for social media displays</td>
+<td>Set the image's height in pixels for social media displays</td>
 </tr>
 <tr>
 <td>$og_video</td>
@@ -2563,17 +2623,17 @@
 <tr>
 <td>$twitter_player</td>
 <td></td>
-<td>Set the video player’s URL. Defaults to the value of <code>$og_video</code>.</td>
+<td>Set the video player's URL. Defaults to the value of <code>$og_video</code>.</td>
 </tr>
 <tr>
 <td>$twitter_player_width</td>
 <td></td>
-<td>Set the player’s width in pixels</td>
+<td>Set the player's width in pixels</td>
 </tr>
 <tr>
 <td>$twitter_player_height</td>
 <td></td>
-<td>Set the player’s height in pixels</td>
+<td>Set the player's height in pixels</td>
 </tr>
 </tbody>
 </table>
@@ -2640,7 +2700,7 @@
 <tr>
 <td>contentIndexingMode</td>
 <td align="center"><code>"public"</code></td>
-<td>Can be set to either <code>"public"</code> or <code>"private"</code>. Public indicates that you’d like this content to be discovered by other apps.</td>
+<td>Can be set to either <code>"public"</code> or <code>"private"</code>. Public indicates that you'd like this content to be discovered by other apps.</td>
 <td align="center"><code>$publicly_indexable</code></td>
 </tr>
 <tr>
@@ -2652,10 +2712,48 @@
 </tbody>
 </table>
 </li>
+<li>
+<p>Best practices for the Branch Universal Object</p>
+<ul>
+<li>Do<ul>
+<li>Set the <code>canonicalIdentifier</code> to a unique, de-duped value across instances of the app</li>
+<li>Ensure that the <code>title</code>, <code>contentDescription</code> and <code>imageUrl</code> properly represent the object</li>
+<li>Initialize the Branch Universal Object and call userCompletedAction with the <code>BranchEvent.VIEW</code> on page load</li>
+<li>Call showShareSheet and createShortLink later in the life cycle, when the user takes an action that needs a link</li>
+<li>Call the additional object events (purchase, share completed, etc) when the corresponding user action is taken</li>
+</ul>
+</li>
+<li>Do not<ul>
+<li>Do not set the same <code>title</code>, <code>contentDescription</code> and <code>imageUrl</code> across all objects</li>
+<li>Do not wait to initialize the object and register views until the user goes to share</li>
+<li>Do not wait to initialize the object until you conveniently need a link</li>
+<li>Do not create many objects at once and register views in a <code>for</code> loop.</li>
 </ul>
 </li>
 </ul>
-<h2 id="troubleshoot-deep-links">Troubleshoot deep links<a class="headerlink" href="#troubleshoot-deep-links" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<h4 id="deep-links-do-not-open-app">Deep links do not open app<a class="headerlink" href="#deep-links-do-not-open-app" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Make sure you have completed <a href="../../../pages/dashboard/setup/">Setup your dashboard</a> and <a href="#dialog-code">Setup your app</a></li>
+<li>Make sure the <code>Branch key</code> in your app (<a href="#dialog-code">Setup your app</a>) matches the <code>Branch key</code> in your deep link (<a href="#view-deep-link-data">View deep link data</a>)</li>
+<li>Make sure you have not disabled deep linking (<a href="../../../pages/apps/ios/#re-enable-universal-linking">Re-enable universal linking</a>)</li>
+<li>Make sure you meet the requirements for <a href="#supported-platforms">Supported platforms</a></li>
+</ul>
+</li>
+<li>
+<h4 id="view-deep-link-data">View deep link data<a class="headerlink" href="#view-deep-link-data" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Add <code>?debug=1</code> to the end of your deep link</li>
+<li>For example: <a href="https://example.app.link/aQXXDHaxKF?debug=1">https://example.app.link/aQXXDHaxKF?debug=1</a></li>
+</ul>
+</li>
+</ul>
                 
                   
                 
@@ -2683,6 +2781,11 @@
           </div>
         </div>
       </main>
+      
+        
+          <div class="branch-warning">Beta Release</div>
+        
+      
       
         <div class="modals">
           <div id="modal-search" class="modal dialog">
@@ -2737,24 +2840,24 @@
               <i class="material-icons modal-close right">close</i>
               <h2>Select your language</h2>
               <div class="flex">
-                <a id="modal-code-ios" href="#">iOS</a>
-                <a id="modal-code-android" href="#">Android</a>
+                <button id="modal-code-ios">iOS</button>
+                <button id="modal-code-android">Android</button>
               </div>
               <div class="flex">
-                <a id="modal-code-adobe" href="#">Adobe AIR</a>
-                <a id="modal-code-cordova" href="#">Cordova PhoneGap Ionic</a>
+                <button id="modal-code-adobe">Adobe AIR</button>
+                <button id="modal-code-cordova">Cordova PhoneGap Ionic</button>
               </div>
               <div class="flex">
-                <a id="modal-code-mparticle-android" href="#">mParticle Android</a>
-                <a id="modal-code-mparticle-ios" href="#">mParticle iOS</a>
+                <button id="modal-code-mparticle-android">mParticle Android</button>
+                <button id="modal-code-mparticle-ios">mParticle iOS</button>
               </div>
               <div class="flex">
-                <a id="modal-code-titanium" href="#">Titanium</a>
-                <a id="modal-code-react" href="#">React Native</a>
+                <button id="modal-code-titanium">Titanium</button>
+                <button id="modal-code-react">React Native</button>
               </div>
               <div class="flex">
-                <a id="modal-code-unity" href="#">Unity</a>
-                <a id="modal-code-xamarin" href="#">Xamarin</a>
+                <button id="modal-code-unity">Unity</button>
+                <button id="modal-code-xamarin">Xamarin</button>
               </div>
             </div>
           </div>
@@ -2807,6 +2910,24 @@
         <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
         <script>docsearch({apiKey:"887017d17a2c1e9490ad2c44caa7e817",indexName:"branchmetrics",inputSelector:"#algolia-doc-search",debug:"True",algoliaOptions:{hitsPerPage:"15"}})</script>
       
+      
+        <script src="../../../js/router.js"></script>
+      
+        <script src="../../../js/events.js"></script>
+      
+        <script src="../../../js/modals.js"></script>
+      
+        <script src="../../../js/images.js"></script>
+      
+        <script src="../../../js/buttons.js"></script>
+      
+        <script src="../../../js/analytics.js"></script>
+      
+        <script src="../../../js/tabs.js"></script>
+      
+        <script src="../../../js/languages.js"></script>
+      
+        <script src="../../../js/utils.js"></script>
       
         <script src="../../../js/main.js"></script>
       
