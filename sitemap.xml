@@ -266,19 +266,37 @@
     
         
     <url>
+     <loc>https://branchmetrics.github.io/docs/pages/emails/appboy/</loc>
+     <lastmod>2017-08-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/emails/blueshift/</loc>
+     <lastmod>2017-08-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/emails/epsilon/</loc>
+     <lastmod>2017-08-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/emails/mailgun/</loc>
+     <lastmod>2017-08-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/emails/postup/</loc>
+     <lastmod>2017-08-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://branchmetrics.github.io/docs/pages/emails/responsys/</loc>
-     <lastmod>2017-08-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/emails/sfmc/</loc>
-     <lastmod>2017-08-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://branchmetrics.github.io/docs/pages/emails/sendgrid/</loc>
      <lastmod>2017-08-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -290,7 +308,19 @@
     </url>
         
     <url>
-     <loc>https://branchmetrics.github.io/docs/pages/emails/appboy/</loc>
+     <loc>https://branchmetrics.github.io/docs/pages/emails/salesforce/</loc>
+     <lastmod>2017-08-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/emails/sendgrid/</loc>
+     <lastmod>2017-08-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://branchmetrics.github.io/docs/pages/emails/zeta/</loc>
      <lastmod>2017-08-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
