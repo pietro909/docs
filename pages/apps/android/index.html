@@ -2845,20 +2845,114 @@
 <p>Validate with the <a href="https://dashboard.branch.io/liveview/commerce">Branch Dashboard</a></p>
 </li>
 <li>
+<p>Ensure to add <code>revenue</code> field to track purchase. All other fields are optional </p>
+</li>
+<li>
 <p><em>Java</em></p>
-<div class="codehilite"><pre><span></span><span class="nl">TODO:</span> <span class="n">all</span>
+<div class="codehilite"><pre><span></span><span class="c1">//Add details about each product associated with the purchase (optional)</span>
+<span class="n">Product</span> <span class="n">product1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Product</span><span class="o">();</span>
+<span class="n">product1</span><span class="o">.</span><span class="na">setSku</span><span class="o">(</span><span class="s">&quot;u123&quot;</span><span class="o">);</span>
+<span class="n">product1</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">&quot;cactus&quot;</span><span class="o">);</span>
+<span class="n">product1</span><span class="o">.</span><span class="na">setPrice</span><span class="o">(</span><span class="mf">45.00</span><span class="o">);</span>
+<span class="n">product1</span><span class="o">.</span><span class="na">setQuantity</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+<span class="n">product1</span><span class="o">.</span><span class="na">setBrand</span><span class="o">(</span><span class="s">&quot;brand1&quot;</span><span class="o">);</span>
+<span class="n">product1</span><span class="o">.</span><span class="na">setCategory</span><span class="o">(</span><span class="n">ProductCategory</span><span class="o">.</span><span class="na">ELECTRONICS</span><span class="o">);</span>
+<span class="n">product1</span><span class="o">.</span><span class="na">setVariant</span><span class="o">(</span><span class="s">&quot;variant1&quot;</span><span class="o">);</span>
+
+<span class="n">Product</span> <span class="n">product2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Product</span><span class="o">();</span>
+<span class="n">product2</span><span class="o">.</span><span class="na">setSku</span><span class="o">(</span><span class="s">&quot;u456&quot;</span><span class="o">);</span>
+<span class="n">product2</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">&quot;grass&quot;</span><span class="o">);</span>
+<span class="n">product2</span><span class="o">.</span><span class="na">setPrice</span><span class="o">(</span><span class="mf">9.00</span><span class="o">);</span>
+<span class="n">product2</span><span class="o">.</span><span class="na">setQuantity</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+<span class="n">product2</span><span class="o">.</span><span class="na">setBrand</span><span class="o">(</span><span class="s">&quot;brand2&quot;</span><span class="o">);</span>
+<span class="n">product2</span><span class="o">.</span><span class="na">setCategory</span><span class="o">(</span><span class="n">ProductCategory</span><span class="o">.</span><span class="na">CAMERA_AND_OPTICS</span><span class="o">);</span>
+<span class="n">product2</span><span class="o">.</span><span class="na">setVariant</span><span class="o">(</span><span class="s">&quot;variant2&quot;</span><span class="o">);</span>
+
+
+<span class="c1">//Create a list of products associated with the particular purchase (optional)</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;</span> <span class="n">productList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;();</span>
+<span class="n">productList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">product1</span><span class="o">);</span>
+<span class="n">productList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">product2</span><span class="o">);</span>
+
+<span class="c1">//Create the commerce event (only revenue is required)</span>
 <span class="n">CommerceEvent</span> <span class="n">commerceEvent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CommerceEvent</span><span class="o">();</span>
-<span class="n">commerceEvent</span><span class="o">.</span><span class="na">setRevenue</span><span class="o">(</span><span class="mf">1101.99</span><span class="o">);</span>
-<span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">sendCommerceEvent</span><span class="o">(</span><span class="n">commerceEvent</span><span class="o">,</span> <span class="kc">null</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+<span class="n">commerceEvent</span><span class="o">.</span><span class="na">setRevenue</span><span class="o">(</span><span class="mf">50.29</span><span class="o">);</span>
+<span class="n">commerceEvent</span><span class="o">.</span><span class="na">setCurrencyType</span><span class="o">(</span><span class="n">CurrencyType</span><span class="o">.</span><span class="na">USD</span><span class="o">);</span>
+<span class="n">commerceEvent</span><span class="o">.</span><span class="na">setTransactionID</span><span class="o">(</span><span class="s">&quot;TRANS-1111&quot;</span><span class="o">);</span>
+<span class="n">commerceEvent</span><span class="o">.</span><span class="na">setShipping</span><span class="o">(</span><span class="mf">4.50</span><span class="o">);</span>
+<span class="n">commerceEvent</span><span class="o">.</span><span class="na">setTax</span><span class="o">(</span><span class="mf">110.90</span><span class="o">);</span>
+<span class="n">commerceEvent</span><span class="o">.</span><span class="na">setAffiliation</span><span class="o">(</span><span class="s">&quot;AFF-ID-101&quot;</span><span class="o">);</span>
+<span class="n">commerceEvent</span><span class="o">.</span><span class="na">setProducts</span><span class="o">(</span><span class="n">productList</span><span class="o">);</span>
+
+
+<span class="c1">//Add metadata (optional)</span>
+<span class="n">JSONObject</span> <span class="n">metadata</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="o">();</span>
+
+<span class="k">try</span> <span class="o">{</span>
+    <span class="n">metadata</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;custom_dictionary&quot;</span><span class="o">,</span> <span class="mi">123</span><span class="o">);</span>
+    <span class="n">metadata</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;testVar&quot;</span><span class="o">,</span> <span class="s">&quot;abc&quot;</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+<span class="o">}</span>
+
+
+<span class="c1">//Fire the commerce event</span>
+<span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">sendCommerceEvent</span><span class="o">(</span><span class="n">commerceEvent</span><span class="o">,</span> <span class="n">metadata</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
 </pre></div>
 
 </li>
 <li>
 <p><em>Kotlin</em></p>
-<div class="codehilite"><pre><span></span><span class="nl">TODO:</span> <span class="n">all</span> <span class="n">values</span>
+<div class="codehilite"><pre><span></span><span class="c1">//Add details about each product associated with the purchase (optional)</span>
+<span class="n">val</span> <span class="n">product1</span> <span class="o">=</span> <span class="n">Product</span><span class="o">()</span>
+<span class="n">product1</span><span class="o">.</span><span class="na">sku</span> <span class="o">=</span> <span class="s">&quot;u123&quot;</span>
+<span class="n">product1</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">&quot;cactus&quot;</span>
+<span class="n">product1</span><span class="o">.</span><span class="na">price</span> <span class="o">=</span> <span class="mf">45.00</span>
+<span class="n">product1</span><span class="o">.</span><span class="na">quantity</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">product1</span><span class="o">.</span><span class="na">brand</span> <span class="o">=</span> <span class="s">&quot;brand1&quot;</span>
+<span class="n">product1</span><span class="o">.</span><span class="na">category</span> <span class="o">=</span> <span class="n">ProductCategory</span><span class="o">.</span><span class="na">ELECTRONICS</span>
+<span class="n">product1</span><span class="o">.</span><span class="na">variant</span> <span class="o">=</span> <span class="s">&quot;variant1&quot;</span>
+
+<span class="n">val</span> <span class="n">product2</span> <span class="o">=</span> <span class="n">Product</span><span class="o">()</span>
+<span class="n">product2</span><span class="o">.</span><span class="na">sku</span> <span class="o">=</span> <span class="s">&quot;u456&quot;</span>
+<span class="n">product2</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">&quot;grass&quot;</span>
+<span class="n">product2</span><span class="o">.</span><span class="na">price</span> <span class="o">=</span> <span class="mf">9.00</span>
+<span class="n">product2</span><span class="o">.</span><span class="na">quantity</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">product2</span><span class="o">.</span><span class="na">brand</span> <span class="o">=</span> <span class="s">&quot;brand2&quot;</span>
+<span class="n">product2</span><span class="o">.</span><span class="na">category</span> <span class="o">=</span> <span class="n">ProductCategory</span><span class="o">.</span><span class="na">CAMERA_AND_OPTICS</span>
+<span class="n">product2</span><span class="o">.</span><span class="na">variant</span> <span class="o">=</span> <span class="s">&quot;variant2&quot;</span>
+
+
+<span class="c1">//Create a list of products associated with the particular purchase (optional)</span>
+<span class="n">val</span> <span class="n">productList</span> <span class="o">=</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Product</span><span class="o">&gt;()</span>
+<span class="n">productList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">product1</span><span class="o">)</span>
+<span class="n">productList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">product2</span><span class="o">)</span>
+
+
+<span class="c1">//Create the commerce event (only revenue is required)</span>
 <span class="n">val</span> <span class="n">commerceEvent</span> <span class="o">=</span> <span class="n">CommerceEvent</span><span class="o">()</span>
-<span class="n">commerceEvent</span><span class="o">.</span><span class="na">revenue</span> <span class="o">=</span> <span class="mf">1101.99</span>
-<span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">sendCommerceEvent</span><span class="o">(</span><span class="n">commerceEvent</span><span class="o">,</span> <span class="kc">null</span><span class="o">,</span> <span class="kc">null</span><span class="o">)</span>
+<span class="n">commerceEvent</span><span class="o">.</span><span class="na">revenue</span> <span class="o">=</span> <span class="mf">50.29</span>
+<span class="n">commerceEvent</span><span class="o">.</span><span class="na">currencyType</span> <span class="o">=</span> <span class="n">CurrencyType</span><span class="o">.</span><span class="na">USD</span>
+<span class="n">commerceEvent</span><span class="o">.</span><span class="na">transactionID</span> <span class="o">=</span> <span class="s">&quot;TRANS-1111&quot;</span>
+<span class="n">commerceEvent</span><span class="o">.</span><span class="na">shipping</span> <span class="o">=</span> <span class="mf">4.50</span>
+<span class="n">commerceEvent</span><span class="o">.</span><span class="na">tax</span> <span class="o">=</span> <span class="mf">110.90</span>
+<span class="n">commerceEvent</span><span class="o">.</span><span class="na">affiliation</span> <span class="o">=</span> <span class="s">&quot;AFF-ID-101&quot;</span>
+<span class="n">commerceEvent</span><span class="o">.</span><span class="na">setProducts</span><span class="o">(</span><span class="n">productList</span><span class="o">)</span>
+
+
+<span class="c1">//Add metadata (optional)</span>
+<span class="n">val</span> <span class="n">metadata</span> <span class="o">=</span> <span class="n">JSONObject</span><span class="o">()</span>
+
+<span class="k">try</span> <span class="o">{</span>
+    <span class="n">metadata</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;custom_dictionary&quot;</span><span class="o">,</span> <span class="mi">123</span><span class="o">)</span>
+    <span class="n">metadata</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;testVar&quot;</span><span class="o">,</span> <span class="s">&quot;abc&quot;</span><span class="o">)</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">e</span><span class="o">:</span> <span class="n">Exception</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">()</span>
+<span class="o">}</span>
+
+
+<span class="c1">//Fire the commerce event</span>
+<span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">sendCommerceEvent</span><span class="o">(</span><span class="n">commerceEvent</span><span class="o">,</span> <span class="n">metadata</span><span class="o">,</span> <span class="kc">null</span><span class="o">)</span>
 </pre></div>
 
 </li>
