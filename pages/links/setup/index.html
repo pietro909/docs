@@ -537,6 +537,26 @@
     Custom link behavior
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pass-data-from-link-to-app" title="Pass data from link to app" class="md-nav__link">
+    Pass data from link to app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-website-instead-of-app" title="Open website instead of app" class="md-nav__link">
+    Open website instead of app
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1675,6 +1695,26 @@
     Custom link behavior
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pass-data-from-link-to-app" title="Pass data from link to app" class="md-nav__link">
+    Pass data from link to app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-website-instead-of-app" title="Open website instead of app" class="md-nav__link">
+    Open website instead of app
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1895,15 +1935,19 @@
 <li>
 <h4 id="custom-link-behavior">Custom link behavior<a class="headerlink" href="#custom-link-behavior" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Pass data from link to app<ul>
-<li>Add query string <code>https://s3z3.app.link/fzmLEhobLD?$custom_data=123</code> </li>
-<li>Add link data (TODO)</li>
-<li>Add Quick Link key-values (TODO)</li>
+<li>
+<h5 id="pass-data-from-link-to-app">Pass data from link to app<a class="headerlink" href="#pass-data-from-link-to-app" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Add link data from <a href="#configure-deep-links">Configuring deep links</a></li>
+<li>Add key-values pairs from <a href="../../../pages/dashboard/analytics/#quick-links">Quick Links</a></li>
+<li>Add query string <code>https://example.app.link/fzmLEhobLD?$custom_data=123</code> </li>
 </ul>
 </li>
-<li>Redirect to website instead of app<ul>
+<li>
+<h5 id="open-website-instead-of-app">Open website instead of app<a class="headerlink" href="#open-website-instead-of-app" title="Permanent link">&para;</a></h5>
+<ul>
 <li>When app is not installed <ul>
-<li>Add query string <code>https://s3z3.app.link?$ios_url=https://example.com</code></li>
+<li>Add query string <code>https://example.app.link?$ios_url=https://example.com</code></li>
 <li>Add link data <code>$ios_url = 'https://example.com'</code> (<a href="../../../pages/links/setup/#redirections">docs</a>)</li>
 <li>Add link data <code>$fallback_url = 'https://example.com'</code> (<a href="../../../pages/links/setup/#redirections">docs</a>)</li>
 <li>Add link data for a deep view <code>$ios_deepview = 'deepviewId'</code>  (<a href="../../../pages/links/setup/#deepview">docs</a>)</li>
@@ -1918,10 +1962,11 @@
 <li>Add <code>$web_only = true</code> (<a href="../../../pages/links/setup/#redirections">docs</a>)</li>
 <li>Add redirect <code>$ios_url = 'https://google.com'</code> (<a href="../../../pages/links/setup/#redirections">docs</a>)</li>
 <li><em>or:</em> Append <code>/e/</code> to the deep link</li>
-<li>e.g. <code>https://s3z3.app.link/fzmLEhobLD</code> -&gt; <code>https://s3z3.app.link/e/fzmLEhobLD</code></li>
+<li>e.g. <code>https://example.app.link/fzmLEhobLD</code> -&gt; <code>https://example.app.link/e/fzmLEhobLD</code></li>
 </ul>
 </li>
 <li><em>Android:</em> need to override <code>App Links</code><ul>
+<li>TODO: validate. may need <code>Always open app</code> unchecked</li>
 <li>Uncheck <code>Enable App Links</code> and <code>Save</code> the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
 <li>Add redirect <code>$android_url = 'https://google.com'</code> (<a href="../../../pages/links/setup/#redirections">docs</a>)</li>
 <li>Add a broken URI Scheme with <code>$android_deeplink_path = 'random'</code> (<a href="../../../pages/links/setup/#deep-linking">docs</a>)</li>

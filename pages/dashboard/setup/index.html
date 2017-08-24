@@ -2026,7 +2026,39 @@
 </ul>
 </li>
 <li>Set <code>UTM tags</code><ul>
-<li>Recommend <code>disabled</code>. If you enable this, Branch will automatically set channel, feature, campaign, tags and $keywords based on UTM params. This only applies to dynamically created links, not links generated through the Dashboard, API or SDKs.</li>
+<li>
+<p>Recommend <code>disabled</code>. If you enable this, Branch will automatically set channel, feature, campaign, tags and $keywords based on UTM params. This only applies to dynamically created links, not links generated through the Dashboard, API or SDKs.</p>
+<table>
+<thead>
+<tr>
+<th>UTM parameter</th>
+<th>Branch parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>utm_source</td>
+<td>Channel</td>
+</tr>
+<tr>
+<td>utm_medium</td>
+<td>Feature</td>
+</tr>
+<tr>
+<td>utm_campaign</td>
+<td>Campaign</td>
+</tr>
+<tr>
+<td>utm_content</td>
+<td>Tags</td>
+</tr>
+<tr>
+<td>utm_term</td>
+<td>Keywords (not visible on Dashboard)</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 </li>
 </ul>
