@@ -294,8 +294,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#find-the-branch-key" title="Find the Branch Key" class="md-nav__link">
-    Find the Branch Key
+  <a href="#understand-the-branch-key" title="Understand the Branch Key" class="md-nav__link">
+    Understand the Branch Key
   </a>
   
 </li>
@@ -1677,8 +1677,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#find-the-branch-key" title="Find the Branch Key" class="md-nav__link">
-    Find the Branch Key
+  <a href="#understand-the-branch-key" title="Understand the Branch Key" class="md-nav__link">
+    Understand the Branch Key
   </a>
   
 </li>
@@ -1901,20 +1901,25 @@
                 <h2 id="basic-integration">Basic integration<a class="headerlink" href="#basic-integration" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="find-the-branch-key">Find the Branch Key<a class="headerlink" href="#find-the-branch-key" title="Permanent link">&para;</a></h4>
+<h4 id="understand-the-branch-key">Understand the Branch Key<a class="headerlink" href="#understand-the-branch-key" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Go to <a href="https://dashboard.branch.io/account-settings/app">Account settings</a> on the Branch Dashboard</li>
 <li><code>Branch Keys</code> allow you to interact with your Branch SDKs and create deep links</li>
 <li>These keys are unique to your Branch app</li>
-<li>Never expose your <code>Branch Secret</code> as it can be maliciously used</li>
-<li><img src="/img/pages/dashboard/branch-keys.png" width="500px" /></li>
+<li>Never expose your <code>Branch Secret</code> as it can be maliciously used<ul>
+<li><img src="/../../../img/pages/dashboard/branch-keys.png" width="500px" /></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
 <h4 id="configure-default-behavior">Configure default behavior<a class="headerlink" href="#configure-default-behavior" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Go to <a href="https://dashboard.branch.io/link-settings">Link Settings</a> on the Branch Dashboard</p>
+<p>Set the default behavior for your deep links on <a href="https://dashboard.branch.io/link-settings">Link Settings</a></p>
+</li>
+<li>
+<p>These values are typically overridden by <a href="../pages/links/setup/#custom-link-behavior">Custom link behavior</a> for each deep link</p>
 </li>
 <li>
 <h5 id="ios">iOS<a class="headerlink" href="#ios" title="Permanent link">&para;</a></h5>
@@ -1950,7 +1955,7 @@
 <li>Choose a <code>link domain</code> which will be used for all your links</li>
 <li>The <code>link domain</code> is the website which hosts your deep links</li>
 <li>The <code>link domain</code> is not a deep link<ul>
-<li>The deep links will have an <code>alias</code> behind them to uniquely identify content<ul>
+<li>Deep links will have an <code>alias</code> behind them to uniquely identify them<ul>
 <li><a href="https://example.app.link/VZsTctoINF">https://example.app.link/VZsTctoINF</a></li>
 <li><a href="https://example.app.link/custom-alias">https://example.app.link/custom-alias</a></li>
 </ul>
@@ -2039,7 +2044,7 @@
 <ul>
 <li>Go to <a href="https://dashboard.branch.io/link-settings">Link Settings</a> on the Branch Dashboard</li>
 <li>Set the default image preview for your deep links when shared on social media</li>
-<li>These values are typically overridden by <a href="../pages/links/setup/#open-graph">Open Graph</a> which differentiate your deep links between one another</li>
+<li>These values are typically overridden by <a href="../pages/links/setup/#custom-link-behavior">Custom link behavior</a> which differentiate your deep links between one another</li>
 </ul>
 </li>
 <li>
