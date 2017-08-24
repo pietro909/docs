@@ -10,7 +10,7 @@
         <meta name="description" content="Branch documentation for mobile deep linking">
       
       
-        <link rel="canonical" href="https://branchmetrics.github.io/docs/pages/web/setup/">
+        <link rel="canonical" href="https://branchmetrics.github.io/docs/pages/web/integrate/">
       
       
         <meta name="author" content="Branch">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Setup your website - Branch documentation</title>
+        <title>Configure your website - Branch documentation</title>
       
     
     
@@ -104,18 +104,12 @@
               
                 
               
-              Setup your website
+              Configure your website
             
           </span>
         </div>
       
       
-        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
-          <a href="http://dev.branch.io/" id="header-old-docs" title="old docs">
-            <i class="branch-header-icon md-icon material-icons">restore_page</i>
-            <p class="branch-header-label">Old&nbsp;Docs</p>
-          </a>
-        </div>
         <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
           <a href="#dialog-helpful" id="header-helpful" title="Helpful">
             <i class="branch-header-icon md-icon material-icons">thumb_up</i>
@@ -263,8 +257,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dashboard/setup/" title="Setup your dashboard" class="md-nav__link">
-      Setup your dashboard
+    <a href="../../dashboard/integrate/" title="Configure your dashboard" class="md-nav__link">
+      Configure your dashboard
     </a>
   </li>
 
@@ -289,11 +283,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      Setup your app
+      Configure your app
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        Setup your app
+        Configure your app
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -480,11 +474,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Setup your website
+        Configure your website
       </label>
     
-    <a href="./" title="Setup your website" class="md-nav__link md-nav__link--active">
-      Setup your website
+    <a href="./" title="Configure your website" class="md-nav__link md-nav__link--active">
+      Configure your website
     </a>
     
       
@@ -740,7 +734,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../links/setup/" title="Create deep links" class="md-nav__link">
+    <a href="../../links/integrate/" title="Create deep links" class="md-nav__link">
       Create deep links
     </a>
   </li>
@@ -1911,10 +1905,10 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/web/setup.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/web/integrate.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Setup your website</h1>
+                  <h1>Configure your website</h1>
                 
                 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1926,7 +1920,7 @@
 <h4 id="configure-branch">Configure Branch<a class="headerlink" href="#configure-branch" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Complete the <code>Basic integration</code> within <a href="../../../pages/dashboard/setup/">Setup your dashboard</a></p>
+<p>Complete the <code>Basic integration</code> within <a href="../../../pages/dashboard/integrate/">Configure your dashboard</a></p>
 <p><img alt="image" src="../../../img/pages/dashboard/fallback.png" /></p>
 </li>
 </ul>
@@ -1992,7 +1986,7 @@
 <p>Creates a deep link URL with encapsulated data</p>
 </li>
 <li>
-<p>Uses <a href="../../../pages/links/setup/">Deep Link Properties</a></p>
+<p>Uses <a href="../../../pages/links/integrate/">Deep Link Properties</a></p>
 </li>
 <li>
 <p>Validate with the <a href="https://dashboard.branch.io/liveview/links">Branch Dashboard</a></p>
@@ -2028,7 +2022,7 @@
 <p>Will generate a Branch deep link and tag it with the channel the user selects</p>
 </li>
 <li>
-<p>Uses <a href="../../../pages/links/setup/">Deep Link Properties</a></p>
+<p>Uses <a href="../../../pages/links/integrate/">Deep Link Properties</a></p>
 <div class="codehilite"><pre><span></span><span class="c">&lt;!-- shareable elements --&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>deep link<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;anchor&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>deep link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
@@ -2656,7 +2650,7 @@
 
 </li>
 <li>
-<p>Website will open to <a href="../../../pages/links/setup/#redirections">$fallback_url</a> with <code>_branch_match_id</code></p>
+<p>Website will open to <a href="../../../pages/links/integrate/#redirections">$fallback_url</a> with <code>_branch_match_id</code></p>
 <div class="codehilite"><pre><span></span>https://example.app.link/kJNbhZ1PrF?$fallback_url=https://www.website.com/&amp;_branch_match_id=418480444086051524
 </pre></div>
 
@@ -2761,9 +2755,9 @@
                   <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    this.page.url = "https://branchmetrics.github.io/docs/pages/web/setup/";
+    this.page.url = "https://branchmetrics.github.io/docs/pages/web/integrate/";
     this.page.identifier =
-      "/pages/web/setup/";
+      "/pages/web/integrate/";
   };
   (function() {
     var d = document, s = d.createElement("script");
