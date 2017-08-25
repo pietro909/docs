@@ -2092,7 +2092,7 @@
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <ul>
-<li>This guide requires you to have already <a href="../{{base.url}}/getting-started/sdk-integration-guide">integrated the Branch SDK</a> into your app.</li>
+<li>This guide requires you to have already integrated the Branch SDK into your app.</li>
 </ul>
 <p>Contact your Branch Account Manager or <a href="mailto:accounts@branch.io"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#99;&#99;&#111;&#117;&#110;&#116;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;">&#97;&#99;&#99;&#111;&#117;&#110;&#116;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;</a></a> at any time for assistance with the setup steps.</p>
 <h3 id="choose-your-email-service-provider">Choose your email service provider<a class="headerlink" href="#choose-your-email-service-provider" title="Permanent link">&para;</a></h3>
@@ -2217,7 +2217,7 @@
 <p>You can retrieve your click tracking domains from your Sendgrid settings:</p>
 <ol>
 <li>Log in to your SendGrid account.</li>
-<li>Go to Settings &gt; Whitelabels &gt; Email Links. </li>
+<li>Go to Settings &gt; Whitelabels &gt; Email Links.</li>
 <li>Find your email link whitelabeled domain, click on the gear icon and click "View" (or create a new whitelabel). <img alt="image" src="../../../img/pages/email/sendgrid/sendgrid-view-domain.png" /></li>
 <li>Note the "Host" email click tracking domain (e.g. email.mydomain.com) and the SendGrid domain under "Data". <img alt="image" src="../../../img/pages/email/sendgrid/sendgrid-whitelabel.png" /></li>
 <li>Enter both the click tracking domain and the SendGrid domain in item 1 of this step: <img alt="image" src="../../../img/pages/email/sendgrid/configure-sendgrid-1.png" /></li>
@@ -2294,8 +2294,8 @@
 </ol>
 <p>(note that these are simplified examples, not actual demo links)</p>
 <h3 id="flag-your-deep-links">Flag your deep links<a class="headerlink" href="#flag-your-deep-links" title="Permanent link">&para;</a></h3>
-<p>In order for {{page.title}} to know that the email link should open the app, add <code>universal="true"</code> to the template HTML, for example:</p>
-<div class="codehilite"><pre><span></span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://vza3.app.link/3p?%243p=</span><span class="cp">{{</span> <span class="nv">page.machine_name</span> <span class="cp">}}</span><span class="s">&amp;%24original_url=http%3A%2F%2Fexample.com%2F%3Ffoo%3Dbar&quot;</span> <span class="na">universal=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>Link to your app!<span class="nt">&lt;/a&gt;</span>
+<p>In order for Sendgrid to know that the email link should open the app, add <code>universal="true"</code> to the template HTML, for example:</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://vza3.app.link/3p?%243p=e_sg&amp;%24original_url=http%3A%2F%2Fexample.com%2F%3Ffoo%3Dbar&quot;</span> <span class="na">universal=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>Link to your app!<span class="nt">&lt;/a&gt;</span>
 </pre></div>
 
 <h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>

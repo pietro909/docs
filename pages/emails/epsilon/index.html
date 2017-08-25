@@ -2146,7 +2146,7 @@
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <ul>
-<li>This guide requires you to have already <a href="../{{base.url}}/getting-started/sdk-integration-guide">integrated the Branch SDK</a> into your app.</li>
+<li>This guide requires you to have already integrated the Branch SDK into your app.</li>
 </ul>
 <p>Contact your Branch Account Manager or <a href="mailto:accounts@branch.io"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#99;&#99;&#111;&#117;&#110;&#116;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;">&#97;&#99;&#99;&#111;&#117;&#110;&#116;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;</a></a> at any time for assistance with the setup steps.</p>
 <h3 id="choose-your-email-service-provider">Choose your email service provider<a class="headerlink" href="#choose-your-email-service-provider" title="Permanent link">&para;</a></h3>
@@ -2268,7 +2268,7 @@
 <h3 id="configure-your-esp">Configure your ESP<a class="headerlink" href="#configure-your-esp" title="Permanent link">&para;</a></h3>
 <p>To open the app directly on iOS 9.2+, you must configure your {{ page.title }} integration to support <a href="../../../getting-started/universal-app-links/">Universal Links</a>, and configure your app to support {{page.title}} + Universal Links.</p>
 <h4 id="tell-us-your-click-tracking-domain">Tell us your click tracking domain<a class="headerlink" href="#tell-us-your-click-tracking-domain" title="Permanent link">&para;</a></h4>
-<p>You can retrieve your click tracking domain from your {{page.title}} settings. We recommend creating a new click tracking domain for the Epsilon Harmony integration. You can switch over your production click tracking domain to Epsilon but we recommend testing with a different domain to get started.</p>
+<p>You can retrieve your click tracking domain from your Epsilon settings. We recommend creating a new click tracking domain for the Epsilon Harmony integration. You can switch over your production click tracking domain to Epsilon but we recommend testing with a different domain to get started.</p>
 <p>For Epsilon, you may also need an IP address. Notify your Epsilon Harmony Account Manager that you plan to use Branch Deep Linked Email, and ask your Harmony Account Manager to provide the IP that you set your click tracking domains to. Add that next to your click tracking domain in this step.</p>
 <p>On <strong>Done</strong> click, an AASA file - required for Universal Links - specific to that domain will be generated.</p>
 <h4 id="configure-your-app-for-your-click-tracking-domain">Configure your app for your click tracking domain<a class="headerlink" href="#configure-your-app-for-your-click-tracking-domain" title="Permanent link">&para;</a></h4>
@@ -2325,7 +2325,7 @@
 <p>Once you’ve completed the <a href="#setup">one time setup steps</a>, it’s time to send your first email.</p>
 <p>This guide will identify which web links you'd like to open the app and deep link, as well as convert them to Branch links</p>
 <h3 id="options-for-generating-branch-links-for-email">Options for generating Branch links for email<a class="headerlink" href="#options-for-generating-branch-links-for-email" title="Permanent link">&para;</a></h3>
-<p>There are a few different ways you can create Branch links that are compatible with Deep Linked Email + {{ page.title }}. You will need to replace the web URLs in your templates with these. To create Branch links, you can either:</p>
+<p>There are a few different ways you can create Branch links that are compatible with Deep Linked Email + Epsilon. You will need to replace the web URLs in your templates with these. To create Branch links, you can either:</p>
 <ol>
 <li><a href="#configure-your-epsilon-harmony-content">Configure your Epsilon Harmony Content </a></li>
 <li><a href="#making-regular-branch-links-compatible-with-email">Making regular Branch links compatible with email</a></li>
@@ -2333,7 +2333,7 @@
 <li><a href="#convert-all-web-links-in-your-email-to-deep-links">Convert all web links in your email to deep links</a></li>
 </ol>
 <h4 id="configure-your-epsilon-harmony-content">Configure your Epsilon Harmony Content<a class="headerlink" href="#configure-your-epsilon-harmony-content" title="Permanent link">&para;</a></h4>
-<p>This code is referred to as the "Branch script" - this script will convert your web URLs to deep links. 
+<p>This code is referred to as the "Branch script" - this script will convert your web URLs to deep links.
 Get your Branch base URL from the email tab in the dashboard or from your Branch account manager.</p>
 <p>The Harmony integration requires you to add email template code in two places with HTML content.</p>
 <ol>
@@ -2344,7 +2344,7 @@ Get your Branch base URL from the email tab in the dashboard or from your Branch
 <div class="codehilite"><pre><span></span>[#assign branch_base_url=&#39;appsolutely.app.link/3p?%243p=e_ep<span class="err">&amp;</span>%24original_url=&#39;]
 </pre></div>
 
-<p>Remember to get the value of <code>branch_base_url</code> from the Branch dashboard or from your account manager and to exclude <code>https://</code> from it when entering it in to the assign statement. </p>
+<p>Remember to get the value of <code>branch_base_url</code> from the Branch dashboard or from your account manager and to exclude <code>https://</code> from it when entering it in to the assign statement.</p>
 <h5 id="create-deep-links">Create deep links<a class="headerlink" href="#create-deep-links" title="Permanent link">&para;</a></h5>
 <p>Wherever you are using <code>&lt;a&gt;</code> tags in your email templates, replace it with these two lines.</p>
 <div class="admonition example">

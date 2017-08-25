@@ -2147,7 +2147,7 @@
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <ul>
 <li>You must have the Salesforce Marketing Cloud Sender Authentication Package (SAP) in order to benefit from Universal Links + click tracking functionality.</li>
-<li>This guide requires you to have already <a href="../{{base.url}}/getting-started/sdk-integration-guide">integrated the Branch SDK</a> into your app.</li>
+<li>This guide requires you to have already integrated the Branch SDK into your app.</li>
 </ul>
 <p>Contact your Branch Account Manager or <a href="mailto:accounts@branch.io"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#99;&#99;&#111;&#117;&#110;&#116;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;">&#97;&#99;&#99;&#111;&#117;&#110;&#116;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;</a></a> at any time for assistance with the setup steps.</p>
 <h3 id="choose-your-email-service-provider">Choose your email service provider<a class="headerlink" href="#choose-your-email-service-provider" title="Permanent link">&para;</a></h3>
@@ -2269,7 +2269,7 @@
 <h3 id="configure-your-esp">Configure your ESP<a class="headerlink" href="#configure-your-esp" title="Permanent link">&para;</a></h3>
 <p>To open the app directly on iOS 9.2+, you must configure your {{ page.title }} integration to support <a href="../../../getting-started/universal-app-links/">Universal Links</a>, and configure your app to support {{page.title}} + Universal Links.</p>
 <h4 id="tell-us-your-click-tracking-domain">Tell us your click tracking domain<a class="headerlink" href="#tell-us-your-click-tracking-domain" title="Permanent link">&para;</a></h4>
-<p>You can retrieve your click tracking domain from your {{ page.title }} settings. We <strong>highly</strong> recommend using a new click tracking domain for this implementation to ensure that the user experience for pre-Branch links on the original click tracking domain doesn't break.</p>
+<p>You can retrieve your click tracking domain from your Salesforce settings. We <strong>highly</strong> recommend using a new click tracking domain for this implementation to ensure that the user experience for pre-Branch links on the original click tracking domain doesn't break.</p>
 <h4 id="configure-your-app-for-your-click-tracking-domain">Configure your app for your click tracking domain<a class="headerlink" href="#configure-your-app-for-your-click-tracking-domain" title="Permanent link">&para;</a></h4>
 <p><img alt="image" src="../../../img/pages/email/responsys/configure-responsys-3.png" /></p>
 <p>In this prompt, enter the email of someone on your team who is qualified to modify your iOS app, and then click <strong>Send</strong>. They will complete the <a href="#technical-setup">technical setup</a> steps below.</p>
@@ -2332,7 +2332,7 @@
 <p>Once you’ve completed the <a href="#setup">one time setup steps</a>, it’s time to send your first email.</p>
 <p>This guide will identify which web links you'd like to open the app and deep link, as well as convert them to Branch links</p>
 <h3 id="options-for-generating-branch-links-for-email">Options for generating Branch links for email<a class="headerlink" href="#options-for-generating-branch-links-for-email" title="Permanent link">&para;</a></h3>
-<p>There are a few different ways you can create Branch links that are compatible with Deep Linked Email + {{ page.title }}. You will need to replace the web URLs in your templates with these. To create Branch links, you can either:</p>
+<p>There are a few different ways you can create Branch links that are compatible with Deep Linked Email + Salesforce. You will need to replace the web URLs in your templates with these. To create Branch links, you can either:</p>
 <ol>
 <li><a href="#add-a-new-content-area-for-easy-deep-linking">Add a new Content Area for easy deep linking</a></li>
 <li><a href="#making-regular-branch-links-compatible-with-email">Making regular Branch links compatible with email</a></li>
@@ -2342,7 +2342,7 @@
 <h4 id="add-a-new-content-area-for-easy-deep-linking">Add a new Content Area for easy deep linking<a class="headerlink" href="#add-a-new-content-area-for-easy-deep-linking" title="Permanent link">&para;</a></h4>
 <p>In this step, we'll add a new Content Area in Salesforce that makes it very easy to create deep links in your emails.</p>
 <ol>
-<li>Work with your Branch account manager to modify the following code snippet, replacing <code>DOMAIN-HERE</code> with your Branch base domain: 
+<li>Work with your Branch account manager to modify the following code snippet, replacing <code>DOMAIN-HERE</code> with your Branch base domain:
    <div class="codehilite"><pre><span></span><span class="c">%%[ VAR @deeplink, @branch_base_url SET @branch_base_url = &quot;https://DOMAIN-HERE/3p?%243p=e_et&quot; SET @deeplink = CONCAT(@branch_base_url, CONCAT(&quot;&amp;%24original_url=&quot;, URLEncode(@link_to_be_wrapped, 1, 1))) ]%%</span>
 </pre></div></li>
 <li>After logging into Salesforce Marketing Cloud, click on <strong>Email Studio</strong> and then a sub-menu will appear. Click on <strong>Email</strong> in the dropdown menu: <img alt="image" src="../../../img/pages/email/salesforce/salesforce-dropdown.png" /></li>
@@ -2358,7 +2358,7 @@
 <p>You have now successfully created the deep linking script.  </p>
 <div class="admonition example">
 <p class="admonition-title">Code snippet</p>
-<p>The snippet will follow this format: 
+<p>The snippet will follow this format:
 <div class="codehilite"><pre><span></span><span class="c">%%[ VAR @deeplink, @branch_base_url SET @branch_base_url = &quot;BASE URL FROM BRANCH&quot; SET @deeplink = CONCAT(@branch_base_url, CONCAT(&quot;&amp;%24original_url=&quot;, URLEncode(@link_to_be_wrapped, 1, 1))) ]%%</span>
 </pre></div>
 The code above has a placeholder for <code>@branch_base_url</code>. Replace it with yours.</p>
@@ -2368,7 +2368,7 @@ The code above has a placeholder for <code>@branch_base_url</code>. Replace it w
 <p>To convert a link to a Branch deep link, let's use an example:
 <div class="codehilite"><pre><span></span><span class="nt">&lt;a</span> <span class="na">style=</span><span class="s">&quot;border-radius: 4px;display: inline-block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #fff;background-color: #00afd1;font-family: sans-serif;&quot;</span> <span class="na">href=</span><span class="s">&quot;https://www.blueapron.com/recipes/five-spice-chicken-vermicelli-with-mushrooms-collard-greens-baby-fennel&quot;</span><span class="nt">&gt;</span>I want it!<span class="nt">&lt;/a&gt;</span>
 </pre></div></p>
-<p>This is what the link will look like <strong>after</strong> you have modified it to support Branch deep links: 
+<p>This is what the link will look like <strong>after</strong> you have modified it to support Branch deep links:
 <div class="codehilite"><pre><span></span>%%[ SET @link_to_be_wrapped = &quot;https://www.blueapron.com/recipes/five-spice-chicken-vermicelli-with-mushrooms-collard-greens-baby-fennel&quot; ContentAreaByName(&quot;My Contents\deeplink&quot;) ]%%
 <span class="nt">&lt;a</span> <span class="na">style=</span><span class="s">&quot;border-radius: 4px;display: inline-block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #fff;background-color: #00afd1;font-family: sans-serif;&quot;</span>  <span class="na">href=</span><span class="s">&quot;%%=RedirectTo(@deeplink)=%%&quot;</span><span class="nt">&gt;</span>I want this!<span class="nt">&lt;/a&gt;</span>
 </pre></div></p>
