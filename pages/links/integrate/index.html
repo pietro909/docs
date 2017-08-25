@@ -30,7 +30,7 @@
     
     
       <style>.async-hide{opacity:0!important}</style>
-      <script>!function(e,t,a,n,o,i,c,s,g){t.className+=" "+a,i.start=1*new Date,i.end=c=function(){t.className=t.className.replace(RegExp(" ?"+a),"")},(e[n]=e[n]||[]).hide=i,setTimeout(function(){c(),i.end=null},o),i.timeout=o}(window,document.documentElement,"async-hide","dataLayer",4e3,{"GTM-PCPBXCN":!0}),function(e,t,a,n,o,i,c){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(a),c=t.getElementsByTagName(a)[0],i.async=1,i.src=n,c.parentNode.insertBefore(i,c)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","","auto"),ga("require","GTM-PCPBXCN"),ga("send","pageview")</script>
+      <script>!function(e,t,a,n,o,c,i,s,g){t.className+=" "+a,c.start=1*new Date,c.end=i=function(){t.className=t.className.replace(RegExp(" ?"+a),"")},(e[n]=e[n]||[]).hide=c,setTimeout(function(){i(),c.end=null},o),c.timeout=o}(window,document.documentElement,"async-hide","dataLayer",4e3,{"GTM-PCPBXCN":!0}),function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-98205710-1","auto"),ga("require","GTM-PCPBXCN"),ga("send","pageview")</script>
     
     
       <script>!function(e,t){if(!t.__SV){var n=window;try{var i,a,p,o=n.location,r=o.hash;i=function(e,t){return(a=e.match(RegExp(t+"=([^&]*)")))?a[1]:null},r&&i(r,"state")&&(p=JSON.parse(decodeURIComponent(i(r,"state"))),"mpeditor"===p.action&&(n.sessionStorage.setItem("_mpcehash",r),history.replaceState(p.desiredHash||"",e.title,o.pathname+o.search)))}catch(e){}var l,s;window.mixpanel=t,t._i=[],t.init=function(e,n,i){function a(e,t){var n=t.split(".");2==n.length&&(e=e[n[0]],t=n[1]),e[t]=function(){e.push([t].concat(Array.prototype.slice.call(arguments,0)))}}var p=t;for("undefined"!=typeof i?p=t[i]=[]:i="mixpanel",p.people=p.people||[],p.toString=function(e){var t="mixpanel";return"mixpanel"!==i&&(t+="."+i),e||(t+=" (stub)"),t},p.people.toString=function(){return p.toString(1)+".people (stub)"},l="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" "),s=0;s<l.length;s++)a(p,l[s]);t._i.push([e,n,i])},t.__SV=1.2,n=e.createElement("script"),n.type="text/javascript",n.async=!0,n.src="undefined"!=typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js",i=e.getElementsByTagName("script")[0],i.parentNode.insertBefore(n,i)}}(document,window.mixpanel||[]),mixpanel.init("47ec8ea9ac102b1370221dcda476091c")</script>
@@ -577,40 +577,6 @@
     Create deep links
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dashboard" title="Dashboard" class="md-nav__link">
-    Dashboard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#app" title="App" class="md-nav__link">
-    App
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#web" title="Web" class="md-nav__link">
-    Web
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#api" title="API" class="md-nav__link">
-    API
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -620,13 +586,6 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#structure" title="Structure" class="md-nav__link">
-    Structure
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#analytical-labels" title="Analytical labels" class="md-nav__link">
@@ -687,6 +646,40 @@
           <li class="md-nav__item">
   <a href="#universal-object" title="Universal Object" class="md-nav__link">
     Universal Object
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-deep-links" title="Read deep links" class="md-nav__link">
+    Read deep links
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-structure" title="Data structure" class="md-nav__link">
+    Data structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reserved-prefixes" title="Reserved prefixes" class="md-nav__link">
+    Reserved prefixes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callback-values" title="Callback values" class="md-nav__link">
+    Callback values
   </a>
   
 </li>
@@ -1735,40 +1728,6 @@
     Create deep links
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dashboard" title="Dashboard" class="md-nav__link">
-    Dashboard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#app" title="App" class="md-nav__link">
-    App
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#web" title="Web" class="md-nav__link">
-    Web
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#api" title="API" class="md-nav__link">
-    API
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1778,13 +1737,6 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#structure" title="Structure" class="md-nav__link">
-    Structure
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#analytical-labels" title="Analytical labels" class="md-nav__link">
@@ -1845,6 +1797,40 @@
           <li class="md-nav__item">
   <a href="#universal-object" title="Universal Object" class="md-nav__link">
     Universal Object
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-deep-links" title="Read deep links" class="md-nav__link">
+    Read deep links
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-structure" title="Data structure" class="md-nav__link">
+    Data structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reserved-prefixes" title="Reserved prefixes" class="md-nav__link">
+    Reserved prefixes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callback-values" title="Callback values" class="md-nav__link">
+    Callback values
   </a>
   
 </li>
@@ -2157,27 +2143,10 @@
 </ul>
 <h2 id="create-deep-links">Create deep links<a class="headerlink" href="#create-deep-links" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<h4 id="dashboard">Dashboard<a class="headerlink" href="#dashboard" title="Permanent link">&para;</a></h4>
-<ul>
+<li>There are multiple methods to create Branch deep links:<ul>
 <li>Use <a href="../../../pages/dashboard/analytics/#quick-links">Quick Links</a> for fast link creation and easy tracking</li>
-</ul>
-</li>
-<li>
-<h4 id="app">App<a class="headerlink" href="#app" title="Permanent link">&para;</a></h4>
-<ul>
 <li>Use our <a href="#dialog-code">App SDK</a> to create and share links within your app</li>
-</ul>
-</li>
-<li>
-<h4 id="web">Web<a class="headerlink" href="#web" title="Permanent link">&para;</a></h4>
-<ul>
 <li>Use our <a href="../../../pages/web/integrate/#create-deep-link">Web SDK</a> to create to links convert web to app users</li>
-</ul>
-</li>
-<li>
-<h4 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h4>
-<ul>
 <li>Use our <a href="../../../pages/apps/api/#link-create">HTTP API</a> to programmatically create links from your server</li>
 </ul>
 </li>
@@ -2185,119 +2154,10 @@
 <h2 id="configure-deep-links">Configure deep links<a class="headerlink" href="#configure-deep-links" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h4>
-<ul>
-<li>
-<p>Deep link data structure</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-  <span class="nx">tags</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;tag1&#39;</span><span class="p">,</span> <span class="s1">&#39;tag2&#39;</span> <span class="p">],</span>
-  <span class="nx">channel</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span><span class="p">,</span>
-  <span class="nx">feature</span><span class="o">:</span> <span class="s1">&#39;dashboard&#39;</span><span class="p">,</span>
-  <span class="nx">stage</span><span class="o">:</span> <span class="s1">&#39;new user&#39;</span><span class="p">,</span>
-  <span class="nx">alias</span><span class="o">:</span> <span class="s1">&#39;myalias&#39;</span><span class="p">,</span>
-  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">mydata</span><span class="o">:</span> <span class="s1">&#39;something&#39;</span><span class="p">,</span>
-    <span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span>
-    <span class="nx">$desktop_url</span><span class="o">:</span> <span class="s1">&#39;http://myappwebsite.com&#39;</span><span class="p">,</span>
-    <span class="nx">$ios_url</span><span class="o">:</span> <span class="s1">&#39;http://myappwebsite.com/ios&#39;</span><span class="p">,</span>
-    <span class="nx">$android_url</span><span class="o">:</span> <span class="s1">&#39;http://myappwebsite.com/android&#39;</span><span class="p">,</span>
-    <span class="nx">$og_app_id</span><span class="o">:</span> <span class="s1">&#39;12345&#39;</span><span class="p">,</span>
-    <span class="nx">$og_title</span><span class="o">:</span> <span class="s1">&#39;My App&#39;</span><span class="p">,</span>
-    <span class="nx">$og_description</span><span class="o">:</span> <span class="s1">&#39;My app\&#39;s description.&#39;</span><span class="p">,</span>
-    <span class="nx">$og_image_url</span><span class="o">:</span> <span class="s1">&#39;http://myappwebsite.com/image.png&#39;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-</li>
-<li>
-<p>Branch reserved keys</p>
-<table>
-<thead>
-<tr>
-<th>Prefix</th>
-<th>Usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$</td>
-<td>Branch reserved keyword</td>
-</tr>
-<tr>
-<td>~</td>
-<td>Branch analytical data</td>
-</tr>
-<tr>
-<td>+</td>
-<td>Branch added values</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Default</th>
-<th>Usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>~id</td>
-<td></td>
-<td>Automatically generated 18 digit ID number for the link that drove the install/open, if present (0 for dynamic and 3P links)</td>
-</tr>
-<tr>
-<td>~referring_link</td>
-<td></td>
-<td>The referring link that drove the install/open, if present</td>
-</tr>
-<tr>
-<td>~creation_source</td>
-<td></td>
-<td>Where the link was created ('API', 'Dashboard', 'SDK', 'iOS SDK', 'Android SDK', or 'Web SDK')</td>
-</tr>
-<tr>
-<td>+match_guaranteed</td>
-<td></td>
-<td>If the match was made with 100% accuracy</td>
-</tr>
-<tr>
-<td>+referrer</td>
-<td></td>
-<td>The referrer for the link click, if a link was clicked</td>
-</tr>
-<tr>
-<td>+phone_number</td>
-<td></td>
-<td>The phone number of the user, if the user texted himself/herself the app</td>
-</tr>
-<tr>
-<td>+is_first_session</td>
-<td><code>false</code></td>
-<td><code>true</code> if first session (install), <code>false</code> if any other session (open)</td>
-</tr>
-<tr>
-<td>+clicked_branch_link</td>
-<td><code>false</code></td>
-<td>Whether or not the user clicked a Branch link that triggered this session</td>
-</tr>
-<tr>
-<td>+non_branch_link</td>
-<td></td>
-<td>App was opened from a non Branch link (third party, invalid Branch deep link, or Branch key mismatch)</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-</li>
-<li>
 <h4 id="analytical-labels">Analytical labels<a class="headerlink" href="#analytical-labels" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>For <a href="#create-deep-link">Create Deep Link</a> and <a href="#share-deep-link">Share Deep Link</a></p>
+<p>These labels allow you to filter and organize your deep links</p>
 <table>
 <thead>
 <tr>
@@ -2755,7 +2615,7 @@
 <h4 id="universal-object">Universal Object<a class="headerlink" href="#universal-object" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Properties for the Branch Universal Object</p>
+<p>Properties for the Branch Universal Object within your <a href="#dialog-code">app</a> integration</p>
 <table>
 <thead>
 <tr>
@@ -2842,6 +2702,150 @@
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="read-deep-links">Read deep links<a class="headerlink" href="#read-deep-links" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Deep link data gets sent from your link to your <a href="#dialog-code">app</a> or <a href="../../../pages/web/integrate/">website</a> integration</p>
+</li>
+<li>
+<h4 id="data-structure">Data structure<a class="headerlink" href="#data-structure" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Example deep link data structure</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;identity_id&quot;</span><span class="p">:</span> <span class="s2">&quot;427469360685348303&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.app.link?%24identity_id=427469360685348303&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;session_id&quot;</span><span class="p">:</span> <span class="s2">&quot;429691081177874743&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;$canonical_identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;item/1503684554354.28&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;$desktop_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/home&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;$exp_date&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;$identity_id&quot;</span><span class="p">:</span> <span class="s2">&quot;427469360685348303&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;$og_description&quot;</span><span class="p">:</span> <span class="s2">&quot;My Content Description&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;$og_image_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://lorempixel.com/200/200/&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;$og_title&quot;</span><span class="p">:</span> <span class="s2">&quot;46D6D28E-0390-40E4-A856-BD74F34D24C8&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;$one_time_use&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;$publicly_indexable&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;+click_timestamp&quot;</span><span class="p">:</span> <span class="mi">1503684563</span><span class="p">,</span>
+    <span class="nt">&quot;+clicked_branch_link&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;+is_first_session&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;+match_guaranteed&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;custom&quot;</span><span class="p">:</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;random&quot;</span><span class="p">:</span> <span class="s2">&quot;FE848A5B-78F7-42EC-A253-9F795FE91692&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;added&quot;</span><span class="p">:</span> <span class="s2">&quot;1503684554354.33&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;~campaign&quot;</span><span class="p">:</span> <span class="s2">&quot;new launch&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;~channel&quot;</span><span class="p">:</span> <span class="s2">&quot;facebook&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;~creation_source&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;~feature&quot;</span><span class="p">:</span> <span class="s2">&quot;sharing&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;~id&quot;</span><span class="p">:</span> <span class="mi">429691043152332059</span><span class="p">,</span>
+    <span class="nt">&quot;~referring_link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.app.link/X7OsnWv9TF&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;~stage&quot;</span><span class="p">:</span> <span class="s2">&quot;new person&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;~tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;one&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;two&quot;</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+<li>
+<h4 id="reserved-prefixes">Reserved prefixes<a class="headerlink" href="#reserved-prefixes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Branch adds additional properties to your deep link data to explain the link</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$</td>
+<td>Branch reserved keyword</td>
+</tr>
+<tr>
+<td>~</td>
+<td>Branch analytical data</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Branch added values</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="callback-values">Callback values<a class="headerlink" href="#callback-values" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Additional properties read from the <code>initSession</code> within your <a href="#dialog-code">app</a> and <a href="../../../pages/web/integrate/">website</a> integrations</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>~id</td>
+<td></td>
+<td>Automatically generated 18 digit ID number for the link that drove the install/open, if present (0 for dynamic and 3P links)</td>
+</tr>
+<tr>
+<td>~referring_link</td>
+<td></td>
+<td>The referring link that drove the install/open, if present</td>
+</tr>
+<tr>
+<td>~creation_source</td>
+<td></td>
+<td>Where the link was created (<code>0</code> API , <code>1</code> Quick Link, <code>2</code> SDK, <code>3</code> iOS SDK , <code>4</code> Android SDK , <code>5</code> Web SDK, <code>6</code> A links, <code>7</code> Dynamic, <code>8</code> Third party)</td>
+</tr>
+<tr>
+<td>+match_guaranteed</td>
+<td></td>
+<td>If the match was made with 100% accuracy</td>
+</tr>
+<tr>
+<td>+referrer</td>
+<td></td>
+<td>The referrer for the link click, if a link was clicked</td>
+</tr>
+<tr>
+<td>+phone_number</td>
+<td></td>
+<td>The phone number of the user, if the user texted himself/herself the app</td>
+</tr>
+<tr>
+<td>+is_first_session</td>
+<td><code>false</code></td>
+<td><code>true</code> if first session (install), <code>false</code> if any other session (open)</td>
+</tr>
+<tr>
+<td>+clicked_branch_link</td>
+<td><code>false</code></td>
+<td>Whether or not the user clicked a Branch link that triggered this session</td>
+</tr>
+<tr>
+<td>+non_branch_link</td>
+<td></td>
+<td>App was opened from a non Branch link (third party, invalid Branch deep link, or Branch key mismatch)</td>
+</tr>
+</tbody>
+</table>
 </li>
 </ul>
 </li>

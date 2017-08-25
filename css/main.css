@@ -70,8 +70,8 @@
   padding: 0.5em 0;
 }
 .tab-code-button.active {
-  color: #03a9f4;
-  border-bottom: 2px solid #03a9f4;
+  color: black;
+  border-bottom: 2px solid black;
 }
 .tab-code-content {
   display: none;
@@ -199,7 +199,7 @@ body.modal {
 }
 .modal-content a {
   display: inline-block;
-  background-color: #03a9f4;
+  background-color: black;
   color: white;
   padding: 1em;
   margin-right: 1em;
@@ -226,14 +226,15 @@ body.modal {
 /* ////////////////////////////// */
 /* MODAL CODE */
 /* ////////////////////////////// */
-.modal.active.dialog.code .flex {
+.modal.active.dialog .flex {
   display: flex;
   width: 100%;
   margin-top: 1em;
 }
-.modal.active.dialog.code .flex button {
+.modal.active.dialog .flex button, .modal.active.dialog .flex a {
   flex: 1;
   font-size: 1.5em;
+  text-align: center;
   color: white;
   padding: 1em;
   margin: 0.25em 0.5em;
@@ -354,6 +355,7 @@ a.algolia-docsearch-footer--logo {
 }
 .branch-old-docs {
   left: 0;
+  padding: 0.6em 0.75em;
   border-top-right-radius: 1em;
 }
 
@@ -362,7 +364,7 @@ a.algolia-docsearch-footer--logo {
 /* BRANCH STYLING */
 /* ////////////////////////////// */
 /* primary */
-.md-header, .modal-content > a, .modal.active.dialog.code button {
+.md-header, .modal-content a, .modal-content button {
   background-color: #004875 !important;
 }
 @media only screen and (max-width: 76.1875em) {

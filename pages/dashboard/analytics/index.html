@@ -30,7 +30,7 @@
     
     
       <style>.async-hide{opacity:0!important}</style>
-      <script>!function(e,t,a,n,o,i,c,s,g){t.className+=" "+a,i.start=1*new Date,i.end=c=function(){t.className=t.className.replace(RegExp(" ?"+a),"")},(e[n]=e[n]||[]).hide=i,setTimeout(function(){c(),i.end=null},o),i.timeout=o}(window,document.documentElement,"async-hide","dataLayer",4e3,{"GTM-PCPBXCN":!0}),function(e,t,a,n,o,i,c){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(a),c=t.getElementsByTagName(a)[0],i.async=1,i.src=n,c.parentNode.insertBefore(i,c)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","","auto"),ga("require","GTM-PCPBXCN"),ga("send","pageview")</script>
+      <script>!function(e,t,a,n,o,c,i,s,g){t.className+=" "+a,c.start=1*new Date,c.end=i=function(){t.className=t.className.replace(RegExp(" ?"+a),"")},(e[n]=e[n]||[]).hide=c,setTimeout(function(){i(),c.end=null},o),c.timeout=o}(window,document.documentElement,"async-hide","dataLayer",4e3,{"GTM-PCPBXCN":!0}),function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-98205710-1","auto"),ga("require","GTM-PCPBXCN"),ga("send","pageview")</script>
     
     
       <script>!function(e,t){if(!t.__SV){var n=window;try{var i,a,p,o=n.location,r=o.hash;i=function(e,t){return(a=e.match(RegExp(t+"=([^&]*)")))?a[1]:null},r&&i(r,"state")&&(p=JSON.parse(decodeURIComponent(i(r,"state"))),"mpeditor"===p.action&&(n.sessionStorage.setItem("_mpcehash",r),history.replaceState(p.desiredHash||"",e.title,o.pathname+o.search)))}catch(e){}var l,s;window.mixpanel=t,t._i=[],t.init=function(e,n,i){function a(e,t){var n=t.split(".");2==n.length&&(e=e[n[0]],t=n[1]),e[t]=function(){e.push([t].concat(Array.prototype.slice.call(arguments,0)))}}var p=t;for("undefined"!=typeof i?p=t[i]=[]:i="mixpanel",p.people=p.people||[],p.toString=function(e){var t="mixpanel";return"mixpanel"!==i&&(t+="."+i),e||(t+=" (stub)"),t},p.people.toString=function(){return p.toString(1)+".people (stub)"},l="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" "),s=0;s<l.length;s++)a(p,l[s]);t._i.push([e,n,i])},t.__SV=1.2,n=e.createElement("script"),n.type="text/javascript",n.async=!0,n.src="undefined"!=typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js",i=e.getElementsByTagName("script")[0],i.parentNode.insertBefore(n,i)}}(document,window.mixpanel||[]),mixpanel.init("47ec8ea9ac102b1370221dcda476091c")</script>
@@ -1922,19 +1922,32 @@
 </li>
 <li>
 <h4 id="ads">Ads<a class="headerlink" href="#ads" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://dashboard.branch.io/email">Dashboard Ads</a> allows you to easily integrate Branch deep links with your email providers</li>
+</ul>
 </li>
 <li>
 <h4 id="emails">Emails<a class="headerlink" href="#emails" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://dashboard.branch.io/email">Dashboard Emails</a> allows you to easily integrate Branch deep links with your email providers</li>
+<li>View more information <a href="../../../pages/emails/appboy/">here</a></li>
+</ul>
 </li>
 <li>
 <h4 id="organic-search">Organic Search<a class="headerlink" href="#organic-search" title="Permanent link">&para;</a></h4>
 <ul>
+<li><a href="https://dashboard.branch.io/search">Dashboard Organic Search</a> shows you how your deep links and content are being scraped by search engines</li>
+<li>Use <a href="#dialog-code">app indexing</a> within your app to enable</li>
 <li>Validate with the <a href="https://branch.io/resources/app-indexing/">App indexing validator</a></li>
+<li>TODO</li>
 </ul>
 </li>
 <li>
 <h4 id="referrals">Referrals<a class="headerlink" href="#referrals" title="Permanent link">&para;</a></h4>
 <ul>
+<li>
+<p><a href="https://dashboard.branch.io/referrals/analytics">Dashboard Referrals</a> allows you to track referrals between users  </p>
+</li>
 <li>
 <h5 id="implementing">Implementing<a class="headerlink" href="#implementing" title="Permanent link">&para;</a></h5>
 <ul>
@@ -1989,6 +2002,13 @@
 </li>
 <li>
 <h4 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://dashboard.branch.io/sources">Dashboard Sources</a> display <code>clicks</code>, <code>installs</code>, <code>sessions</code>, and <code>custom events</code> per <a href="../../../pages/links/integrate/#analytical-labels">analytical label</a></li>
+<li>Use the <code>Event</code> dropdown to see a funnel of your analytics to a <a href="#dialog-code">custom event</a> inside your app</li>
+<li>Use the <code>Export</code> button to get a email with a <code>.cvs</code> of your source data</li>
+<li>Use the <code>Slice by platform</code> to remove robot traffic from your analytics</li>
+<li>Use the <code>filter</code> dropdowns to limit data (values are limited to the data within the <code>date range</code> dropdown)</li>
+</ul>
 </li>
 <li>
 <h4 id="content">Content<a class="headerlink" href="#content" title="Permanent link">&para;</a></h4>
@@ -2008,20 +2028,28 @@
 </li>
 <li>
 <h4 id="data-integrations">Data Integrations<a class="headerlink" href="#data-integrations" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://dashboard.branch.io/data-import-export/integrations">Dashboard Integrations</a> allows you to create data integrations to send Branch data to third party vendors</li>
+<li>View more information <a href="../../../pages/exports/webhooks/">here</a></li>
+</ul>
 </li>
 <li>
 <h4 id="webhooks">Webhooks<a class="headerlink" href="#webhooks" title="Permanent link">&para;</a></h4>
 <ul>
-<li>View more information in <a href="../../../pages/exports/webhooks/">Export webhooks</a></li>
+<li><a href="https://dashboard.branch.io/data-import-export/webhooks">Dashboard Webhooks</a> allows you to create webhooks to send Branch data to your servers</li>
+<li>View more information <a href="../../../pages/exports/webhooks/">here</a></li>
 </ul>
 </li>
 <li>
 <h4 id="liveview">Liveview<a class="headerlink" href="#liveview" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://dashboard.branch.io/liveview/links">Dashboard Liveview</a> allows you to view real time data for everything related to Branch</li>
+</ul>
 </li>
 <li>
 <h4 id="account-settings">Account settings<a class="headerlink" href="#account-settings" title="Permanent link">&para;</a></h4>
 <ul>
-<li>View more information in <a href="../../../pages/dashboard/integrate/">Configure your dashboard</a></li>
+<li>View more information <a href="../../../pages/dashboard/integrate/">here</a></li>
 </ul>
 </li>
 </ul>
