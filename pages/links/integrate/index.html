@@ -561,8 +561,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#supported-platforms" title="Supported platforms" class="md-nav__link">
-    Supported platforms
+  <a href="#expected-redirect-behavior" title="Expected redirect behavior" class="md-nav__link">
+    Expected redirect behavior
   </a>
   
 </li>
@@ -576,6 +576,26 @@
   <a href="#create-deep-links" title="Create deep links" class="md-nav__link">
     Create deep links
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#short-links" title="Short links" class="md-nav__link">
+    Short links
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-links" title="Long links" class="md-nav__link">
+    Long links
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1712,8 +1732,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#supported-platforms" title="Supported platforms" class="md-nav__link">
-    Supported platforms
+  <a href="#expected-redirect-behavior" title="Expected redirect behavior" class="md-nav__link">
+    Expected redirect behavior
   </a>
   
 </li>
@@ -1727,6 +1747,26 @@
   <a href="#create-deep-links" title="Create deep links" class="md-nav__link">
     Create deep links
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#short-links" title="Short links" class="md-nav__link">
+    Short links
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-links" title="Long links" class="md-nav__link">
+    Long links
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1967,187 +2007,285 @@
 </li>
 <li>Use <a href="">Deep Views</a> to display content as a website<ul>
 <li>Increases <a href="https://branch.io/deepview/">install attribution</a></li>
-<li>Completes deep linking experience in <a href="#supported-platforms">certain apps</a></li>
+<li>Completes deep linking experience in <a href="#expected-redirect-behavior">certain apps</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<h4 id="supported-platforms">Supported platforms<a class="headerlink" href="#supported-platforms" title="Permanent link">&para;</a></h4>
-<ul>
-<li>
-<p>Apps which support Branch deep links</p>
+<h4 id="expected-redirect-behavior">Expected redirect behavior<a class="headerlink" href="#expected-redirect-behavior" title="Permanent link">&para;</a></h4>
+</li>
+</ul>
 <table>
 <thead>
 <tr>
-<th></th>
-<th>iOS</th>
-<th>Requirements</th>
-<th>Android</th>
-<th>Requirements</th>
+<th>App</th>
+<th>iOS App Installed</th>
+<th>iOS App Not Installed</th>
+<th>Android App Installed</th>
+<th>Android App Not Installed</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Facebook NewsFeed</td>
-<td>✔</td>
-<td>Enable <a href="https://dashboard.branch.io/settings/deepviews">Deep Views</a></td>
-<td>✔</td>
+<td>Facebook Newsfeed</td>
+<td>Falls back to web or app store</td>
+<td>Falls back to web or app store</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
+<td>Can force open iOS app using <a href="#deep-linking"><code>$uri_redirect_mode</code></a></td>
+</tr>
+<tr>
+<td>Facebook browser</td>
+<td>App opens</td>
+<td>Falls back to web or app store</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
 <td></td>
 </tr>
 <tr>
-<td>Facebook Messanger</td>
-<td>✔</td>
-<td>Enable <a href="https://dashboard.branch.io/settings/deepviews">Deep Views</a></td>
-<td>✔</td>
+<td>Facebook Messenger</td>
+<td>Falls back to web or app store</td>
+<td>Falls back to web or app store</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
+<td>Can force open iOS app using <a href="#deep-linking"><code>$uri_redirect_mode</code></a></td>
+</tr>
+<tr>
+<td>Facebook Messenger browser</td>
+<td>App opens</td>
+<td>Falls back to web or app store</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
 <td></td>
 </tr>
 <tr>
 <td>Instagram</td>
-<td>✔</td>
-<td>Enable <a href="https://dashboard.branch.io/settings/deepviews">Deep Views</a></td>
-<td>✔</td>
-<td></td>
+<td>Falls back to web or app store</td>
+<td>Falls back to web or app store</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
+<td>Can force open iOS app using <a href="#deep-linking"><code>$uri_redirect_mode</code></a></td>
 </tr>
 <tr>
-<td>SnapChat</td>
-<td>✔</td>
-<td>Enable <a href="https://dashboard.branch.io/settings/deepviews">Deep Views</a></td>
-<td>✘</td>
-<td><code>app.link</code> deep links are not clickable</td>
+<td>Snapchat</td>
+<td>Falls back to web or app store</td>
+<td>Falls back to web or app store</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
+<td></td>
 </tr>
 <tr>
 <td>Twitter</td>
-<td>✔</td>
-<td>Enable <a href="https://dashboard.branch.io/settings/deepviews">Deep Views</a></td>
-<td>✔</td>
-<td></td>
+<td>Falls back to web or app store</td>
+<td>Falls back to web or app store</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
+<td>Can force open iOS app using <a href="#deep-linking"><code>$uri_redirect_mode</code></a></td>
 </tr>
 <tr>
 <td>Pinterest</td>
-<td>✔</td>
-<td>Enable <a href="https://dashboard.branch.io/settings/deepviews">Deep Views</a></td>
-<td>✔</td>
+<td>Falls back to web or app store</td>
+<td>Falls back to web or app store</td>
+<td>Falls back to web or play store</td>
+<td>Falls back to web or play store</td>
 <td></td>
 </tr>
 <tr>
-<td>Line</td>
-<td>✔</td>
-<td>Enable <a href="https://dashboard.branch.io/settings/deepviews">Deep Views</a></td>
-<td>✔</td>
-<td></td>
-</tr>
-<tr>
-<td>Skype</td>
-<td>✔</td>
-<td>Enable <a href="https://dashboard.branch.io/settings/deepviews">Deep Views</a></td>
-<td>✔</td>
-<td></td>
-</tr>
-<tr>
-<td>Slack</td>
-<td>✔</td>
-<td></td>
-<td>✔</td>
-<td></td>
-</tr>
-<tr>
-<td>Chrome address bar</td>
-<td>✔</td>
-<td></td>
-<td>✔</td>
-<td></td>
-</tr>
-<tr>
-<td>Chrome web page</td>
-<td>✔</td>
-<td></td>
-<td>✔</td>
-<td></td>
-</tr>
-<tr>
-<td>FireFox address bar</td>
-<td>✘</td>
-<td></td>
-<td>✔</td>
-<td></td>
-</tr>
-<tr>
-<td>FireFox web page</td>
-<td>✔</td>
-<td></td>
-<td>✔</td>
+<td>Chrome browser</td>
+<td>App opens</td>
+<td>Falls back to web or app store</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
 <td></td>
 </tr>
 <tr>
 <td>Safari address bar</td>
-<td>✘</td>
-<td></td>
-<td></td>
+<td>Falls back to web or app store</td>
+<td>Falls back to web or app store</td>
+<td>-</td>
+<td>-</td>
 <td></td>
 </tr>
 <tr>
 <td>Safari web page</td>
-<td>✔</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>WeChat</td>
-<td>✔</td>
-<td>Enable <a href="https://dashboard.branch.io/settings/deepviews">Deep Views</a></td>
-<td>✔</td>
+<td>App opens</td>
+<td>Falls back to web or app store</td>
+<td>-</td>
+<td>-</td>
 <td></td>
 </tr>
 <tr>
-<td>WhatsApp</td>
-<td>✔</td>
-<td><code>app.link</code> require https/http to be clickable</td>
-<td>✔</td>
-<td><code>app.link</code> require https/http to be clickable</td>
+<td>Firefox browser</td>
+<td>Falls back to web or app store</td>
+<td>Falls back to web or app store</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
+<td></td>
+</tr>
+<tr>
+<td>UC browser</td>
+<td>-</td>
+<td>-</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
+<td></td>
+</tr>
+<tr>
+<td>Naver browser</td>
+<td>-</td>
+<td>-</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
+<td></td>
+</tr>
+<tr>
+<td>Kakao browser</td>
+<td>-</td>
+<td>-</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
+<td></td>
+</tr>
+<tr>
+<td>Opera browser</td>
+<td>-</td>
+<td>-</td>
+<td>Falls back to web or play store</td>
+<td>Falls back to web or play store</td>
+<td></td>
 </tr>
 <tr>
 <td>Hangouts</td>
-<td>✔</td>
-<td></td>
-<td>✔</td>
+<td>App opens</td>
+<td>Falls back to web or app store</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
 <td></td>
 </tr>
 <tr>
 <td>iMessage</td>
-<td>✔</td>
-<td></td>
-<td></td>
+<td>App opens</td>
+<td>Falls back to web or app store</td>
+<td>-</td>
+<td>-</td>
 <td></td>
 </tr>
 <tr>
+<td>Slack</td>
+<td>App opens</td>
+<td>Falls back to web or app store</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
+<td></td>
+</tr>
+<tr>
+<td>WeChat</td>
+<td>Falls back to web or app store</td>
+<td>Falls back to web or app store</td>
+<td>Falls back to web or play store</td>
+<td>Falls back to web or play store</td>
+<td>You can customize <a href="#redirections">WeChat fallback urls</a></td>
+</tr>
+<tr>
+<td>WhatsApp</td>
+<td>App opens</td>
+<td>Falls back to web or app store</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
+<td><code>app.link</code> require https/http to be clickable</td>
+</tr>
+<tr>
 <td>Apple Mail</td>
-<td>✔</td>
-<td></td>
-<td></td>
+<td>App opens</td>
+<td>Falls back to web or app store</td>
+<td>-</td>
+<td>-</td>
 <td></td>
 </tr>
 <tr>
 <td>Gmail</td>
-<td>✔</td>
-<td></td>
-<td>✔</td>
+<td>App opens</td>
+<td>Falls back to web or app store</td>
+<td>App opens</td>
+<td>Falls back to web or play store</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-</li>
-</ul>
-</li>
-</ul>
 <h2 id="create-deep-links">Create deep links<a class="headerlink" href="#create-deep-links" title="Permanent link">&para;</a></h2>
 <ul>
-<li>There are multiple methods to create Branch deep links:<ul>
+<li>
+<h3 id="short-links">Short links<a class="headerlink" href="#short-links" title="Permanent link">&para;</a></h3>
+<ul>
 <li>Use <a href="../../../pages/dashboard/analytics/#quick-links">Quick Links</a> for fast link creation and easy tracking</li>
 <li>Use our <a href="#dialog-code">App SDK</a> to create and share links within your app</li>
 <li>Use our <a href="../../../pages/web/integrate/#create-deep-link">Web SDK</a> to create to links convert web to app users</li>
 <li>Use our <a href="../../../pages/apps/api/#link-create">HTTP API</a> to programmatically create links from your server</li>
+</ul>
+</li>
+<li>
+<h3 id="long-links">Long links<a class="headerlink" href="#long-links" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>If you don't need a short link and care to avoid a network call, you can create links by appending query parameters to the Branch domain.</p>
+<ol>
+<li>Start with an exiting Branch link, or your Branch link domain: <strong>http://[branchsubdomain]</strong>, like <em>yourapp.app.link</em> or <em>links.yourdomain.com</em>.</li>
+<li>Append <code>?</code> to start the query params string: <strong>http://[branchsubdomain]?</strong><ul>
+<li>If you're creating a new link and and you're using the legacy <code>bnc.lt</code> domain or a custom domain/subdomain as the base for your links, instead append <code>/a/your_Branch_key?</code>: <code>http://bnc.lt/a/your_branch_key?</code></li>
+</ul>
+</li>
+<li>Append any additional key/value pairs, and analytics or link control parameters.</li>
+</ol>
+</li>
+<li>
+<p>Here's an example of a finalized dynamic link (line breaks added for legibility):</p>
+<div class="codehilite"><pre><span></span>https://<span class="o">[</span>branchsubdomain<span class="o">]</span>?
+  %24deeplink_path<span class="o">=</span>article%2Fjan%2F123<span class="p">&amp;</span>
+  %24fallback_url<span class="o">=</span>https%3A%2F%2Fgoogle.com<span class="p">&amp;</span>
+  <span class="nv">channel</span><span class="o">=</span>facebook<span class="p">&amp;</span>
+  <span class="nv">feature</span><span class="o">=</span>affiliate<span class="p">&amp;</span>
+  <span class="nv">user_id</span><span class="o">=</span><span class="m">4562</span><span class="p">&amp;</span>
+  <span class="nv">name</span><span class="o">=</span>Alex
+</pre></div>
+
+<p>The following keys have been embedded:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>$deeplink_path</strong></td>
+<td>article/jan/123</td>
+</tr>
+<tr>
+<td><strong>$fallback_url</strong></td>
+<td><a href="https://google.com">https://google.com</a></td>
+</tr>
+<tr>
+<td><strong>channel</strong></td>
+<td>facebook</td>
+</tr>
+<tr>
+<td><strong>feature</strong></td>
+<td>affiliate</td>
+</tr>
+<tr>
+<td><strong>user_id</strong></td>
+<td>4562</td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td>Alex</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 </li>
 </ul>
@@ -2156,8 +2294,8 @@
 <li>
 <h4 id="analytical-labels">Analytical labels<a class="headerlink" href="#analytical-labels" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>These labels allow you to filter and organize your deep links</p>
+<li>These labels allow you to filter and organize your deep links</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -2205,13 +2343,11 @@
 </tbody>
 </table>
 </li>
-</ul>
-</li>
 <li>
 <h4 id="custom-data">Custom data<a class="headerlink" href="#custom-data" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>Pass any custom data to be read inside your app</p>
+<li>Pass any custom data to be read inside your app</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -2249,14 +2385,12 @@
 </tbody>
 </table>
 </li>
-</ul>
-</li>
 <li>
 <h4 id="redirections">Redirections<a class="headerlink" href="#redirections" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Navigate to different locations based on device information</li>
-<li>
-<p>Navigation URLs must be websites, not deep links</p>
+<li>Navigation URLs must be websites, not deep links</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -2329,13 +2463,11 @@
 </tbody>
 </table>
 </li>
-</ul>
-</li>
 <li>
 <h4 id="deep-linking">Deep linking<a class="headerlink" href="#deep-linking" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>Navigate to different locations based on device information</p>
+<li>Navigate to different locations based on device information</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -2397,14 +2529,50 @@
 </tr>
 </tbody>
 </table>
-</li>
+<ul>
+<li>Force open the app with $uri_redirect_mode</li>
+</ul>
+<p>Branch's linking philosophy is to never show an error message to the user, so in <a href="#expected-redirect-behavior">many cases</a>, we'd rather redirect to the App Store, Play Store or website even when the app is installed than risk showing an error message. You can control this using <code>$uri_redirect_mode</code> and setting the values as follows when you create a link or when you summon a banner.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$uri_redirect_mode</td>
+<td><strong>0</strong></td>
+<td>This is the default value that yields the standard behavior where we don't try to open the app if the user can see an error.</td>
+</tr>
+<tr>
+<td>$uri_redirect_mode</td>
+<td><strong>1</strong></td>
+<td>Smart redirect mode. Same behavior as 0 until we know the user has the app installed through Branch persona data. In that case, force URI schemes to open the app.</td>
+</tr>
+<tr>
+<td>$uri_redirect_mode</td>
+<td><strong>2</strong></td>
+<td>Forceful redirect mode. Always try to force open the app, even if it risks showing an error message when the app is not installed.</td>
+</tr>
+</tbody>
+</table>
+<p>Apps/browsers that support deep linking with this forceful redirect mode:</p>
+<ul>
+<li>Facebook newsfeed iOS</li>
+<li>Instagram iOS</li>
+<li>Twitter iOS</li>
+<li>Safari iOS</li>
+<li>Firefox iOS &amp; Android</li>
 </ul>
 </li>
 <li>
 <h4 id="content">Content<a class="headerlink" href="#content" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>Handle content properties</p>
+<li>Handle content properties</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -2442,13 +2610,11 @@
 </tbody>
 </table>
 </li>
-</ul>
-</li>
 <li>
 <h4 id="deepview">DeepView<a class="headerlink" href="#deepview" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>Handle DeepView properties</p>
+<li>Enable / control <a href="../../../pages/web/deep-views/#active-deepviews">active deepview</a> properties</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -2475,14 +2641,36 @@
 </tr>
 </tbody>
 </table>
-</li>
+<ul>
+<li>Control <a href="../../../pages/web/deep-views/#passive-deepviews">passive deepview</a> templates</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ios_passive_deepview</td>
+<td>The name of the template to use for iOS.</td>
+<td><code>default_template</code></td>
+</tr>
+<tr>
+<td>$android_passive_deepview</td>
+<td>The name of the template to use for Android.</td>
+<td><code>default_template</code></td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
 <h4 id="open-graph">Open Graph<a class="headerlink" href="#open-graph" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>Handle Facebook properties</p>
+<li>Handle Facebook properties</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -2494,17 +2682,17 @@
 <tbody>
 <tr>
 <td>$og_title</td>
-<td></td>
+<td>Set on dashboard</td>
 <td>Set the title of the link as it will be seen in social media displays</td>
 </tr>
 <tr>
 <td>$og_description</td>
-<td></td>
+<td>Set on dashboard</td>
 <td>Set the description of the link as it will be seen in social media displays</td>
 </tr>
 <tr>
 <td>$og_image_url</td>
-<td></td>
+<td>Set on dashboard</td>
 <td>Set the image of the link as it will be seen in social media displays</td>
 </tr>
 <tr>
@@ -2539,19 +2727,17 @@
 </tr>
 <tr>
 <td>$og_app_id</td>
-<td></td>
+<td>Set on dashboard</td>
 <td>(Rarely used) Sets the app id tag</td>
 </tr>
 </tbody>
 </table>
 </li>
-</ul>
-</li>
 <li>
 <h4 id="twitter">Twitter<a class="headerlink" href="#twitter" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>Handle Twitter properties</p>
+<li>Handle Twitter properties</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -2568,17 +2754,17 @@
 </tr>
 <tr>
 <td>$twitter_title</td>
-<td></td>
+<td>Set on dashboard</td>
 <td>Set the title of the Twitter card</td>
 </tr>
 <tr>
 <td>$twitter_description</td>
-<td></td>
+<td>Set on dashboard</td>
 <td>Set the description of the Twitter card</td>
 </tr>
 <tr>
 <td>$twitter_image_url</td>
-<td></td>
+<td>Set on dashboard</td>
 <td>Set the image URL for the Twitter card</td>
 </tr>
 <tr>
@@ -2609,13 +2795,11 @@
 </tbody>
 </table>
 </li>
-</ul>
-</li>
 <li>
 <h4 id="universal-object">Universal Object<a class="headerlink" href="#universal-object" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>Properties for the Branch Universal Object within your <a href="#dialog-code">app</a> integration</p>
+<li>Properties for the Branch Universal Object within your <a href="#dialog-code">app</a> integration</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -2682,10 +2866,8 @@
 </tr>
 </tbody>
 </table>
-</li>
-<li>
-<p>Best practices for the Branch Universal Object</p>
 <ul>
+<li>Best practices for the Branch Universal Object<ul>
 <li>Do<ul>
 <li>Set the <code>canonicalIdentifier</code> to a unique, de-duped value across instances of the app</li>
 <li>Ensure that the <code>title</code>, <code>contentDescription</code> and <code>imageUrl</code> properly represent the object</li>
@@ -2758,8 +2940,8 @@
 <li>
 <h4 id="reserved-prefixes">Reserved prefixes<a class="headerlink" href="#reserved-prefixes" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>Branch adds additional properties to your deep link data to explain the link</p>
+<li>Branch adds additional properties to your deep link data to explain the link</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -2783,13 +2965,11 @@
 </tbody>
 </table>
 </li>
-</ul>
-</li>
 <li>
 <h4 id="callback-values">Callback values<a class="headerlink" href="#callback-values" title="Permanent link">&para;</a></h4>
 <ul>
-<li>
-<p>Additional properties read from the <code>initSession</code> within your <a href="#dialog-code">app</a> and <a href="../../../pages/web/integrate/">website</a> integrations</p>
+<li>Additional properties read from the <code>initSession</code> within your <a href="#dialog-code">app</a> and <a href="../../../pages/web/integrate/">website</a> integrations</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -2848,8 +3028,6 @@
 </table>
 </li>
 </ul>
-</li>
-</ul>
 <h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -2858,7 +3036,7 @@
 <li>Make sure you have completed <a href="../../../pages/dashboard/integrate/">Configure your dashboard</a> and <a href="#dialog-code">Configure your app</a></li>
 <li>Make sure the <code>Branch key</code> in your app (<a href="#dialog-code">Configure your app</a>) matches the <code>Branch key</code> in your deep link (<a href="#view-deep-link-data">View deep link data</a>)</li>
 <li>Make sure you have not disabled deep linking (<a href="../../../pages/apps/ios/#re-enable-universal-linking">Re-enable universal linking</a>)</li>
-<li>Make sure you meet the requirements for <a href="#supported-platforms">Supported platforms</a></li>
+<li>Make sure you meet the requirements for <a href="#expected-redirect-behavior">Supported platforms</a></li>
 <li>Make sure the link the user is click on matches your <code>link domain</code> from the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
 </ul>
 </li>

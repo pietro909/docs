@@ -420,15 +420,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#initialize-branch" title="Initialize Branch" class="md-nav__link">
-    Initialize Branch
+  <a href="#handle-incoming-links" title="Handle Incoming Links" class="md-nav__link">
+    Handle Incoming Links
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#handle-incoming-links" title="Handle Incoming Links" class="md-nav__link">
-    Handle Incoming Links
+  <a href="#initialize-branch" title="Initialize Branch" class="md-nav__link">
+    Initialize Branch
   </a>
   
 </li>
@@ -1693,15 +1693,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#initialize-branch" title="Initialize Branch" class="md-nav__link">
-    Initialize Branch
+  <a href="#handle-incoming-links" title="Handle Incoming Links" class="md-nav__link">
+    Handle Incoming Links
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#handle-incoming-links" title="Handle Incoming Links" class="md-nav__link">
-    Handle Incoming Links
+  <a href="#initialize-branch" title="Initialize Branch" class="md-nav__link">
+    Initialize Branch
   </a>
   
 </li>
@@ -1932,7 +1932,7 @@
 <li>
 <h4 id="enable-branch-on-mparticle">Enable Branch on mParticle<a class="headerlink" href="#enable-branch-on-mparticle" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Retrieve your Branch Key on the <a href="https://dashboard.branch.io/settings/link">Link Settings</a> page of the Branch dashboard.</li>
+<li>Retrieve your Branch Key on the <a href="https://dashboard.branch.io/account-settings/app">App Settings</a> page of the Branch dashboard.</li>
 <li>From your <a href="https://app.mparticle.com/">mParticle dashboard</a> navigate to the Services page. (The paper airplane icon on the left side)</li>
 <li>Scroll down to the Branch tile, or enter Branch in the search bar.</li>
 <li>Click on the Branch tile and then select "Activate a Platform".</li>
@@ -2003,10 +2003,6 @@
 </ul>
 </li>
 <li>
-<h4 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h4>
-<p>As with any kit, mParticle will automatically handle initializing Branch sessions. At this point you should start seeing your Branch session data - including installs, re-opens, and any custom events - in your Branch dashboard.</p>
-</li>
-<li>
 <h4 id="handle-incoming-links">Handle Incoming Links<a class="headerlink" href="#handle-incoming-links" title="Permanent link">&para;</a></h4>
 <p>Open the <code>Activity</code> for which you registered the <code>Intent Filter</code> in the previous section, and hook into the <code>onStart</code> lifecycle method by adding this override:</p>
 <div class="codehilite"><pre><span></span><span class="nd">@Override</span>
@@ -2032,6 +2028,11 @@
 </span><span class="o">}</span>
 </pre></div>
 
+</li>
+<li>
+<h4 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h4>
+<p>As with any kit, mParticle will automatically handle initializing Branch sessions. At this point you should start seeing your Branch session data - including installs, re-opens, and any custom events - in your Branch dashboard.</p>
+<p>All of your deep link parameters and Branch-added parameters will be returned to you when initialization completes. You can find a summary of <a href="../../../pages/links/integrate/#callback-values">Branch-added values in the table here</a>. If no referring link data was present, you'll see <code>+clicked_branch_link</code> equal to <code>false</code>.</p>
 </li>
 <li>
 <h4 id="test-deep-link">Test deep link<a class="headerlink" href="#test-deep-link" title="Permanent link">&para;</a></h4>

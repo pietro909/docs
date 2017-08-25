@@ -462,6 +462,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#receive-deep-link-data" title="Receive deep link data" class="md-nav__link">
+    Receive deep link data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#test-deep-link-ios" title="Test deep link iOS" class="md-nav__link">
     Test deep link iOS
   </a>
@@ -1679,6 +1686,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#receive-deep-link-data" title="Receive deep link data" class="md-nav__link">
+    Receive deep link data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#test-deep-link-ios" title="Test deep link iOS" class="md-nav__link">
     Test deep link iOS
   </a>
@@ -1935,7 +1949,7 @@ carthage update
 <p>Configure info.pList</p>
 <ul>
 <li>
-<p>Add <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a> values</p>
+<p>Add <a href="https://dashboard.branch.io/account-settings/app">Branch Dashboard</a> values</p>
 <p><img alt="image" src="http://i.imgur.com/PwXnHWz.png" /></p>
 </li>
 </ul>
@@ -2017,7 +2031,7 @@ carthage update
 
 </li>
 <li>
-<p>Replace the following with values from your <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></p>
+<p>Replace the following with values from your <a href="https://dashboard.branch.io/account-settings/app">Branch Dashboard</a></p>
 <ul>
 <li><code>branchandroid</code></li>
 <li><code>uobg.app.link</code></li>
@@ -2160,6 +2174,10 @@ carthage update
 </ul>
 </li>
 </ul>
+</li>
+<li>
+<h4 id="receive-deep-link-data">Receive deep link data<a class="headerlink" href="#receive-deep-link-data" title="Permanent link">&para;</a></h4>
+<p>All of your deep link parameters and Branch-added parameters will be returned to you when initialization completes. You can find a summary of <a href="../../../pages/links/integrate/#callback-values">Branch-added values in the table here</a>. If no referring link data was present, you'll see <code>+clicked_branch_link</code> equal to <code>false</code>.</p>
 </li>
 <li>
 <h4 id="test-deep-link-ios">Test deep link iOS<a class="headerlink" href="#test-deep-link-ios" title="Permanent link">&para;</a></h4>

@@ -591,22 +591,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-submitting-ios-apps-to-the-app-store" title="4 - Submitting iOS Apps to the App Store" class="md-nav__link">
-    4 - Submitting iOS Apps to the App Store
+  <a href="#receive-deep-link-data" title="Receive deep link data" class="md-nav__link">
+    Receive deep link data
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#notifying-apple-of-idfa-usage" title="Notifying Apple of IDFA usage" class="md-nav__link">
-    Notifying Apple of IDFA usage
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2000,22 +1987,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-submitting-ios-apps-to-the-app-store" title="4 - Submitting iOS Apps to the App Store" class="md-nav__link">
-    4 - Submitting iOS Apps to the App Store
+  <a href="#receive-deep-link-data" title="Receive deep link data" class="md-nav__link">
+    Receive deep link data
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#notifying-apple-of-idfa-usage" title="Notifying Apple of IDFA usage" class="md-nav__link">
-    Notifying Apple of IDFA usage
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2304,7 +2278,7 @@
 <p>Note that the <strong>Live</strong> and <strong>Test</strong> apps on the Branch dashboard are completely separate; each has its own Branch key. Even when <strong>Live</strong> and <strong>Test</strong> sections of the dashboard have been configured identically and links from both are able to open up a particular app, the app will only receive link data for which it has the matching Branch key.</p>
 <h5 id="creating-a-branch-link-domain-and-branch-key-for-an-app">Creating a Branch link domain and Branch key for an app<a class="headerlink" href="#creating-a-branch-link-domain-and-branch-key-for-an-app" title="Permanent link">&para;</a></h5>
 <p>Register the app on the Branch dashboard, here: <a href="https://dashboard.branch.io"><a href="https://dashboard.branch.io">https://dashboard.branch.io</a></a></p>
-<p>The Branch key can be found on the <a href="https://dashboard.branch.io/settings">General Settings</a> page. The app's Branch link domain  will be listed at the very bottom of the <a href="https://dashboard.branch.io/link">Link Settings</a> page.</p>
+<p>The Branch key can be found on the <a href="https://dashboard.branch.io/account-settings/app">General Settings</a> page. The app's Branch link domain  will be listed at the very bottom of the <a href="https://dashboard.branch.io/link">Link Settings</a> page.</p>
 <ul>
 <li>
 <h4 id="configure-app">Configure app<a class="headerlink" href="#configure-app" title="Permanent link">&para;</a></h4>
@@ -3053,19 +3027,11 @@
 <span class="p">}</span>
 </pre></div>
 
-<hr />
-<h4 id="4-submitting-ios-apps-to-the-app-store">4 - Submitting iOS Apps to the App Store<a class="headerlink" href="#4-submitting-ios-apps-to-the-app-store" title="Permanent link">&para;</a></h4>
-<p>Branch uses the Apple Advertising Identifier, or <em>IDFA</em>, to identify users across our entire partner network, greatly increasing the accuracy of matching. Read more about matching accuracy on the <a href="https://dev.branch.io/getting-started/matching-accuracy/overview/">Matching Platform</a> page.  </p>
-<h5 id="notifying-apple-of-idfa-usage">Notifying Apple of IDFA usage<a class="headerlink" href="#notifying-apple-of-idfa-usage" title="Permanent link">&para;</a></h5>
-<p>Be sure to let Apple know that you are using the IDFA when submitting apps to the App Store after integrating the Branch SDK.  </p>
-<ol>
-<li>Answer <strong>Yes</strong> when presented with the question: <strong>Does this app use the Advertising Identifier (IDFA)?</strong>  </li>
-<li>Check the following two boxes:  </li>
-<li><strong>Attribute this app installation to a previously served advertisement</strong>  </li>
-<li><strong>Attribute an action taken within this app to a previously served advertisement</strong>  </li>
-</ol>
-<p><img alt="Apple Advertising Identifier" src="../../../docs/images/idfa.png" /></p>
 <ul>
+<li>
+<h4 id="receive-deep-link-data">Receive deep link data<a class="headerlink" href="#receive-deep-link-data" title="Permanent link">&para;</a></h4>
+<p>All of your deep link parameters and Branch-added parameters will be returned to you when initialization completes. You can find a summary of <a href="../../../pages/links/integrate/#callback-values">Branch-added values in the table here</a>. If no referring link data was present, you'll see <code>+clicked_branch_link</code> equal to <code>false</code>.</p>
+</li>
 <li>
 <h4 id="test-deep-link">Test deep link<a class="headerlink" href="#test-deep-link" title="Permanent link">&para;</a></h4>
 </li>

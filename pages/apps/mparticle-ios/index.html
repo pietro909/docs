@@ -462,13 +462,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#initialize-branch" title="Initialize Branch" class="md-nav__link">
-    Initialize Branch
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#handle-incoming-links" title="Handle Incoming Links" class="md-nav__link">
     Handle Incoming Links
   </a>
@@ -1763,13 +1756,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#initialize-branch" title="Initialize Branch" class="md-nav__link">
-    Initialize Branch
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#handle-incoming-links" title="Handle Incoming Links" class="md-nav__link">
     Handle Incoming Links
   </a>
@@ -2001,7 +1987,7 @@
 <h4 id="configure-infoplist">Configure info.pList<a class="headerlink" href="#configure-infoplist" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Add <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a> values</p>
+<p>Add <a href="https://dashboard.branch.io/account-settings/app">Branch Dashboard</a> values</p>
 <p><img alt="image" src="http://i.imgur.com/PwXnHWz.png" /></p>
 </li>
 </ul>
@@ -2049,10 +2035,6 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 <li>Click on the Apple icon, then toggle the status ON.</li>
 <li>Enter your Branch key in the marked field and click "Save".</li>
 </ul>
-</li>
-<li>
-<h4 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h4>
-<p>As with any kit, mParticle will automatically handle initializing Branch sessions. At this point you should start seeing your Branch session data - including installs, re-opens, and any custom events - in your Branch dashboard.</p>
 </li>
 <li>
 <h4 id="handle-incoming-links">Handle Incoming Links<a class="headerlink" href="#handle-incoming-links" title="Permanent link">&para;</a></h4>
@@ -2124,7 +2106,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 </li>
 <li>
 <p>Objective-C</p>
-<div class="codehilite"><pre><span></span><span class="cp">#import &quot;AppDelegate.h&quot;</span>
+<p><div class="codehilite"><pre><span></span><span class="cp">#import &quot;AppDelegate.h&quot;</span>
 <span class="cp">#import &quot;Branch/Branch.h&quot;</span>
 
 <span class="k">@interface</span> <span class="nc">AppDelegate</span> <span class="p">()</span>
@@ -2195,9 +2177,11 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 </span>
 <span class="k">@end</span>
 </pre></div>
-
+- #### Initialize Branch</p>
 </li>
 </ul>
+<p>As with any kit, mParticle will automatically handle initializing Branch sessions. At this point you should start seeing your Branch session data - including installs, re-opens, and any custom events - in your Branch dashboard.</p>
+<p>All of your deep link parameters and Branch-added parameters will be returned to you when initialization completes. You can find a summary of <a href="../../../pages/links/integrate/#callback-values">Branch-added values in the table here</a>. If no referring link data was present, you'll see <code>+clicked_branch_link</code> equal to <code>false</code>.</p>
 </li>
 <li>
 <h4 id="test-deep-link">Test deep link<a class="headerlink" href="#test-deep-link" title="Permanent link">&para;</a></h4>
