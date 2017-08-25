@@ -1051,6 +1051,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#list-content" title="List Content" class="md-nav__link">
     List Content
   </a>
@@ -1547,6 +1554,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#list-content" title="List Content" class="md-nav__link">
     List Content
   </a>
@@ -1631,11 +1645,11 @@
 <p>Some older devices cannot index content. iPad minis, for example, cannot use CoreSpotlight. The SDK includes a check for these devices and will return an error message if you attempt to index content on them.</p>
 </div>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Pre-reqs</p>
-<p>This guide requires you to have already <a href="../../../pages/apps/ios/">integrated the Branch SDK</a> into your app. For Spotlight search results to function as intended, you should also <a href="../../../pages/apps/ios/#navigate-to-content">configure deep link routing</a>.</p>
-</div>
-<p>{% endprerequisite %}</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>This guide requires you to have already [integrated the Branch SDK](/pages/apps/ios/) into your app. For Spotlight search results to function as intended, you should also [configure deep link routing](/pages/apps/ios/#navigate-to-content).
+</pre></div>
+
+
 <h3 id="list-content">List Content<a class="headerlink" href="#list-content" title="Permanent link">&para;</a></h3>
 <p>Content can be added to Spotlight search by using the <code>BranchUniversalObject</code>. We'd recommend that you put this on every page that renders a piece of content for your users. This way, a user could rediscover a previous thing that they had viewed.</p>
 <p>First, define the content that you'd like to be listed by customizing the <code>BranchUniversalObject</code>. We'd recommend that you do this in <code>viewDidLoad</code></p>
@@ -1659,7 +1673,6 @@
 
 <span class="c1">// important to set this flag to true</span>
 <span class="n">branchUniversalObject</span><span class="p">.</span><span class="n">automaticallyListOnSpotlight</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="p">{</span><span class="o">%</span> <span class="n">endhighlight</span> <span class="o">%</span><span class="p">}</span>
 </pre></div>
 
 <p>Then call the <code>userCompletedAction</code> method with the <code>View</code> event on your <code>BranchUniversalObject</code>. You will want to do this every single time a user goes to view a page in your app, so we recommend putting this in <code>viewDidAppear</code>, which means you must initialize the Branch Universal Object with all appropriate metadata before <code>viewDidAppear</code>.</p>
@@ -1680,8 +1693,7 @@
 </pre></div>
 
 <p>In Swift:</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">highlight</span> <span class="n">swift</span> <span class="o">%</span><span class="p">}</span>
-<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="k">continue</span> <span class="n">userActivity</span><span class="p">:</span> <span class="bp">NSUserActivity</span><span class="p">,</span> <span class="n">restorationHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">([</span><span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="k">continue</span> <span class="n">userActivity</span><span class="p">:</span> <span class="bp">NSUserActivity</span><span class="p">,</span> <span class="n">restorationHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">([</span><span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
     <span class="c1">// pass the url to the handle deep link call</span>
     <span class="k">return</span> <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">continueUserActivity</span><span class="p">(</span><span class="n">userActivity</span><span class="p">)</span>
 

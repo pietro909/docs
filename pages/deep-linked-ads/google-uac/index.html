@@ -1626,20 +1626,24 @@
 <div class="admonition warning">
 <p class="admonition-title">Prerequisites</p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked> To track installs from Google Ads you should <a href="../TODO">integrate the Branch SDK</a> into your app.</li>
-<li class="task-list-item"><input type="checkbox" disabled checked> If you want to deep link from your ads directly to content, you should <a href="../TODO">configure deep link routing</a>.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> To track installs from Google Ads you should integrate the Branch SDK into your app.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> If you want to deep link from your ads directly to content, you should configure deep link routing.</li>
 <li class="task-list-item"><input type="checkbox" disabled checked> Ads is a premium product priced on Monthly Active Users. Sign up for the Ads product to enable this functionality.</li>
 </ul>
 </div>
 <h4 id="enable-google-as-an-ad-partner">Enable Google as an ad partner<a class="headerlink" href="#enable-google-as-an-ad-partner" title="Permanent link">&para;</a></h4>
 <p>Set up Google as an Ad Partner and conversion tracking from Adwords on the Branch dashboard. If you already have Google enabled as an ad partner, follow the conversion tracking steps to ensure the conversion ID and label parameters are setup.</p>
-<ol>
-<li>Navigate to the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management tab</a>.
-<img alt="Ads Partner Management" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/ads-partner-management.png" /></li>
-<li>Search for <strong>Google AdWords</strong>.
-<img alt="Find Google Adwords in Partner Manager" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/find-google-partner.png" /></li>
+<ul>
+<li>Navigate to the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management tab</a>.</li>
+</ul>
+<p><img alt="Ads Partner Management" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/ads-partner-management.png" /></p>
+<ul>
+<li>Search for <strong>Google AdWords</strong>.</li>
+</ul>
+<p><img alt="Find Google Adwords in Partner Manager" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/find-google-partner.png" /></p>
+<ul>
 <li>We will now fill in the conversion ID and Label fields.</li>
-</ol>
+</ul>
 <h4 id="enable-adwords-conversions">Enable Adwords Conversions<a class="headerlink" href="#enable-adwords-conversions" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Go to your <a href="https://adwords.google.com/cm/CampaignMgmt" target="_blank">Adwords dashboard</a>.</li>
@@ -1682,10 +1686,6 @@
 <li>Under the Analytics Tags sub section additional tags can be set. It is recommended to fill in these fields as they can be used as filters in Branch's Ads Analytics view. To best connect your ad link with your Adwords Campaign, set the channel field to Google Adwords and set the campaign field to the same ad campaign name used in Adwords.
 <img alt="Analytics Tags" src="../../../img/pages/deep-linked-ads/reusable-images/adwords-analytics-tags.png" /></li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Optional: Deep Link Data</p>
-<p>You can use this configuration section to specify custom link parameters that will be deep linked into the app after install. These could include a coupon code or a page identifier to route the user. Visit the <a href="../TODO">Deep Link Routing</a> page to learn more.</p>
-</div>
 <h4 id="configure-an-add">Configure an Add<a class="headerlink" href="#configure-an-add" title="Permanent link">&para;</a></h4>
 <p>To setup a Universal App Campaign we will place our unique Branch Ad link into a Adwords Conversion Postback setting. Adwords campaign documentation is available <strong><a href="https://support.google.com/adwords/answer/6247380?hl=en" target="_blank">here</a></strong>.</p>
 <h4 id="create-your-campaign">Create Your Campaign<a class="headerlink" href="#create-your-campaign" title="Permanent link">&para;</a></h4>
@@ -1727,8 +1727,8 @@
 <p><strong>Q: I'm not seeing any data coming through for the Universal App Campaign?</strong></p>
 <p><strong>A:</strong> If you see absolutely 0 data coming through from your integration, it's possible that you're not collecting Google Advertising ID (GAID) on Android or IDFA on iOS.</p>
 <ul>
-<li>iOS: Add the AdSupport.framework and read this extra info about <a href="../TODO">submitting</a> to the store.</li>
-<li>Android: Add Google Play Services so that we can collect GAID. See <a href="../TODO">here</a>.</li>
+<li>iOS: Add the AdSupport.framework.</li>
+<li>Android: Add Google Play Services so that we can collect GAID.</li>
 </ul>
 <p><strong>Q: There seems to be a discrepancy between the Install and Opens values?</strong></p>
 <p><strong>A:</strong> One discrepancy root cause we've seen before is the scenario where Branch will classify an install as an 'open'. We remember the history of a particular user via their IDFA (in addition to using a few other methods) and will detect whether the user is actually a new user or a returning user who had previously uninstalled your app. Facebook doesn't do this.</p>

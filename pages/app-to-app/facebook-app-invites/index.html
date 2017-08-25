@@ -1783,8 +1783,14 @@
 <h3 id="authenticate-branch-with-facebook">Authenticate Branch with Facebook<a class="headerlink" href="#authenticate-branch-with-facebook" title="Permanent link">&para;</a></h3>
 <p>In order for Branch to work with Facebook App Invites, you must first allow Branch to access your Facebook app information.</p>
 <ol>
-<li>Log in to Facebook, navigate to <a href="http://developers.facebook.com/apps">developers.facebook.com/apps</a> and choose your app. You'll need the <strong>App ID</strong> and <strong>App Secret</strong>.{% image src='/img/pages/features/facebook-app-invites/fb_auth_fb.png' three-quarters center alt='Facebook Auth' %}</li>
-<li>On the Branch Dashboard, go to <a href="https://dashboard.branch.io/#/settings/link">Link Settings</a> and scroll down to 'Authenticate for Facebook Install Ads'. Enter your <strong>App ID</strong> and <strong>App Secret</strong> from Facebook.{% image src='/img/pages/features/facebook-app-invites/fb_auth_branch.png' three-quarters center alt='Facebook Auth' %}</li>
+<li>Log in to Facebook, navigate to <a href="http://developers.facebook.com/apps">developers.facebook.com/apps</a> and choose your app. You'll need the <strong>App ID</strong> and <strong>App Secret</strong>.</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/app-to-app/facebook-app-invites/fb_auth_fb.png" /></p>
+<ol>
+<li>On the Branch Dashboard, go to <a href="https://dashboard.branch.io/link-settings">Link Settings</a> and scroll down to 'Authenticate for Facebook Install Ads'. Enter your <strong>App ID</strong> and <strong>App Secret</strong> from Facebook.</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/app-to-app/facebook-app-invites/fb_auth_branch.png" /></p>
+<ol>
 <li>Press 'Authenticate'.</li>
 </ol>
 <h3 id="insert-branch-link-into-app-invite">Insert Branch link into App Invite<a class="headerlink" href="#insert-branch-link-into-app-invite" title="Permanent link">&para;</a></h3>
@@ -1799,7 +1805,6 @@
 <p>In Swift
 <div class="codehilite"><pre><span></span><span class="n">In</span> <span class="n">the</span> <span class="n">Bridging</span> <span class="n">Header</span><span class="p">,</span> <span class="n">add</span> <span class="n">the</span> <span class="nl">following</span><span class="p">:</span>
 
-<span class="p">{</span><span class="o">%</span> <span class="n">highlight</span> <span class="n">objective</span><span class="o">-</span><span class="n">c</span> <span class="o">%</span><span class="p">}</span>
 <span class="cp">#import &quot;Branch.h&quot;</span>
 <span class="cp">#import &quot;BranchUniversalObject.h&quot;</span>
 <span class="cp">#import &quot;BranchLinkProperties.h&quot;</span>
@@ -1928,11 +1933,11 @@
 </div>
 <p><img alt="image" src="../../../img/pages/app-to-app/facebook-app-invites/marketing_link_row.png" /></p>
 <p>To view more details stats, click the <em>small button that looks like a bar chart</em> on the far right. Note that these stats are <strong>limited to the date range</strong> at the top. You can expand the range if you'd like.</p>
-<p><img alt="image" src="../../../img/pages/features/facebook-app-invites/click_flow_analytics.png" /></p>
+<p><img alt="image" src="../../../img/pages/app-to-app/facebook-app-invites/click_flow_analytics.png" /></p>
 <h2 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h2>
 <h3 id="show-personalized-welcome-screen">Show personalized welcome screen<a class="headerlink" href="#show-personalized-welcome-screen" title="Permanent link">&para;</a></h3>
 <p>Since you used a Branch link for the URL in the App Invite, you can use Branch to determine if a new user came from an existing app user, and show a personalized welcome.</p>
-<p><img alt="image" src="../../../img/pages/features/facebook-app-invites/gogobot_onboarding_screens.png'" /></p>
+<p><img alt="image" src="../../../img/pages/app-to-app/facebook-app-invites/gogobot_onboarding_screens.png'" /></p>
 <!--- iOS -->
 
 <p>Then modify your <strong>AppDelegate.m</strong> or <strong>AppDelegate.swift</strong> file to handle the incoming links:</p>
@@ -2003,7 +2008,7 @@
 <h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
 <h3 id="issues-reading-facebook-app-links">Issues reading Facebook App Links<a class="headerlink" href="#issues-reading-facebook-app-links" title="Permanent link">&para;</a></h3>
 <p>If Facebook is having trouble reading the AppLinks from the Branch link, you might see this message while trying to test out the flow. This means that there is something corrupted in the OG tags causing Facebook to not parse it.</p>
-<p><img alt="image" src="../../../img/pages/features/facebook-ads/missing_applinks.png" /></p>
+<p><img alt="image" src="../../../img/pages/app-to-app/facebook-ads/missing_applinks.png" /></p>
 <h3 id="re-scrape-og-tags">Re-scrape OG tags<a class="headerlink" href="#re-scrape-og-tags" title="Permanent link">&para;</a></h3>
 <p>You can test the OG tags using the <a href="https://developers.facebook.com/tools/debug/og/object">OG tag tester tool</a> provided by Facebook:</p>
 <ol>
@@ -2023,7 +2028,7 @@
 <li>For example, if your App Store URL is <code>https://itunes.apple.com/us/app/my-app-name/id1234567890</code>, then your Custom URL value should be <code>https://example.com?id1234567890</code></li>
 </ul>
 </li>
-<li>If errors from the output window pertain to OG tags i.e. missing title, description etc. then examine link OG tags by appending <code>?debug=true</code> as described on the <a href="../{{base.url}}/getting-started/integration-testing/guide/#debugging-an-individual-link">Integration Testing page</a>.</li>
+<li>If errors from the output window pertain to OG tags i.e. missing title, description etc. then examine link OG tags by appending <code>?debug=true</code> to the end of your link.</li>
 <li>If you haven't set OG tags on a per link level, then please check your Dashboard's global Social Media Display Customization settings from the <a href="https://dashboard.branch.io/link-settings">Link Settings</a> page.</li>
 </ol>
 <h3 id="known-issue-with-app-restrictions">Known issue with App Restrictions<a class="headerlink" href="#known-issue-with-app-restrictions" title="Permanent link">&para;</a></h3>
@@ -2045,7 +2050,7 @@
 <h5 id="embedded-app-secret">Embedded App Secret<a class="headerlink" href="#embedded-app-secret" title="Permanent link">&para;</a></h5>
 <p>If you have entered the correct App ID and Secret but are still getting issues, it may be related to how you are using your Secret. Visit the Settings &gt; Advanced page on Facebook and check that you don't have the toggle enabled for "Is your App Secret embedded?" You will only have this option if you have enabled "Native or desktop app?" on this page.</p>
 <p>If you have enabled "Native or desktop app", then your advanced options should appear like the following:</p>
-<p><img alt="image" src="../../../img/pages/features/facebook-ads/facebook_secret.png" /></p>
+<p><img alt="image" src="../../../img/pages/app-to-app/facebook-ads/facebook_secret.png" /></p>
                 
                   
                 

@@ -705,6 +705,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#enable-an-ad-partner" title="Enable an ad partner" class="md-nav__link">
     Enable an ad partner
   </a>
@@ -1594,6 +1601,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#enable-an-ad-partner" title="Enable an ad partner" class="md-nav__link">
     Enable an ad partner
   </a>
@@ -1725,37 +1739,43 @@
 <li>Enable Ad Partners to send them preconfigured conversion postbacks</li>
 <li>View ad performance with web and app analytics</li>
 </ul>
-<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Pre-reqs</p>
-<p>To track installs from Ads you should <a href="../../../todo">integrate the Branch SDK</a> into your app. If you want to deep link from your ads directly to content, you should <a href="../{{base.url}}/getting-started/deep-link-routing">configure deep link routing</a>.</p>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Paid Product</p>
 <p>Ads is a premium product priced on Monthly Active Users. Sign up for the Ads product to enable this functionality.</p>
 </div>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>To track installs from Ads you should integrate the Branch SDK into your app. If you want to deep link from your ads directly to content, you should configure deep link routing.</p>
 <h3 id="enable-an-ad-partner">Enable an ad partner<a class="headerlink" href="#enable-an-ad-partner" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Visit the <a href="https://dashboard.branch.io/ads">Ads page</a> on the Branch dashboard.</li>
 <li>Select <a href="https://dashboard.branch.io/ads/partner-management">Partner Management</a> from the sidebar.</li>
-<li>Search for the Ad Partner that you'd like to enable.
-<img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/find-applovin.png" /></li>
+<li>Search for the Ad Partner that you'd like to enable.</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/find-applovin.png" /></p>
+<ol>
 <li>Enter any credentials that may be required, and click <strong>Save and Enable</strong> in the bottom right hand corner.
 <img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/save-and-enable.png" /></li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Enable postbacks</p>
-<p>Basic postbacks will automatically be activated for events like <em>Install</em> and <em>Purchase</em> when you enable your ad partner. You can then <a href="../../advanced/#adding-more-postbacks">add additional postbacks</a>, for example, if you wanted to add postbacks for custom events that are specific to your app like <em>Account Created</em>. You can also <a href="../../advanced/#advanced-editing-postbacks">edit postbacks</a> if there's additional data you really need to pass along to your ad partner.</p>
+<p>Basic postbacks will automatically be activated for events like <em>Install</em> and <em>Purchase</em> when you enable your ad partner. You can then <a href="#adding-more-postbacks">add additional postbacks</a>, for example, if you wanted to add postbacks for custom events that are specific to your app like <em>Account Created</em>. You can also <a href="#advanced-editing-postbacks">edit postbacks</a> if there's additional data you really need to pass along to your ad partner.</p>
 </div>
 <h3 id="create-an-ad-link">Create an ad link<a class="headerlink" href="#create-an-ad-link" title="Permanent link">&para;</a></h3>
 <p>Once you've enabled an ad partner, it's time to create a tracking link.</p>
 <ol>
-<li>First, select an ad format. For App Install or App Engagement campaigns you'll want to select the <strong>App Only</strong> format. For Search or Display campaigns where the user should go to web if they don't have the app, then you should select <strong>Cross-Platform Search</strong> or <strong>Cross-Platform Display</strong>. <strong>Product Links</strong> are for shopping or dynamic remarketing campaigns and will take you to create a Deep Linked Product Feed.
-<img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/choose-ad-format.png" /></li>
-<li>At this point you need to name your link. Select something that will make it easy to find if you need it later. Your Ad Format and Ad Partner should be selected already, but feel free to choose one if they aren't. It's important that you select the right Ad Partner for analytics later on. Click <strong>Configure Options</strong> to continue.
-<img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/name-ad-link.png" /></li>
-<li>This is your chance to add deep link data and analytics tags. Analytics tags are important for later segmentation, so click the <strong>Analytics</strong> sub tab to add a Channel and Campaign value.
-<img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/add-analytics-tags.png" /></li>
+<li>First, select an ad format. For App Install or App Engagement campaigns you'll want to select the <strong>App Only</strong> format. For Search or Display campaigns where the user should go to web if they don't have the app, then you should select <strong>Cross-Platform Search</strong> or <strong>Cross-Platform Display</strong>. <strong>Product Links</strong> are for shopping or dynamic remarketing campaigns and will take you to create a Deep Linked Product Feed.</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/choose-ad-format.png" /></p>
+<ol>
+<li>At this point you need to name your link. Select something that will make it easy to find if you need it later. Your Ad Format and Ad Partner should be selected already, but feel free to choose one if they aren't. It's important that you select the right Ad Partner for analytics later on. Click <strong>Configure Options</strong> to continue.</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/name-ad-link.png" /></p>
+<ol>
+<li>This is your chance to add deep link data and analytics tags. Analytics tags are important for later segmentation, so click the <strong>Analytics</strong> sub tab to add a Channel and Campaign value.</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/add-analytics-tags.png" /></p>
+<ol>
 <li>Click <strong>Create Link Now</strong>, and you have your tracking link! Take this link and give it to your Ad Partner's Account Manager or paste it into the tracking section of your campaign yourself.
 <img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/finished-ad-link.png" /></li>
 </ol>
@@ -1774,11 +1794,13 @@
 <p>When you enable an ad partner, your ad partner postbacks can be found under the <strong>Postbacks</strong> tab for that ad partner. It's easy to add additional postbacks.</p>
 <p><img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/postbacks-tab.png" /></p>
 <ol>
-<li>Click the <strong>Add New Postback</strong> button at the bottom of the screen.
-<img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/add-new-postback-button.png" /></li>
-<li>A modal will appear with Branch default events, as well as any commerce or custom events you've set up. Select an event, enter a postback URL if you're asked to, and click <strong>Save</strong>. This will be the event that triggers your new postback.
-<img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/add-new-postback-modal.png" /></li>
+<li>Click the <strong>Add New Postback</strong> button at the bottom of the screen.</li>
 </ol>
+<p><img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/add-new-postback-button.png" /></p>
+<ol>
+<li>A modal will appear with Branch default events, as well as any commerce or custom events you've set up. Select an event, enter a postback URL if you're asked to, and click <strong>Save</strong>. This will be the event that triggers your new postback.</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/deep-linked-ads/branch-universal-ads/add-new-postback-modal.png" /></p>
 <h3 id="edit-postbacks">Edit postbacks<a class="headerlink" href="#edit-postbacks" title="Permanent link">&para;</a></h3>
 <p>For advanced integrations, you may want to provide additional information in your postback that isn't there by default. You can edit postbacks by adding data into the textbox, then clicking save. When the postback is saved, it is then validated - if you enter an invalid postback, you'll get an error at the top of your screen.</p>
 <div class="admonition tip">

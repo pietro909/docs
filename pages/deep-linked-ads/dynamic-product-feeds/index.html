@@ -1845,7 +1845,7 @@
 <p><img alt="image" src="../../../img/pages/deep-linked-ads/dynamic-product-ads/enable-link-scraping.png" /></p>
 <ul>
 <li>If you can't host your link data, add the necessary link data as a column in the Feed Source.</li>
-<li>Want to get creative with your Feed Sources? Check out our <a href="../../../pages/deep-linked-ads/dynamic-product-ads/advanced">Advanced section</a> for some power user tips.</li>
+<li>Want to get creative with your Feed Sources? Check out our <a href="#advanced">Advanced section</a> for some power user tips.</li>
 <li>Branch accepts feed sources that are compatible with Facebook’s format. If you’re not sure about the compatibility of your feed, please use <a href="https://business.facebook.com/ads/product_feed/debug">Facebook’s Product Feed Debug Tool</a> to test and debug it.</li>
 </ul>
 <div class="admonition tip">
@@ -1866,8 +1866,10 @@
 </ol>
 <h3 id="deep-linked-feed-creation-flow">Deep Linked Feed Creation Flow<a class="headerlink" href="#deep-linked-feed-creation-flow" title="Permanent link">&para;</a></h3>
 <ol>
-<li>In "Deep Linked Feed Information" you'll name your Deep Linked Feed for reference, and specify which Feed Source you'd like to turn into a Deep Linked Feed. You'll also input the Ad Platform on which you'd like to run your campaigns. This information will be used to modify the feed and insert well-structured Branch attribution data into the links.
-<img alt="image" src="../../../img/pages/deep-linked-ads/dynamic-product-ads/dlf-step-1.png" /></li>
+<li>In "Deep Linked Feed Information" you'll name your Deep Linked Feed for reference, and specify which Feed Source you'd like to turn into a Deep Linked Feed. You'll also input the Ad Platform on which you'd like to run your campaigns. This information will be used to modify the feed and insert well-structured Branch attribution data into the links.</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/deep-linked-ads/dynamic-product-ads/dlf-step-1.png" /></p>
+<ol>
 <li>In "Create Deep Links" you'll be presented with two optional elements. The first is a list of column names from your feed source. To add deep link data to each link, select the column that contains the relevant data.</li>
 </ol>
 <p>Let's say you have a column in your product feed titled <code>id</code>. That column contains the product id for each piece of content in your Feed Source file, and your app needs that id to deep link correctly. To create deep links with that id for each product, select the column by checking the box on the left hand side. If you'd like to change the name of the key (for example, from <code>id</code> to <code>product_id</code>) you can write the new name for the key in the text box on the right hand side. This will add the correct <code>product_id</code> to each link for every single product in your feed (e.g. the first item will have <code>"product_id":1392</code>, the second item will have <code>"product_id":5284</code>).</p>
@@ -1953,7 +1955,7 @@
 - android_package</p>
 <h3 id="links-dont-open-the-app">Links don't open the app<a class="headerlink" href="#links-dont-open-the-app" title="Permanent link">&para;</a></h3>
 <ul>
-<li>First, understand what the <a href="../../../getting-started/link-behavior/guide/">intended behavior</a> of your link should be.</li>
+<li>First, understand what the <a href="../../../pages/links/integrate/#default-link-behavior">intended behavior</a> of your link should be.</li>
 <li>Links created by the Deep Linked Feeds tool currently fall back to the Web URL you originally specified in the <code>link</code> column by default. You can override this behavior by including a column called <code>branch_query_params</code> and including <code>$fallback_method=app_wide</code> as the value for every row. This will make each link fall back to the platform fallback you have specified in your <a href="https://dashboard.branch.io/settings/link">Link Settings</a>, which is usually the App Store.</li>
 <li>Facebook requires certain <a href="https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/mobile-app-events#deeplinksetup">"applink treatment"</a> values to be present to change fallback behavior. We're working on adding these to our interface, but for the moment, include them in your feed source.</li>
 </ul>
@@ -1971,7 +1973,7 @@
 </ul>
 <h3 id="report-issues">Report issues<a class="headerlink" href="#report-issues" title="Permanent link">&para;</a></h3>
 <ul>
-<li>For Facebook data discrepancies, please see our <a href="../../../ads/facebook-ads/support/">Facebook Advertising troubleshooting documentation</a>.</li>
+<li>For Facebook data discrepancies, please see our <a href="../../../pages/deep-linked-ads/facebook-app-install-ads/#troubleshooting">Facebook Advertising troubleshooting documentation</a>.</li>
 </ul>
 <p>If you run into any issues, or have questions, please contact <a href="mailto:integrations@branch.io"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#116;&#101;&#103;&#114;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;">&#105;&#110;&#116;&#101;&#103;&#114;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;</a></a>.</p>
                 

@@ -1679,42 +1679,62 @@
 <div class="admonition warning">
 <p class="admonition-title">Prerequisites</p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked> To track installs from Google Ads you should <a href="../TODO">integrate the Branch SDK</a> into your app.</li>
-<li class="task-list-item"><input type="checkbox" disabled checked> If you want to deep link from your ads directly to content, you should <a href="../TODO">configure deep link routing</a>.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> To track installs from Google Ads you should integrate the Branch SDK into your app.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> If you want to deep link from your ads directly to content, you should configure deep link routing.</li>
 <li class="task-list-item"><input type="checkbox" disabled checked> Ads is a premium product priced on Monthly Active Users. Sign up for the Ads product to enable this functionality.</li>
 </ul>
 </div>
 <h4 id="enable-google-as-an-ad-partner">Enable Google as an Ad Partner<a class="headerlink" href="#enable-google-as-an-ad-partner" title="Permanent link">&para;</a></h4>
 <p>If you haven't enabled Google as an Ad Partner on the Branch dashboard follow this section to do so.</p>
-<ol>
-<li>Navigate to the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management tab</a>.
-<img alt="Ads Partner Management" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/ads-partner-management.png" /></li>
-<li>Search for <strong>Google AdWords</strong>.
-<img alt="Find Google Adwords in Partner Manager" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/find-google-partner.png" /></li>
-<li>Enter values for the <strong>conversion IDs and labels</strong>. You can put in placeholders for now, but we recommend setting up install conversion tracking in AdWords before launching your campaign. For setup instructions on conversion tracking, check out <a href="../../../pages/deep-linked-ads/google-conversions/">Google Conversion Setup</a>.</li>
-<li>Click the <code>Save and Enable</code> button in the lower right hand corner.
-<img alt="Save and Enable Google Adwords in Partner Manager" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/save-and-enable-google.png" /></li>
-<li>Google AdWords is now enabled as an ad partner.</li>
-<li>Finally, to create a Google ads link click the <code>Create Google AdWords Link</code> button in the top right hand corner.
-<img alt="Create Google Adwords Link" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/create-google-link.png" /></li>
-</ol>
+<ul>
+<li>Navigate to the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management tab</a>.</li>
+</ul>
+<p><img alt="Ads Partner Management" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/ads-partner-management.png" /></p>
+<ul>
+<li>Search for <strong>Google AdWords</strong>.</li>
+</ul>
+<p><img alt="Find Google Adwords in Partner Manager" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/find-google-partner.png" /></p>
+<ul>
+<li>
+<p>Enter values for the <strong>conversion IDs and labels</strong>. You can put in placeholders for now, but we recommend setting up install conversion tracking in AdWords before launching your campaign. For setup instructions on conversion tracking, check out <a href="../../../pages/deep-linked-ads/google-conversions/">Google Conversion Setup</a>.</p>
+</li>
+<li>
+<p>Click the <code>Save and Enable</code> button in the lower right hand corner.</p>
+</li>
+</ul>
+<p><img alt="Save and Enable Google Adwords in Partner Manager" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/save-and-enable-google.png" /></p>
+<ul>
+<li>
+<p>Google AdWords is now enabled as an ad partner.</p>
+</li>
+<li>
+<p>Finally, to create a Google ads link click the <code>Create Google AdWords Link</code> button in the top right hand corner.</p>
+</li>
+</ul>
+<p><img alt="Create Google Adwords Link" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/create-google-link.png" /></p>
 <h3 id="ios">iOS<a class="headerlink" href="#ios" title="Permanent link">&para;</a></h3>
 <h4 id="create-an-ad-link">Create an Ad Link<a class="headerlink" href="#create-an-ad-link" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Create a Branch Ad link from the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management page</a>'s <code>Create Google Adwords Link</code> button under the Google Adwords Partner and select <code>App Install or Engagement</code>
-<img src="/img/pages/deep-linked-ads/reusable-images/create-link-install-engagement.png" alt="Link Creation" class="three-quarters center"></li>
-<li>Under the Define Section, pick a Link Name for later reference</li>
-<li>Configure the link with the Ad Format set to <strong>App Only</strong>, the Ad Partner set to <strong>Google Adwords</strong>, and the Secondary Ad Format set to <strong>Google Search Install iOS</strong>
-<img alt="Create Ad Link" src="../../../img/pages/deep-linked-ads/google-search-install-ads/ios/ad-link-setup.png" /></li>
-<li>Under the Configure Options tab, navigate to the Redirects sub section and ensure that the iOS redirect is set to the desired app being promoted by the ad campaign.
-<img alt="Create Ad Link" src="../../../img/pages/deep-linked-ads/reusable-images/example-link-redirect.png" /></li>
-<li>Under the Analytics Tags sub section additional tags can be set. It is recommended to fill in these fields as they can be used as filters in Branch's Ads Analytics view. To best connect your ad link with your Adwords Campaign, set the channel field to Google Adwords and set the campaign field to the same ad campaign name used in Adwords.
-<img alt="Analytics Tags" src="../../../img/pages/deep-linked-ads/reusable-images/adwords-analytics-tags.png" /></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Optional: Deep Link Data</p>
-<p>You can use this configuration section to specify custom link parameters that will be deep linked into the app after install. These could include a coupon code or a page identifier to route the user. Visit the <a href="../TODO">Deep Link Routing</a> page to learn more.</p>
-</div>
+<ul>
+<li>Create a Branch Ad link from the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management page</a>'s <code>Create Google Adwords Link</code> button under the Google Adwords Partner and select <code>App Install or Engagement</code></li>
+</ul>
+<p><img alt="image" src="../../../img/pages/deep-linked-ads/reusable-images/create-link-install-engagement.png" /></p>
+<ul>
+<li>
+<p>Under the Define Section, pick a Link Name for later reference</p>
+</li>
+<li>
+<p>Configure the link with the Ad Format set to <strong>App Only</strong>, the Ad Partner set to <strong>Google Adwords</strong>, and the Secondary Ad Format set to <strong>Google Search Install iOS</strong></p>
+</li>
+</ul>
+<p><img alt="Create Ad Link" src="../../../img/pages/deep-linked-ads/google-search-install-ads/ios/ad-link-setup.png" /></p>
+<ul>
+<li>Under the Configure Options tab, navigate to the Redirects sub section and ensure that the iOS redirect is set to the desired app being promoted by the ad campaign.</li>
+</ul>
+<p><img alt="Create Ad Link" src="../../../img/pages/deep-linked-ads/reusable-images/example-link-redirect.png" /></p>
+<ul>
+<li>Under the Analytics Tags sub section additional tags can be set. It is recommended to fill in these fields as they can be used as filters in Branch's Ads Analytics view. To best connect your ad link with your Adwords Campaign, set the channel field to Google Adwords and set the campaign field to the same ad campaign name used in Adwords.</li>
+</ul>
+<p><img alt="Analytics Tags" src="../../../img/pages/deep-linked-ads/reusable-images/adwords-analytics-tags.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Setting Attribution Windows</p>
 <p>You can specify the attribution windows for your links either at an overall account or per link level. Use these windows to accurately measure attribution data for your Branch links. Refer to <a href="../../../pages/deep-linked-ads/branch-universal-ads/#change-attribution-windows">Changing attribution windows</a> for instructions.</p>
@@ -1722,18 +1742,22 @@
 <h4 id="configure-adwords-ad">Configure Adwords Ad<a class="headerlink" href="#configure-adwords-ad" title="Permanent link">&para;</a></h4>
 <p>To set up a Search Network Mobile App Install Campaign on iOS, you will need to first create your campaign and then setup a tracking template on the ad. Adwords campaign creation documentation is available <strong><a href="https://support.google.com/adwords/answer/6309969?hl=en" target="_blank">here</a></strong>.</p>
 <h4 id="create-your-campaign">Create Your Campaign<a class="headerlink" href="#create-your-campaign" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Select <code>Search Network only</code> on Adwords
-<img src="/img/pages/deep-linked-ads/reusable-images/adwords-search-network.png" alt="Adwords Network" class="half center"></li>
-<li>For the type of Search campaign select <code>Mobile app installs</code>
-<img alt="Adwords Setup" src="../../../img/pages/deep-linked-ads/google-search-install-ads/adwords-search-install.png" /></li>
+<ul>
+<li>Select <code>Search Network only</code> on Adwords</li>
+</ul>
+<p><img alt="image" src="../../../img/pages/deep-linked-ads/reusable-images/adwords-search-network.png" /></p>
+<ul>
+<li>For the type of Search campaign select <code>Mobile app installs</code></li>
+</ul>
+<p><img alt="Adwords Setup" src="../../../img/pages/deep-linked-ads/google-search-install-ads/adwords-search-install.png" /></p>
+<ul>
 <li>Continue setting the campaign and ad group parameters</li>
-</ol>
+</ul>
 <h4 id="ad-creation">Ad Creation<a class="headerlink" href="#ad-creation" title="Permanent link">&para;</a></h4>
-<ol>
+<ul>
 <li>Grab your app's iTunes App Store URL and fill it into the <strong>Final URL</strong> field of your ad setup</li>
 <li>Expand the <code>Ad URL options</code>. and place your Branch Ad link from the first section in the <strong>Tracking template</strong> field. Ensure the copied link has the appropriate additional params (~campaign_id, ~ad_set_id, lpurl, etc.) which should be automatically generated on your Branch dashboard.</li>
-</ol>
+</ul>
 <p><img alt="Example Link" src="../../../img/pages/deep-linked-ads/google-search-install-ads/ios/full-branch-link.png" /></p>
 <p><img alt="Example Adwords Config" src="../../../img/pages/deep-linked-ads/google-search-install-ads/ios/adwords-configuration.png" /></p>
 <div class="admonition note">
@@ -1745,19 +1769,23 @@
 <p>Ensure the application being promoted by the Ad campaign has the SDK version of <strong>v2.10.0</strong> or later. Starting at this version, accurate measurement of the Google Play link referrer is used which is required to support this Adwords campaign type.</p>
 </div>
 <h4 id="create-an-ad-link_1">Create an Ad Link<a class="headerlink" href="#create-an-ad-link_1" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Create a Branch Ad link from the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management page</a>'s <code>Create Google Adwords Link</code> button under the Google Adwords Partner and select <code>App Install or Engagement</code>
-<img src="/img/pages/deep-linked-ads/reusable-images/create-link-install-engagement.png" alt="Link Creation" class="three-quarters center"></li>
-<li>Under the Define Section, pick a Link Name for later reference</li>
-<li>Configure the link with the Ad Format set to <strong>App Only</strong>, the Ad Partner set to <strong>Google Adwords</strong>, and the Secondary Ad Format set to <strong>Google Search Install Android</strong>, while leaving the Campaign field blank
-<img alt="Create Ad Link" src="../../../img/pages/deep-linked-ads/google-search-install-ads/android/ad-link-setup.png" /></li>
-<li>Under the Analytics Tags sub section additional tags can be set. It is recommended to fill in these fields as they can be used as filters in Branch's Ads Analytics view. To best connect your ad link with your Adwords Campaign, set the channel field to Google Adwords and set the campaign field to the same ad campaign name used in Adwords.
-<img alt="Analytics Tags" src="../../../img/pages/deep-linked-ads/reusable-images/adwords-analytics-tags.png" /></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Optional: Deep Link Data</p>
-<p>You can use this configuration section to specify custom link parameters that will be deep linked into the app after install. These could include a coupon code or a page identifier to route the user. Visit the <a href="../TODO">Deep Link Routing</a> page to learn more.</p>
-</div>
+<ul>
+<li>Create a Branch Ad link from the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management page</a>'s <code>Create Google Adwords Link</code> button under the Google Adwords Partner and select <code>App Install or Engagement</code></li>
+</ul>
+<p><img alt="image" src="../../../img/pages/deep-linked-ads/reusable-images/create-link-install-engagement.png" /></p>
+<ul>
+<li>
+<p>Under the Define Section, pick a Link Name for later reference</p>
+</li>
+<li>
+<p>Configure the link with the Ad Format set to <strong>App Only</strong>, the Ad Partner set to <strong>Google Adwords</strong>, and the Secondary Ad Format set to <strong>Google Search Install Android</strong>, while leaving the Campaign field blank</p>
+</li>
+</ul>
+<p><img alt="Create Ad Link" src="../../../img/pages/deep-linked-ads/google-search-install-ads/android/ad-link-setup.png" /></p>
+<ul>
+<li>Under the Analytics Tags sub section additional tags can be set. It is recommended to fill in these fields as they can be used as filters in Branch's Ads Analytics view. To best connect your ad link with your Adwords Campaign, set the channel field to Google Adwords and set the campaign field to the same ad campaign name used in Adwords.</li>
+</ul>
+<p><img alt="Analytics Tags" src="../../../img/pages/deep-linked-ads/reusable-images/adwords-analytics-tags.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Setting Attribution Windows</p>
 <p>You can specify the attribution windows for your links either at an overall account or per link level. Use these windows to accurately measure attribution data for your Branch links. Refer to <a href="../../../pages/deep-linked-ads/branch-universal-ads/#change-attribution-windows">Changing attribution windows</a> for instructions.</p>
@@ -1765,20 +1793,26 @@
 <h4 id="configure-adwords-ad_1">Configure Adwords Ad<a class="headerlink" href="#configure-adwords-ad_1" title="Permanent link">&para;</a></h4>
 <p>To set up a Search Network Mobile App Install Campaign on Android, you will need to first create your campaign and then setup a tracking template on the ad. Adwords campaign creation documentation is available <strong><a href="https://support.google.com/adwords/answer/6309969?hl=en" target="_blank">here</a></strong>.</p>
 <h4 id="create-your-campaign_1">Create Your Campaign<a class="headerlink" href="#create-your-campaign_1" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Select <code>Search Network only</code> on Adwords
-<img src="/img/pages/deep-linked-ads/reusable-images/adwords-search-network.png" alt="Adwords Network" class="half center"></li>
-<li>For the type of Search campaign select <code>Mobile app installs</code>
-<img alt="Adwords Setup" src="../../../img/pages/deep-linked-ads/google-search-install-ads/adwords-search-install.png" /></li>
+<ul>
+<li>Select <code>Search Network only</code> on Adwords</li>
+</ul>
+<p><img src="/img/pages/deep-linked-ads/reusable-images/adwords-search-network.png" alt="Adwords Network" class="half center"></p>
+<ul>
+<li>For the type of Search campaign select <code>Mobile app installs</code></li>
+</ul>
+<p><img alt="Adwords Setup" src="../../../img/pages/deep-linked-ads/google-search-install-ads/adwords-search-install.png" /></p>
+<ul>
 <li>Continue setting the campaign and ad group parameters</li>
-</ol>
+</ul>
 <h4 id="ad-creation_1">Ad Creation<a class="headerlink" href="#ad-creation_1" title="Permanent link">&para;</a></h4>
-<ol>
-<li>Copy the final Branch Ad link generated from the previous section. Note: This link should begin with <strong><a href="https://play.google.com">https://play.google.com</a>...</strong> instead of the normal Branch link domain. Refer to the <a href="../../../pages/deep-linked-ads/google-search-install-ads/#create-an-ad-link_1">Create A Branch Ad Link</a> section if the link is not in this format to ensure the link creation was setup properly.
-<img alt="Example Link" src="../../../img/pages/deep-linked-ads/google-search-install-ads/android/full-branch-link.png" /></li>
-<li>Paste this Ad link into the <strong>Final URL</strong> field
-<img alt="Example Ad" src="../../../img/pages/deep-linked-ads/google-search-install-ads/android/adwords-configuration.png" /></li>
-</ol>
+<ul>
+<li>Copy the final Branch Ad link generated from the previous section. Note: This link should begin with <strong><a href="https://play.google.com">https://play.google.com</a>...</strong> instead of the normal Branch link domain. Refer to the <a href="../../../pages/deep-linked-ads/google-search-install-ads/#create-an-ad-link_1">Create A Branch Ad Link</a> section if the link is not in this format to ensure the link creation was setup properly.</li>
+</ul>
+<p><img alt="Example Link" src="../../../img/pages/deep-linked-ads/google-search-install-ads/android/full-branch-link.png" /></p>
+<ul>
+<li>Paste this Ad link into the <strong>Final URL</strong> field</li>
+</ul>
+<p><img alt="Example Ad" src="../../../img/pages/deep-linked-ads/google-search-install-ads/android/adwords-configuration.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Using the Final URL</p>
 <p>Google Adwords current implementation of the Search Network Mobile App Install Campaign for Android <strong>fails to support Tracking Templates</strong> despite the option to set them up in the Ad creation process.</p>
