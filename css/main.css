@@ -120,6 +120,10 @@
 .highlight pre {
   background-color: #f6f8fa;
 }
+.branch-image-override {
+  max-width: 550px !important;
+  max-height: 550px !important;
+}
 
 
 
