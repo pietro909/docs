@@ -3649,6 +3649,10 @@ In this case, closing the Journey is very simple by calling:</p>
 <p><img alt="image" src="../../../img/pages/journeys/custom_font.png" /></p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <h3 id="calls-to-branchsubdomain-blocked">Calls to [branchsubdomain] blocked<a class="headerlink" href="#calls-to-branchsubdomain-blocked" title="Permanent link">&para;</a></h3>
+<div class="admonition protip">
+<p class="admonition-title">Protip</p>
+<p><a href="../../../pages/dashboard/integrate/#use-applink-domain">Click here</a> to read about the value to use for <code>[branchsubdomain]</code>.</p>
+</div>
 <p>Please make sure to add <code>[branchsubdomain]</code> to the CSP header for your pages. We've seen some browsers that attempt to block it outright. You can deliver this in an HTTP header from your web server or you can add a simple metatag to your site like so:</p>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Security-Policy&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;default-src https://[branchsubdomain]; child-src &#39;none&#39;; object-src &#39;none&#39;&quot;</span><span class="p">&gt;</span>
 </pre></div>
