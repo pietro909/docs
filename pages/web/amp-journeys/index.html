@@ -1807,7 +1807,7 @@
 <p class="admonition-title">Pre-reqs</p>
 <ul>
 <li>To host AMP Journeys and show in Google search as an AMP page, your webpage must be <a href="https://www.ampproject.org/docs/">AMP</a>-compatible.</li>
-<li>Journeys uses your alternate domain for Universal Links. Make sure you include your <code>xxxx-alternate.app.link</code> domain in your <a href="../{{base.url}}/getting-started/universal-app-links/guide/ios/#add-the-associated-domains-entitlement-to-your-project">Associated Domains</a>. If you’re unsure of your Branch-assigned app.link subdomain, <a href="https://support.branch.io/support/tickets/new">contact support</a></li>
+<li>Journeys uses your alternate domain for Universal Links. Make sure you include your <code>xxxx-alternate.app.link</code> domain in your <a href="../../../docs/pages/apps/ios/#configure-associated-domains">Associated Domains</a>. If you’re unsure of your Branch-assigned app.link subdomain, <a href="https://support.branch.io/support/tickets/new">contact support</a></li>
 </ul>
 </div>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
@@ -1831,7 +1831,7 @@ Then add the modified snippet between the <code>&lt;body&gt;&lt;/body&gt;</code>
 <h3 id="target-amp-web-in-your-audience">Target AMP Web in your audience<a class="headerlink" href="#target-amp-web-in-your-audience" title="Permanent link">&para;</a></h3>
 <p>AMP Journeys can be created as part of the normal <a href="https://dashboard.branch.io/web/journeys/audiencerule/new" target="_blank">Journeys creation flow</a>. You can target users on AMP pages by checking the box <strong>AMP Web</strong> on the Select Audience step:</p>
 <p><img alt="image" src="../../../img/pages/journeys/amp-checkbox.png" /></p>
-<p>See the <a href="../../../marketing-channels/journeys/guide#select-audience" target="_blank">Journeys Guide</a> for more information on selecting your audience.</p>
+<p>See the <a href="../../../pages/web/journeys/#select-audience" target="_blank">Journeys Guide</a> for more information on selecting your audience.</p>
 <h3 id="select-an-amp-compatible-template">Select an AMP-compatible template<a class="headerlink" href="#select-an-amp-compatible-template" title="Permanent link">&para;</a></h3>
 <p>Once you have your audience selected, you can configure your templates. Currently, only <strong>Branch Standard Banner Bottom</strong> is supported on AMP because Google requires that banners not show in the top 75% of an AMP page. Over time, Branch will add support for more Journeys templates.</p>
 <p>When you click <strong>Select Template</strong> from the <strong>Configure Views</strong> step, the <strong>standard bottom banner</strong> view type should already be selected, showing you the Journeys templates that are compatible with AMP:</p>
@@ -1843,7 +1843,7 @@ Then add the modified snippet between the <code>&lt;body&gt;&lt;/body&gt;</code>
 <h4 id="the-selected-template-is-not-amp-compatible">The selected template is not AMP-compatible<a class="headerlink" href="#the-selected-template-is-not-amp-compatible" title="Permanent link">&para;</a></h4>
 <p>If Branch has detected that you have selected a template that is not compatible with AMP, you will see an error on the <strong>Validate &amp; Test</strong> step. <a href="#customization-limitations">See which templates are currently compatible</a>.</p>
 <h3 id="track-analytics">Track Analytics<a class="headerlink" href="#track-analytics" title="Permanent link">&para;</a></h3>
-<p>Analytics for AMP Journeys works the <a href="../../../marketing-channels/journeys/guide/#visualizing-journeys-performance">same way as for regular Journeys</a>, in that you can see clicks, opens, installs, and custom events tied to your Journey by clicking <strong>View Performance</strong> from the actions menu for your AMP Journey.</p>
+<p>Analytics for AMP Journeys works the <a href="../../../pages/web/journeys/#visualizing-journeys-performance">same way as for regular Journeys</a>, in that you can see clicks, opens, installs, and custom events tied to your Journey by clicking <strong>View Performance</strong> from the actions menu for your AMP Journey.</p>
 <p><img alt="image" src="../../../img/pages/journeys/view-performance.png" /></p>
 <h2 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h2>
 <h3 id="targeting-audiences-with-a-url">Targeting Audiences with a URL<a class="headerlink" href="#targeting-audiences-with-a-url" title="Permanent link">&para;</a></h3>
@@ -1905,10 +1905,10 @@ Then add the modified snippet between the <code>&lt;body&gt;&lt;/body&gt;</code>
 <ul>
 <li>Event-based audience rules work within AMP only or after a Branch link click on an AMP page. <a href="#audience-rule-limitations">Read more</a>.</li>
 <li>Only templates on the bottom of the page and equal to 76px in height show on AMP. <a href="#customization-limitations">Read more</a>.</li>
-<li><a href="../../../marketing-channels/journeys/guide/#dismiss">Dismiss period</a> is not supported - after dismiss, Journeys will show again during the next AMP session.</li>
-<li><a href="../../../marketing-channels/journeys/guide/#clientside-javascript-journeys-controls">Client-side javascript controls</a> are not supported.</li>
+<li><a href="../../../pages/web/journeys/#dismiss">Dismiss period</a> is not supported - after dismiss, Journeys will show again during the next AMP session.</li>
+<li><a href="../../../pages/web/journeys/#clientside-javascript-journeys-controls">Client-side javascript controls</a> are not supported.</li>
 <li>Auto-opening the app with open_app: true is not supported.</li>
-<li><a href="../../../marketing-channels/journeys/guide/#deep-linking-from-the-banner-or-interstitial">Deep linking with setBranchViewData</a> is not supported. <a href="#deep-linking-with-amp">Learn how</a> you can deep link to content from AMP pages.</li>
+<li><a href="../../../pages/web/journeys/#deep-linking-from-the-banner-or-interstitial">Deep linking with setBranchViewData</a> is not supported. <a href="#deep-linking-with-amp">Learn how</a> you can deep link to content from AMP pages.</li>
 </ul>
 <h3 id="targeting-limitations">Targeting Limitations<a class="headerlink" href="#targeting-limitations" title="Permanent link">&para;</a></h3>
 <p>Because cookies are restricted on both AMP and iOS, event-based audience rules on AMP Journeys are cookie-restricted. Practically, this means that targeting works <em>only within AMP</em> for the following rules:</p>

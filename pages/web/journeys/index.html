@@ -969,7 +969,8 @@
     Template customization options
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#smart-banner" title="Smart Banner" class="md-nav__link">
@@ -1080,6 +1081,11 @@
   <a href="#dismiss_1" title="Dismiss" class="md-nav__link">
     Dismiss
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2469,7 +2475,8 @@
     Template customization options
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#smart-banner" title="Smart Banner" class="md-nav__link">
@@ -2580,6 +2587,11 @@
   <a href="#dismiss_1" title="Dismiss" class="md-nav__link">
     Dismiss
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2766,7 +2778,7 @@
 <ul>
 <li><strong>Customizable presentation.</strong> WYSIWYG designer for smart banner or full-page interstitial, with more coming soon.</li>
 <li><strong>Powerful targeting rules.</strong> Want to show your Journey only visitors without your app installed already? All iOS users from Japan? Just users viewing your checkout page? Android users who have visited your website twice AND purchased something using your app? The possibilities are infinite.</li>
-<li><strong>AMP-compatible.</strong> You can convert mobile search traffic to your app by <a href="../../../marketing-channels/journeys/amp">showing Journeys on AMP pages</a>.</li>
+<li><strong>AMP-compatible.</strong> You can convert mobile search traffic to your app by <a href="../../../pages/web/amp-journeys/">showing Journeys on AMP pages</a>.</li>
 <li><strong>Run A/B tests.</strong> Design multiple campaign versions to see which converts most effectively.</li>
 <li><strong>Optimized user experience.</strong> If installed, your app will open and users can be routed directly to the content they expect. If not, the App/Play store will open and users can still be routed directly to the content they expect after installing.</li>
 <li><strong>Comprehensive analytics.</strong> Measure the downstream performance and retention of every Journeys campaign.</li>
@@ -2775,10 +2787,14 @@
 <p class="admonition-title">Journeys is a paid product</p>
 <p>Journeys introduces many more advanced features on top of the basic smart app banner functionality, but <strong>you can still create an Android and iOS smart app banner for free if your MAU are under 20k</strong>. After 20k MAU, we'd ask that you pay a small fee for use. Premium-only advanced features (including the option to run multiple Journeys simultaneously) are available through a 14 day trial.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>You should integrate the Branch SDK into your app and configure deep link routing for deferred deep linking and attribution before implementing Journeys..</p>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Include your alternate domain for Universal Links</p>
-<p>Journeys uses your alternate domain for Universal Links. Make sure you include your <code>xxxx-alternate.app.link</code> domain in your <a href="../{{base.url}}/getting-started/universal-app-links/guide/ios/#add-the-associated-domains-entitlement-to-your-project">Associated Domains</a>. If you use a custom domain or subdomain for your Branch links, you should instead add entries for <code>applinks:[mycustomdomainorsubdomain]</code> and <code>XXXX-alternate.app.link</code>. If you’re unsure of your Branch-assigned app.link subdomain, <a href="https://support.branch.io">contact support</a>, and we can provide it.</p>
+<p>Journeys uses your alternate domain for Universal Links. Make sure you include your <code>xxxx-alternate.app.link</code> domain in your <a href="../../../pages/apps/ios/#configure-associated-domains">Associated Domains</a>. If you use a custom domain or subdomain for your Branch links, you should instead add entries for <code>applinks:[mycustomdomainorsubdomain]</code> and <code>XXXX-alternate.app.link</code>. If you’re unsure of your Branch-assigned app.link subdomain, <a href="https://support.branch.io">contact support</a>, and we can provide it.</p>
 </div>
 <h3 id="add-the-branch-web-sdk-to-your-site">Add the Branch Web SDK to your site<a class="headerlink" href="#add-the-branch-web-sdk-to-your-site" title="Permanent link">&para;</a></h3>
 <p>Add the following code somewhere inside the <code>&lt;head&gt;&lt;/head&gt;</code> tags on your website. More information about this SDK can be found in the <a href="https://github.com/BranchMetrics/web-branch-deep-linking">Github README</a>.</p>
@@ -2793,7 +2809,7 @@
 <p>Be sure to replace <code>YOUR-BRANCH-KEY</code> with your Branch Key inside the <code>init()</code> call. You can find your Branch Key on the Dashboard’s <a href="https://dashboard.branch.io/#/settings">Settings</a> page.</p>
 </div>
 <h3 id="deep-linking-from-the-banner-or-interstitial">Deep linking from the banner or interstitial<a class="headerlink" href="#deep-linking-from-the-banner-or-interstitial" title="Permanent link">&para;</a></h3>
-<p>Like all Branch deep links, you can pass custom parameters by specifying keys in the link's <a href="../{{base.url}}/getting-started/configuring-links">data dictionary</a>. This is useful if you are showing the Smart Banner on a website page with equivalent in-app content, because you can route directly to that content in your app.</p>
+<p>Like all Branch deep links, you can pass custom parameters by specifying keys in the link's <a href="../../../pages/links/integrate/#configure-deep-links">data dictionary</a>. This is useful if you are showing the Smart Banner on a website page with equivalent in-app content, because you can route directly to that content in your app.</p>
 <p>This example will take the visitor straight to a picture with id “12345” after installing and opening the app.</p>
 <div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">setBranchViewData</span><span class="p">({</span>
     <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
@@ -2819,14 +2835,17 @@
 <span class="p">});</span>
 </pre></div>
 
-<p>If a user is referred to a page running Journeys via a Branch link, then referring link data will be passed into the Journeys call-to-action by default. If you’re using setBranchViewData() to specify link data for Journeys on that page, the only data from setBranchViewData() that will be used are <a href="../{{base.url}}/marketing-channels/journeys/advanced/#dynamic-journeys-layout-customization">dynamic Journeys layout parameters</a>; all other data in that call will be ignored, unless <code>make_new_link</code> is set to <code>true</code> in <code>branch.init()</code>. You can find more information <a href="../{{base.url}}/marketing-channels/journeys/advanced/#preserve-or-discard-referring-link-data">here</a>.</p>
-<p><strong>Note:</strong> You should <a href="../{{base.url}}/getting-started/sdk-integration-guide">integrate the Branch SDK</a> into your app and <a href="../{{base.url}}/getting-started/deep-link-routing">configure deep link routing</a> for deferred deep linking and attribution.</p>
+<p>If a user is referred to a page running Journeys via a Branch link, then referring link data will be passed into the Journeys call-to-action by default. If you’re using setBranchViewData() to specify link data for Journeys on that page, the only data from setBranchViewData() that will be used are <a href="../../../pages/web/journeys/#dynamic-journeys-layout-customization">dynamic Journeys layout parameters</a>; all other data in that call will be ignored, unless <code>make_new_link</code> is set to <code>true</code> in <code>branch.init()</code>. You can find more information <a href="../../../pages/web/journeys/#preserve-or-discard-referring-link-data">here</a>.</p>
 <h3 id="create-journey-banner-or-interstitial">Create Journey banner or interstitial<a class="headerlink" href="#create-journey-banner-or-interstitial" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Head to the <a href="http://dashboard.branch.io/journeys">Journeys page</a> on the Branch dashboard.</li>
-<li>Click the <strong>Create New Journey</strong> button to get started. <img alt="image" src="../../../img/pages/journeys/create-journey-button.png" /></li>
-<li>In the <strong>Journey Name:</strong> field, enter a name to use for internal reference (this will never be shown to your users). <img alt="image" src="../../../img/pages/journeys/journeys-name.png" /></li>
+<li>Click the <strong>Create New Journey</strong> button to get started.</li>
 </ol>
+<p><img alt="image" src="../../../img/pages/journeys/create-journey-button.png" /></p>
+<ol>
+<li>In the <strong>Journey Name:</strong> field, enter a name to use for internal reference (this will never be shown to your users).</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/journeys/journeys-name.png" /></p>
 <h3 id="select-audience">Select audience<a class="headerlink" href="#select-audience" title="Permanent link">&para;</a></h3>
 <p>You can customize the audience that will see your Journey by choosing the target platform, device, and region.</p>
 <p>For example, if you have users in many countries, you can create a separate Journey for each localization and use audience targeting rules to make sure users see the appropriate one.</p>
@@ -2853,7 +2872,7 @@
 </tr>
 <tr>
 <td>Additional Filters</td>
-<td>Read about advanced filtering criteria <a href="../{{base.url}}/marketing-channels/journeys/advanced/#advanced-audience-rules">here</a>.</td>
+<td>Read about advanced filtering criteria <a href="../../../pages/web/journeys/#advanced-audience-rules">here</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -2869,10 +2888,10 @@
 </li>
 <li>Click <strong>Customize</strong> to make changes to the template.</li>
 <li>In the <strong>Customize Template</strong> heading, you may edit the the name to use for internal reference.</li>
-<li>Click any object in the preview to edit it. To see documentation on all customization options, <a href="../../advanced/#template-customization-options">click here</a>.</li>
+<li>Click any object in the preview to edit it. To see documentation on all customization options, <a href="../../../pages/web/journeys/#template-customization-options">click here</a>.</li>
 <li>When finished, click <strong>Save &amp; Close</strong> button to continue.</li>
 </ol>
-<p><strong>Note about generic deep linking params</strong> If you are running a generic download campaign or a site-wide discount offer, your users would go to the same place inside your app regardless of where they originated on your website. You can configure this destination by setting <strong>Deep Link Data</strong> for the <strong>Button</strong> element when you <a href="../{{base.url}}/features/journeys/advanced/#template-customization-options">customize your template options</a>.</p>
+<p><strong>Note about generic deep linking params</strong> If you are running a generic download campaign or a site-wide discount offer, your users would go to the same place inside your app regardless of where they originated on your website. You can configure this destination by setting <strong>Deep Link Data</strong> for the <strong>Button</strong> element when you <a href="../../../pages/web/journeys/#template-customization-options">customize your template options</a>.</p>
 <h3 id="validate-test">Validate &amp; Test<a class="headerlink" href="#validate-test" title="Permanent link">&para;</a></h3>
 <p>This screen allows you to preview your Journey variations, and is where you can perform final validation and testing on your Journey before publishing it.</p>
 <p><img alt="image" src="../../../img/pages/journeys/validate-and-test.png" /></p>
@@ -2889,17 +2908,13 @@
 <p><img alt="image" src="../../../img/pages/journeys/validation-messages.png" /></p>
 <p>There are a number of errors and warnings you may encounter.</p>
 <h4 id="web-sdk-errors">Web SDK errors<a class="headerlink" href="#web-sdk-errors" title="Permanent link">&para;</a></h4>
-<p>You must have the web SDK installed on your website to run a Journey</p>
-<p><strong>Fix:</strong> <a href="../{{base.url}}/features/journeys/guide/#add-the-branch-web-sdk-to-your-site">Install the Web SDK</a>.</p>
+<p>You must have the web SDK installed on your website to run a Journey.</p>
 <h4 id="app-sdk-warnings">App SDK warnings<a class="headerlink" href="#app-sdk-warnings" title="Permanent link">&para;</a></h4>
-<p>If you choose to target iOS or Android users but haven’t integrated those SDKs, your Journeys will still show on the correct devices and direct users to your app. However, you won’t be able to get any install or event attribution for your Journeys, and you will not be able to deep link users to content inside your app.</p>
-<p><strong>Fix:</strong> <a href="../{{base.url}}/getting-started/sdk-integration-guide">Set up the mobile SDK in your app</a>.</p>
+<p>If you choose to target iOS or Android users but haven’t integrated those SDKs, your Journeys will still show on the correct devices and direct users to your app. However, you won’t be able to get any install or event attribution for your Journeys, and you will not be able to deep link users to content inside your app. Be sure to integrate the Branch SDK into your app.</p>
 <h4 id="audience-rule-warnings">Audience rule warnings<a class="headerlink" href="#audience-rule-warnings" title="Permanent link">&para;</a></h4>
-<p>You will see a warning if your audience rules do not add up to 100%. If less than 100%, the remainder will see whatever is normal behavior for your website.</p>
-<p><strong>Fix:</strong> Not required. To change audience allocations, simply press the <strong>Back</strong> button.</p>
+<p>You will see a warning if your audience rules do not add up to 100%. If less than 100%, the remainder will see whatever is normal behavior for your website. Your Journey will still run.</p>
 <h4 id="premium-account-warnings">Premium account warnings<a class="headerlink" href="#premium-account-warnings" title="Permanent link">&para;</a></h4>
-<p>If you have built a Journey that includes premium-only functionality, you will see a warning.</p>
-<p><strong>Fix:</strong>  Go back and remove the premium features such as advanced audience targeting, non-banner templates, CSS editing or A/B testing or <a href="http://dashboard.branch.io/journeys?modal=journeys-signup">upgrade your app to Journeys Premium</a>.</p>
+<p>If you have built a Journey that includes premium-only functionality, you will see a warning, as certain features are only available by purchasing.</p>
 <h3 id="managing-your-journeys-app-banners">Managing your Journeys App Banners<a class="headerlink" href="#managing-your-journeys-app-banners" title="Permanent link">&para;</a></h3>
 <p>The <a href="https://dashboard.branch.io/journeys">Journeys Manager</a> is your homepage for all of the personalized experiences create. You can turn Journeys on and off, clone them, or view performance.</p>
 <p><img alt="image" src="../../../img/pages/journeys/journeys-manager.png" /></p>
@@ -2943,27 +2958,32 @@
 </div>
 <h3 id="prioritizing-journeys">Prioritizing Journeys<a class="headerlink" href="#prioritizing-journeys" title="Permanent link">&para;</a></h3>
 <p>The Journeys Priority View allows you to set the priority of multiple Journeys when they <strong>overlap</strong>. They <strong>overlap</strong> when a single person is eligible to see multiple Journeys. You can prioritize the Journey that should show ahead of any others.</p>
-<p>{% example title="Prioritizing Journeys" %}</p>
 <p>Let's say you have two Journeys that may reach the same audience.</p>
 <ol>
 <li>A half page interstitial that promotes an offer on your "Shoes" category page.</li>
 <li>A smart banner that should show for all visitors.</li>
 </ol>
 <p>In general, you'd like the interstitial to show ahead of the smart banner on the "Shoes" category page (where both audience segments overlap).</p>
-<p>{% endexample %}</p>
 <p>To prioritize Journeys, switch to the Priority View by clicking on the toggle.</p>
 <p><img alt="image" src="../../../img/pages/journeys/priority-view-toggle.png" /></p>
 <p>You're now in Priority View.</p>
 <ol>
-<li>Drag and drop Journeys in the order you'd like them to show. The lower numbers mean higher priority (i.e. a Journey with priority 1 is going to show ahead of a Journey with priority 2).<img alt="image" src="../../../img/pages/journeys/first-priority-view.png" />)' 3-quarter center alt='first priority view' %}</li>
-<li>Click the <strong>Save</strong> button. <img alt="image" src="../../../img/pages/journeys/save-priority.png" />)' 3-quarter center alt='changed priority view' %}</li>
-<li>Your Journeys have now been prioritized. <img alt="image" src="../../../img/pages/journeys/final-priority-view.png" />)' 3-quarter center alt='final priority view' %}</li>
+<li>Drag and drop Journeys in the order you'd like them to show. The lower numbers mean higher priority (i.e. a Journey with priority 1 is going to show ahead of a Journey with priority 2).</li>
 </ol>
+<p><img alt="image" src="../../../img/pages/journeys/first-priority-view.png" /></p>
+<ol>
+<li>Click the <strong>Save</strong> button.</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/journeys/save-priority.png" /></p>
+<ol>
+<li>Your Journeys have now been prioritized.</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/journeys/final-priority-view.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Caution</p>
 <p>When you save Journeys priorities, <strong>ALL</strong> Journeys will be prioritized in the order they appear in the table.</p>
 </div>
-<p>For more detailed Journeys prioritization questions, visit our <a href="../../../features/journeys/advanced/#prioritization">Advanced section</a>.</p>
+<p>For more detailed Journeys prioritization questions, visit our <a href="../../../pages/web/journeys/#prioritization">Advanced section</a>.</p>
 <h3 id="visualizing-journeys-performance">Visualizing Journeys performance<a class="headerlink" href="#visualizing-journeys-performance" title="Permanent link">&para;</a></h3>
 <h4 id="analytics-attribution">Analytics &amp; attribution<a class="headerlink" href="#analytics-attribution" title="Permanent link">&para;</a></h4>
 <p>Journeys map to <a href="../../../getting-started/configuring-links/#analytics-labels">standard Branch analytics labels</a>:</p>
@@ -2988,14 +3008,14 @@
 </ol>
 <div class="admonition protip">
 <p class="admonition-title">Attribute Journeys events to referring links</p>
-<p>By default, when users arrive on a page running Journeys via a Branch link, then any interaction with the Journey (click/install/re-open) will be attributed to the referring Branch link, rather than to the Journey. <a href="../{{base.url}}/marketing-channels/journeys/advanced/#preserve-or-discard-referring-link-data">Learn how</a> to attribute this data to the Journey instead.</p>
+<p>By default, when users arrive on a page running Journeys via a Branch link, then any interaction with the Journey (click/install/re-open) will be attributed to the referring Branch link, rather than to the Journey. <a href="../../../pages/web/journeys/#preserve-or-discard-referring-link-data">Learn how</a> to attribute this data to the Journey instead.</p>
 </div>
 <h2 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h2>
 <h3 id="advanced-audience-rules">Advanced audience rules<a class="headerlink" href="#advanced-audience-rules" title="Permanent link">&para;</a></h3>
-<p>You can target users on a more granular level - based on behavior like where they came from, whether they already have your app installed, and what they’ve done on your website or in your app. We've created a bunch of great examples on the <a href="../{{base.url}}/features/journeys/examples">next tab</a>.</p>
-<p><img alt="image" src="../../../img/pages/journeys/advanced-audience-rules.png" />)' full center alt='Advanced audience' %}</p>
+<p>You can target users on a more granular level - based on behavior like where they came from, whether they already have your app installed, and what they’ve done on your website or in your app. We've created a bunch of great examples on the <a href="../../../pages/web/journeys/#examples">next tab</a>.</p>
+<p><img alt="image" src="../../../img/pages/journeys/advanced-audience-rules.png" /></p>
 <h4 id="has-completed-event">Has completed event<a class="headerlink" href="#has-completed-event" title="Permanent link">&para;</a></h4>
-<p>If you have <a href="../{{base-url}}/getting-started/user-value-attribution/">custom event tracking</a> set up, you can target users based on events that you define. For instance, you might want to show a Journey to users who have completed a purchase within the last week, or who add an item to their shopping cart more than three times.</p>
+<p>If you have <a href="../../../pages/apps/ios/#track-events">custom event tracking</a> set up, you can target users based on events that you define. For instance, you might want to show a Journey to users who have completed a purchase within the last week, or who add an item to their shopping cart more than three times.</p>
 <!-- #### Referred from site
 
 You can target a user based on the last touch point before they entered your website. For example, if you want to target users that found you through Google Search, you can select “Referred from site” and fill in `google.com`. Currently, we only support domain names in the Referred from site field. -->
@@ -3009,7 +3029,7 @@ You can target a user based on the last touch point before they entered your web
 <h4 id="has-the-app-installed">Has the app installed<a class="headerlink" href="#has-the-app-installed" title="Permanent link">&para;</a></h4>
 <p>You might choose to only show a Journey that asks a user to open the app to those that already have it installed.</p>
 <h4 id="has-clicked-on-ad">Has clicked on ad<a class="headerlink" href="#has-clicked-on-ad" title="Permanent link">&para;</a></h4>
-<p>A user is grouped into "Has clicked on Ad" when they've clicked a link from <a href="../../../features/deep-linked-feeds">Deep Linked Feeds</a>.</p>
+<p>A user is grouped into "Has clicked on Ad" when they've clicked a link from <a href="../../../pages/deep-linked-ads/dynamic-product-feeds/">Deep Linked Feeds</a>.</p>
 <p>Use this to target users who have been part of an ad campaign to improve your ROI; maybe with a specific call to action to open the app and buy something if they've also never made a purchase in the app.</p>
 <p>The technical definition is that they've clicked on a link with an Ad Network's custom <code>$3p</code> value in link data, but you just need to consider the way the link is created - in this case, through Deep Linked Feeds.</p>
 <h4 id="has-clicked-on-email">Has clicked on email<a class="headerlink" href="#has-clicked-on-email" title="Permanent link">&para;</a></h4>
@@ -3114,7 +3134,7 @@ In this case, closing the Journey is very simple by calling:</p>
 <p><strong>Note:</strong> If a user has closed a Journey in the past, then firing the aforementioned event will not override a user's preference.</p>
 <h3 id="disable-journeys-animations">Disable Journeys Animations<a class="headerlink" href="#disable-journeys-animations" title="Permanent link">&para;</a></h3>
 <p>You can disable Journeys animations on a page by setting two flags - <code>disable_entry_animation</code> and <code>disable_exit_animation</code> - when you’re calling either init() or track() with Branch’s Web SDK.</p>
-<p>Journeys animations can be disabled in order to reduce the amount of time it takes to load a Journey on a page. They can also be disabled in order to improve Journeys UX on single-page web apps, where Journeys animations can be jarring. When switching between multiple Journeys on a single-page web app, remember to use <a href="https://dev.branch.io/marketing-channels/journeys/guide/#deep-linking-from-the-banner-or-interstitial">setBranchViewData()</a> to change the link behind the CTA.</p>
+<p>Journeys animations can be disabled in order to reduce the amount of time it takes to load a Journey on a page. They can also be disabled in order to improve Journeys UX on single-page web apps, where Journeys animations can be jarring. When switching between multiple Journeys on a single-page web app, remember to use <a href="../../../pages/web/journeys/#deep-linking-from-the-banner-or-interstitial">setBranchViewData()</a> to change the link behind the CTA.</p>
 <p>To disable animations during initialization, insert <code>disable_entry_animation</code> and/or <code>disable_exit_animation</code>, with values of <code>true</code>, into the options:</p>
 <div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="err">‘</span><span class="nx">BRANCH_KEY</span><span class="err">’</span><span class="p">,</span>
     <span class="p">{</span>
@@ -3192,14 +3212,14 @@ In this case, closing the Journey is very simple by calling:</p>
 <h3 id="template-customization-options">Template customization options<a class="headerlink" href="#template-customization-options" title="Permanent link">&para;</a></h3>
 <p>The customization options available depend on the template chosen:</p>
 <ul>
-<li><a href="#smart-banner">Smart Banner</a></li>
-<li><a href="#full-screen-interstitial">Full Screen Interstitial</a></li>
-<li><a href="#full-screen-interstitial">Half Page Interstitial</a></li>
+<li><a href="../../../pages/web/journeys/#smart-banner">Smart Banner</a></li>
+<li><a href="../../../pages/web/journeys/#full-screen-interstitial">Full Screen Interstitial</a></li>
+<li><a href="../../../pages/web/journeys/#full-screen-interstitial">Half Page Interstitial</a></li>
 <li>Floating Button</li>
 </ul>
-<h3 id="smart-banner">Smart Banner<a class="headerlink" href="#smart-banner" title="Permanent link">&para;</a></h3>
+<h4 id="smart-banner">Smart Banner<a class="headerlink" href="#smart-banner" title="Permanent link">&para;</a></h4>
 <p>The available configuration options are identical for banners at both the top and the bottom of the screen.</p>
-<h4 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h4>
+<h5 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h5>
 <p><img alt="image" src="../../../img/pages/journeys/customize-banner-background.png" /></p>
 <table>
 <thead>
@@ -3219,7 +3239,7 @@ In this case, closing the Journey is very simple by calling:</p>
 </tr>
 </tbody>
 </table>
-<h4 id="title">Title<a class="headerlink" href="#title" title="Permanent link">&para;</a></h4>
+<h5 id="title">Title<a class="headerlink" href="#title" title="Permanent link">&para;</a></h5>
 <p><img alt="image" src="../../../img/pages/journeys/customize-banner-title.png" /></p>
 <table>
 <thead>
@@ -3239,7 +3259,7 @@ In this case, closing the Journey is very simple by calling:</p>
 </tr>
 </tbody>
 </table>
-<h4 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
+<h5 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h5>
 <p><img alt="image" src="../../../img/pages/journeys/customize-banner-description.png" /></p>
 <table>
 <thead>
@@ -3259,7 +3279,7 @@ In this case, closing the Journey is very simple by calling:</p>
 </tr>
 </tbody>
 </table>
-<h4 id="rating">Rating<a class="headerlink" href="#rating" title="Permanent link">&para;</a></h4>
+<h5 id="rating">Rating<a class="headerlink" href="#rating" title="Permanent link">&para;</a></h5>
 <p><img alt="image" src="../../../img/pages/journeys/customize-banner-rating.png" /></p>
 <table>
 <thead>
@@ -3279,7 +3299,7 @@ In this case, closing the Journey is very simple by calling:</p>
 </tr>
 </tbody>
 </table>
-<h4 id="reviews">Reviews<a class="headerlink" href="#reviews" title="Permanent link">&para;</a></h4>
+<h5 id="reviews">Reviews<a class="headerlink" href="#reviews" title="Permanent link">&para;</a></h5>
 <p><img alt="image" src="../../../img/pages/journeys/customize-banner-reviews.png" /></p>
 <table>
 <thead>
@@ -3299,7 +3319,7 @@ In this case, closing the Journey is very simple by calling:</p>
 </tr>
 </tbody>
 </table>
-<h4 id="button">Button<a class="headerlink" href="#button" title="Permanent link">&para;</a></h4>
+<h5 id="button">Button<a class="headerlink" href="#button" title="Permanent link">&para;</a></h5>
 <p><img alt="image" src="../../../img/pages/journeys/customize-banner-button.png" /></p>
 <table>
 <thead>
@@ -3323,19 +3343,19 @@ In this case, closing the Journey is very simple by calling:</p>
 </tr>
 <tr>
 <td>Channel</td>
-<td>Set the <strong><a href="../{{base.url}}/getting-started/configuring-links/guide/#analytics-labels">Channel</a></strong> for the Branch link attached to the button. For example, <code>website</code></td>
+<td>Set the <strong><a href="../../../pages/links/integrate/#analytical-labels">Channel</a></strong> for the Branch link attached to the button. For example, <code>website</code></td>
 </tr>
 <tr>
 <td>Tags</td>
-<td>Set the <strong><a href="../{{base.url}}/getting-started/configuring-links/guide/#analytics-labels">Tags</a></strong> for the Branch link attached to the button. For example, <code>purchase</code> and <code>fall-sale</code></td>
+<td>Set the <strong><a href="../../../pages/links/integrate/#analytical-labels">Tags</a></strong> for the Branch link attached to the button. For example, <code>purchase</code> and <code>fall-sale</code></td>
 </tr>
 <tr>
 <td>Deep Link Data</td>
-<td>Insert deep link data and advanced link control parameters. Can contain any <a href="https://dev.branch.io/getting-started/configuring-links/">Branch link parameter</a></td>
+<td>Insert deep link data and advanced link control parameters. Can contain any <a href="../../../pages/links/integrate/#configure-deep-links">Branch link parameter</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="dismiss">Dismiss<a class="headerlink" href="#dismiss" title="Permanent link">&para;</a></h4>
+<h5 id="dismiss">Dismiss<a class="headerlink" href="#dismiss" title="Permanent link">&para;</a></h5>
 <p><img alt="image" src="../../../img/pages/journeys/customize-banner-dismiss.png" /></p>
 <table>
 <thead>
@@ -3351,7 +3371,7 @@ In this case, closing the Journey is very simple by calling:</p>
 </tr>
 </tbody>
 </table>
-<h4 id="app-icon">App Icon<a class="headerlink" href="#app-icon" title="Permanent link">&para;</a></h4>
+<h5 id="app-icon">App Icon<a class="headerlink" href="#app-icon" title="Permanent link">&para;</a></h5>
 <p><img alt="image" src="../../../img/pages/journeys/customize-banner-icon.png" /></p>
 <table>
 <thead>
@@ -3367,8 +3387,8 @@ In this case, closing the Journey is very simple by calling:</p>
 </tr>
 </tbody>
 </table>
-<h3 id="full-screen-interstitial">Full screen interstitial<a class="headerlink" href="#full-screen-interstitial" title="Permanent link">&para;</a></h3>
-<h4 id="background_1">Background<a class="headerlink" href="#background_1" title="Permanent link">&para;</a></h4>
+<h4 id="full-screen-interstitial">Full screen interstitial<a class="headerlink" href="#full-screen-interstitial" title="Permanent link">&para;</a></h4>
+<h5 id="background_1">Background<a class="headerlink" href="#background_1" title="Permanent link">&para;</a></h5>
 <p><img alt="image" src="../../../img/pages/journeys/customize-fullpage-background.png" /></p>
 <table>
 <thead>
@@ -3453,7 +3473,7 @@ In this case, closing the Journey is very simple by calling:</p>
 </tr>
 </tbody>
 </table>
-<h4 id="title_1">Title<a class="headerlink" href="#title_1" title="Permanent link">&para;</a></h4>
+<h5 id="title_1">Title<a class="headerlink" href="#title_1" title="Permanent link">&para;</a></h5>
 <p><img alt="image" src="../../../img/pages/journeys/customize-fullpage-title.png" /></p>
 <table>
 <thead>
@@ -3473,7 +3493,7 @@ In this case, closing the Journey is very simple by calling:</p>
 </tr>
 </tbody>
 </table>
-<h4 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h4>
+<h5 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h5>
 <p><img alt="image" src="../../../img/pages/journeys/customize-fullpage-description.png" /></p>
 <table>
 <thead>
@@ -3493,7 +3513,7 @@ In this case, closing the Journey is very simple by calling:</p>
 </tr>
 </tbody>
 </table>
-<h4 id="button_1">Button<a class="headerlink" href="#button_1" title="Permanent link">&para;</a></h4>
+<h5 id="button_1">Button<a class="headerlink" href="#button_1" title="Permanent link">&para;</a></h5>
 <p><img alt="image" src="../../../img/pages/journeys/customize-fullpage-button.png" /></p>
 <table>
 <thead>
@@ -3517,19 +3537,19 @@ In this case, closing the Journey is very simple by calling:</p>
 </tr>
 <tr>
 <td>Channel</td>
-<td>Set the <strong><a href="../{{base.url}}/getting-started/configuring-links/guide/#analytics-labels">Channel</a></strong> for the Branch link attached to the button. For example, <code>website</code></td>
+<td>Set the <strong><a href="../../../pages/links/integrate/#analytical-labels">Channel</a></strong> for the Branch link attached to the button. For example, <code>website</code></td>
 </tr>
 <tr>
 <td>Tags</td>
-<td>Set the <strong><a href="../{{base.url}}/getting-started/configuring-links/guide/#analytics-labels">Tags</a></strong> for the Branch link attached to the button. For example, <code>purchase</code> and <code>fall-sale</code></td>
+<td>Set the <strong><a href="../../../pages/links/integrate/#analytical-labels">Tags</a></strong> for the Branch link attached to the button. For example, <code>purchase</code> and <code>fall-sale</code></td>
 </tr>
 <tr>
 <td>Deep Link Data</td>
-<td>Insert deep link data and advanced link control parameters. Can contain any <a href="https://dev.branch.io/getting-started/configuring-links/">Branch link parameter</a></td>
+<td>Insert deep link data and advanced link control parameters. Can contain any <a href="../../../pages/links/integrate/#configure-deep-links">Branch link parameter</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="dismiss_1">Dismiss<a class="headerlink" href="#dismiss_1" title="Permanent link">&para;</a></h4>
+<h5 id="dismiss_1">Dismiss<a class="headerlink" href="#dismiss_1" title="Permanent link">&para;</a></h5>
 <p><img alt="image" src="../../../img/pages/journeys/customize-fullpage-dismiss.png" /></p>
 <table>
 <thead>
@@ -3554,23 +3574,23 @@ In this case, closing the Journey is very simple by calling:</p>
 <h4 id="limitations-for-apps-with-free-accounts">Limitations for apps with free accounts<a class="headerlink" href="#limitations-for-apps-with-free-accounts" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Any number of Journeys may be created in <strong>Draft</strong> mode using all features.</li>
-<li>An invitation to upgrade will be displayed when premium-only functionality (indicated with a {% premiumflag %}{% endpremiumflag %} icon) is enabled</li>
+<li>An invitation to upgrade will be displayed when premium-only functionality is enabled</li>
 <li>Only a single Journey using the Smart Banner template (either top or bottom position) may be <strong>Active</strong> at any one time.</li>
 <li>To enable a different Journey, the currently active Journey must first be put into <strong>Stopped</strong> mode.</li>
 <li>Any Journey using premium-only features cannot be placed into <strong>Active</strong> mode until the app has been upgraded.</li>
 </ul>
 <h2 id="web-to-app-routing-without-journeys">Web to app routing without Journeys<a class="headerlink" href="#web-to-app-routing-without-journeys" title="Permanent link">&para;</a></h2>
-<p>If you maintain a mobile website, Branch allows you to deep link mobile visitors directly into your app, or easily and automatically give them the option of downloading it. Here's a diagram that describes how it works:</p>
-<p>{% image src='/img/pages/features/website-to-app-routing/deepview-websdk-routing.png)' center full alt='Deepviews web routing' %}</p>
+<p>If you maintain a mobile website, Branch allows you to deep link mobile visitors directly into your app, or easily and automatically give them the option of downloading it.</p>
 <h3 id="open-app-if-installed">Open app if installed<a class="headerlink" href="#open-app-if-installed" title="Permanent link">&para;</a></h3>
-<p>Add the following code somewhere inside the <code>&lt;head&gt;&lt;/head&gt;</code> tags on your website and customize the <a href="../{{base.url}}/getting-started/configuring-links">link parameters</a> to suit your needs.</p>
+<p>Add the following code somewhere inside the <code>&lt;head&gt;&lt;/head&gt;</code> tags on your website and customize the <a href="../../../pages/links/integrate/#configure-deep-links">link parameters</a> to suit your needs.</p>
 <div class="admonition protip">
 <p class="admonition-title">Protip</p>
 <p>What this script does is move a lot of the Branch redirection logic to the Javascript on your own page, effectively 'clicking a Branch link' on page load.</p>
 </div>
 <div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
 <span class="c1">// load the Branch SDK file</span>
-<span class="p">{</span><span class="o">%</span> <span class="nx">ingredient</span> <span class="nx">web</span><span class="o">-</span><span class="nx">sdk</span><span class="o">-</span><span class="nx">initialization</span> <span class="o">%</span><span class="p">}{</span><span class="o">%</span> <span class="nx">endingredient</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span><span class="nx">r</span><span class="p">,</span><span class="nx">a</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">c</span><span class="p">,</span><span class="nx">h</span><span class="p">,</span><span class="nx">_</span><span class="p">,</span><span class="nx">s</span><span class="p">,</span><span class="nx">d</span><span class="p">,</span><span class="nx">k</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">b</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span><span class="o">||!</span><span class="nx">b</span><span class="p">[</span><span class="nx">n</span><span class="p">].</span><span class="nx">_q</span><span class="p">){</span><span class="k">for</span><span class="p">(;</span><span class="nx">s</span><span class="o">&lt;</span><span class="nx">_</span><span class="p">.</span><span class="nx">length</span><span class="p">;)</span><span class="nx">c</span><span class="p">(</span><span class="nx">h</span><span class="p">,</span><span class="nx">_</span><span class="p">[</span><span class="nx">s</span><span class="o">++</span><span class="p">]);</span><span class="nx">d</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span><span class="nx">d</span><span class="p">.</span><span class="nx">async</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">d</span><span class="p">.</span><span class="nx">src</span><span class="o">=</span><span class="s2">&quot;https://cdn.branch.io/branch-latest.min.js&quot;</span><span class="p">;</span><span class="nx">k</span><span class="o">=</span><span class="nx">r</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">a</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span><span class="nx">k</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span><span class="nx">k</span><span class="p">);</span><span class="nx">b</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span><span class="o">=</span><span class="nx">h</span><span class="p">}})(</span><span class="nb">window</span><span class="p">,</span><span class="nb">document</span><span class="p">,</span><span class="s2">&quot;script&quot;</span><span class="p">,</span><span class="s2">&quot;branch&quot;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span><span class="nx">r</span><span class="p">){</span><span class="nx">b</span><span class="p">[</span><span class="nx">r</span><span class="p">]</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="nx">b</span><span class="p">.</span><span class="nx">_q</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">r</span><span class="p">,</span><span class="nx">arguments</span><span class="p">])}},{</span><span class="nx">_q</span><span class="o">:</span><span class="p">[],</span><span class="nx">_v</span><span class="o">:</span><span class="mi">1</span><span class="p">},</span><span class="s2">&quot;addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode&quot;</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">),</span> <span class="mi">0</span><span class="p">);</span>
+<span class="nx">branch</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="s1">&#39;YOUR-BRANCH-KEY&#39;</span><span class="p">);</span>
 <span class="c1">// define the deepview structure</span>
 <span class="nx">branch</span><span class="p">.</span><span class="nx">deepview</span><span class="p">(</span>
     <span class="p">{</span>
@@ -3590,7 +3610,10 @@ In this case, closing the Journey is very simple by calling:</p>
 <span class="o">&lt;</span><span class="err">/script&gt;</span>
 </pre></div>
 
-<p>{% ingredient replace-branch-key %}{% endingredient %}</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be sure to replace <code>YOUR-BRANCH-KEY</code> with your Branch Key inside the <code>init()</code> call. You can find your Branch Key on the Dashboard’s <a href="https://dashboard.branch.io/#/settings">Settings</a> page.</p>
+</div>
 <h3 id="add-an-install-call-to-action">Add an install call to action<a class="headerlink" href="#add-an-install-call-to-action" title="Permanent link">&para;</a></h3>
 <p>Trigger the <code>branch.deepviewCta()</code> function with a button or hyperlink on your page. Executing this function (whether by button, link, or some other method) 'clicks' the link you defined using <code>branch.deepview()</code> above.</p>
 <table>
@@ -3603,15 +3626,15 @@ In this case, closing the Journey is very simple by calling:</p>
 <tbody>
 <tr>
 <td>Mobile, app installed</td>
-<td>Open app, deep link directly to content <a href="../{{base.url}}/features/website-to-app-routing/advanced/#deep-linking-from-your-website">if configured</a>. This is a failsafe action in case the 'link click' on page load didn't fire correctly.</td>
+<td>Open app, deep link directly to content. This is a failsafe action in case the 'link click' on page load didn't fire correctly.</td>
 </tr>
 <tr>
 <td>Mobile, app NOT installed</td>
-<td>Open App Store or Play Store page for your app, deep link directly to content after download <a href="../{{base.url}}/features/website-to-app-routing/advanced/#deep-linking-from-your-website">if configured</a>.</td>
+<td>Open App Store or Play Store page for your app, deep link directly to content after download.</td>
 </tr>
 <tr>
 <td>Desktop</td>
-<td>Redirect to <code>$desktop_url</code> specified in the <code>deepview()</code> call, or fall back to your default web url from <a href="https://dashboard.branch.io/#/settings/link">Link Settings</a>.</td>
+<td>Redirect to <code>$desktop_url</code> specified in the <code>deepview()</code> call, or fall back to your default web url from <a href="https://dashboard.branch.io/link-settings">Link Settings</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -3626,10 +3649,10 @@ In this case, closing the Journey is very simple by calling:</p>
 <p><img alt="image" src="../../../img/pages/journeys/custom_font.png" /></p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <h3 id="calls-to-branchsubdomain-blocked">Calls to [branchsubdomain] blocked<a class="headerlink" href="#calls-to-branchsubdomain-blocked" title="Permanent link">&para;</a></h3>
-<p>{% ingredient branchsubdomain %}{% endingredient %}</p>
 <p>Please make sure to add <code>[branchsubdomain]</code> to the CSP header for your pages. We've seen some browsers that attempt to block it outright. You can deliver this in an HTTP header from your web server or you can add a simple metatag to your site like so:</p>
-<p _="%" endhighlight="endhighlight">{% highlight html %}
-<meta http-equiv="Content-Security-Policy" content="default-src https://[branchsubdomain]; child-src 'none'; object-src 'none'"></p>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Content-Security-Policy&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;default-src https://[branchsubdomain]; child-src &#39;none&#39;; object-src &#39;none&#39;&quot;</span><span class="p">&gt;</span>
+</pre></div>
+
 <h3 id="non-mobile-optimized-sites">Non-mobile optimized sites<a class="headerlink" href="#non-mobile-optimized-sites" title="Permanent link">&para;</a></h3>
 <p>If you're not using a mobile viewport tag (<code>&lt;meta name="viewport" content="width=device-width initial-scale=1, maximum-scale=1, user-scalable=no"&gt;</code>) because your site isn't mobile optimized, Journeys will look shrunken and weird. Don't worry, we have you covered:</p>
 <ol>
@@ -3646,11 +3669,11 @@ In this case, closing the Journey is very simple by calling:</p>
 <h3 id="example-audiences">Example audiences<a class="headerlink" href="#example-audiences" title="Permanent link">&para;</a></h3>
 <p>The Journeys audience tool is extremely powerful, but sometimes a few examples can help kickstart your creative juices. Here are are a couple common audience use cases to help you get started.</p>
 <ol>
-<li><a href="#example-new-users">New users</a></li>
-<li><a href="#example-loyal-users">Loyal users</a></li>
-<li><a href="#example-retargeting-users">Retargeting users who have taken some action</a></li>
-<li><a href="#example-seo-friendly">Users from Google (for SEO)</a></li>
-<li><a href="#example-english-speaking-ios-users">iOS users from English-speaking countries</a></li>
+<li><a href="../../../pages/web/journeys/#example-new-users">New users</a></li>
+<li><a href="../../../pages/web/journeys/#example-loyal-users">Loyal users</a></li>
+<li><a href="../../../pages/web/journeys/#example-retargeting-users">Retargeting users who have taken some action</a></li>
+<li><a href="../../../pages/web/journeys/#example-seo-friendly">Users from Google (for SEO)</a></li>
+<li><a href="../../../pages/web/journeys/#example-english-speaking-ios-users">iOS users from English-speaking countries</a></li>
 </ol>
 <p>All of these examples require you to configure advanced audience rules, which is a premium feature. You can add any set of complex rules using the following button:</p>
 <p><img alt="image" src="../../../img/pages/journeys/examples/advanced_add_filter.png" /></p>

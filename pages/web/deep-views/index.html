@@ -1725,12 +1725,12 @@
 <p>Deepviews are discoverable in all search portals (Google, Apple Spotlight, Bing, etc), opening up new mechanisms for people to find your app, and drive much higher conversions to install than sending visitors to the App/Play Store directly. Here's an example flow:</p>
 <p><img alt="image" src="../../../img/pages/deepviews/deepviews_allthecooks.gif" /></p>
 <div class="admonition note">
-<p class="admonition-title">If you already have a mobile website</p>
-<p>The <a href="../{{base.url}}/features/website-to-app-routing">Website to App Routing</a> feature can be used to recreate the functionality of Deepviews using your own website. If you already host your own content previews, this is a good alternative!</p>
+<p class="admonition-title">Intended for apps without a mobile website</p>
+<p>If you already have a mobile website with content, <a href="../../../pages/web/journeys/">Journeys</a> is better suited.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>For Deepviews to function as intended, you should <a href="../{{base.url}}/getting-started/sdk-integration-guide">integrate the Branch SDK</a> into your app and <a href="../{{base.url}}/getting-started/deep-link-routing">configure deep link routing</a>.</p>
+<p>For Deepviews to function as intended, you should integrate the Branch SDK and configure deep link routing.</p>
 </div>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <h3 id="enable-deepviews">Enable Deepviews<a class="headerlink" href="#enable-deepviews" title="Permanent link">&para;</a></h3>
@@ -1741,7 +1741,7 @@
 <p><img alt="image" src="../../../img/pages/deepviews/deepviews_enable.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you enable desktop Deepviews, they will override any <a href="../{{base.url}}/features/text-me-the-app">Text-Me-The-App</a> page you have configured.</p>
+<p>If you enable desktop Deepviews, they will override any <a href="../../../pages/web/text-me-the-app/">Text-Me-The-App</a> page you have configured.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Changing the app icon</p>
@@ -1760,7 +1760,7 @@
 <p>Only users who do not have the app will go through this flow. You can view the total counts and conversion rate from each step on this chart.</p>
 <h2 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h2>
 <h3 id="customizing-deepviews">Customizing Deepviews<a class="headerlink" href="#customizing-deepviews" title="Permanent link">&para;</a></h3>
-<p>The default Deepview template simply displays the content from three of the link's <a href="../{{base.url}}/getting-started/configuring-links">control parameters</a>. You can specify the content of these parameters when creating your link to control what will display in that link’s Deepview. If nothing is set for a particular link, we will gracefully fall back to the OG values set for your entire app in <em>Settings &gt; Link Settings &gt; Social Media Display Customization.</em></p>
+<p>The default Deepview template simply displays the content from three of the link's <a href="../../../pages/links/integrate/#redirections">control parameters</a>. You can specify the content of these parameters when creating your link to control what will display in that link’s Deepview. If nothing is set for a particular link, we will gracefully fall back to the OG values set for your entire app in <em>Settings &gt; Link Settings &gt; Social Media Display Customization.</em></p>
 <table>
 <thead>
 <tr>
@@ -1831,7 +1831,7 @@
 <p><img alt="image" src="../../../img/pages/deepviews/deepviews_social_media_descriptions.png" /></p>
 <p><strong>Note:</strong> the <em>Deep Link</em> section accepts most link control parameters, but <code>$og_title</code>, <code>$og_description</code> and <code>$og_image_url</code> <strong>cannot</strong> be specified there.</p>
 <h3 id="enable-per-link-deepviews">Enable per-link Deepviews<a class="headerlink" href="#enable-per-link-deepviews" title="Permanent link">&para;</a></h3>
-<p>If you don't want to enable Deepviews globally, you can do it for each platform on a per link basis by inserting custom link control parameters <a href="../{{base.url}}/getting-started/configuring-links">link control parameters</a>.</p>
+<p>If you don't want to enable Deepviews globally, you can do it for each platform on a per link basis by inserting custom link control parameters <a href="../../../pages/links/integrate/#deepview">link control parameters</a>.</p>
 <p>Enable Desktop Deepviews by appending query parameters:</p>
 <div class="codehilite"><pre><span></span><span class="s2">&quot;https://[branchsubdomain]?%24desktop_deepview=default_template&amp;%24ios_deepview=default_template&quot;</span>
 </pre></div>
@@ -1950,7 +1950,7 @@
 <p>Before rendering the template, we sanitize the markup of Javascript for security reasons. This includes script tags and event attributes on tags.</p>
 </div>
 <h3 id="inject-other-data-into-deepviews">Inject Other Data Into Deepviews<a class="headerlink" href="#inject-other-data-into-deepviews" title="Permanent link">&para;</a></h3>
-<p>By customizing your Deepview template, you have the ability to pass through other parameters from your link's <a href="../{{base.url}}/getting-started/configuring-links">data dictionary</a>.</p>
+<p>By customizing your Deepview template, you have the ability to pass through other parameters from your link's <a href="../../../pages/links/integrate/#configure-deep-links">data dictionary</a>.</p>
 <p>Here's a full list of liquid available tags:</p>
 <p><strong>app</strong></p>
 <p>This is the App object, which contains app data not specific to any link. This will allow you to surface information like your app name or other properties. You can surface this object in your Deepview like so:</p>
@@ -1991,7 +1991,7 @@
 <p>If you want to show your app's name inside a Deepview, you would expose it like so: <code>&lt;h1&gt;Get {% raw %}{{app.name}}{% endraw %}&lt;/h1&gt;</code></p>
 </div>
 <p><strong>link data</strong></p>
-<p>Link Object, which contains all of your link's parameters, including your deep link values from the data dictionary. See the <a href="../{{base.url}}/getting-started/configuring-links">Configuring Links</a> page for more information. You can surface this object in your Deepview like so:</p>
+<p>Link Object, which contains all of your link's parameters, including your deep link values from the data dictionary. See the <a href="../../../pages/links/integrate/#configure-deep-links">Configuring Links</a> page for more information. You can surface this object in your Deepview like so:</p>
 <div class="codehilite"><pre><span></span><span class="cp">{{</span><span class="nv">link_data</span><span class="cp">}}</span><span class="x"></span>
 </pre></div>
 

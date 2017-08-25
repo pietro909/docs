@@ -1900,11 +1900,13 @@
 <li>If not (<code>~referring_link</code> is null), generate a new Branch link by making a call to the Web SDK's <code>link()</code> method. Use this link when sending the SMS.</li>
 </ol>
 <p>The <code>~referring_link</code> parameter is returned in the Web SDK's init() callback, buried in the referring link data. See the code below:</p>
-<p>branch.init('YOUR-BRANCH-KEY', function(err, data) {
-    if (data.data['~referring_link']) {
-        console.log("data.data['~referring_link']:", data.data['~referring_link']);
-    }
-});</p>
+<div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="s1">&#39;YOUR-BRANCH-KEY&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="s1">&#39;~referring_link&#39;</span><span class="p">])</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;data.data[&#39;~referring_link&#39;]:&quot;</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="s1">&#39;~referring_link&#39;</span><span class="p">]);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
 <h3 id="use-a-custom-form-with-sendsms">Use a custom form with SendSMS()<a class="headerlink" href="#use-a-custom-form-with-sendsms" title="Permanent link">&para;</a></h3>
 <p>If you have an existing form for users to input their phone number, you can put our Text Me The App behind it. Add the following code somewhere inside the <code>&lt;head&gt;&lt;/head&gt;</code> tags on your website.</p>
 <div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
@@ -1957,7 +1959,7 @@
 <p><img alt="image" src="../../../img/pages/text-me-the-app/key-value.png" /></p>
 <h2 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">&para;</a></h2>
 <h3 id="sendsms-parameters">SendSMS() parameters<a class="headerlink" href="#sendsms-parameters" title="Permanent link">&para;</a></h3>
-<p>The <code>sendSMS()</code> method requires a phone number and <a href="../{{base.url}}/getting-started/configuring-links">link parameters</a>. You may optionally specify configuration options and a callback.</p>
+<p>The <code>sendSMS()</code> method requires a phone number and <a href="../../../pages/links/integrate/#configure-deep-links">link parameters</a>. You may optionally specify configuration options and a callback.</p>
 <div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">sendSMS</span><span class="p">(</span>
     <span class="nx">phone</span><span class="p">,</span>
     <span class="nx">linkData</span><span class="p">,</span>
@@ -2000,7 +2002,7 @@
 <h3 id="ive-sent-myself-multiple-texts-just-now-and-only-received-the-first-few-whats-going-on">I've sent myself multiple texts just now and only received the first few, what's going on?<a class="headerlink" href="#ive-sent-myself-multiple-texts-just-now-and-only-received-the-first-few-whats-going-on" title="Permanent link">&para;</a></h3>
 <p>This occurs when a carrier filters you SMS out due to spam. We try our hardest to rate limit a specific user, however, if bypassed, carriers may block your SMS. The reason is that carriers will agressively block content if it's similar and repeatedly sent to the same number. The solution is to wait 24-48 hours.</p>
 <h3 id="how-come-my-non-us-phone-number-isnt-working">How come my (non US) phone number isn't working?<a class="headerlink" href="#how-come-my-non-us-phone-number-isnt-working" title="Permanent link">&para;</a></h3>
-<p>With full numbers, you are required to use "+" and the country code. If you know your users are only in a certain country, you can automatically prepend "+" and the country code so that they only need to enter their regular number. To do this, you must <a href="../../../features/text-me-the-app/guide/#configure-custom-url-in-branch-dashboard">configure a custom url</a> and complete subsequent steps to create a custom text-me-the-app page. Then, you can alter the code snippet in <a href="../../../features/text-me-the-app/guide/#insert-sendsms-snippet-into-your-page">step 2</a> with the following:</p>
+<p>With full numbers, you are required to use "+" and the country code. If you know your users are only in a certain country, you can automatically prepend "+" and the country code so that they only need to enter their regular number. To do this, you must create a custom text-me-the-app page. Then, you can alter the code snippet in <a href="#insert-sendsms-snippet-into-your-page">step 2</a> with the following:</p>
 <div class="codehilite"><pre><span></span>    <span class="kd">var</span> <span class="nx">phone</span> <span class="o">=</span> <span class="s2">&quot;+91&quot;</span> <span class="o">+</span> <span class="nx">form</span><span class="p">.</span><span class="nx">phone</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
 </pre></div>
 
