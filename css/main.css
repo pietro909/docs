@@ -104,7 +104,7 @@
   color: rgba(0,0,0,.87);
   font-weight: 600;
   font-size: 1.6rem;
-  line-height: 1.6;
+  margin: 0.5em 0;
 }
 .md-typeset li > h3:before, .md-typeset li > h4:before, .md-typeset li > h5:before, .md-typeset li > h6:before {
   content: close-quote !important;
