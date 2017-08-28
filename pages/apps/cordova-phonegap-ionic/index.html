@@ -2044,12 +2044,12 @@
     <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;resume&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">onDeviceResume</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
   <span class="p">},</span>
   <span class="nx">onDeviceReady</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="hll">    <span class="nx">app</span><span class="p">.</span><span class="nx">branchInit</span><span class="p">();</span>
+<span class="hll">    <span class="nx">app</span><span class="p">.</span><span class="nx">handleBranch</span><span class="p">();</span>
 </span>  <span class="p">},</span>
   <span class="nx">onDeviceResume</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="hll">    <span class="nx">app</span><span class="p">.</span><span class="nx">branchInit</span><span class="p">();</span>
+<span class="hll">    <span class="nx">app</span><span class="p">.</span><span class="nx">handleBranch</span><span class="p">();</span>
 </span>  <span class="p">},</span>
-<span class="hll">  <span class="nx">branchInit</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="hll">  <span class="nx">handleBranch</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span><span class="hll">    <span class="c1">// Branch initialization</span>
 </span><span class="hll">    <span class="nx">Branch</span><span class="p">.</span><span class="nx">initSession</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
 </span><span class="hll">      <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="s1">&#39;+clicked_branch_link&#39;</span><span class="p">])</span> <span class="p">{</span>
@@ -2081,14 +2081,14 @@
 
     <span class="c1">// Branch</span>
     <span class="nx">$ionicPlatform</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;deviceready&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="hll">      <span class="nx">branchInit</span><span class="p">();</span>
+<span class="hll">      <span class="nx">handleBranch</span><span class="p">();</span>
 </span>    <span class="p">});</span>
 
     <span class="nx">$ionicPlatform</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;resume&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<span class="hll">      <span class="nx">branchInit</span><span class="p">();</span>
+<span class="hll">      <span class="nx">handleBranch</span><span class="p">();</span>
 </span>    <span class="p">});</span>
 
-<span class="hll">    <span class="kd">function</span> <span class="nx">branchInit</span><span class="p">()</span> <span class="p">{</span>
+<span class="hll">    <span class="kd">function</span> <span class="nx">handleBranch</span><span class="p">()</span> <span class="p">{</span>
 </span><span class="hll">      <span class="c1">// Branch initialization</span>
 </span><span class="hll">      <span class="nx">Branch</span><span class="p">.</span><span class="nx">initSession</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
 </span><span class="hll">        <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="s1">&#39;+clicked_branch_link&#39;</span><span class="p">])</span> <span class="p">{</span>
@@ -2106,45 +2106,43 @@
 <li>
 <p><em>Ionic 2 and 3</em></p>
 <div class="codehilite"><pre><span></span><span class="c1">// sample app.component.js</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">Platform</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;ionic-angular&#39;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">StatusBar</span><span class="p">,</span> <span class="nx">Splashscreen</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;ionic-native&#39;</span><span class="p">;</span>
+<span class="kn">import</span> <span class="err">{ </span><span class="nn">Component</span> <span class="o">}</span> <span class="n">from</span> <span class="err">&#39;</span><span class="nd">@angular</span><span class="o">/</span><span class="n">core</span><span class="err">&#39;</span><span class="o">;</span>
+<span class="kn">import</span> <span class="err">{ </span><span class="nn">Platform</span> <span class="o">}</span> <span class="n">from</span> <span class="err">&#39;</span><span class="n">ionic</span><span class="o">-</span><span class="n">angular</span><span class="err">&#39;</span><span class="o">;</span>
+<span class="kn">import</span> <span class="err">{ </span><span class="nn">StatusBar</span><span class="o">,</span> <span class="n">Splashscreen</span> <span class="o">}</span> <span class="n">from</span> <span class="err">&#39;</span><span class="n">ionic</span><span class="o">-</span><span class="kd">native</span><span class="err">&#39;</span><span class="o">;</span>
 
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">TabsPage</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../pages/tabs/tabs&#39;</span><span class="p">;</span>
+<span class="kn">import</span> <span class="err">{ </span><span class="nn">TabsPage</span> <span class="o">}</span> <span class="n">from</span> <span class="err">&#39;</span><span class="o">../</span><span class="n">pages</span><span class="o">/</span><span class="n">tabs</span><span class="o">/</span><span class="n">tabs</span>
 
-<span class="c1">// Branch import</span>
-<span class="hll"><span class="kr">declare</span> <span class="kd">var</span> <span class="nx">Branch</span><span class="p">;</span>
-</span>
-<span class="kd">@Component</span><span class="p">({</span>
-  <span class="nx">template</span><span class="o">:</span> <span class="sb">`&lt;ion-nav [root]=&quot;rootPage&quot;&gt;&lt;/ion-nav&gt;`</span>
-<span class="p">})</span>
-<span class="kr">export</span> <span class="kr">class</span> <span class="nx">MyApp</span> <span class="p">{</span>
-  <span class="nx">rootPage</span> <span class="o">=</span> <span class="nx">TabsPage</span><span class="p">;</span>
+<span class="nd">@Component</span><span class="o">({</span>
+  <span class="n">template</span><span class="o">:</span> <span class="err">`</span><span class="o">&lt;</span><span class="n">ion</span><span class="o">-</span><span class="n">nav</span> <span class="o">[</span><span class="n">root</span><span class="o">]=</span><span class="s">&quot;rootPage&quot;</span><span class="o">&gt;&lt;/</span><span class="n">ion</span><span class="o">-</span><span class="n">nav</span><span class="o">&gt;</span><span class="err">`</span>
+<span class="o">})</span>
+<span class="n">export</span> <span class="kd">class</span> <span class="nc">MyApp</span> <span class="o">{</span>
+  <span class="n">rootPage</span> <span class="o">=</span> <span class="n">TabsPage</span><span class="o">;</span>
 
-  <span class="kr">constructor</span><span class="p">(</span><span class="nx">platform</span>: <span class="kt">Platform</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">platform</span><span class="p">.</span><span class="nx">ready</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="nx">StatusBar</span><span class="p">.</span><span class="nx">styleDefault</span><span class="p">();</span>
-      <span class="nx">Splashscreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
-<span class="hll">      <span class="nx">branchInit</span><span class="p">();</span>
-</span>    <span class="p">});</span>
+  <span class="n">constructor</span><span class="o">(</span><span class="n">platform</span><span class="o">:</span> <span class="n">Platform</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">platform</span><span class="o">.</span><span class="na">ready</span><span class="o">().</span><span class="na">then</span><span class="o">(()</span> <span class="o">=&gt;</span> <span class="o">{</span>
+      <span class="n">StatusBar</span><span class="o">.</span><span class="na">styleDefault</span><span class="o">();</span>
+      <span class="n">Splashscreen</span><span class="o">.</span><span class="na">hide</span><span class="o">();</span>
+<span class="hll">      <span class="n">handleBranch</span><span class="o">();</span>
+</span>    <span class="o">});</span>
 
-    <span class="nx">platform</span><span class="p">.</span><span class="nx">resume</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-<span class="hll">      <span class="nx">branchInit</span><span class="p">();</span>
-</span>    <span class="p">});</span>
+    <span class="n">platform</span><span class="o">.</span><span class="na">resume</span><span class="o">.</span><span class="na">subscribe</span><span class="o">(()</span> <span class="o">=&gt;</span> <span class="o">{</span>
+<span class="hll">      <span class="n">handleBranch</span><span class="o">();</span>
+</span>    <span class="o">});</span>
 
-    <span class="c1">// Branch initialization</span>
-<span class="hll">    <span class="kr">const</span> <span class="nx">branchInit</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<span class="hll">    <span class="c1">// Branch initialization</span>
+</span><span class="hll">    <span class="kd">const</span> <span class="n">handleBranch</span> <span class="o">=</span> <span class="o">()</span> <span class="o">=&gt;</span> <span class="o">{</span>
 </span><span class="hll">      <span class="c1">// only on devices</span>
-</span><span class="hll">      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">platform</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="s1">&#39;cordova&#39;</span><span class="p">))</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
-</span><span class="hll">      <span class="nx">Branch</span><span class="p">.</span><span class="nx">initSession</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class="hll">        <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="s1">&#39;+clicked_branch_link&#39;</span><span class="p">])</span> <span class="p">{</span>
+</span><span class="hll">      <span class="k">if</span> <span class="o">(!</span><span class="n">platform</span><span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="err">&#39;</span><span class="n">cordova</span><span class="err">&#39;</span><span class="o">))</span> <span class="o">{</span> <span class="k">return</span> <span class="o">}</span>
+</span><span class="hll">      <span class="kd">const</span> <span class="n">Branch</span> <span class="o">=</span> <span class="n">window</span><span class="o">[</span><span class="err">&#39;</span><span class="n">Branch</span><span class="err">&#39;</span><span class="o">];</span>
+</span><span class="hll">      <span class="n">Branch</span><span class="o">.</span><span class="na">initSession</span><span class="o">(</span><span class="n">data</span> <span class="o">=&gt;</span> <span class="o">{</span>
+</span><span class="hll">        <span class="k">if</span> <span class="o">(</span><span class="n">data</span><span class="o">[</span><span class="err">&#39;</span><span class="o">+</span><span class="n">clicked_branch_link</span><span class="err">&#39;</span><span class="o">])</span> <span class="o">{</span>
 </span><span class="hll">          <span class="c1">// read deep link data on click</span>
-</span><span class="hll">          <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Deep Link Data: &#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
-</span><span class="hll">        <span class="p">}</span>
-</span>      <span class="p">});</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+</span><span class="hll">          <span class="n">alert</span><span class="o">(</span><span class="err">&#39;</span><span class="n">Deep</span> <span class="n">Link</span> <span class="n">Data</span><span class="o">:</span> <span class="err">&#39;</span> <span class="o">+</span> <span class="n">JSON</span><span class="o">.</span><span class="na">stringify</span><span class="o">(</span><span class="n">data</span><span class="o">));</span>
+</span><span class="hll">        <span class="o">}</span>
+</span><span class="hll">      <span class="o">});</span>
+</span><span class="hll">    <span class="o">}</span>
+</span>  <span class="o">}</span>
+<span class="o">}</span>
 </pre></div>
 
 </li>
@@ -3621,7 +3619,7 @@ cordova plugin remove branch-cordova-sdk
 </pre></div>
 
 <div class="codehilite"><pre><span></span><span class="c1">// Ionic 2/3 - missing Branch import</span>
-<span class="nx">declare</span> <span class="kd">var</span> <span class="nx">Branch</span>
+<span class="kr">const</span> <span class="nx">Branch</span> <span class="o">=</span> <span class="nb">window</span><span class="p">[</span><span class="s1">&#39;Branch&#39;</span><span class="p">];</span>
 </pre></div>
 
 </li>
