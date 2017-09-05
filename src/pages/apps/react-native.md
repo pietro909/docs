@@ -232,33 +232,33 @@
 			}
 			```
 
-    - MainActivity.java
+    		- MainActivity.java
 
-		```java hl_lines="1 2 15 18 19 20 21"
-		import io.branch.rnbranch.*; // <-- add this
-		import android.content.Intent; // <-- and this
+			```java hl_lines="1 2 15 18 19 20 21"
+			import io.branch.rnbranch.*; // <-- add this
+			import android.content.Intent; // <-- and this
 
-		public class MainActivity extends ReactActivity {
+			public class MainActivity extends ReactActivity {
 
-			  @Override
-			  protected String getMainComponentName() {
-			      return "base";
-			  }
+				  @Override
+				  protected String getMainComponentName() {
+				      return "base";
+				  }
 
-			  // Override onStart, onNewIntent:
-			  @Override
-			  protected void onStart() {
-			      super.onStart();
-			      RNBranchModule.initSession(getIntent().getData(), this);
-			  }
+				  // Override onStart, onNewIntent:
+				  @Override
+				  protected void onStart() {
+				      super.onStart();
+				      RNBranchModule.initSession(getIntent().getData(), this);
+				  }
 
-			  @Override
-			  public void onNewIntent(Intent intent) {
-			      setIntent(intent);
-			  }
-			  // ...
-		}
-		```
+				  @Override
+				  public void onNewIntent(Intent intent) {
+				      setIntent(intent);
+				  }
+				  // ...
+			}
+			```
 
 - #### Receive deep link data
 
